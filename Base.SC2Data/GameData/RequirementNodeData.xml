@@ -1,0 +1,2616 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CRequirementConst id="03861215421"/>
+    <CRequirementAnd id="AndCountUpgradeBronyaC2UnlockCompleteOnly2420890365">
+        <OperandArray value="CountUpgradeBronyaC2UnlockCompleteOnly2420890365"/>
+    </CRequirementAnd>
+    <CRequirementAnd id="AndCountUpgradeDivineKey9thCompleteOnly1761932935Not723435156CountBehaviorWeaponUseB28CompleteOnly3451675864">
+        <OperandArray value="CountUpgradeDivineKey9thCompleteOnly1761932935"/>
+        <OperandArray value="Not723435156CountBehaviorWeaponUseB28CompleteOnly3451675864"/>
+    </CRequirementAnd>
+    <CRequirementAnd id="AndCountUpgradeDivineKey9thCompleteOnly2608092753Not4263432363CountBehaviorWeaponUseB28CompleteOnly">
+        <OperandArray value="CountUpgradeDivineKey9thCompleteOnly2608092753"/>
+        <OperandArray value="Not4263432363CountBehaviorWeaponUseB28CompleteOnly"/>
+    </CRequirementAnd>
+    <CRequirementAnd id="AndCountUpgradeFightersCompleteOnly316807905TechTreeCheatCountUnitHyperionInterceptorCompleteOnlyAtUnit3128815872">
+        <OperandArray value="CountUpgradeFightersCompleteOnly316807905TechTreeCheat"/>
+        <OperandArray value="CountUnitHyperionInterceptorCompleteOnlyAtUnit3128815872"/>
+    </CRequirementAnd>
+    <CRequirementAnd id="AndLTE57336687CountUpgradeSupplyCompleteOnly100CountUpgradeHerrscherPhaseCompleteOnly2847090691">
+        <OperandArray value="LTE57336687CountUpgradeSupplyCompleteOnly100"/>
+        <OperandArray value="CountUpgradeHerrscherPhaseCompleteOnly2847090691"/>
+    </CRequirementAnd>
+    <CRequirementCountBehavior id="CountBehaviorStarOfEdenWorldCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="StarOfEdenWorld" State="CompleteOnly"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountBehavior id="CountBehaviorWeaponUseB28CompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="WeaponUseB28" State="CompleteOnly"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountBehavior id="CountBehaviorWeaponUseB28CompleteOnly3451675864">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="WeaponUseB28" State="CompleteOnly"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountUnit id="CountUnitBronyaC2QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="BronyaC2" State="QueuedOrBetter"/>
+    </CRequirementCountUnit>
+    <CRequirementCountUnit id="CountUnitBronyaC2Revivable">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="BronyaC2" State="Revivable"/>
+    </CRequirementCountUnit>
+    <CRequirementCountUnit id="CountUnitBronyaC7MotorQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="BronyaC7Motor" State="QueuedOrBetter"/>
+    </CRequirementCountUnit>
+    <CRequirementCountUnit id="CountUnitBronyaC7MotorRevivable">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="BronyaC7Motor" State="Revivable"/>
+    </CRequirementCountUnit>
+    <CRequirementCountUnit id="CountUnitBronyaC7QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="BronyaC7" State="QueuedOrBetter"/>
+    </CRequirementCountUnit>
+    <CRequirementCountUnit id="CountUnitBronyaC7Revivable">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="BronyaC7" State="Revivable"/>
+    </CRequirementCountUnit>
+    <CRequirementCountUnit id="CountUnitDivineKey4thCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="DivineKey4th" State="CompleteOnly"/>
+    </CRequirementCountUnit>
+    <CRequirementCountUnit id="CountUnitHyperionInterceptorCompleteOnlyAtUnit3128815872">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="HyperionInterceptor" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountUnit>
+    <CRequirementCountUnit id="CountUnitMeiC2QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="MeiC2" State="QueuedOrBetter"/>
+    </CRequirementCountUnit>
+    <CRequirementCountUnit id="CountUnitMeiC2Revivable">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="MeiC2" State="Revivable"/>
+    </CRequirementCountUnit>
+    <CRequirementCountUpgrade id="CountUpgradeB6CompleteOnly3077553746">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="B6" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeB6QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="B6" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeBronyaATTACKQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="BronyaATTACK" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeBronyaC2UnlockCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="BronyaC2Unlock" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeBronyaC2UnlockCompleteOnly2420890365">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="BronyaC2Unlock" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeBronyaC2UnlockQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="BronyaC2Unlock" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeBronyaC2Upgrade1QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="BronyaC2Upgrade1" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeBronyaC2Upgrade2CompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="BronyaC2Upgrade2" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeBronyaC2Upgrade2QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="BronyaC2Upgrade2" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeBronyaC2Upgrade3CompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="BronyaC2Upgrade3" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeBronyaC2Upgrade3QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="BronyaC2Upgrade3" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeBronyaC2Upgrade4QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="BronyaC2Upgrade4" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeBronyaC7UnlockCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <Count Link="BronyaC7Unlock" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeBronyaC7UnlockQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <Count Link="BronyaC7Unlock" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeBronyaHealthQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="BronyaHealth" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeBronyaShieldQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="BronyaShield" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeDivineKey9thCompleteOnly1761932935">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="DivineKey9th" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeDivineKey9thCompleteOnly2608092753">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="DivineKey9th" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeExtraDivineKeysArchaeologyCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="ExtraDivineKeysArchaeology" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeHerrscherPhaseCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <Count Link="HerrscherPhase" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeHerrscherPhaseCompleteOnly2847090691">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="HerrscherPhase" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeHonkaiTacticalJumpCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <Count Link="HonkaiTacticalJump" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeHonkaiTacticalJumpQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <Count Link="HonkaiTacticalJump" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeSupplyCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="Supply" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementLT id="LTCountUpgradeBronyaATTACKQueuedOrBetter16">
+        <OperandArray index="0" value="CountUpgradeBronyaATTACKQueuedOrBetter"/>
+        <OperandArray index="1" value="16"/>
+    </CRequirementLT>
+    <CRequirementLT id="LTCountUpgradeBronyaC2Upgrade1QueuedOrBetter4">
+        <OperandArray index="0" value="CountUpgradeBronyaC2Upgrade1QueuedOrBetter"/>
+        <OperandArray index="1" value="4"/>
+    </CRequirementLT>
+    <CRequirementLT id="LTCountUpgradeBronyaC2Upgrade4QueuedOrBetter4">
+        <OperandArray index="0" value="CountUpgradeBronyaC2Upgrade4QueuedOrBetter"/>
+        <OperandArray index="1" value="4"/>
+    </CRequirementLT>
+    <CRequirementLT id="LTCountUpgradeBronyaHealthQueuedOrBetter16">
+        <OperandArray index="0" value="CountUpgradeBronyaHealthQueuedOrBetter"/>
+        <OperandArray index="1" value="16"/>
+    </CRequirementLT>
+    <CRequirementLT id="LTCountUpgradeBronyaShieldQueuedOrBetter16">
+        <OperandArray index="0" value="CountUpgradeBronyaShieldQueuedOrBetter"/>
+        <OperandArray index="1" value="16"/>
+    </CRequirementLT>
+    <CRequirementLTE id="LTE57336687CountUpgradeSupplyCompleteOnly100">
+        <OperandArray index="0" value="CountUpgradeSupplyCompleteOnly"/>
+        <OperandArray index="1" value="100"/>
+    </CRequirementLTE>
+    <CRequirementLTE id="LTE960270413TechTreeCheatSumCountUpgradeDivineKey1stQueuedOrBetterCountUpgradeDivineKey2ndQueuedOrBetterCountUpgradeDivineKey3rdQueuedOrBetterCountUpgradeDivineKey4thQueuedOrBetterCountUpgradeDivineKe1236579968">
+        <Flags index="TechTreeCheat" value="1"/>
+        <OperandArray index="0" value="SumCountUpgradeDivineKey1stQueuedOrBetterCountUpgradeDivineKey2ndQueuedOrBetterCountUpgradeDivineKey3rdQueuedOrBetterCountUpgradeDivineKey4thQueuedOrBetterCountUpgradeDivineKey5thQueuedOrBetterCountUp2851595226"/>
+        <OperandArray index="1" value="CountUpgradeExtraDivineKeysArchaeologyCompleteOnly"/>
+    </CRequirementLTE>
+    <CRequirementNot id="Not157438788SumCountUnitBronyaC2QueuedOrBetterCountUnitBronyaC2RevivableCountUnitBronyaC7QueuedOrBetterCountUnitBronyaC7RevivableCountUnitBronyaC7MotorQueuedOrBetterCountUnitBronyaC7MotorRevivable">
+        <OperandArray index="0" value="SumCountUnitBronyaC2QueuedOrBetterCountUnitBronyaC2RevivableCountUnitBronyaC7QueuedOrBetterCountUnitBronyaC7RevivableCountUnitBronyaC7MotorQueuedOrBetterCountUnitBronyaC7MotorRevivable"/>
+    </CRequirementNot>
+    <CRequirementNot id="Not3138259586SumCountBehaviorWeaponUseB28CompleteOnlyCountBehaviorStarOfEdenWorldCompleteOnly">
+        <OperandArray index="0" value="SumCountBehaviorWeaponUseB28CompleteOnlyCountBehaviorStarOfEdenWorldCompleteOnly"/>
+    </CRequirementNot>
+    <CRequirementNot id="Not3381661893SumCountUnitMeiC2QueuedOrBetterCountUnitMeiC2Revivable">
+        <OperandArray index="0" value="SumCountUnitMeiC2QueuedOrBetterCountUnitMeiC2Revivable"/>
+    </CRequirementNot>
+    <CRequirementNot id="Not4263432363CountBehaviorWeaponUseB28CompleteOnly">
+        <OperandArray index="0" value="CountBehaviorWeaponUseB28CompleteOnly"/>
+    </CRequirementNot>
+    <CRequirementNot id="Not723435156CountBehaviorWeaponUseB28CompleteOnly3451675864">
+        <OperandArray index="0" value="CountBehaviorWeaponUseB28CompleteOnly3451675864"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUnitDivineKey4thCompleteOnly">
+        <OperandArray index="0" value="CountUnitDivineKey4thCompleteOnly"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeB6QueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeB6QueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeBronyaC2UnlockQueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeBronyaC2UnlockQueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeBronyaC2Upgrade2CompleteOnly">
+        <OperandArray index="0" value="CountUpgradeBronyaC2Upgrade2CompleteOnly"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeBronyaC2Upgrade2QueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeBronyaC2Upgrade2QueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeBronyaC2Upgrade3CompleteOnly">
+        <OperandArray index="0" value="CountUpgradeBronyaC2Upgrade3CompleteOnly"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeBronyaC2Upgrade3QueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeBronyaC2Upgrade3QueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeBronyaC7UnlockQueuedOrBetter">
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <OperandArray index="0" value="CountUpgradeBronyaC7UnlockQueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeHonkaiTacticalJumpQueuedOrBetter">
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <OperandArray index="0" value="CountUpgradeHonkaiTacticalJumpQueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementConst id="NotFinished">
+        <Flags index="TechTreeCheat" value="1"/>
+    </CRequirementConst>
+    <CRequirementConst id="12"/>
+    <CRequirementConst id="25">
+        <Value value="25"/>
+    </CRequirementConst>
+    <CRequirementConst id="250">
+        <Value value="250"/>
+    </CRequirementConst>
+    <CRequirementAnd id="AndCountUpgradeDG010Upgrade4CompleteOnlyNotCountUpgradeDG_011UpgradeQueuedOrBetter">
+        <OperandArray value="CountUpgradeDG010Upgrade4CompleteOnly"/>
+        <OperandArray value="NotCountUpgradeDG_011UpgradeQueuedOrBetter"/>
+    </CRequirementAnd>
+    <CRequirementAnd id="AndCountUpgradeKianaC2UnlockCompleteOnly2420890365">
+        <OperandArray value="CountUpgradeKianaC2UnlockCompleteOnly2420890365"/>
+    </CRequirementAnd>
+    <CRequirementAnd id="AndCountUpgradeKianaC4UnlockCompleteOnly2420890365">
+        <OperandArray value="CountUpgradeKianaC4UnlockCompleteOnly2420890365"/>
+    </CRequirementAnd>
+    <CRequirementAnd id="AndCountUpgradeRO_040ChargeCompleteOnly976793473NotCountBehaviorRO_040AttackCompleteOnlyAtUnit">
+        <OperandArray value="CountUpgradeRO_040ChargeCompleteOnly976793473"/>
+        <OperandArray value="NotCountBehaviorRO_040AttackCompleteOnlyAtUnit"/>
+    </CRequirementAnd>
+    <CRequirementAnd id="AndNot3631109650CountBehaviorStigmataCG5CompleteOnlyAtUnit3072367877LTSumCountBehaviorStigmataTG1CompleteOnlyAtUnitCountBehaviorStigmataTG2CompleteOnlyAtUnitCountBehaviorStigmataTG3CompleteOnlyAtUnitC1243973384">
+        <OperandArray value="Not3631109650CountBehaviorStigmataCG5CompleteOnlyAtUnit3072367877"/>
+        <OperandArray value="StigmataValidCount"/>
+    </CRequirementAnd>
+    <CRequirementAnd id="AndNot3631109650CountBehaviorStigmataPG4CompleteOnlyAtUnitLT245368620SumCountBehaviorStigmataTG1CompleteOnlyAtUnitCountBehaviorStigmataTG2CompleteOnlyAtUnitCountBehaviorStigmataTG3CompleteOnlyAtUnitCo1434883980">
+        <OperandArray value="Not3631109650CountBehaviorStigmataPG4CompleteOnlyAtUnit"/>
+        <OperandArray value="StigmataValidCount"/>
+    </CRequirementAnd>
+    <CRequirementAnd id="AndNot3631109650CountBehaviorStigmataPG5CompleteOnlyAtUnitLT245368620SumCountBehaviorStigmataTG1CompleteOnlyAtUnitCountBehaviorStigmataTG2CompleteOnlyAtUnitCountBehaviorStigmataTG3CompleteOnlyAtUnitCo1927199295">
+        <OperandArray value="Not3631109650CountBehaviorStigmataPG5CompleteOnlyAtUnit"/>
+        <OperandArray value="StigmataValidCount"/>
+    </CRequirementAnd>
+    <CRequirementAnd id="AndNotCountBehaviorStigmataFG4CompleteOnlyAtUnit3631109650LT245368620SumCountBehaviorStigmataTG1CompleteOnlyAtUnitCountBehaviorStigmataTG2CompleteOnlyAtUnitCountBehaviorStigmataTG3CompleteOnlyAtUnitCo2321301234">
+        <OperandArray value="NotCountBehaviorStigmataFG4CompleteOnlyAtUnit3631109650"/>
+        <OperandArray value="StigmataValidCount"/>
+    </CRequirementAnd>
+    <CRequirementAnd id="AndNotCountBehaviorStigmataIG4CompleteOnlyAtUnit3631109650LTSumCountBehaviorStigmataTG1CompleteOnlyAtUnitCountBehaviorStigmataTG2CompleteOnlyAtUnitCountBehaviorStigmataTG3CompleteOnlyAtUnitCountBehavi2541551356">
+        <OperandArray value="NotCountBehaviorStigmataIG4CompleteOnlyAtUnit3631109650"/>
+        <OperandArray value="StigmataValidCount"/>
+    </CRequirementAnd>
+    <CRequirementAnd id="AndNotCountBehaviorStigmataTG4CompleteOnlyAtUnit3631109650LT245368620SumCountBehaviorStigmataTG1CompleteOnlyAtUnitCountBehaviorStigmataTG2CompleteOnlyAtUnitCountBehaviorStigmataTG3CompleteOnlyAtUnitCo2898067446">
+        <OperandArray value="NotCountBehaviorStigmataTG4CompleteOnlyAtUnit3631109650"/>
+        <OperandArray value="StigmataValidCount"/>
+    </CRequirementAnd>
+    <CRequirementAnd id="AndOr152037771CountUnitFusionCoreCompleteOnlyTechTreeCheatNot1513537511CountUnitNukeMHTQueuedOrBetterAtUnit">
+        <OperandArray value="Or152037771CountUnitFusionCoreCompleteOnlyTechTreeCheat"/>
+        <OperandArray value="Not1513537511CountUnitNukeMHTQueuedOrBetterAtUnit"/>
+    </CRequirementAnd>
+    <CRequirementCountBehavior id="CountBehaviorCosmicJuggernautEntranceCompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="CosmicJuggernautEntrance" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountBehavior id="CountBehaviorCosmicJuggernautExitCompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="CosmicJuggernautExit" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountBehavior id="CountBehaviorCosmicJuggernautUltimateCompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="CosmicJuggernautUltimate" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountBehavior id="CountBehaviorFurnaceFactory2CompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="FurnaceFactory2" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountBehavior id="CountBehaviorFurnaceFactory2CompleteOnlyAtUnit1232702942">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="FurnaceFactory2" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountBehavior id="CountBehaviorFurnaceFactoryCompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="FurnaceFactory" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountBehavior id="CountBehaviorFurnaceFactoryCompleteOnlyAtUnit2833092702">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="FurnaceFactory" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountBehavior id="CountBehaviorIceTabletFactory2CompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="IceTabletFactory2" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountBehavior id="CountBehaviorIceTabletFactory2CompleteOnlyAtUnit1232702942">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="IceTabletFactory2" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountBehavior id="CountBehaviorIceTabletFactoryCompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="IceTabletFactory" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountBehavior id="CountBehaviorIceTabletFactoryCompleteOnlyAtUnit2833092702">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="IceTabletFactory" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountBehavior id="CountBehaviorKianaC2UltimateOffCompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="KianaC2UltimateOff" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountBehavior id="CountBehaviorKianaLookForBuildingCompleteOnlyAtUnit979450497">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="KianaLookForBuilding" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountBehavior id="CountBehaviorLightningRodFactory2CompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="LightningRodFactory2" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountBehavior id="CountBehaviorLightningRodFactory2CompleteOnlyAtUnit1236727148">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="LightningRodFactory2" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountBehavior id="CountBehaviorLightningRodFactoryCompleteOnlyAtUnit1653467348">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="LightningRodFactory" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountBehavior id="CountBehaviorRO_040AttackCompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="RO_040Attack" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountBehavior id="CountBehaviorRO_042AttackCompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="RO_042Attack" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountBehavior id="CountBehaviorSeeleC1UICompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="SeeleC1UI" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountBehavior id="CountBehaviorSeeleC1UltimateCompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="SeeleC1Ultimate" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountBehavior id="CountBehaviorSevenThundersOfRetributionCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="SevenThundersOfRetribution" State="CompleteOnly"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountBehavior id="CountBehaviorSevenThundersOfRetributionCompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="SevenThundersOfRetribution" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountBehavior id="CountBehaviorStigmataCG1CompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="StigmataCG1" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountBehavior id="CountBehaviorStigmataCG2CompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="StigmataCG2" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountBehavior id="CountBehaviorStigmataCG3CompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="StigmataCG3" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountBehavior id="CountBehaviorStigmataCG4CompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="StigmataCG4" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountBehavior id="CountBehaviorStigmataCG5CompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="StigmataCG5" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountBehavior id="CountBehaviorStigmataCG5CompleteOnlyAtUnit3072367877">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="StigmataCG5" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountBehavior id="CountBehaviorStigmataCG6CompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="StigmataCG6" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountBehavior id="CountBehaviorStigmataFG1CompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="StigmataFG1" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountBehavior id="CountBehaviorStigmataFG2CompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="StigmataFG2" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountBehavior id="CountBehaviorStigmataFG3CompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="StigmataFG3" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountBehavior id="CountBehaviorStigmataFG4CompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="StigmataFG4" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountBehavior id="CountBehaviorStigmataFG4CompleteOnlyAtUnit3631109650">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="StigmataFG4" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountBehavior id="CountBehaviorStigmataIG1CompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="StigmataIG1" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountBehavior id="CountBehaviorStigmataIG2CompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="StigmataIG2" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountBehavior id="CountBehaviorStigmataIG3CompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="StigmataIG3" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountBehavior id="CountBehaviorStigmataIG4CompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="StigmataIG4" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountBehavior id="CountBehaviorStigmataIG4CompleteOnlyAtUnit3631109650">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="StigmataIG4" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountBehavior id="CountBehaviorStigmataPG1CompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="StigmataPG1" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountBehavior id="CountBehaviorStigmataPG2CompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="StigmataPG2" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountBehavior id="CountBehaviorStigmataPG3CompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="StigmataPG3" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountBehavior id="CountBehaviorStigmataPG4CompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="StigmataPG4" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountBehavior id="CountBehaviorStigmataPG5CompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="StigmataPG5" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountBehavior id="CountBehaviorStigmataSG1CompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="StigmataSG1" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountBehavior id="CountBehaviorStigmataSG2CompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="StigmataSG2" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountBehavior id="CountBehaviorStigmataSG3CompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="StigmataSG3" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountBehavior id="CountBehaviorStigmataSG4CompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="StigmataSG4" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountBehavior id="CountBehaviorStigmataSG5CompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="StigmataSG5" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountBehavior id="CountBehaviorStigmataTG4CompleteOnlyAtUnit3631109650">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="StigmataTG4" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountBehavior id="CountBehaviorUnitMovingCompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="UnitMoving" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountUnit id="CountUnitAlias_TechLabCompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="Alias_TechLab" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountUnit>
+    <CRequirementCountUnit id="CountUnitCosmicJuggernautCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="CosmicJuggernaut" State="CompleteOnly"/>
+    </CRequirementCountUnit>
+    <CRequirementCountUnit id="CountUnitDivineKeysQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="DivineKeys" State="QueuedOrBetter"/>
+    </CRequirementCountUnit>
+    <CRequirementCountUnit id="CountUnitNukeMHTCompleteOnlyAtUnit2146895046">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="NukeMHT" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountUnit>
+    <CRequirementCountUnit id="CountUnitNukeMHTQueuedOrBetterAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="NukeMHT" State="QueuedOrBetterAtUnit"/>
+    </CRequirementCountUnit>
+    <CRequirementCountUnit id="CountUnitSeeleC1QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="SeeleC1" State="QueuedOrBetter"/>
+    </CRequirementCountUnit>
+    <CRequirementCountUnit id="CountUnitSeeleC1Revivable">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="SeeleC1" State="Revivable"/>
+    </CRequirementCountUnit>
+    <CRequirementCountUnit id="CountUnitStigmata2CompleteOnlyAtUnit3115234647">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="Stigmata2" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountUnit>
+    <CRequirementCountUpgrade id="CountUpgradeArchaeologyCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="ExtraDivineKeysArchaeology" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeAvatarBronyaCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="AvatarBronya" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeAvatarKianaCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="AvatarKiana" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeAvatarMeiCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="AvatarMei" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeAvatarNoBronyaCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="AvatarNoBronya" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeAvatarNoKianaCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="AvatarNoKiana" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeAvatarNoMeiCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="AvatarNoMei" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeAvatarNoSeeleCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="AvatarNoSeele" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeAvatarSeeleCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="AvatarSeele" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeBurnDamageInProgressOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="BurnDamage" State="InProgressOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeBurnDamageQueuedOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="BurnDamage"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeBurnDamageQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="BurnDamage" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeCycloneLockOnDamageUpgradeCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="CycloneLockOnDamageUpgrade" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeDivineKey1stCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="DivineKey1st" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeDivineKey1stQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="DivineKey1st" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeDivineKey2ndCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="DivineKey2nd" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeDivineKey2ndQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="DivineKey2nd" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeDivineKey3rdCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="DivineKey3rd" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeDivineKey3rdCompleteOnly3918714543">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="DivineKey3rd" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeDivineKey3rdQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="DivineKey3rd" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeDivineKey4thCompleteOnly3501733459">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="DivineKey4th" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeDivineKey4thQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="DivineKey4th" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeDivineKey5thQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="DivineKey5th" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeDivineKey6thQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="DivineKey6th" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeDivineKey7thQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="DivineKey7th" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeDivineKey8thQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="DivineKey8th" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeDivineKey9thQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="DivineKey9th" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeDivineKey10thQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="DivineKey10th" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeDivineKey11thQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="DivineKey11th" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeDivineKey12thQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="DivineKey12th" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeFightersCompleteOnly316807905TechTreeCheat">
+        <Count Link="Fighters" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeFightersQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="Fighters" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeFrozenDurationInProgressOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="FrozenDuration" State="InProgressOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeFrozenDurationQueuedOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="FrozenDuration"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeFrozenDurationQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="FrozenDuration" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeHerrscher1stDefeatedCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="Herrscher1stDefeated" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeHerrscher2ndDefeated2CompleteOnly3492253788">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="Herrscher2ndDefeated2" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeHerrscher2ndDefeatedCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="Herrscher2ndDefeated" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeHerrscher2ndDefeatedCompleteOnly2994834649">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="Herrscher2ndDefeated" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeHerrscher3rdDefeatedCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="Herrscher3rdDefeated" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeHerrscher3rdDefeatedCompleteOnly4180944628">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="Herrscher3rdDefeated" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeHerrscher4thDefeatedCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="Herrscher4thDefeated" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeHerrscher4thDefeatedCompleteOnly2869094963">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="Herrscher4thDefeated" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeHerrscherIndexCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="HerrscherIndex" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeKianaATTACKQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="KianaATTACK" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeKianaC2UnlockCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="KianaC2Unlock" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeKianaC2Upgrade4InProgressOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="KianaC2Upgrade4" State="InProgressOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeKianaC2Upgrade4QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="KianaC2Upgrade4" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeKianaC4UnlockCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="KianaC4Unlock" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeKianaHealthQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="KianaHealth" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeKianaShieldQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="KianaShield" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeMedicAutoLoadCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="MedicAutoLoad" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeMedicAutoLoadQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="MedicAutoLoad" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeMeiC2UnlockCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="MeiC2Unlock" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeMeiC2UnlockQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="MeiC2Unlock" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeMeiC2Upgrade1CompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="MeiC2Upgrade1" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeMeiC2Upgrade1QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="MeiC2Upgrade1" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeMeiC2Upgrade2CompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="MeiC2Upgrade2" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeMeiC2Upgrade2QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="MeiC2Upgrade2" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeMeiC2Upgrade3QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="MeiC2Upgrade3" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeMeiC2Upgrade4CompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="MeiC2Upgrade4" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeMeiC2Upgrade4QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="MeiC2Upgrade4" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradePalsyDurationInProgressOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="PalsyDuration" State="InProgressOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradePalsyDurationQueuedOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="PalsyDuration"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradePalsyDurationQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="PalsyDuration" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeRO_040ChargeCompleteOnly976793473">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="RO_040Charge" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeRO_040ChargeQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="RO_040Charge" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeReduceFireCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="ReduceFire" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeReduceFireInProgressOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="ReduceFire" State="InProgressOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeReduceFireQueuedOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="ReduceFire"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeReduceFireQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="ReduceFire" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeReduceIceCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="ReduceIce" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeReduceIceInProgressOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="ReduceIce" State="InProgressOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeReduceIceQueuedOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="ReduceIce"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeReduceIceQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="ReduceIce" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeReduceThunderCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="ReduceThunder" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeSeeleATTACKQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="SeeleATTACK" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeSeeleC1UnlockCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="SeeleC1Unlock" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeSeeleC1UnlockQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="SeeleC1Unlock" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeSeeleC1Upgrade1QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="SeeleC1Upgrade1" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeSeeleC1Upgrade2CompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="MeiC2Upgrade" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeSeeleC1Upgrade2QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="SeeleC1Upgrade2" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeSeeleC1Upgrade3QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="SeeleC1Upgrade3" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeSeeleC1Upgrade4QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="SeeleC1Upgrade4" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeSeeleHealthQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="SeeleHealth" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeSeeleShieldQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="SeeleShield" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeSiegeTankUpgradeCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="SiegeTankUpgrade" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeSiegeTankUpgradeQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="SiegeTankUpgrade" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeStigmataCG1CompleteOnly3072367877">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="StigmataCG1" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeStigmataCG1QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="StigmataCG1" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeStigmataCG2CompleteOnly3072367877">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="StigmataCG2" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeStigmataCG2QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="StigmataCG2" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeStigmataCG3CompleteOnly3072367877">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="StigmataCG3" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeStigmataCG3QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="StigmataCG3" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeStigmataCG4CompleteOnly3072367877">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="StigmataCG4" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeStigmataCG4QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="StigmataCG4" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeStigmataCG5CompleteOnly3072367877">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="StigmataCG5" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeStigmataCG5QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="StigmataCG5" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeStigmataCG6QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="StigmataCG6" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeStigmataFG1CompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="StigmataFG1" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeStigmataFG1QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="StigmataFG1" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeStigmataFG2CompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="StigmataFG2" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeStigmataFG2QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="StigmataFG2" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeStigmataFG3CompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="StigmataFG3" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeStigmataFG3QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="StigmataFG3" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeStigmataFG4CompleteOnly3072367877">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="StigmataFG4" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeStigmataFG4QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="StigmataFG4" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeStigmataIG1CompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="StigmataIG1" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeStigmataIG1QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="StigmataIG1" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeStigmataIG2CompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="StigmataIG2" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeStigmataIG2QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="StigmataIG2" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeStigmataIG3CompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="StigmataIG3" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeStigmataIG3QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="StigmataIG3" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeStigmataIG4CompleteOnly3072367877">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="StigmataIG4" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeStigmataIG4QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="StigmataIG4" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeStigmataPG1CompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="StigmataPG1" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeStigmataPG1QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="StigmataPG1" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeStigmataPG2CompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="StigmataPG2" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeStigmataPG2QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="StigmataPG2" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeStigmataPG3CompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="StigmataPG3" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeStigmataPG3QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="StigmataPG3" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeStigmataPG4CompleteOnly3072367877">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="StigmataPG4" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeStigmataPG4QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="StigmataPG4" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeStigmataPG5CompleteOnly3072367877">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="StigmataPG5" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeStigmataPG5QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="StigmataPG5" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeStigmataSG1QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="StigmataSG1" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeStigmataSG2QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="StigmataSG2" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeStigmataSG3QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="StigmataSG3" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeStigmataSG4QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="StigmataSG4" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeStigmataSG5QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="StigmataSG5" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeStigmataTG2CompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="StigmataTG2" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeStigmataTG3CompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="StigmataTG3" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeStigmataTG3QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="StigmataTG3" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeStigmataTG4CompleteOnly3072367877">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="StigmataTG4" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeStigmataTG4QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="StigmataTG4" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeStigmataSG1CompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="StigmataSG1" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeStigmataSG2CompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="StigmataSG2" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeStigmataSG3CompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="StigmataSG3" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeStigmataSG4CompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="StigmataSG4" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeStigmataSG5CompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="StigmataSG5" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeStigmataCG6CompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="StigmataCG6" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeTerranBuildingArmorInProgressOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="TerranBuildingArmor" State="InProgressOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeTerranBuildingArmorQueuedOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="TerranBuildingArmor"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeVHerrscher1stCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="VHerrscher1st" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeVHerrscher1stCompleteOnly2613565233">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="VHerrscher1st" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeValkyrjaSnipeCompleteOnly3072367877">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="ValkyrjaSnipe" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeValkyrjaSnipeQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="ValkyrjaSnipe" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementGTE id="GTE1425793793CountUpgradeReduceFireCompleteOnly3">
+        <OperandArray index="0" value="CountUpgradeReduceFireCompleteOnly"/>
+        <OperandArray index="1" value="3"/>
+    </CRequirementGTE>
+    <CRequirementGTE id="GTE1530294542CountBehaviorSeeleC1UICompleteOnlyAtUnit250">
+        <OperandArray index="0" value="CountBehaviorSeeleC1UICompleteOnlyAtUnit"/>
+        <OperandArray index="1" value="250"/>
+    </CRequirementGTE>
+    <CRequirementGTE id="GTE2706314631CountUpgradeReduceThunderCompleteOnly3">
+        <OperandArray index="0" value="CountUpgradeReduceThunderCompleteOnly"/>
+        <OperandArray index="1" value="3"/>
+    </CRequirementGTE>
+    <CRequirementGTE id="GTE3302361250CountUpgradeReduceIceCompleteOnly3">
+        <OperandArray index="0" value="CountUpgradeReduceIceCompleteOnly"/>
+        <OperandArray index="1" value="3"/>
+    </CRequirementGTE>
+    <CRequirementLT id="LT455390697SumCountUpgradeBurnDamageQueuedOnlyCountUpgradeBurnDamageInProgressOnly1">
+        <OperandArray index="0" value="SumCountUpgradeBurnDamageQueuedOnlyCountUpgradeBurnDamageInProgressOnly"/>
+        <OperandArray index="1" value="1"/>
+    </CRequirementLT>
+    <CRequirementLT id="LT455390697SumCountUpgradeFrozenDurationQueuedOnlyCountUpgradeFrozenDurationInProgressOnly1">
+        <OperandArray index="0" value="SumCountUpgradeFrozenDurationQueuedOnlyCountUpgradeFrozenDurationInProgressOnly"/>
+        <OperandArray index="1" value="1"/>
+    </CRequirementLT>
+    <CRequirementLT id="LT455390697SumCountUpgradePalsyDurationQueuedOnlyCountUpgradePalsyDurationInProgressOnly1">
+        <OperandArray index="0" value="SumCountUpgradePalsyDurationQueuedOnlyCountUpgradePalsyDurationInProgressOnly"/>
+        <OperandArray index="1" value="1"/>
+    </CRequirementLT>
+    <CRequirementLT id="LT455390697SumCountUpgradeReduceFireQueuedOnlyCountUpgradeReduceFireInProgressOnly1">
+        <OperandArray index="0" value="SumCountUpgradeReduceFireQueuedOnlyCountUpgradeReduceFireInProgressOnly"/>
+        <OperandArray index="1" value="1"/>
+    </CRequirementLT>
+    <CRequirementLT id="LT455390697SumCountUpgradeReduceIceQueuedOnlyCountUpgradeReduceIceInProgressOnly1">
+        <OperandArray index="0" value="SumCountUpgradeReduceIceQueuedOnlyCountUpgradeReduceIceInProgressOnly"/>
+        <OperandArray index="1" value="1"/>
+    </CRequirementLT>
+    <CRequirementLT id="LT455390697SumCountUpgradeReduceThunderQueuedOnlyCountUpgradeReduceThunderInProgressOnly1">
+        <OperandArray index="0" value="SumCountUpgradeReduceThunderQueuedOnlyCountUpgradeReduceThunderInProgressOnly"/>
+        <OperandArray index="1" value="1"/>
+    </CRequirementLT>
+    <CRequirementLT id="LT960270413TechTreeCheatSumCountUpgradeDivineKey1stQueuedOrBetterCountUpgradeDivineKey2ndQueuedOrBetterCountUpgradeDivineKey3rdQueuedOrBetterCountUpgradeDivineKey4thQueuedOrBetterCountUpgradeArchaeologyCompleteOnly">
+        <Flags index="TechTreeCheat" value="1"/>
+        <OperandArray index="0" value="SumDivineKeysResearched"/>
+        <OperandArray index="1" value="CountUpgradeArchaeologyCompleteOnly"/>
+    </CRequirementLT>
+    <CRequirementLT id="LTCountUnitCosmicJuggernautCompleteOnly2">
+        <OperandArray index="0" value="CountUnitCosmicJuggernautCompleteOnly"/>
+        <OperandArray index="1" value="2"/>
+    </CRequirementLT>
+    <CRequirementLT id="LTCountUpgradeBurnDamageQueuedOrBetter4">
+        <OperandArray index="0" value="CountUpgradeBurnDamageQueuedOrBetter"/>
+        <OperandArray index="1" value="4"/>
+    </CRequirementLT>
+    <CRequirementLT id="LTCountUpgradeFrozenDurationQueuedOrBetter4">
+        <OperandArray index="0" value="CountUpgradeFrozenDurationQueuedOrBetter"/>
+        <OperandArray index="1" value="4"/>
+    </CRequirementLT>
+    <CRequirementLT id="LTCountUpgradeHerrscherIndexCompleteOnly6">
+        <OperandArray index="0" value="CountUpgradeHerrscherIndexCompleteOnly"/>
+        <OperandArray index="1" value="6"/>
+    </CRequirementLT>
+    <CRequirementLT id="LTCountUpgradeKianaATTACKQueuedOrBetter16">
+        <OperandArray index="0" value="CountUpgradeKianaATTACKQueuedOrBetter"/>
+        <OperandArray index="1" value="16"/>
+    </CRequirementLT>
+    <CRequirementLT id="LTCountUpgradeKianaC2Upgrade4QueuedOrBetter5">
+        <OperandArray index="0" value="CountUpgradeKianaC2Upgrade4QueuedOrBetter"/>
+        <OperandArray index="1" value="5"/>
+    </CRequirementLT>
+    <CRequirementLT id="LTCountUpgradeKianaHealthQueuedOrBetter16">
+        <OperandArray index="0" value="CountUpgradeKianaHealthQueuedOrBetter"/>
+        <OperandArray index="1" value="16"/>
+    </CRequirementLT>
+    <CRequirementLT id="LTCountUpgradeKianaShieldQueuedOrBetter16">
+        <OperandArray index="0" value="CountUpgradeKianaShieldQueuedOrBetter"/>
+        <OperandArray index="1" value="16"/>
+    </CRequirementLT>
+    <CRequirementLT id="LTCountUpgradeMeiC2Upgrade3QueuedOrBetter5">
+        <OperandArray index="0" value="CountUpgradeMeiC2Upgrade3QueuedOrBetter"/>
+        <OperandArray index="1" value="5"/>
+    </CRequirementLT>
+    <CRequirementLT id="LTCountUpgradeMicroFilteringQueuedOrBetter6">
+        <OperandArray index="0" value="CountUpgradeMicroFilteringQueuedOrBetter"/>
+        <OperandArray index="1" value="6"/>
+    </CRequirementLT>
+    <CRequirementLT id="LTCountUpgradePalsyDurationQueuedOrBetter4">
+        <OperandArray index="0" value="CountUpgradePalsyDurationQueuedOrBetter"/>
+        <OperandArray index="1" value="4"/>
+    </CRequirementLT>
+    <CRequirementLT id="LTCountUpgradeReduceFireQueuedOrBetter10">
+        <OperandArray index="0" value="CountUpgradeReduceFireQueuedOrBetter"/>
+        <OperandArray index="1" value="10"/>
+    </CRequirementLT>
+    <CRequirementLT id="LTCountUpgradeReduceIceQueuedOrBetter10">
+        <OperandArray index="0" value="CountUpgradeReduceIceQueuedOrBetter"/>
+        <OperandArray index="1" value="10"/>
+    </CRequirementLT>
+    <CRequirementLT id="LTCountUpgradeSeeleATTACKQueuedOrBetter16">
+        <OperandArray index="0" value="CountUpgradeSeeleATTACKQueuedOrBetter"/>
+        <OperandArray index="1" value="16"/>
+    </CRequirementLT>
+    <CRequirementLT id="LTCountUpgradeSeeleC1Upgrade1QueuedOrBetter3">
+        <OperandArray index="0" value="CountUpgradeSeeleC1Upgrade1QueuedOrBetter"/>
+        <OperandArray index="1" value="3"/>
+    </CRequirementLT>
+    <CRequirementLT id="LTCountUpgradeSeeleC1Upgrade3QueuedOrBetter3">
+        <OperandArray index="0" value="CountUpgradeSeeleC1Upgrade3QueuedOrBetter"/>
+        <OperandArray index="1" value="3"/>
+    </CRequirementLT>
+    <CRequirementLT id="LTCountUpgradeSeeleHealthQueuedOrBetter16">
+        <OperandArray index="0" value="CountUpgradeSeeleHealthQueuedOrBetter"/>
+        <OperandArray index="1" value="16"/>
+    </CRequirementLT>
+    <CRequirementLT id="LTCountUpgradeSeeleShieldQueuedOrBetter16">
+        <OperandArray index="0" value="CountUpgradeSeeleShieldQueuedOrBetter"/>
+        <OperandArray index="1" value="16"/>
+    </CRequirementLT>
+    <CRequirementLT id="LTCountUpgradeStigmataCountCompleteOnly">
+        <OperandArray index="0" value="CountUpgradeStigmataCountCompleteOnly"/>
+    </CRequirementLT>
+    <CRequirementLT id="LTCountUpgradeTerranBuildingArmorQueuedOrBetter4">
+        <OperandArray index="0" value="CountUpgradeTerranBuildingArmorQueuedOrBetter"/>
+        <OperandArray index="1" value="4"/>
+    </CRequirementLT>
+    <CRequirementLT id="LTSumCountUpgradeTerranBuildingArmorQueuedOnlyCountUpgradeTerranBuildingArmorInProgressOnly1">
+        <OperandArray index="0" value="SumCountUpgradeTerranBuildingArmorQueuedOnlyCountUpgradeTerranBuildingArmorInProgressOnly"/>
+        <OperandArray index="1" value="1"/>
+    </CRequirementLT>
+    <CRequirementNot id="Not1513537511CountUnitNukeMHTQueuedOrBetterAtUnit">
+        <OperandArray index="0" value="CountUnitNukeMHTQueuedOrBetterAtUnit"/>
+    </CRequirementNot>
+    <CRequirementNot id="Not1982903751SumCountUnitKianaC2QueuedOrBetterCountUnitKianaC2RevivableCountUnitKianaC4QueuedOrBetterCountUnitKianaC4Revivable">
+        <OperandArray index="0" value="SumCountUnitKianaC2QueuedOrBetterCountUnitKianaC2RevivableCountUnitKianaC4QueuedOrBetterCountUnitKianaC4Revivable"/>
+    </CRequirementNot>
+    <CRequirementNot id="Not2525757573CountUpgradeAvatarNoBronyaCompleteOnly">
+        <OperandArray index="0" value="CountUpgradeAvatarNoBronyaCompleteOnly"/>
+    </CRequirementNot>
+    <CRequirementNot id="Not2525757573CountUpgradeAvatarNoKianaCompleteOnly">
+        <OperandArray index="0" value="CountUpgradeAvatarNoKianaCompleteOnly"/>
+    </CRequirementNot>
+    <CRequirementNot id="Not2525757573CountUpgradeAvatarNoMeiCompleteOnly">
+        <OperandArray index="0" value="CountUpgradeAvatarNoMeiCompleteOnly"/>
+    </CRequirementNot>
+    <CRequirementNot id="Not2525757573CountUpgradeAvatarNoSeeleCompleteOnly">
+        <OperandArray index="0" value="CountUpgradeAvatarNoSeeleCompleteOnly"/>
+    </CRequirementNot>
+    <CRequirementNot id="Not2541659352SumCountUnitSeeleC1QueuedOrBetterCountUnitSeeleC1Revivable">
+        <OperandArray index="0" value="SumCountUnitSeeleC1QueuedOrBetterCountUnitSeeleC1Revivable"/>
+    </CRequirementNot>
+    <CRequirementNot id="Not2595134477CountUnitDivineKeysQueuedOrBetter">
+        <OperandArray index="0" value="CountUnitDivineKeysQueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="Not3631109650CountBehaviorStigmataCG5CompleteOnlyAtUnit3072367877">
+        <OperandArray index="0" value="CountBehaviorStigmataCG5CompleteOnlyAtUnit3072367877"/>
+    </CRequirementNot>
+    <CRequirementNot id="Not3631109650CountBehaviorStigmataPG4CompleteOnlyAtUnit">
+        <OperandArray index="0" value="CountBehaviorStigmataPG4CompleteOnlyAtUnit"/>
+    </CRequirementNot>
+    <CRequirementNot id="Not3631109650CountBehaviorStigmataPG5CompleteOnlyAtUnit">
+        <OperandArray index="0" value="CountBehaviorStigmataPG5CompleteOnlyAtUnit"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountBehaviorKianaC2UltimateOffCompleteOnlyAtUnit">
+        <OperandArray index="0" value="CountBehaviorKianaC2UltimateOffCompleteOnlyAtUnit"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountBehaviorRO_040AttackCompleteOnlyAtUnit">
+        <OperandArray index="0" value="CountBehaviorRO_040AttackCompleteOnlyAtUnit"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountBehaviorRO_042AttackCompleteOnlyAtUnit">
+        <OperandArray index="0" value="CountBehaviorRO_042AttackCompleteOnlyAtUnit"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountBehaviorSeeleC1UltimateCompleteOnlyAtUnit">
+        <OperandArray index="0" value="CountBehaviorSeeleC1UltimateCompleteOnlyAtUnit"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountBehaviorSevenThundersOfRetributionCompleteOnly">
+        <OperandArray index="0" value="CountBehaviorSevenThundersOfRetributionCompleteOnly"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountBehaviorSevenThundersOfRetributionCompleteOnlyAtUnit">
+        <OperandArray index="0" value="CountBehaviorSevenThundersOfRetributionCompleteOnlyAtUnit"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountBehaviorStigmataFG4CompleteOnlyAtUnit3631109650">
+        <OperandArray index="0" value="CountBehaviorStigmataFG4CompleteOnlyAtUnit3631109650"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountBehaviorStigmataIG4CompleteOnlyAtUnit3631109650">
+        <OperandArray index="0" value="CountBehaviorStigmataIG4CompleteOnlyAtUnit3631109650"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountBehaviorStigmataTG4CompleteOnlyAtUnit3631109650">
+        <OperandArray index="0" value="CountBehaviorStigmataTG4CompleteOnlyAtUnit3631109650"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeCycloneLockOnDamageUpgradeCompleteOnly">
+        <OperandArray index="0" value="CountUpgradeCycloneLockOnDamageUpgradeCompleteOnly"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeDivineKey1stQueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeDivineKey1stQueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeDivineKey2ndQueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeDivineKey2ndQueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeDivineKey3rdQueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeDivineKey3rdQueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeDivineKey4thQueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeDivineKey4thQueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeDivineKey5thQueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeDivineKey5thQueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeDivineKey6thQueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeDivineKey6thQueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeDivineKey7thQueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeDivineKey7thQueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeDivineKey8thQueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeDivineKey8thQueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeDivineKey9thQueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeDivineKey9thQueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeDivineKey10thQueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeDivineKey10thQueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeDivineKey11thQueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeDivineKey11thQueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeDivineKey12thQueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeDivineKey12thQueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeFightersQueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeFightersQueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeKianaC2Upgrade4InProgressOnly">
+        <OperandArray index="0" value="CountUpgradeKianaC2Upgrade4InProgressOnly"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeMedicAutoLoadQueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeMedicAutoLoadQueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeMeiC2UnlockQueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeMeiC2UnlockQueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeMeiC2Upgrade1CompleteOnly">
+        <OperandArray index="0" value="CountUpgradeMeiC2Upgrade1CompleteOnly"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeMeiC2Upgrade1QueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeMeiC2Upgrade1QueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeMeiC2Upgrade2CompleteOnly">
+        <OperandArray index="0" value="CountUpgradeMeiC2Upgrade2CompleteOnly"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeMeiC2Upgrade2QueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeMeiC2Upgrade2QueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeMeiC2Upgrade4CompleteOnly">
+        <OperandArray index="0" value="CountUpgradeMeiC2Upgrade4CompleteOnly"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeMeiC2Upgrade4QueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeMeiC2Upgrade4QueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeRO_040ChargeQueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeRO_040ChargeQueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeSeeleC1UnlockQueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeSeeleC1UnlockQueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeSeeleC1Upgrade2QueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeSeeleC1Upgrade2QueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeSeeleC1Upgrade4QueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeSeeleC1Upgrade4QueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeSiegeTankUpgradeCompleteOnly">
+        <OperandArray index="0" value="CountUpgradeSiegeTankUpgradeCompleteOnly"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeSiegeTankUpgradeQueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeSiegeTankUpgradeQueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeStigmataCG1QueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeStigmataCG1QueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeStigmataCG2QueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeStigmataCG2QueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeStigmataCG3QueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeStigmataCG3QueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeStigmataCG4QueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeStigmataCG4QueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeStigmataCG5QueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeStigmataCG5QueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeStigmataCG6QueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeStigmataCG6QueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeStigmataFG1QueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeStigmataFG1QueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeStigmataFG2QueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeStigmataFG2QueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeStigmataFG3QueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeStigmataFG3QueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeStigmataFG4QueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeStigmataFG4QueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeStigmataIG1QueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeStigmataIG1QueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeStigmataIG2QueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeStigmataIG2QueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeStigmataIG3QueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeStigmataIG3QueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeStigmataIG4QueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeStigmataIG4QueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeStigmataPG1QueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeStigmataPG1QueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeStigmataPG2QueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeStigmataPG2QueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeStigmataPG3QueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeStigmataPG3QueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeStigmataPG4QueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeStigmataPG4QueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeStigmataPG5QueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeStigmataPG5QueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeStigmataSG1QueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeStigmataSG1QueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeStigmataSG2QueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeStigmataSG2QueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeStigmataSG3QueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeStigmataSG3QueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeStigmataSG4QueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeStigmataSG4QueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeStigmataSG5QueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeStigmataSG5QueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeValkyrjaSnipeQueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeValkyrjaSnipeQueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NoAvatarChosen">
+        <OperandArray index="0" value="AnyAvatarChosen"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotOrCountUpgradeAvatarKianaCompleteOnlyCountUpgradeAvatarMeiCompleteOnlyCountUpgradeAvatarBronyaCompleteOnlyCountUpgradeAvatarSeeleCompleteOnly">
+        <OperandArray index="0" value="OrCountUpgradeAvatarKianaCompleteOnlyCountUpgradeAvatarMeiCompleteOnlyCountUpgradeAvatarBronyaCompleteOnlyCountUpgradeAvatarSeeleCompleteOnly"/>
+    </CRequirementNot>
+    <CRequirementOr id="OrCountBehaviorCosmicJuggernautEntranceCompleteOnlyAtUnitCountBehaviorCosmicJuggernautExitCompleteOnlyAtUnit">
+        <OperandArray value="CountBehaviorCosmicJuggernautEntranceCompleteOnlyAtUnit"/>
+        <OperandArray value="CountBehaviorCosmicJuggernautExitCompleteOnlyAtUnit"/>
+    </CRequirementOr>
+    <CRequirementOr id="OrCountBehaviorFurnaceFactoryCompleteOnlyAtUnit2833092702CountBehaviorFurnaceFactory2CompleteOnlyAtUnit1232702942">
+        <OperandArray value="CountBehaviorFurnaceFactoryCompleteOnlyAtUnit2833092702"/>
+        <OperandArray value="CountBehaviorFurnaceFactory2CompleteOnlyAtUnit1232702942"/>
+    </CRequirementOr>
+    <CRequirementOr id="OrCountBehaviorIceTabletFactoryCompleteOnlyAtUnit2833092702CountBehaviorIceTabletFactory2CompleteOnlyAtUnit1232702942">
+        <OperandArray value="CountBehaviorIceTabletFactoryCompleteOnlyAtUnit2833092702"/>
+        <OperandArray value="CountBehaviorIceTabletFactory2CompleteOnlyAtUnit1232702942"/>
+    </CRequirementOr>
+    <CRequirementOr id="OrCountBehaviorLightningRodFactoryCompleteOnlyAtUnit1653467348CountBehaviorLightningRodFactory2CompleteOnlyAtUnit1236727148">
+        <OperandArray value="CountBehaviorLightningRodFactoryCompleteOnlyAtUnit1653467348"/>
+        <OperandArray value="CountBehaviorLightningRodFactory2CompleteOnlyAtUnit1236727148"/>
+    </CRequirementOr>
+    <CRequirementOr id="AnyAvatarChosen">
+        <OperandArray value="CountUpgradeAvatarKianaCompleteOnly"/>
+        <OperandArray value="CountUpgradeAvatarMeiCompleteOnly"/>
+        <OperandArray value="CountUpgradeAvatarBronyaCompleteOnly"/>
+        <OperandArray value="CountUpgradeAvatarSeeleCompleteOnly"/>
+    </CRequirementOr>
+    <CRequirementOr id="OrCountUpgradeAvatarKianaCompleteOnlyCountUpgradeAvatarMeiCompleteOnlyCountUpgradeAvatarBronyaCompleteOnlyCountUpgradeAvatarSeeleCompleteOnly">
+        <OperandArray value="CountUpgradeAvatarKianaCompleteOnly"/>
+        <OperandArray value="CountUpgradeAvatarMeiCompleteOnly"/>
+        <OperandArray value="CountUpgradeAvatarBronyaCompleteOnly"/>
+        <OperandArray value="CountUpgradeAvatarSeeleCompleteOnly"/>
+    </CRequirementOr>
+    <CRequirementLT id="StigmataValidCount">
+        <OperandArray index="0" value="StigmataSumUp"/>
+        <OperandArray index="1" value="CountUpgradeStigmataCountCompleteOnly"/>
+    </CRequirementLT>
+    <CRequirementNot id="NotCountUpgradeStigmataTG3QueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeStigmataTG3QueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeStigmataTG4QueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeStigmataTG4QueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementAnd id="StigmataTG1CanEquip">
+        <OperandArray value="NoStigmataG1"/>
+        <OperandArray value="StigmataValidCount"/>
+    </CRequirementAnd>
+    <CRequirementCountBehavior id="CountBehaviorStigmataTG1CompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="StigmataTG1" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountBehavior id="CountBehaviorStigmataTG2CompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="StigmataTG2" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountBehavior id="CountBehaviorStigmataTG3CompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="StigmataTG3" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountBehavior id="CountBehaviorStigmataTG4CompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="StigmataTG4" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountUpgrade id="CountUpgradeStigmataCountQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="StigmataCount" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeStigmataTG1CompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="StigmataTG1" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeStigmataTG2QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="StigmataTG2" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementLT id="LTCountUpgradeStigmataCountQueuedOrBetter3">
+        <OperandArray index="0" value="CountUpgradeStigmataCountQueuedOrBetter"/>
+        <OperandArray index="1" value="3"/>
+    </CRequirementLT>
+    <CRequirementAnd id="AndOr152037771CountUnitFusionCoreCompleteOnlyTechTreeCheatNot3457755508CountUnitNukeQueuedOrBetterAtUnit">
+        <OperandArray value="Or152037771CountUnitFusionCoreCompleteOnlyTechTreeCheat"/>
+        <OperandArray value="Not3457755508CountUnitNukeQueuedOrBetterAtUnit"/>
+    </CRequirementAnd>
+    <CRequirementAnd id="AndOrCountBehaviorKianaC2Attack2CompleteOnlyAtUnit3179731307NotCountBehaviorKianaC2BranchReadyCompleteOnlyAtUnit">
+        <OperandArray value="OrCountBehaviorKianaC2Attack2CompleteOnlyAtUnit3179731307"/>
+        <OperandArray value="NotCountBehaviorKianaC2BranchReadyCompleteOnlyAtUnit"/>
+    </CRequirementAnd>
+    <CRequirementCountBehavior id="CountBehaviorBronyaConstructCannonCompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="BronyaConstructCannon" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountBehavior id="CountBehaviorDG_011Skill2EnableCompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="DG_011Skill2Enable" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountBehavior id="CountBehaviorEvadeCoolDownCompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="EvadeCoolDown" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountBehavior id="CountBehaviorHerrscher2AbsorbMissileCompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="Herrscher2AbsorbMissile" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountBehavior id="CountBehaviorHerrscher2ReboundMissileCompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="Herrscher2ReboundMissile" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountBehavior id="CountBehaviorKianaC2Attack2CompleteOnlyAtUnit3179731307">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="KianaC2Attack2" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountBehavior id="CountBehaviorKianaC2BranchReadyCompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="KianaC2BranchReady" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountBehavior id="CountBehaviorKianaC4Behavior2CompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="KianaC4Behavior2" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountBehavior id="CountBehaviorKianaC4BranchCompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="KianaC4Branch" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountBehavior id="CountBehaviorRO_010Abli1BrhaviorTag2CompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="RO_010Abli1BrhaviorTag2" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountBehavior id="CountBehaviorRO_010Abli1BrhaviorTagCompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="RO_010Abli1BrhaviorTag" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountBehavior id="CountBehaviorUnfireCompleteOnlyAtUnit4239173858">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="Unfire" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountBehavior id="CountBehaviorWeaponUseB15CompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="WeaponUseB15" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountBehavior id="CountBehaviorWeaponUseB18CompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="WeaponUseB18" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountBehavior id="CountBehaviorWeaponUseB1CompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="WeaponUseB1" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountBehavior id="CountBehaviorWeaponUseB22CompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="WeaponUseB22" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountBehavior id="CountBehaviorWeaponUseB23CompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="WeaponUseB23" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountBehavior id="CountBehaviorWeaponUseB25CompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="WeaponUseB25" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountBehavior id="CountBehaviorWeaponUseB26CompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="WeaponUseB26" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountBehavior id="CountBehaviorWeaponUseB28CompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="WeaponUseB28" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountBehavior id="CountBehaviorWeaponUseB34CompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="WeaponUseB34" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountBehavior id="CountBehaviorWeaponUseB5CompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="WeaponUseB5" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountBehavior id="CountBehaviorWeaponUseB6CompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="WeaponUseB6" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountBehavior id="CountBehaviorWeaponUseK17CompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="WeaponUseK17" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountBehavior id="CountBehaviorWeaponUseK17CompleteOnlyAtUnit628373971">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="WeaponUseK17" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountBehavior id="CountBehaviorWeaponUseK23CompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="WeaponUseK23" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountBehavior id="CountBehaviorWeaponUseK23CompleteOnlyAtUnit3368134584">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="WeaponUseK23" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountBehavior id="CountBehaviorWeaponUseK5CompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="WeaponUseK5" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountBehavior id="CountBehaviorWeaponUseK5CompleteOnlyAtUnit3301302742">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="WeaponUseK5" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountUnit id="CountUnitBronyaC1CompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="BronyaC1" State="CompleteOnly"/>
+    </CRequirementCountUnit>
+    <CRequirementCountUnit id="CountUnitDG_010QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="DG_010" State="QueuedOrBetter"/>
+    </CRequirementCountUnit>
+    <CRequirementCountUnit id="CountUnitDG_010QueuedOrBetterAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="DG_010" State="QueuedOrBetterAtUnit"/>
+    </CRequirementCountUnit>
+    <CRequirementCountUnit id="CountUnitDG_011QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="DG_011" State="QueuedOrBetter"/>
+    </CRequirementCountUnit>
+    <CRequirementCountUnit id="CountUnitDG_012QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="DG_012" State="QueuedOrBetter"/>
+    </CRequirementCountUnit>
+    <CRequirementCountUnit id="CountUnitDG_013QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="DG_013" State="QueuedOrBetter"/>
+    </CRequirementCountUnit>
+    <CRequirementCountUnit id="CountUnitExtractorQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="Extractor" State="QueuedOrBetter"/>
+    </CRequirementCountUnit>
+    <CRequirementCountUnit id="CountUnitExtractorRichQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="ExtractorRich" State="QueuedOrBetter"/>
+    </CRequirementCountUnit>
+    <CRequirementCountUnit id="CountUnitHighTowerCompleteOnlyTechTreeCheat">
+        <Count Link="HighTower" State="CompleteOnly"/>
+    </CRequirementCountUnit>
+    <CRequirementCountUnit id="CountUnitKianaC2QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="KianaC2" State="QueuedOrBetter"/>
+    </CRequirementCountUnit>
+    <CRequirementCountUnit id="CountUnitKianaC2Revivable">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="KianaC2" State="Revivable"/>
+    </CRequirementCountUnit>
+    <CRequirementCountUnit id="CountUnitKianaC4QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="KianaC4" State="QueuedOrBetter"/>
+    </CRequirementCountUnit>
+    <CRequirementCountUnit id="CountUnitKianaC4Revivable">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="KianaC4" State="Revivable"/>
+    </CRequirementCountUnit>
+    <CRequirementCountUnit id="CountUnitNukeCompleteOnlyAtUnit1398243897">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="Nuke" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountUnit>
+    <CRequirementCountUpgrade id="CountUpgradeAdvancedMedicQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="AdvancedMedic" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeB15CompleteOnly709598142">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="B15" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeB15QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="B15" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeB18CompleteOnly3077553746">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="B18" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeB18QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="B18" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeB22CompleteOnly709598142">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="B22" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeB22QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="B22" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeB23CompleteOnly3416406502">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="B23" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeB23QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="B23" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeB25CompleteOnly709598142">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="B25" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeB25QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="B25" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeB26CompleteOnly3416406502">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="B26" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeB26QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="B26" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeB5CompleteOnly3077553746">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="B5" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeB5QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="B5" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeB7CompleteOnly3077553746">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="B7" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeB7QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="B7" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeDG010Upgrade1QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="DG010Upgrade1" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeDG010Upgrade2QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="DG010Upgrade2" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeDG010Upgrade3QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="DG010Upgrade3" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeDG010Upgrade4CompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="DG010Upgrade4" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeDG010Upgrade4QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="DG010Upgrade4" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeDG010Upgrade5CompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="DG010Upgrade5" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeDG010Upgrade5QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="DG010Upgrade5" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeDG010Upgrade6CompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="DG010Upgrade6" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeDG010Upgrade6QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="DG010Upgrade6" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeDG_011UpgradeQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="DG_011Upgrade" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeDeadgalArmorUpgradeInProgressOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="DeadgalArmorUpgrade" State="InProgressOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeDeadgalArmorUpgradeInProgressOnly2">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="VArmorUpgrade" State="InProgressOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeDeadgalArmorUpgradeQueuedOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="DeadgalArmorUpgrade"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeDeadgalArmorUpgradeQueuedOnly2">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="VArmorUpgrade"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeDeadgalArmorUpgradeQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="DeadgalArmorUpgrade" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeDeadgalArmorUpgradeQueuedOrBetter2">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="VArmorUpgrade" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeDeadgalAttackUpgradeInProgressOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="DeadgalAttackUpgrade" State="InProgressOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeDeadgalAttackUpgradeQueuedOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="DeadgalAttackUpgrade"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeDeadgalAttackUpgradeQueuedOnly2">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="UlAttackUpgrade"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeDeadgalAttackUpgradeQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="DeadgalAttackUpgrade" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeDeadgalAttackUpgradeQueuedOrBetter2">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="UlAttackUpgrade" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeFireSuppressionSystemsQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="FireSuppressionSystems" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeKianaC2UnlockCompleteOnly2420890365">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="KianaC2Unlock" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeKianaC2UnlockQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="KianaC2Unlock" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeKianaC2Upgrade2QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="KianaUpgrade" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeKianaC2Upgrade3QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="KianaC2Upgrade3" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeKianaC2UpgradeQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="KianaC2Upgrade" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeKianaC4UnlockCompleteOnly2420890365">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="KianaC4Unlock" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeKianaC4UnlockQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="KianaC4Unlock" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeKianaC4Upgrade1QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="KianaC4Upgrade1" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeKianaC4Upgrade2CompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="KianaC4Upgrade2" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeKianaC4Upgrade2QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="KianaC4Upgrade2" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeKianaC4Upgrade3CompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="KianaC4Upgrade3" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeKianaC4Upgrade3QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="KianaC4Upgrade3" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeKianaC4Upgrade4CompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="KianaC4Upgrade4" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeKianaC4Upgrade4QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="KianaC4Upgrade4" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeMicroFilteringInProgressOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="MicroFiltering" State="InProgressOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeMicroFilteringQueuedOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="MicroFiltering"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeMicroFilteringQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="MicroFiltering" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeOrbitalStrike2CompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="OrbitalStrike2" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeOrbitalStrike2QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="OrbitalStrike2" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeROArmorUpgradeInProgressOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="ROArmorUpgrade" State="InProgressOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeROArmorUpgradeQueuedOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="ROArmorUpgrade"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeROArmorUpgradeQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="ROArmorUpgrade" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeROAttackUpgradeInProgressOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="ROAttackUpgrade" State="InProgressOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeROAttackUpgradeQueuedOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="ROAttackUpgrade"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeROAttackUpgradeQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="ROAttackUpgrade" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeReduceThunderInProgressOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="ReduceThunder" State="InProgressOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeReduceThunderQueuedOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="ReduceThunder"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeReduceThunderQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="ReduceThunder" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeStigmataCountCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="StigmataCount" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeStigmataTG1QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="StigmataTG1" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeUlArmorUpgradeInProgressOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="UlArmorUpgrade" State="InProgressOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeUlArmorUpgradeQueuedOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="UlArmorUpgrade"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeUlArmorUpgradeQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="UlArmorUpgrade" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeUlAttackUpgradeInProgressOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="UlAttackUpgrade" State="InProgressOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeUlAttackUpgradeQueuedOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="UlAttackUpgrade"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeUlAttackUpgradeQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="UlAttackUpgrade" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeUltraCapacitorsQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="UltraCapacitors" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeVArmorUpgrade2InProgressOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="VArmorUpgrade2" State="InProgressOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeVArmorUpgrade2QueuedOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="VArmorUpgrade2"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeVArmorUpgrade2QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="VArmorUpgrade2" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeVArmorUpgradeInProgressOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="VArmorUpgrade" State="InProgressOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeVArmorUpgradeQueuedOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="VArmorUpgrade"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeVArmorUpgradeQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="VArmorUpgrade" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeVAttackUpgrade2InProgressOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="VAttackUpgrade2" State="InProgressOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeVAttackUpgrade2QueuedOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="VAttackUpgrade2"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeVAttackUpgrade2QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="VAttackUpgrade2" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeValkyrjaDefenceQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="ValkyrjaDefence" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeValkyrjaShieldQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="ValkyrjaShield" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementEq id="Eq1641998733CountUnitKianaC2QueuedOrBetter0">
+        <OperandArray index="0" value="CountUnitKianaC2QueuedOrBetter"/>
+        <OperandArray index="1" value="0"/>
+    </CRequirementEq>
+    <CRequirementGT id="GTCountBehaviorDG_011Skill2EnableCompleteOnlyAtUnit0">
+        <OperandArray index="0" value="CountBehaviorDG_011Skill2EnableCompleteOnlyAtUnit"/>
+        <OperandArray index="1" value="0"/>
+    </CRequirementGT>
+    <CRequirementGT id="GTCountBehaviorKianaC4BranchCompleteOnlyAtUnit0">
+        <OperandArray index="0" value="CountBehaviorKianaC4BranchCompleteOnlyAtUnit"/>
+        <OperandArray index="1" value="0"/>
+    </CRequirementGT>
+    <CRequirementLT id="LT2876236545SumCountUnitDG_010QueuedOrBetterCountUnitDG_011QueuedOrBetterCountUnitDG_012QueuedOrBetterCountUnitDG_013QueuedOrBetter25">
+        <OperandArray index="0" value="SumCountUnitDG_010QueuedOrBetterCountUnitDG_011QueuedOrBetterCountUnitDG_012QueuedOrBetterCountUnitDG_013QueuedOrBetter"/>
+        <OperandArray index="1" value="25"/>
+    </CRequirementLT>
+    <CRequirementLT id="LT2935943687SumCountUnitDG_010QueuedOrBetterCountUnitDG_011QueuedOrBetterCountUnitDG_012QueuedOrBetterCountUnitDG_013QueuedOrBetter15">
+        <OperandArray index="0" value="SumCountUnitDG_010QueuedOrBetterCountUnitDG_011QueuedOrBetterCountUnitDG_012QueuedOrBetterCountUnitDG_013QueuedOrBetter"/>
+        <OperandArray index="1" value="15"/>
+    </CRequirementLT>
+    <CRequirementLT id="LTCountUpgradeDeadgalArmorUpgradeQueuedOrBetter6">
+        <OperandArray index="0" value="CountUpgradeDeadgalArmorUpgradeQueuedOrBetter"/>
+        <OperandArray index="1" value="6"/>
+    </CRequirementLT>
+    <CRequirementLT id="LTCountUpgradeDeadgalAttackUpgradeQueuedOrBetter10">
+        <OperandArray index="0" value="CountUpgradeDeadgalAttackUpgradeQueuedOrBetter"/>
+        <OperandArray index="1" value="10"/>
+    </CRequirementLT>
+    <CRequirementLT id="LTCountUpgradeKianaC4Upgrade1QueuedOrBetter3">
+        <OperandArray index="0" value="CountUpgradeKianaC4Upgrade1QueuedOrBetter"/>
+        <OperandArray index="1" value="3"/>
+    </CRequirementLT>
+    <CRequirementLT id="LTCountUpgradeROArmorUpgradeQueuedOrBetter8">
+        <OperandArray index="0" value="CountUpgradeROArmorUpgradeQueuedOrBetter"/>
+        <OperandArray index="1" value="8"/>
+    </CRequirementLT>
+    <CRequirementLT id="LTCountUpgradeROAttackUpgradeQueuedOrBetter10">
+        <OperandArray index="0" value="CountUpgradeROAttackUpgradeQueuedOrBetter"/>
+        <OperandArray index="1" value="10"/>
+    </CRequirementLT>
+    <CRequirementLT id="LTCountUpgradeReduceThunderQueuedOrBetter10">
+        <OperandArray index="0" value="CountUpgradeReduceThunderQueuedOrBetter"/>
+        <OperandArray index="1" value="10"/>
+    </CRequirementLT>
+    <CRequirementLT id="LTCountUpgradeUlArmorUpgradeQueuedOrBetter6">
+        <OperandArray index="0" value="CountUpgradeUlArmorUpgradeQueuedOrBetter"/>
+        <OperandArray index="1" value="6"/>
+    </CRequirementLT>
+    <CRequirementLT id="LTCountUpgradeUlAttackUpgradeQueuedOrBetter10">
+        <OperandArray index="0" value="CountUpgradeUlAttackUpgradeQueuedOrBetter"/>
+        <OperandArray index="1" value="10"/>
+    </CRequirementLT>
+    <CRequirementLT id="LTCountUpgradeVArmorUpgrade2QueuedOrBetter5">
+        <OperandArray index="0" value="CountUpgradeVArmorUpgrade2QueuedOrBetter"/>
+        <OperandArray index="1" value="5"/>
+    </CRequirementLT>
+    <CRequirementLT id="LTCountUpgradeVArmorUpgradeQueuedOrBetter8">
+        <OperandArray index="0" value="CountUpgradeVArmorUpgradeQueuedOrBetter"/>
+        <OperandArray index="1" value="8"/>
+    </CRequirementLT>
+    <CRequirementLT id="LTCountUpgradeVAttackUpgrade2QueuedOrBetter8">
+        <OperandArray index="0" value="CountUpgradeVAttackUpgrade2QueuedOrBetter"/>
+        <OperandArray index="1" value="8"/>
+    </CRequirementLT>
+    <CRequirementLTE id="LTE2613127646SumCountUnitExtractorRichQueuedOrBetterCountUnitExtractorQueuedOrBetter3">
+        <OperandArray index="0" value="SumCountUnitExtractorRichQueuedOrBetterCountUnitExtractorQueuedOrBetter"/>
+        <OperandArray index="1" value="3"/>
+    </CRequirementLTE>
+    <CRequirementLTE id="LTECountUnitDG_010QueuedOrBetterAtUnit15">
+        <OperandArray index="0" value="CountUnitDG_010QueuedOrBetterAtUnit"/>
+        <OperandArray index="1" value="15"/>
+    </CRequirementLTE>
+    <CRequirementLT id="LTSumCountUpgradeDeadgalArmorUpgradeQueuedOnlyCountUpgradeDeadgalArmorUpgradeInProgressOnly1">
+        <OperandArray index="0" value="SumCountUpgradeDeadgalArmorUpgradeQueuedOnlyCountUpgradeDeadgalArmorUpgradeInProgressOnly"/>
+        <OperandArray index="1" value="1"/>
+    </CRequirementLT>
+    <CRequirementLT id="LTSumCountUpgradeDeadgalAttackUpgradeQueuedOnlyCountUpgradeDeadgalAttackUpgradeInProgressOnly1">
+        <OperandArray index="0" value="SumCountUpgradeDeadgalAttackUpgradeQueuedOnlyCountUpgradeDeadgalAttackUpgradeInProgressOnly"/>
+        <OperandArray index="1" value="1"/>
+    </CRequirementLT>
+    <CRequirementLT id="LTSumCountUpgradeMicroFilteringQueuedOnlyCountUpgradeMicroFilteringInProgressOnly1">
+        <OperandArray index="0" value="SumCountUpgradeMicroFilteringQueuedOnlyCountUpgradeMicroFilteringInProgressOnly"/>
+        <OperandArray index="1" value="1"/>
+    </CRequirementLT>
+    <CRequirementLT id="LTSumCountUpgradeROArmorUpgradeQueuedOnlyCountUpgradeROArmorUpgradeInProgressOnly1">
+        <OperandArray index="0" value="SumCountUpgradeROArmorUpgradeQueuedOnlyCountUpgradeROArmorUpgradeInProgressOnly"/>
+        <OperandArray index="1" value="1"/>
+    </CRequirementLT>
+    <CRequirementLT id="LTSumCountUpgradeROAttackUpgradeQueuedOnlyCountUpgradeROAttackUpgradeInProgressOnly1">
+        <OperandArray index="0" value="SumCountUpgradeROAttackUpgradeQueuedOnlyCountUpgradeROAttackUpgradeInProgressOnly"/>
+        <OperandArray index="1" value="1"/>
+    </CRequirementLT>
+    <CRequirementLT id="LTSumCountUpgradeUlArmorUpgradeQueuedOnlyCountUpgradeUlArmorUpgradeInProgressOnly1">
+        <OperandArray index="0" value="SumCountUpgradeUlArmorUpgradeQueuedOnlyCountUpgradeUlArmorUpgradeInProgressOnly"/>
+        <OperandArray index="1" value="1"/>
+    </CRequirementLT>
+    <CRequirementLT id="LTSumCountUpgradeUlAttackUpgradeQueuedOnlyCountUpgradeUlAttackUpgradeInProgressOnly1">
+        <OperandArray index="0" value="SumCountUpgradeUlAttackUpgradeQueuedOnlyCountUpgradeUlAttackUpgradeInProgressOnly"/>
+        <OperandArray index="1" value="1"/>
+    </CRequirementLT>
+    <CRequirementLT id="LTSumCountUpgradeVArmorUpgrade2QueuedOnlyCountUpgradeVArmorUpgrade2InProgressOnly1">
+        <OperandArray index="0" value="SumCountUpgradeVArmorUpgrade2QueuedOnlyCountUpgradeVArmorUpgrade2InProgressOnly"/>
+        <OperandArray index="1" value="1"/>
+    </CRequirementLT>
+    <CRequirementLT id="LTSumCountUpgradeVArmorUpgradeQueuedOnlyCountUpgradeVArmorUpgradeInProgressOnly1">
+        <OperandArray index="0" value="SumCountUpgradeVArmorUpgradeQueuedOnlyCountUpgradeVArmorUpgradeInProgressOnly"/>
+        <OperandArray index="1" value="1"/>
+    </CRequirementLT>
+    <CRequirementLT id="LTSumCountUpgradeVAttackUpgrade2QueuedOnlyCountUpgradeVAttackUpgrade2InProgressOnly1">
+        <OperandArray index="0" value="SumCountUpgradeVAttackUpgrade2QueuedOnlyCountUpgradeVAttackUpgrade2InProgressOnly"/>
+        <OperandArray index="1" value="1"/>
+    </CRequirementLT>
+    <CRequirementNE id="NECountUnitBronyaC1CompleteOnly0">
+        <OperandArray index="0" value="CountUnitBronyaC1CompleteOnly"/>
+        <OperandArray index="1" value="0"/>
+    </CRequirementNE>
+    <CRequirementNot id="Not3457755508CountUnitNukeQueuedOrBetterAtUnit">
+        <OperandArray index="0" value="CountUnitNukeQueuedOrBetterAtUnit"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountBehaviorBronyaConstructCannonCompleteOnlyAtUnit">
+        <OperandArray index="0" value="CountBehaviorBronyaConstructCannonCompleteOnlyAtUnit"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountBehaviorEvadeCoolDownCompleteOnlyAtUnit">
+        <OperandArray index="0" value="CountBehaviorEvadeCoolDownCompleteOnlyAtUnit"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountBehaviorKianaC2BranchReadyCompleteOnlyAtUnit">
+        <OperandArray index="0" value="CountBehaviorKianaC2BranchReadyCompleteOnlyAtUnit"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountBehaviorKianaC4Behavior2CompleteOnlyAtUnit">
+        <OperandArray index="0" value="CountBehaviorKianaC4Behavior2CompleteOnlyAtUnit"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountBehaviorWeaponUseB15CompleteOnlyAtUnit">
+        <OperandArray index="0" value="CountBehaviorWeaponUseB15CompleteOnlyAtUnit"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountBehaviorWeaponUseB18CompleteOnlyAtUnit">
+        <OperandArray index="0" value="CountBehaviorWeaponUseB18CompleteOnlyAtUnit"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountBehaviorWeaponUseB1CompleteOnlyAtUnit">
+        <OperandArray index="0" value="CountBehaviorWeaponUseB1CompleteOnlyAtUnit"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountBehaviorWeaponUseB22CompleteOnlyAtUnit">
+        <OperandArray index="0" value="CountBehaviorWeaponUseB22CompleteOnlyAtUnit"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountBehaviorWeaponUseB23CompleteOnlyAtUnit">
+        <OperandArray index="0" value="CountBehaviorWeaponUseB23CompleteOnlyAtUnit"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountBehaviorWeaponUseB25CompleteOnlyAtUnit">
+        <OperandArray index="0" value="CountBehaviorWeaponUseB25CompleteOnlyAtUnit"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountBehaviorWeaponUseB26CompleteOnlyAtUnit">
+        <OperandArray index="0" value="CountBehaviorWeaponUseB26CompleteOnlyAtUnit"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountBehaviorWeaponUseB28CompleteOnlyAtUnit">
+        <OperandArray index="0" value="CountBehaviorWeaponUseB28CompleteOnlyAtUnit"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountBehaviorWeaponUseB34CompleteOnlyAtUnit">
+        <OperandArray index="0" value="CountBehaviorWeaponUseB34CompleteOnlyAtUnit"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountBehaviorWeaponUseB5CompleteOnlyAtUnit">
+        <OperandArray index="0" value="CountBehaviorWeaponUseB5CompleteOnlyAtUnit"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountBehaviorWeaponUseB6CompleteOnlyAtUnit">
+        <OperandArray index="0" value="CountBehaviorWeaponUseB6CompleteOnlyAtUnit"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountBehaviorWeaponUseK17CompleteOnlyAtUnit628373971">
+        <OperandArray index="0" value="CountBehaviorWeaponUseK17CompleteOnlyAtUnit628373971"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountBehaviorWeaponUseK23CompleteOnlyAtUnit3368134584">
+        <OperandArray index="0" value="CountBehaviorWeaponUseK23CompleteOnlyAtUnit3368134584"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountBehaviorWeaponUseK5CompleteOnlyAtUnit3301302742">
+        <OperandArray index="0" value="CountBehaviorWeaponUseK5CompleteOnlyAtUnit3301302742"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeAdvancedMedicQueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeAdvancedMedicQueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeB15QueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeB15QueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeB18QueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeB18QueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeB22QueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeB22QueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeB23QueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeB23QueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeB25QueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeB25QueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeB26QueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeB26QueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeB5QueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeB5QueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeB7QueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeB7QueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeDG010Upgrade1QueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeDG010Upgrade1QueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeDG010Upgrade2QueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeDG010Upgrade2QueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeDG010Upgrade3QueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeDG010Upgrade3QueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeDG_011UpgradeQueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeDG_011UpgradeQueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeFireSuppressionSystemsQueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeFireSuppressionSystemsQueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeKianaC2UnlockQueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeKianaC2UnlockQueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeKianaC2Upgrade2QueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeKianaC2Upgrade2QueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeKianaC2Upgrade3QueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeKianaC2Upgrade3QueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeKianaC2UpgradeQueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeKianaC2UpgradeQueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeKianaC4UnlockQueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeKianaC4UnlockQueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeKianaC4Upgrade2QueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeKianaC4Upgrade2QueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeKianaC4Upgrade3QueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeKianaC4Upgrade3QueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeKianaC4Upgrade4QueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeKianaC4Upgrade4QueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeOrbitalStrike2QueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeOrbitalStrike2QueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeStigmataTG1QueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeStigmataTG1QueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeStigmataTG2QueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeStigmataTG2QueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeUltraCapacitorsQueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeUltraCapacitorsQueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeValkyrjaDefenceQueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeValkyrjaDefenceQueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeValkyrjaShieldQueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeValkyrjaShieldQueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotOrCountUpgradeDG010Upgrade4CompleteOnlyOrCountUpgradeDG010Upgrade5CompleteOnlyCountUpgradeDG010Upgrade6CompleteOnly">
+        <OperandArray index="0" value="OrCountUpgradeDG010Upgrade4CompleteOnlyOrCountUpgradeDG010Upgrade5CompleteOnlyCountUpgradeDG010Upgrade6CompleteOnly"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotOrCountUpgradeDG010Upgrade4QueuedOrBetterOrCountUpgradeDG010Upgrade5QueuedOrBetterCountUpgradeDG010Upgrade6QueuedOrBetter">
+        <OperandArray index="0" value="OrCountUpgradeDG010Upgrade4QueuedOrBetterOrCountUpgradeDG010Upgrade5QueuedOrBetterCountUpgradeDG010Upgrade6QueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NoStigmataG1">
+        <OperandArray index="0" value="StigmataG1SumUp"/>
+    </CRequirementNot>
+    <CRequirementOr id="Or152037771CountUnitFusionCoreCompleteOnlyTechTreeCheat">
+        <OperandArray value="CountUnitFusionCoreCompleteOnlyTechTreeCheat"/>
+    </CRequirementOr>
+    <CRequirementOr id="OrCountBehaviorKianaC2Attack2CompleteOnlyAtUnit3179731307">
+        <OperandArray value="CountBehaviorKianaC2Attack2CompleteOnlyAtUnit3179731307"/>
+    </CRequirementOr>
+    <CRequirementOr id="OrCountUpgradeDG010Upgrade4CompleteOnlyOrCountUpgradeDG010Upgrade5CompleteOnlyCountUpgradeDG010Upgrade6CompleteOnly">
+        <OperandArray value="CountUpgradeDG010Upgrade4CompleteOnly"/>
+        <OperandArray value="OrCountUpgradeDG010Upgrade5CompleteOnlyCountUpgradeDG010Upgrade6CompleteOnly"/>
+    </CRequirementOr>
+    <CRequirementOr id="OrCountUpgradeDG010Upgrade4QueuedOrBetterOrCountUpgradeDG010Upgrade5QueuedOrBetterCountUpgradeDG010Upgrade6QueuedOrBetter">
+        <OperandArray value="CountUpgradeDG010Upgrade4QueuedOrBetter"/>
+        <OperandArray value="OrCountUpgradeDG010Upgrade5QueuedOrBetterCountUpgradeDG010Upgrade6QueuedOrBetter"/>
+    </CRequirementOr>
+    <CRequirementOr id="OrCountUpgradeDG010Upgrade5CompleteOnlyCountUpgradeDG010Upgrade6CompleteOnly">
+        <OperandArray value="CountUpgradeDG010Upgrade5CompleteOnly"/>
+        <OperandArray value="CountUpgradeDG010Upgrade6CompleteOnly"/>
+    </CRequirementOr>
+    <CRequirementOr id="OrCountUpgradeDG010Upgrade5QueuedOrBetterCountUpgradeDG010Upgrade6QueuedOrBetter">
+        <OperandArray value="CountUpgradeDG010Upgrade5QueuedOrBetter"/>
+        <OperandArray value="CountUpgradeDG010Upgrade6QueuedOrBetter"/>
+    </CRequirementOr>
+    <CRequirementSum id="StigmataG1SumUp">
+        <OperandArray value="CountBehaviorStigmataTG1CompleteOnlyAtUnit"/>
+        <OperandArray value="CountBehaviorStigmataFG1CompleteOnlyAtUnit"/>
+        <OperandArray value="CountBehaviorStigmataIG1CompleteOnlyAtUnit"/>
+    </CRequirementSum>
+    <CRequirementSum id="StigmataCount">
+        <OperandArray value="CountBehaviorStigmataTG1CompleteOnlyAtUnit"/>
+        <OperandArray value="CountBehaviorStigmataTG2CompleteOnlyAtUnit"/>
+        <OperandArray value="CountBehaviorStigmataTG3CompleteOnlyAtUnit"/>
+        <OperandArray value="CountBehaviorStigmataTG4CompleteOnlyAtUnit"/>
+    </CRequirementSum>
+    <CRequirementSum id="Sum2900348999CountBehaviorLightningRodFactoryCompleteOnlyAtUnit1653467348CountBehaviorLightningRodFactory2CompleteOnlyAtUnit1236727148CountBehaviorIceTabletFactoryCompleteOnlyAtUnitCountBehaviorIceTab4120943232">
+        <OperandArray value="CountBehaviorLightningRodFactoryCompleteOnlyAtUnit1653467348"/>
+        <OperandArray value="CountBehaviorLightningRodFactory2CompleteOnlyAtUnit1236727148"/>
+        <OperandArray value="CountBehaviorIceTabletFactoryCompleteOnlyAtUnit"/>
+        <OperandArray value="CountBehaviorIceTabletFactory2CompleteOnlyAtUnit"/>
+        <OperandArray value="CountUnitAlias_TechLabCompleteOnlyAtUnit"/>
+        <OperandArray value="CountBehaviorFurnaceFactoryCompleteOnlyAtUnit"/>
+        <OperandArray value="CountBehaviorFurnaceFactory2CompleteOnlyAtUnit"/>
+    </CRequirementSum>
+    <CRequirementSum id="SumCountBehaviorStigmataTG1CompleteOnlyAtUnitCountBehaviorStigmataFG1CompleteOnlyAtUnitCountBehaviorStigmataIG1CompleteOnlyAtUnit">
+        <OperandArray value="CountBehaviorStigmataTG1CompleteOnlyAtUnit"/>
+        <OperandArray value="CountBehaviorStigmataFG1CompleteOnlyAtUnit"/>
+        <OperandArray value="CountBehaviorStigmataIG1CompleteOnlyAtUnit"/>
+    </CRequirementSum>
+    <CRequirementSum id="StigmataSumUp">
+        <OperandArray value="CountBehaviorStigmataTG1CompleteOnlyAtUnit"/>
+        <OperandArray value="CountBehaviorStigmataTG2CompleteOnlyAtUnit"/>
+        <OperandArray value="CountBehaviorStigmataTG3CompleteOnlyAtUnit"/>
+        <OperandArray value="CountBehaviorStigmataTG4CompleteOnlyAtUnit"/>
+        <OperandArray value="CountBehaviorStigmataFG1CompleteOnlyAtUnit"/>
+        <OperandArray value="CountBehaviorStigmataFG2CompleteOnlyAtUnit"/>
+        <OperandArray value="CountBehaviorStigmataFG3CompleteOnlyAtUnit"/>
+        <OperandArray value="CountBehaviorStigmataFG4CompleteOnlyAtUnit"/>
+        <OperandArray value="CountBehaviorStigmataIG1CompleteOnlyAtUnit"/>
+        <OperandArray value="CountBehaviorStigmataIG2CompleteOnlyAtUnit"/>
+        <OperandArray value="CountBehaviorStigmataIG3CompleteOnlyAtUnit"/>
+        <OperandArray value="CountBehaviorStigmataIG4CompleteOnlyAtUnit"/>
+        <OperandArray value="CountBehaviorStigmataPG1CompleteOnlyAtUnit"/>
+        <OperandArray value="CountBehaviorStigmataPG2CompleteOnlyAtUnit"/>
+        <OperandArray value="CountBehaviorStigmataPG3CompleteOnlyAtUnit"/>
+        <OperandArray value="CountBehaviorStigmataPG4CompleteOnlyAtUnit"/>
+        <OperandArray value="CountBehaviorStigmataPG5CompleteOnlyAtUnit"/>
+        <OperandArray value="CountBehaviorStigmataCG1CompleteOnlyAtUnit"/>
+        <OperandArray value="CountBehaviorStigmataCG2CompleteOnlyAtUnit"/>
+        <OperandArray value="CountBehaviorStigmataCG3CompleteOnlyAtUnit"/>
+        <OperandArray value="CountBehaviorStigmataCG4CompleteOnlyAtUnit"/>
+        <OperandArray value="CountBehaviorStigmataCG5CompleteOnlyAtUnit"/>
+        <OperandArray value="CountBehaviorStigmataCG6CompleteOnlyAtUnit"/>
+        <OperandArray value="CountBehaviorStigmataSG1CompleteOnlyAtUnit"/>
+        <OperandArray value="CountBehaviorStigmataSG2CompleteOnlyAtUnit"/>
+        <OperandArray value="CountBehaviorStigmataSG3CompleteOnlyAtUnit"/>
+        <OperandArray value="CountBehaviorStigmataSG4CompleteOnlyAtUnit"/>
+        <OperandArray value="CountBehaviorStigmataSG5CompleteOnlyAtUnit"/>
+    </CRequirementSum>
+    <CRequirementSum id="SumCountBehaviorStigmataTG1CompleteOnlyAtUnitCountBehaviorStigmataTG2CompleteOnlyAtUnitCountBehaviorStigmataTG3CompleteOnlyAtUnitCountBehaviorStigmataTG4CompleteOnlyAtUnitCountBehaviorStigmataFG1Compl2529096767">
+        <OperandArray value="CountBehaviorStigmataTG1CompleteOnlyAtUnit"/>
+        <OperandArray value="CountBehaviorStigmataTG2CompleteOnlyAtUnit"/>
+        <OperandArray value="CountBehaviorStigmataTG3CompleteOnlyAtUnit"/>
+        <OperandArray value="CountBehaviorStigmataTG4CompleteOnlyAtUnit"/>
+        <OperandArray value="CountBehaviorStigmataFG1CompleteOnlyAtUnit"/>
+        <OperandArray value="CountBehaviorStigmataFG2CompleteOnlyAtUnit"/>
+        <OperandArray value="CountBehaviorStigmataFG3CompleteOnlyAtUnit"/>
+        <OperandArray value="CountBehaviorStigmataFG4CompleteOnlyAtUnit"/>
+        <OperandArray value="CountBehaviorStigmataIG1CompleteOnlyAtUnit"/>
+        <OperandArray value="CountBehaviorStigmataIG2CompleteOnlyAtUnit"/>
+        <OperandArray value="CountBehaviorStigmataIG3CompleteOnlyAtUnit"/>
+        <OperandArray value="CountBehaviorStigmataIG4CompleteOnlyAtUnit"/>
+        <OperandArray value="CountBehaviorStigmataPG1CompleteOnlyAtUnit"/>
+        <OperandArray value="CountBehaviorStigmataPG2CompleteOnlyAtUnit"/>
+        <OperandArray value="CountBehaviorStigmataPG3CompleteOnlyAtUnit"/>
+        <OperandArray value="CountBehaviorStigmataPG4CompleteOnlyAtUnit"/>
+        <OperandArray value="CountBehaviorStigmataPG5CompleteOnlyAtUnit"/>
+        <OperandArray value="CountBehaviorStigmataCG1CompleteOnlyAtUnit"/>
+        <OperandArray value="CountBehaviorStigmataCG2CompleteOnlyAtUnit"/>
+        <OperandArray value="CountBehaviorStigmataCG3CompleteOnlyAtUnit"/>
+        <OperandArray value="CountBehaviorStigmataCG4CompleteOnlyAtUnit"/>
+        <OperandArray value="CountBehaviorStigmataCG5CompleteOnlyAtUnit"/>
+        <OperandArray value="CountBehaviorStigmataCG6CompleteOnlyAtUnit"/>
+        <OperandArray value="CountBehaviorStigmataSG1CompleteOnlyAtUnit"/>
+        <OperandArray value="CountBehaviorStigmataSG2CompleteOnlyAtUnit"/>
+        <OperandArray value="CountBehaviorStigmataSG3CompleteOnlyAtUnit"/>
+        <OperandArray value="CountBehaviorStigmataSG4CompleteOnlyAtUnit"/>
+        <OperandArray value="CountBehaviorStigmataSG5CompleteOnlyAtUnit"/>
+    </CRequirementSum>
+    <CRequirementSum id="SumCountBehaviorWeaponUseB28CompleteOnlyCountBehaviorStarOfEdenWorldCompleteOnly">
+        <OperandArray value="CountBehaviorWeaponUseB28CompleteOnly"/>
+        <OperandArray value="CountBehaviorStarOfEdenWorldCompleteOnly"/>
+    </CRequirementSum>
+    <CRequirementSum id="SumCountUnitBronyaC2QueuedOrBetterCountUnitBronyaC2RevivableCountUnitBronyaC7QueuedOrBetterCountUnitBronyaC7RevivableCountUnitBronyaC7MotorQueuedOrBetterCountUnitBronyaC7MotorRevivable">
+        <OperandArray value="CountUnitBronyaC2QueuedOrBetter"/>
+        <OperandArray value="CountUnitBronyaC2Revivable"/>
+        <OperandArray value="CountUnitBronyaC7QueuedOrBetter"/>
+        <OperandArray value="CountUnitBronyaC7Revivable"/>
+        <OperandArray value="CountUnitBronyaC7MotorQueuedOrBetter"/>
+        <OperandArray value="CountUnitBronyaC7MotorRevivable"/>
+    </CRequirementSum>
+    <CRequirementSum id="SumCountUnitDG_010QueuedOrBetterCountUnitDG_011QueuedOrBetterCountUnitDG_012QueuedOrBetterCountUnitDG_013QueuedOrBetter">
+        <OperandArray value="CountUnitDG_010QueuedOrBetter"/>
+        <OperandArray value="CountUnitDG_011QueuedOrBetter"/>
+        <OperandArray value="CountUnitDG_012QueuedOrBetter"/>
+        <OperandArray value="CountUnitDG_013QueuedOrBetter"/>
+    </CRequirementSum>
+    <CRequirementSum id="SumCountUnitExtractorRichQueuedOrBetterCountUnitExtractorQueuedOrBetter">
+        <OperandArray value="CountUnitExtractorRichQueuedOrBetter"/>
+        <OperandArray value="CountUnitExtractorQueuedOrBetter"/>
+    </CRequirementSum>
+    <CRequirementSum id="SumCountUnitKianaC2QueuedOrBetterCountUnitKianaC2RevivableCountUnitKianaC4QueuedOrBetterCountUnitKianaC4Revivable">
+        <OperandArray value="CountUnitKianaC2QueuedOrBetter"/>
+        <OperandArray value="CountUnitKianaC2Revivable"/>
+        <OperandArray value="CountUnitKianaC4QueuedOrBetter"/>
+        <OperandArray value="CountUnitKianaC4Revivable"/>
+    </CRequirementSum>
+    <CRequirementSum id="SumCountUnitMeiC2QueuedOrBetterCountUnitMeiC2Revivable">
+        <OperandArray value="CountUnitMeiC2QueuedOrBetter"/>
+        <OperandArray value="CountUnitMeiC2Revivable"/>
+    </CRequirementSum>
+    <CRequirementSum id="SumCountUnitSeeleC1QueuedOrBetterCountUnitSeeleC1Revivable">
+        <OperandArray value="CountUnitSeeleC1QueuedOrBetter"/>
+        <OperandArray value="CountUnitSeeleC1Revivable"/>
+    </CRequirementSum>
+    <CRequirementSum id="SumCountUpgradeBurnDamageQueuedOnlyCountUpgradeBurnDamageInProgressOnly">
+        <OperandArray value="CountUpgradeBurnDamageQueuedOnly"/>
+        <OperandArray value="CountUpgradeBurnDamageInProgressOnly"/>
+    </CRequirementSum>
+    <CRequirementSum id="SumCountUpgradeDeadgalArmorUpgradeQueuedOnlyCountUpgradeDeadgalArmorUpgradeInProgressOnly">
+        <OperandArray value="CountUpgradeDeadgalArmorUpgradeQueuedOnly"/>
+        <OperandArray value="CountUpgradeDeadgalArmorUpgradeInProgressOnly"/>
+    </CRequirementSum>
+    <CRequirementSum id="SumCountUpgradeDeadgalAttackUpgradeQueuedOnlyCountUpgradeDeadgalAttackUpgradeInProgressOnly">
+        <OperandArray value="CountUpgradeDeadgalAttackUpgradeQueuedOnly"/>
+        <OperandArray value="CountUpgradeDeadgalAttackUpgradeInProgressOnly"/>
+    </CRequirementSum>
+    <CRequirementSum id="SumCountUpgradeDivineKey1stQueuedOrBetterCountUpgradeDivineKey2ndQueuedOrBetterCountUpgradeDivineKey3rdQueuedOrBetterCountUpgradeDivineKey4thQueuedOrBetterCountUpgradeDivineKey5thQueuedOrBetterCountUp2851595226">
+        <OperandArray value="CountUpgradeDivineKey1stQueuedOrBetter"/>
+        <OperandArray value="CountUpgradeDivineKey2ndQueuedOrBetter"/>
+        <OperandArray value="CountUpgradeDivineKey3rdQueuedOrBetter"/>
+        <OperandArray value="CountUpgradeDivineKey4thQueuedOrBetter"/>
+        <OperandArray value="CountUpgradeDivineKey5thQueuedOrBetter"/>
+        <OperandArray value="CountUpgradeDivineKey6thQueuedOrBetter"/>
+        <OperandArray value="CountUpgradeDivineKey7thQueuedOrBetter"/>
+        <OperandArray value="CountUpgradeDivineKey8thQueuedOrBetter"/>
+        <OperandArray value="CountUpgradeDivineKey9thQueuedOrBetter"/>
+        <OperandArray value="CountUpgradeDivineKey10thQueuedOrBetter"/>
+        <OperandArray value="CountUpgradeDivineKey11thQueuedOrBetter"/>
+        <OperandArray value="CountUpgradeDivineKey12thQueuedOrBetter"/>
+    </CRequirementSum>
+    <CRequirementSum id="SumDivineKeysResearched">
+        <OperandArray value="CountUpgradeDivineKey1stQueuedOrBetter"/>
+        <OperandArray value="CountUpgradeDivineKey2ndQueuedOrBetter"/>
+        <OperandArray value="CountUpgradeDivineKey3rdQueuedOrBetter"/>
+        <OperandArray value="CountUpgradeDivineKey4thQueuedOrBetter"/>
+        <OperandArray value="CountUpgradeDivineKey5thQueuedOrBetter"/>
+        <OperandArray value="CountUpgradeDivineKey6thQueuedOrBetter"/>
+        <OperandArray value="CountUpgradeDivineKey7thQueuedOrBetter"/>
+        <OperandArray value="CountUpgradeDivineKey8thQueuedOrBetter"/>
+        <OperandArray value="CountUpgradeDivineKey9thQueuedOrBetter"/>
+        <OperandArray value="CountUpgradeDivineKey10thQueuedOrBetter"/>
+        <OperandArray value="CountUpgradeDivineKey11thQueuedOrBetter"/>
+        <OperandArray value="CountUpgradeDivineKey12thQueuedOrBetter"/>
+    </CRequirementSum>
+    <CRequirementSum id="SumCountUpgradeFrozenDurationQueuedOnlyCountUpgradeFrozenDurationInProgressOnly">
+        <OperandArray value="CountUpgradeFrozenDurationQueuedOnly"/>
+        <OperandArray value="CountUpgradeFrozenDurationInProgressOnly"/>
+    </CRequirementSum>
+    <CRequirementSum id="SumCountUpgradeMicroFilteringQueuedOnlyCountUpgradeMicroFilteringInProgressOnly">
+        <OperandArray value="CountUpgradeMicroFilteringQueuedOnly"/>
+        <OperandArray value="CountUpgradeMicroFilteringInProgressOnly"/>
+    </CRequirementSum>
+    <CRequirementSum id="SumCountUpgradePalsyDurationQueuedOnlyCountUpgradePalsyDurationInProgressOnly">
+        <OperandArray value="CountUpgradePalsyDurationQueuedOnly"/>
+        <OperandArray value="CountUpgradePalsyDurationInProgressOnly"/>
+    </CRequirementSum>
+    <CRequirementSum id="SumCountUpgradeROArmorUpgradeQueuedOnlyCountUpgradeROArmorUpgradeInProgressOnly">
+        <OperandArray value="CountUpgradeROArmorUpgradeQueuedOnly"/>
+        <OperandArray value="CountUpgradeROArmorUpgradeInProgressOnly"/>
+    </CRequirementSum>
+    <CRequirementSum id="SumCountUpgradeROAttackUpgradeQueuedOnlyCountUpgradeROAttackUpgradeInProgressOnly">
+        <OperandArray value="CountUpgradeROAttackUpgradeQueuedOnly"/>
+        <OperandArray value="CountUpgradeROAttackUpgradeInProgressOnly"/>
+    </CRequirementSum>
+    <CRequirementSum id="SumCountUpgradeReduceFireQueuedOnlyCountUpgradeReduceFireInProgressOnly">
+        <OperandArray value="CountUpgradeReduceFireQueuedOnly"/>
+        <OperandArray value="CountUpgradeReduceFireInProgressOnly"/>
+    </CRequirementSum>
+    <CRequirementSum id="SumCountUpgradeReduceIceQueuedOnlyCountUpgradeReduceIceInProgressOnly">
+        <OperandArray value="CountUpgradeReduceIceQueuedOnly"/>
+        <OperandArray value="CountUpgradeReduceIceInProgressOnly"/>
+    </CRequirementSum>
+    <CRequirementSum id="SumCountUpgradeReduceThunderQueuedOnlyCountUpgradeReduceThunderInProgressOnly">
+        <OperandArray value="CountUpgradeReduceThunderQueuedOnly"/>
+        <OperandArray value="CountUpgradeReduceThunderInProgressOnly"/>
+    </CRequirementSum>
+    <CRequirementSum id="SumCountUpgradeTerranBuildingArmorQueuedOnlyCountUpgradeTerranBuildingArmorInProgressOnly">
+        <OperandArray value="CountUpgradeTerranBuildingArmorQueuedOnly"/>
+        <OperandArray value="CountUpgradeTerranBuildingArmorInProgressOnly"/>
+    </CRequirementSum>
+    <CRequirementSum id="SumCountUpgradeUlArmorUpgradeQueuedOnlyCountUpgradeUlArmorUpgradeInProgressOnly">
+        <OperandArray value="CountUpgradeUlArmorUpgradeQueuedOnly"/>
+        <OperandArray value="CountUpgradeUlArmorUpgradeInProgressOnly"/>
+    </CRequirementSum>
+    <CRequirementSum id="SumCountUpgradeUlAttackUpgradeQueuedOnlyCountUpgradeUlAttackUpgradeInProgressOnly">
+        <OperandArray value="CountUpgradeUlAttackUpgradeQueuedOnly"/>
+        <OperandArray value="CountUpgradeUlAttackUpgradeInProgressOnly"/>
+    </CRequirementSum>
+    <CRequirementSum id="SumCountUpgradeVArmorUpgrade2QueuedOnlyCountUpgradeVArmorUpgrade2InProgressOnly">
+        <OperandArray value="CountUpgradeVArmorUpgrade2QueuedOnly"/>
+        <OperandArray value="CountUpgradeVArmorUpgrade2InProgressOnly"/>
+    </CRequirementSum>
+    <CRequirementSum id="SumCountUpgradeVArmorUpgradeQueuedOnlyCountUpgradeVArmorUpgradeInProgressOnly">
+        <OperandArray value="CountUpgradeVArmorUpgradeQueuedOnly"/>
+        <OperandArray value="CountUpgradeVArmorUpgradeInProgressOnly"/>
+    </CRequirementSum>
+    <CRequirementSum id="SumCountUpgradeVAttackUpgrade2QueuedOnlyCountUpgradeVAttackUpgrade2InProgressOnly">
+        <OperandArray value="CountUpgradeVAttackUpgrade2QueuedOnly"/>
+        <OperandArray value="CountUpgradeVAttackUpgrade2InProgressOnly"/>
+    </CRequirementSum>
+    <CRequirementCountUpgrade id="UpgradeRoach2CompleteOnly">
+        <Count Link="UL_040"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="UpgradeRoach2QueuedOrBetter">
+        <Count Link="UL_040"/>
+    </CRequirementCountUpgrade>
+    <CRequirementLT id="LTCountUpgradeMeiHealthQueuedOrBetter16">
+        <OperandArray index="0" value="CountUpgradeMeiHealthQueuedOrBetter"/>
+        <OperandArray index="1" value="16"/>
+    </CRequirementLT>
+    <CRequirementLT id="LTCountUpgradeMeiShieldQueuedOrBetter16">
+        <OperandArray index="0" value="CountUpgradeMeiShieldQueuedOrBetter"/>
+        <OperandArray index="1" value="16"/>
+    </CRequirementLT>
+    <CRequirementLT id="LTCountUpgradeMeiATTACKQueuedOrBetter16">
+        <OperandArray index="0" value="CountUpgradeMeiATTACKQueuedOrBetter"/>
+        <OperandArray index="1" value="16"/>
+    </CRequirementLT>
+    <CRequirementCountUpgrade id="CountUpgradeMeiHealthQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="MeiHealth" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeMeiShieldQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="MeiShield" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeMeiATTACKQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="MeiATTACK" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+</Catalog>

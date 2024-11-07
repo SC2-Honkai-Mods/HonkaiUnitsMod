@@ -1,0 +1,2532 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CModel default="1" id="CModelSeeleC1" parent="Unit">
+        <?token id="Race" value="Terran"?>
+        <Model value="Assets\Models\Seele_C1\Seele_C1.m3"/>
+        <RequiredAnims value="Assets\Models\Seele_C1\Seele_C1.m3a"/>
+        <EditorCategories value="Race:Terran"/>
+        <Events Anim="Thrown" Name="SeeleHit" Type="Sound"/>
+        <Events>
+            <Anim value="Blink,01"/>
+            <Name value="Hide"/>
+            <Type value="Actor"/>
+            <Time value="0.100000"/>
+        </Events>
+        <Events>
+            <Anim value="Blink,01"/>
+            <Name value="Show"/>
+            <Type value="Actor"/>
+            <Time value="0.400000"/>
+        </Events>
+        <Events>
+            <Anim value="Attack,03"/>
+            <Name value="Hide"/>
+            <Type value="Actor"/>
+            <Time value="0.400000"/>
+        </Events>
+        <Events>
+            <Anim value="Attack,03"/>
+            <Name value="Show"/>
+            <Type value="Actor"/>
+            <Time value="0.875000"/>
+        </Events>
+        <Events>
+            <Anim value="Attack,05"/>
+            <Name value="Hide"/>
+            <Type value="Actor"/>
+            <Time value="0.200000"/>
+        </Events>
+        <Events>
+            <Anim value="Attack,05"/>
+            <Name value="Show"/>
+            <Type value="Actor"/>
+            <Time value="0.533300"/>
+        </Events>
+        <Events>
+            <Anim value="Blink,02"/>
+            <Name value="Hide"/>
+            <Type value="Actor"/>
+            <Time value="0.100000"/>
+        </Events>
+        <Events>
+            <Anim value="Blink,02"/>
+            <Name value="Show"/>
+            <Type value="Actor"/>
+            <Time value="0.400000"/>
+        </Events>
+        <Events>
+            <Anim value="Attack,06"/>
+            <Name value="Hide"/>
+            <Type value="Actor"/>
+            <Time value="0.600000"/>
+        </Events>
+        <Events>
+            <Anim value="Attack,06"/>
+            <Name value="Show"/>
+            <Type value="Actor"/>
+            <Time value="0.800000"/>
+        </Events>
+        <Events>
+            <Anim value="Spell"/>
+            <Name value="Hide"/>
+            <Type value="Actor"/>
+            <Time value="0.166700"/>
+        </Events>
+        <Events>
+            <Anim value="Spell"/>
+            <Name value="Show"/>
+            <Type value="Actor"/>
+            <Time value="0.233300"/>
+        </Events>
+        <Events>
+            <Anim value="Spell"/>
+            <Name value="Hide"/>
+            <Type value="Actor"/>
+            <Time value="0.300000"/>
+        </Events>
+        <Events>
+            <Anim value="Spell"/>
+            <Name value="Show"/>
+            <Type value="Actor"/>
+            <Time value="0.366700"/>
+        </Events>
+        <Events>
+            <Anim value="Spell"/>
+            <Name value="Hide"/>
+            <Type value="Actor"/>
+            <Time value="0.433300"/>
+        </Events>
+        <Events>
+            <Anim value="Spell"/>
+            <Name value="Show"/>
+            <Type value="Actor"/>
+            <Time value="0.500000"/>
+        </Events>
+        <Events>
+            <Anim value="Spell"/>
+            <Name value="Hide"/>
+            <Type value="Actor"/>
+            <Time value="0.566700"/>
+        </Events>
+        <Events>
+            <Anim value="Spell"/>
+            <Name value="Show"/>
+            <Type value="Actor"/>
+            <Time value="0.633300"/>
+        </Events>
+        <Events>
+            <Anim value="Custom,01"/>
+            <Name value="HideWeapon"/>
+            <Type value="Actor"/>
+            <Time value="0.033300"/>
+        </Events>
+        <Events>
+            <Anim value="Custom,01"/>
+            <Name value="ShowWeapon"/>
+            <Type value="Actor"/>
+            <Time value="0.233300"/>
+        </Events>
+        <Events>
+            <Anim value="Custom,01"/>
+            <Name value="HideWeapon"/>
+            <Type value="Actor"/>
+            <Time value="0.866700"/>
+        </Events>
+        <Events>
+            <Anim value="Custom,01"/>
+            <Name value="ShowWeapon"/>
+            <Type value="Actor"/>
+            <Time value="2.000000"/>
+        </Events>
+        <Events Anim="Attack,01" Name="SeeleAttack01" Type="Sound"/>
+        <Events Anim="Attack,02" Name="SeeleAttack01" Type="Sound"/>
+        <Events Anim="Attack,03" Name="SeeleAttack01" Type="Sound"/>
+        <Events Anim="Attack,04" Name="SeeleAttack02" Type="Sound"/>
+        <Events Anim="Attack,05" Name="SeeleAttack03" Type="Sound"/>
+        <Events Anim="Attack,06" Name="SeeleCU" Type="Sound"/>
+        <Lighting value="CModelSeeleC1"/>
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraMid04"/>
+        <Radius value="0.375000"/>
+        <SelectionOffset value="0.000000,0.000000,-0.500000"/>
+        <SelectionRadius value="0.468700"/>
+        <ShadowRadius value="0.468700"/>
+        <SquibTypeDefault value="Flesh"/>
+        <UnitGlossaryCamera value="Star2CameraMid04"/>
+    </CModel>
+    <CModel id="ArmoryBuild"/>
+    <CModel id="Herrscher8thProjector" parent="PersistentSpellFX" Race="Terran">
+        <Model value="Assets\Models\Herrscher8thProject\Herrscher8thProject.m3"/>
+        <Priority value="32"/>
+        <ScaleMax value="1.500000,1.500000,1.500000"/>
+        <ScaleMin value="1.500000,1.500000,1.500000"/>
+        <ShadowRadius value="0.000000"/>
+    </CModel>
+    <CModel id="Herrscher7thRing" parent="RacePersistentSpellFX" Race="Terran">
+        <Model value="Assets\Models\Herrscher7th\Herrscher7thRing.m3"/>
+        <Flags index="Wait" value="1"/>
+        <Priority value="32"/>
+        <ShadowRadius value="0.000000"/>
+    </CModel>
+    <CModel id="Herrscher8thAbil1" parent="OneShotSpellFX" Prefix="Units\">
+        <Model value="Assets\Effects\Protoss\DarkArchon_Confusion\DarkArchon_Confusion.m3"/>
+        <EditorCategories value="Race:Zerg"/>
+    </CModel>
+    <CModel id="Herrscher7thFireWall" parent="Unit">
+        <Model value="Assets\Models\Herrscher7th\FireWall.m3"/>
+        <EditorCategories value="Race:Protoss"/>
+        <Radius value="2.500000"/>
+        <ScaleMax value="0.250000,0.250000,0.400000"/>
+        <ScaleMin value="0.250000,0.250000,0.400000"/>
+        <SelectionRadius value="0.416500"/>
+        <ShadowRadius value="0.416500"/>
+    </CModel>
+    <CModel id="Herrscher7thFireColumn" parent="OneShotSpellFX" Prefix="Units\">
+        <Model value="Assets\Models\Herrscher7th\FireColumn.m3"/>
+        <EditorCategories value="Race:Zerg"/>
+    </CModel>
+    <CModel id="Herrscher7thWave" parent="Unit">
+        <Model value="Assets\Effects\Protoss\Alarak_DestructionWave\Alarak_DestructionWave.m3"/>
+        <EditorCategories value="Race:Protoss"/>
+        <Radius value="0.375000"/>
+        <SelectionRadius value="0.416500"/>
+        <ShadowRadius value="0.416500"/>
+    </CModel>
+    <CModel id="ImaginaryUI" parent="Portrait">
+        <Model value="Assets\Models\Herrscher8th\ImaginaryScreen.m3"/>
+        <EditorCategories value=""/>
+    </CModel>
+    <CModel id="KianaC1" parent="Unit" Race="Terran">
+        <Model value="Assets\Models\Kiana_C1\Kiana_C1.m3"/>
+        <Events>
+            <Anim value="Attack,01"/>
+            <Name value="KianaAttack1"/>
+            <Type value="Sound"/>
+            <Time value="0.300000"/>
+        </Events>
+        <Events>
+            <Anim value="Attack,02"/>
+            <Name value="KianaAttack2"/>
+            <Type value="Sound"/>
+            <Time value="0.100000"/>
+        </Events>
+        <Events>
+            <Anim value="Attack,03"/>
+            <Name value="KianaAttack3"/>
+            <Type value="Sound"/>
+            <Time value="0.100000"/>
+        </Events>
+        <Events>
+            <Anim value="Attack,04"/>
+            <Name value="KianaAttack2"/>
+            <Type value="Sound"/>
+            <Time value="0.100000"/>
+        </Events>
+        <Events>
+            <Anim value="Attack,05"/>
+            <Name value="KianaAttack4"/>
+            <Type value="Sound"/>
+            <Time value="0.200000"/>
+        </Events>
+        <Events>
+            <Anim value="Attack,06"/>
+            <Name value="KianaAttack3"/>
+            <Type value="Sound"/>
+            <Time value="0.200000"/>
+        </Events>
+        <Events>
+            <Anim value="Attack,07"/>
+            <Name value="KianaAttack4"/>
+            <Type value="Sound"/>
+            <Time value="0.500000"/>
+        </Events>
+        <Events Anim="Thrown" Name="KianaHit" Type="Sound"/>
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraMid04"/>
+        <Radius value="0.375000"/>
+        <SelectionOffset value="0.000000,0.000000,-0.500000"/>
+        <SelectionRadius value="0.468700"/>
+        <ShadowRadius value="0.468700"/>
+        <SquibTypeDefault value="Flesh"/>
+        <UnitGlossaryCamera value="Star2CameraMid04"/>
+    </CModel>
+    <CModel id="KianaC1Portrait" parent="MarinePortraitBase">
+        <Model value="Assets\Models\Kiana_C2_portrait\Kiana_C2_portrait.m3"/>
+        <RequiredAnims value="Assets\Models\Kiana_C2_portrait\Kiana_C2_portrait.m3a"/>
+        <FacialController value=""/>
+        <Image value=""/>
+    </CModel>
+    <CModel id="RPC6626Death" parent="BansheeDeathBase">
+        <Model value="Assets\Models\BOSS_050_death\BOSS_050_death.m3"/>
+        <Events index="0" removed="1"/>
+        <Events index="1" removed="1"/>
+    </CModel>
+    <CModel id="HonkaiHyperionDeath" parent="BattlecruiserDeathBase">
+        <Model value="Assets\Models\Hyperion_Honkai\Hyperion_Honkai_Death.m3"/>
+        <Events index="0">
+            <Variation value="-1"/>
+            <Anim value="Death,00"/>
+            <Name value="TerranPreExplosionSmall"/>
+            <Type value="Sound"/>
+            <Time value="0.010000"/>
+        </Events>
+        <Events index="1">
+            <Variation value="-1"/>
+            <Anim value="Death,00"/>
+            <Name value="TerranPreExplosionSmall"/>
+            <Type value="Sound"/>
+            <Time value="0.233300"/>
+        </Events>
+        <Events index="2">
+            <Variation value="-1"/>
+            <Anim value="Death,00"/>
+            <Name value="TerranPreExplosionSmall"/>
+            <Type value="Sound"/>
+            <Time value="0.500000"/>
+        </Events>
+        <Events index="3">
+            <Variation value="-1"/>
+            <Anim value="Death,00"/>
+            <Name value="TerranPreExplosionSmall"/>
+            <Type value="Sound"/>
+            <Time value="0.833300"/>
+        </Events>
+        <Events index="4">
+            <Variation value="-1"/>
+            <Anim value="Death,00"/>
+            <Name value="TerranExplosionLarge"/>
+            <Type value="Sound"/>
+            <Time value="1.500000"/>
+        </Events>
+        <Events index="5">
+            <Variation value="-1"/>
+            <Anim value="Death,01"/>
+            <Name value="TerranPreExplosionSmall"/>
+            <Type value="Sound"/>
+            <Time value="0.066600"/>
+        </Events>
+        <Events index="6">
+            <Variation value="-1"/>
+            <Anim value="Death,01"/>
+            <Name value="TerranExplosionLarge"/>
+            <Type value="Sound"/>
+            <Time value="0.666600"/>
+        </Events>
+        <Events index="7">
+            <Variation value="-1"/>
+            <Anim value="Death,02"/>
+            <Name value="TerranPreExplosionSmall"/>
+            <Type value="Sound"/>
+            <Time value="0.066600"/>
+        </Events>
+        <Events index="8">
+            <Variation value="-1"/>
+            <Anim value="Death,02"/>
+            <Name value="TerranExplosionLarge"/>
+            <Type value="Sound"/>
+            <Time value="0.666600"/>
+        </Events>
+        <Events index="9">
+            <Variation value="-1"/>
+            <Anim value="Death,00"/>
+            <Name value="Uni_DeathFXincidentallFire"/>
+            <Type value="Sound"/>
+            <Time value="1.700000"/>
+            <Payload value="Uni_DeathFXincidentallFire"/>
+        </Events>
+        <Events index="10">
+            <Variation value="-1"/>
+            <Anim value="Death,01"/>
+            <Name value="Uni_DeathFXincidentallFire"/>
+            <Type value="Sound"/>
+            <Time value="1.700000"/>
+            <Payload value="Uni_DeathFXincidentallFire"/>
+        </Events>
+        <Events index="11">
+            <Variation value="-1"/>
+            <Anim value="Death,02"/>
+            <Name value="Uni_DeathFXincidentallFire"/>
+            <Type value="Sound"/>
+            <Time value="1.700000"/>
+            <Payload value="Uni_DeathFXincidentallFire"/>
+        </Events>
+        <Events index="12" removed="1"/>
+        <Events index="13" removed="1"/>
+        <Events index="14" removed="1"/>
+        <Events index="15" removed="1"/>
+        <Events index="16" removed="1"/>
+        <Events index="17" removed="1"/>
+        <Events index="18" removed="1"/>
+        <Events index="19" removed="1"/>
+        <Events index="20" removed="1"/>
+        <SelectionRadius value="0.625000"/>
+        <ShadowRadius value="0.625000"/>
+        <VariationCount value="1"/>
+    </CModel>
+    <CModel id="HonkaiHyperion" parent="BattlecruiserBase">
+        <Model value="Assets\Models\Hyperion_Honkai\Hyperion_Honkai.m3"/>
+        <SelectionRadius value="2.000000"/>
+    </CModel>
+    <CModel id="BronyaC2Abil2Project" parent="PersistentSpellFX">
+        <Model value="Assets\Models\Bronya_C2\Bronya_C2_Shoot_Project.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="BronyaC7CannonAttachStarOfEden">
+        <Model value="Assets\Models\Bronya_C7\StarOfEdenWorld.m3"/>
+    </CModel>
+    <CModel id="BronyaC2ShieldModel" parent="PersistentSpellFX">
+        <Model value="Assets\Models\Bronya_C2\Bronya_C2_Shield.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <SelectionRadius value="0.555400"/>
+        <ShadowRadius value="0.555400"/>
+    </CModel>
+    <CModel id="Helios2" parent="MedivacBase">
+        <Model value="Assets\Models\Helios\Helios.m3"/>
+        <Lighting value="Helios"/>
+        <ScaleMax value="1.000000,1.000000,1.000000"/>
+        <ScaleMin value="1.000000,1.000000,1.000000"/>
+    </CModel>
+    <CModel id="HonkaiUnitStatusNoEnergy" parent="UI">
+        <Model value="Assets\Models\HonkaiUnitStatus\HonkaiUnitStatus_NoEnergy.m3"/>
+        <LowQualityModel value="HonkaiUnitStatus"/>
+        <Priority value="255"/>
+    </CModel>
+    <CModel id="HeliosDeath" parent="MedivacDeathBase">
+        <Model value="Assets\Models\Helios\Heliosi_Death.m3"/>
+        <Events index="0">
+            <Variation value="-1"/>
+            <Anim value="Death,00"/>
+            <Name value="Uni_DeathFXincidentallFire"/>
+            <Type value="Sound"/>
+            <Time value="0.300000"/>
+            <Payload value="Uni_DeathFXincidentallFire"/>
+        </Events>
+        <Events index="1">
+            <Variation value="-1"/>
+            <Anim value="Death,01"/>
+            <Name value="Uni_DeathFXincidentallFire"/>
+            <Type value="Sound"/>
+            <Time value="0.300000"/>
+            <Payload value="Uni_DeathFXincidentallFire"/>
+        </Events>
+        <VariationCount value="1"/>
+    </CModel>
+    <CModel id="QuasiBlackHole" parent="PersistentSpellFX">
+        <Model value="Assets\Models\QuasiBlackHole\QuasiBlackHole.m3"/>
+        <EditorCategories value="Race:Protoss"/>
+        <RadiusLoose value="2.000000"/>
+    </CModel>
+    <CModel id="HuoDouFireBallMissile" parent="MissileFX">
+        <Model value="Assets\Models\Fire_Ball_Huo_Dou\Fire_Ball_Huo_Dou.m3"/>
+        <EditorCategories value="Race:Zerg"/>
+    </CModel>
+    <CModel id="RPC66262" parent="BansheeBase">
+        <Model value="Assets\Models\BOSS_050\BOSS_050.m3"/>
+        <RequiredAnims value="Assets\Models\BOSS_050\BOSS_050.m3a"/>
+        <Radius value="1.250000"/>
+        <ScaleMax value="1.330000,1.330000,1.330000"/>
+        <ScaleMin value="1.330000,1.330000,1.330000"/>
+        <SelectionRadius value="1.400000"/>
+        <ShadowRadius value="1.400000"/>
+    </CModel>
+    <CModel id="SaAfflication" parent="Unit" Race="Terran">
+        <Model value="Assets\Models\BOSS_470\BOSS_470.m3"/>
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraHigh04"/>
+        <Radius value="3.000000"/>
+        <SelectionRadius value="3.000000"/>
+        <ShadowRadius value="3.000000"/>
+        <SquibTypeDefault value="Flesh"/>
+        <TechPurchaseCamera value="TechPurchaseGhost"/>
+        <UnitGlossaryCamera value="Star2CameraHigh04"/>
+    </CModel>
+    <CModel id="SaCorePortrait" parent="GhostPortraitBase">
+        <Model value="Assets\Models\Herrscher1st_portrait\Herrscher1st_portrait.m3"/>
+        <Flags index="Download" value="1"/>
+        <Flags index="VariationFallback" value="0"/>
+        <Image value="Assets\Textures\ghostportraitex3_static.dds"/>
+    </CModel>
+    <CModel id="SaCore" parent="Unit" Race="Terran">
+        <Model value="Assets\Models\BOSS_470\BOSS_470_Flower.m3"/>
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraHigh04"/>
+        <Radius value="15.000000"/>
+        <SelectionRadius value="7.750000"/>
+        <ShadowRadius value="7.750000"/>
+        <SquibTypeDefault value="Flesh"/>
+        <TechPurchaseCamera value="TechPurchaseGhost"/>
+        <UnitGlossaryCamera value="Star2CameraHigh04"/>
+        <ScaleMax value="0.400000,0.400000,0.400000"/>
+        <ScaleMin value="0.400000,0.400000,0.400000"/>
+    </CModel>
+    <CModel id="StarOfEdenWorldAbil1Model" parent="OneShotSpellFX">
+        <Model value="Assets\Models\Bronya_C7\StarOfEdenWorldExplode.m3"/>
+        <EditorCategories value="Race:Protoss"/>
+        <AnimSpeed value="0.800000"/>
+    </CModel>
+    <CModel id="PowerupBronya" parent="BuildingEx" Race="Terran">
+        <Model value="Assets\Models\Powerup_Bronya\Powerup_Bronya.m3"/>
+        <Radius value="1.000000"/>
+        <ScaleMax value="1.600000,1.600000,1.600000"/>
+        <ScaleMin value="1.600000,1.600000,1.600000"/>
+        <SelectionRadius value="0.900000"/>
+        <ShadowRadius value="0.900000"/>
+        <SquibTypeDefault value="Metal"/>
+    </CModel>
+    <CModel id="PowerupBronyaDeath" parent="BuildingDeathEx" Race="Terran" low="ArmoryDeathLow">
+        <Model value="Assets\Models\Powerup_Bronya\Powerup_Bronya_Death.m3"/>
+        <Events>
+            <Anim value="Death"/>
+            <Name value="TerranExplosionLarge"/>
+            <Type value="Sound"/>
+            <Time value="0.966000"/>
+        </Events>
+    </CModel>
+    <CModel id="StarOfEdenWorld">
+        <Model value="Assets\Models\Bronya_C7\StarOfEdenWorldExtraWeapon.m3"/>
+        <Flags index="VariationFallback" value="0"/>
+        <Flags index="VariationPreload" value="0"/>
+        <Radius value="0.000000"/>
+        <SelectionRadius value="0.000000"/>
+        <ShadowRadius value="0.000000"/>
+    </CModel>
+    <CModel id="Bronya_C7AttackImpactSmall" parent="ImpactFX">
+        <Model value="Assets\Models\Bronya_C7_explode\Bronya_C7_explode.m3"/>
+        <AnimSpeed value="1.400000"/>
+        <EditorCategories value="Race:Terran"/>
+        <ScaleMax value="0.700000,0.700000,0.700000"/>
+        <ScaleMin value="0.400000,0.400000,0.400000"/>
+    </CModel>
+    <CModel id="Bronya_C7AttackLaunch1" parent="LaunchFX">
+        <Model value="Assets\Models\Bronya_C7_Drill\Bronya_C7_Drill3.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <ScaleMax value="2.000000,1.110000,2.000000"/>
+        <ScaleMin value="2.000000,1.110000,2.000000"/>
+        <AnimSpeed value="2.000000"/>
+    </CModel>
+    <CModel id="MeiC2Burst" parent="RacePersistentSpellFX" Race="Terran">
+        <Model value="Assets\Models\Mei_C2\Mei_C2_burst.m3"/>
+        <Flags index="Wait" value="1"/>
+        <Priority value="32"/>
+        <ScaleMax value="1.600000,1.600000,1.600000"/>
+        <ScaleMin value="1.600000,1.600000,1.600000"/>
+        <ShadowRadius value="0.000000"/>
+    </CModel>
+    <CModel id="PowerupMei" parent="BuildingEx" Race="Terran">
+        <Model value="Assets\Models\Powerup_Mei\Powerup_Mei.m3"/>
+        <Radius value="1.000000"/>
+        <ScaleMax value="1.600000,1.600000,1.600000"/>
+        <ScaleMin value="1.600000,1.600000,1.600000"/>
+        <SelectionRadius value="0.900000"/>
+        <ShadowRadius value="0.900000"/>
+        <SquibTypeDefault value="Metal"/>
+    </CModel>
+    <CModel id="PowerupMeiDeath" parent="BuildingDeathEx" Race="Terran" low="ArmoryDeathLow">
+        <Model value="Assets\Models\Powerup_Mei\Powerup_Mei_Death.m3"/>
+        <Events>
+            <Anim value="Death"/>
+            <Name value="TerranExplosionLarge"/>
+            <Type value="Sound"/>
+            <Time value="0.966000"/>
+        </Events>
+    </CModel>
+    <CModel id="LightningRodDeath" parent="ReactorDeathBase">
+        <Model value="Assets\Models\LightningRod\LightningRodDeath.m3"/>
+    </CModel>
+    <CModel id="IceTabletDeath" parent="ReactorDeathBase">
+        <Model value="Assets\Models\IceTablet\IceTabletDeath.m3"/>
+    </CModel>
+    <CModel id="MHTNukeExplode" parent="OneShotSpellFX">
+        <Model value="Assets\Effects\Terran\Nuke\Nuke.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <RadiusLoose value="1.000000"/>
+        <ScaleMax value="0.600000,0.600000,0.800000"/>
+        <ScaleMin value="0.600000,0.600000,0.800000"/>
+    </CModel>
+    <CModel id="Herrscher2ndUltimateBeam" parent="PersistentSpellFX">
+        <Model value="Assets\Effects\Protoss\ColossusBeam\ColossusBeam.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="DG_021Missile" parent="MissileFX">
+        <Model value="Assets\Models\DG_020_Arrow\DG_021_Arrow.m3"/>
+        <EditorCategories value="Race:Zerg"/>
+    </CModel>
+    <CModel id="SeeleC1_04_01Portrait" parent="MarinePortraitBase">
+        <Model value="Assets\Models\Seele_C1\Seele_C1_04_01_Portrait.m3"/>
+        <RequiredAnims value="Assets\Models\Seele_C1\Seele_C1_Portrait.m3a"/>
+        <FacialController value=""/>
+        <Image value=""/>
+    </CModel>
+    <CModel id="SeeleC1_04_02Portrait" parent="MarinePortraitBase">
+        <Model value="Assets\Models\Seele_C1\Seele_C1_04_02Portrait.m3"/>
+        <RequiredAnims value="Assets\Models\Seele_C1\Seele_C1_Portrait.m3a"/>
+        <FacialController value=""/>
+        <Image value=""/>
+    </CModel>
+    <CModel id="SeeleC1_04_01" parent="CModelSeeleC1">
+        <Model value="Assets\Models\Seele_C1\Seele_C1_04_01.m3"/>
+    </CModel>
+    <CModel id="SeeleC1_04_02" parent="CModelSeeleC1">
+        <Model value="Assets\Models\Seele_C1\Seele_C1_04_02.m3"/>
+    </CModel>
+    <CModel id="BronyaC7Drill2" parent="MissileFX">
+        <Model value="Assets\Models\Bronya_C7_Drill\Bronya_C7_Drill2.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <ScaleMax value="2.000000,2.000000,2.000000"/>
+        <ScaleMin value="2.000000,2.000000,2.000000"/>
+    </CModel>
+    <CModel id="StarOfEdenWorldAbil1WeaponModel" parent="OneShotSpellFX">
+        <Model value="Assets\Models\Bronya_C7\StarOfEdenWorld_Attack.m3"/>
+        <AnimSpeed value="0.800000"/>
+        <EditorCategories value="Race:Protoss"/>
+    </CModel>
+    <CModel id="Valkyrja2DeathRagdoll" parent="UnitDeathRagdoll" Race="Terran">
+        <Model value="Assets\Models\DG_080_death\DG_080_death_ragdoll.m3"/>
+        <LowQualityModel value="TerranBloodDeathLow"/>
+    </CModel>
+    <CModel id="MissileTurretDeath">
+        <Model value="Assets\Models\GunTower2\GunTower2Death.m3"/>
+    </CModel>
+    <CModel id="MissileTurretDeath3" parent="MissileTurretDeathBase">
+        <Model value="Assets\Models\GunTower1\GunTower1Death.m3"/>
+    </CModel>
+    <CModel id="RO_041GroundEffectModel" parent="PersistentSpellFX">
+        <Model value="Assets\Models\RO_040\RO_041_Project.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <RadiusLoose value="1.000000"/>
+    </CModel>
+    <CModel id="MeiC2Wave" parent="Unit">
+        <Model value="Assets\Models\Mei_C2\Mei_C2_wave.m3"/>
+        <EditorCategories value="Race:Protoss"/>
+        <Radius value="0.375000"/>
+        <SelectionRadius value="0.416500"/>
+        <ShadowRadius value="0.416500"/>
+        <ScaleMax value="0.500000,0.350000,0.350000"/>
+        <ScaleMin value="0.500000,0.350000,0.350000"/>
+    </CModel>
+    <CModel id="HonkaiUnitStatus" parent="UI">
+        <Model value="Assets\Models\HonkaiUnitStatus\HonkaiUnitStatus.m3"/>
+        <LowQualityModel value="HonkaiUnitStatus"/>
+        <Priority value="255"/>
+    </CModel>
+    <CModel id="HonkaiUnitStatusSeeleC1" parent="UI">
+        <Model value="Assets\Models\HonkaiUnitStatus\HonkaiUnitStatus_SeeleC1.m3"/>
+        <LowQualityModel value="HonkaiUnitStatus"/>
+        <Priority value="255"/>
+    </CModel>
+    <CModel id="Powerup" parent="BuildingEx" Race="Terran">
+        <Model value="Assets\Models\Powerup\Powerup.m3"/>
+        <Radius value="1.600000"/>
+        <SelectionRadius value="1.800000"/>
+        <ShadowRadius value="1.600000"/>
+        <SquibTypeDefault value="Metal"/>
+        <ScaleMax value="0.800000,0.800000,0.800000"/>
+        <ScaleMin value="0.800000,0.800000,0.800000"/>
+    </CModel>
+    <CModel id="Blktek" parent="BuildingEx" Race="Terran">
+        <Model value="Assets\Models\Blktek\Blktek.m3"/>
+        <Radius value="1.000000"/>
+        <SelectionRadius value="1.200000"/>
+        <ShadowRadius value="1.000000"/>
+        <SquibTypeDefault value="Metal"/>
+        <ScaleMax value="1.200000,1.200000,1.200000"/>
+        <ScaleMin value="1.200000,1.200000,1.200000"/>
+    </CModel>
+    <CModel id="PowerupDeath" parent="BuildingDeathEx" Race="Terran" low="ArmoryDeathLow">
+        <Model value="Assets\Models\Powerup_death\Powerup_death.m3"/>
+        <Events>
+            <Anim value="Death"/>
+            <Name value="TerranExplosionLarge"/>
+            <Type value="Sound"/>
+            <Time value="0.966000"/>
+        </Events>
+    </CModel>
+    <CModel id="B6Missile2" parent="MissileFX">
+        <Model value="Assets\Models\B6_2ndBullet\B6_2ndBullet.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="BattlecruiserDeath">
+        <Model value="Assets\Models\Hyperion_Honkai\Hyperion_Honkai_Death.m3"/>
+        <Events index="0" Variation="-1"/>
+        <Events index="1" Variation="-1"/>
+        <Events index="2" Variation="-1"/>
+        <Events index="3" Variation="-1"/>
+        <Events index="4" Variation="-1"/>
+        <Events index="5" Variation="-1"/>
+        <Events index="6" Variation="-1"/>
+        <Events index="7" Variation="-1"/>
+        <Events index="8" Variation="-1"/>
+        <Events index="9">
+            <Variation value="-1"/>
+            <Name value="Uni_DeathFXincidentallFire"/>
+            <Time value="1.700000"/>
+            <Payload value="Uni_DeathFXincidentallFire"/>
+        </Events>
+        <Events index="10">
+            <Variation value="-1"/>
+            <Anim value="Death,01"/>
+            <Name value="Uni_DeathFXincidentallFire"/>
+            <Time value="1.700000"/>
+            <Payload value="Uni_DeathFXincidentallFire"/>
+        </Events>
+        <Events index="11">
+            <Variation value="-1"/>
+            <Anim value="Death,02"/>
+            <Name value="Uni_DeathFXincidentallFire"/>
+            <Time value="1.700000"/>
+            <Payload value="Uni_DeathFXincidentallFire"/>
+        </Events>
+        <Events index="12" removed="1"/>
+        <Events index="13" removed="1"/>
+        <Events index="14" removed="1"/>
+        <Events index="15" removed="1"/>
+        <Events index="16" removed="1"/>
+        <Events index="17" removed="1"/>
+        <Events index="18" removed="1"/>
+        <Events index="19" removed="1"/>
+        <Events index="20" removed="1"/>
+        <VariationCount value="1"/>
+    </CModel>
+    <CModel id="BattlecruiserHyperjumpPlacement">
+        <Model value="Assets\Models\Hyperion_Honkai\Hyperion_Honkai_Placement.m3"/>
+    </CModel>
+    <CModel id="DG_020Portrait" parent="Portrait" Race="Zerg">
+        <Model value="Assets\Models\DG_020_portrait\DG_020_Portrait.m3"/>
+        <TextureDeclares Prefix="DG_020">
+            <Adaptions Slot="main.diffuse"/>
+        </TextureDeclares>
+    </CModel>
+    <CModel id="DG_020" parent="ZealotBase">
+        <Model value="Assets\Models\DG_020\DG_020.m3"/>
+        <RequiredAnims index="0" removed="1"/>
+        <SquibTypeDefault value="Flesh"/>
+        <TextureDeclares Prefix="DG_020">
+            <Adaptions Slot="main.diffuse"/>
+        </TextureDeclares>
+    </CModel>
+    <CModel id="DG_020Death" parent="MarineDeathBase">
+        <Model value="Assets\Models\DG_020_Death\DG_020_Death.m3"/>
+        <Events index="0" removed="1"/>
+        <Events index="1" removed="1"/>
+        <Events index="2" removed="1"/>
+        <Events index="3" removed="1"/>
+        <Events index="4" removed="1"/>
+        <TextureDeclares Prefix="DG_020">
+            <Adaptions Slot="main.diffuse"/>
+        </TextureDeclares>
+    </CModel>
+    <CModel id="FireExplodeSmall">
+        <Model value="Assets\Doodads\DOM_Explosion_Med\DOM_Explosion_Med.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <ScaleMax value="0.750000,0.750000,0.750000"/>
+        <ScaleMin value="0.750000,0.750000,0.750000"/>
+    </CModel>
+    <CModel id="BlktekDeath" parent="BuildingDeathEx" Race="Terran" low="ArmoryDeathLow">
+        <Model value="Assets\Models\Blktek\Blktek_Death.m3"/>
+        <Events>
+            <Anim value="Death"/>
+            <Name value="TerranExplosionLarge"/>
+            <Type value="Sound"/>
+            <Time value="0.966000"/>
+        </Events>
+    </CModel>
+    <CModel id="RO_042GroundEffectModel" parent="PersistentSpellFX">
+        <Model value="Assets\Models\RO_040\RO_042_attract.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <RadiusLoose value="1.000000"/>
+    </CModel>
+    <CModel id="FurnaceDeath" parent="ReactorDeathBase">
+        <Model value="Assets\Models\Furnace\FurnaceDeath.m3"/>
+    </CModel>
+    <CModel id="SeeleBlinkRed" parent="RacePersistentSpellFX" Race="Terran">
+        <Model value="Assets\Models\Seele_C1\Seele_Blink_Red.m3"/>
+        <Flags index="Wait" value="1"/>
+        <ShadowRadius value="0.000000"/>
+    </CModel>
+    <CModel id="SeeleBlurRed" parent="RacePersistentSpellFX" Race="Terran">
+        <Model value="Assets\Models\Seele_C1\Seele_C1_Blur_Red.m3"/>
+        <Flags index="Wait" value="1"/>
+        <ShadowRadius value="0.000000"/>
+    </CModel>
+    <CModel id="MeiC2" parent="Unit" Race="Terran">
+        <Model value="Assets\Models\Mei_C2\Mei_C2.m3"/>
+        <Events Anim="Thrown" Name="MeiHit" Type="Sound"/>
+        <Events Anim="Attack,01" Name="BlurStart" Time="0.100000"/>
+        <Events Anim="Attack,01" Name="BlurEnd" Time="0.333300"/>
+        <Events Anim="Attack,02" Name="BlurStart" Time="0.133300"/>
+        <Events Anim="Attack,02" Name="BlurEnd" Time="0.333300"/>
+        <Events Anim="Attack,03" Name="BlurStart" Time="0.333300"/>
+        <Events Anim="Attack,03" Name="BlurEnd" Time="0.533300"/>
+        <Events Anim="Attack,04" Name="BlurStart" Time="0.266700"/>
+        <Events Anim="Attack,04" Name="BlurEnd" Time="0.500000"/>
+        <Events Anim="Attack,05" Name="BlurStart" Time="0.033300"/>
+        <Events Anim="Attack,05" Name="BlurEnd" Time="0.500000"/>
+        <Events Anim="Attack,06" Name="BlurStart" Time="0.166700"/>
+        <Events Anim="Attack,06" Name="BlurEnd" Time="1.333300"/>
+        <Events Anim="Attack,01" Name="MeiAttackLight" Type="Sound"/>
+        <Events>
+            <Anim value="Attack,02"/>
+            <Name value="MeiAttackLight"/>
+            <Type value="Sound"/>
+            <Time value="0.300000"/>
+        </Events>
+        <Events>
+            <Anim value="Attack,03"/>
+            <Name value="MeiAttackLight"/>
+            <Type value="Sound"/>
+            <Time value="0.150000"/>
+        </Events>
+        <Events>
+            <Anim value="Attack,04"/>
+            <Name value="MeiAttackLight"/>
+            <Type value="Sound"/>
+            <Time value="0.100000"/>
+        </Events>
+        <Events Anim="Attack,05" Name="MeiAttackHeavy" Type="Sound"/>
+        <Events>
+            <Anim value="Attack,06"/>
+            <Name value="MeiAttackHeavy"/>
+            <Type value="Sound"/>
+            <Time value="0.100000"/>
+        </Events>
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraMid04"/>
+        <Radius value="0.375000"/>
+        <SelectionOffset value="0.000000,0.000000,-0.500000"/>
+        <SelectionRadius value="0.468700"/>
+        <ShadowRadius value="0.468700"/>
+        <SquibTypeDefault value="Flesh"/>
+        <UnitGlossaryCamera value="Star2CameraMid04"/>
+    </CModel>
+    <CModel id="SeeleC1Portrait" parent="MarinePortraitBase">
+        <Model value="Assets\Models\Seele_C1\Seele_C1_Portrait.m3"/>
+        <FacialController value=""/>
+        <Image value=""/>
+        <RequiredAnims value="Assets\Models\Seele_C1\Seele_C1_Portrait.m3a"/>
+    </CModel>
+    <CModel id="SeeleBlur" parent="RacePersistentSpellFX" Race="Terran">
+        <Model value="Assets\Models\Seele_C1\Seele_C1_Blur.m3"/>
+        <Flags index="Wait" value="1"/>
+        <ShadowRadius value="0.000000"/>
+    </CModel>
+    <CModel id="SeeleC1" parent="CModelSeeleC1"/>
+    <CModel id="NeedleSpinesWeapon2" parent="MissileFX">
+        <Model value="Assets\Effects\Zerg\HydraliskMissile\HydraliskMissile.m3"/>
+        <EditorCategories value="Race:Zerg"/>
+    </CModel>
+    <CModel id="DG_020Missile" parent="MissileFX">
+        <Model value="Assets\Models\DG_020_Arrow\DG_020_Arrow.m3"/>
+        <EditorCategories value="Race:Zerg"/>
+        <TextureDeclares Prefix="DG_020">
+            <Adaptions Slot="main.diffuse"/>
+        </TextureDeclares>
+    </CModel>
+    <CModel id="MeiC2Portrait" parent="MarinePortraitBase">
+        <Model value="Assets\Models\Mei_C2\Mei_C2_portrait.m3"/>
+        <FacialController value=""/>
+        <Image value=""/>
+    </CModel>
+    <CModel id="SevenThundersOfRetributionImpactModel" parent="PersistentSpellFX">
+        <Model value="Assets\Effects\Zerg\ZurvanLatentEnergy\ZurvanLatentEnergy.m3"/>
+        <EditorCategories value="Race:Protoss"/>
+        <Radius value="1.250000"/>
+    </CModel>
+    <CModel id="SevenThundersOfRetributionAbilityBeam" parent="PersistentSpellFX">
+        <Model value="Assets\Effects\Protoss\DisruptorBeam\DisruptorBeam.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <ScaleMax value="0.500000,0.500000,0.500000"/>
+        <ScaleMin value="0.500000,0.500000,0.500000"/>
+    </CModel>
+    <CModel id="SevenThundersOfRetributionAbilityImpact" parent="ImpactFX">
+        <Model value="Assets\Effects\Protoss\AmonShard_Blue_Aoe_Missile_Impact\AmonShard_Blue_Aoe_Missile_Impact.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="PinkExplode">
+        <Model value="Assets\Models\Explode_Pink\Explode_Pink.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="MHTNuke" parent="MissileFX">
+        <Model value="Assets\Models\BOSS_150\BOSS_150_Nuke.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="TempestAttackImpact2" parent="ImpactFX">
+        <Model value="Assets\Effects\Protoss\TempestPlasmaMissileImpact\TempestPlasmaMissileImpact.m3"/>
+        <EditorCategories value="Race:Protoss"/>
+        <ScaleMax value="0.400000,0.400000,0.400000"/>
+        <ScaleMin value="0.400000,0.400000,0.400000"/>
+    </CModel>
+    <CModel id="UL_100AbilAreaModel" parent="PersistentSpellFX">
+        <Model value="Assets\Models\UL_100\UL_100_Area.m3"/>
+        <EditorCategories value="Race:Protoss"/>
+        <RadiusLoose value="1.000000"/>
+    </CModel>
+    <CModel id="RPCHyperjumpLaunch" parent="BattlecruiserHyperjumpOutBase">
+        <Model value="Assets\Models\BOSS_050\BOSS_050_Jump_Out.m3"/>
+    </CModel>
+    <CModel id="RPCHyperjumpPlacement" parent="BattlecruiserHyperjumpPlacementBase">
+        <Model value="Assets\Models\BOSS_050\BOSS_050_Placement.m3"/>
+    </CModel>
+    <CModel id="HeliosHyperjumpPlacement" parent="BattlecruiserHyperjumpPlacementBase">
+        <Model value="Assets\Models\Helios\Helios_Placement.m3"/>
+    </CModel>
+    <CModel id="BattlecruiserYamatoHyperjumpPlacement">
+        <Model value="Assets\Models\Hyperion_Honkai\Hyperion_Honkai_Placement.m3"/>
+    </CModel>
+    <CModel id="CorruptorPortrait">
+        <Model value="Assets\Models\UL_080_portrait\UL_080_portrait.m3"/>
+    </CModel>
+    <CModel id="GodKeysBuild" parent="CyberneticsCoreBuildBase"/>
+    <CModel id="CosmicJuggernaut" parent="Unit">
+        <Model value="Assets\Models\CosmicJuggernaut\CosmicJuggernaut.m3"/>
+        <EditorCategories value="Race:Protoss"/>
+        <Radius value="0.375000"/>
+        <ScaleMax value="2.000000,2.000000,2.000000"/>
+        <ScaleMin value="2.000000,2.000000,2.000000"/>
+        <SelectionRadius value="0.416500"/>
+        <ShadowRadius value="0.000000"/>
+        <SelectionLayer value="2"/>
+    </CModel>
+    <CModel id="CosmicJuggernautUlt" parent="PersistentSpellFX">
+        <Model value="Assets\Effects\Protoss\PurifyLaunch\PurifyLaunch.m3"/>
+        <EditorCategories value="Race:Protoss"/>
+        <Flags index="CloakedUndetectedIsHidden" value="1"/>
+    </CModel>
+    <CModel id="Furnace2" parent="TechLabBase">
+        <Model value="Assets\Models\Furnace\Furnace.m3"/>
+        <ScaleMax value="0.450000,0.450000,0.450000"/>
+        <ScaleMin value="0.450000,0.450000,0.450000"/>
+    </CModel>
+    <CModel id="FireExplode">
+        <Model value="Assets\Doodads\DOM_Explosion_Med\DOM_Explosion_Med.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="FireExplodeLarge">
+        <Model value="Assets\Doodads\DOM_Explosion_Lg\DOM_Explosion_Lg.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <ScaleMax value="1.500000,1.500000,1.500000"/>
+        <ScaleMin value="1.500000,1.500000,1.500000"/>
+    </CModel>
+    <CModel id="HyperjumpImpact">
+        <Model value="Assets\Models\Hyperion_Honkai\Hyperion_Honkai_Jump_In.m3"/>
+    </CModel>
+    <CModel id="HeliosHyperjumpImpact" parent="BattlecruiserHyperjumpInBase">
+        <Model value="Assets\Models\Helios\Helios_Jump_In.m3"/>
+    </CModel>
+    <CModel id="RPCHyperjumpImpact" parent="BattlecruiserHyperjumpInBase">
+        <Model value="Assets\Models\BOSS_050\BOSS_050_Jump_In.m3"/>
+    </CModel>
+    <CModel id="HyperjumpLaunch">
+        <Model value="Assets\Models\Hyperion_Honkai\Hyperion_Honkai_Jump_Out.m3"/>
+    </CModel>
+    <CModel id="HeliosHyperjumpLaunch" parent="BattlecruiserHyperjumpOutBase">
+        <Model value="Assets\Models\Helios\Helios_Jump_Out.m3"/>
+    </CModel>
+    <CModel id="Interceptor">
+        <Model value="Assets\Models\Hyperion_Honkai\Hyperion_Fighter.m3"/>
+        <Radius value="0.400000"/>
+        <ScaleMax value="0.900000,0.900000,0.900000"/>
+        <ScaleMin value="0.900000,0.900000,0.900000"/>
+        <SelectionRadius value="0.400000"/>
+    </CModel>
+    <CModel id="MedivacDeath">
+        <Model value="Assets\Models\Helios\Heliosi_Death.m3"/>
+        <Events index="0" Variation="-1"/>
+        <Events index="1" Variation="-1" Anim="Death,01"/>
+        <VariationCount value="1"/>
+    </CModel>
+    <CModel id="RO_030BombExplosion" parent="UnitDeath" Race="Protoss">
+        <Model value="Assets\Models\RO_030_Bomb\RO_030_Bomb_Explode.m3"/>
+        <Occlusion value="Show"/>
+    </CModel>
+    <CModel id="RO_031_Bomb" parent="StasisWardBase">
+        <Model value="Assets\Models\RO_030_Bomb\RO_030_Bomb.m3"/>
+        <SelectionRadius value="0.250000"/>
+    </CModel>
+    <CModel id="RO_030DeathRagdoll" parent="UnitDeathRagdoll" Race="Terran">
+        <Model value="Assets\Models\RO_030\RO_030_death_ragdoll.m3"/>
+        <Events>
+            <Anim value="Death"/>
+            <Name value="Explosion"/>
+            <Type value="Sound"/>
+            <Time value="0.100000"/>
+        </Events>
+        <Radius value="1.200000"/>
+        <TextureDeclares Prefix="RO_030_">
+            <Adaptions TriggerOnSubstring="_Color" Slot="main.diffuse"/>
+        </TextureDeclares>
+    </CModel>
+    <CModel id="RO_032MissileIce" parent="MissileFX" Prefix="Units\" Race="Protoss">
+        <Model value="Assets\Models\RO_030_Misslie\RO_030_Misslie.m3"/>
+        <EditorCategories value="Race:Protoss"/>
+        <Radius value="0.250000"/>
+        <SelectionRadius value="0.250000"/>
+        <UnitGlossaryCamera value="Star2CameraMid05"/>
+    </CModel>
+    <CModel id="ShieldBatteryRechargeEx5@ActionImpact2" parent="OneShotSpellFX">
+        <Model value="Assets\Effects\Protoss\ProtossShield_Battery_Beam_Impact\ProtossShield_Battery_Beam_Impact.m3"/>
+        <EditorCategories value="Race:Protoss"/>
+    </CModel>
+    <CModel id="ShieldBatteryRechargeEx5@Beam2" parent="PersistentSpellFX">
+        <Model value="Assets\Effects\Protoss\ProtossShield_Battery_Beam\ProtossShield_Battery_Beam.m3"/>
+        <EditorCategories value="Race:Protoss"/>
+        <Priority value="16"/>
+    </CModel>
+    <CModel id="UL_100Portrait" parent="ViperPortraitBase">
+        <Model value="Assets\Models\UL_100_portrait\UL_100_portrait.m3"/>
+        <Image value="Assets\Textures\ViperPortrait_Static.dds"/>
+        <Lighting value="ViperPortrait"/>
+    </CModel>
+    <CModel id="BronyaC2Portrait" parent="Portrait" Race="Terran">
+        <Model value="Assets\Models\Bronya_C2\Bronya_C2_Portrait.m3"/>
+        <Flags index="Facial" value="1"/>
+        <Image value="Assets\Textures\MarinePortrait_Static.dds"/>
+        <PausedParticleSystemBehavior value="Automatic"/>
+    </CModel>
+    <CModel id="BronyaC2" parent="Unit" Race="Terran">
+        <Model value="Assets\Models\Bronya_C2\Bronya_C2.m3"/>
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraMid04"/>
+        <SquibTypeDefault value="Flesh"/>
+        <TechPurchaseCamera value="TechPurchaseInfantry"/>
+        <UnitGlossaryCamera value="Star2CameraMid04"/>
+    </CModel>
+    <CModel id="VoidArchives" parent="Unit" Race="Protoss">
+        <Model value="Assets\Models\VoidArchives\VoidArchives.m3"/>
+        <Occlusion value="Show"/>
+        <Radius value="0.625000"/>
+        <SelectionRadius value="0.625000"/>
+        <ShadowRadius value="0.625000"/>
+        <SquibTypeDefault value="Metal"/>
+        <UnitGlossaryCamera value="Star2CameraHigh08"/>
+        <ScaleMax value="1.500000,1.500000,1.500000"/>
+        <ScaleMin value="1.500000,1.500000,1.500000"/>
+    </CModel>
+    <CModel id="Beacon" parent="Unit" Race="Protoss">
+        <Model value="Assets\Models\Beacon\Beacon.m3"/>
+    </CModel>
+    <CModel id="VoidArchivesGodKey" parent="Unit" Race="Protoss">
+        <Model value="Assets\Models\VoidArchives(gk)\VoidArchives(gk).m3"/>
+        <Occlusion value="Show"/>
+        <Radius value="0.625000"/>
+        <ScaleMax value="1.500000,1.500000,1.500000"/>
+        <ScaleMin value="1.500000,1.500000,1.500000"/>
+        <SelectionRadius value="0.625000"/>
+        <ShadowRadius value="0.625000"/>
+        <SquibTypeDefault value="Metal"/>
+        <UnitGlossaryCamera value="Star2CameraHigh08"/>
+    </CModel>
+    <CModel id="VoidArchivesDeath" parent="DisruptorDeathBase">
+        <Model value="Assets\Models\VoidArchivesDeath\VoidArchivesDeath.m3"/>
+    </CModel>
+    <CModel id="VoidArchivesDeathRagdoll" parent="DisruptorDeathRagdollBase">
+        <Model value="Assets\Models\VoidArchivesDeath\VoidArchivesDeath.m3"/>
+    </CModel>
+    <CModel id="SevenThundersOfRetributionGodKey" parent="Unit" Race="Protoss">
+        <Model value="Assets\Models\DG_080\SevenThundersOfRetribution.m3"/>
+        <Occlusion value="Show"/>
+        <Radius value="0.625000"/>
+        <ScaleMax value="1.500000,1.500000,1.500000"/>
+        <ScaleMin value="1.500000,1.500000,1.500000"/>
+        <SelectionRadius value="0.625000"/>
+        <ShadowRadius value="0.625000"/>
+        <SquibTypeDefault value="Metal"/>
+        <UnitGlossaryCamera value="Star2CameraHigh08"/>
+    </CModel>
+    <CModel id="VoidArchivesPortrait2" parent="Portrait" Race="Protoss">
+        <Model value="Assets\Models\VoidArchives_Portrait\VoidArchives_Portrait.m3"/>
+        <Image value="Assets\Textures\DisruptorPortrait_Static.dds"/>
+        <Lighting value="DisruptorPortrait"/>
+    </CModel>
+    <CModel id="DivineKeys" parent="CyberneticsCoreBase">
+        <Model value="Assets\Models\DivineKeys\DivineKeys.m3"/>
+        <AnimSpeed value="0.500000"/>
+        <ScaleMax value="0.700000,0.700000,0.700000"/>
+        <ScaleMin value="0.700000,0.700000,0.700000"/>
+        <SelectionRadius value="2.000000"/>
+    </CModel>
+    <CModel id="DivineKeysBirth" parent="CyberneticsCoreWarpInBase">
+        <Model value="Assets\Models\DivineKeysWarpIn\DivineKeysWarpIn.m3"/>
+        <ScaleMax value="0.700000,0.700000,0.700000"/>
+        <ScaleMin value="0.700000,0.700000,0.700000"/>
+    </CModel>
+    <CModel id="DivineKeysDeath" parent="CyberneticsCoreDeathBase">
+        <Model value="Assets\Models\DivineKeysDeath\DivineKeysDeath.m3"/>
+        <ScaleMax value="0.700000,0.700000,0.700000"/>
+        <ScaleMin value="0.700000,0.700000,0.700000"/>
+    </CModel>
+    <CModel id="IceExplodeLarge">
+        <Model value="Assets\COOP\Mengsk\Effects\Ghost_Mengsk_COOP_Immolate_Explosion\Ghost_Mengsk_COOP_Immolate_Explosion.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <ScaleMax value="2.500000,2.500000,2.500000"/>
+        <ScaleMin value="2.500000,2.500000,2.500000"/>
+    </CModel>
+    <CModel id="RO_033MissileFire" parent="MissileFX" Prefix="Units\" Race="Protoss">
+        <Model value="Assets\Models\RO_030_Misslie\RO_030_Misslie_Fire.m3"/>
+        <EditorCategories value="Race:Protoss"/>
+        <Radius value="0.250000"/>
+        <SelectionRadius value="0.250000"/>
+        <UnitGlossaryCamera value="Star2CameraMid05"/>
+    </CModel>
+    <CModel id="RO_050Portrait" parent="Portrait" Race="Zerg">
+        <Model value="Assets\Models\RO_050_portrait\RO_050_portrait.m3"/>
+    </CModel>
+    <CModel id="RO_050" parent="ZealotBase">
+        <Model value="Assets\Models\RO_050\RO_050.m3"/>
+        <RequiredAnims index="0" removed="1"/>
+        <Events>
+            <Anim value="Attack"/>
+            <Name value="DG_010 Attack"/>
+            <Type value="Sound"/>
+            <Time value="0.300000"/>
+        </Events>
+        <Radius value="0.500000"/>
+    </CModel>
+    <CModel id="RO_050Death" parent="MarineDeathBase">
+        <Model value="Assets\Models\RO_050_Death\RO_050_Death.m3"/>
+        <Events index="0" removed="1"/>
+        <Events index="1" removed="1"/>
+        <Events index="2" removed="1"/>
+        <Events index="3" removed="1"/>
+        <Events index="4" removed="1"/>
+    </CModel>
+    <CModel id="DG_013Missile" parent="MissileFX">
+        <Model value="Assets\Models\DG_013_Missile\DG_013_Missile.m3"/>
+        <EditorCategories value="Race:Zerg"/>
+    </CModel>
+    <CModel id="BanelingMod" parent="BanelingBase">
+        <Model value="Assets\Models\UL_050\UL_050.m3"/>
+    </CModel>
+    <CModel id="BanelingPortraitMod" parent="BanelingPortraitBase">
+        <Model value="Assets\Models\UL_050_portrait\UL_050_portrait.m3"/>
+        <Image value="Assets\Textures\BanelingPortrait_Static.dds"/>
+    </CModel>
+    <CModel id="BansheeDeathMod" parent="BansheeDeathBase">
+        <Model value="Assets\Models\BOSS_050_death\BOSS_050_death.m3"/>
+        <Events index="0" removed="1"/>
+        <Events index="1" removed="1"/>
+    </CModel>
+    <CModel id="DestructibleIce" parent="Doodad">
+        <Model value="Assets\Doodads\DestructibleIce4x4\DestructibleIce4x4.m3"/>
+        <Lighting value="DestructibleTextureSwapped"/>
+        <Radius value="1.500000"/>
+        <ScaleMax value="0.650000,0.650000,2.100000"/>
+        <ScaleMin value="0.550000,0.550000,1.900000"/>
+        <SelectionRadius value="1.500000"/>
+        <ShadowRadius value="1.500000"/>
+        <TextureDeclares Prefix="Ramp_Destructible">
+            <Adaptions TriggerOnSubstring="Ramp_Destructible_" Slot="main"/>
+            <Adaptions TriggerOnSubstring="Belshir" PropsRemove="belshir" AppliesToFile="0"/>
+        </TextureDeclares>
+        <TextureDeclares Prefix="rockex1_">
+            <Adaptions TriggerOnSubstring="_Diff" Slot="main"/>
+        </TextureDeclares>
+        <SelectionLayer value="3"/>
+    </CModel>
+    <CModel id="DestructibleIceDeath" parent="Doodad">
+        <Model value="Assets\Doodads\DestructibleIce4x4\DestructibleIce4x4.m3"/>
+        <Lighting value="DestructibleTextureSwapped"/>
+        <Radius value="1.500000"/>
+        <ScaleMax value="0.650000,0.650000,0.650000"/>
+        <ScaleMin value="0.550000,0.550000,0.550000"/>
+        <SelectionRadius value="1.500000"/>
+        <ShadowRadius value="1.500000"/>
+        <TextureDeclares Prefix="Ramp_Destructible">
+            <Adaptions TriggerOnSubstring="Ramp_Destructible_" Slot="main"/>
+            <Adaptions TriggerOnSubstring="Belshir" PropsRemove="belshir" AppliesToFile="0"/>
+        </TextureDeclares>
+        <TextureDeclares Prefix="rockex1_">
+            <Adaptions TriggerOnSubstring="_Diff" Slot="main"/>
+        </TextureDeclares>
+        <SelectionLayer value="3"/>
+    </CModel>
+    <CModel id="Herrscher3rdProjector" parent="PersistentSpellFX" Race="Terran">
+        <Model value="Assets\Models\Herrscher3rdProject\Herrscher3rdProject.m3"/>
+        <Priority value="32"/>
+        <ScaleMax value="1.500000,1.500000,1.500000"/>
+        <ScaleMin value="1.500000,1.500000,1.500000"/>
+        <ShadowRadius value="0.000000"/>
+    </CModel>
+    <CModel id="Herrscher4thProjector" parent="PersistentSpellFX" Race="Terran">
+        <Model value="Assets\Models\Herrscher4thProject\Herrscher4thProject.m3"/>
+        <Priority value="32"/>
+        <ScaleMax value="1.500000,1.500000,1.500000"/>
+        <ScaleMin value="1.500000,1.500000,1.500000"/>
+        <ShadowRadius value="0.000000"/>
+    </CModel>
+    <CModel id="Herrscher3rdRing" parent="RacePersistentSpellFX" Race="Terran">
+        <Model value="Assets\Models\Herrscher3rd_Ring\Herrscher3rd_Ring.m3"/>
+        <Flags index="Wait" value="1"/>
+        <Priority value="32"/>
+        <ShadowRadius value="0.000000"/>
+    </CModel>
+    <CModel id="Herrscher4thWave" parent="Unit">
+        <Model value="Assets\Effects\Protoss\Alarak_DestructionWave\Alarak_DestructionWave.m3"/>
+        <EditorCategories value="Race:Protoss"/>
+        <Radius value="0.375000"/>
+        <SelectionRadius value="0.416500"/>
+        <ShadowRadius value="0.416500"/>
+    </CModel>
+    <CModel id="Herrscher5thProjector" parent="PersistentSpellFX" Race="Terran">
+        <Model value="Assets\Models\Herrscher5thProject\Herrscher5thProject.m3"/>
+        <Priority value="32"/>
+        <ScaleMax value="1.500000,1.500000,1.500000"/>
+        <ScaleMin value="1.500000,1.500000,1.500000"/>
+        <ShadowRadius value="0.000000"/>
+    </CModel>
+    <CModel id="Herrscher6thProjector" parent="PersistentSpellFX" Race="Terran">
+        <Model value="Assets\Models\Herrscher6thProject\Herrscher6thProject.m3"/>
+        <Priority value="32"/>
+        <ScaleMax value="1.500000,1.500000,1.500000"/>
+        <ScaleMin value="1.500000,1.500000,1.500000"/>
+        <ShadowRadius value="0.000000"/>
+    </CModel>
+    <CModel id="Herrscher7thProjector" parent="PersistentSpellFX" Race="Terran">
+        <Model value="Assets\Models\Herrscher7thProject\Herrscher7thProject.m3"/>
+        <Priority value="32"/>
+        <ScaleMax value="1.500000,1.500000,1.500000"/>
+        <ScaleMin value="1.500000,1.500000,1.500000"/>
+        <ShadowRadius value="0.000000"/>
+    </CModel>
+    <CModel id="HerrscherModel" parent="Unit" Race="Terran">
+        <Model value="Assets\Models\HerrscherProp\HerrscherProp.m3"/>
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraHigh04"/>
+        <Radius value="0.375000"/>
+        <SelectionRadius value="0.375000"/>
+        <ShadowRadius value="0.375000"/>
+        <SquibTypeDefault value="Flesh"/>
+        <TechPurchaseCamera value="TechPurchaseGhost"/>
+        <UnitGlossaryCamera value="Star2CameraHigh04"/>
+    </CModel>
+    <CModel id="Herrscher2ndProjector" parent="PersistentSpellFX" Race="Terran">
+        <Model value="Assets\Models\Herrscher2ndProject\Herrscher2ndProject.m3"/>
+        <Priority value="32"/>
+        <ScaleMax value="2.000000,2.000000,2.000000"/>
+        <ScaleMin value="2.000000,2.000000,2.000000"/>
+        <ShadowRadius value="0.000000"/>
+    </CModel>
+    <CModel id="Herrscher1stDeath" parent="UnitDeathRagdoll" Race="Terran">
+        <Model value="Assets\Models\Herrscher1st_death\Herrscher1st_death.m3"/>
+        <LowQualityModel value="TerranBloodDeathLow"/>
+        <Flags index="Download" value="1"/>
+        <Flags index="PreventedWhenPhysicsPerformanceConstrained" value="0"/>
+        <Flags index="RequiresPhysicsToOperate" value="0"/>
+        <Flags index="TeenSafe" value="0"/>
+        <AnimSpeed value="0.333000"/>
+    </CModel>
+    <CModel id="Herrscher2Explode" parent="ImpactFX">
+        <Model value="Assets\Models\Herrscher2nd_Explode\Herrscher2nd_Explode.m3"/>
+        <EditorCategories value="Race:Zerg"/>
+        <ShadowRadius value="0.000000"/>
+        <ScaleMax value="1.500000,1.500000,1.500000"/>
+        <ScaleMin value="1.500000,1.500000,1.500000"/>
+    </CModel>
+    <CModel id="Herrscher2Rebound" parent="Unit">
+        <Model value="Assets\Models\Herrscher2nd_Rebound_Effect\Herrscher2nd_Rebound_Effect.m3"/>
+        <EditorCategories value="Race:Zerg"/>
+        <Flags index="Wait" value="0"/>
+        <Priority value="24"/>
+        <ScaleMax value="4.000000,4.000000,4.000000"/>
+        <ScaleMin value="2.000000,2.000000,2.000000"/>
+        <ShadowRadius value="0.000000"/>
+    </CModel>
+    <CModel id="FrozenModel">
+        <Model value="Assets\Models\Honkai_Frozen_Material\Honkai_Frozen_Material.m3"/>
+    </CModel>
+    <CModel id="Herrscher3rdAOEModel" parent="PersistentSpellFX">
+        <Model value="Assets\Effects\Protoss\PsiStorm\PsiStorm.m3"/>
+        <AnimSpeed value="6.000000"/>
+        <EditorCategories value="Race:Protoss"/>
+        <RadiusLoose value="1.000000"/>
+    </CModel>
+    <CModel id="HonkaiLightningedModel" parent="PersistentSpellFX">
+        <Model value="Assets\Models\Honkai_Lightninged\Honkai_Lightninged.m3"/>
+        <EditorCategories value="Race:Protoss"/>
+    </CModel>
+    <CModel id="HonkaiPalsyImpactModel" parent="PersistentSpellFX">
+        <Model value="Assets\Models\Honkai_Palsy\Honkai_Palsy.m3"/>
+        <EditorCategories value="Race:Protoss"/>
+    </CModel>
+    <CModel id="HonkaiPalsyImpactModel2" parent="PersistentSpellFX">
+        <Model value="Assets\Models\Honkai_Frailty\Honkai_Frailty.m3"/>
+        <EditorCategories value="Race:Protoss"/>
+    </CModel>
+    <CModel id="HonkaiSlowModel" parent="PersistentSpellFX">
+        <Model value="Assets\Models\Honkai_Slow\Honkai_Slow.m3"/>
+        <EditorCategories value="Race:Protoss"/>
+    </CModel>
+    <CModel id="HonkaiTimeLockImpactModel2" parent="PersistentSpellFX">
+        <Model value="Assets\Models\Honkai_TimeLock\Honkai_TimeLock.m3"/>
+        <EditorCategories value="Race:Protoss"/>
+    </CModel>
+    <CModel id="K17EffectModel" parent="PersistentSpellFX">
+        <Model value="Assets\Models\K17_Effect\K17_Effect.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <RadiusLoose value="1.000000"/>
+    </CModel>
+    <CModel id="Herrscher2ndWeapon" parent="MissileFX">
+        <Model value="Assets\Models\Herrscher2nd_weapon\Herrscher2nd_weapon.m3"/>
+        <EditorCategories value="Race:Zerg"/>
+        <ScaleMax value="0.500000,0.500000,0.500000"/>
+        <ScaleMin value="0.500000,0.500000,0.500000"/>
+    </CModel>
+    <CModel id="Herrscher2ndUltimate" parent="Unit">
+        <Model value="Assets\Models\Herrscher2nd_UltUnit\Herrscher2nd_UltUnit.m3"/>
+        <EditorCategories value=""/>
+        <ScaleMax value="5.000000,5.000000,5.000000"/>
+        <ScaleMin value="2.000000,2.000000,2.000000"/>
+        <ShadowRadius value="0.000000"/>
+        <Radius value="0.250000"/>
+        <SelectionRadius value="0.200000"/>
+    </CModel>
+    <CModel id="B28BlackHoleSmall" parent="PersistentSpellFX">
+        <Model value="Assets\Effects\Protoss\Taldarim_Mothership_Black_Hole\Taldarim_Mothership_Black_Hole.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <RadiusLoose value="1.000000"/>
+    </CModel>
+    <CModel id="KianaRebornC2Portrait" parent="MarinePortraitBase">
+        <Model value="Assets\Models\Kiana_C2_Reborn_portrait\Kiana_C2_Reborn_portrait.m3"/>
+        <RequiredAnims value="Assets\Models\Kiana_C2_portrait\Kiana_C2_portrait.m3a"/>
+        <FacialController value=""/>
+        <Image value=""/>
+    </CModel>
+    <CModel id="KianaC4UltimateEffectModel" parent="PersistentSpellFX">
+        <Model value="Assets\Models\Kiana_C4_Ultimate_Effect\Kiana_C4_Ultimate_Effect.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <Events Anim="Birth" Name="Attack" Type="Sound"/>
+        <Events Anim="Birth" Name="Attack" Type="Sound"/>
+        <Events>
+            <Anim value="Birth"/>
+            <Name value="Attack"/>
+            <Type value="Sound"/>
+            <Time value="0.250000"/>
+        </Events>
+        <Events>
+            <Anim value="Birth"/>
+            <Name value="Attack"/>
+            <Type value="Sound"/>
+            <Time value="0.500000"/>
+        </Events>
+        <Events>
+            <Anim value="Birth"/>
+            <Name value="Attack"/>
+            <Type value="Sound"/>
+            <Time value="0.750000"/>
+        </Events>
+        <Events>
+            <Anim value="Birth"/>
+            <Name value="Attack"/>
+            <Type value="Sound"/>
+            <Time value="1.000000"/>
+        </Events>
+        <Events>
+            <Anim value="Birth"/>
+            <Name value="Attack"/>
+            <Type value="Sound"/>
+            <Time value="1.500000"/>
+        </Events>
+        <Radius value="0.000000"/>
+        <RadiusLoose value="5.000000"/>
+        <ScaleMax value="7.000000,7.000000,5.250000"/>
+        <ScaleMin value="7.000000,7.000000,5.250000"/>
+        <SelectionRadius value="0.000000"/>
+    </CModel>
+    <CModel id="KianaExPortrait2" parent="MarinePortraitBase">
+        <Model value="Assets\Models\Kiana_C2_ex_portrait\Kiana_C2_ex_portrait.m3"/>
+        <RequiredAnims value="Assets\Models\Kiana_C2_portrait\Kiana_C2_portrait.m3a"/>
+        <FacialController value=""/>
+        <Image value=""/>
+    </CModel>
+    <CModel id="Herrscher2Removal" parent="ImpactFX">
+        <Model value="Assets\Models\Herrscher2nd_Removal_Effect\Herrscher2nd_Removal_Effect.m3"/>
+        <EditorCategories value="Race:Zerg"/>
+        <ShadowRadius value="0.000000"/>
+        <ScaleMax value="2.000000,2.000000,2.000000"/>
+    </CModel>
+    <CModel id="B23Missile" parent="MissileFX">
+        <Model value="Assets\Models\B23_Bullet\B23_Bullet.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="B28Missile" parent="MissileFX">
+        <Model value="Assets\Models\B28_Bullet\B28_Bullet.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="LightningBoltH3" parent="Doodad">
+        <Model value="Assets\Doodads\LightningBolt\LightningBolt.m3"/>
+        <Flags index="Wait" value="0"/>
+    </CModel>
+    <CModel id="Herrscher4thWeapon" parent="Unit">
+        <Model value="Assets\COOP\Zeratul\Effects\EnergyTornado_Zeratul_COOP\EnergyTornado_Zeratul_COOP.m3"/>
+        <EditorCategories value="Race:Protoss"/>
+        <Radius value="0.375000"/>
+        <SelectionRadius value="0.416500"/>
+        <ShadowRadius value="0.416500"/>
+    </CModel>
+    <CModel id="IceTablet" parent="TechLabBase">
+        <Model value="Assets\Models\IceTablet\IceTablet.m3"/>
+        <ScaleMax value="0.450000,0.450000,0.450000"/>
+        <ScaleMin value="0.450000,0.450000,0.450000"/>
+    </CModel>
+    <CModel id="RO_010" parent="ThorBase">
+        <Model value="Assets\Models\RO_010\RO_010.m3"/>
+        <RequiredAnims index="0" removed="1"/>
+        <RequiredAnims index="1" removed="1"/>
+        <AttachProps index="0" removed="1"/>
+        <AttachProps index="1" removed="1"/>
+        <AttachProps index="2" removed="1"/>
+        <AttachProps index="3" removed="1"/>
+        <AttachProps index="4" removed="1"/>
+        <AttachProps index="5" removed="1"/>
+        <AttachProps index="6" removed="1"/>
+        <AttachProps index="7" removed="1"/>
+        <AttachProps index="8" removed="1"/>
+        <AttachProps index="9" removed="1"/>
+        <Events index="0" removed="1"/>
+        <Events index="1" removed="1"/>
+        <Events index="2" removed="1"/>
+        <Events index="3" removed="1"/>
+        <Events index="4" removed="1"/>
+        <Events index="5" removed="1"/>
+        <Radius value="1.260000"/>
+        <ScaleMax value="1.000000,1.000000,1.000000"/>
+        <ScaleMin value="1.000000,1.000000,1.000000"/>
+        <SelectionRadius value="1.000000"/>
+        <ShadowRadius value="0.800000"/>
+        <TextureDeclares Prefix="RO_010_">
+            <Adaptions TriggerOnSubstring="_Color" Slot="main.diffuse"/>
+        </TextureDeclares>
+    </CModel>
+    <CModel id="RO_010Death" parent="ThorDeathBase">
+        <Model value="Assets\Models\RO_010_Death\RO_010_Death.m3"/>
+        <Events index="0">
+            <Anim value="Death"/>
+            <Name value="Explosion"/>
+            <Type value="Sound"/>
+            <Time value="2.200000"/>
+        </Events>
+        <Events index="1">
+            <Anim value="Death,01"/>
+            <Name value="Explosion"/>
+            <Type value="Sound"/>
+            <Time value="0.300000"/>
+        </Events>
+        <Events index="2" removed="1"/>
+        <Events index="3" removed="1"/>
+        <Events index="4" removed="1"/>
+        <Radius value="1.260000"/>
+        <VariationCount value="1"/>
+        <TextureDeclares Prefix="RO_010_">
+            <Adaptions TriggerOnSubstring="_Color" Slot="main.diffuse"/>
+        </TextureDeclares>
+    </CModel>
+    <CModel id="RPC6626" parent="BansheeBase">
+        <Model value="Assets\Models\BOSS_050\BOSS_050.m3"/>
+        <RequiredAnims value="Assets\Models\BOSS_050\BOSS_050.m3a"/>
+        <Radius value="1.250000"/>
+        <ScaleMax value="1.330000,1.330000,1.330000"/>
+        <ScaleMin value="1.330000,1.330000,1.330000"/>
+        <SelectionRadius value="1.400000"/>
+        <ShadowRadius value="1.400000"/>
+    </CModel>
+    <CModel id="BattlecruiserModHyperion" parent="BattlecruiserBase">
+        <Model value="Assets\Models\Hyperion_Honkai\Hyperion_Honkai.m3"/>
+        <SelectionRadius value="2.000000"/>
+    </CModel>
+    <CModel id="BroodLordBWeapon">
+        <Model value="Assets\Models\UL_020\UL_020.m3"/>
+    </CModel>
+    <CModel id="BroodLordDeathMod" parent="BroodLordDeathBase">
+        <Model value="Assets\Models\UL_060_death\UL_060_death.m3"/>
+        <VariationCount value="1"/>
+    </CModel>
+    <CModel id="BroodLordMod" parent="BroodLordBase">
+        <Model value="Assets\Models\UL_060\UL_060.m3"/>
+    </CModel>
+    <CModel id="BroodLordPortraitMod" parent="BroodLordPortraitBase">
+        <Model value="Assets\Models\UL_060_potrait\UL_060_potrait.m3"/>
+        <Image value="Assets\Textures\BroodLordPortrait_Static.dds"/>
+    </CModel>
+    <CModel id="BroodLordWeapon">
+        <Model value="Assets\Models\UL_020\UL_020.m3"/>
+    </CModel>
+    <CModel id="Broodling">
+        <Model value="Assets\Models\UL_020\UL_020.m3"/>
+    </CModel>
+    <CModel id="BroodlingDeathMod" parent="BroodlingDeathBase">
+        <Model value="Assets\Models\UL_020_death\UL_020_death.m3"/>
+    </CModel>
+    <CModel id="BroodlingEscort">
+        <Model value="Assets\Models\UL_020\UL_020.m3"/>
+    </CModel>
+    <CModel id="BroodlingPortrait">
+        <Model value="Assets\Models\UL_020_portrait\UL_020_portrait.m3"/>
+    </CModel>
+    <CModel id="UL_080Death" parent="CorruptorDeathBase">
+        <Model value="Assets\Models\UL_080_death\UL_080_death.m3"/>
+    </CModel>
+    <CModel id="UL_080" parent="CorruptorBase">
+        <Model value="Assets\Models\UL_080\UL_080.m3"/>
+        <RequiredAnims index="0" removed="1"/>
+    </CModel>
+    <CModel id="DG_010Portrait" parent="Portrait" Race="Zerg">
+        <Model value="Assets\Models\DG_010_portrait\DG_010_portrait.m3"/>
+        <TextureDeclares Prefix="DG_010">
+            <Adaptions Slot="main.diffuse"/>
+        </TextureDeclares>
+    </CModel>
+    <CModel id="MHT3Death" parent="UnitDeath" Race="Terran">
+        <Model value="Assets\Models\BOSS_150_Death\BOSS_150_Death.m3"/>
+        <LowQualityModel value="TerranMediumUnitDeathLow"/>
+        <Occlusion value="Show"/>
+    </CModel>
+    <CModel id="MHT3" parent="Unit" Race="Terran">
+        <Model value="Assets\Models\BOSS_150\BOSS_150.m3"/>
+        <Occlusion value="Show"/>
+        <SelectionRadius value="1.000000"/>
+        <SquibTypeDefault value="Metal"/>
+        <Tipability value="0.750000"/>
+        <TipabilityLength value="0.800000"/>
+        <TipabilityWidth value="0.400000"/>
+        <UnitGlossaryCamera value="Star2CameraMid06"/>
+    </CModel>
+    <CModel id="Herrscher1stPortrait" parent="GhostPortraitBase">
+        <Model value="Assets\Models\Herrscher1st_portrait\Herrscher1st_portrait.m3"/>
+        <Flags index="Download" value="1"/>
+        <Flags index="VariationFallback" value="0"/>
+        <Image value="Assets\Textures\ghostportraitex3_static.dds"/>
+    </CModel>
+    <CModel id="HerrscherConstruct">
+        <Model value="Assets\Models\Herrscher_Construct_Material\Herrscher_Construct_Material.m3"/>
+    </CModel>
+    <CModel id="HonkaiBleedingImpactModel" parent="ImpactFX">
+        <Model value="Assets\Models\Honkai_Bleeding\Honkai_Bleeding.m3"/>
+        <Radius value="1.000000"/>
+    </CModel>
+    <CModel id="Herrscher1stkeymodel" parent="PersistentSpellFX">
+        <Model value="Assets\Models\Herrscher1st_effect\Herrscher1st_effect.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <RadiusLoose value="1.000000"/>
+        <Events>
+            <Anim value="Birth"/>
+            <Name value="KeyAttack"/>
+            <Type value="Sound"/>
+            <Time value="1.000000"/>
+        </Events>
+        <Events>
+            <Anim value="Birth"/>
+            <Name value="KeyAttack"/>
+            <Type value="Sound"/>
+            <Time value="1.500000"/>
+        </Events>
+        <Events>
+            <Anim value="Birth"/>
+            <Name value="KeyAttack"/>
+            <Type value="Sound"/>
+            <Time value="2.000000"/>
+        </Events>
+    </CModel>
+    <CModel id="KianaC4QTEMissile" parent="MissileFX">
+        <Model value="Assets\Models\Kiana_C4_QTE\Kiana_C4_QTE.m3"/>
+        <EditorCategories value="Race:Zerg"/>
+    </CModel>
+    <CModel id="EngineeringBayPlacement">
+        <Model value="Assets\Models\Powerup_placement\Powerup_placement.m3"/>
+        <LowQualityModel value="StFreya"/>
+        <ScaleMax value="0.950000,0.950000,0.950000"/>
+        <ScaleMin value="0.950000,0.950000,0.950000"/>
+    </CModel>
+    <CModel id="HighTowerPlacement" parent="EngineeringBayPlacementBase" low="EngineeringBay">
+        <Model value="Assets\Models\HighTower\HighTower.m3"/>
+        <LowQualityModel value="HighTower"/>
+        <ScaleMax value="1.400000,1.400000,1.400000"/>
+        <ScaleMin value="1.400000,1.400000,1.400000"/>
+    </CModel>
+    <CModel id="GroundFire" parent="PersistentSpellFX">
+        <Model value="Assets\Models\Particles\GroundFire.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <RadiusLoose value="1.000000"/>
+        <ScaleMax value="1.250000,1.250000,1.250000"/>
+        <ScaleMin value="1.250000,1.250000,1.250000"/>
+    </CModel>
+    <CModel id="K5Model" parent="Unit">
+        <Model value="Assets\Models\K5Effect\K5Effect.m3"/>
+        <EditorCategories value=""/>
+        <ShadowRadius value="0.000000"/>
+    </CModel>
+    <CModel id="DG_013Effect" parent="Unit">
+        <Model value="Assets\Models\DG_013_Effect\DG_013_Effect.m3"/>
+        <EditorCategories value=""/>
+        <ShadowRadius value="0.000000"/>
+    </CModel>
+    <CModel id="KianaC4" parent="Unit" Race="Terran">
+        <Model value="Assets\Models\Kiana_C4\Kiana_C4.m3"/>
+        <RequiredAnims value="Assets\Models\Kiana_C4\Kiana_C4.m3a"/>
+        <Events Anim="Attack,01" Name="KianaAttack1" Type="Sound"/>
+        <Events Anim="Attack,02" Name="KianaAttack2" Type="Sound"/>
+        <Events Anim="Thrown" Name="KianaHit" Type="Sound"/>
+        <Events Anim="Spell,02" Name="KianaShoot" Type="Sound"/>
+        <Events>
+            <Anim value="Spell,02"/>
+            <Name value="KianaShoot"/>
+            <Type value="Sound"/>
+            <Time value="0.200000"/>
+        </Events>
+        <Events>
+            <Anim value="Spell,02"/>
+            <Name value="KianaShoot"/>
+            <Type value="Sound"/>
+            <Time value="0.400000"/>
+        </Events>
+        <Events>
+            <Anim value="Spell,02"/>
+            <Name value="KianaShoot"/>
+            <Type value="Sound"/>
+            <Time value="0.600000"/>
+        </Events>
+        <Events Anim="Spell,03" Name="Ultimate" Type="Sound"/>
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraMid04"/>
+        <Radius value="0.375000"/>
+        <SelectionOffset value="0.000000,0.000000,-0.500000"/>
+        <SelectionRadius value="0.468700"/>
+        <ShadowRadius value="0.468700"/>
+        <SquibTypeDefault value="Flesh"/>
+        <UnitGlossaryCamera value="Star2CameraMid04"/>
+    </CModel>
+    <CModel id="KianaC4PortraitMod22" parent="MarinePortraitBase">
+        <Model value="Assets\Models\Kiana_C4_portrait\Kiana_C4_portrait.m3"/>
+        <FacialController value=""/>
+        <Image value=""/>
+        <RequiredAnims value="Assets\Models\Kiana_C4_portrait\Kiana_C4_portrait.m3a"/>
+    </CModel>
+    <CModel id="KianaC2RebornEx" parent="Unit" Race="Terran">
+        <Model value="Assets\Models\Kiana_C2_ex\Kiana_C2_ex.m3"/>
+        <RequiredAnims value="Assets\Models\Kiana_C2\Kiana_C2.m3a"/>
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraMid04"/>
+        <Radius value="0.375000"/>
+        <SelectionOffset value="0.000000,0.000000,-0.500000"/>
+        <SelectionRadius value="0.468700"/>
+        <ShadowRadius value="0.468700"/>
+        <SquibTypeDefault value="Flesh"/>
+        <TechPurchaseCamera value="TechPurchaseReaper"/>
+        <UnitGlossaryCamera value="Star2CameraMid04"/>
+        <Events>
+            <Anim value="Attack,01"/>
+            <Name value="KianaAttack1"/>
+            <Type value="Sound"/>
+            <Time value="0.300000"/>
+        </Events>
+        <Events>
+            <Anim value="Attack,02"/>
+            <Name value="KianaAttack2"/>
+            <Type value="Sound"/>
+            <Time value="0.100000"/>
+        </Events>
+        <Events>
+            <Anim value="Attack,03"/>
+            <Name value="KianaAttack3"/>
+            <Type value="Sound"/>
+            <Time value="0.100000"/>
+        </Events>
+        <Events>
+            <Anim value="Attack,04"/>
+            <Name value="KianaAttack2"/>
+            <Type value="Sound"/>
+            <Time value="0.100000"/>
+        </Events>
+        <Events>
+            <Anim value="Attack,05"/>
+            <Name value="KianaAttack4"/>
+            <Type value="Sound"/>
+            <Time value="0.200000"/>
+        </Events>
+        <Events>
+            <Anim value="Attack,06"/>
+            <Name value="KianaAttack3"/>
+            <Type value="Sound"/>
+            <Time value="0.200000"/>
+        </Events>
+        <Events>
+            <Anim value="Attack,07"/>
+            <Name value="KianaAttack4"/>
+            <Type value="Sound"/>
+            <Time value="0.500000"/>
+        </Events>
+        <Events Anim="Thrown" Name="KianaHit" Type="Sound"/>
+    </CModel>
+    <CModel id="DG_010Death" parent="MarineDeathBase">
+        <Model value="Assets\Models\DG_010_death\DG_010_death.m3"/>
+        <Events index="0" removed="1"/>
+        <Events index="1" removed="1"/>
+        <Events index="2" removed="1"/>
+        <Events index="3" removed="1"/>
+        <Events index="4" removed="1"/>
+        <TextureDeclares Prefix="DG_010">
+            <Adaptions Slot="main.diffuse"/>
+        </TextureDeclares>
+    </CModel>
+    <CModel id="MissileTurret">
+        <Model value="Assets\Models\GunTower2\GunTower2.m3"/>
+    </CModel>
+    <CModel id="HighTower" parent="EngineeringBayBase">
+        <Model value="Assets\Models\HighTower\HighTower.m3"/>
+        <Radius value="0.750000"/>
+        <ScaleMax value="1.400000,1.400000,1.400000"/>
+        <ScaleMin value="1.400000,1.400000,1.400000"/>
+        <SelectionRadius value="1.000000"/>
+        <ShadowRadius value="0.750000"/>
+    </CModel>
+    <CModel id="HighTowerBuild" parent="EngineeringBayBuildBase">
+        <Model value="Assets\Models\HighTower\HighTower.m3"/>
+        <Radius value="0.750000"/>
+        <ScaleMax value="1.400000,1.400000,1.400000"/>
+        <ScaleMin value="1.400000,1.400000,1.400000"/>
+        <SelectionRadius value="0.750000"/>
+        <ShadowRadius value="0.750000"/>
+    </CModel>
+    <CModel id="GunTurret1" parent="MissileTurretBase">
+        <Model value="Assets\Models\GunTower1\GunTower1.m3"/>
+        <AttachProps index="0" Id="Ref_Weapon 01">
+            <Keys index="SetA" value="0"/>
+            <Keys index="Turret" value="-128"/>
+        </AttachProps>
+        <AttachProps index="1" Id="Ref_Weapon 02">
+            <Keys index="SetA" value="1"/>
+        </AttachProps>
+        <AttachProps index="2" removed="1"/>
+        <AttachProps index="3" removed="1"/>
+        <AttachProps index="4" removed="1"/>
+    </CModel>
+    <CModel id="GunTower3" parent="MissileTurretBase">
+        <Model value="Assets\Models\GunTower3\GunTower3.m3"/>
+        <AttachProps index="0" removed="1"/>
+        <AttachProps index="1" removed="1"/>
+        <AttachProps index="2" removed="1"/>
+        <AttachProps index="3" removed="1"/>
+        <AttachProps index="4" removed="1"/>
+    </CModel>
+    <CModel id="MissileTurretDeath2" parent="MissileTurretDeathBase">
+        <Model value="Assets\Models\GunTower3\GunTower3Death.m3"/>
+    </CModel>
+    <CModel id="StFreyaDeath" parent="BuildingDeathEx" Race="Terran" low="EngineeringBayDeathLow">
+        <Model value="Assets\Models\StFreya\StFreya_Death.m3"/>
+        <LowQualityModel value=""/>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="TerranPreExplosionSmall"/>
+            <Type value="Sound"/>
+            <Time value="0.010000"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="TerranExplosionLarge"/>
+            <Type value="Sound"/>
+            <Time value="0.333000"/>
+        </Events>
+        <Events>
+            <Anim value="Death,01"/>
+            <Name value="TerranPreExplosionSmall"/>
+            <Type value="Sound"/>
+            <Time value="0.010000"/>
+        </Events>
+        <Events>
+            <Anim value="Death,01"/>
+            <Name value="TerranExplosionLarge"/>
+            <Type value="Sound"/>
+            <Time value="1.003000"/>
+        </Events>
+        <Events>
+            <Anim value="Death,02"/>
+            <Name value="TerranPreExplosionSmall"/>
+            <Type value="Sound"/>
+            <Time value="0.010000"/>
+        </Events>
+        <Events>
+            <Anim value="Death,02"/>
+            <Name value="TerranPreExplosionSmall"/>
+            <Type value="Sound"/>
+            <Time value="0.166000"/>
+        </Events>
+        <Events>
+            <Anim value="Death,02"/>
+            <Name value="TerranExplosionLarge"/>
+            <Type value="Sound"/>
+            <Time value="0.666000"/>
+        </Events>
+        <ScaleMax value="1.750000,1.750000,1.750000"/>
+        <ScaleMin value="1.750000,1.750000,1.750000"/>
+    </CModel>
+    <CModel id="StFreya" parent="BuildingEx" Race="Terran">
+        <Model value="Assets\Models\StFreya\StFreya.m3"/>
+        <Radius value="1.250000"/>
+        <ScaleMax value="1.750000,1.750000,1.750000"/>
+        <ScaleMin value="1.750000,1.750000,1.750000"/>
+        <SelectionRadius value="1.250000"/>
+        <ShadowRadius value="1.250000"/>
+        <SquibTypeDefault value="Metal"/>
+    </CModel>
+    <CModel id="HellionMod" parent="HellionBase">
+        <Model value="Assets\Models\Bronya_C7_MC\Bronya_C7_MC.m3"/>
+    </CModel>
+    <CModel id="HellionTankMod" parent="HellionHellbatBase">
+        <Model value="Assets\Models\Bronya_C7_MC_B\Bronya_C7_MC_B.m3"/>
+    </CModel>
+    <CModel id="HellionTankMorphMod" parent="HellionMorphBase">
+        <Model value="Assets\Models\Bronya_C7_MC_Morph\Bronya_C7_MC_Morph.m3"/>
+    </CModel>
+    <CModel id="K23GroundEffectModel" parent="PersistentSpellFX">
+        <Model value="Assets\Models\K23_GroundEffect\K23_GroundEffect.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <RadiusLoose value="1.000000"/>
+    </CModel>
+    <CModel id="HonkaiBurningImpactModel" parent="ImpactFX">
+        <Model value="Assets\Effects\Protoss\Colossus_FireBeam_Unit_Impact\Colossus_FireBeam_Unit_Impact.m3"/>
+        <Radius value="0.750000"/>
+    </CModel>
+    <CModel id="HydraliskDeathMod" parent="HydraliskDeathBase">
+        <Model value="Assets\Models\UL_013_death\UL_013_death.m3"/>
+    </CModel>
+    <CModel id="HydraliskMod" parent="HydraliskBase">
+        <Model value="Assets\Models\UL_013\UL_013.m3"/>
+    </CModel>
+    <CModel id="HydraliskPortraitMod" parent="HydraliskPortraitBase">
+        <Model value="Assets\Models\UL_013_portrait\UL_013_portrait.m3"/>
+        <Image value="Assets\Textures\HydraliskPortrait_Static.dds"/>
+    </CModel>
+    <CModel id="Invisible2" Race="Neutral">
+        <Model value="Assets\Units\Test\InvisibleUnit\InvisibleUnit.m3"/>
+        <EditorCategories value="Race:Neutral"/>
+        <Flags index="TeenSafe" value="1"/>
+        <Radius value="-1.000000"/>
+        <SelectionRadius value="0.000000"/>
+        <ShadowRadius value="0.000000"/>
+    </CModel>
+    <CModel id="KianaC2BranchEffect">
+        <Model value="Assets\Models\KianaC2Branch04\KianaC2Branch04.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="KianaC2Reborn" parent="Unit" Race="Terran">
+        <Model value="Assets\Models\Kiana_C2_Reborn\Kiana_C2_Reborn.m3"/>
+        <RequiredAnims value="Assets\Models\Kiana_C2\Kiana_C2.m3a"/>
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraMid04"/>
+        <Radius value="0.375000"/>
+        <SelectionOffset value="0.000000,0.000000,-0.500000"/>
+        <SelectionRadius value="0.468700"/>
+        <ShadowRadius value="0.468700"/>
+        <SquibTypeDefault value="Flesh"/>
+        <TechPurchaseCamera value="TechPurchaseReaper"/>
+        <UnitGlossaryCamera value="Star2CameraMid04"/>
+        <Events>
+            <Anim value="Attack,01"/>
+            <Name value="KianaAttack1"/>
+            <Type value="Sound"/>
+            <Time value="0.300000"/>
+        </Events>
+        <Events>
+            <Anim value="Attack,02"/>
+            <Name value="KianaAttack2"/>
+            <Type value="Sound"/>
+            <Time value="0.100000"/>
+        </Events>
+        <Events>
+            <Anim value="Attack,03"/>
+            <Name value="KianaAttack3"/>
+            <Type value="Sound"/>
+            <Time value="0.100000"/>
+        </Events>
+        <Events>
+            <Anim value="Attack,04"/>
+            <Name value="KianaAttack2"/>
+            <Type value="Sound"/>
+            <Time value="0.100000"/>
+        </Events>
+        <Events>
+            <Anim value="Attack,05"/>
+            <Name value="KianaAttack4"/>
+            <Type value="Sound"/>
+            <Time value="0.200000"/>
+        </Events>
+        <Events>
+            <Anim value="Attack,06"/>
+            <Name value="KianaAttack3"/>
+            <Type value="Sound"/>
+            <Time value="0.200000"/>
+        </Events>
+        <Events>
+            <Anim value="Attack,07"/>
+            <Name value="KianaAttack4"/>
+            <Type value="Sound"/>
+            <Time value="0.500000"/>
+        </Events>
+        <Events Anim="Thrown" Name="KianaHit" Type="Sound"/>
+    </CModel>
+    <CModel id="LiberatorAGMod" parent="LiberatorAGBase">
+        <Model value="Assets\Models\RO_060\RO_060.m3"/>
+    </CModel>
+    <CModel id="LiberatorDeathMod" parent="LiberatorDeathBase">
+        <Model value="Assets\Models\RO_060_death\RO_060_death.m3"/>
+        <Events index="0" removed="1"/>
+        <Events index="1" removed="1"/>
+        <VariationCount value="1"/>
+    </CModel>
+    <CModel id="LiberatorAGDeathMod" parent="LiberatorDeathBase">
+        <Model value="Assets\Models\RO_060_AG_death\RO_060_AG_death.m3"/>
+        <Events index="0" removed="1"/>
+        <Events index="1" removed="1"/>
+        <VariationCount value="1"/>
+    </CModel>
+    <CModel id="LiberatorMod" parent="LiberatorBase">
+        <Model value="Assets\Models\RO_060\RO_060.m3"/>
+    </CModel>
+    <CModel id="LurkerAttackSpikeEx2">
+        <Model value="Assets\Models\UL_062_attack\UL_062_attack.m3"/>
+    </CModel>
+    <CModel id="LurkerDeathMod" parent="LurkerDeathBase">
+        <Model value="Assets\Models\UL_062_death\UL_062_death.m3"/>
+        <VariationCount value="1"/>
+    </CModel>
+    <CModel id="LurkerMPPortraitMod" parent="LurkerPortraitBase">
+        <Model value="Assets\Models\UL_062_potrait\UL_062_potrait.m3"/>
+        <Image value="Assets\Textures\lurkerportrait_static.dds"/>
+        <Lighting value="LurkerEx2_Portrait"/>
+    </CModel>
+    <CModel id="LurkerMod" parent="LurkerBase">
+        <Model value="Assets\Models\UL_062\UL_062.m3"/>
+    </CModel>
+    <CModel id="Valkyrja3Death" parent="UnitDeath" Race="Terran">
+        <Model value="Assets\Models\DG_081n_death\DG_081n_death.m3"/>
+        <LowQualityModel value="TerranSmallUnitDeathLow"/>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="Uni_DeathFXincidentallFire"/>
+            <Type value="Sound"/>
+            <Time value="0.950000"/>
+            <Payload value="Uni_DeathFXincidentallFire"/>
+        </Events>
+        <Events>
+            <Anim value="Death,Blast"/>
+            <Name value="Uni_DeathFXincidentallFire"/>
+            <Type value="Sound"/>
+            <Time value="0.950000"/>
+            <Payload value="Uni_DeathFXincidentallFire"/>
+        </Events>
+        <Occlusion value="Show"/>
+    </CModel>
+    <CModel id="BronyaDeath" parent="MarauderDeathBase">
+        <Model value="Assets\Models\Bronya_C1_04_01_death\Bronya_C1_04_01_death.m3"/>
+    </CModel>
+    <CModel id="Valkyrja3" parent="Unit" Race="Terran">
+        <Model value="Assets\Models\V2\V2.m3"/>
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraMid04"/>
+        <ScaleMax value="1.400000,1.400000,1.400000"/>
+        <ScaleMin value="1.400000,1.400000,1.400000"/>
+        <SquibTypeDefault value="Flesh"/>
+        <TechPurchaseCamera value="TechPurchaseInfantry"/>
+        <UnitGlossaryCamera value="Star2CameraMid04"/>
+    </CModel>
+    <CModel id="BronyaPortrait" parent="MarauderPortraitBase">
+        <Model value="Assets\Models\Bronya_C1_04_01_portrait\Bronya_C1_04_01_portrait.m3"/>
+        <FacialController value=""/>
+        <Image value="Assets\Textures\MarauderPortrait_Static.dds"/>
+    </CModel>
+    <CModel id="Bronya_C1" parent="MarauderBase">
+        <Model value="Assets\Models\Bronya_C1\Bronya_C1.m3"/>
+        <RequiredAnims index="0" value="Assets\Models\Bronya_C1\Bronya_C1.m3a"/>
+        <RequiredAnims index="1" removed="1"/>
+        <AttachProps index="0" removed="1"/>
+        <AttachProps index="1" removed="1"/>
+        <Events index="0" removed="1"/>
+        <Events index="1" removed="1"/>
+        <Events index="2" removed="1"/>
+        <Events index="3" removed="1"/>
+    </CModel>
+    <CModel id="IceExplode">
+        <Model value="Assets\COOP\Mengsk\Effects\Ghost_Mengsk_COOP_Immolate_Explosion\Ghost_Mengsk_COOP_Immolate_Explosion.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="TerranExplodeSmall">
+        <Model value="Assets\Effects\Terran\TerranLargeUnitDeath\TerranLargeUnitDeath.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <ScaleMax value="0.600000,0.600000,0.600000"/>
+        <ScaleMin value="0.600000,0.600000,0.600000"/>
+    </CModel>
+    <CModel id="Valkyrja2" parent="Unit" Race="Terran">
+        <Model value="Assets\Models\DG_080\DG_080.m3"/>
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraMid03"/>
+        <Radius value="0.300000"/>
+        <ScaleMax value="1.400000,1.400000,1.400000"/>
+        <ScaleMin value="1.400000,1.400000,1.400000"/>
+        <SelectionRadius value="0.300000"/>
+        <ShadowRadius value="0.300000"/>
+        <SquibTypeDefault value="Flesh"/>
+        <TechPurchaseCamera value="TechPurchaseInfantry"/>
+        <UnitGlossaryCamera value="Star2CameraMid03"/>
+    </CModel>
+    <CModel id="Valkyrja2Death" parent="UnitDeath" Race="Terran">
+        <Model value="Assets\Models\DG_080_death\DG_080_death.m3"/>
+        <LowQualityModel value="TerranBloodDeathLow"/>
+        <Occlusion value="Show"/>
+    </CModel>
+    <CModel id="Valkyrja2Portrait" parent="Portrait" Race="Terran">
+        <Model value="Assets\Models\DG_080_portrait\DG_080_portrait.m3"/>
+        <Flags index="Facial" value="1"/>
+        <Image value="Assets\Textures\MarinePortrait_Static.dds"/>
+        <PausedParticleSystemBehavior value="Automatic"/>
+    </CModel>
+    <CModel id="KianaC2Portrait" parent="MarinePortraitBase">
+        <Model value="Assets\Models\Kiana_C2_portrait\Kiana_C2_portrait.m3"/>
+        <RequiredAnims value="Assets\Models\Kiana_C2_portrait\Kiana_C2_portrait.m3a"/>
+        <FacialController value=""/>
+        <Image value=""/>
+    </CModel>
+    <CModel id="Helios" parent="MedivacBase">
+        <Model value="Assets\Models\Helios\Helios.m3"/>
+        <ScaleMax value="1.000000,1.000000,1.000000"/>
+        <ScaleMin value="1.000000,1.000000,1.000000"/>
+    </CModel>
+    <CModel id="HonkaiDizzyImpactModel" parent="PersistentSpellFX">
+        <Model value="Assets\Models\Honkai_Dizzy\Honkai_Dizzy.m3"/>
+        <EditorCategories value="Race:Protoss"/>
+    </CModel>
+    <CModel id="ParasiteSporeWeapon">
+        <Model value="Assets\Models\UL_080_bullet\UL_080_bullet.m3"/>
+    </CModel>
+    <CModel id="HighTowerDeath" parent="EngineeringBayDeathBase">
+        <Model value="Assets\Models\Powerup_death\Powerup_death.m3"/>
+        <LowQualityModel value=""/>
+        <Events index="0" removed="1"/>
+        <Events index="1" removed="1"/>
+        <Events index="2" removed="1"/>
+        <Events index="3" removed="1"/>
+        <Events index="4" removed="1"/>
+        <Events index="5" removed="1"/>
+        <Events index="6" removed="1"/>
+        <ScaleMax value="0.950000,0.950000,0.950000"/>
+        <ScaleMin value="0.950000,0.950000,0.950000"/>
+    </CModel>
+    <CModel id="ProtossSmallUnitDeathLow2" parent="UnitDeath" Race="Protoss">
+        <Model value="Assets\Effects\Protoss\ProtossUnitDeath\ProtossUnitDeath_Low.m3"/>
+        <Flags index="TeenSafe" value="1"/>
+        <ScaleMax value="1.250000,1.250000,1.250000"/>
+        <ScaleMin value="1.250000,1.250000,1.250000"/>
+        <SelectionRadius value="0.400000"/>
+        <ShadowRadius value="0.400000"/>
+    </CModel>
+    <CModel id="RavagerDeathMod" parent="RavagerDeathBase">
+        <Model value="Assets\Models\UL_063_death\UL_063_death.m3"/>
+        <VariationCount value="1"/>
+    </CModel>
+    <CModel id="RavagerMod" parent="RavagerBase">
+        <Model value="Assets\Models\UL_063\UL_063.m3"/>
+    </CModel>
+    <CModel id="RavagerPortraitMod" parent="RavagerPortraitBase">
+        <Model value="Assets\Models\UL_063_potrait\UL_063_potrait.m3"/>
+        <Image value="Assets\Textures\RavagerPortrait_Static.dds"/>
+    </CModel>
+    <CModel id="Reaper2" parent="ReaperBase">
+        <Model value="Assets\Units\Terran\Reaper\Reaper.m3"/>
+    </CModel>
+    <CModel id="KianaC2" parent="Unit" Race="Terran">
+        <Model value="Assets\Models\Kiana_C2\Kiana_C2.m3"/>
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraMid04"/>
+        <Radius value="0.375000"/>
+        <SelectionOffset value="0.000000,0.000000,-0.500000"/>
+        <SelectionRadius value="0.468700"/>
+        <ShadowRadius value="0.468700"/>
+        <SquibTypeDefault value="Flesh"/>
+        <UnitGlossaryCamera value="Star2CameraMid04"/>
+        <RequiredAnims value="Assets\Models\Kiana_C2\Kiana_C2.m3a"/>
+        <Events>
+            <Anim value="Attack,01"/>
+            <Name value="KianaAttack1"/>
+            <Type value="Sound"/>
+            <Time value="0.300000"/>
+        </Events>
+        <Events>
+            <Anim value="Attack,02"/>
+            <Name value="KianaAttack2"/>
+            <Type value="Sound"/>
+            <Time value="0.100000"/>
+        </Events>
+        <Events>
+            <Anim value="Attack,03"/>
+            <Name value="KianaAttack3"/>
+            <Type value="Sound"/>
+            <Time value="0.100000"/>
+        </Events>
+        <Events>
+            <Anim value="Attack,04"/>
+            <Name value="KianaAttack2"/>
+            <Type value="Sound"/>
+            <Time value="0.100000"/>
+        </Events>
+        <Events>
+            <Anim value="Attack,05"/>
+            <Name value="KianaAttack4"/>
+            <Type value="Sound"/>
+            <Time value="0.200000"/>
+        </Events>
+        <Events>
+            <Anim value="Attack,06"/>
+            <Name value="KianaAttack3"/>
+            <Type value="Sound"/>
+            <Time value="0.200000"/>
+        </Events>
+        <Events>
+            <Anim value="Attack,07"/>
+            <Name value="KianaAttack4"/>
+            <Type value="Sound"/>
+            <Time value="0.500000"/>
+        </Events>
+        <Events Anim="Thrown" Name="KianaHit" Type="Sound"/>
+    </CModel>
+    <CModel id="ReaperDeath2" parent="ReaperDeathBase">
+        <Model value="Assets\Units\Terran\ReaperDeathEx1\ReaperDeathEx1.m3"/>
+    </CModel>
+    <CModel id="ReaperDeathRagdoll2" parent="ReaperDeathRagdollBase">
+        <Model value="Assets\Units\Terran\ReaperDeathRagdoll\ReaperDeathRagdoll.m3"/>
+    </CModel>
+    <CModel id="RoachDeathMod" parent="RoachDeathBase">
+        <Model value="Assets\Models\UL_012_death\UL_012_death.m3"/>
+    </CModel>
+    <CModel id="DG_013Impact" parent="ImpactFX">
+        <Model value="Assets\Models\DG_013_Spray\DG_013_Spray.m3"/>
+        <EditorCategories value="Race:Zerg"/>
+    </CModel>
+    <CModel id="B15IceAttackBeam" parent="PersistentSpellFX">
+        <Model value="Assets\Effects\Terran\DiamondbackBeam\DiamondbackBeam.m3"/>
+        <EditorCategories value="Race:Protoss"/>
+        <RadiusLoose value="1.000000"/>
+    </CModel>
+    <CModel id="LightningRod" parent="TechLabBase">
+        <Model value="Assets\Models\LightningRod\LightningRod.m3"/>
+        <ScaleMax value="0.650000,0.650000,0.650000"/>
+        <ScaleMin value="0.650000,0.650000,0.650000"/>
+    </CModel>
+    <CModel id="Herrscher3rdBehaviorEffectBeam" parent="PersistentSpellFX">
+        <Model value="Assets\Effects\Protoss\ProbeBeam\ProbeBeam.m3"/>
+        <EditorCategories value="Race:Protoss"/>
+        <Priority value="16"/>
+    </CModel>
+    <CModel id="TechLabBuild2" parent="TechLabBuildBase"/>
+    <CModel id="UL_030" parent="Unit" Race="Zerg">
+        <Model value="Assets\Models\UL_030\UL_030.m3"/>
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraMid04"/>
+        <Radius value="0.900000"/>
+        <SelectionRadius value="0.650000"/>
+        <ShadowRadius value="0.600000"/>
+        <SquibTypeDefault value="Flesh"/>
+        <TechPurchaseCamera value="Star2CameraMid04"/>
+        <Tipability value="0.750000"/>
+        <TipabilityLength value="0.800000"/>
+        <TipabilityWidth value="0.800000"/>
+        <UnitGlossaryCamera value="Star2CameraMid04"/>
+        <WalkAnimMoveSpeed value="1.2187"/>
+    </CModel>
+    <CModel id="UL_040Death" parent="UnitDeath" Race="Zerg">
+        <Model value="Assets\Models\UL_040_death\UL_040_death.m3"/>
+        <LowQualityModel value="ZergMediumUnitDeathLow"/>
+        <Occlusion value="Show"/>
+        <Radius value="1.200000"/>
+    </CModel>
+    <CModel id="RoachMod" parent="RoachBase">
+        <Model value="Assets\Models\UL_012\UL_012.m3"/>
+        <WalkAnimMoveSpeed value="4"/>
+    </CModel>
+    <CModel id="UL_040" parent="Unit" Race="Zerg">
+        <Model value="Assets\Models\UL_040\UL_040.m3"/>
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraMid04"/>
+        <Radius value="1.200000"/>
+        <ScaleMax value="0.800000,0.800000,0.800000"/>
+        <ScaleMin value="0.800000,0.800000,0.800000"/>
+        <SelectionRadius value="0.900000"/>
+        <ShadowRadius value="0.800000"/>
+        <SquibTypeDefault value="Flesh"/>
+        <TechPurchaseCamera value="Star2CameraMid04"/>
+        <Tipability value="0.250000"/>
+        <TipabilityLength value="0.300000"/>
+        <TipabilityWidth value="0.300000"/>
+        <UnitGlossaryCamera value="Star2CameraMid04"/>
+        <WalkAnimMoveSpeed value="1.2187"/>
+    </CModel>
+    <CModel id="RoachPortraitMod" parent="RoachPortraitBase">
+        <Model value="Assets\Models\UL_012_portrait\UL_012_portrait.m3"/>
+        <Image value="Assets\Textures\RoachPortrait_Static.dds"/>
+    </CModel>
+    <CModel id="UL_030Death" parent="UnitDeath" Race="Zerg">
+        <Model value="Assets\Models\UL_030_Death\UL_030_Death.m3"/>
+        <LowQualityModel value="ZergMediumUnitDeathLow"/>
+        <Occlusion value="Show"/>
+        <Radius value="0.900000"/>
+    </CModel>
+    <CModel id="UL_040Portrait" parent="Portrait" Race="Zerg">
+        <Model value="Assets\Models\UL_040_protrait\UL_040_protrait.m3"/>
+    </CModel>
+    <CModel id="RoachUpgrade">
+        <Model value="Assets\Models\UL_012\UL_012.m3"/>
+    </CModel>
+    <CModel id="SiegeTankDeathMod" parent="SiegeTankDeathBase">
+        <Model value="Assets\Models\RO_036_death\RO_036_death.m3"/>
+        <PhysicsDeathMotionFactor value="1.000000,0.500000"/>
+    </CModel>
+    <CModel id="RO_036" parent="SiegeTankBase">
+        <Model value="Assets\Models\RO_036\RO_036.m3"/>
+        <RequiredAnims index="0" value="Assets\Models\RO_036\RO_036.m3a"/>
+        <AttachProps index="0" Id="Ref_Weapon Left">
+            <Keys index="Turret" value="-128"/>
+            <Keys index="Weapon" value="1"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon Right">
+            <Keys index="Weapon" value="0"/>
+        </AttachProps>
+    </CModel>
+    <CModel id="SiegeTankSiegedDeathMod" parent="SiegeTankSiegedDeathBase">
+        <Model value="Assets\Models\RO_036_Cannon_death\RO_036_Cannon_death.m3"/>
+    </CModel>
+    <CModel id="SiegeTankSiegedMod" parent="SiegeTankSiegedBase">
+        <Model value="Assets\Models\RO_036_Cannon\RO_036_Cannon.m3"/>
+    </CModel>
+    <CModel id="SiegeTankSiegedMorphMod" parent="SiegeTankMorphBase">
+        <Model value="Assets\Models\RO_036_Morph\RO_036_Morph.m3"/>
+    </CModel>
+    <CModel id="TerranSmallUnitDeathLow2" parent="UnitDeath" Race="Terran">
+        <Model value="Assets\Effects\Terran\TerranSmallUnitDeath\TerranSmallUnitDeath_Low.m3"/>
+        <Flags index="TeenSafe" value="1"/>
+        <ScaleMax value="1.100000,1.100000,1.100000"/>
+        <ScaleMin value="1.100000,1.100000,1.100000"/>
+        <SelectionRadius value="0.454300"/>
+        <ShadowRadius value="0.454300"/>
+    </CModel>
+    <CModel id="RO_030" parent="Unit" Race="Terran">
+        <Model value="Assets\Models\RO_030\RO_030.m3"/>
+        <Occlusion value="Show"/>
+        <ScaleMax value="1.750000,1.750000,1.750000"/>
+        <ScaleMin value="1.750000,1.750000,1.750000"/>
+        <ShadowRadius value="0.400000"/>
+        <SquibTypeDefault value="Metal"/>
+        <TextureDeclares Prefix="RO_030_">
+            <Adaptions TriggerOnSubstring="_Color" Slot="main.diffuse"/>
+        </TextureDeclares>
+    </CModel>
+    <CModel id="RO_030Death" parent="UnitDeath" Race="Terran">
+        <Model value="Assets\Models\RO_030\RO_030_death.m3"/>
+        <LowQualityModel value="ThorDeathLow"/>
+        <Events>
+            <Anim value="Death"/>
+            <Name value="Explosion"/>
+            <Type value="Sound"/>
+            <Time value="2.000000"/>
+        </Events>
+        <Radius value="1.200000"/>
+        <TextureDeclares Prefix="RO_030_">
+            <Adaptions TriggerOnSubstring="_Color" Slot="main.diffuse"/>
+        </TextureDeclares>
+    </CModel>
+    <CModel id="K17AttackLaunch" parent="LaunchFX">
+        <Model value="Assets\Models\K17_Launch_Effect\K17_Launch_Effect.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <Radius value="0.000000"/>
+        <ScaleMax value="4.000000,4.000000,4.000000"/>
+        <ScaleMin value="4.000000,4.000000,4.000000"/>
+    </CModel>
+    <CModel id="TimeCrackModel">
+        <Model value="Assets\Models\Effect_TimeCrack\Effect_TimeCrack.m3"/>
+    </CModel>
+    <CModel id="UL_030Portrait" parent="Portrait" Race="Zerg">
+        <Model value="Assets\Models\UL_030_protrait\UL_030_protrait.m3"/>
+    </CModel>
+    <CModel id="UltraliskDeathMod" parent="UltraliskDeathBase">
+        <Model value="Assets\Models\BOSS_010_death\BOSS_010_death.m3"/>
+        <Events index="0" removed="1"/>
+        <Events index="1" removed="1"/>
+        <Events index="2" removed="1"/>
+        <VariationCount value="1"/>
+    </CModel>
+    <CModel id="UltraliskMod" parent="UltraliskBase">
+        <Model value="Assets\Models\BOSS_010\BOSS_010.m3"/>
+        <RequiredAnims index="0" removed="1"/>
+        <ScaleMax value="1.400000,1.400000,1.400000"/>
+        <ScaleMin value="1.400000,1.400000,1.400000"/>
+    </CModel>
+    <CModel id="UltraliskPortraitMod" parent="UltraliskPortraitBase">
+        <Model value="Assets\Models\BOSS_010_potrait\BOSS_010_potrait.m3"/>
+        <Image value="Assets\Textures\UltraliskPortrait_Static.dds"/>
+    </CModel>
+    <CModel id="UL_100Death" parent="UnitDeath" Race="Zerg">
+        <Model value="Assets\Models\UL_100_death\UL_100_death.m3"/>
+        <LowQualityModel value="ZergMediumUnitDeathLow"/>
+        <Occlusion value="Show"/>
+        <SelectionRadius value="1.000000"/>
+        <ShadowRadius value="1.000000"/>
+    </CModel>
+    <CModel id="UL_100" parent="ViperBase">
+        <Model value="Assets\Models\UL_100\UL_100.m3"/>
+        <Events index="0" removed="1"/>
+        <Events index="1" removed="1"/>
+    </CModel>
+    <CModel id="Herrscher1stProjector" parent="PersistentSpellFX" Race="Terran">
+        <Model value="Assets\Models\Herrscher1stProject\Herrscher1stProject.m3"/>
+        <Priority value="32"/>
+        <ScaleMax value="2.000000,2.000000,2.000000"/>
+        <ScaleMin value="2.000000,2.000000,2.000000"/>
+        <ShadowRadius value="0.000000"/>
+    </CModel>
+    <CModel id="BronyaC7Gun1" parent="Unit" Race="Protoss">
+        <Model value="Assets\Models\Bronya_C7_Weapon_Create\Bronya_C7_Weapon_Create.m3"/>
+        <Occlusion value="Show"/>
+        <Radius value="0.600000"/>
+        <ScaleMax value="1.200000,1.200000,1.200000"/>
+        <ScaleMin value="1.200000,1.200000,1.200000"/>
+        <SelectionOffset value="0.000000,0.000000,-0.750000"/>
+        <SelectionRadius value="0.600000"/>
+        <ShadowRadius value="0.600000"/>
+        <SquibTypeDefault value="Metal"/>
+    </CModel>
+    <CModel id="VoidRayAttackBeam2" parent="MissileFX">
+        <Model value="Assets\Effects\Protoss\WarpRayMissile\WarpRayMissile.m3"/>
+        <LowQualityModel value="VoidRayAttackBeamLow"/>
+        <EditorCategories value="Race:Protoss"/>
+        <RadiusLoose value="1.000000"/>
+    </CModel>
+    <CModel id="WarHoundBeam">
+        <AnimSpeed value="3.000000"/>
+    </CModel>
+    <CModel id="WeaponCannonB12">
+        <Model value="Assets\Models\Bronya_C1_Fire_Prepare\Bronya_C1_Fire_Prepare.m3"/>
+    </CModel>
+    <CModel id="AttackHintRound">
+        <Model value="Assets\Models\Attack_Hint_Round\Attack_Hint_Round.m3"/>
+    </CModel>
+    <CModel id="BronyaC7CannonAttachB34">
+        <Model value="Assets\Models\Bronya_C7\B34-C7.m3"/>
+    </CModel>
+    <CModel id="WeaponCannonB152">
+        <Model value="Assets\Models\B15\B15.m3"/>
+    </CModel>
+    <CModel id="WeaponCannonB34GodKey">
+        <Model value="Assets\Models\B34(gk)\B34(gk).m3"/>
+    </CModel>
+    <CModel id="SevenThundersOfRetribution">
+        <Model value="Assets\Models\DG_080\SevenThundersOfRetribution.m3"/>
+    </CModel>
+    <CModel id="WeaponCannonB6">
+        <Model value="Assets\Models\B6\B6.m3"/>
+    </CModel>
+    <CModel id="WeaponCannonUpgrade">
+        <Model value="Assets\Effects\Protoss\Protoss_Generic_WarpOut_MP\Protoss_Generic_WarpOut_MP.m3"/>
+        <AnimSpeed value="8.000000"/>
+        <ScaleMax value="0.150000,0.150000,0.150000"/>
+        <ScaleMin value="0.150000,0.150000,0.150000"/>
+    </CModel>
+    <CModel id="WeaponCannonB15">
+        <Model value="Assets\Models\B15\B15.m3"/>
+    </CModel>
+    <CModel id="WeaponCannonB22">
+        <Model value="Assets\Models\B22\B22.m3"/>
+    </CModel>
+    <CModel id="WeaponCannonB23">
+        <Model value="Assets\Models\B23\B23.m3"/>
+    </CModel>
+    <CModel id="WeaponCannonB25">
+        <Model value="Assets\Models\B25\B25.m3"/>
+    </CModel>
+    <CModel id="WeaponCannonB26">
+        <Model value="Assets\Models\B26\B26.m3"/>
+    </CModel>
+    <CModel id="WeaponCannonB28">
+        <Model value="Assets\Models\B28\B28.m3"/>
+    </CModel>
+    <CModel id="WeaponCannonB34">
+        <Model value="Assets\Models\B34\B34.m3"/>
+    </CModel>
+    <CModel id="WeaponCannonB5">
+        <Model value="Assets\Models\B5\B5.m3"/>
+    </CModel>
+    <CModel id="WeaponCannonB18">
+        <Model value="Assets\Models\B18\B18.m3"/>
+    </CModel>
+    <CModel id="WeaponCannonB7">
+        <Model value="Assets\Models\B7\B7.m3"/>
+    </CModel>
+    <CModel id="MeiC2Blade" parent="RacePersistentSpellFX" Race="Terran">
+        <Model value="Assets\Models\Mei_C2\Mei_C2_blade.m3"/>
+        <AnimSpeed value="2.500000"/>
+        <Flags index="Wait" value="1"/>
+        <Priority value="32"/>
+        <ScaleMax value="2.700000,2.700000,2.700000"/>
+        <ScaleMin value="2.700000,2.700000,2.700000"/>
+        <ShadowRadius value="0.000000"/>
+    </CModel>
+    <CModel id="WeaponR11" parent="RacePersistentSpellFX" Race="Terran">
+        <Model value="Assets\Models\Scythe\R11.m3"/>
+        <Flags index="Wait" value="1"/>
+        <Priority value="32"/>
+        <ShadowRadius value="0.000000"/>
+        <AnimSpeed value="2.500000"/>
+    </CModel>
+    <CModel id="WeaponK23" parent="RacePersistentSpellFX" Race="Terran">
+        <Model value="Assets\Models\K23\K23.m3"/>
+        <Flags index="Wait" value="1"/>
+        <Priority value="32"/>
+        <ShadowRadius value="0.000000"/>
+    </CModel>
+    <CModel id="WeaponK2" parent="RacePersistentSpellFX" Race="Terran">
+        <Model value="Assets\Models\K2\K2.m3"/>
+        <Flags index="Wait" value="1"/>
+        <Priority value="32"/>
+        <ShadowRadius value="0.000000"/>
+    </CModel>
+    <CModel id="KianaC2UltimateModel" parent="RacePersistentSpellFX" Race="Terran">
+        <Model value="Assets\Models\Kiana_C2_Ultimate\Kiana_C2_Ultimate.m3"/>
+        <ShadowRadius value="0.000000"/>
+    </CModel>
+    <CModel id="WeaponK17" parent="RacePersistentSpellFX" Race="Terran">
+        <Model value="Assets\Models\K17\K17.m3"/>
+        <Flags index="Wait" value="1"/>
+        <Priority value="32"/>
+        <ShadowRadius value="0.000000"/>
+    </CModel>
+    <CModel id="WeaponK23Sword" parent="RacePersistentSpellFX" Race="Terran">
+        <Model value="Assets\Models\K23Sword\K23Sword.m3"/>
+        <Flags index="Wait" value="1"/>
+        <Priority value="32"/>
+        <ShadowRadius value="0.000000"/>
+    </CModel>
+    <CModel id="WeaponK23Slash" parent="RacePersistentSpellFX" Race="Terran">
+        <Model value="Assets\Models\K23Slash\K23Slash.m3"/>
+        <Flags index="Wait" value="1"/>
+        <Priority value="32"/>
+        <ShadowRadius value="0.000000"/>
+    </CModel>
+    <CModel id="SeeleBlink" parent="RacePersistentSpellFX" Race="Terran">
+        <Model value="Assets\Models\Seele_C1\Seele_Blink.m3"/>
+        <Flags index="Wait" value="1"/>
+        <ShadowRadius value="0.000000"/>
+    </CModel>
+    <CModel id="WeaponM13" parent="RacePersistentSpellFX" Race="Terran">
+        <Model value="Assets\Models\Katana\M13.m3"/>
+        <AnimSpeed value="2.500000"/>
+        <Flags index="Wait" value="1"/>
+        <Priority value="32"/>
+        <ShadowRadius value="0.000000"/>
+    </CModel>
+    <CModel id="WeaponVoid" parent="RacePersistentSpellFX" Race="Terran">
+        <Model value="Assets\Models\PistolEmpty\PistolEmpty.m3"/>
+        <Flags index="Wait" value="1"/>
+        <Priority value="32"/>
+        <ShadowRadius value="0.000000"/>
+    </CModel>
+    <CModel id="WeaponCannonB1">
+        <Model value="Assets\Models\B1\B1.m3"/>
+    </CModel>
+    <CModel id="RO_040Death" parent="WidowMineDeathBase">
+        <Model value="Assets\Models\RO_040_Death\RO_040_Death.m3"/>
+    </CModel>
+    <CModel id="RO_040" parent="WidowMineBase">
+        <Model value="Assets\Models\RO_040\RO_040.m3"/>
+        <TextureDeclares Prefix="RO_040_">
+            <Adaptions TriggerOnSubstring="_Diffuse" Slot="main.diffuse"/>
+        </TextureDeclares>
+    </CModel>
+    <CModel id="WeaponK5_13" parent="RacePersistentSpellFX" Race="Terran">
+        <Model value="Assets\Models\K5\K5_13.m3"/>
+        <Flags index="Wait" value="1"/>
+        <Priority value="32"/>
+        <ShadowRadius value="0.000000"/>
+    </CModel>
+    <CModel id="DG_010" parent="ZealotBase">
+        <Model value="Assets\Models\DG_010\DG_010.m3"/>
+        <RequiredAnims index="0" removed="1"/>
+        <Events>
+            <Anim value="Attack"/>
+            <Name value="DG_010 Attack"/>
+            <Type value="Sound"/>
+            <Time value="0.300000"/>
+        </Events>
+        <SquibTypeDefault value="Flesh"/>
+        <TextureDeclares Prefix="DG_010">
+            <Adaptions Slot="main.diffuse"/>
+        </TextureDeclares>
+    </CModel>
+    <CModel id="RO_047AttackModel" parent="ImpactFX">
+        <Model value="Assets\Models\RO_040\RO_047_bullets.m3"/>
+        <EditorCategories value="Race:Zerg"/>
+    </CModel>
+    <CModel id="ZergSmallUnitDeathLow2" parent="UnitDeath" Race="Zerg">
+        <Model value="Assets\Effects\Zerg\ZergSmallUnitDeath\ZergSmallUnitDeath_low.m3"/>
+        <Flags index="TeenSafe" value="1"/>
+        <Occlusion value="Show"/>
+        <ScaleMax value="0.800000,0.800000,0.800000"/>
+        <ScaleMin value="0.800000,0.800000,0.800000"/>
+        <SelectionRadius value="0.625000"/>
+        <ShadowRadius value="0.625000"/>
+    </CModel>
+    <CModel id="ZerglingMod" parent="ZerglingBase">
+        <Model value="Assets\Models\Q_UL_010\Q_UL_010.m3"/>
+    </CModel>
+    <CModel id="ZerglingPortraitMod" parent="ZerglingPortraitBase">
+        <Model value="Assets\Models\Q_UL_010_portrait\Q_UL_010_portrait.m3"/>
+        <Flags index="VariationFallback" value="0"/>
+        <Image value="Assets\Textures\ZerglingPortrait_Static.dds"/>
+    </CModel>
+    <CModel id="BronyaC7">
+        <Model value="Assets\Models\Bronya_C7\Bronya_C7_all.m3"/>
+        <Flags index="VariationFallback" value="0"/>
+        <Flags index="VariationPreload" value="0"/>
+    </CModel>
+    <CModel id="BronyaC7Cannon">
+        <Model value="Assets\Models\Bronya_C7_Weapon_Create\Bronya_C7_Weapon_Create.m3"/>
+        <Flags index="VariationFallback" value="0"/>
+        <Flags index="VariationPreload" value="0"/>
+        <Radius value="0.000000"/>
+        <SelectionRadius value="0.000000"/>
+        <ShadowRadius value="0.000000"/>
+    </CModel>
+    <CModel id="BronyaC7Motor">
+        <Model value="Assets\Models\Bronya_C7\Bronya_C7_all.m3"/>
+        <Flags index="VariationFallback" value="0"/>
+        <Flags index="VariationPreload" value="0"/>
+        <Tipability value="0.750000"/>
+        <TipabilityLength value="0.600000"/>
+        <TipabilityWidth value="0.400000"/>
+    </CModel>
+    <CModel id="BronyaC7_Drill" parent="MissileFX">
+        <Model value="Assets\Models\Bronya_C7_Drill\Bronya_C7_Drill.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <ScaleMax value="0.700000,0.700000,0.700000"/>
+        <ScaleMin value="0.700000,0.700000,0.700000"/>
+    </CModel>
+    <CModel id="BronyaC7AttackLaunch" parent="LaunchFX">
+        <Model value="Assets\Models\Bronya_C7_launch\Bronya_C7_launch.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <ScaleMax value="0.800000,0.800000,0.800000"/>
+        <ScaleMin value="0.600000,0.600000,0.600000"/>
+    </CModel>
+    <CModel id="BronyaC7AttackImpact" parent="ImpactFX">
+        <Model value="Assets\Models\Bronya_C7_explode\Bronya_C7_explode.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <AnimSpeed value="1.400000"/>
+        <ScaleMax value="1.400000,1.400000,1.400000"/>
+    </CModel>
+    <CModel id="BronyaC7Portrait" parent="Portrait" Race="Terran">
+        <Model value="Assets\Models\Bronya_C7_portrait\Bronya_C7_portrait.m3"/>
+    </CModel>
+    <CModel id="BronyaConstructCannonBeam" parent="PersistentSpellFX">
+        <Model value="Assets\Models\Bronya_C7_Weapon_Create_Beam\Bronya_C7_Weapon_Create_Beam.m3"/>
+        <EditorCategories value="Race:Protoss"/>
+        <RadiusLoose value="1.000000"/>
+        <AnimSpeed value="0.600000"/>
+    </CModel>
+    <CModel id="BronyaC7Death" parent="UnitDeath" Race="Protoss">
+        <Model value="Assets\Effects\Protoss\ProtossUnitWarpIn\ProtossUnitWarpIn.m3"/>
+        <SelectionRadius value="0.555400"/>
+        <ShadowRadius value="0.555400"/>
+    </CModel>
+</Catalog>

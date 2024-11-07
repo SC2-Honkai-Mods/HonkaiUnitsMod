@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CTargetFindBestPoint id="UL_100BestPointLow">
+        <Flags index="EvaluateCmd" value="1"/>
+        <Effect value="UL_100AbilSlowSearch"/>
+        <MinCount value="2"/>
+    </CTargetFindBestPoint>
+    <CTargetFindEffect id="UL_100Search">
+        <TargetValidator value="TargetNotSlow"/>
+        <Effect value="UL_100AbilSlowSearch"/>
+    </CTargetFindEffect>
+    <CTargetFindSet id="UL_100">
+        <CasterValidator value="CasterLifeLT60Percent"/>
+        <Type value="Sequential"/>
+        <Array value="UL_100Search"/>
+        <Array value="UL_100BestPointLow"/>
+    </CTargetFindSet>
+    <CTargetFindOrder id="BlinkAttackTargetUL_040">
+        <TargetFilters value="Ground,Visible;Player,Ally,Neutral,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <CasterValidator value="NoGroundEnermyNearby"/>
+        <TargetValidator value="TacticalUL_040Blink"/>
+        <Abil value="attack"/>
+    </CTargetFindOrder>
+    <CTargetFindEffect id="RO_010">
+        <Flags index="EvaluateCmd" value="1"/>
+        <TargetFilters value="Ground,Visible;Self,Player,Ally,Neutral,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <TargetValidator value="TargetIsEnemyGroound"/>
+        <Effect value="RO_010Abli1Search"/>
+    </CTargetFindEffect>
+</Catalog>

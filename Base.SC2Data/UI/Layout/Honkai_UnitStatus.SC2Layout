@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Desc>
+    <Frame type="UnitStatusBar" name="UnitStatusBarTemplate">
+        <Height val="12"/>
+        <Width val="80"/>
+        <BackgroundShown val="true"/>
+        <BackgroundColor val="0, 0, 0"/>
+        <BarInsetRect top="2" left="2" bottom="2" right="2"/>
+        <BackgroundInsetRect top="1" left="1" bottom="1" right="1"/>
+        <RenderType val="HDR"/>
+    </Frame>
+
+    <Frame type="UnitStatusBar" name="UnitStatusHealthBarTemplate" template="Honkai_UnitStatus/UnitStatusBarTemplate">
+        <Anchor side="Top" relative="$parent" pos="Max" offset="-17"/>
+        <Anchor side="Left" relative="$parent" pos="Min" offset="40"/>
+        <Anchor side="Right" relative="$parent" pos="Max" offset="-40"/>
+        <Height val="16"/>
+        <Texture val="@UI/HonkaiUnitStatusDefault"/>
+        <OwnerColor val="0, 255, 0"/>
+        <AllyColor val="1, 209, 255"/>
+        <EnemyColor val="255, 145, 64"/>
+        <ReductionColor val="255, 255, 255"/>
+        <ReductionShown val="true"/>
+        <IncreaseDuration val="0"/>
+        <DecreaseDuration val="1000"/>
+        <RenderPriority val="400"/>
+    </Frame>
+    <Frame type="UnitStatusBar" name="UnitStatusShieldBarTemplate" template="Honkai_UnitStatus/UnitStatusBarTemplate">
+        <Anchor side="Top" relative="$parent" pos="Max" offset="-29"/>
+        <Anchor side="Left" relative="$parent" pos="Min" offset="40"/>
+        <Anchor side="Right" relative="$parent" pos="Max" offset="-40"/>
+        <Height val="12"/>
+        <Texture val="@UI/HonkaiUnitStatusDefault"/>
+        <OwnerColor val="1, 209, 255"/>
+        <AllyColor val="1, 209, 255"/>
+        <EnemyColor val="1, 209, 255"/>
+        <ReductionShown val="false"/>
+        <RenderPriority val="400"/>
+    </Frame>
+    <Frame type="UnitStatusBar" name="UnitStatusEnergyBarTemplate" template="Honkai_UnitStatus/UnitStatusBarTemplate">
+        <Anchor side="Top" relative="$parent" pos="Max" offset="-41"/>
+        <Anchor side="Left" relative="$parent" pos="Min" offset="40"/>
+        <Anchor side="Right" relative="$parent" pos="Max" offset="-40"/>
+        <Height val="12"/>
+        <Texture val="@UI/HonkaiUnitStatusDefault"/>
+        <OwnerColor val="255, 206, 52"/>
+        <AllyColor val="255, 206, 52"/>
+        <EnemyColor val="255, 206, 52"/>
+        <ReductionShown val="false"/>
+        <RenderPriority val="400"/>
+    </Frame>
+    <Frame type="UnitStatusUnitName" name="HonkaiUnitStatusUnitName">
+        <Frame type="Label" name="Label">
+            <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+            <Anchor side="Left" relative="$parent" pos="Mid" offset="0"/>
+            <Anchor side="Bottom" relative="$parent" pos="Max" offset="0"/>
+            <Anchor side="Right" relative="$parent" pos="Mid" offset="0"/>
+            <Style val="Header18"/>
+            <RenderType val="HDR"/>
+        </Frame>
+    </Frame>
+
+    <Frame type="UnitStatusFrame" name="GeneralStatusFrameTemplate">
+        <Height val="42"/>
+        <Width val="128"/>
+        <OwnerRenderPriority val="812"/>
+        <AllyRenderPriority val="712"/>
+        <EnemyRenderPriority val="612"/>
+        <Frame type="Frame" name="AttachPointFrame">
+            <Anchor side="Top" relative="$parent" pos="Min" offset="10"/>
+            <Anchor side="Left" relative="$parent" pos="Mid" offset="64"/>
+            <Height val="0"/>
+            <Width val="0"/>
+        </Frame>
+        <Frame type="Image" name="HonkaiUnitStatusImage">
+            <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+            <Anchor side="Left" relative="$parent" pos="Mid" offset="0"/>
+            <Anchor side="Right" relative="$parent" pos="Mid" offset="0"/>
+            <Height val="42"/>
+            <Width val="128"/>
+            <Texture val="@UI/HonkaiUnitStatus"/>
+            <RenderPriority val="500"/>
+            <RenderType val="HDR"/>
+        </Frame>
+
+        <Frame type="UnitStatusUnitName" name="UnitNameLabel" template="Honkai_UnitStatus/HonkaiUnitStatusUnitName">
+            <Anchor side="Bottom" relative="$parent" pos="Min" offset="-28"/>
+            <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
+            <Anchor side="Right" relative="$parent" pos="Max" offset="0"/>
+        </Frame>
+
+        <Frame type="UnitStatusHealthBar" name="HealthBar" template="Honkai_UnitStatus/UnitStatusHealthBarTemplate"/>
+        <Frame type="UnitStatusShieldsBar" name="ShieldBar" template="Honkai_UnitStatus/UnitStatusShieldBarTemplate"/>
+        <Frame type="UnitStatusEnergyBar" name="EnergyBar" template="Honkai_UnitStatus/UnitStatusEnergyBarTemplate"/>
+    </Frame>
+</Desc>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Desc>
+    <Frame type="Portrait" name="SoAOverlayTemplate">
+        <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+        <Anchor side="Bottom" relative="$parent" pos="Max" offset="0"/>
+        <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
+        <Anchor side="Right" relative="$parent" pos="Max" offset="0"/>
+        <AcceptsMouse val="false"/>
+        <RenderType val="HDR"/>        
+        
+        <BackgroundImage val="BackgroundImage"/>
+        
+        <Frame type="Image" name="BackgroundImage">
+            <Visible val="false"/>
+            <DescFlags val="Internal"/>
+        </Frame>
+        <Animation name="Show">
+            <Event event="OnShown" action="Play"/>
+            <Event event="OnShown" action="Reset"/>
+            <Controller type="Sound" end="Stop">
+                <Key type="Sound" time="0.0" sound="@UI_SOA_calldown_on1"/>
+                <Key type="Sound" time="0.5" sound="@UI_SOA_calldown_on2"/>
+            </Controller>
+             <Controller type="Fade" end="Pause">
+                 <Key type="Curve" time="0" value="0" out="Slow"/>
+                 <Key type="Curve" time=".35" value="255" in="Slow"/>
+             </Controller>
+        </Animation>
+    </Frame>
+</Desc>

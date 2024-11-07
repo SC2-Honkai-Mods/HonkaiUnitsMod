@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CTargetSortValidator id="DeathCloudLv1">
+        <Validator value="Herrscher6thDeathCloudLv1"/>
+    </CTargetSortValidator>
+    <CTargetSortValidator id="DeathCloudLv3">
+        <Validator value="Herrscher6thDeathCloudLv3"/>
+    </CTargetSortValidator>
+    <CTargetSortValidator id="DeathCloudLv2">
+        <Validator value="Herrscher6thDeathCloudLv2"/>
+    </CTargetSortValidator>
+    <CTargetSortValidator id="Herrscher2ndUltLv1">
+        <Validator value="Herrscher2ndUltimateAutoCast2"/>
+    </CTargetSortValidator>
+    <CTargetSortValidator id="Herrscher2ndUltLv2">
+        <Validator value="Herrscher2ndUltimateAutoCast22"/>
+    </CTargetSortValidator>
+    <CTargetSortValidator id="MechineFirst">
+        <Validator value="TargetIsMachine"/>
+    </CTargetSortValidator>
+    <CTargetSortValidator id="Herrscher2ndUltLv0">
+        <Validator value="Herrscher2ndUltimateAutoCast"/>
+    </CTargetSortValidator>
+    <CTargetSortValidator id="NoGroundFriendlyWithin125">
+        <Validator value="NoGroundFriendlyWithin125"/>
+    </CTargetSortValidator>
+    <CTargetSortVitalFraction id="TSShieldsFraction2">
+        <Vital value="Shields"/>
+    </CTargetSortVitalFraction>
+    <CTargetSortValidator id="TSThreatenKianaC2">
+        <Validator value="ThreatensKianaC2"/>
+    </CTargetSortValidator>
+    <CTargetSortValidator id="TSThreatenV3">
+        <Validator value="ThreatensV3"/>
+    </CTargetSortValidator>
+    <CTargetSortValidator id="TargetNoImaginary">
+        <Validator value="TargetNoImaginary"/>
+    </CTargetSortValidator>
+</Catalog>

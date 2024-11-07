@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CDSPEcho id="Imaginary">
+        <Delay value="125.000000"/>
+    </CDSPEcho>
+    <CDSPReverb id="Imaginary2">
+        <RoomHF value="-1200.000000"/>
+        <DecayHFRatio value="0.880000"/>
+        <ReflectionsLevel value="-4000.000000"/>
+        <ReverbLevel value="2000.000000"/>
+        <Density value="80.000000"/>
+        <DecayTime value="0.400000"/>
+        <ReverbDelay value="0.800000"/>
+    </CDSPReverb>
+    <CDSPPitchShift id="TimeCrack">
+        <FFTSize value="12"/>
+        <Pitch value="0.800000"/>
+    </CDSPPitchShift>
+</Catalog>

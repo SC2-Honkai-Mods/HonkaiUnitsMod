@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CTurret id="BronyaC7Gun1">
+        <YawArc value="0"/>
+        <Fidget DelayMax="30" DelayMin="10">
+            <ChanceArray index="Anim" value="0"/>
+            <ChanceArray index="Idle" value="0"/>
+            <ChanceArray index="Turn" value="0"/>
+        </Fidget>
+    </CTurret>
+    <CTurret id="MissileTurret">
+        <YawIdleRate value="14.9414"/>
+    </CTurret>
+    <CTurret id="MissileTurret2">
+        <Idle value="Spin"/>
+        <YawArc value="360"/>
+        <YawRate value="199.8632"/>
+        <YawIdleRate value="14.9414"/>
+        <Fidget DelayMax="30" DelayMin="10"/>
+    </CTurret>
+</Catalog>

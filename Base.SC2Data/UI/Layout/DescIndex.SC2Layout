@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Desc>
+    <Include path="UI/Layout/GodKeysUI.SC2Layout"/>
+    <Include path="UI/Layout/Honkai_UnitStatus.SC2Layout"/>
+    <Include path="UI/Layout/LotV_GameUI.SC2Layout"/>
+</Desc>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Desc>    
+    <Frame type="CommandButton" name="SoACommandButtonTemplate" template="CommandButton/CommandButtonTemplate">
+        <!--Width val="76"/>
+        <Height val="76"/>
+        
+        <Frame type="Image" name="GameButtonBorderImage">
+            <LayerCount val="2"/>
+            <Texture val="Assets\Textures\ui_void_mission_soa_frame_ability_normal.dds" layer="0"/>
+            <Texture val="Assets\Textures\ui_void_mission_soa_frame_ability_pressed.dds" layer="1"/>
+        </Frame-->
+    </Frame>
+    
+
+    <Frame type="CommandPanel" name="SoACommandPanelTemplate" template="CommandPanel/CommandPanelTemplate">
+        <Width val="120"/>
+        <Height val="120"/>
+        
+        <Anchor side="Top" relative="$parent" pos="Min" offset="1"/>
+        <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
+        <HideUnusedButtons val="true"/>
+        <DisplayCancelCommandCard val="false"/>
+        <UseGridHotkeys val="false"/>
+        
+        <Animation name="FadeIn">
+            <Event event="OnShown" action="Reset"/>
+            <Event event="OnShown" action="Play"/>                
+            <Controller type="Fade" end="Pause">
+                <Key type="Curve" time="0" value="0" out="Slow"/>
+                <Key type="Curve" time="0.25" value="255" in="Slow"/>
+            </Controller>
+        </Animation>
+
+        <Frame type="CommandButton" name="CommandButton00" template="GodKeysUI/SoACommandButtonTemplate">
+            <Anchor side="Top" relative="$parent" pos="Min" offset="22"/>
+            <Anchor side="Bottom" relative="$this" pos="Min" offset="0"/>
+            <Anchor side="Left" relative="$parent" pos="Min" offset="22"/>
+            <Anchor side="Right" relative="$this" pos="Min" offset="0"/>
+            <TooltipFrame val="SoACommandTooltip"/>
+        </Frame> 
+
+        <Frame type="CommandTooltip" name="SoACommandTooltip" template="CommandButton/CommandTooltipTemplate">
+            <Anchor side="Top" relative="$parent" pos="Min" offset="98"/>
+            <Anchor side="Left" relative="$parent" pos="Mid" offset="-225"/>
+        </Frame>
+        
+        <Frame type="Label" name="RowText0">
+            <Anchor side="Top" relative="$parent/CommandButton00" pos="Min" offset="0"/>
+            <Anchor side="Bottom" relative="$parent/CommandButton00" pos="Max" offset="0"/>
+            <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
+            <Anchor side="Right" relative="$parent" pos="Max" offset="0"/>
+            <Style val="@@CommandRow"/>
+        </Frame>
+    </Frame>
+    
+    
+    <Frame type="Frame" name="SoAPanelTemplate">
+        <Width val="120"/>
+        <Height val="120"/>
+        <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+        <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
+        <Visible val="true"/>
+        
+        <Frame type="Frame" name="SoAButtonHolder">
+            <Width val="120"/>
+            <Height val="120"/>
+            <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+            <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
+        </Frame>               
+    </Frame>
+    
+</Desc>

@@ -1,0 +1,956 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CRequirement id="AvatarCanUnlockKiana">
+        <NodeArray index="Use" Link="Not2525757573CountUpgradeAvatarNoKianaCompleteOnly"/>
+        <NodeArray index="Show" Link="NoAvatarChosen"/>
+    </CRequirement>
+    <CRequirement id="AvatarCanUnlockMei">
+        <NodeArray index="Use" Link="Not2525757573CountUpgradeAvatarNoMeiCompleteOnly"/>
+        <NodeArray index="Show" Link="NoAvatarChosen"/>
+    </CRequirement>
+    <CRequirement id="AvatarCanUnlockBronya">
+        <NodeArray index="Use" Link="Not2525757573CountUpgradeAvatarNoBronyaCompleteOnly"/>
+        <NodeArray index="Show" Link="NoAvatarChosen"/>
+    </CRequirement>
+    <CRequirement id="AvatarCanUnlockSeele">
+        <NodeArray index="Use" Link="Not2525757573CountUpgradeAvatarNoSeeleCompleteOnly"/>
+        <NodeArray index="Show" Link="NoAvatarChosen"/>
+    </CRequirement>
+    <CRequirement id="BronyaC2Upgrade2NotResearched">
+        <NodeArray index="Use" Link="NotCountUpgradeBronyaC2Upgrade2CompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="BronyaC2Upgrade3NotResearched">
+        <NodeArray index="Use" Link="NotCountUpgradeBronyaC2Upgrade3CompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="BronyaC7CanConstructCannons">
+        <NodeArray index="Show" Link="NotCountBehaviorBronyaConstructCannonCompleteOnlyAtUnit"/>
+    </CRequirement>
+    <CRequirement id="BronyaRequirements">
+        <EditorCategories value="Race:Terran,TechType:Unit"/>
+        <CanBeSuppressed index="Use" value="0"/>
+        <NodeArray index="Use" Link="NECountUnitBronyaC1CompleteOnly0"/>
+    </CRequirement>
+    <CRequirement id="CanEquipB1">
+        <EditorCategories value="TechType:Unit,Race:Terran"/>
+        <NodeArray index="Show" Link="NotCountBehaviorWeaponUseB1CompleteOnlyAtUnit"/>
+    </CRequirement>
+    <CRequirement id="CanChangeCannon">
+        <EditorCategories value="TechType:Unit,Race:Terran"/>
+        <NodeArray index="Show" Link="CountBehaviorWeaponUseB1CompleteOnlyAtUnit"/>
+    </CRequirement>
+    <CRequirement id="CanEquipB22">
+        <EditorCategories value="TechType:Unit,Race:Terran"/>
+        <NodeArray index="Use" Link="CountUpgradeB22CompleteOnly709598142"/>
+        <NodeArray index="Show" Link="CountBehaviorWeaponUseB1CompleteOnlyAtUnit"/>
+    </CRequirement>
+    <CRequirement id="CanEquipB232">
+        <EditorCategories value="TechType:Unit,Race:Terran"/>
+        <NodeArray index="Use" Link="CountUpgradeB23CompleteOnly3416406502"/>
+        <NodeArray index="Show" Link="CountBehaviorWeaponUseB1CompleteOnlyAtUnit"/>
+    </CRequirement>
+    <CRequirement id="CanEquipB25">
+        <EditorCategories value="TechType:Unit,Race:Terran"/>
+        <NodeArray index="Use" Link="CountUpgradeB25CompleteOnly709598142"/>
+        <NodeArray index="Show" Link="CountBehaviorWeaponUseB1CompleteOnlyAtUnit"/>
+    </CRequirement>
+    <CRequirement id="CanEquipB26">
+        <EditorCategories value="TechType:Unit,Race:Terran"/>
+        <NodeArray index="Use" Link="CountUpgradeB26CompleteOnly3416406502"/>
+        <NodeArray index="Show" Link="CountBehaviorWeaponUseB1CompleteOnlyAtUnit"/>
+    </CRequirement>
+    <CRequirement id="CanEquipB34">
+        <EditorCategories value="TechType:Unit,Race:Terran"/>
+        <NodeArray index="Use" Link="CountUpgradeVHerrscher1stCompleteOnly2613565233"/>
+        <NodeArray index="Show" Link="CountBehaviorWeaponUseB1CompleteOnlyAtUnit"/>
+    </CRequirement>
+    <CRequirement id="CanEquipB28">
+        <EditorCategories value="TechType:Unit,Race:Terran"/>
+        <NodeArray index="Use" Link="AndCountUpgradeDivineKey9thCompleteOnly1761932935Not723435156CountBehaviorWeaponUseB28CompleteOnly3451675864"/>
+        <NodeArray index="Show" Link="CountBehaviorWeaponUseB1CompleteOnlyAtUnit"/>
+    </CRequirement>
+    <CRequirement id="CanEquipB6">
+        <EditorCategories value="TechType:Unit,Race:Terran"/>
+        <NodeArray index="Use" Link="CountUpgradeB6CompleteOnly3077553746"/>
+        <NodeArray index="Show" Link="CountBehaviorWeaponUseB1CompleteOnlyAtUnit"/>
+    </CRequirement>
+    <CRequirement id="CanEquipB7">
+        <EditorCategories value="TechType:Unit,Race:Terran"/>
+        <NodeArray index="Use" Link="CountUpgradeB7CompleteOnly3077553746"/>
+        <NodeArray index="Show" Link="CountBehaviorWeaponUseB1CompleteOnlyAtUnit"/>
+    </CRequirement>
+    <CRequirement id="CanEquipB18">
+        <EditorCategories value="TechType:Unit,Race:Terran"/>
+        <NodeArray index="Use" Link="CountUpgradeB18CompleteOnly3077553746"/>
+        <NodeArray index="Show" Link="CountBehaviorWeaponUseB1CompleteOnlyAtUnit"/>
+    </CRequirement>
+    <CRequirement id="CanEquipB15">
+        <EditorCategories value="TechType:Unit,Race:Terran"/>
+        <NodeArray index="Use" Link="CountUpgradeB15CompleteOnly709598142"/>
+        <NodeArray index="Show" Link="CountBehaviorWeaponUseB1CompleteOnlyAtUnit"/>
+    </CRequirement>
+    <CRequirement id="CanEquipB23">
+        <EditorCategories value="TechType:Unit,Race:Terran"/>
+        <NodeArray index="Use" Link="CountUpgradeB23CompleteOnly3416406502"/>
+        <NodeArray index="Show" Link="CountBehaviorWeaponUseB1CompleteOnlyAtUnit"/>
+    </CRequirement>
+    <CRequirement id="CanEquipK17">
+        <EditorCategories value="TechType:Unit,Race:Terran"/>
+        <NodeArray index="Use" Link="NotCountBehaviorWeaponUseK17CompleteOnlyAtUnit628373971"/>
+    </CRequirement>
+    <CRequirement id="CanEquipB5">
+        <EditorCategories value="TechType:Unit,Race:Terran"/>
+        <NodeArray index="Use" Link="CountUpgradeB5CompleteOnly3077553746"/>
+        <NodeArray index="Show" Link="CountBehaviorWeaponUseB1CompleteOnlyAtUnit"/>
+    </CRequirement>
+    <CRequirement id="CannonB18CanResearch">
+        <NodeArray index="Show" Link="NotCountUpgradeB18QueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="CannonB22CanResearch">
+        <NodeArray index="Show" Link="NotCountUpgradeB22QueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="CannonB23CanResearch">
+        <NodeArray index="Show" Link="NotCountUpgradeB23QueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="CannonB25CanResearch">
+        <NodeArray index="Show" Link="NotCountUpgradeB25QueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="CannonB26CanResearch">
+        <NodeArray index="Show" Link="NotCountUpgradeB26QueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="CannonB7CanResearch">
+        <NodeArray index="Show" Link="NotCountUpgradeB7QueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="CannonB15CanResearch">
+        <NodeArray index="Show" Link="NotCountUpgradeB15QueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="AdvancedMedicCanUpgrade">
+        <NodeArray index="Show" Link="NotCountUpgradeAdvancedMedicQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="CanReleaseFighters">
+        <NodeArray index="Use" Link="AndCountUpgradeFightersCompleteOnly316807905TechTreeCheatCountUnitHyperionInterceptorCompleteOnlyAtUnit3128815872"/>
+    </CRequirement>
+    <CRequirement id="HaveNukeInMHT">
+        <EditorCategories value="Race:Terran,TechType:Unit"/>
+        <CanBeSuppressed index="Use" value="0"/>
+        <NodeArray index="Use" Link="CountUnitNukeMHTCompleteOnlyAtUnit2146895046"/>
+    </CRequirement>
+    <CRequirement id="HonkaiTacticalJumpCanResearch">
+        <NodeArray index="Show" Link="NotCountUpgradeHonkaiTacticalJumpQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="HonkaiTacticalJumpResearched">
+        <NodeArray index="Use" Link="CountUpgradeHonkaiTacticalJumpCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="MHTUpgrade">
+        <NodeArray index="Show" Link="NotCountUpgradeCycloneLockOnDamageUpgradeCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="MeiC2HasUpgrade2">
+        <NodeArray index="Show" Link="NotCountUpgradeMeiC2Upgrade2CompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="MobilizeRequirement">
+        <NodeArray index="Use" Link="AndLTE57336687CountUpgradeSupplyCompleteOnly100CountUpgradeHerrscherPhaseCompleteOnly2847090691"/>
+    </CRequirement>
+    <CRequirement id="RO_042CanAttack">
+        <NodeArray index="Use" Link="NotCountBehaviorRO_042AttackCompleteOnlyAtUnit"/>
+    </CRequirement>
+    <CRequirement id="RO_040ChargeCanUpgrade">
+        <NodeArray index="Show" Link="NotCountUpgradeRO_040ChargeQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="CommanderRaynorOrbitalDropPodsUpgraded">
+        <NodeArray index="Use" Link="CountUpgradeOrbitalStrike2CompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="RO_040ChargeUpgraded">
+        <NodeArray index="Use" Link="AndCountUpgradeRO_040ChargeCompleteOnly976793473NotCountBehaviorRO_040AttackCompleteOnlyAtUnit"/>
+    </CRequirement>
+    <CRequirement id="CosmicJuggernautCanCharge">
+        <NodeArray index="Use" Link="CountBehaviorCosmicJuggernautUltimateCompleteOnlyAtUnit"/>
+    </CRequirement>
+    <CRequirement id="CosmicJuggernautCanPlaceExit">
+        <NodeArray index="Show" Link="LTCountUnitCosmicJuggernautCompleteOnly2"/>
+    </CRequirement>
+    <CRequirement id="CosmicJuggernautCanInvert">
+        <NodeArray index="Show" Link="OrCountBehaviorCosmicJuggernautEntranceCompleteOnlyAtUnitCountBehaviorCosmicJuggernautExitCompleteOnlyAtUnit"/>
+    </CRequirement>
+    <CRequirement id="DG010Req2">
+        <NodeArray index="Use" Link="LT2876236545SumCountUnitDG_010QueuedOrBetterCountUnitDG_011QueuedOrBetterCountUnitDG_012QueuedOrBetterCountUnitDG_013QueuedOrBetter25"/>
+        <NodeArray index="Show" Link="NotOrCountUpgradeDG010Upgrade4CompleteOnlyOrCountUpgradeDG010Upgrade5CompleteOnlyCountUpgradeDG010Upgrade6CompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="DG011UpgradeRequirement">
+        <NodeArray index="Show" Link="AndCountUpgradeDG010Upgrade4CompleteOnlyNotCountUpgradeDG_011UpgradeQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="DG011Req2">
+        <NodeArray index="Use" Link="LT2876236545SumCountUnitDG_010QueuedOrBetterCountUnitDG_011QueuedOrBetterCountUnitDG_012QueuedOrBetterCountUnitDG_013QueuedOrBetter25"/>
+        <NodeArray index="Show" Link="CountUpgradeDG010Upgrade4CompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="DG012Req2">
+        <NodeArray index="Use" Link="LT2876236545SumCountUnitDG_010QueuedOrBetterCountUnitDG_011QueuedOrBetterCountUnitDG_012QueuedOrBetterCountUnitDG_013QueuedOrBetter25"/>
+        <NodeArray index="Show" Link="CountUpgradeDG010Upgrade5CompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="DG013Req2">
+        <NodeArray index="Use" Link="LT2876236545SumCountUnitDG_010QueuedOrBetterCountUnitDG_011QueuedOrBetterCountUnitDG_012QueuedOrBetterCountUnitDG_013QueuedOrBetter25"/>
+        <NodeArray index="Show" Link="CountUpgradeDG010Upgrade6CompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="DG013Req">
+        <NodeArray index="Use" Link="LT2935943687SumCountUnitDG_010QueuedOrBetterCountUnitDG_011QueuedOrBetterCountUnitDG_012QueuedOrBetterCountUnitDG_013QueuedOrBetter15"/>
+        <NodeArray index="Show" Link="CountUpgradeDG010Upgrade6CompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="DG012Req">
+        <NodeArray index="Use" Link="LT2935943687SumCountUnitDG_010QueuedOrBetterCountUnitDG_011QueuedOrBetterCountUnitDG_012QueuedOrBetterCountUnitDG_013QueuedOrBetter15"/>
+        <NodeArray index="Show" Link="CountUpgradeDG010Upgrade5CompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="DG011Req">
+        <NodeArray index="Use" Link="LT2935943687SumCountUnitDG_010QueuedOrBetterCountUnitDG_011QueuedOrBetterCountUnitDG_012QueuedOrBetterCountUnitDG_013QueuedOrBetter15"/>
+        <NodeArray index="Show" Link="CountUpgradeDG010Upgrade4CompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="DG010Upgrade2Requirement">
+        <NodeArray index="Show" Link="NotCountUpgradeDG010Upgrade2QueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="DG010Upgrade4_6Requirement">
+        <NodeArray index="Show" Link="NotOrCountUpgradeDG010Upgrade4QueuedOrBetterOrCountUpgradeDG010Upgrade5QueuedOrBetterCountUpgradeDG010Upgrade6QueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="DG010Upgrade3Requirement">
+        <NodeArray index="Show" Link="NotCountUpgradeDG010Upgrade3QueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="DG010Req">
+        <NodeArray index="Use" Link="LT2935943687SumCountUnitDG_010QueuedOrBetterCountUnitDG_011QueuedOrBetterCountUnitDG_012QueuedOrBetterCountUnitDG_013QueuedOrBetter15"/>
+        <NodeArray index="Show" Link="NotOrCountUpgradeDG010Upgrade4CompleteOnlyOrCountUpgradeDG010Upgrade5CompleteOnlyCountUpgradeDG010Upgrade6CompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="DG_011Skill2Enabled">
+        <NodeArray index="Show" Link="GTCountBehaviorDG_011Skill2EnableCompleteOnlyAtUnit0"/>
+    </CRequirement>
+    <CRequirement id="FightersCanResearch">
+        <NodeArray index="Show" Link="NotCountUpgradeFightersQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="DivineKey4thCanLaunch">
+        <NodeArray index="Use" Link="CountUpgradeDivineKey4thCompleteOnly3501733459"/>
+        <NodeArray index="Show" Link="NotCountUnitDivineKey4thCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="GodKeysG2">
+        <NodeArray index="Use" Link="CountUpgradeDivineKey2ndCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="GodKeysG3">
+        <NodeArray index="Use" Link="CountUpgradeDivineKey3rdCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="GodKeysP2">
+        <NodeArray index="Use" Link="CountUpgradeHerrscher2ndDefeatedCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="GodKeysP4">
+        <NodeArray index="Use" Link="CountUpgradeHerrscher4thDefeatedCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="GodKeysP3">
+        <NodeArray index="Use" Link="CountUpgradeHerrscher3rdDefeatedCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="GodKeysVH1">
+        <NodeArray index="Use" Link="CountUpgradeVHerrscher1stCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="GodKeysP1">
+        <NodeArray index="Use" Link="CountUpgradeHerrscher1stDefeatedCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="GodKeysG1">
+        <NodeArray index="Use" Link="CountUpgradeDivineKey1stCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="HD2">
+        <NodeArray index="Use" Link="CountUpgradeHerrscher2ndDefeated2CompleteOnly3492253788"/>
+    </CRequirement>
+    <CRequirement id="HaveFighters">
+        <NodeArray index="Use" Link="CountUpgradeFightersCompleteOnly316807905TechTreeCheat"/>
+    </CRequirement>
+    <CRequirement id="HaveFusionCore">
+        <EditorCategories value="Race:Terran,TechType:Unit"/>
+        <CanBeSuppressed index="Use" value="0"/>
+        <NodeArray index="Use" Link="CountUnitFusionCoreCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="HaveNukeInUnit">
+        <EditorCategories value="Race:Terran,TechType:Unit"/>
+        <CanBeSuppressed index="Use" value="0"/>
+        <NodeArray index="Use" Link="CountUnitNukeCompleteOnlyAtUnit1398243897"/>
+    </CRequirement>
+    <CRequirement id="HaveStigmata">
+        <NodeArray index="Use" Link="CountUnitStigmata2CompleteOnlyAtUnit3115234647"/>
+    </CRequirement>
+    <CRequirement id="HerrscherCanSpawn">
+        <NodeArray index="Show" Link="LTCountUpgradeHerrscherIndexCompleteOnly6"/>
+    </CRequirement>
+    <CRequirement id="KianaArmorCanResearch">
+        <NodeArray index="Show" Link="LTCountUpgradeKianaHealthQueuedOrBetter16"/>
+    </CRequirement>
+    <CRequirement id="KianaC2Ultimate">
+        <NodeArray index="Show" Link="NotCountBehaviorKianaC2UltimateOffCompleteOnlyAtUnit"/>
+    </CRequirement>
+    <CRequirement id="KianaShieldCanResearch">
+        <NodeArray index="Show" Link="LTCountUpgradeKianaShieldQueuedOrBetter16"/>
+    </CRequirement>
+    <CRequirement id="KianaAttackCanResearch">
+        <NodeArray index="Show" Link="LTCountUpgradeKianaATTACKQueuedOrBetter16"/>
+    </CRequirement>
+    <CRequirement id="NotAllowed">
+        <NodeArray index="Use" Link="03861215421"/>
+    </CRequirement>
+    <CRequirement id="RO_040CanAttack">
+        <NodeArray index="Use" Link="NotCountBehaviorRO_040AttackCompleteOnlyAtUnit"/>
+    </CRequirement>
+    <CRequirement id="SeeleArmorCanResearch">
+        <NodeArray index="Show" Link="LTCountUpgradeSeeleHealthQueuedOrBetter16"/>
+    </CRequirement>
+    <CRequirement id="SeeleShieldCanResearch">
+        <NodeArray index="Show" Link="LTCountUpgradeSeeleShieldQueuedOrBetter16"/>
+    </CRequirement>
+    <CRequirement id="SeeleAttackCanResearch">
+        <NodeArray index="Show" Link="LTCountUpgradeSeeleATTACKQueuedOrBetter16"/>
+    </CRequirement>
+    <CRequirement id="SeeleC1CanTrain">
+        <NodeArray index="Use" Link="CountUpgradeSeeleC1UnlockCompleteOnly"/>
+        <NodeArray index="Show" Link="Not2541659352SumCountUnitSeeleC1QueuedOrBetterCountUnitSeeleC1Revivable"/>
+    </CRequirement>
+    <CRequirement id="SeeleC1CanUnlock">
+        <NodeArray index="Show" Link="NotCountUpgradeSeeleC1UnlockQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="KianaC2Upgrade3Researched">
+        <NodeArray index="Show" Link="NotCountUpgradeKianaC2Upgrade3QueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="KianaC2Upgrade4Requirement">
+        <NodeArray index="Use" Link="NotCountUpgradeKianaC2Upgrade4InProgressOnly"/>
+        <NodeArray index="Show" Link="LTCountUpgradeKianaC2Upgrade4QueuedOrBetter5"/>
+    </CRequirement>
+    <CRequirement id="MedivacAutoLoadResearched">
+        <NodeArray index="Use" Link="CountUpgradeMedicAutoLoadCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="MedivacAutoLoadCanResearch">
+        <NodeArray index="Show" Link="NotCountUpgradeMedicAutoLoadQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="FrozenDurationCanUpgrade">
+        <NodeArray index="Use" Link="LT455390697SumCountUpgradeFrozenDurationQueuedOnlyCountUpgradeFrozenDurationInProgressOnly1"/>
+        <NodeArray index="Show" Link="LTCountUpgradeFrozenDurationQueuedOrBetter4"/>
+    </CRequirement>
+    <CRequirement id="NoGodKeys">
+        <NodeArray index="Use" Link="Not2595134477CountUnitDivineKeysQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="BurnDamageCanUpgrade">
+        <NodeArray index="Use" Link="LT455390697SumCountUpgradeBurnDamageQueuedOnlyCountUpgradeBurnDamageInProgressOnly1"/>
+        <NodeArray index="Show" Link="LTCountUpgradeBurnDamageQueuedOrBetter4"/>
+    </CRequirement>
+    <CRequirement id="ReduceThunder3">
+        <NodeArray index="Use" Link="GTE2706314631CountUpgradeReduceThunderCompleteOnly3"/>
+    </CRequirement>
+    <CRequirement id="ReduceIce3">
+        <NodeArray index="Use" Link="GTE3302361250CountUpgradeReduceIceCompleteOnly3"/>
+    </CRequirement>
+    <CRequirement id="ReduceFire3">
+        <NodeArray index="Use" Link="GTE1425793793CountUpgradeReduceFireCompleteOnly3"/>
+    </CRequirement>
+    <CRequirement id="RequireFurnace">
+        <NodeArray index="Show" Link="OrCountBehaviorFurnaceFactoryCompleteOnlyAtUnit2833092702CountBehaviorFurnaceFactory2CompleteOnlyAtUnit1232702942"/>
+    </CRequirement>
+    <CRequirement id="RequireLightningRod">
+        <NodeArray index="Show" Link="OrCountBehaviorLightningRodFactoryCompleteOnlyAtUnit1653467348CountBehaviorLightningRodFactory2CompleteOnlyAtUnit1236727148"/>
+    </CRequirement>
+    <CRequirement id="RequireLightningRod2">
+        <NodeArray index="Show" Link="CountBehaviorLightningRodFactory2CompleteOnlyAtUnit"/>
+    </CRequirement>
+    <CRequirement id="RequireIceTablet">
+        <NodeArray index="Show" Link="OrCountBehaviorIceTabletFactoryCompleteOnlyAtUnit2833092702CountBehaviorIceTabletFactory2CompleteOnlyAtUnit1232702942"/>
+    </CRequirement>
+    <CRequirement id="RequireIceTablet2">
+        <NodeArray index="Show" Link="CountBehaviorIceTabletFactory2CompleteOnlyAtUnit"/>
+    </CRequirement>
+    <CRequirement id="RequireAnyTechAddon">
+        <NodeArray index="Use" Link="Sum2900348999CountBehaviorLightningRodFactoryCompleteOnlyAtUnit1653467348CountBehaviorLightningRodFactory2CompleteOnlyAtUnit1236727148CountBehaviorIceTabletFactoryCompleteOnlyAtUnitCountBehaviorIceTab4120943232"/>
+    </CRequirement>
+    <CRequirement id="RequireFurnace2">
+        <NodeArray index="Show" Link="CountBehaviorFurnaceFactory2CompleteOnlyAtUnit"/>
+    </CRequirement>
+    <CRequirement id="SeeleC1Charge">
+        <NodeArray index="Use" Link="GTE1530294542CountBehaviorSeeleC1UICompleteOnlyAtUnit250"/>
+        <NodeArray index="Show" Link="NotCountBehaviorSeeleC1UltimateCompleteOnlyAtUnit"/>
+    </CRequirement>
+    <CRequirement id="SeeleC1HasUpgrade2">
+        <NodeArray index="Show" Link="CountUpgradeSeeleC1Upgrade2CompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="SeeleC1Ultimate">
+        <NodeArray index="Show" Link="CountBehaviorSeeleC1UltimateCompleteOnlyAtUnit"/>
+    </CRequirement>
+    <CRequirement id="SevenThundersOfRetributionEquipped">
+        <NodeArray index="Show" Link="CountBehaviorSevenThundersOfRetributionCompleteOnlyAtUnit"/>
+    </CRequirement>
+    <CRequirement id="NoSevenThundersOfRetribution">
+        <NodeArray index="Use" Link="CountUpgradeDivineKey3rdCompleteOnly3918714543"/>
+        <NodeArray index="Show" Link="NotCountBehaviorSevenThundersOfRetributionCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="SiegeTankUpgeadeCanResearch">
+        <NodeArray index="Show" Link="NotCountUpgradeSiegeTankUpgradeQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="SiegeTankUpgeadeNotResearched">
+        <NodeArray index="Show" Link="NotCountUpgradeSiegeTankUpgradeCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="SnipeResearched">
+        <NodeArray index="Use" Link="CountUpgradeValkyrjaSnipeCompleteOnly3072367877"/>
+        <NodeArray index="Show" Link="NotCountBehaviorSevenThundersOfRetributionCompleteOnlyAtUnit"/>
+    </CRequirement>
+    <CRequirement id="SnipeCanResearch">
+        <NodeArray index="Show" Link="NotCountUpgradeValkyrjaSnipeQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="StarOfEdenWorldAutoEquip">
+        <NodeArray index="Use" Link="AndCountUpgradeDivineKey9thCompleteOnly2608092753Not4263432363CountBehaviorWeaponUseB28CompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="StigmataCountCanResearch">
+        <NodeArray index="Show" Link="LTCountUpgradeStigmataCountQueuedOrBetter3"/>
+    </CRequirement>
+    <CRequirement id="StigmataTG1CanEquip">
+        <NodeArray index="Use" Link="StigmataTG1CanEquip"/>
+        <NodeArray index="Show" Link="CountUpgradeStigmataTG1CompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="StigmataTG2CanEquip">
+        <NodeArray index="Use" Link="StigmataValidCount"/>
+        <NodeArray index="Show" Link="CountUpgradeStigmataTG2CompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="StigmataTG3CanEquip">
+        <NodeArray index="Use" Link="StigmataValidCount"/>
+        <NodeArray index="Show" Link="CountUpgradeStigmataTG3CompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="StigmataTG4CanEquip">
+        <NodeArray index="Use" Link="AndNotCountBehaviorStigmataTG4CompleteOnlyAtUnit3631109650LT245368620SumCountBehaviorStigmataTG1CompleteOnlyAtUnitCountBehaviorStigmataTG2CompleteOnlyAtUnitCountBehaviorStigmataTG3CompleteOnlyAtUnitCo2898067446"/>
+        <NodeArray index="Show" Link="CountUpgradeStigmataTG4CompleteOnly3072367877"/>
+    </CRequirement>
+    <CRequirement id="StigmataFG1CanEquip">
+        <NodeArray index="Use" Link="StigmataTG1CanEquip"/>
+        <NodeArray index="Show" Link="CountUpgradeStigmataFG1CompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="StigmataFG2CanEquip">
+        <NodeArray index="Use" Link="StigmataValidCount"/>
+        <NodeArray index="Show" Link="CountUpgradeStigmataFG2CompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="StigmataFG3CanEquip">
+        <NodeArray index="Use" Link="StigmataValidCount"/>
+        <NodeArray index="Show" Link="CountUpgradeStigmataFG3CompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="StigmataFG4CanEquip">
+        <NodeArray index="Use" Link="AndNotCountBehaviorStigmataFG4CompleteOnlyAtUnit3631109650LT245368620SumCountBehaviorStigmataTG1CompleteOnlyAtUnitCountBehaviorStigmataTG2CompleteOnlyAtUnitCountBehaviorStigmataTG3CompleteOnlyAtUnitCo2321301234"/>
+        <NodeArray index="Show" Link="CountUpgradeStigmataFG4CompleteOnly3072367877"/>
+    </CRequirement>
+    <CRequirement id="StigmataIG1CanEquip">
+        <NodeArray index="Use" Link="StigmataTG1CanEquip"/>
+        <NodeArray index="Show" Link="CountUpgradeStigmataIG1CompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="StigmataIG2CanEquip">
+        <NodeArray index="Use" Link="StigmataValidCount"/>
+        <NodeArray index="Show" Link="CountUpgradeStigmataIG2CompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="StigmataIG3CanEquip">
+        <NodeArray index="Use" Link="StigmataValidCount"/>
+        <NodeArray index="Show" Link="CountUpgradeStigmataIG3CompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="StigmataIG4CanEquip">
+        <NodeArray index="Use" Link="AndNotCountBehaviorStigmataIG4CompleteOnlyAtUnit3631109650LTSumCountBehaviorStigmataTG1CompleteOnlyAtUnitCountBehaviorStigmataTG2CompleteOnlyAtUnitCountBehaviorStigmataTG3CompleteOnlyAtUnitCountBehavi2541551356"/>
+        <NodeArray index="Show" Link="CountUpgradeStigmataIG4CompleteOnly3072367877"/>
+    </CRequirement>
+    <CRequirement id="StigmataPG1CanEquip">
+        <NodeArray index="Use" Link="StigmataValidCount"/>
+        <NodeArray index="Show" Link="CountUpgradeStigmataPG1CompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="StigmataPG2CanEquip">
+        <NodeArray index="Use" Link="StigmataValidCount"/>
+        <NodeArray index="Show" Link="CountUpgradeStigmataPG2CompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="StigmataPG3CanEquip">
+        <NodeArray index="Use" Link="StigmataValidCount"/>
+        <NodeArray index="Show" Link="CountUpgradeStigmataPG3CompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="StigmataPG4CanEquip">
+        <NodeArray index="Use" Link="AndNot3631109650CountBehaviorStigmataPG4CompleteOnlyAtUnitLT245368620SumCountBehaviorStigmataTG1CompleteOnlyAtUnitCountBehaviorStigmataTG2CompleteOnlyAtUnitCountBehaviorStigmataTG3CompleteOnlyAtUnitCo1434883980"/>
+        <NodeArray index="Show" Link="CountUpgradeStigmataPG4CompleteOnly3072367877"/>
+    </CRequirement>
+    <CRequirement id="StigmataPG5CanEquip">
+        <NodeArray index="Use" Link="AndNot3631109650CountBehaviorStigmataPG5CompleteOnlyAtUnitLT245368620SumCountBehaviorStigmataTG1CompleteOnlyAtUnitCountBehaviorStigmataTG2CompleteOnlyAtUnitCountBehaviorStigmataTG3CompleteOnlyAtUnitCo1927199295"/>
+        <NodeArray index="Show" Link="CountUpgradeStigmataPG5CompleteOnly3072367877"/>
+    </CRequirement>
+    <CRequirement id="StigmataSG1CanEquip">
+        <NodeArray index="Use" Link="StigmataValidCount"/>
+        <NodeArray index="Show" Link="CountUpgradeStigmataSG1CompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="StigmataSG2CanEquip">
+        <NodeArray index="Use" Link="StigmataValidCount"/>
+        <NodeArray index="Show" Link="CountUpgradeStigmataSG2CompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="StigmataSG3CanEquip">
+        <NodeArray index="Use" Link="StigmataValidCount"/>
+        <NodeArray index="Show" Link="CountUpgradeStigmataSG3CompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="StigmataSG4CanEquip">
+        <NodeArray index="Use" Link="StigmataValidCount"/>
+        <NodeArray index="Show" Link="CountUpgradeStigmataSG4CompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="StigmataSG5CanEquip">
+        <NodeArray index="Use" Link="StigmataValidCount"/>
+        <NodeArray index="Show" Link="CountUpgradeStigmataSG5CompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="StigmataCG1CanEquip">
+        <NodeArray index="Use" Link="StigmataValidCount"/>
+        <NodeArray index="Show" Link="CountUpgradeStigmataCG1CompleteOnly3072367877"/>
+    </CRequirement>
+    <CRequirement id="StigmataCG2CanEquip">
+        <NodeArray index="Use" Link="StigmataValidCount"/>
+        <NodeArray index="Show" Link="CountUpgradeStigmataCG2CompleteOnly3072367877"/>
+    </CRequirement>
+    <CRequirement id="StigmataCG3CanEquip">
+        <NodeArray index="Use" Link="StigmataValidCount"/>
+        <NodeArray index="Show" Link="CountUpgradeStigmataCG3CompleteOnly3072367877"/>
+    </CRequirement>
+    <CRequirement id="StigmataCG4CanEquip">
+        <NodeArray index="Use" Link="StigmataValidCount"/>
+        <NodeArray index="Show" Link="CountUpgradeStigmataCG4CompleteOnly3072367877"/>
+    </CRequirement>
+    <CRequirement id="StigmataCG5CanEquip">
+        <NodeArray index="Use" Link="AndNot3631109650CountBehaviorStigmataCG5CompleteOnlyAtUnit3072367877LTSumCountBehaviorStigmataTG1CompleteOnlyAtUnitCountBehaviorStigmataTG2CompleteOnlyAtUnitCountBehaviorStigmataTG3CompleteOnlyAtUnitC1243973384"/>
+        <NodeArray index="Show" Link="CountUpgradeStigmataCG5CompleteOnly3072367877"/>
+    </CRequirement>
+    <CRequirement id="StigmataCG6CanEquip">
+        <NodeArray index="Use" Link="StigmataValidCount"/>
+        <NodeArray index="Show" Link="CountUpgradeStigmataCG6CompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="StigmataTG1CanResearch">
+        <NodeArray index="Show" Link="NotCountUpgradeStigmataTG1QueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="StigmataTG2CanResearch">
+        <NodeArray index="Show" Link="NotCountUpgradeStigmataTG2QueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="StigmataTG3CanResearch">
+        <NodeArray index="Show" Link="NotCountUpgradeStigmataTG3QueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="StigmataTG4CanResearch">
+        <NodeArray index="Show" Link="NotCountUpgradeStigmataTG4QueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="StigmataFG1CanResearch">
+        <NodeArray index="Show" Link="NotCountUpgradeStigmataFG1QueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="StigmataFG2CanResearch">
+        <NodeArray index="Show" Link="NotCountUpgradeStigmataFG2QueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="StigmataFG3CanResearch">
+        <NodeArray index="Show" Link="NotCountUpgradeStigmataFG3QueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="StigmataFG4CanResearch">
+        <NodeArray index="Show" Link="NotCountUpgradeStigmataFG4QueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="StigmataIG1CanResearch">
+        <NodeArray index="Show" Link="NotCountUpgradeStigmataIG1QueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="StigmataIG2CanResearch">
+        <NodeArray index="Show" Link="NotCountUpgradeStigmataIG2QueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="StigmataIG3CanResearch">
+        <NodeArray index="Show" Link="NotCountUpgradeStigmataIG3QueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="StigmataIG4CanResearch">
+        <NodeArray index="Show" Link="NotCountUpgradeStigmataIG4QueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="StigmataPG1CanResearch">
+        <NodeArray index="Show" Link="NotCountUpgradeStigmataPG1QueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="StigmataPG2CanResearch">
+        <NodeArray index="Show" Link="NotCountUpgradeStigmataPG2QueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="StigmataPG3CanResearch">
+        <NodeArray index="Show" Link="NotCountUpgradeStigmataPG3QueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="StigmataPG4CanResearch">
+        <NodeArray index="Show" Link="NotCountUpgradeStigmataPG4QueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="StigmataPG5CanResearch">
+        <NodeArray index="Show" Link="NotCountUpgradeStigmataPG5QueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="StigmataCG1CanResearch">
+        <NodeArray index="Show" Link="NotCountUpgradeStigmataCG1QueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="StigmataCG2CanResearch">
+        <NodeArray index="Show" Link="NotCountUpgradeStigmataCG2QueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="StigmataCG3CanResearch">
+        <NodeArray index="Show" Link="NotCountUpgradeStigmataCG3QueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="StigmataCG4CanResearch">
+        <NodeArray index="Show" Link="NotCountUpgradeStigmataCG4QueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="StigmataCG5CanResearch">
+        <NodeArray index="Show" Link="NotCountUpgradeStigmataCG5QueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="StigmataCG6CanResearch">
+        <NodeArray index="Show" Link="NotCountUpgradeStigmataCG6QueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="StigmataSG1CanResearch">
+        <NodeArray index="Show" Link="NotCountUpgradeStigmataSG1QueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="StigmataSG2CanResearch">
+        <NodeArray index="Show" Link="NotCountUpgradeStigmataSG2QueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="StigmataSG3CanResearch">
+        <NodeArray index="Show" Link="NotCountUpgradeStigmataSG3QueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="StigmataSG4CanResearch">
+        <NodeArray index="Show" Link="NotCountUpgradeStigmataSG4QueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="StigmataSG5CanResearch">
+        <NodeArray index="Show" Link="NotCountUpgradeStigmataSG5QueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="ThunderReduceCanUpgrade">
+        <NodeArray index="Use" Link="LT455390697SumCountUpgradeReduceThunderQueuedOnlyCountUpgradeReduceThunderInProgressOnly1"/>
+        <NodeArray index="Show" Link="LTCountUpgradeReduceThunderQueuedOrBetter10"/>
+    </CRequirement>
+    <CRequirement id="SCVGatherCanUpgrade">
+        <NodeArray index="Use" Link="LTSumCountUpgradeMicroFilteringQueuedOnlyCountUpgradeMicroFilteringInProgressOnly1"/>
+        <NodeArray index="Show" Link="LTCountUpgradeMicroFilteringQueuedOrBetter6"/>
+    </CRequirement>
+    <CRequirement id="HumanArmorCanUpgrade2">
+        <NodeArray index="Use" Link="LTSumCountUpgradeVArmorUpgrade2QueuedOnlyCountUpgradeVArmorUpgrade2InProgressOnly1"/>
+        <NodeArray index="Show" Link="LTCountUpgradeVArmorUpgrade2QueuedOrBetter5"/>
+    </CRequirement>
+    <CRequirement id="HumanArmorCanUpgrade22">
+        <NodeArray index="Use" Link="LTSumCountUpgradeVAttackUpgrade2QueuedOnlyCountUpgradeVAttackUpgrade2InProgressOnly1"/>
+        <NodeArray index="Show" Link="LTCountUpgradeVAttackUpgrade2QueuedOrBetter8"/>
+    </CRequirement>
+    <CRequirement id="CommanderRaynorOrbitalDropPodsCanUpgrade">
+        <NodeArray index="Show" Link="NotCountUpgradeOrbitalStrike2QueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="SuperCCanResearch">
+        <NodeArray index="Show" Link="NotCountUpgradeUltraCapacitorsQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="ROArmorCanUpgrade">
+        <NodeArray index="Use" Link="LTSumCountUpgradeROArmorUpgradeQueuedOnlyCountUpgradeROArmorUpgradeInProgressOnly1"/>
+        <NodeArray index="Show" Link="LTCountUpgradeROArmorUpgradeQueuedOrBetter8"/>
+    </CRequirement>
+    <CRequirement id="ROAttackCanUpgrade">
+        <NodeArray index="Use" Link="LTSumCountUpgradeROAttackUpgradeQueuedOnlyCountUpgradeROAttackUpgradeInProgressOnly1"/>
+        <NodeArray index="Show" Link="LTCountUpgradeROAttackUpgradeQueuedOrBetter10"/>
+    </CRequirement>
+    <CRequirement id="FireSuppressionSystemsCanResearch">
+        <NodeArray index="Show" Link="NotCountUpgradeFireSuppressionSystemsQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="Herrscher2CanCloseRemoveMissile">
+        <NodeArray index="Show" Link="CountBehaviorHerrscher2AbsorbMissileCompleteOnlyAtUnit"/>
+    </CRequirement>
+    <CRequirement id="Herrscher2CanCloseReboundMissile">
+        <NodeArray index="Show" Link="CountBehaviorHerrscher2ReboundMissileCompleteOnlyAtUnit"/>
+    </CRequirement>
+    <CRequirement id="HumanArmorCanUpgrade">
+        <NodeArray index="Use" Link="LTSumCountUpgradeVArmorUpgradeQueuedOnlyCountUpgradeVArmorUpgradeInProgressOnly1"/>
+        <NodeArray index="Show" Link="LTCountUpgradeVArmorUpgradeQueuedOrBetter8"/>
+    </CRequirement>
+    <CRequirement id="KianaC2CanMorph">
+        <NodeArray index="Use" Link="AndCountUpgradeKianaC2UnlockCompleteOnly2420890365"/>
+    </CRequirement>
+    <CRequirement id="KianaC4CanTrain">
+        <NodeArray index="Use" Link="CountUpgradeKianaC4UnlockCompleteOnly"/>
+        <NodeArray index="Show" Link="Not1982903751SumCountUnitKianaC2QueuedOrBetterCountUnitKianaC2RevivableCountUnitKianaC4QueuedOrBetterCountUnitKianaC4Revivable"/>
+    </CRequirement>
+    <CRequirement id="KianaC4CanMorph">
+        <NodeArray index="Use" Link="AndCountUpgradeKianaC4UnlockCompleteOnly2420890365"/>
+    </CRequirement>
+    <CRequirement id="KianaC4CanUnlock">
+        <NodeArray index="Show" Link="NotCountUpgradeKianaC4UnlockQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="KianaC2CanTrain">
+        <NodeArray index="Use" Link="CountUpgradeKianaC2UnlockCompleteOnly"/>
+        <NodeArray index="Show" Link="Not1982903751SumCountUnitKianaC2QueuedOrBetterCountUnitKianaC2RevivableCountUnitKianaC4QueuedOrBetterCountUnitKianaC4Revivable"/>
+    </CRequirement>
+    <CRequirement id="KianaC2CanUnlock">
+        <NodeArray index="Show" Link="NotCountUpgradeKianaC2UnlockQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="KianaC4CanSwitchOff">
+        <NodeArray index="Use" Link="CountUpgradeKianaC4Upgrade2CompleteOnly"/>
+        <NodeArray index="Show" Link="CountBehaviorKianaC4Behavior2CompleteOnlyAtUnit"/>
+    </CRequirement>
+    <CRequirement id="KianaC4Upgrade1Requirement">
+        <NodeArray index="Show" Link="LTCountUpgradeKianaC4Upgrade1QueuedOrBetter3"/>
+    </CRequirement>
+    <CRequirement id="KianaC4Upgrade2Requirement">
+        <NodeArray index="Show" Link="NotCountUpgradeKianaC4Upgrade2QueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="KianaC4CanSwitchOn">
+        <NodeArray index="Use" Link="CountUpgradeKianaC4Upgrade2CompleteOnly"/>
+        <NodeArray index="Show" Link="NotCountBehaviorKianaC4Behavior2CompleteOnlyAtUnit"/>
+    </CRequirement>
+    <CRequirement id="KianaC4Upgrade3Requirement">
+        <NodeArray index="Show" Link="NotCountUpgradeKianaC4Upgrade3QueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="KianaC4HasUpgrade3Requirement">
+        <NodeArray index="Show" Link="CountUpgradeKianaC4Upgrade3CompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="KianaC4Upgrade4Requirement">
+        <NodeArray index="Show" Link="NotCountUpgradeKianaC4Upgrade4QueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="KianaC4Upgrade4Researched">
+        <NodeArray index="Use" Link="CountUpgradeKianaC4Upgrade4CompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="KianaCanChangeAvatar">
+        <NodeArray index="Use" Link="CountBehaviorKianaLookForBuildingCompleteOnlyAtUnit979450497"/>
+    </CRequirement>
+    <CRequirement id="LearnTerranBuildingArmor">
+        <NodeArray index="Use" Link="LTSumCountUpgradeTerranBuildingArmorQueuedOnlyCountUpgradeTerranBuildingArmorInProgressOnly1"/>
+        <NodeArray index="Show" Link="LTCountUpgradeTerranBuildingArmorQueuedOrBetter4"/>
+    </CRequirement>
+    <CRequirement id="RO_010Abli1">
+        <NodeArray index="Show" Link="CountBehaviorRO_010Abli1BrhaviorTagCompleteOnlyAtUnit"/>
+    </CRequirement>
+    <CRequirement id="RO_010Abli12">
+        <NodeArray index="Show" Link="CountBehaviorRO_010Abli1BrhaviorTag2CompleteOnlyAtUnit"/>
+    </CRequirement>
+    <CRequirement id="IceReduceCanUpgrade">
+        <NodeArray index="Use" Link="LT455390697SumCountUpgradeReduceIceQueuedOnlyCountUpgradeReduceIceInProgressOnly1"/>
+        <NodeArray index="Show" Link="LTCountUpgradeReduceIceQueuedOrBetter10"/>
+    </CRequirement>
+    <CRequirement id="FireReduceCanUpgrade2">
+        <NodeArray index="Use" Link="LT455390697SumCountUpgradeReduceFireQueuedOnlyCountUpgradeReduceFireInProgressOnly1"/>
+        <NodeArray index="Show" Link="LTCountUpgradeReduceFireQueuedOrBetter10"/>
+    </CRequirement>
+    <CRequirement id="PalsyDurationCanUpgrade">
+        <NodeArray index="Use" Link="LT455390697SumCountUpgradePalsyDurationQueuedOnlyCountUpgradePalsyDurationInProgressOnly1"/>
+        <NodeArray index="Show" Link="LTCountUpgradePalsyDurationQueuedOrBetter4"/>
+    </CRequirement>
+    <CRequirement id="TrainNuke">
+        <NodeArray index="Use" Link="AndOr152037771CountUnitFusionCoreCompleteOnlyTechTreeCheatNot3457755508CountUnitNukeQueuedOrBetterAtUnit"/>
+    </CRequirement>
+    <CRequirement id="TrainNukeMHT">
+        <EditorCategories value="Race:Terran,TechType:Ability"/>
+        <NodeArray index="Use" Link="AndOr152037771CountUnitFusionCoreCompleteOnlyTechTreeCheatNot1513537511CountUnitNukeMHTQueuedOrBetterAtUnit"/>
+    </CRequirement>
+    <CRequirement id="UlArmorCanUpgrade">
+        <NodeArray index="Use" Link="LTSumCountUpgradeUlArmorUpgradeQueuedOnlyCountUpgradeUlArmorUpgradeInProgressOnly1"/>
+        <NodeArray index="Show" Link="LTCountUpgradeUlArmorUpgradeQueuedOrBetter6"/>
+    </CRequirement>
+    <CRequirement id="DeadgalAttackCanUpgrade">
+        <NodeArray index="Use" Link="LTSumCountUpgradeDeadgalAttackUpgradeQueuedOnlyCountUpgradeDeadgalAttackUpgradeInProgressOnly1"/>
+        <NodeArray index="Show" Link="LTCountUpgradeDeadgalAttackUpgradeQueuedOrBetter10"/>
+    </CRequirement>
+    <CRequirement id="DeadgalArmorCanUpgrade">
+        <NodeArray index="Use" Link="LTSumCountUpgradeDeadgalArmorUpgradeQueuedOnlyCountUpgradeDeadgalArmorUpgradeInProgressOnly1"/>
+        <NodeArray index="Show" Link="LTCountUpgradeDeadgalArmorUpgradeQueuedOrBetter6"/>
+    </CRequirement>
+    <CRequirement id="UllAttackCanUpgrade">
+        <NodeArray index="Use" Link="LTSumCountUpgradeUlAttackUpgradeQueuedOnlyCountUpgradeUlAttackUpgradeInProgressOnly1"/>
+        <NodeArray index="Show" Link="LTCountUpgradeUlAttackUpgradeQueuedOrBetter10"/>
+    </CRequirement>
+    <CRequirement id="HaveHighTower">
+        <EditorCategories value="Race:Terran,TechType:Unit"/>
+        <CanBeSuppressed index="Use" value="0"/>
+        <NodeArray index="Use" Link="CountUnitHighTowerCompleteOnlyTechTreeCheat"/>
+    </CRequirement>
+    <CRequirement id="KianaC2CanBranch">
+        <NodeArray index="Use" Link="AndOrCountBehaviorKianaC2Attack2CompleteOnlyAtUnit3179731307NotCountBehaviorKianaC2BranchReadyCompleteOnlyAtUnit"/>
+    </CRequirement>
+    <CRequirement id="UnitMoving">
+        <EditorCategories value="Race:Terran"/>
+        <NodeArray index="Use" Link="NotCountBehaviorEvadeCoolDownCompleteOnlyAtUnit"/>
+        <NodeArray index="Show" Link="CountBehaviorUnitMovingCompleteOnlyAtUnit"/>
+    </CRequirement>
+    <CRequirement id="KianaC2Requirements">
+        <EditorCategories value="Race:Terran,TechType:Unit"/>
+        <NodeArray index="Use" Link="Eq1641998733CountUnitKianaC2QueuedOrBetter0"/>
+    </CRequirement>
+    <CRequirement id="KianaC2Upgrade1Requirement">
+        <NodeArray index="Show" Link="NotCountUpgradeKianaC2UpgradeQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="KianaC2Upgrade3Requirement">
+        <NodeArray index="Show" Link="NotCountUpgradeKianaC2Upgrade3QueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="KianaC2Upgrade2Requirement">
+        <NodeArray index="Show" Link="NotCountUpgradeKianaC2Upgrade2QueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="DG010Upgrade1Requirement">
+        <NodeArray index="Show" Link="NotCountUpgradeDG010Upgrade1QueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="KianaC4BranchCanCancel">
+        <NodeArray index="Show" Link="GTCountBehaviorKianaC4BranchCompleteOnlyAtUnit0"/>
+    </CRequirement>
+    <CRequirement id="UnfireState">
+        <NodeArray index="Use" Link="CountBehaviorUnfireCompleteOnlyAtUnit4239173858"/>
+    </CRequirement>
+    <CRequirement id="UnlockedAvatarKiana">
+        <NodeArray index="Show" Link="CountUpgradeAvatarKianaCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="UnlockedAvatarMei">
+        <NodeArray index="Show" Link="CountUpgradeAvatarMeiCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="UnlockedAvatarBronya">
+        <NodeArray index="Show" Link="CountUpgradeAvatarBronyaCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="UnlockedAvatarSeele">
+        <NodeArray index="Show" Link="CountUpgradeAvatarSeeleCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="UsingK23">
+        <EditorCategories value="TechType:Unit,Race:Terran"/>
+        <NodeArray index="Show" Link="CountBehaviorWeaponUseK23CompleteOnlyAtUnit"/>
+    </CRequirement>
+    <CRequirement id="UsingK5">
+        <EditorCategories value="TechType:Unit,Race:Terran"/>
+        <NodeArray index="Show" Link="CountBehaviorWeaponUseK5CompleteOnlyAtUnit"/>
+    </CRequirement>
+    <CRequirement id="CanEquipK23">
+        <EditorCategories value="TechType:Unit,Race:Terran"/>
+        <NodeArray index="Use" Link="NotCountBehaviorWeaponUseK23CompleteOnlyAtUnit3368134584"/>
+    </CRequirement>
+    <CRequirement id="CanEquipK5">
+        <EditorCategories value="TechType:Unit,Race:Terran"/>
+        <NodeArray index="Use" Link="NotCountBehaviorWeaponUseK5CompleteOnlyAtUnit3301302742"/>
+    </CRequirement>
+    <CRequirement id="UsingK17">
+        <EditorCategories value="TechType:Unit,Race:Terran"/>
+        <NodeArray index="Show" Link="CountBehaviorWeaponUseK17CompleteOnlyAtUnit"/>
+    </CRequirement>
+    <CRequirement id="CannonB5CanResearch">
+        <NodeArray index="Show" Link="NotCountUpgradeB5QueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="CannonB6CanResearch">
+        <NodeArray index="Show" Link="NotCountUpgradeB6QueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="ValkyrjaShieldCR">
+        <EditorCategories value="Race:Terran"/>
+        <NodeArray index="Show" Link="NotCountUpgradeValkyrjaShieldQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="ValkyrjaDefenceCR">
+        <EditorCategories value="Race:Terran"/>
+        <NodeArray index="Show" Link="NotCountUpgradeValkyrjaDefenceQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="DivineKey1stCanResearch">
+        <NodeArray index="Use" Link="LTE960270413TechTreeCheatSumCountUpgradeDivineKey1stQueuedOrBetterCountUpgradeDivineKey2ndQueuedOrBetterCountUpgradeDivineKey3rdQueuedOrBetterCountUpgradeDivineKey4thQueuedOrBetterCountUpgradeDivineKe1236579968"/>
+        <NodeArray index="Show" Link="NotCountUpgradeDivineKey1stQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="DivineKey2ndCanResearch">
+        <NodeArray index="Use" Link="LTE960270413TechTreeCheatSumCountUpgradeDivineKey1stQueuedOrBetterCountUpgradeDivineKey2ndQueuedOrBetterCountUpgradeDivineKey3rdQueuedOrBetterCountUpgradeDivineKey4thQueuedOrBetterCountUpgradeDivineKe1236579968"/>
+        <NodeArray index="Show" Link="NotCountUpgradeDivineKey2ndQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="DivineKey3rdCanResearch">
+        <NodeArray index="Use" Link="LTE960270413TechTreeCheatSumCountUpgradeDivineKey1stQueuedOrBetterCountUpgradeDivineKey2ndQueuedOrBetterCountUpgradeDivineKey3rdQueuedOrBetterCountUpgradeDivineKey4thQueuedOrBetterCountUpgradeDivineKe1236579968"/>
+        <NodeArray index="Show" Link="NotCountUpgradeDivineKey3rdQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="DivineKey4thCanResearch">
+        <NodeArray index="Use" Link="LTE960270413TechTreeCheatSumCountUpgradeDivineKey1stQueuedOrBetterCountUpgradeDivineKey2ndQueuedOrBetterCountUpgradeDivineKey3rdQueuedOrBetterCountUpgradeDivineKey4thQueuedOrBetterCountUpgradeDivineKe1236579968"/>
+        <NodeArray index="Show" Link="NotCountUpgradeDivineKey4thQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="DivineKey5thCanResearch">
+        <NodeArray index="Use" Link="NotFinished"/>
+        <NodeArray index="Show" Link="NotCountUpgradeDivineKey5thQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="DivineKey6thCanResearch">
+        <NodeArray index="Use" Link="NotFinished"/>
+        <NodeArray index="Show" Link="NotCountUpgradeDivineKey6thQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="DivineKey7thCanResearch">
+        <NodeArray index="Use" Link="LTE960270413TechTreeCheatSumCountUpgradeDivineKey1stQueuedOrBetterCountUpgradeDivineKey2ndQueuedOrBetterCountUpgradeDivineKey3rdQueuedOrBetterCountUpgradeDivineKey4thQueuedOrBetterCountUpgradeDivineKe1236579968"/>
+        <NodeArray index="Show" Link="NotCountUpgradeDivineKey7thQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="DivineKey8thCanResearch">
+        <NodeArray index="Use" Link="NotFinished"/>
+        <NodeArray index="Show" Link="NotCountUpgradeDivineKey8thQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="DivineKey9thCanResearch">
+        <NodeArray index="Use" Link="LTE960270413TechTreeCheatSumCountUpgradeDivineKey1stQueuedOrBetterCountUpgradeDivineKey2ndQueuedOrBetterCountUpgradeDivineKey3rdQueuedOrBetterCountUpgradeDivineKey4thQueuedOrBetterCountUpgradeDivineKe1236579968"/>
+        <NodeArray index="Show" Link="NotCountUpgradeDivineKey9thQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="DivineKey10thCanResearch">
+        <NodeArray index="Use" Link="NotFinished"/>
+        <NodeArray index="Show" Link="NotCountUpgradeDivineKey10thQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="DivineKey11thCanResearch">
+        <NodeArray index="Use" Link="NotFinished"/>
+        <NodeArray index="Show" Link="NotCountUpgradeDivineKey11thQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="DivineKey12thCanResearch">
+        <NodeArray index="Use" Link="NotFinished"/>
+        <NodeArray index="Show" Link="NotCountUpgradeDivineKey12thQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="ZergGasLimit">
+        <NodeArray index="Use" Link="LTE2613127646SumCountUnitExtractorRichQueuedOrBetterCountUnitExtractorQueuedOrBetter3"/>
+    </CRequirement>
+    <CRequirement id="SeeleC1Upgrade1Requirement">
+        <NodeArray index="Show" Link="LTCountUpgradeSeeleC1Upgrade1QueuedOrBetter3"/>
+    </CRequirement>
+    <CRequirement id="SeeleC1Upgrade2Requirement">
+        <NodeArray index="Show" Link="NotCountUpgradeSeeleC1Upgrade2QueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="SeeleC1Upgrade3Requirement">
+        <NodeArray index="Show" Link="LTCountUpgradeSeeleC1Upgrade3QueuedOrBetter3"/>
+    </CRequirement>
+    <CRequirement id="SeeleC1Upgrade4Requirement">
+        <NodeArray index="Show" Link="NotCountUpgradeSeeleC1Upgrade4QueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="MeiArmorCanResearch">
+        <NodeArray index="Show" Link="LTCountUpgradeMeiHealthQueuedOrBetter16"/>
+    </CRequirement>
+    <CRequirement id="MeiShieldCanResearch">
+        <NodeArray index="Show" Link="LTCountUpgradeMeiShieldQueuedOrBetter16"/>
+    </CRequirement>
+    <CRequirement id="MeiAttackCanResearch">
+        <NodeArray index="Show" Link="LTCountUpgradeMeiATTACKQueuedOrBetter16"/>
+    </CRequirement>
+    <CRequirement id="BronyaArmorCanResearch">
+        <NodeArray index="Show" Link="LTCountUpgradeBronyaHealthQueuedOrBetter16"/>
+    </CRequirement>
+    <CRequirement id="BronyaShieldCanResearch">
+        <NodeArray index="Show" Link="LTCountUpgradeBronyaShieldQueuedOrBetter16"/>
+    </CRequirement>
+    <CRequirement id="BronyaAttackCanResearch">
+        <NodeArray index="Show" Link="LTCountUpgradeBronyaATTACKQueuedOrBetter16"/>
+    </CRequirement>
+    <CRequirement id="MeiC2CanTrain">
+        <NodeArray index="Use" Link="CountUpgradeMeiC2UnlockCompleteOnly"/>
+        <NodeArray index="Show" Link="Not3381661893SumCountUnitMeiC2QueuedOrBetterCountUnitMeiC2Revivable"/>
+    </CRequirement>
+    <CRequirement id="MeiC2CanUnlock">
+        <NodeArray index="Show" Link="NotCountUpgradeMeiC2UnlockQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="MeiC2Upgrade1Requirement">
+        <NodeArray index="Show" Link="NotCountUpgradeMeiC2Upgrade1QueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="MeiC2Upgrade2Requirement">
+        <NodeArray index="Show" Link="NotCountUpgradeMeiC2Upgrade2QueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="MeiC2Upgrade3Requirement">
+        <NodeArray index="Show" Link="LTCountUpgradeMeiC2Upgrade3QueuedOrBetter5"/>
+    </CRequirement>
+    <CRequirement id="MeiC2Upgrade4Requirement">
+        <NodeArray index="Show" Link="NotCountUpgradeMeiC2Upgrade4QueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="MeiC2HasUpgrade1">
+        <NodeArray index="Show" Link="NotCountUpgradeMeiC2Upgrade1CompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="MeiC2HasUpgrade4">
+        <NodeArray index="Show" Link="NotCountUpgradeMeiC2Upgrade4CompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="BronyaC2CanTrain">
+        <NodeArray index="Use" Link="CountUpgradeBronyaC2UnlockCompleteOnly"/>
+        <NodeArray index="Show" Link="Not157438788SumCountUnitBronyaC2QueuedOrBetterCountUnitBronyaC2RevivableCountUnitBronyaC7QueuedOrBetterCountUnitBronyaC7RevivableCountUnitBronyaC7MotorQueuedOrBetterCountUnitBronyaC7MotorRevivable"/>
+    </CRequirement>
+    <CRequirement id="BronyaC7CanTrain">
+        <NodeArray index="Use" Link="CountUpgradeBronyaC7UnlockCompleteOnly"/>
+        <NodeArray index="Show" Link="Not157438788SumCountUnitBronyaC2QueuedOrBetterCountUnitBronyaC2RevivableCountUnitBronyaC7QueuedOrBetterCountUnitBronyaC7RevivableCountUnitBronyaC7MotorQueuedOrBetterCountUnitBronyaC7MotorRevivable"/>
+    </CRequirement>
+    <CRequirement id="BronyaC2CanUnlock">
+        <NodeArray index="Show" Link="NotCountUpgradeBronyaC2UnlockQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="BronyaC7CanUnlock">
+        <NodeArray index="Use" Link="CountUpgradeHerrscherPhaseCompleteOnly"/>
+        <NodeArray index="Show" Link="NotCountUpgradeBronyaC7UnlockQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="BronyaC2Upgrade1Requirement">
+        <NodeArray index="Show" Link="LTCountUpgradeBronyaC2Upgrade1QueuedOrBetter4"/>
+    </CRequirement>
+    <CRequirement id="BronyaC2Upgrade2Requirement">
+        <NodeArray index="Show" Link="NotCountUpgradeBronyaC2Upgrade2QueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="BronyaC2Upgrade3Requirement">
+        <NodeArray index="Show" Link="NotCountUpgradeBronyaC2Upgrade3QueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="BronyaC2Upgrade4Requirement">
+        <NodeArray index="Show" Link="LTCountUpgradeBronyaC2Upgrade4QueuedOrBetter4"/>
+    </CRequirement>
+    <CRequirement id="BronyaC2HasUpgrade1">
+        <NodeArray index="Show" Link="NotCountUpgradeBronyaC2Upgrade1CompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="BronyaC2HasUpgrade4">
+        <NodeArray index="Show" Link="NotCountUpgradeBronyaC2Upgrade4CompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="BronyaC2CanMorph">
+        <NodeArray index="Use" Link="AndCountUpgradeBronyaC2UnlockCompleteOnly2420890365"/>
+    </CRequirement>
+    <CRequirement id="BronyaC7CanMorph">
+        <NodeArray index="Use" Link="CountUpgradeBronyaC7UnlockCompleteOnly"/>
+    </CRequirement>
+</Catalog>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CTexture default="1" id="UnitTextureDiffuse">
+        <File value="Assets\Textures\##id##_Diffuse.dds"/>
+        <Slot value="main.diffuse"/>
+    </CTexture>
+    <CTexture default="1" id="UnitTextureColor">
+        <File value="Assets\Textures\##id##_Color.dds"/>
+        <Slot value="main.diffuse"/>
+    </CTexture>
+    <CTexture id="DG_010" parent="UnitTextureDiffuse"/>
+    <CTexture id="DG_011" parent="UnitTextureDiffuse"/>
+    <CTexture id="DG_012" parent="UnitTextureDiffuse"/>
+    <CTexture id="DG_013" parent="UnitTextureDiffuse"/>
+    <CTexture id="DG_020" parent="UnitTextureDiffuse"/>
+    <CTexture id="DG_021" parent="UnitTextureDiffuse"/>
+    <CTexture id="DG_023" parent="UnitTextureDiffuse"/>
+    <CTexture id="RO_010" parent="UnitTextureColor"/>
+    <CTexture id="RO_030" parent="UnitTextureColor"/>
+    <CTexture id="RO_031" parent="UnitTextureColor"/>
+    <CTexture id="RO_032" parent="UnitTextureColor"/>
+    <CTexture id="RO_033" parent="UnitTextureColor"/>
+    <CTexture id="RO_034" parent="UnitTextureColor"/>
+    <CTexture id="RO_035" parent="UnitTextureColor"/>
+    <CTexture id="RO_037" parent="UnitTextureColor"/>
+    <CTexture id="RO_040" parent="UnitTextureDiffuse"/>
+    <CTexture id="RO_041" parent="UnitTextureDiffuse"/>
+    <CTexture id="RO_042" parent="UnitTextureDiffuse"/>
+    <CTexture id="RO_047" parent="UnitTextureDiffuse"/>
+</Catalog>
