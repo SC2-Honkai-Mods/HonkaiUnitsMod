@@ -1914,6 +1914,9 @@ bool lib6D9D7845_gt_DebugUnitBehavior_Func (bool testConds, bool runActions) {
     string lv_b;
 
     // Automatic Variable Declarations
+    unit autoCDA8F934_u;
+    int autoCDA8F934_i;
+
     // Variable Initialization
 
     // Conditions
@@ -1928,7 +1931,12 @@ bool lib6D9D7845_gt_DebugUnitBehavior_Func (bool testConds, bool runActions) {
         return true;
     }
 
-    TechTreeUpgradeAddLevel(15, "BlinkTech", 1);
+    autoCDA8F934_u = UnitGroupUnit(UnitGroupSelected(1), 1);
+    autoCDA8F934_i = 1;
+    for ( ; autoCDA8F934_i <= UnitBehaviorCountAll(autoCDA8F934_u) ; autoCDA8F934_i += BoolToInt(lv_b == UnitBehaviorGet(autoCDA8F934_u, autoCDA8F934_i)) ) {
+        lv_b = UnitBehaviorGet(autoCDA8F934_u, autoCDA8F934_i);
+        TriggerDebugOutput(1, StringToText((lv_b)), true);
+    }
     return true;
 }
 

@@ -8878,4 +8878,151 @@
         <CaseArray Validator="BronyaWithinRange25" Effect="CoupleClosestBronya"/>
         <CaseDefault value="CoupleClear"/>
     </CEffectSwitch>
+    <CEffectApplyBehavior id="KianaC1RangeAttack2Ready">
+        <EditorCategories value=""/>
+        <WhichUnit Value="Source"/>
+        <Behavior value="KianaC1RangeAttack2"/>
+    </CEffectApplyBehavior>
+    <CEffectRemoveBehavior id="KianaC1RangeAttack2Remove">
+        <EditorCategories value=""/>
+        <BehaviorLink value="KianaC1RangeAttack2"/>
+        <WhichUnit Value="Source"/>
+    </CEffectRemoveBehavior>
+    <CEffectApplyBehavior id="KianaC1RangeAttack2ReadyApply">
+        <EditorCategories value="Race:Terran"/>
+        <WhichUnit Value="Source"/>
+        <Behavior value="KianaC1RangeAttack2Ready"/>
+    </CEffectApplyBehavior>
+    <CEffectRemoveBehavior id="KianaC1RangeAttack2ReadyRemove">
+        <EditorCategories value="Race:Terran"/>
+        <BehaviorLink value="KianaC1RangeAttack2Ready"/>
+        <WhichUnit Value="Source"/>
+    </CEffectRemoveBehavior>
+    <CEffectApplyBehavior id="KianaC1RangeAttack3Ready">
+        <EditorCategories value=""/>
+        <WhichUnit Value="Source"/>
+        <Behavior value="KianaC1RangeAttack3"/>
+    </CEffectApplyBehavior>
+    <CEffectRemoveBehavior id="KianaC1RangeAttack3Remove">
+        <EditorCategories value=""/>
+        <BehaviorLink value="KianaC1RangeAttack3"/>
+        <WhichUnit Value="Source"/>
+    </CEffectRemoveBehavior>
+    <CEffectApplyBehavior id="KianaC1RangeAttack3ReadyApply">
+        <EditorCategories value="Race:Terran"/>
+        <WhichUnit Value="Source"/>
+        <Behavior value="KianaC1RangeAttack3Ready"/>
+    </CEffectApplyBehavior>
+    <CEffectRemoveBehavior id="KianaC1RangeAttack3ReadyRemove">
+        <EditorCategories value="Race:Terran"/>
+        <BehaviorLink value="KianaC1RangeAttack3Ready"/>
+        <WhichUnit Value="Source"/>
+    </CEffectRemoveBehavior>
+    <CEffectApplyBehavior id="KianaC1RangeAttack4Ready">
+        <EditorCategories value=""/>
+        <WhichUnit Value="Source"/>
+        <Behavior value="KianaC1RangeAttack4"/>
+    </CEffectApplyBehavior>
+    <CEffectRemoveBehavior id="KianaC1RangeAttack4Remove">
+        <EditorCategories value=""/>
+        <BehaviorLink value="KianaC1RangeAttack4"/>
+        <WhichUnit Value="Source"/>
+    </CEffectRemoveBehavior>
+    <CEffectApplyBehavior id="KianaC1RangeAttack4ReadyApply">
+        <EditorCategories value="Race:Terran"/>
+        <WhichUnit Value="Source"/>
+        <Behavior value="KianaC1RangeAttack4Ready"/>
+    </CEffectApplyBehavior>
+    <CEffectRemoveBehavior id="KianaC1RangeAttack4ReadyRemove">
+        <EditorCategories value="Race:Terran"/>
+        <BehaviorLink value="KianaC1RangeAttack4Ready"/>
+        <WhichUnit Value="Source"/>
+    </CEffectRemoveBehavior>
+    <CEffectCreatePersistent id="KianaC1RangeAttack1">
+        <EditorCategories value=""/>
+        <WhichLocation Value="TargetUnit"/>
+        <TimeScaleSource Value="Caster"/>
+        <PeriodCount value="3"/>
+        <PeriodicEffectArray value="KianaC1RangeAttackLeftDamage"/>
+        <PeriodicEffectArray value="KianaC1SummonedAttack"/>
+        <PeriodicEffectArray value="KianaC1RangeAttack2ReadyApply"/>
+        <PeriodicPeriodArray value="0.375"/>
+        <PeriodicPeriodArray value="0"/>
+        <PeriodicPeriodArray value="0.3125"/>
+        <Flags index="Channeled" value="1"/>
+    </CEffectCreatePersistent>
+    <CEffectCreatePersistent id="KianaC1RangeAttack2">
+        <EditorCategories value="Race:Terran"/>
+        <WhichLocation Value="TargetUnit"/>
+        <TimeScaleSource Value="Caster"/>
+        <InitialEffect value="KianaC1RangeAttack2Ready"/>
+        <PeriodCount value="7"/>
+        <PeriodicEffectArray value="KianaC1RangeAttackLeftDamage"/>
+        <PeriodicEffectArray value="KianaC1SummonedAttack"/>
+        <PeriodicEffectArray value="KianaC1RangeAttackRightDamage"/>
+        <PeriodicEffectArray value="KianaC1SummonedAttack"/>
+        <PeriodicEffectArray value="KianaC1RangeAttackRightDamage"/>
+        <PeriodicEffectArray value="KianaC1SummonedAttack"/>
+        <PeriodicEffectArray value="KianaC1RangeAttack3ReadyApply"/>
+        <PeriodicPeriodArray value="0.1875"/>
+        <PeriodicPeriodArray value="0"/>
+        <PeriodicPeriodArray value="0.1875"/>
+        <PeriodicPeriodArray value="0"/>
+        <PeriodicPeriodArray value="0.125"/>
+        <PeriodicPeriodArray value="0"/>
+        <PeriodicPeriodArray value="0.25"/>
+        <FinalEffect value="KianaC1RangeAttack2Remove"/>
+        <Flags index="Channeled" value="1"/>
+    </CEffectCreatePersistent>
+    <CEffectCreatePersistent id="KianaC1RangeAttack3">
+        <EditorCategories value="Race:Terran"/>
+        <WhichLocation Value="TargetUnit"/>
+        <TimeScaleSource Value="Caster"/>
+        <InitialEffect value="KianaC1RangeAttack3Ready"/>
+        <PeriodCount value="5"/>
+        <PeriodicEffectArray value="KianaC1RangeAttackLeftDamage"/>
+        <PeriodicEffectArray value="KianaC1SummonedAttack"/>
+        <PeriodicEffectArray value="KianaC1RangeAttackRightDamage"/>
+        <PeriodicEffectArray value="KianaC1SummonedAttack"/>
+        <PeriodicEffectArray value="KianaC1RangeAttack4ReadyApply"/>
+        <PeriodicPeriodArray value="0.5"/>
+        <PeriodicPeriodArray value="0"/>
+        <PeriodicPeriodArray value="0.125"/>
+        <PeriodicPeriodArray value="0"/>
+        <PeriodicPeriodArray value="0.1875"/>
+        <FinalEffect value="KianaC1RangeAttack3Remove"/>
+        <Flags index="Channeled" value="1"/>
+    </CEffectCreatePersistent>
+    <CEffectCreatePersistent id="KianaC1RangeAttack4">
+        <EditorCategories value="Race:Terran"/>
+        <WhichLocation Value="TargetUnit"/>
+        <TimeScaleSource Value="Caster"/>
+        <InitialEffect value="KianaC1RangeAttack4Ready"/>
+        <PeriodCount value="4"/>
+        <PeriodicEffectArray value="KianaC1RangeAttackLeftDamage"/>
+        <PeriodicEffectArray value="KianaC1SummonedAttack"/>
+        <PeriodicEffectArray value="KianaC1RangeAttackRightDamage"/>
+        <PeriodicEffectArray value="KianaC1SummonedAttack"/>
+        <PeriodicEffectArray value="VoidEffect"/>
+        <PeriodicPeriodArray value="0.75"/>
+        <PeriodicPeriodArray value="0"/>
+        <PeriodicPeriodArray value="0"/>
+        <PeriodicPeriodArray value="0"/>
+        <PeriodicPeriodArray value="0.5"/>
+        <FinalEffect value="KianaC1RangeAttack4Remove"/>
+        <Flags index="Channeled" value="1"/>
+    </CEffectCreatePersistent>
+    <CEffectSet id="KianaC1SummonedAttack"/>
+    <CEffectDamage id="KianaC1RangeAttackLeftDamage">
+        <EditorCategories value=""/>
+        <ImpactLocation Value="TargetUnit"/>
+        <Kind value="Ranged"/>
+        <Amount value="10"/>
+    </CEffectDamage>
+    <CEffectDamage id="KianaC1RangeAttackRightDamage">
+        <EditorCategories value=""/>
+        <ImpactLocation Value="TargetUnit"/>
+        <Kind value="Ranged"/>
+        <Amount value="10"/>
+    </CEffectDamage>
 </Catalog>

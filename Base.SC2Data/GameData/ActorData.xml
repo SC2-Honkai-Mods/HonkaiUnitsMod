@@ -585,6 +585,36 @@
     <CActorSplat id="Herrscher8thAbil1CursorSplat" parent="ProtossCursorSplat" abil="Herrscher8thAbil1">
         <Scale value="1.250000,1.250000,1.000000"/>
     </CActorSplat>
+    <CActorAction id="KianaC1RangedAttackLeft" parent="GenericAttack" effectAttack="KianaC1RangeAttackLeftDamage">
+        <LaunchSiteOps Ops="SOpAttachWeaponLeft SOpForwardCasterCenter" HoldPosition="1" HoldRotation="1"/>
+        <LaunchAttachQuery Methods="AMFilterWeaponLeft" Fallback="Weapon"/>
+        <LaunchAssets Model="KinanPistolAttackLaunch" Sound="KianaShoot"/>
+        <ContainerSiteOps Ops="SOpAttachWeaponLeft" HoldPosition="1" HoldRotation="1"/>
+        <ImpactMap index="None" Model="ReaperAttackImpact" Sound="Reaper_AttackImpact" ModelReaction="ReaperAttackImpactReaction"/>
+        <ImpactMap index="Flesh" ModelReaction="BloodTargetImpact"/>
+        <ImpactMap index="Shield" Sound="ReaperAttackImpactShield" ModelReaction="ReaperAttackImpactReactionShield"/>
+        <ImpactPhysics>
+            <Name value="Attack00"/>
+            <MatchKeys value="Basic"/>
+            <AttackAnimProps value="00"/>
+            <Physics value="ZealotAttackDeathForce00"/>
+        </ImpactPhysics>
+    </CActorAction>
+    <CActorAction id="KianaC1RangedAttackRight" parent="GenericAttack" effectAttack="KianaC1RangeAttackRightDamage">
+        <LaunchSiteOps Ops="SOpAttachWeaponRight" HoldPosition="1" HoldRotation="1"/>
+        <LaunchAttachQuery Methods="AMFilterWeaponRight" Fallback="Weapon"/>
+        <LaunchAssets Model="KinanPistolAttackLaunch" Sound="KianaShoot"/>
+        <ContainerSiteOps Ops="SOpAttachWeaponRight" HoldPosition="1" HoldRotation="1"/>
+        <ImpactMap index="None" Model="ReaperAttackImpact" Sound="Reaper_AttackImpact" ModelReaction="ReaperAttackImpactReaction"/>
+        <ImpactMap index="Flesh" ModelReaction="BloodTargetImpact"/>
+        <ImpactMap index="Shield" Sound="ReaperAttackImpactShield" ModelReaction="ReaperAttackImpactReactionShield"/>
+        <ImpactPhysics>
+            <Name value="Attack00"/>
+            <MatchKeys value="Basic"/>
+            <AttackAnimProps value="00"/>
+            <Physics value="ZealotAttackDeathForce00"/>
+        </ImpactPhysics>
+    </CActorAction>
     <CActorUnit id="KianaC1" parent="CActorUnitWithIcon" unitName="KianaC1">
         <Aliases value="_UnitSmall"/>
         <Macros value="UnloadDropAnim"/>
@@ -597,10 +627,10 @@
         <Macros value="ThrowAnimation2"/>
         <On index="65" Terms="Abil.attack.ReadyStop" Send="AnimGroupRemove Ready"/>
         <On index="66" Terms="UnitMovementUpdate.*.Walk" Send="AnimClear Attack"/>
-        <On index="67" Terms="WeaponStart.KianaC2Attack1.AttackStart" Send="AnimPlay Attack Attack,01 0 -1.000000 -1.000000 1.000000 AsTimeScale 0.000000 5"/>
-        <On index="68" Terms="WeaponStart.KianaC2Attack2.AttackStart" Send="AnimPlay Attack Attack,02 0 -1.000000 -1.000000 1.000000 AsTimeScale 0.000000 5"/>
-        <On Terms="WeaponStart.KianaC2Attack3.AttackStart" Send="AnimPlay Attack Attack,03 0 -1.000000 -1.000000 1.000000 AsTimeScale 0.000000 5"/>
-        <On Terms="WeaponStart.KianaC2Attack4.AttackStart" Send="AnimPlay Attack Attack,04 0 -1.000000 -1.000000 1.000000 AsTimeScale 0.000000 5"/>
+        <On index="67" Terms="WeaponStart.KianaC1RangeAttack1.AttackStart" Send="AnimPlay Attack Attack,01 0 -1.000000 -1.000000 1.000000 AsTimeScale 0.000000 5"/>
+        <On index="68" Terms="WeaponStart.KianaC1RangeAttack2.AttackStart" Send="AnimPlay Attack Attack,02 0 -1.000000 -1.000000 1.000000 AsTimeScale 0.000000 5"/>
+        <On Terms="WeaponStart.KianaC1RangeAttack3.AttackStart" Send="AnimPlay Attack Attack,03 0 -1.000000 -1.000000 1.000000 AsTimeScale 0.000000 5"/>
+        <On Terms="WeaponStart.KianaC1RangeAttack4.AttackStart" Send="AnimPlay Attack Attack,04 0 -1.000000 -1.000000 1.000000 AsTimeScale 0.000000 5"/>
         <On Terms="WeaponStart.KianaC2Attack5.AttackStart" Send="AnimPlay Attack Attack,05 0 -1.000000 -1.000000 1.000000 AsTimeScale 0.000000 5"/>
         <On Terms="WeaponStart.KianaC2Branch3.AttackStart" Send="AnimPlay Attack Attack,06 0 -1.000000 -1.000000 1.000000 AsTimeScale 0.000000 5"/>
         <On Terms="WeaponStart.KianaC2Branch4.AttackStart" Send="AnimPlay Attack Attack,07 0 -1.000000 -1.000000 1.000000 AsTimeScale 0.000000 5"/>

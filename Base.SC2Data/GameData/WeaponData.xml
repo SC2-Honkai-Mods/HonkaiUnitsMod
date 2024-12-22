@@ -613,6 +613,11 @@
         <Options index="Melee" value="1"/>
         <Options index="DisplayCooldown" value="1"/>
         <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <AcquireTargetSorts>
+            <SortArray value="TSThreatenKianaC2"/>
+            <SortArray value="TSPriorityDesc"/>
+            <SortArray value="GroundTarget"/>
+        </AcquireTargetSorts>
         <MinScanRange value="7"/>
         <Range value="3.6"/>
         <Period value="0.6875"/>
@@ -622,16 +627,16 @@
         <AllowedMovement value="Moving"/>
         <RandomDelayMin value="0"/>
         <RandomDelayMax value="0"/>
-        <AcquireTargetSorts>
-            <SortArray value="TSThreatenKianaC2"/>
-            <SortArray value="TSPriorityDesc"/>
-            <SortArray value="GroundTarget"/>
-        </AcquireTargetSorts>
     </CWeaponLegacy>
     <CWeaponLegacy id="KianaC2Attack2">
         <EditorCategories value="Race:Terran"/>
         <Options index="Hidden" value="1"/>
         <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <AcquireTargetSorts>
+            <SortArray value="TSThreatenKianaC2"/>
+            <SortArray value="TSPriorityDesc"/>
+            <SortArray value="GroundTarget"/>
+        </AcquireTargetSorts>
         <MinScanRange value="7"/>
         <Range value="6"/>
         <Period value="0.5"/>
@@ -641,16 +646,16 @@
         <AllowedMovement value="Slowing"/>
         <RandomDelayMin value="0"/>
         <RandomDelayMax value="0"/>
-        <AcquireTargetSorts>
-            <SortArray value="TSThreatenKianaC2"/>
-            <SortArray value="TSPriorityDesc"/>
-            <SortArray value="GroundTarget"/>
-        </AcquireTargetSorts>
     </CWeaponLegacy>
     <CWeaponLegacy id="KianaC2Attack3">
         <EditorCategories value="Race:Terran"/>
         <Options index="Hidden" value="1"/>
         <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <AcquireTargetSorts>
+            <SortArray value="TSThreatenKianaC2"/>
+            <SortArray value="TSPriorityDesc"/>
+            <SortArray value="GroundTarget"/>
+        </AcquireTargetSorts>
         <MinScanRange value="7"/>
         <Range value="6"/>
         <Period value="0.5"/>
@@ -660,17 +665,17 @@
         <AllowedMovement value="Slowing"/>
         <RandomDelayMin value="0"/>
         <RandomDelayMax value="0"/>
-        <AcquireTargetSorts>
-            <SortArray value="TSThreatenKianaC2"/>
-            <SortArray value="TSPriorityDesc"/>
-            <SortArray value="GroundTarget"/>
-        </AcquireTargetSorts>
     </CWeaponLegacy>
     <CWeaponLegacy id="KianaC2Attack4">
         <EditorCategories value="Race:Terran"/>
         <Options index="Hidden" value="1"/>
         <Options index="Melee" value="1"/>
         <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <AcquireTargetSorts>
+            <SortArray value="TSThreatenKianaC2"/>
+            <SortArray value="TSPriorityDesc"/>
+            <SortArray value="GroundTarget"/>
+        </AcquireTargetSorts>
         <MinScanRange value="7"/>
         <Range value="1.8"/>
         <Period value="0.625"/>
@@ -680,17 +685,17 @@
         <AllowedMovement value="Slowing"/>
         <RandomDelayMin value="0"/>
         <RandomDelayMax value="0"/>
-        <AcquireTargetSorts>
-            <SortArray value="TSThreatenKianaC2"/>
-            <SortArray value="TSPriorityDesc"/>
-            <SortArray value="GroundTarget"/>
-        </AcquireTargetSorts>
     </CWeaponLegacy>
     <CWeaponLegacy id="KianaC2Attack5">
         <EditorCategories value="Race:Terran"/>
         <Options index="Hidden" value="1"/>
         <Options index="Melee" value="1"/>
         <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <AcquireTargetSorts>
+            <SortArray value="TSThreatenKianaC2"/>
+            <SortArray value="TSPriorityDesc"/>
+            <SortArray value="GroundTarget"/>
+        </AcquireTargetSorts>
         <MinScanRange value="8"/>
         <Range value="2.1"/>
         <Period value="0.9375"/>
@@ -700,17 +705,17 @@
         <AllowedMovement value="Slowing"/>
         <RandomDelayMin value="0"/>
         <RandomDelayMax value="0"/>
-        <AcquireTargetSorts>
-            <SortArray value="TSThreatenKianaC2"/>
-            <SortArray value="TSPriorityDesc"/>
-            <SortArray value="GroundTarget"/>
-        </AcquireTargetSorts>
     </CWeaponLegacy>
     <CWeaponLegacy id="KianaC2Branch3">
         <EditorCategories value="Race:Terran"/>
         <Options index="Hidden" value="1"/>
         <Options index="Melee" value="1"/>
         <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <AcquireTargetSorts>
+            <SortArray value="TSThreatenKianaC2"/>
+            <SortArray value="TSPriorityDesc"/>
+            <SortArray value="GroundTarget"/>
+        </AcquireTargetSorts>
         <MinScanRange value="7"/>
         <Range value="1.6"/>
         <Period value="0.4375"/>
@@ -720,16 +725,16 @@
         <AllowedMovement value="Slowing"/>
         <RandomDelayMin value="0"/>
         <RandomDelayMax value="0"/>
-        <AcquireTargetSorts>
-            <SortArray value="TSThreatenKianaC2"/>
-            <SortArray value="TSPriorityDesc"/>
-            <SortArray value="GroundTarget"/>
-        </AcquireTargetSorts>
     </CWeaponLegacy>
     <CWeaponLegacy id="KianaC2Branch4">
         <EditorCategories value="Race:Terran"/>
         <Options index="Hidden" value="1"/>
         <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <AcquireTargetSorts>
+            <SortArray value="TSThreatenKianaC2"/>
+            <SortArray value="TSPriorityDesc"/>
+            <SortArray value="GroundTarget"/>
+        </AcquireTargetSorts>
         <MinScanRange value="7"/>
         <Period value="1.9375"/>
         <DamagePoint value="0"/>
@@ -739,11 +744,6 @@
         <AllowedMovement value="Slowing"/>
         <RandomDelayMin value="0"/>
         <RandomDelayMax value="0"/>
-        <AcquireTargetSorts>
-            <SortArray value="TSThreatenKianaC2"/>
-            <SortArray value="TSPriorityDesc"/>
-            <SortArray value="GroundTarget"/>
-        </AcquireTargetSorts>
     </CWeaponLegacy>
     <CWeaponLegacy id="DeadgalScythe">
         <EditorCategories value="Race:Zerg"/>
@@ -1177,5 +1177,61 @@
         <Range value="0"/>
         <Period value="0"/>
         <Effect value="VoidEffect"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="KianaC1RangeAttack1">
+        <EditorCategories value="Race:Terran"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <MinScanRange value="7"/>
+        <Range value="7"/>
+        <Period value="0.75"/>
+        <DamagePoint value="0"/>
+        <Backswing value="0"/>
+        <LegacyOptions index="CanRetargetWhileChanneling" value="1"/>
+        <AllowedMovement value="Moving"/>
+        <RandomDelayMin value="0"/>
+        <RandomDelayMax value="0"/>
+        <Options index="Hidden" value="1"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="KianaC1RangeAttack2">
+        <EditorCategories value="Race:Terran"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <MinScanRange value="7"/>
+        <Range value="7"/>
+        <Period value="0.8125"/>
+        <DamagePoint value="0"/>
+        <Backswing value="0"/>
+        <LegacyOptions index="CanRetargetWhileChanneling" value="1"/>
+        <AllowedMovement value="Slowing"/>
+        <RandomDelayMin value="0"/>
+        <RandomDelayMax value="0"/>
+        <Options index="Hidden" value="1"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="KianaC1RangeAttack3">
+        <EditorCategories value="Race:Terran"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <MinScanRange value="7"/>
+        <Range value="7"/>
+        <Period value="0.8125"/>
+        <DamagePoint value="0"/>
+        <Backswing value="0"/>
+        <LegacyOptions index="CanRetargetWhileChanneling" value="1"/>
+        <AllowedMovement value="Slowing"/>
+        <RandomDelayMin value="0"/>
+        <RandomDelayMax value="0"/>
+        <Options index="Hidden" value="1"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="KianaC1RangeAttack4">
+        <EditorCategories value="Race:Terran"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <MinScanRange value="7"/>
+        <Range value="7"/>
+        <Period value="1.3125"/>
+        <DamagePoint value="0"/>
+        <Backswing value="0"/>
+        <LegacyOptions index="CanRetargetWhileChanneling" value="1"/>
+        <AllowedMovement value="Slowing"/>
+        <RandomDelayMin value="0"/>
+        <RandomDelayMax value="0"/>
+        <Options index="Hidden" value="1"/>
     </CWeaponLegacy>
 </Catalog>

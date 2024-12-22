@@ -562,6 +562,7 @@ Button/Name/K17Skill=眩晕跃迁
 Button/Name/K23Skill=天火出鞘
 Button/Name/K5Skill=雷神之怒
 Button/Name/KianaBuilding=建造射击训练室
+Button/Name/KianaC1Attack=亚空连射/虚数荆棘
 Button/Name/KianaC2Attack=流星标靶
 Button/Name/KianaC2Branch=分支-彗星陨落
 Button/Name/KianaC2Evade=时空闪避
@@ -938,6 +939,7 @@ Button/Tooltip/K23Skill=消耗所有护盾和50%的生命，向前方爆发出�
 Button/Tooltip/K5Skill=砸下雷锤击倒敌人，造成20点物理伤害，并将敌人陷入脆弱状态，降低8点护甲，持续10秒
 Button/Tooltip/KianaBuilding=为<c val="FFFF00">琪亚娜·卡斯兰娜</c>提供升级
 Button/Tooltip/KianaC1=第三代女武神装甲，设计理念为「泛用性全领域作战装甲」。<n/><n/><c val="#ColorAttackInfo">特点:物理伤害、眩晕、爆发状态、时空。<n/>部分招式可对空</c>
+Button/Tooltip/KianaC1Attack=使用枪斗术进行五连攻击<n/>第一击：<d ref="Effect,KianaC2Attack1Damage,Amount*10"/>%攻击力物理伤害<n/>第二击：<d ref="Effect,KianaC2Attack2Damage,Amount*10"/>%攻击力物理伤害<n/>第三击：<d ref="Effect,KianaC2Attack2Damage,Amount*10"/>%攻击力物理伤害<n/>第四击：<d ref="Effect,KianaC2Attack4Damage,Amount*10"/>%攻击力物理伤害×2<n/>第五击：250%攻击力物理伤害<n/><n/>第二、第三击附加对目标一次远程射击，造成<d ref="Effect,KianaC2PistolRanged,Amount*10"/>%攻击力远程物理伤害
 Button/Tooltip/KianaC2=第三代女武神装甲，设计理念为「泛用性全领域作战装甲」。<n/><n/><c val="#ColorAttackInfo">特点:物理伤害、眩晕、爆发状态、时空。<n/>部分招式可对空</c>
 Button/Tooltip/KianaC2Attack=使用枪斗术进行五连攻击<n/>第一击：<d ref="Effect,KianaC2Attack1Damage,Amount*10"/>%攻击力物理伤害<n/>第二击：<d ref="Effect,KianaC2Attack2Damage,Amount*10"/>%攻击力物理伤害<n/>第三击：<d ref="Effect,KianaC2Attack2Damage,Amount*10"/>%攻击力物理伤害<n/>第四击：<d ref="Effect,KianaC2Attack4Damage,Amount*10"/>%攻击力物理伤害×2<n/>第五击：250%攻击力物理伤害<n/><n/>第二、第三击附加对目标一次远程射击，造成<d ref="Effect,KianaC2PistolRanged,Amount*10"/>%攻击力远程物理伤害
 Button/Tooltip/KianaC2Branch=在普攻第二段时按下，将敌人踢飞并击落<n/>踢飞:50%攻击力物理伤害<n/>击落:275%攻击力物理伤害(可以对空)<n/><n/><c val="FFFF00">击飞敌人</c>
@@ -2566,6 +2568,7 @@ LoadingScreen/HonkaiModHelpT05=天命高塔可以解锁防御建筑，同时能�
 LoadingScreen/HonkaiModHelpT06=女武神-守卫者的火力凶猛，但生存性需要依靠护盾和医疗运输机的升级来提高。
 LookAtType/CycloneTurret=
 Param/Value/lib_6D9D7845_12012C51=免疫
+Param/Value/lib_6D9D7845_16692EA9================
 Param/Value/lib_6D9D7845_274FB3B4=全伤减免
 Param/Value/lib_6D9D7845_2CA07C08=施法者：
 Param/Value/lib_6D9D7845_2FE720B2=已出现在战场上。
@@ -2600,6 +2603,7 @@ Param/Value/lib_6D9D7845_C449B6AF=%
 Param/Value/lib_6D9D7845_C48BFC0A=10秒dps:
 Param/Value/lib_6D9D7845_C60BE856=%
 Param/Value/lib_6D9D7845_D08246B5=已清除装备模板
+Param/Value/lib_6D9D7845_D5ABB218=:
 Param/Value/lib_6D9D7845_DC304578=已复活
 Param/Value/lib_6D9D7845_DDFD93D2=已设置装备模板
 Param/Value/lib_6D9D7845_DFAA2A41=火元素抗性
@@ -2731,6 +2735,7 @@ RequirementNode/Tooltip/Or1565659668CountBehaviorKianaC2BranchReadyCompleteOnlyA
 RequirementNode/Tooltip/StigmataValidCount=圣痕数量未达到上限
 RequirementNode/Tooltip/Sum2900348999CountBehaviorLightningRodFactoryCompleteOnlyAtUnit1653467348CountBehaviorLightningRodFactory2CompleteOnlyAtUnit1236727148CountBehaviorIceTabletFactoryCompleteOnlyAtUnitCountBehaviorIceTab4120943232=需要附属蓄电塔、石碑或科技实验室
 SimpleDisplay/AvatarPick=<s val="@@@SimpleCommandRow">按%hotkey键</c>然后</s> <IMG path="Assets\Textures\tutorialmouseleftbuttondown.dds" alignment="absolutemiddle"/> <s val="@@@SimpleCommandRow">地面自动攻击</s>
+SimpleDisplay/KianaC1Attack=<s val="@@@SimpleCommandRow">按%hotkey键</c>然后</s> <IMG path="Assets\Textures\tutorialmouseleftbuttondown.dds" alignment="absolutemiddle"/> <s val="@@@SimpleCommandRow">地面自动攻击</s>
 SimpleDisplay/KianaC2Attack=<s val="@@@SimpleCommandRow">按%hotkey键</c>然后</s> <IMG path="Assets\Textures\tutorialmouseleftbuttondown.dds" alignment="absolutemiddle"/> <s val="@@@SimpleCommandRow">地面自动攻击</s>
 SimpleDisplay/KianaC2Branch=<s val="@@@SimpleCommandRow">按%hotkey键</c>然后</s> <IMG path="Assets\Textures\tutorialmouseleftbuttondown.dds" alignment="absolutemiddle"/> <s val="@@@SimpleCommandRow">地面自动攻击</s>
 SimpleDisplay/KianaC2Evade=<s val="@@@SimpleCommandRow">按%hotkey键</c>然后</s> <IMG path="Assets\Textures\tutorialmouseleftbuttondown.dds" alignment="absolutemiddle"/> <s val="@@@SimpleCommandRow">地面自动攻击</s>
@@ -3066,13 +3071,13 @@ Weapon/Name/Herrscher8thWeapon=律者武器
 Weapon/Name/HerrscherWeapon=律者武器
 Weapon/Name/HonkaiHyperionWeaponSwitch=Honkai Hyperion Weapon Switch
 Weapon/Name/HyperionInterceptorBeam=战斗机机炮
-Weapon/Name/KianaC2Attack1=Attack1
-Weapon/Name/KianaC2Attack2=Attack2
-Weapon/Name/KianaC2Attack3=Attack3
-Weapon/Name/KianaC2Attack4=Attack4
-Weapon/Name/KianaC2Attack5=Attack5
-Weapon/Name/KianaC2Branch3=Branch3
-Weapon/Name/KianaC2Branch4=Branch4
+Weapon/Name/KianaC2Attack1=Kiana C2 Attack 1
+Weapon/Name/KianaC2Attack2=Kiana C2 Attack 2
+Weapon/Name/KianaC2Attack3=Kiana C2 Attack 3
+Weapon/Name/KianaC2Attack4=Kiana C2 Attack 4
+Weapon/Name/KianaC2Attack5=Kiana C2 Attack 5
+Weapon/Name/KianaC2Branch3=Kiana C2 Branch 3
+Weapon/Name/KianaC2Branch4=Kiana C2 Branch 4
 Weapon/Name/KianaC4Weapon=双枪
 Weapon/Name/KianaC4Weapon2=双枪(散射)
 Weapon/Name/LongboltMissile2=蜂巢飞弹

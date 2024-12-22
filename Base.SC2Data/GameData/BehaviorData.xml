@@ -3064,4 +3064,90 @@
     <CBehaviorBuff id="StigmataCG6" parent="StigmataTemplateB">
         <Modification RangedWeaponRange="2"/>
     </CBehaviorBuff>
+    <CBehaviorBuff id="KianaC1RangeAttack1">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Modification>
+            <WeaponEnableArray value="KianaC1RangeAttack1"/>
+            <WeaponDisableArray value="KianaC1RangeAttack2"/>
+            <WeaponDisableArray value="KianaC1RangeAttack3"/>
+            <WeaponDisableArray value="KianaC1RangeAttack4"/>
+        </Modification>
+        <InfoFlags index="Hidden" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="KianaC1RangeAttack2">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Modification>
+            <BehaviorLinkDisableArray value="KianaC1RangeAttack1"/>
+            <WeaponEnableArray value="KianaC1RangeAttack2"/>
+            <WeaponDisableArray value="KianaC1RangeAttack1"/>
+            <WeaponDisableArray value="KianaC1RangeAttack3"/>
+            <WeaponDisableArray value="KianaC1RangeAttack4"/>
+        </Modification>
+        <InfoFlags index="Hidden" value="1"/>
+        <InitialEffect value="KianaC1RangeAttack2ReadyRemove"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="KianaC1RangeAttack3">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <InitialEffect value="KianaC1RangeAttack3ReadyRemove"/>
+        <Modification>
+            <BehaviorLinkDisableArray value="KianaC1RangeAttack1"/>
+            <WeaponEnableArray value="KianaC1RangeAttack3"/>
+            <WeaponDisableArray value="KianaC1RangeAttack1"/>
+            <WeaponDisableArray value="KianaC1RangeAttack2"/>
+            <WeaponDisableArray value="KianaC1RangeAttack4"/>
+        </Modification>
+        <InfoFlags index="Hidden" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="KianaC1RangeAttack4">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <InitialEffect value="KianaC1RangeAttack4ReadyRemove"/>
+        <Modification>
+            <BehaviorLinkDisableArray value="KianaC1RangeAttack1"/>
+            <WeaponEnableArray value="KianaC1RangeAttack4"/>
+            <WeaponDisableArray value="KianaC1RangeAttack1"/>
+            <WeaponDisableArray value="KianaC1RangeAttack2"/>
+            <WeaponDisableArray value="KianaC1RangeAttack3"/>
+        </Modification>
+        <InfoFlags index="Hidden" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="KianaC1RangeAttack2Ready">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <RemoveValidatorArray value="UnitNotMoving"/>
+        <Duration value="1"/>
+        <Modification>
+            <BehaviorLinkDisableArray value="KianaC1RangeAttack1"/>
+            <WeaponEnableArray value="KianaC1RangeAttack2"/>
+            <WeaponDisableArray value="KianaC1RangeAttack1"/>
+            <WeaponDisableArray value="KianaC1RangeAttack3"/>
+            <WeaponDisableArray value="KianaC1RangeAttack4"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="KianaC1RangeAttack3Ready">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <RemoveValidatorArray value="UnitNotMoving"/>
+        <Duration value="1"/>
+        <InitialEffect value="KianaC1RangeAttack2Remove"/>
+        <Modification>
+            <BehaviorLinkDisableArray value="KianaC1RangeAttack1"/>
+            <WeaponEnableArray value="KianaC1RangeAttack3"/>
+            <WeaponDisableArray value="KianaC1RangeAttack1"/>
+            <WeaponDisableArray value="KianaC1RangeAttack2"/>
+            <WeaponDisableArray value="KianaC1RangeAttack4"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="KianaC1RangeAttack4Ready">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <RemoveValidatorArray value="UnitNotMoving"/>
+        <Duration value="1"/>
+        <InitialEffect value="KianaC1RangeAttack3Remove"/>
+        <Modification>
+            <BehaviorLinkDisableArray value="KianaC1RangeAttack1"/>
+            <WeaponEnableArray value="KianaC1RangeAttack4"/>
+            <WeaponDisableArray value="KianaC1RangeAttack1"/>
+            <WeaponDisableArray value="KianaC1RangeAttack2"/>
+            <WeaponDisableArray value="KianaC1RangeAttack3"/>
+        </Modification>
+    </CBehaviorBuff>
 </Catalog>

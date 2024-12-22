@@ -775,24 +775,14 @@
     </CUnit>
     <CUnit id="KianaC1" parent="CUnitKiana">
         <UserTag value="HonkaiText/KianaC1"/>
-        <FlagArray index="Hero" value="0"/>
         <Speed value="3.8984"/>
         <AbilArray index="11" Link="KianaC2Branch"/>
-        <AbilArray Link="KianaC2EvadeIdle"/>
-        <AbilArray Link="KianaC2EvadeMoving"/>
-        <AbilArray Link="KianaC2Ultimate"/>
-        <AbilArray Link="KianaC2Skin1"/>
-        <AbilArray Link="KianaC2Skin2"/>
-        <AbilArray Link="KianaSkin1"/>
+        <AbilArray index="12" Link="MorphToKianaC2"/>
+        <AbilArray Link="MorphToKianaC4"/>
         <BehaviorArray Link="HonkaiAttributeMech"/>
-        <BehaviorArray Link="KianaC2Attack1"/>
-        <BehaviorArray Link="KianaC2Dizzy"/>
+        <BehaviorArray Link="KianaC1RangeAttack1"/>
         <CardLayouts index="0">
-            <LayoutButtons Face="KianaC2Branch" Type="AbilCmd" AbilCmd="KianaC2Branch,Execute" Row="1" Column="1"/>
-            <LayoutButtons Face="KianaC2Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="1" Column="0"/>
-            <LayoutButtons Face="KianaC2Evade" Type="AbilCmd" AbilCmd="KianaC2EvadeMoving,Execute" Row="1" Column="2"/>
-            <LayoutButtons Face="KianaC2Evade" Type="AbilCmd" AbilCmd="KianaC2EvadeIdle,Execute" Row="1" Column="2"/>
-            <LayoutButtons Face="KianaC2Ultimate" Type="AbilCmd" AbilCmd="KianaC2Ultimate,Execute" Row="1" Column="3"/>
+            <LayoutButtons Face="KianaC1Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="1" Column="0"/>
         </CardLayouts>
         <CardLayouts index="4" CardId="Equi">
             <LayoutButtons index="6">
@@ -812,8 +802,8 @@
             <LayoutButtons Face="SkinKiana01" Type="AbilCmd" AbilCmd="KianaSkin1,Execute" Row="0" Column="2"/>
         </CardLayouts>
         <CardLayouts index="7" CardId="Avat">
-            <LayoutButtons index="1" Face="TrainKianaC4" Type="AbilCmd" AbilCmd="MorphToKianaC4,Execute" Row="0" Column="0"/>
-            <LayoutButtons index="2" removed="1"/>
+            <LayoutButtons index="1" Face="TrainKianaC4" Type="AbilCmd" AbilCmd="MorphToKianaC4,Execute" Row="0" Column="1"/>
+            <LayoutButtons index="2" Face="TrainKianaC2" Type="AbilCmd" AbilCmd="MorphToKianaC2,255" Row="0" Column="0"/>
         </CardLayouts>
         <EquipmentArray index="0">
             <Effect value="KianaATTACK"/>
@@ -821,10 +811,10 @@
             <Name value="Text/Weapon/ATTACK"/>
             <Weapon value="KianaATTACK"/>
         </EquipmentArray>
-        <ReviveInfoBase>
-            <Charge Link="KianaC2/Revive"/>
-            <Cooldown Link="KianaC2/Revive"/>
-        </ReviveInfoBase>
+        <WeaponArray Link="KianaC1RangeAttack1"/>
+        <WeaponArray Link="KianaC1RangeAttack2"/>
+        <WeaponArray Link="KianaC1RangeAttack3"/>
+        <WeaponArray Link="KianaC1RangeAttack4"/>
     </CUnit>
     <CUnit id="RPC6626">
         <DeathTime value="30"/>
@@ -5818,7 +5808,6 @@
             <Charge Link="KianaC2/Revive"/>
             <Cooldown Link="KianaC2/Revive"/>
         </ReviveInfoBase>
-        <FlagArray index="Hero" value="0"/>
         <EquipmentArray index="0">
             <Effect value="KianaATTACK"/>
             <Icon value="Assets\Textures\Pistol_K1.tga"/>
@@ -6354,7 +6343,6 @@
             <Charge Link="KianaC4/Revive"/>
             <Cooldown Link="KianaC4/Revive"/>
         </ReviveInfoBase>
-        <FlagArray index="Hero" value="0"/>
         <EquipmentArray index="0">
             <Effect value="KianaATTACK"/>
             <Icon value="Assets\Textures\Pistol_K1.tga"/>

@@ -100,6 +100,14 @@
         <AlertIcon value="Assets\Textures\btn-ability-terran-warpjump.dds"/>
         <Universal value="1"/>
     </CButton>
+    <CButton id="KianaC1Attack">
+        <Icon value="Assets\Textures\KianaC2_Attack.tga"/>
+        <AlertIcon value="Assets\Textures\KianaC2_Attack.tga"/>
+        <Hotkey value="Button/Hotkey/Attack"/>
+        <EditorCategories value="Race:Neutral"/>
+        <Universal value="1"/>
+        <SimpleDisplayText value="SimpleDisplay/KianaC1Attack"/>
+    </CButton>
     <CButton id="MobilizeSkill2">
         <Icon value="Assets\Textures\Talent-Raynor-Level08-OrbitalDropPods.dds"/>
         <AlertIcon value="Assets\Textures\Talent-Raynor-Level08-OrbitalDropPods.dds"/>

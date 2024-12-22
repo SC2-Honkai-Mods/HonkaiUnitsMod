@@ -155,6 +155,10 @@
         <UnitGlossaryCamera value="Star2CameraMid04"/>
     </CModel>
     <CModel id="ArmoryBuild"/>
+    <CModel id="KinanPistolAttackLaunch" parent="LaunchFX">
+        <Model value="Assets\Models\Kiana_C1\KianaRangedAttackBeam.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
     <CModel id="Herrscher8thProjector" parent="PersistentSpellFX" Race="Terran">
         <Model value="Assets\Models\Herrscher8thProject\Herrscher8thProject.m3"/>
         <Priority value="32"/>
