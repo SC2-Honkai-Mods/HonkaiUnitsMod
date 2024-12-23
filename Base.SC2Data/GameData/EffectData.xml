@@ -8946,9 +8946,9 @@
         <PeriodicEffectArray value="KianaC1RangeAttackLeftDamage"/>
         <PeriodicEffectArray value="KianaC1SummonedAttack"/>
         <PeriodicEffectArray value="KianaC1RangeAttack2ReadyApply"/>
-        <PeriodicPeriodArray value="0.375"/>
-        <PeriodicPeriodArray value="0"/>
         <PeriodicPeriodArray value="0.3125"/>
+        <PeriodicPeriodArray value="0"/>
+        <PeriodicPeriodArray value="0.375"/>
         <Flags index="Channeled" value="1"/>
     </CEffectCreatePersistent>
     <CEffectCreatePersistent id="KianaC1RangeAttack2">
@@ -8985,11 +8985,11 @@
         <PeriodicEffectArray value="KianaC1RangeAttackRightDamage"/>
         <PeriodicEffectArray value="KianaC1SummonedAttack"/>
         <PeriodicEffectArray value="KianaC1RangeAttack4ReadyApply"/>
-        <PeriodicPeriodArray value="0.5"/>
+        <PeriodicPeriodArray value="0.4375"/>
         <PeriodicPeriodArray value="0"/>
         <PeriodicPeriodArray value="0.125"/>
         <PeriodicPeriodArray value="0"/>
-        <PeriodicPeriodArray value="0.1875"/>
+        <PeriodicPeriodArray value="0.25"/>
         <FinalEffect value="KianaC1RangeAttack3Remove"/>
         <Flags index="Channeled" value="1"/>
     </CEffectCreatePersistent>

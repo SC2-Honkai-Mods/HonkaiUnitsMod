@@ -151,7 +151,7 @@
         <SoundArray index="Movement" value="Thor_Movement"/>
     </CActorUnit>
     <CActorAction default="1" id="SeeleAttack" parent="GenericAttack">
-        <LaunchAssets Model="SeeleAttackLaunch" Sound="SeeleC1Attack1Launch"/>
+        <LaunchAssets Model="SeeleBlur" Scale="0.800000" Sound="SeeleC1Attack1Launch"/>
         <ContainerAssets Model="SeeleC1Attack1DamageBunkerAttackLaunch" Sound="SeeleC1Attack1DamageBunkerAttackLaunch"/>
         <ImpactMap index="None" Model="" Sound="DarkTemplar_AttackImpact" ModelReaction=""/>
         <ImpactMap index="Flesh" Sound="PhysicsImpactFleshMedium"/>
@@ -159,6 +159,7 @@
         <ImpactPhysics Name="Attack" MatchKeys="Basic" Physics="SeeleAttackDeathForce"/>
         <DamageMap index="None" Model="SeeleAttackDamage" Sound="SeeleAttackDamage" ModelReaction="SeeleAttackDamageReaction"/>
         <DamageMap index="Shield" Sound="SeeleAttackDamageShield" ModelReaction="SeeleAttackDamageReactionShield"/>
+        <LaunchSiteOps Ops="SOpAttachTarget" HoldPosition="1" HoldRotation="1"/>
     </CActorAction>
     <CActorAction default="1" id="MeiAttack" parent="SeeleAttack"/>
     <CActorUnit default="1" id="RO_04x" parent="CActorUnitWithSource">
@@ -586,7 +587,7 @@
         <Scale value="1.250000,1.250000,1.000000"/>
     </CActorSplat>
     <CActorAction id="KianaC1RangedAttackLeft" parent="GenericAttack" effectAttack="KianaC1RangeAttackLeftDamage">
-        <LaunchSiteOps Ops="SOpAttachWeaponLeft SOpForwardCasterCenter" HoldPosition="1" HoldRotation="1"/>
+        <LaunchSiteOps Ops="SOpAttachWeaponLeft SOpForwardImpactGuide" HoldPosition="1" HoldRotation="1"/>
         <LaunchAttachQuery Methods="AMFilterWeaponLeft" Fallback="Weapon"/>
         <LaunchAssets Model="KinanPistolAttackLaunch" Sound="KianaShoot"/>
         <ContainerSiteOps Ops="SOpAttachWeaponLeft" HoldPosition="1" HoldRotation="1"/>
@@ -601,7 +602,7 @@
         </ImpactPhysics>
     </CActorAction>
     <CActorAction id="KianaC1RangedAttackRight" parent="GenericAttack" effectAttack="KianaC1RangeAttackRightDamage">
-        <LaunchSiteOps Ops="SOpAttachWeaponRight" HoldPosition="1" HoldRotation="1"/>
+        <LaunchSiteOps Ops="SOpAttachWeaponRight SOpForwardImpactGuide" HoldPosition="1" HoldRotation="1"/>
         <LaunchAttachQuery Methods="AMFilterWeaponRight" Fallback="Weapon"/>
         <LaunchAssets Model="KinanPistolAttackLaunch" Sound="KianaShoot"/>
         <ContainerSiteOps Ops="SOpAttachWeaponRight" HoldPosition="1" HoldRotation="1"/>
@@ -1799,6 +1800,8 @@
         <ImpactMap index="None" Sound="Zealot_AttackImpact"/>
         <ImpactMap index="Flesh" Sound=""/>
         <ImpactMap index="Shield" Sound=""/>
+        <LaunchAssets Model="SeeleAttackLaunch" Scale="1.000000"/>
+        <LaunchSiteOps Ops="SOpAttachHarness" HoldPosition="0" HoldRotation="0"/>
     </CActorAction>
     <CActorForceCylinder id="NukeShockwave22">
         <On Terms="ActorCreation" Send="TimerSet 0.200000 PhasePause"/>
@@ -2281,19 +2284,6 @@
         <Host Subject="_Selectable"/>
         <HostSiteOps Ops="SOpAttachCenter SOpRotationRandomFull" HoldPosition="1" HoldRotation="1"/>
     </CActorModel>
-    <CActorModel id="SeeleBlurUltimate3" parent="ModelAnimationStyleOneShot" unitName="">
-        <On Terms="Effect.SeeleC1UltimateDamage2.Start" Send="Create"/>
-        <On Terms="Effect.SeeleC1UltChargeDamage.Start" Send="Create"/>
-        <Host Subject="_Selectable"/>
-        <HostSiteOps Ops="SOpAttachTarget" HoldPosition="1" HoldRotation="1"/>
-        <Model value="SeeleBlurRed"/>
-    </CActorModel>
-    <CActorModel id="SeeleBlurUltimate1" parent="ModelAnimationStyleOneShot">
-        <On Terms="Effect.SeeleC1UltimateDamage.Start" Send="Create"/>
-        <Host Subject="_Selectable"/>
-        <HostSiteOps Ops="SOpAttachTarget SOpRotationRandomFull" HoldPosition="1" HoldRotation="1"/>
-        <Model value="SeeleBlur"/>
-    </CActorModel>
     <CActorModel id="SeeleBlurUltimate2" parent="ModelAnimationStyleOneShot">
         <On Terms="Effect.SeeleC1UltimateDamage.Start" Send="Create"/>
         <Host Subject="_Selectable"/>
@@ -2306,14 +2296,6 @@
         <Host Subject="_Selectable"/>
         <HostSiteOps Ops="SOpAttachTarget SOpRotationRandomFull" HoldPosition="1" HoldRotation="1"/>
         <Model value="SeeleBlurRed"/>
-    </CActorModel>
-    <CActorModel id="SeeleBlurUltimate4" parent="ModelAnimationStyleOneShot" unitName="">
-        <On Terms="Effect.SeeleC1UltimateDamage3.Start" Send="Create"/>
-        <On Terms="Effect.SeeleC1UltChargeDamage2.Start" Send="Create"/>
-        <Host Subject="_Selectable"/>
-        <HostSiteOps Ops="SOpAttachTarget" HoldPosition="1" HoldRotation="1"/>
-        <Model value="SeeleBlurRed"/>
-        <Scale value="1.300000"/>
     </CActorModel>
     <CActorSound id="SeeleC1ChargeULaunch" parent="SoundOneShot">
         <EditorCategories value=""/>
@@ -2335,12 +2317,6 @@
     <CActorSplat id="SeeleC1ChargeSplat" parent="TerranCursorSplat" abil="SeeleC1Charge">
         <Scale value="2.000000,2.000000,1.000000"/>
     </CActorSplat>
-    <CActorModel id="SeeleBlurCharge" parent="ModelAnimationStyleContinuous">
-        <On Terms="Effect.SeeleC1ChargeAttackModel.Start" Send="Create"/>
-        <HostSiteOps Ops="SOpShadow SOpMoveUpBy1 SOpRotationRandomFull" HoldPosition="1" HoldRotation="1"/>
-        <Model value="SeeleBlur"/>
-        <Scale value="0.800000"/>
-    </CActorModel>
     <CActorUnit id="KianaBuilding" parent="TerranBuildingEx" unitName="KianaBuilding">
         <Aliases value="_UnitHuge"/>
         <CreepHeightClass value="Small"/>
@@ -2685,35 +2661,6 @@
         <On Terms="Abil.que82.Start" Send="StatusIncrement Queuing"/>
         <On Terms="Abil.que82.Stop" Send="StatusDecrement Queuing"/>
     </CActorEventMacro>
-    <CActorModel id="SeeleBlur" parent="ModelAnimationStyleOneShot" unitName="">
-        <On Terms="Effect.SeeleC1Attack1Damage.Start" Send="Create"/>
-        <On Terms="Effect.SeeleC1Attack2Damage2.Start" Send="Create"/>
-        <On Terms="Effect.SeeleC1Attack3Damage2.Start" Send="Create"/>
-        <On Terms="Effect.SeeleC1Attack4Damage.Start" Send="Create"/>
-        <On Terms="Effect.SeeleC1Attack4Damage2.Start" Send="Create"/>
-        <On Terms="Effect.SeeleC1Attack5Damage2.Start" Send="Create"/>
-        <On Terms="Effect.R11Damage.Start" Send="Create"/>
-        <On Terms="ActorCreation; ValidateEffect SeeleC1Ultimate" Send="ModelSwap SeeleBlurRed 255 PredecessorDestroyImmediate,PreventAllDynamicTextureTransfers"/>
-        <Host Subject="_Selectable"/>
-        <HostSiteOps Ops="SOpAttachTarget" HoldPosition="1" HoldRotation="1"/>
-        <Scale value="0.800000"/>
-    </CActorModel>
-    <CActorModel id="SeeleBlurSmall" parent="ModelAnimationStyleOneShot" unitName="">
-        <On Terms="Effect.SeeleC1Attack3Damage.Start" Send="Create"/>
-        <On Terms="Effect.SeeleC1Attack5Damage.Start" Send="Create"/>
-        <On Terms="ActorCreation; ValidateEffect SeeleC1Ultimate" Send="ModelSwap SeeleBlurRed 255 PredecessorDestroyImmediate,PreventAllDynamicTextureTransfers"/>
-        <Host Subject="_Selectable"/>
-        <HostSiteOps Ops="SOpAttachTarget" HoldPosition="1" HoldRotation="1"/>
-        <Model value="SeeleBlur"/>
-        <Scale value="0.600000"/>
-    </CActorModel>
-    <CActorModel id="SeeleBlurInvert" parent="ModelAnimationStyleOneShot" unitName="">
-        <On Terms="Effect.SeeleC1Attack2Damage.Start" Send="Create"/>
-        <On Terms="ActorCreation; ValidateEffect SeeleC1Ultimate" Send="ModelSwap SeeleBlurRed 255 PredecessorDestroyImmediate,PreventAllDynamicTextureTransfers"/>
-        <Host Subject="_Selectable"/>
-        <HostSiteOps Ops="SOpAttachTarget SOp180" HoldPosition="1" HoldRotation="1"/>
-        <Model value="SeeleBlur"/>
-    </CActorModel>
     <CActorUnit id="SeeleC1" parent="CActorUnitWithIcon" unitName="SeeleC1">
         <Aliases value="_UnitSmall"/>
         <Macros value="UnloadDropAnim"/>
@@ -2878,17 +2825,8 @@
     <CActorPortrait id="PortraitDG_013" parent="CActorPortraitWithSource" unitName="DG_013"/>
     <CActorPortrait id="PortraitDG_021" parent="CActorPortraitWithSource" unitName="DG_021"/>
     <CActorPortrait id="PortraitDG_023" parent="CActorPortraitWithSource" unitName="DG_023"/>
-    <CActorAction id="SeeleC1ChargeAttack" parent="GenericAttack" effectAttack="SeeleC1ChargeAttack">
-        <LaunchAssets Model=""/>
-        <ImpactMap index="None" Model="" Sound="DarkTemplar_AttackImpact" ModelReaction=""/>
-        <ImpactMap index="Flesh" Sound="PhysicsImpactFleshMedium"/>
-        <ImpactMap index="Shield" Sound="PhysicsImpactMetalProtossHeavyLight" ModelReaction=""/>
-        <ImpactPhysics>
-            <Name value="Attack00"/>
-            <MatchKeys value="Basic"/>
-            <AttackAnimProps value="00"/>
-            <Physics value="ZealotAttackDeathForce00"/>
-        </ImpactPhysics>
+    <CActorAction id="SeeleC1ChargeAttack" parent="SeeleAttack" effectAttack="SeeleC1ChargeAttack">
+        <LaunchSiteOps Ops="SOpShadow SOpMoveUpBy1 SOpRotationRandomFull"/>
     </CActorAction>
     <CActorSound id="SeeleC1ChargeLaunch" parent="SoundOneShot">
         <EditorCategories value=""/>
@@ -8721,19 +8659,36 @@
         <Sound value="Oracle_StasisTrap_Explode"/>
     </CActorSound>
     <CActorAction id="SeeleC1Attack1" parent="SeeleAttack" effectAttack="SeeleC1Attack1Damage"/>
-    <CActorAction id="SeeleC1Attack2" parent="SeeleAttack" effectAttack="SeeleC1Attack2Damage"/>
+    <CActorAction id="SeeleC1Attack2" parent="SeeleAttack" effectAttack="SeeleC1Attack2Damage">
+        <LaunchSiteOps Ops="SOpAttachTarget SOp180"/>
+    </CActorAction>
     <CActorAction id="SeeleC1Attack22" parent="SeeleAttack" effectAttack="SeeleC1Attack2Damage2"/>
-    <CActorAction id="SeeleC1Attack3" parent="SeeleAttack" effectAttack="SeeleC1Attack3Damage"/>
+    <CActorAction id="SeeleC1Attack3" parent="SeeleAttack" effectAttack="SeeleC1Attack3Damage">
+        <LaunchAssets Scale="0.600000"/>
+    </CActorAction>
     <CActorAction id="SeeleC1Attack32" parent="SeeleAttack" effectAttack="SeeleC1Attack3Damage2"/>
     <CActorAction id="SeeleC1Attack4" parent="SeeleAttack" effectAttack="SeeleC1Attack4Damage"/>
     <CActorAction id="SeeleC1Attack42" parent="SeeleAttack" effectAttack="SeeleC1Attack4Damage2"/>
-    <CActorAction id="SeeleC1Attack5" parent="SeeleAttack" effectAttack="SeeleC1Attack5Damage"/>
+    <CActorAction id="SeeleC1Attack5" parent="SeeleAttack" effectAttack="SeeleC1Attack5Damage">
+        <LaunchAssets Scale="0.600000"/>
+    </CActorAction>
     <CActorAction id="SeeleC1Attack52" parent="SeeleAttack" effectAttack="SeeleC1Attack5Damage2"/>
-    <CActorAction id="SeeleC1UltimateDamage" parent="SeeleAttack" effectAttack="SeeleC1UltimateDamage"/>
-    <CActorAction id="SeeleC1UltimateDamage2" parent="SeeleAttack" effectAttack="SeeleC1UltimateDamage2"/>
-    <CActorAction id="SeeleC1UltimateDamage3" parent="SeeleAttack" effectAttack="SeeleC1UltimateDamage3"/>
-    <CActorAction id="SeeleC1UltChargeDamage" parent="SeeleAttack" effectAttack="SeeleC1UltChargeDamage"/>
-    <CActorAction id="SeeleC1UltChargeDamage2" parent="SeeleAttack" effectAttack="SeeleC1UltChargeDamage2"/>
+    <CActorAction id="SeeleC1UltimateDamage" parent="SeeleAttack" effectAttack="SeeleC1UltimateDamage">
+        <LaunchSiteOps Ops="SOpAttachTarget SOpRotationRandomFull"/>
+        <LaunchAssets Scale="1.000000"/>
+    </CActorAction>
+    <CActorAction id="SeeleC1UltimateDamage2" parent="SeeleAttack" effectAttack="SeeleC1UltimateDamage2">
+        <LaunchAssets Model="SeeleBlurRed" Scale="1.000000"/>
+    </CActorAction>
+    <CActorAction id="SeeleC1UltimateDamage3" parent="SeeleAttack" effectAttack="SeeleC1UltimateDamage3">
+        <LaunchAssets Model="SeeleBlurRed" Scale="1.300000"/>
+    </CActorAction>
+    <CActorAction id="SeeleC1UltChargeDamage" parent="SeeleAttack" effectAttack="SeeleC1UltChargeDamage">
+        <LaunchAssets Model="SeeleBlurRed" Scale="1.000000"/>
+    </CActorAction>
+    <CActorAction id="SeeleC1UltChargeDamage2" parent="SeeleAttack" effectAttack="SeeleC1UltChargeDamage2">
+        <LaunchAssets Model="SeeleBlurRed" Scale="1.300000"/>
+    </CActorAction>
     <CActorAction id="R11Damage" parent="SeeleAttack" effectAttack="R11Damage"/>
     <CActorAction id="MeiC2Attack1" parent="MeiAttack" effectAttack="MeiC2Attack1Damage"/>
     <CActorAction id="MeiC2Attack2" parent="MeiAttack" effectAttack="MeiC2Attack2Damage"/>
