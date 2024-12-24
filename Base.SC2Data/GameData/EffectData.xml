@@ -9013,16 +9013,177 @@
         <Flags index="Channeled" value="1"/>
     </CEffectCreatePersistent>
     <CEffectSet id="KianaC1SummonedAttack"/>
+    <CEffectSet id="KianaC1SummonedMeleeAttack"/>
     <CEffectDamage id="KianaC1RangeAttackLeftDamage">
         <EditorCategories value=""/>
         <ImpactLocation Value="TargetUnit"/>
         <Kind value="Ranged"/>
-        <Amount value="10"/>
+        <Amount value="20"/>
     </CEffectDamage>
     <CEffectDamage id="KianaC1RangeAttackRightDamage">
         <EditorCategories value=""/>
         <ImpactLocation Value="TargetUnit"/>
         <Kind value="Ranged"/>
-        <Amount value="10"/>
+        <Amount value="20"/>
+    </CEffectDamage>
+    <CEffectApplyBehavior id="KianaC1MeleeAttack2Ready">
+        <EditorCategories value=""/>
+        <WhichUnit Value="Source"/>
+        <Behavior value="KianaC1MeleeAttack2"/>
+    </CEffectApplyBehavior>
+    <CEffectRemoveBehavior id="KianaC1MeleeAttack2Remove">
+        <EditorCategories value=""/>
+        <BehaviorLink value="KianaC1MeleeAttack2"/>
+        <WhichUnit Value="Source"/>
+    </CEffectRemoveBehavior>
+    <CEffectApplyBehavior id="KianaC1MeleeAttack2ReadyApply">
+        <EditorCategories value="Race:Terran"/>
+        <WhichUnit Value="Source"/>
+        <Behavior value="KianaC1MeleeAttack2Ready"/>
+    </CEffectApplyBehavior>
+    <CEffectRemoveBehavior id="KianaC1MeleeAttack2ReadyRemove">
+        <EditorCategories value="Race:Terran"/>
+        <BehaviorLink value="KianaC1MeleeAttack2Ready"/>
+        <WhichUnit Value="Source"/>
+    </CEffectRemoveBehavior>
+    <CEffectApplyBehavior id="KianaC1MeleeAttack3Ready">
+        <EditorCategories value=""/>
+        <WhichUnit Value="Source"/>
+        <Behavior value="KianaC1MeleeAttack3"/>
+    </CEffectApplyBehavior>
+    <CEffectRemoveBehavior id="KianaC1MeleeAttack3Remove">
+        <EditorCategories value=""/>
+        <BehaviorLink value="KianaC1MeleeAttack3"/>
+        <WhichUnit Value="Source"/>
+    </CEffectRemoveBehavior>
+    <CEffectApplyBehavior id="KianaC1MeleeAttack3ReadyApply">
+        <EditorCategories value="Race:Terran"/>
+        <WhichUnit Value="Source"/>
+        <Behavior value="KianaC1MeleeAttack3Ready"/>
+    </CEffectApplyBehavior>
+    <CEffectRemoveBehavior id="KianaC1MeleeAttack3ReadyRemove">
+        <EditorCategories value="Race:Terran"/>
+        <BehaviorLink value="KianaC1MeleeAttack3Ready"/>
+        <WhichUnit Value="Source"/>
+    </CEffectRemoveBehavior>
+    <CEffectCreatePersistent id="KianaC1MeleeAttack1Move">
+        <EditorCategories value=""/>
+        <WhichLocation Value="TargetUnit"/>
+        <TimeScaleSource Value="Caster"/>
+        <Flags index="Channeled" value="1"/>
+        <InitialEffect value="KianaC1MeleeAttack1Speed"/>
+        <PeriodCount value="7"/>
+        <PeriodicEffectArray value="AttackingMoveForce"/>
+        <PeriodicPeriodArray value="0.0625"/>
+    </CEffectCreatePersistent>
+    <CEffectApplyBehavior id="KianaC1MeleeAttack1Speed">
+        <EditorCategories value="Race:Terran"/>
+        <WhichUnit Value="Caster"/>
+    </CEffectApplyBehavior>
+    <CEffectCreatePersistent id="KianaC1MeleeAttack2Move">
+        <EditorCategories value=""/>
+        <WhichLocation Value="TargetUnit"/>
+        <TimeScaleSource Value="Caster"/>
+        <Flags index="Channeled" value="1"/>
+        <InitialEffect value="KianaC1MeleeAttack2Speed"/>
+        <PeriodCount value="10"/>
+        <PeriodicEffectArray value="AttackingMoveForce"/>
+        <PeriodicPeriodArray value="0.0625"/>
+    </CEffectCreatePersistent>
+    <CEffectApplyBehavior id="KianaC1MeleeAttack2Speed">
+        <EditorCategories value="Race:Terran"/>
+        <WhichUnit Value="Caster"/>
+    </CEffectApplyBehavior>
+    <CEffectCreatePersistent id="KianaC1MeleeAttack3Move">
+        <EditorCategories value=""/>
+        <WhichLocation Value="TargetUnit"/>
+        <TimeScaleSource Value="Caster"/>
+        <Flags index="Channeled" value="1"/>
+        <InitialEffect value="KianaC1MeleeAttack3Speed"/>
+        <PeriodCount value="5"/>
+        <PeriodicEffectArray value="AttackingMoveForce"/>
+        <PeriodicPeriodArray value="0.0625"/>
+    </CEffectCreatePersistent>
+    <CEffectApplyBehavior id="KianaC1MeleeAttack3Speed">
+        <EditorCategories value="Race:Terran"/>
+        <WhichUnit Value="Caster"/>
+    </CEffectApplyBehavior>
+    <CEffectCreatePersistent id="KianaC1MeleeAttack1">
+        <EditorCategories value=""/>
+        <WhichLocation Value="TargetUnit"/>
+        <TimeScaleSource Value="Caster"/>
+        <InitialEffect value="KianaC1MeleeAttack1Move"/>
+        <PeriodCount value="3"/>
+        <PeriodicEffectArray value="KianaC1MeleeAttackDamage"/>
+        <PeriodicEffectArray value="KianaC1SummonedMeleeAttack"/>
+        <PeriodicEffectArray value="KianaC1MeleeAttack2ReadyApply"/>
+        <PeriodicPeriodArray value="0.25"/>
+        <PeriodicPeriodArray value="0"/>
+        <PeriodicPeriodArray value="0.375"/>
+        <Flags index="Channeled" value="1"/>
+    </CEffectCreatePersistent>
+    <CEffectCreatePersistent id="KianaC1MeleeAttack2">
+        <EditorCategories value="Race:Terran"/>
+        <WhichLocation Value="TargetUnit"/>
+        <TimeScaleSource Value="Caster"/>
+        <InitialEffect value="KianaC1MeleeAttack2Move"/>
+        <PeriodCount value="6"/>
+        <PeriodicEffectArray value="KianaC1MeleeAttack2Ready"/>
+        <PeriodicEffectArray value="KianaC1MeleeAttackDamage"/>
+        <PeriodicEffectArray value="KianaC1SummonedMeleeAttack"/>
+        <PeriodicEffectArray value="KianaC1MeleeAttackDamage"/>
+        <PeriodicEffectArray value="KianaC1SummonedMeleeAttack"/>
+        <PeriodicEffectArray value="KianaC1MeleeAttack3ReadyApply"/>
+        <PeriodicPeriodArray value="0"/>
+        <PeriodicPeriodArray value="0.25"/>
+        <PeriodicPeriodArray value="0"/>
+        <PeriodicPeriodArray value="0.3125"/>
+        <PeriodicPeriodArray value="0"/>
+        <PeriodicPeriodArray value="0.25"/>
+        <FinalEffect value="KianaC1MeleeAttack2Remove"/>
+        <Flags index="Channeled" value="1"/>
+    </CEffectCreatePersistent>
+    <CEffectCreatePersistent id="KianaC1MeleeAttack3">
+        <EditorCategories value="Race:Terran"/>
+        <WhichLocation Value="TargetUnit"/>
+        <TimeScaleSource Value="Caster"/>
+        <InitialEffect value="KianaC1MeleeAttack3Move"/>
+        <PeriodCount value="4"/>
+        <PeriodicEffectArray value="KianaC1MeleeAttack3Ready"/>
+        <PeriodicEffectArray value="KianaC1MeleeAttack3Damage"/>
+        <PeriodicEffectArray value="KianaC1SummonedMeleeAttack"/>
+        <PeriodicEffectArray value="VoidEffect"/>
+        <PeriodicPeriodArray value="0"/>
+        <PeriodicPeriodArray value="0.8125"/>
+        <PeriodicPeriodArray value="0"/>
+        <PeriodicPeriodArray value="0.5"/>
+        <FinalEffect value="KianaC1MeleeAttack3Remove"/>
+        <Flags index="Channeled" value="1"/>
+    </CEffectCreatePersistent>
+    <CEffectDamage id="KianaC1MeleeAttackDamage">
+        <EditorCategories value=""/>
+        <ImpactLocation Value="SourcePoint"/>
+        <Kind value="Melee"/>
+        <KindSplash value="Melee"/>
+        <Amount value="25"/>
+        <AreaArray Arc="119.9816" Radius="2" Fraction="1"/>
+        <SearchFilters value="Ground;Self,Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <SearchFlags index="CallForHelp" value="1"/>
+        <SearchFlags index="ExtendByUnitRadius" value="1"/>
+        <SearchFlags index="OffsetByUnitRadius" value="1"/>
+        <SearchFlags index="OffsetAreaByAngle" value="1"/>
+    </CEffectDamage>
+    <CEffectDamage id="KianaC1MeleeAttack3Damage">
+        <EditorCategories value=""/>
+        <ImpactLocation Value="CasterPoint"/>
+        <Kind value="Melee"/>
+        <KindSplash value="Melee"/>
+        <Amount value="60"/>
+        <AreaArray Radius="2.5" Fraction="1"/>
+        <SearchFilters value="Ground;Self,Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <SearchFlags index="CallForHelp" value="1"/>
+        <SearchFlags index="ExtendByUnitRadius" value="1"/>
+        <SearchFlags index="OffsetByUnitRadius" value="1"/>
+        <SearchFlags index="OffsetAreaByAngle" value="1"/>
     </CEffectDamage>
 </Catalog>

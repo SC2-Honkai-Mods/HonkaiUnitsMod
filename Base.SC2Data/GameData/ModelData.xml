@@ -813,6 +813,11 @@
         <Flags index="Wait" value="1"/>
         <ShadowRadius value="0.000000"/>
     </CModel>
+    <CModel id="KianaC1Blur" parent="RacePersistentSpellFX" Race="Terran">
+        <Model value="Assets\Models\Kiana_C1\Kiana_C1_Blur.m3"/>
+        <Flags index="Wait" value="1"/>
+        <ShadowRadius value="0.000000"/>
+    </CModel>
     <CModel id="SeeleC1" parent="CModelSeeleC1"/>
     <CModel id="NeedleSpinesWeapon2" parent="MissileFX">
         <Model value="Assets\Effects\Zerg\HydraliskMissile\HydraliskMissile.m3"/>

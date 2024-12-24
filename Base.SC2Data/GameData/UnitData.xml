@@ -811,6 +811,9 @@
             <Name value="Text/Weapon/ATTACK"/>
             <Weapon value="KianaATTACK"/>
         </EquipmentArray>
+        <WeaponArray Link="KianaC1MeleeAttack1"/>
+        <WeaponArray Link="KianaC1MeleeAttack2"/>
+        <WeaponArray Link="KianaC1MeleeAttack3"/>
         <WeaponArray Link="KianaC1RangeAttack1"/>
         <WeaponArray Link="KianaC1RangeAttack2"/>
         <WeaponArray Link="KianaC1RangeAttack3"/>

@@ -161,7 +161,9 @@
         <DamageMap index="Shield" Sound="SeeleAttackDamageShield" ModelReaction="SeeleAttackDamageReactionShield"/>
         <LaunchSiteOps Ops="SOpAttachTarget" HoldPosition="1" HoldRotation="1"/>
     </CActorAction>
-    <CActorAction default="1" id="MeiAttack" parent="SeeleAttack"/>
+    <CActorAction default="1" id="MeiAttack" parent="SeeleAttack">
+        <LaunchAssets Model=""/>
+    </CActorAction>
     <CActorUnit default="1" id="RO_04x" parent="CActorUnitWithSource">
         <Aliases value="_UnitSmall"/>
         <Macros value="ZergBurrowStandardAnimMacro"/>
@@ -255,6 +257,9 @@
         <SoundArray index="ClickError" value=""/>
         <SoundArray index="Highlight" value=""/>
     </CActorUnit>
+    <CActorAction id="KianaC1MeleeAttack" parent="SeeleAttack" effectAttack="KianaC1MeleeAttackDamage">
+        <LaunchAssets Model="KianaC1Blur"/>
+    </CActorAction>
     <CActorModel id="Herrscher8thProjector" parent="ModelAddition" unitName="">
         <Inherits index="TintColor" value="0"/>
         <On index="1" Terms="UnitDeath" Send="$Spell PlayForever,DontResetOnUnhide -1.000000 -1.000000 1.000000 AsTimeScaleAbsolute"/>
@@ -632,9 +637,9 @@
         <On index="68" Terms="WeaponStart.KianaC1RangeAttack2.AttackStart" Send="AnimPlay Attack Attack,02 0 -1.000000 -1.000000 1.000000 AsTimeScale 0.000000 5"/>
         <On Terms="WeaponStart.KianaC1RangeAttack3.AttackStart" Send="AnimPlay Attack Attack,03 0 -1.000000 -1.000000 1.000000 AsTimeScale 0.000000 5"/>
         <On Terms="WeaponStart.KianaC1RangeAttack4.AttackStart" Send="AnimPlay Attack Attack,04 0 -1.000000 -1.000000 1.000000 AsTimeScale 0.000000 5"/>
-        <On Terms="WeaponStart.KianaC2Attack5.AttackStart" Send="AnimPlay Attack Attack,05 0 -1.000000 -1.000000 1.000000 AsTimeScale 0.000000 5"/>
-        <On Terms="WeaponStart.KianaC2Branch3.AttackStart" Send="AnimPlay Attack Attack,06 0 -1.000000 -1.000000 1.000000 AsTimeScale 0.000000 5"/>
-        <On Terms="WeaponStart.KianaC2Branch4.AttackStart" Send="AnimPlay Attack Attack,07 0 -1.000000 -1.000000 1.000000 AsTimeScale 0.000000 5"/>
+        <On Terms="WeaponStart.KianaC1MeleeAttack1.AttackStart" Send="AnimPlay Attack Attack,05 0 -1.000000 -1.000000 1.000000 AsTimeScale 0.000000 5"/>
+        <On Terms="WeaponStart.KianaC1MeleeAttack2.AttackStart" Send="AnimPlay Attack Attack,06 0 -1.000000 -1.000000 1.000000 AsTimeScale 0.000000 5"/>
+        <On Terms="WeaponStart.KianaC1MeleeAttack3.AttackStart" Send="AnimPlay Attack Attack,07 0 -1.000000 -1.000000 1.000000 AsTimeScale 0.000000 5"/>
         <On Terms="Abil.KianaC2EvadeMoving.SourceCastStart" Send="AnimBracketStop Walk Instant"/>
         <On Terms="Abil.KianaC2EvadeMoving.SourceCastStart" Send="AnimPlay Attack Blink,02 0 -1.000000 -1.000000 1.000000 AsTimeScale 0.000000 60"/>
         <On Terms="Abil.KianaC2EvadeIdle.SourceCastStart" Send="AnimPlay Attack Blink,01 0 -1.000000 -1.000000 1.000000 AsTimeScale 0.000000 60"/>
@@ -8690,10 +8695,22 @@
         <LaunchAssets Model="SeeleBlurRed" Scale="1.300000"/>
     </CActorAction>
     <CActorAction id="R11Damage" parent="SeeleAttack" effectAttack="R11Damage"/>
-    <CActorAction id="MeiC2Attack1" parent="MeiAttack" effectAttack="MeiC2Attack1Damage"/>
-    <CActorAction id="MeiC2Attack2" parent="MeiAttack" effectAttack="MeiC2Attack2Damage"/>
-    <CActorAction id="MeiC2Attack3" parent="MeiAttack" effectAttack="MeiC2Attack3Damage"/>
-    <CActorAction id="MeiC2Attack4" parent="MeiAttack" effectAttack="MeiC2Attack4Damage"/>
-    <CActorAction id="MeiC2Attack5" parent="MeiAttack" effectAttack="MeiC2Attack5Damage"/>
-    <CActorAction id="MeiC2Branch" parent="MeiAttack" effectAttack="MeiC2BranchDamage"/>
+    <CActorAction id="MeiC2Attack1" parent="MeiAttack" effectAttack="MeiC2Attack1Damage">
+        <LaunchAssets Model="SeeleBlur"/>
+    </CActorAction>
+    <CActorAction id="MeiC2Attack2" parent="MeiAttack" effectAttack="MeiC2Attack2Damage">
+        <LaunchAssets Model="SeeleBlur"/>
+    </CActorAction>
+    <CActorAction id="MeiC2Attack3" parent="MeiAttack" effectAttack="MeiC2Attack3Damage">
+        <LaunchAssets Model="SeeleBlur"/>
+    </CActorAction>
+    <CActorAction id="MeiC2Attack4" parent="MeiAttack" effectAttack="MeiC2Attack4Damage">
+        <LaunchAssets Model="SeeleBlur"/>
+    </CActorAction>
+    <CActorAction id="MeiC2Attack5" parent="MeiAttack" effectAttack="MeiC2Attack5Damage">
+        <LaunchAssets Model="SeeleBlur"/>
+    </CActorAction>
+    <CActorAction id="MeiC2Branch" parent="MeiAttack" effectAttack="MeiC2BranchDamage">
+        <LaunchAssets Model="SeeleBlur"/>
+    </CActorAction>
 </Catalog>
