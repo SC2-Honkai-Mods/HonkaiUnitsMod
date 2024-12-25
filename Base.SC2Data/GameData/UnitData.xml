@@ -776,13 +776,20 @@
     <CUnit id="KianaC1" parent="CUnitKiana">
         <UserTag value="HonkaiText/KianaC1"/>
         <Speed value="3.8984"/>
-        <AbilArray index="11" Link="KianaC2Branch"/>
-        <AbilArray index="12" Link="MorphToKianaC2"/>
-        <AbilArray Link="MorphToKianaC4"/>
+        <AbilArray index="8" Link="MorphToKianaC2"/>
+        <AbilArray index="9" Link="MorphToKianaC4"/>
+        <AbilArray index="10" Link="Herrscher2RemoveMissile"/>
+        <AbilArray index="11" Link="Herrscher2ReboundMissile"/>
+        <AbilArray index="12" Link="KianaC1Ultimate"/>
         <BehaviorArray Link="HonkaiAttributeMech"/>
         <BehaviorArray Link="KianaC1RangeAttack1"/>
         <CardLayouts index="0">
             <LayoutButtons Face="KianaC1Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="1" Column="0"/>
+            <LayoutButtons Face="Herrscher2RemoveMissileOff" Type="AbilCmd" AbilCmd="Herrscher2RemoveMissile,Off" Row="2" Column="0"/>
+            <LayoutButtons Face="Herrscher2RemoveMissile" Type="AbilCmd" AbilCmd="Herrscher2RemoveMissile,On" Row="2" Column="0"/>
+            <LayoutButtons Face="Herrscher2ReboundMissileOff" Type="AbilCmd" AbilCmd="Herrscher2ReboundMissile,Off" Row="2" Column="1"/>
+            <LayoutButtons Face="Herrscher2ReboundMissile" Type="AbilCmd" AbilCmd="Herrscher2ReboundMissile,On" Row="2" Column="1"/>
+            <LayoutButtons Face="KianaC1Ultimate" Type="AbilCmd" AbilCmd="KianaC1Ultimate,Execute" Row="1" Column="1"/>
         </CardLayouts>
         <CardLayouts index="4" CardId="Equi">
             <LayoutButtons index="6">

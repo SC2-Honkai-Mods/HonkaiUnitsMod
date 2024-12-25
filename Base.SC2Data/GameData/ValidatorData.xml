@@ -172,6 +172,15 @@
         <Compare value="GT"/>
         <Behavior value="Herrscher8thAbil2"/>
     </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="KianaC1Buff">
+        <WhichUnit Value="Caster"/>
+        <Compare value="GT"/>
+        <Behavior value="KianaC1Buff"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="KianaC1SummonAttackNoCD">
+        <WhichUnit Value="Caster"/>
+        <Behavior value="KianaC1SummonAttackCD"/>
+    </CValidatorUnitCompareBehaviorCount>
     <CValidatorUnitCompareBehaviorCount id="TargetNoImaginary">
         <Behavior value="Herrscher8thAbil2B"/>
     </CValidatorUnitCompareBehaviorCount>

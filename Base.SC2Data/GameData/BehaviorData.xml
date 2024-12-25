@@ -821,6 +821,15 @@
         <Period value="0.5"/>
         <PeriodicEffect value="CoupleMeiSet"/>
     </CBehaviorBuff>
+    <CBehaviorBuff id="KianaC1Buff">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Duration value="20"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="KianaC1SummonAttackCD">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Duration value="0.7"/>
+    </CBehaviorBuff>
     <CBehaviorBuff id="KianaC2UltimateOff">
         <EditorCategories value="AbilityorEffectType:Units"/>
         <RemoveValidatorArray value="KianaC2Ultimate"/>

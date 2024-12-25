@@ -74,6 +74,7 @@ Abil/Name/IceTabletFactoryMorph3=石碑(重工厂)
 Abil/Name/IceTabletMorph2=石碑(已分离)
 Abil/Name/IceTabletMorph3=极寒石碑(已分离)
 Abil/Name/IceTabletUpgrade2=建筑变型(极寒石碑)
+Abil/Name/KianaC1Ultimate=虚界冲击
 Abil/Name/KianaC2Branch=白练 使用分支
 Abil/Name/KianaC2EvadeIdle=白练 时空闪避 静止
 Abil/Name/KianaC2EvadeMoving=白练 时空闪避 移动
@@ -250,6 +251,7 @@ Behavior/Name/HonkaiSlow=减速
 Behavior/Name/IcyUnit=寒冰系单位
 Behavior/Name/K23Damage2=天火出鞘
 Behavior/Name/K5B=K5 B
+Behavior/Name/KianaC1Buff=KianaC1Buff
 Behavior/Name/KianaC2Dizzy=女武神充能
 Behavior/Name/KianaC2Evade2=闪避无敌帧
 Behavior/Name/KianaC2Ultimate=爆发状态
@@ -563,6 +565,7 @@ Button/Name/K23Skill=天火出鞘
 Button/Name/K5Skill=雷神之怒
 Button/Name/KianaBuilding=建造射击训练室
 Button/Name/KianaC1Attack=亚空连射/虚数荆棘
+Button/Name/KianaC1Ultimate=虚界冲击
 Button/Name/KianaC2Attack=流星标靶
 Button/Name/KianaC2Branch=分支-彗星陨落
 Button/Name/KianaC2Evade=时空闪避
@@ -939,7 +942,8 @@ Button/Tooltip/K23Skill=消耗所有护盾和50%的生命，向前方爆发出�
 Button/Tooltip/K5Skill=砸下雷锤击倒敌人，造成20点物理伤害，并将敌人陷入脆弱状态，降低8点护甲，持续10秒
 Button/Tooltip/KianaBuilding=为<c val="FFFF00">琪亚娜·卡斯兰娜</c>提供升级
 Button/Tooltip/KianaC1=第三代女武神装甲，设计理念为「泛用性全领域作战装甲」。<n/><n/><c val="#ColorAttackInfo">特点:物理伤害、眩晕、爆发状态、时空。<n/>部分招式可对空</c>
-Button/Tooltip/KianaC1Attack=使用枪斗术进行五连攻击<n/>第一击：<d ref="Effect,KianaC2Attack1Damage,Amount*10"/>%攻击力物理伤害<n/>第二击：<d ref="Effect,KianaC2Attack2Damage,Amount*10"/>%攻击力物理伤害<n/>第三击：<d ref="Effect,KianaC2Attack2Damage,Amount*10"/>%攻击力物理伤害<n/>第四击：<d ref="Effect,KianaC2Attack4Damage,Amount*10"/>%攻击力物理伤害×2<n/>第五击：250%攻击力物理伤害<n/><n/>第二、第三击附加对目标一次远程射击，造成<d ref="Effect,KianaC2PistolRanged,Amount*10"/>%攻击力远程物理伤害
+Button/Tooltip/KianaC1Attack=远程攻击：亚空连射<n/>前三段攻击分别造成1、3、2次<d ref="Effect,KianaC1RangeAttackLeftDamage,Amount"/>点伤害，最后一击造成2次<d ref="Effect,KianaC1RangeAttackLeftDamage,Amount"/>点伤害并在目标处生成一个能量涡流，持续吸引敌人持续6秒，并使受影响的敌人受到的全伤害增加50%持续12秒。<n/><n/>近战攻击：虚数荆棘<n/>前两段攻击分别造成1次和2次<d ref="Effect,KianaC1MeleeAttackDamage,Amount"/>点范围伤害，最后一击造成<d ref="Effect,KianaC1MeleeAttack3Damage,Amount"/>点大范围伤害并使敌人眩晕。
+Button/Tooltip/KianaC1Ultimate=爆发律者之力，对大范围内敌人造成<d ref="Effect,KianaC1UltimateDamage,Amount"/>点伤害，并被时空锁定持续<d ref="Effect,TimeLock10s,Duration"/>秒，同时召唤亚空之矛进行三轮攻击。<n/><n/>之后进入<d ref="Behavior,KianaC1Buff,Duration"/>秒强化状态和霸体。期间普通攻击会召唤三支亚空之矛攻击(有<d ref="Behavior,KianaC1SummonAttackCD,Duration" precision="1"/>秒冷却时间，伤害<d ref="Effect,KianaC1SummonedAttackDamage,Amount"/>)，最后一击产生一个虚数空间将范围敌人时空锁定并召唤8支亚空之矛攻击；近战攻击额外召唤能量涡流，最后一击召唤贝纳勒斯发动吐息，造成12次直线范围25点伤害并击飞敌人。<n/><n/>强化状态结束时还会发射4支强化亚空之矛，每支造成20点范围伤害并击飞敌人。
 Button/Tooltip/KianaC2=第三代女武神装甲，设计理念为「泛用性全领域作战装甲」。<n/><n/><c val="#ColorAttackInfo">特点:物理伤害、眩晕、爆发状态、时空。<n/>部分招式可对空</c>
 Button/Tooltip/KianaC2Attack=使用枪斗术进行五连攻击<n/>第一击：<d ref="Effect,KianaC2Attack1Damage,Amount*10"/>%攻击力物理伤害<n/>第二击：<d ref="Effect,KianaC2Attack2Damage,Amount*10"/>%攻击力物理伤害<n/>第三击：<d ref="Effect,KianaC2Attack2Damage,Amount*10"/>%攻击力物理伤害<n/>第四击：<d ref="Effect,KianaC2Attack4Damage,Amount*10"/>%攻击力物理伤害×2<n/>第五击：250%攻击力物理伤害<n/><n/>第二、第三击附加对目标一次远程射击，造成<d ref="Effect,KianaC2PistolRanged,Amount*10"/>%攻击力远程物理伤害
 Button/Tooltip/KianaC2Branch=在普攻第二段时按下，将敌人踢飞并击落<n/>踢飞:50%攻击力物理伤害<n/>击落:275%攻击力物理伤害(可以对空)<n/><n/><c val="FFFF00">击飞敌人</c>
@@ -1923,6 +1927,19 @@ Effect/Name/K5Set=雷神之怒(Set)
 Effect/Name/K5Unit=雷神之怒 效果单位
 Effect/Name/KIANAC2UltimateSearch=Kiana C2 Ultimate Search
 Effect/Name/KianaATTACK=Kiana ATTACK
+Effect/Name/KianaC1Buff=KianaC1Buff
+Effect/Name/KianaC1SummonAttackCD=KianaC1SummonAttackCD
+Effect/Name/KianaC1SummonedAttack=KianaC1SummonedAttack
+Effect/Name/KianaC1SummonedAttackDamage=KianaC1SummonedAttackDamage
+Effect/Name/KianaC1SummonedAttackLaunch=KianaC1SummonedAttackLaunch
+Effect/Name/KianaC1SummonedAttackPosition=KianaC1SummonedAttackPosition
+Effect/Name/KianaC1SummonedAttackSearchTarget=KianaC1SummonedAttackSearchTarget
+Effect/Name/KianaC1SummonedAttackUltimate=KianaC1SummonedAttackUltimate
+Effect/Name/KianaC1SummonedAttackUltimateCP=KianaC1SummonedAttackUltimateCP
+Effect/Name/KianaC1UltimateCP=KianaC1UltimateCP
+Effect/Name/KianaC1UltimateDamage=KianaC1UltimateDamage
+Effect/Name/KianaC1UltimateTimeLockSearch=KianaC1UltimateTimeLockSearch
+Effect/Name/KianaC1UltimateTimeLockSet=KianaC1UltimateTimeLockSet
 Effect/Name/KianaC2ApplyEvade=Kiana C2 应用闪避无敌帧
 Effect/Name/KianaC2ApplyEvadeCD=Kiana C2 Apply Evade CD
 Effect/Name/KianaC2Attack1=Kiana C2 Attack 1
@@ -2351,6 +2368,7 @@ Effect/Name/TimeCrackSearchUnit=时空断裂 单位搜索
 Effect/Name/TimeCrackSelf=时空断裂 自身
 Effect/Name/TimeCrackSet=时空断裂 集合
 Effect/Name/TimeCrackUnit=时空断裂 单位
+Effect/Name/TimeLock10s=时空锁定 10秒
 Effect/Name/TimeLock5s=时空锁定 5秒
 Effect/Name/Transfusion2=Transfusion
 Effect/Name/TransfusionAB2=Transfusion AB
@@ -2736,6 +2754,7 @@ RequirementNode/Tooltip/StigmataValidCount=圣痕数量未达到上限
 RequirementNode/Tooltip/Sum2900348999CountBehaviorLightningRodFactoryCompleteOnlyAtUnit1653467348CountBehaviorLightningRodFactory2CompleteOnlyAtUnit1236727148CountBehaviorIceTabletFactoryCompleteOnlyAtUnitCountBehaviorIceTab4120943232=需要附属蓄电塔、石碑或科技实验室
 SimpleDisplay/AvatarPick=<s val="@@@SimpleCommandRow">按%hotkey键</c>然后</s> <IMG path="Assets\Textures\tutorialmouseleftbuttondown.dds" alignment="absolutemiddle"/> <s val="@@@SimpleCommandRow">地面自动攻击</s>
 SimpleDisplay/KianaC1Attack=<s val="@@@SimpleCommandRow">按%hotkey键</c>然后</s> <IMG path="Assets\Textures\tutorialmouseleftbuttondown.dds" alignment="absolutemiddle"/> <s val="@@@SimpleCommandRow">地面自动攻击</s>
+SimpleDisplay/KianaC1Ultimate=<s val="@@@SimpleCommandRow">按%hotkey键</c>然后</s> <IMG path="Assets\Textures\tutorialmouseleftbuttondown.dds" alignment="absolutemiddle"/> <s val="@@@SimpleCommandRow">地面自动攻击</s>
 SimpleDisplay/KianaC2Attack=<s val="@@@SimpleCommandRow">按%hotkey键</c>然后</s> <IMG path="Assets\Textures\tutorialmouseleftbuttondown.dds" alignment="absolutemiddle"/> <s val="@@@SimpleCommandRow">地面自动攻击</s>
 SimpleDisplay/KianaC2Branch=<s val="@@@SimpleCommandRow">按%hotkey键</c>然后</s> <IMG path="Assets\Textures\tutorialmouseleftbuttondown.dds" alignment="absolutemiddle"/> <s val="@@@SimpleCommandRow">地面自动攻击</s>
 SimpleDisplay/KianaC2Evade=<s val="@@@SimpleCommandRow">按%hotkey键</c>然后</s> <IMG path="Assets\Textures\tutorialmouseleftbuttondown.dds" alignment="absolutemiddle"/> <s val="@@@SimpleCommandRow">地面自动攻击</s>

@@ -247,6 +247,26 @@
         <ReturnLifeFraction value="0.5"/>
         <MaxCount value="4"/>
     </CAbilArmMagazine>
+    <CAbilEffectInstant id="KianaC1Ultimate">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Effect index="0" value="KianaC1UltimateCP"/>
+        <Flags index="AllowMovement" value="1"/>
+        <Flags index="AllowMovingSuppressed" value="1"/>
+        <Flags index="AllowTurningSuppressed" value="1"/>
+        <Cost>
+            <Vital index="Energy" value="100"/>
+            <Cooldown TimeUse="30"/>
+        </Cost>
+        <PrepTime value="0"/>
+        <FinishTime value="1.25"/>
+        <UninterruptibleArray index="Prep" value="1"/>
+        <UninterruptibleArray index="Cast" value="1"/>
+        <UninterruptibleArray index="Channel" value="1"/>
+        <UninterruptibleArray index="Finish" value="1"/>
+        <AINotifyEffect value="KianaC2Ultimate"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="KianaC1Ultimate" Requirements="KianaC2Ultimate"/>
+        <CursorEffect value="KianaC1UltimateTimeLockSearch"/>
+    </CAbilEffectInstant>
     <CAbilEffectTarget id="LaunchInterceptorsHyperion">
         <Alignment value="Negative"/>
         <EditorCategories value="AbilityorEffectType:Units"/>
@@ -1936,7 +1956,7 @@
     </CAbilEffectInstant>
     <CAbilEffectTarget id="KianaC4Ult">
         <Alignment value="Negative"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
         <PrepEffect value="KianaC4UltimateStart"/>
         <Effect index="0" value="KianaC4Ultimate"/>
         <Cost>
@@ -3026,6 +3046,7 @@
         <Flags index="Transient" value="1"/>
     </CAbilEffectInstant>
     <CAbilEffectInstant id="KianaC2Ultimate">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
         <Effect index="0" value="KianaC2UltimateCP"/>
         <Flags index="AllowMovement" value="1"/>
         <Flags index="AllowMovingSuppressed" value="1"/>
@@ -3201,7 +3222,7 @@
         </InfoArray>
     </CAbilBuild>
     <CAbilTrain id="TrainAvatar">
-        <EditorCategories value="AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
         <InfoArray index="Train1" Time="10">
             <Button DefaultButtonFace="TrainKianaC2" Requirements="KianaC2CanTrain"/>
             <Unit value="KianaC2"/>
@@ -3228,7 +3249,7 @@
         </InfoArray>
     </CAbilTrain>
     <CAbilResearch id="UnlockAvatar">
-        <EditorCategories value="AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
         <InfoArray index="Research1" Time="70" Upgrade="KianaC2Unlock">
             <Resource index="Minerals" value="400"/>
             <Resource index="Vespene" value="200"/>

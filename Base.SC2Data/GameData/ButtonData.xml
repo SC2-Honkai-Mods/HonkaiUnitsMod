@@ -101,12 +101,17 @@
         <Universal value="1"/>
     </CButton>
     <CButton id="KianaC1Attack">
-        <Icon value="Assets\Textures\KianaC2_Attack.tga"/>
-        <AlertIcon value="Assets\Textures\KianaC2_Attack.tga"/>
+        <Icon value="Assets\Textures\KianaC1Attack.tga"/>
+        <AlertIcon value="Assets\Textures\KianaC1Attack.tga"/>
         <Hotkey value="Button/Hotkey/Attack"/>
         <EditorCategories value="Race:Neutral"/>
         <Universal value="1"/>
-        <SimpleDisplayText value="SimpleDisplay/KianaC1Attack"/>
+    </CButton>
+    <CButton id="KianaC1Ultimate">
+        <Icon value="Assets\Textures\KianaC1Ultimate.tga"/>
+        <AlertIcon value="Assets\Textures\KianaC1Ultimate.tga"/>
+        <Hotkey value="Button/Hotkey/Ultimate"/>
+        <EditorCategories value="Race:Neutral"/>
     </CButton>
     <CButton id="MobilizeSkill2">
         <Icon value="Assets\Textures\Talent-Raynor-Level08-OrbitalDropPods.dds"/>
