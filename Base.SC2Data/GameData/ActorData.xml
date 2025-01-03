@@ -257,6 +257,43 @@
         <SoundArray index="ClickError" value=""/>
         <SoundArray index="Highlight" value=""/>
     </CActorUnit>
+    <CActorAction id="KianaC1SummonedAttack" parent="GenericAttack" effectImpact="KianaC1SummonedAttackDamage" effectLaunch="KianaC1SummonedAttackLaunch">
+        <LaunchSiteOps Ops="SOpCasterPoint SOpMoveUpBy3 SOpRandomPointInCircle1Dot5 SOpRandomPointInCircle1Dot5 SOpRandomPointInCircle1Dot5 SOpRandomPointInCircle1Dot5 SOpRandomPointInCircle1Dot5" HoldPosition="1" HoldRotation="1"/>
+        <LaunchAssets Model="" Sound="NovaPsiBlade_Launch_C_Superior"/>
+        <Missile value="Herrscher2ndWeaponMissile"/>
+        <ImpactMap index="None" Model="" Sound="NovaPsiBlade_Impact" ModelReaction=""/>
+        <ImpactMap index="Shield" Sound="" ModelReaction=""/>
+        <ImpactPhysics>
+            <Name value="Attack00"/>
+            <MatchKeys value="Basic"/>
+            <AttackAnimProps value="00"/>
+            <Physics value="ZealotAttackDeathForce00"/>
+        </ImpactPhysics>
+    </CActorAction>
+    <CActorUnit id="KianaC1Launcher" parent="GenericUnitStandard" unitName="KianaC1Launcher">
+        <Macros value="PhysicsDeathsSwarmGround"/>
+        <Macros value="PhysicsDeathsVoidGround"/>
+        <AcceptedTransfers index="AnimProps" value="0"/>
+        <AcceptedTransfers index="Textures" value="0"/>
+        <AcceptedTransfers index="Status" value="0"/>
+        <Model value="Invisible"/>
+        <ModelFlags index="AllowHitTest" value="0"/>
+        <ModelFlags index="NeedsVolumeMonitoring" value="0"/>
+        <ModelFlags index="OutlineEmitter" value="1"/>
+        <BuildModel value=""/>
+        <DeathArray index="Normal" ModelLink="" SoundLink=""/>
+        <DeathCustoms index="0" removed="1"/>
+        <DeathCustoms index="1" removed="1"/>
+        <DeathCustoms index="2" removed="1"/>
+        <DeathCustoms index="3" removed="1"/>
+        <DeathCustoms index="4" removed="1"/>
+        <DeathActorModel value="UnitDeathModelWithDeathMotionGround"/>
+        <PlacementModel value=""/>
+        <PlacementSound value="Protoss_BuildingPlacementSmall"/>
+        <WalkAnimTimeScalingAsFlyer value="1"/>
+        <BarOffset value="0"/>
+        <HeroIcon value=""/>
+    </CActorUnit>
     <CActorAction id="KianaC1MeleeAttack" parent="SeeleAttack" effectAttack="KianaC1MeleeAttackDamage">
         <LaunchAssets Model="KianaC1Blur"/>
     </CActorAction>
@@ -640,15 +677,12 @@
         <On Terms="WeaponStart.KianaC1MeleeAttack1.AttackStart" Send="AnimPlay Attack Attack,05 0 -1.000000 -1.000000 1.000000 AsTimeScale 0.000000 5"/>
         <On Terms="WeaponStart.KianaC1MeleeAttack2.AttackStart" Send="AnimPlay Attack Attack,06 0 -1.000000 -1.000000 1.000000 AsTimeScale 0.000000 5"/>
         <On Terms="WeaponStart.KianaC1MeleeAttack3.AttackStart" Send="AnimPlay Attack Attack,07 0 -1.000000 -1.000000 1.000000 AsTimeScale 0.000000 5"/>
-        <On Terms="Abil.KianaC2EvadeMoving.SourceCastStart" Send="AnimBracketStop Walk Instant"/>
-        <On Terms="Abil.KianaC2EvadeMoving.SourceCastStart" Send="AnimPlay Attack Blink,02 0 -1.000000 -1.000000 1.000000 AsTimeScale 0.000000 60"/>
-        <On Terms="Abil.KianaC2EvadeIdle.SourceCastStart" Send="AnimPlay Attack Blink,01 0 -1.000000 -1.000000 1.000000 AsTimeScale 0.000000 60"/>
         <On Terms="Abil.KianaC2Skin1.SourceCastStart" Send="ModelSwap KianaC2 255 PreventAllDynamicTextureTransfers"/>
         <On Terms="Abil.KianaC2Skin2.SourceCastStart" Send="ModelSwap KianaC2Reborn 255 PreventAllDynamicTextureTransfers"/>
         <On Terms="Abil.KianaSkin1.SourceCastStart" Send="ModelSwap KianaC2RebornEx 255 PreventAllDynamicTextureTransfers"/>
-        <On Terms="Abil.KianaC2Ultimate.SourcePrepStart" Send="AnimPlay Attack Spell 0 -1.000000 -1.000000 1.000000 AsTimeScale"/>
-        <On Terms="AbilMorph.*.Finish; MorphFrom KianaC2" Send="Destroy"/>
-        <On Terms="AbilMorph.*.Finish; MorphTo KianaC2" Send="Create"/>
+        <On Terms="Abil.KianaC1Ultimate.SourcePrepStart" Send="AnimPlay Attack Spell 0 -1.000000 -1.000000 1.000000 AsTimeScale"/>
+        <On Terms="AbilMorph.*.Finish; MorphFrom KianaC1" Send="Destroy"/>
+        <On Terms="AbilMorph.*.Finish; MorphTo KianaC1" Send="Create"/>
         <On Terms="ActorCreation" Send="ModelSwap KianaC1 255 PredecessorDestroyImmediate,PreventAllDynamicTextureTransfers"/>
         <On Terms="Abil.KianaC2Skin1.SourceCastStart" Send="PortraitCustomize KianaC2Portrait"/>
         <On Terms="Abil.KianaC2Skin2.SourceCastStart" Send="PortraitCustomize KianaRebornC2Portrait"/>
@@ -1088,6 +1122,15 @@
         <ImpactSound value="GenericAttackImpactSoundPoint"/>
         <ShieldFlashType value="Full"/>
     </CActorAction>
+    <CActorAction id="KianaC1UltimateAttack" parent="GenericAttack" effectImpact="KianaC1UltimateSummonedDamage" effectLaunch="KianaC1UltimateLaunch">
+        <LaunchSiteOps Ops="SOpTargetPointStationary SOpHerrscher7thAbil1"/>
+        <LaunchAssets Sound="Carrier_InterceptorLaunch"/>
+        <Missile value="Herrscher2ndWeaponMissile"/>
+        <ImpactMap index="None" Model="FireExplodeSmall" Scale="2.000000" Sound="Bunker_Explode"/>
+        <ImpactModel value="GenericAttackImpactModelPoint"/>
+        <ImpactSound value="GenericAttackImpactSoundPoint"/>
+        <ShieldFlashType value="Full"/>
+    </CActorAction>
     <CActorModel id="Herrscher7thAttackMainEffect" parent="ModelAnimationStyleOneShot">
         <On Terms="Effect.Herrscher7thWeaponExplode.Start" Send="Create"/>
         <On Terms="ActorCreation" Send="Create Raven_HunterSeekerAttackImpact_AS"/>
@@ -1253,6 +1296,10 @@
             <Image value="Assets\Textures\Wireframe-Herrscher1st.tga"/>
         </Wireframe>
     </CActorUnit>
+    <CActorEventMacro id="Sizex2">
+        <EditorCategories value=""/>
+        <On Terms="Behavior.Sizex2.On" Send="SetScale 2.000000"/>
+    </CActorEventMacro>
     <CActorSound id="TimeFractureIntro" parent="SoundOneShot">
         <On Terms="AbilMorph.*.Start; MorphTo Barracks" Send="Create"/>
     </CActorSound>
@@ -6545,6 +6592,7 @@
     </CActorUnit>
     <CActorMissile id="Herrscher2ndWeaponMissile" parent="GenericAttackMissile" unitName="Herrscher2Weapon">
         <Model value="Herrscher2ndWeapon"/>
+        <Macros value="Sizex2"/>
     </CActorMissile>
     <CActorAction id="Herrscher2Attack" parent="GenericAttack" effectImpact="Herrscher2WeaponDamage" effectLaunch="Herrscher2WeaponLaunchMissile">
         <LaunchAttachQuery Methods="Weapon"/>

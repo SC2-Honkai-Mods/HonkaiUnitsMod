@@ -5822,7 +5822,7 @@
         </Element>
         <Element Type="Param" Id="65D487E5">
             <ParameterDef Type="ParamDef" Library="Ntve" Id="6FB1C942"/>
-            <Value>Herrscher4thWeaponSearch</Value>
+            <Value>KianaC1UltimateLaunch</Value>
             <ValueType Type="gamelink"/>
             <ValueGameType Type="Effect"/>
         </Element>

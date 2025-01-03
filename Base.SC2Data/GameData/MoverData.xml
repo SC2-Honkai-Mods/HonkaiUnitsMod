@@ -38,6 +38,33 @@
         </MotionPhases>
         <MotionPhases YawPitchRoll="MAX"/>
     </CMoverMissile>
+    <CMoverMissile id="KianaC1Missile1">
+        <MotionPhases>
+            <Driver value="Guidance"/>
+            <Acceleration value="4"/>
+            <MaxSpeed value="10"/>
+            <ClearanceAcceleration value="75"/>
+            <Outro value="-1"/>
+            <Timeout value="0.5"/>
+            <ThrowBandYaw value="-360,-360,-360,-360"/>
+            <ThrowBandPitch value="-360,-360,-360,-360"/>
+            <YawPitchRoll value="719.2968"/>
+        </MotionPhases>
+        <MotionPhases>
+            <Driver value="Guidance"/>
+            <Acceleration value="50"/>
+            <MaxSpeed value="100"/>
+            <ClearanceAcceleration value="75"/>
+            <Outro value="-1"/>
+            <ThrowBandYaw value="-360,-360,-360,-360"/>
+            <ThrowBandPitch value="-360,-360,-360,-360"/>
+            <YawPitchRoll value="719.2968"/>
+        </MotionPhases>
+        <MotionPhases ThrowBandYaw="-360,-360,-360,-360" ThrowBandPitch="-360,-360,-360,-360">
+            <Overlays/>
+            <Overlays/>
+        </MotionPhases>
+    </CMoverMissile>
     <CMoverFlock id="Null">
         <Flags index="IgnoreMovementSuppression" value="1"/>
         <Flags index="RestoreHeight" value="1"/>

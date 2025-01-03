@@ -258,7 +258,7 @@
             <Cooldown TimeUse="30"/>
         </Cost>
         <PrepTime value="0"/>
-        <FinishTime value="1.25"/>
+        <FinishTime value="2"/>
         <UninterruptibleArray index="Prep" value="1"/>
         <UninterruptibleArray index="Cast" value="1"/>
         <UninterruptibleArray index="Channel" value="1"/>

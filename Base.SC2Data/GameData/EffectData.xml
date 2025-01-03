@@ -18,6 +18,28 @@
         <Flags index="UseDuration" value="1"/>
         <Duration value="10"/>
     </CEffectApplyBehavior>
+    <CEffectApplyBehavior id="KianaC1SummonAttackCD">
+        <EditorCategories value=""/>
+    </CEffectApplyBehavior>
+    <CEffectDamage id="KianaC1UltimateSummonedDamage">
+        <EditorCategories value=""/>
+        <ImpactLocation Value="TargetPoint"/>
+        <Kind value="Ranged"/>
+        <KindSplash value="Ranged"/>
+        <Amount value="25"/>
+        <AreaArray Radius="2" Fraction="1"/>
+        <SearchFilters value="-;Self,Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <SearchFlags index="CallForHelp" value="1"/>
+    </CEffectDamage>
+    <CEffectLaunchMissile id="KianaC1UltimateLaunch">
+        <EditorCategories value="Race:Zerg"/>
+        <LaunchLocation Value="TargetPoint"/>
+        <ImpactLocation Value="TargetPoint"/>
+        <LaunchOffset value="0,0.1,15"/>
+        <ImpactEffect value="KianaC1UltimateSummonedDamage"/>
+        <AmmoUnit value="Herrscher2Weapon"/>
+        <LaunchEffect value="Sizex2"/>
+    </CEffectLaunchMissile>
     <CEffectDamage id="Herrscher8thAttackDamage">
         <EditorCategories value=""/>
         <ResponseFlags index="Acquire" value="1"/>
@@ -526,12 +548,12 @@
     </CEffectCreatePersistent>
     <CEffectApplyBehavior id="KianaC1Buff">
         <EditorCategories value=""/>
+        <WhichUnit Value="Caster"/>
     </CEffectApplyBehavior>
-    <CEffectRandomPointInCircle id="KianaC1SummonedAttackPosition">
-        <ValidatorArray value="KianaC1Buff"/>
-        <ValidatorArray value="KianaC1SummonAttackNoCD"/>
-        <Effect value="KianaC1SummonedAttackSearchTarget"/>
-        <Radius value="3"/>
+    <CEffectRandomPointInCircle id="KianaC1UltimatePosition">
+        <Effect value="KianaC1UltimateLaunch"/>
+        <Radius value="9"/>
+        <Count value="15"/>
     </CEffectRandomPointInCircle>
     <CEffectEnumArea id="KianaC1UltimateTimeLockSearch">
         <EditorCategories value=""/>
@@ -550,53 +572,36 @@
         <SearchFlags index="ExtendByUnitRadius" value="1"/>
         <SearchFlags index="OffsetByUnitRadius" value="1"/>
         <SearchFlags index="OffsetAreaByAngle" value="1"/>
+        <DebugTrace value="1"/>
     </CEffectDamage>
-    <CEffectRandomPointInCircle id="KianaC1SummonedAttackUltimate">
-        <Effect value="KianaC1SummonedAttackSearchTarget"/>
-        <Radius value="7"/>
-    </CEffectRandomPointInCircle>
     <CEffectDamage id="KianaC1SummonedAttackDamage">
         <EditorCategories value=""/>
         <ImpactLocation Value="TargetUnit"/>
         <Kind value="Ranged"/>
         <Amount value="10"/>
     </CEffectDamage>
-    <CEffectApplyBehavior id="KianaC1SummonAttackCD">
-        <EditorCategories value=""/>
-        <Behavior value="KianaC1Buff"/>
-    </CEffectApplyBehavior>
     <CEffectLaunchMissile id="KianaC1SummonedAttackLaunch">
         <EditorCategories value=""/>
-        <LaunchLocation Effect="KianaC1SummonedAttack" Value="TargetPoint"/>
-        <LaunchOffset value="0,0,4"/>
         <LaunchEffect value="KianaC1SummonAttackCD"/>
         <ImpactEffect value="KianaC1SummonedAttackDamage"/>
         <AmmoUnit value="Herrscher2Weapon"/>
+        <ImpactLocation Value="TargetUnitOrPoint"/>
+        <Movers Link="KianaC1Missile1"/>
+        <LaunchOffset value="0,0,3"/>
     </CEffectLaunchMissile>
-    <CEffectEnumArea id="KianaC1SummonedAttackSearchTarget">
-        <EditorCategories value=""/>
-        <AreaArray MaxCount="1" Radius="12" Effect="KianaC1SummonedAttackLaunch"/>
-        <MaxCount value="1"/>
-    </CEffectEnumArea>
     <CEffectCreatePersistent id="KianaC1UltimateCP">
         <EditorCategories value=""/>
         <InitialEffect value="KianaC1UltimateTimeLockSearch"/>
         <FinalEffect value="KianaC1Buff"/>
         <PeriodCount value="4"/>
-        <PeriodicEffectArray value="KianaC1SummonedAttackUltimateCP"/>
+        <PeriodicEffectArray value="KianaC1UltimatePosition"/>
         <PeriodicEffectArray value="KianaC1UltimateDamage"/>
-        <PeriodicEffectArray value="KianaC1SummonedAttackUltimateCP"/>
-        <PeriodicEffectArray value="KianaC1SummonedAttackUltimateCP"/>
-        <PeriodicPeriodArray value="0.75"/>
-        <PeriodicPeriodArray value="0.25"/>
+        <PeriodicEffectArray value="KianaC1UltimatePosition"/>
+        <PeriodicEffectArray value="KianaC1UltimatePosition"/>
+        <PeriodicPeriodArray value="0.375"/>
+        <PeriodicPeriodArray value="1"/>
         <PeriodicPeriodArray value="0"/>
-        <PeriodicPeriodArray value="0.25"/>
-    </CEffectCreatePersistent>
-    <CEffectCreatePersistent id="KianaC1SummonedAttackUltimateCP">
-        <EditorCategories value=""/>
-        <PeriodCount value="20"/>
-        <PeriodicEffectArray value="KianaC1SummonedAttackUltimate"/>
-        <PeriodicPeriodArray value="0.01"/>
+        <PeriodicPeriodArray value="1"/>
     </CEffectCreatePersistent>
     <CEffectSet id="KianaC1UltimateTimeLockSet">
         <EditorCategories value=""/>
@@ -655,6 +660,10 @@
         <Kind value="Ranged"/>
         <Amount value="8"/>
     </CEffectDamage>
+    <CEffectApplyBehavior id="Sizex2">
+        <EditorCategories value=""/>
+        <WhichUnit Value="Source"/>
+    </CEffectApplyBehavior>
     <CEffectSet id="ThorwEndSet">
         <EffectArray value="ThrowRemove"/>
         <EffectArray value="RemoveTarget"/>
@@ -9101,10 +9110,11 @@
     <CEffectCreatePersistent id="KianaC1SummonedAttack">
         <EditorCategories value=""/>
         <PeriodCount value="3"/>
-        <PeriodicEffectArray value="KianaC1SummonedAttackUltimate"/>
-        <PeriodicPeriodArray value="0.1875"/>
+        <PeriodicEffectArray value="KianaC1SummonedAttackLaunch"/>
+        <PeriodicPeriodArray value="0.0625"/>
         <ValidatorArray value="KianaC1Buff"/>
         <ValidatorArray value="KianaC1SummonAttackNoCD"/>
+        <WhichLocation Value="TargetUnitOrPoint"/>
     </CEffectCreatePersistent>
     <CEffectSet id="KianaC1SummonedMeleeAttack"/>
     <CEffectDamage id="KianaC1RangeAttackLeftDamage">

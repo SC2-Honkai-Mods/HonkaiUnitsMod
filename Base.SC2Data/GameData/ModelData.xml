@@ -246,13 +246,11 @@
         </Events>
         <Events Anim="Thrown" Name="KianaHit" Type="Sound"/>
         <Occlusion value="Show"/>
-        <PlanetPanelCamera value="Star2CameraMid04"/>
         <Radius value="0.375000"/>
         <SelectionOffset value="0.000000,0.000000,-0.500000"/>
         <SelectionRadius value="0.468700"/>
         <ShadowRadius value="0.468700"/>
         <SquibTypeDefault value="Flesh"/>
-        <UnitGlossaryCamera value="Star2CameraMid04"/>
     </CModel>
     <CModel id="KianaC1Portrait" parent="MarinePortraitBase">
         <Model value="Assets\Models\Kiana_C2_portrait\Kiana_C2_portrait.m3"/>

@@ -45,6 +45,7 @@
 <Effect id="TargetBurn"/>
 <Effect id="Herrscher8thAbil2AddCharge"/>
 <Effect id="Palsy"/>
+<Effect id="Flying"/>
 <Effect id="ThrowTypeII"/>
 <Effect id="BronyaC7Gun2RealDamage"/>
 <Effect id="BronyaC7HitSearch"/>
@@ -54,7 +55,6 @@
 <Effect id="DEBUGPOINT"/>
 <Effect id="Frozen"/>
 <Effect id="Dizzy"/>
-<Effect id="Flying"/>
 <Effect id="TimeLock5s"/>
 <Effect id="SeeleC1GainShadowByKill"/>
 <Effect id="StigmataDestroy"/>

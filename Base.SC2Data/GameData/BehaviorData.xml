@@ -1480,6 +1480,9 @@
             <StateFlags index="CannotDie" value="1"/>
         </Modification>
     </CBehaviorBuff>
+    <CBehaviorBuff id="Sizex2">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+    </CBehaviorBuff>
     <CBehaviorBuff id="SpecialKill">
         <BehaviorFlags index="EnabledWhileDead" value="1"/>
         <InfoFlags index="Hidden" value="1"/>

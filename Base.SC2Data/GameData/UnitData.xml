@@ -543,6 +543,47 @@
         <HotkeyCategory value="Unit/Category/TerranUnits"/>
         <AIEvaluateAlias value="CUnitBuildingTerr"/>
     </CUnit>
+    <CUnit id="KianaC1Launcher">
+        <DeathRevealRadius value="0"/>
+        <Race value="Terr"/>
+        <Mob value="Multiplayer"/>
+        <FlagArray index="Unselectable" value="1"/>
+        <FlagArray index="Untargetable" value="1"/>
+        <FlagArray index="Undetectable" value="1"/>
+        <FlagArray index="Unradarable" value="1"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <FlagArray index="KillCredit" value="0"/>
+        <FlagArray index="Invulnerable" value="1"/>
+        <FlagArray index="Buried" value="1"/>
+        <FlagArray index="AcquireRally" value="1"/>
+        <FlagArray index="PlayerRevivable" value="0"/>
+        <Attributes index="Summoned" value="1"/>
+        <Mover value="FlyLow"/>
+        <Speed value="2.25"/>
+        <Acceleration value="1000"/>
+        <StationaryTurningRate value="360"/>
+        <TurningRate value="360"/>
+        <Height value="6"/>
+        <CostCategory value="Army"/>
+        <DamageDealtXP value="1"/>
+        <DamageTakenXP value="1"/>
+        <AbilArray Link="stop"/>
+        <AbilArray Link="attack"/>
+        <AbilArray Link="move"/>
+        <CardLayouts>
+            <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
+            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
+            <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="2"/>
+            <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
+        </CardLayouts>
+        <Radius value="0"/>
+        <SeparationRadius value="0"/>
+        <ScoreResult value="BuildOrder"/>
+        <MinimapRadius value="0.375"/>
+        <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
+        <GlossaryPriority value="20"/>
+    </CUnit>
     <CUnit id="Herrscher8thAbil2Selector">
         <Race value="Zerg2"/>
         <Mob value="Multiplayer"/>
