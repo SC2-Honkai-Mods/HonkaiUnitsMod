@@ -3273,7 +3273,6 @@
         </InfoArray>
         <InfoArray index="Train6" Time="10">
             <Button DefaultButtonFace="TrainKianaC1" Requirements="KianaC1CanTrain"/>
-            <Unit value="BronyaC7"/>
             <Unit value="KianaC1"/>
         </InfoArray>
     </CAbilTrain>

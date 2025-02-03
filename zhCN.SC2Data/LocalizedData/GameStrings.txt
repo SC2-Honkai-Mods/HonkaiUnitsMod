@@ -1142,7 +1142,8 @@ Button/Tooltip/TerranInfantryArmorLevel12=提升女武神单位的护盾护甲�
 Button/Tooltip/TerranInfantryWeaponsLevel12=提升普通<c val="FFFF00">女武神-看守者</c>单位的火力，可升级8次。
 Button/Tooltip/TerranVehiclePlatingLevel12=提升机甲单位的护甲，可升级8次。
 Button/Tooltip/TerranVehicleWeaponsLevel12=提升机甲单位的火力，可升级10次。
-Button/Tooltip/TrainBronyaC7=布洛妮娅在量子之海中与理之律者核心融合之后的姿态，重装小兔和布洛妮娅本人的样子都朝着“她理想中的样子”产生了一些变化。<n/><n/><c val="#ColorAttackInfo">能力: 冰元素伤害、施加易伤状态。可以进入骑乘模式，大幅提高机动性。<c>
+Button/Tooltip/TrainBronyaC7=琪亚娜掌控了空之律者能力后的形态，可以在必要时爆发出强大的力量。<n/><n/><c val="#ColorAttackInfo">特点:物理伤害、时空锁定、大范围伤害和浮空。<n/>可对地、对空</c>
+Button/Tooltip/TrainKianaC1=琪亚娜掌控了空之律者能力后的形态，可以在必要时爆发出强大的力量。<n/><n/><c val="#ColorAttackInfo">特点:物理伤害、时空锁定、大范围伤害和浮空。<n/>可对地、对空</c>
 Button/Tooltip/TrainKianaC2=第三代女武神装甲，设计理念为「泛用性全领域作战装甲」。<n/><n/><c val="#ColorAttackInfo">能力:物理伤害、眩晕、爆发、时空。</c>
 Button/Tooltip/TrainKianaC4=试做型第四代女武神弑神装甲。装甲内高速流动的伽马粒子不断从背部的连接处扩散出来----其形态，犹如一对神圣的双翼。<n/><n/><c val="#ColorAttackInfo">能力:物理伤害、时空、高频伤害。</c>
 Button/Tooltip/TrainMeiC2=第三代女武神装甲，设计理念为「白刃战特化突击装甲」。<n/><n/><c val="#ColorAttackInfo">能力:物理伤害、击飞。</c>
@@ -1518,6 +1519,7 @@ DocInfo/PatchNote318=·修复了技能“尤利西斯”不需要研发神之键
 DocInfo/PatchNote319=·修复了幻海梦蝶使用必杀技时会被打断的bug
 DocInfo/PatchNote320=·修复人口统计错误的bug
 DocInfo/PatchNote321=·修复了女武神cp远程伤害加成过高的bug
+DocInfo/PatchNote322=·加入了空之律者（琪亚娜）
 Effect/Name/AcidSalivaU=UL_030 Damage
 Effect/Name/AddDizzyCD=Add Dizzy CD
 Effect/Name/AddFrozenCD=Add Frozen CD

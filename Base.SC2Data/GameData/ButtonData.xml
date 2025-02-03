@@ -286,7 +286,7 @@
     <CButton id="UnlockKianaC1">
         <Tooltip value="Button/Tooltip/TrainBronyaC7"/>
         <Icon value="Assets\Textures\AvatarKianaC1.tga"/>
-        <AlertTooltip value="Button/Tooltip/TrainBronyaC7"/>
+        <AlertTooltip value="Button/Tooltip/KianaC1"/>
         <AlertIcon value="Assets\Textures\AvatarKianaC1.tga"/>
     </CButton>
     <CButton id="UnlockMeiC2">

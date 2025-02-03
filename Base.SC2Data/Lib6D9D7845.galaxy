@@ -1892,7 +1892,6 @@ bool lib6D9D7845_gt_Debug4_Func (bool testConds, bool runActions) {
     }
 
     libNtve_gf_SetUpgradeLevelForPlayer(1, "HerrscherPhase", 1);
-    libNtve_gf_SetUpgradeLevelForPlayer(1, "DivineKey7th", 1);
     libNtve_gf_SetUpgradeLevelForPlayer(1, "DivineKey9th", 1);
     libNtve_gf_SetUpgradeLevelForPlayer(1, "KianaATTACK", 16);
     libNtve_gf_SetUpgradeLevelForPlayer(1, "KianaShield", 16);
@@ -1910,6 +1909,33 @@ bool lib6D9D7845_gt_Debug4_Func (bool testConds, bool runActions) {
 void lib6D9D7845_gt_Debug4_Init () {
     lib6D9D7845_gt_Debug4 = TriggerCreate("lib6D9D7845_gt_Debug4_Func");
     TriggerAddEventKeyPressed(lib6D9D7845_gt_Debug4, c_playerAny, c_keyNumPad7, true, c_keyModifierStateIgnore, c_keyModifierStateIgnore, c_keyModifierStateIgnore);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Debug 6
+//--------------------------------------------------------------------------------------------------
+bool lib6D9D7845_gt_Debug6_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Conditions
+    if (testConds) {
+        if (!(lib6D9D7845_gf_E58581E8AEB8E8B083E8AF95())) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    libNtve_gf_SetUpgradeLevelForPlayer(1, "HerrscherPhase", 1);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib6D9D7845_gt_Debug6_Init () {
+    lib6D9D7845_gt_Debug6 = TriggerCreate("lib6D9D7845_gt_Debug6_Func");
+    TriggerAddEventKeyPressed(lib6D9D7845_gt_Debug6, c_playerAny, c_keyNumPad6, true, c_keyModifierStateIgnore, c_keyModifierStateIgnore, c_keyModifierStateIgnore);
 }
 
 //--------------------------------------------------------------------------------------------------
@@ -2104,6 +2130,49 @@ bool lib6D9D7845_gt_E5A29EE58AA0E88083E58FA4_Func (bool testConds, bool runActio
 void lib6D9D7845_gt_E5A29EE58AA0E88083E58FA4_Init () {
     lib6D9D7845_gt_E5A29EE58AA0E88083E58FA4 = TriggerCreate("lib6D9D7845_gt_E5A29EE58AA0E88083E58FA4_Func");
     TriggerAddEventChatMessage(lib6D9D7845_gt_E5A29EE58AA0E88083E58FA4, c_playerAny, "-KG", true);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: ??????
+//--------------------------------------------------------------------------------------------------
+bool lib6D9D7845_gt_E8AEA9E8A180_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    string lv_e58D95E4BD8D;
+    string lv_e58F82E695B01;
+    string lv_e58F82E695B02;
+    int lv_e695B0E9878F;
+
+    // Automatic Variable Declarations
+    // Variable Initialization
+    lv_e58F82E695B01 = "";
+    lv_e58F82E695B02 = "";
+    lv_e695B0E9878F = 1;
+
+    // Conditions
+    if (testConds) {
+        if (!(lib6D9D7845_gf_E58581E8AEB8E8B083E8AF95())) {
+            return false;
+        }
+
+        if (!((StringWord(EventChatMessage(false), 1) == "-HP"))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    lv_e58F82E695B01 = StringWord(EventChatMessage(false), 2);
+    PlayerModifyPropertyFixed(15, c_playerPropHandicap, c_playerPropOperSetTo, StringToFixed(lv_e58F82E695B01));
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib6D9D7845_gt_E8AEA9E8A180_Init () {
+    lib6D9D7845_gt_E8AEA9E8A180 = TriggerCreate("lib6D9D7845_gt_E8AEA9E8A180_Func");
+    TriggerAddEventChatMessage(lib6D9D7845_gt_E8AEA9E8A180, c_playerAny, "-HP", false);
 }
 
 //--------------------------------------------------------------------------------------------------
@@ -7977,11 +8046,13 @@ void lib6D9D7845_InitTriggers () {
     lib6D9D7845_gt_Debug2_Init();
     lib6D9D7845_gt_Debug3_Init();
     lib6D9D7845_gt_Debug4_Init();
+    lib6D9D7845_gt_Debug6_Init();
     lib6D9D7845_gt_DebugEffect_Init();
     lib6D9D7845_gt_DebugUnitBehavior_Init();
     lib6D9D7845_gt_E5BC80E59BBE_Init();
     lib6D9D7845_gt_E8B083E8AF95E58D87E7BAA7_Init();
     lib6D9D7845_gt_E5A29EE58AA0E88083E58FA4_Init();
+    lib6D9D7845_gt_E8AEA9E8A180_Init();
     lib6D9D7845_gt_E58D95E4BD8DE58AA0E9809F_Init();
     lib6D9D7845_gt_E58D95E4BD8DE6B58BE8AF95E7949FE68890_Init();
     lib6D9D7845_gt_E58D95E4BD8DE6B58BE8AF95E7A7BBE999A4_Init();

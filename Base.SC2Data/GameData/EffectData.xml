@@ -88,7 +88,6 @@
         <ImpactLocation Value="TargetPoint"/>
         <ImpactEffect value="K23CP2"/>
         <Flags index="2D" value="1"/>
-        <Flags index="Placement" value="1"/>
         <PlacementRange value="1"/>
         <Movers Link="K23AbilityMover"/>
         <DeathType value="Unknown"/>
@@ -7219,7 +7218,6 @@
         <ImpactLocation Value="TargetPoint"/>
         <ImpactEffect value="K23CP"/>
         <Flags index="2D" value="1"/>
-        <Flags index="Placement" value="1"/>
         <PlacementRange value="1"/>
         <Movers Link="K23AbilityMover"/>
         <DeathType value="Unknown"/>
