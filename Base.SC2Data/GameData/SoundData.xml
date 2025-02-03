@@ -109,6 +109,19 @@
         <OffsetFadeIn Volume="-96.000000"/>
         <OffsetFadeIn Time="483"/>
     </CSound>
+    <CSound id="KianaC1Ultimate" parent="Voice">
+        <AssetArray File="Assets\Sounds\Kiana\KianaC1\天穹游侠-决战的时刻到了！.wav" FacialGroup=""/>
+        <MixerPriority value="3"/>
+    </CSound>
+    <CSound id="KianaC1DragonShort" parent="Spell">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="Assets\Sounds\Kiana\Dragon\DragonBreathShort1.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Kiana\Dragon\DragonBreathShort2.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Kiana\Dragon\DragonBreathShort3.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Kiana\Dragon\DragonBreathShort4.wav" FacialGroup=""/>
+        <Pitch value="-1.500000,1.500000"/>
+        <Volume value="4.540000,4.540000"/>
+    </CSound>
     <CSound id="MusicHerrscher8thAbil2" parent="MUSIC">
         <AssetArray File="Assets\Sounds\Music\HOYO-MiX - Hard Bone.ogg" FacialGroup="">
             <SyncPoints value="0"/>
@@ -136,6 +149,15 @@
         <AssetArray File="Assets\Sounds\BronyaC7\SratOfEdenWorld_Abil1.mp3"/>
         <Pitch value="-1.500000,1.500000"/>
         <Volume value="6.000000,6.000000"/>
+    </CSound>
+    <CSound id="KianaC1DragonLong" parent="Spell">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="Assets\Sounds\Kiana\Dragon\DragonBreathLong1.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Kiana\Dragon\DragonBreathLong2.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Kiana\Dragon\DragonBreathLong3.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Kiana\Dragon\DragonBreathLong4.wav" FacialGroup=""/>
+        <Pitch value="-1.500000,1.500000"/>
+        <Volume value="4.540000,4.540000"/>
     </CSound>
     <CSound id="TimeFractureOutro" parent="Spell">
         <EditorCategories value="Race:Terran"/>
@@ -655,6 +677,17 @@
         <AssetArray File="Assets\Sounds\KianaC2\KianaC2Attack5Voice3.wav" FacialGroup=""/>
         <MixerPriority value="3"/>
     </CSound>
+    <CSound id="KianaC1AttackVoice1" parent="Voice">
+        <AssetArray File="Assets\Sounds\Kiana\KianaC1\天穹游侠 (2).wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Kiana\KianaC1\天穹游侠 (25).wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Kiana\KianaC1\天穹游侠 (3).wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Kiana\KianaC1\天穹游侠 (4).wav" FacialGroup=""/>
+        <MixerPriority value="3"/>
+    </CSound>
+    <CSound id="KianaC1AttackVoice2" parent="Voice">
+        <AssetArray File="Assets\Sounds\Kiana\KianaC1\天穹游侠 (13).wav" FacialGroup=""/>
+        <MixerPriority value="3"/>
+    </CSound>
     <CSound id="DG_010Attack" parent="Combat">
         <AssetArray File="Assets\Sounds\DG_010\DG_010_attack_void.wav" FacialGroup=""/>
         <Flags index="Purgable" value="0"/>
@@ -719,6 +752,57 @@
         <AssetArray File="Assets\Sounds\Kiana\琪亚娜-舰长，你要我穿成这样去战斗？才...才没有担心会弄脏呢。.mp3" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\Kiana\琪亚娜-啊，新衣服！最喜欢舰长啦！.mp3" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\Kiana\琪亚娜-不知道这个颜色芽衣喜不喜欢呢？.mp3" FacialGroup=""/>
+    </CSound>
+    <CSound id="KianaC1_Attack" parent="TerranAck">
+        <AssetArray File="Assets\Sounds\Kiana\KianaC1\天穹游侠-哼，轻易就能打败你们！.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Kiana\KianaC1\天穹游侠-绝不会败在你们手里！.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Kiana\KianaC1\天穹游侠-Attack！.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Kiana\KianaC1\天穹游侠-尝尝这个！.wav" FacialGroup=""/>
+        <Flags index="Download" value="0"/>
+        <Volume value="-1.000000,-1.000000"/>
+    </CSound>
+    <CSound id="KianaC1_Death" parent="Death">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="Assets\Sounds\Kiana\KianaC1\天穹游侠-呃...不会...让你得逞....wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Kiana\KianaC1\天穹游侠-不，这不可能...我怎么会....wav" FacialGroup=""/>
+        <Volume value="-1.000000,-1.000000"/>
+    </CSound>
+    <CSound id="KianaC1_Help" parent="Alert">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="Assets\Sounds\Kiana\KianaC1\天穹游侠-你就是造成混乱的元凶吗？.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Kiana\KianaC1\天穹游侠-我会战斗到最后一刻！.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Kiana\KianaC1\天穹游侠-走开！.wav" FacialGroup=""/>
+        <Mode value="3DWorld"/>
+        <Volume value="-1.000000,-1.000000"/>
+    </CSound>
+    <CSound id="KianaC1_Pissed" parent="TerranAck">
+        <AssetArray File="Assets\Sounds\Kiana\KianaC1\天穹游侠-舰长，要来一起聊聊天吗？.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Kiana\KianaC1\天穹游侠-最后的那堂课，我会永远铭记在心。.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Kiana\KianaC1\天穹游侠-如果...如果能早一点掌握那份力量....wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Kiana\KianaC1\天穹游侠-我无法选择命运，但可以选择，成为什么样的人。.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Kiana\KianaC1\天穹游侠-我会去努力改变这个不完美的世界！.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Kiana\KianaC1\天穹游侠-我，会成为真正的自己！.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Kiana\KianaC1\天穹游侠-谢谢你以前一直不嫌弃我的捣蛋，舰长。.wav" FacialGroup=""/>
+        <Flags index="Download" value="0"/>
+        <Select value="Sequential"/>
+        <Volume value="-1.000000,-1.000000"/>
+    </CSound>
+    <CSound id="KianaC1_Ready" parent="Ready">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="Assets\Sounds\Kiana\KianaC1\天穹游侠-现在是琪亚娜时间。.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Kiana\KianaC1\天穹游侠-舰长，我准备好了！.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Kiana\KianaC1\天穹游侠-即使命运无法改变，我也不会再逃避了。.wav" FacialGroup=""/>
+        <Volume value="-1.000000,-1.000000"/>
+    </CSound>
+    <CSound id="KianaC1_What" parent="TerranAck">
+        <AssetArray File="Assets\Sounds\Kiana\KianaC1\天穹游侠-现在不是发呆的时候了。.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Kiana\KianaC1\天穹游侠-呵，又要思考今晚吃什么了。.wav" FacialGroup=""/>
+        <Volume value="-1.000000,-1.000000"/>
+    </CSound>
+    <CSound id="KianaC1_Yes" parent="TerranAck">
+        <AssetArray File="Assets\Sounds\Kiana\KianaC1\天穹游侠-我，会成为真正的自己！.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Kiana\KianaC1\天穹游侠-这里是我的主场。.wav" FacialGroup=""/>
+        <Volume value="-1.000000,-1.000000"/>
     </CSound>
     <CSound id="Seele_Attack" parent="TerranAck">
         <AssetArray File="Assets\Sounds\Seele\希儿-和我一起战斗吧！.mp3" FacialGroup=""/>

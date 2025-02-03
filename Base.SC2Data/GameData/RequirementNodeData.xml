@@ -4,6 +4,10 @@
     <CRequirementAnd id="AndCountUpgradeBronyaC2UnlockCompleteOnly2420890365">
         <OperandArray value="CountUpgradeBronyaC2UnlockCompleteOnly2420890365"/>
     </CRequirementAnd>
+    <CRequirementAnd id="AndCountUpgradeDivineKey7thCompleteOnly3249686718NotCountBehaviorWeaponUseK23CompleteOnlyAtUnit3368134584">
+        <OperandArray value="CountUpgradeDivineKey7thCompleteOnly3249686718"/>
+        <OperandArray value="NotCountBehaviorWeaponUseK23CompleteOnlyAtUnit3368134584"/>
+    </CRequirementAnd>
     <CRequirementAnd id="AndCountUpgradeDivineKey9thCompleteOnly1761932935Not723435156CountBehaviorWeaponUseB28CompleteOnly3451675864">
         <OperandArray value="CountUpgradeDivineKey9thCompleteOnly1761932935"/>
         <OperandArray value="Not723435156CountBehaviorWeaponUseB28CompleteOnly3451675864"/>
@@ -64,6 +68,14 @@
         <Flags index="TechTreeCheat" value="0"/>
         <Count Link="HyperionInterceptor" State="CompleteOnlyAtUnit"/>
     </CRequirementCountUnit>
+    <CRequirementCountUnit id="CountUnitKianaC1QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="KianaC1" State="QueuedOrBetter"/>
+    </CRequirementCountUnit>
+    <CRequirementCountUnit id="CountUnitKianaC1Revivable">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="KianaC1" State="Revivable"/>
+    </CRequirementCountUnit>
     <CRequirementCountUnit id="CountUnitMeiC2QueuedOrBetter">
         <Flags index="TechTreeCheat" value="0"/>
         <Count Link="MeiC2" State="QueuedOrBetter"/>
@@ -122,12 +134,10 @@
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeBronyaC7UnlockCompleteOnly">
         <Flags index="TechTreeCheat" value="0"/>
-        <Tooltip value="RequirementNode/Tooltip/##id##"/>
         <Count Link="BronyaC7Unlock" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeBronyaC7UnlockQueuedOrBetter">
         <Flags index="TechTreeCheat" value="0"/>
-        <Tooltip value="RequirementNode/Tooltip/##id##"/>
         <Count Link="BronyaC7Unlock" State="QueuedOrBetter"/>
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeBronyaHealthQueuedOrBetter">
@@ -137,6 +147,10 @@
     <CRequirementCountUpgrade id="CountUpgradeBronyaShieldQueuedOrBetter">
         <Flags index="TechTreeCheat" value="0"/>
         <Count Link="BronyaShield" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeDivineKey7thCompleteOnly3249686718">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="DivineKey7th" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeDivineKey9thCompleteOnly1761932935">
         <Flags index="TechTreeCheat" value="0"/>
@@ -152,7 +166,6 @@
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeHerrscherPhaseCompleteOnly">
         <Flags index="TechTreeCheat" value="0"/>
-        <Tooltip value="RequirementNode/Tooltip/##id##"/>
         <Count Link="HerrscherPhase" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeHerrscherPhaseCompleteOnly2847090691">
@@ -161,13 +174,19 @@
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeHonkaiTacticalJumpCompleteOnly">
         <Flags index="TechTreeCheat" value="0"/>
-        <Tooltip value="RequirementNode/Tooltip/##id##"/>
         <Count Link="HonkaiTacticalJump" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeHonkaiTacticalJumpQueuedOrBetter">
         <Flags index="TechTreeCheat" value="0"/>
-        <Tooltip value="RequirementNode/Tooltip/##id##"/>
         <Count Link="HonkaiTacticalJump" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeKianaC1UnlockCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="KianaC1Unlock" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeKianaC1UnlockQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="KianaC1Unlock" State="QueuedOrBetter"/>
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeSupplyCompleteOnly">
         <Flags index="TechTreeCheat" value="0"/>
@@ -205,6 +224,9 @@
     <CRequirementNot id="Not157438788SumCountUnitBronyaC2QueuedOrBetterCountUnitBronyaC2RevivableCountUnitBronyaC7QueuedOrBetterCountUnitBronyaC7RevivableCountUnitBronyaC7MotorQueuedOrBetterCountUnitBronyaC7MotorRevivable">
         <OperandArray index="0" value="SumCountUnitBronyaC2QueuedOrBetterCountUnitBronyaC2RevivableCountUnitBronyaC7QueuedOrBetterCountUnitBronyaC7RevivableCountUnitBronyaC7MotorQueuedOrBetterCountUnitBronyaC7MotorRevivable"/>
     </CRequirementNot>
+    <CRequirementNot id="Not157438788SumCountUnitKianaC4QueuedOrBetterCountUnitKianaC4RevivableCountUnitKianaC2QueuedOrBetterCountUnitKianaC2RevivableCountUnitKianaC1QueuedOrBetterCountUnitKianaC1Revivable">
+        <OperandArray index="0" value="SumCountUnitKianaC4QueuedOrBetterCountUnitKianaC4RevivableCountUnitKianaC2QueuedOrBetterCountUnitKianaC2RevivableCountUnitKianaC1QueuedOrBetterCountUnitKianaC1Revivable"/>
+    </CRequirementNot>
     <CRequirementNot id="Not3138259586SumCountBehaviorWeaponUseB28CompleteOnlyCountBehaviorStarOfEdenWorldCompleteOnly">
         <OperandArray index="0" value="SumCountBehaviorWeaponUseB28CompleteOnlyCountBehaviorStarOfEdenWorldCompleteOnly"/>
     </CRequirementNot>
@@ -239,12 +261,13 @@
         <OperandArray index="0" value="CountUpgradeBronyaC2Upgrade3QueuedOrBetter"/>
     </CRequirementNot>
     <CRequirementNot id="NotCountUpgradeBronyaC7UnlockQueuedOrBetter">
-        <Tooltip value="RequirementNode/Tooltip/##id##"/>
         <OperandArray index="0" value="CountUpgradeBronyaC7UnlockQueuedOrBetter"/>
     </CRequirementNot>
     <CRequirementNot id="NotCountUpgradeHonkaiTacticalJumpQueuedOrBetter">
-        <Tooltip value="RequirementNode/Tooltip/##id##"/>
         <OperandArray index="0" value="CountUpgradeHonkaiTacticalJumpQueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeKianaC1UnlockQueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeKianaC1UnlockQueuedOrBetter"/>
     </CRequirementNot>
     <CRequirementConst id="NotFinished">
         <Flags index="TechTreeCheat" value="1"/>
@@ -345,10 +368,6 @@
     <CRequirementCountBehavior id="CountBehaviorKianaC2UltimateOffCompleteOnlyAtUnit">
         <Flags index="TechTreeCheat" value="0"/>
         <Count Link="KianaC2UltimateOff" State="CompleteOnlyAtUnit"/>
-    </CRequirementCountBehavior>
-    <CRequirementCountBehavior id="CountBehaviorKianaLookForBuildingCompleteOnlyAtUnit979450497">
-        <Flags index="TechTreeCheat" value="0"/>
-        <Count Link="KianaLookForBuilding" State="CompleteOnlyAtUnit"/>
     </CRequirementCountBehavior>
     <CRequirementCountBehavior id="CountBehaviorLightningRodFactory2CompleteOnlyAtUnit">
         <Flags index="TechTreeCheat" value="0"/>
@@ -2478,6 +2497,14 @@
         <OperandArray value="CountUnitKianaC2Revivable"/>
         <OperandArray value="CountUnitKianaC4QueuedOrBetter"/>
         <OperandArray value="CountUnitKianaC4Revivable"/>
+    </CRequirementSum>
+    <CRequirementSum id="SumCountUnitKianaC4QueuedOrBetterCountUnitKianaC4RevivableCountUnitKianaC2QueuedOrBetterCountUnitKianaC2RevivableCountUnitKianaC1QueuedOrBetterCountUnitKianaC1Revivable">
+        <OperandArray value="CountUnitKianaC4QueuedOrBetter"/>
+        <OperandArray value="CountUnitKianaC4Revivable"/>
+        <OperandArray value="CountUnitKianaC2QueuedOrBetter"/>
+        <OperandArray value="CountUnitKianaC2Revivable"/>
+        <OperandArray value="CountUnitKianaC1QueuedOrBetter"/>
+        <OperandArray value="CountUnitKianaC1Revivable"/>
     </CRequirementSum>
     <CRequirementSum id="SumCountUnitMeiC2QueuedOrBetterCountUnitMeiC2Revivable">
         <OperandArray value="CountUnitMeiC2QueuedOrBetter"/>

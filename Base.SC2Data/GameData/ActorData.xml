@@ -257,6 +257,34 @@
         <SoundArray index="ClickError" value=""/>
         <SoundArray index="Highlight" value=""/>
     </CActorUnit>
+    <CActorModel id="KianaC1BlackHole" parent="ModelAnimationStyleContinuous">
+        <On Terms="Effect.KianaC1BlackHole.Start" Send="Create"/>
+        <On Terms="Effect.KianaC1BlackHole.Stop" Send="AnimBracketStop BSD"/>
+        <HostSiteOps Ops="SOpShadow"/>
+        <Scale value="1.300000"/>
+    </CActorModel>
+    <CActorModel id="KianaC1DragonAttack1" parent="ModelAnimationStyleOneShot">
+        <On index="0" Terms="ActorCreation" Send="AnimBracketStart BSD {} Attack,01 {} ContentPlayOnce"/>
+        <On index="2" Terms="Effect.KianaC1DragonAttack1CP.Start; At Target" Send="Create"/>
+        <Model value="KianaC1DragonAttack"/>
+        <HostSiteOps Ops="SOpAttachOrigin SOpShadow SOpMoveUpBy1"/>
+        <ModelFlags index="AutomateGlobalLoops" value="1"/>
+        <EventDataSound Name="Roar" Sound="KianaC1DragonShort"/>
+    </CActorModel>
+    <CActorModel id="KianaC1DragonAttack2" parent="ModelAnimationStyleOneShot">
+        <On index="0" Terms="ActorCreation" Send="AnimBracketStart BSD {} Attack,02 {} ContentPlayOnce"/>
+        <On index="2" Terms="Effect.KianaC1DragonAttack2CP.Start; At Target" Send="Create"/>
+        <Model value="KianaC1DragonAttack"/>
+        <HostSiteOps Ops="SOpAttachOrigin SOpShadow SOpMoveUpBy1"/>
+        <ModelFlags index="AutomateGlobalLoops" value="1"/>
+        <EventDataSound Name="Roar" Sound="KianaC1DragonShort"/>
+    </CActorModel>
+    <CActorSound id="KianaC1DragonLong" parent="SoundOneShot"/>
+    <CActorSound id="KianaC1DragonShort" parent="SoundOneShot"/>
+    <CActorModel id="KianaC1Ultimate" parent="ModelAnimationStyleOneShot">
+        <On Terms="Effect.KianaC1UltimateCP.Start; At Caster" Send="Create"/>
+        <HostSiteOps Ops="SOpCasterPoint" HoldPosition="1" HoldRotation="1"/>
+    </CActorModel>
     <CActorAction id="KianaC1SummonedAttack" parent="GenericAttack" effectImpact="KianaC1SummonedAttackDamage" effectLaunch="KianaC1SummonedAttackLaunch">
         <LaunchSiteOps Ops="SOpCasterPoint SOpMoveUpBy3 SOpRandomPointInCircle1Dot5 SOpRandomPointInCircle1Dot5 SOpRandomPointInCircle1Dot5 SOpRandomPointInCircle1Dot5 SOpRandomPointInCircle1Dot5" HoldPosition="1" HoldRotation="1"/>
         <LaunchAssets Model="" Sound="NovaPsiBlade_Launch_C_Superior"/>
@@ -296,6 +324,12 @@
     </CActorUnit>
     <CActorAction id="KianaC1MeleeAttack" parent="SeeleAttack" effectAttack="KianaC1MeleeAttackDamage">
         <LaunchAssets Model="KianaC1Blur"/>
+    </CActorAction>
+    <CActorAction id="KianaC1MeleeAttack3" parent="SeeleAttack" effectAttack="KianaC1MeleeAttack3Damage">
+        <LaunchAssets Model="KianaC1Blur3"/>
+        <ImpactMap index="None" Sound="CivilianAttackImpact"/>
+        <LaunchSiteOps Ops="SOpAttachTargetSoft"/>
+        <LaunchAttachQuery Methods="Target 0" Fallback="Target"/>
     </CActorAction>
     <CActorModel id="Herrscher8thProjector" parent="ModelAddition" unitName="">
         <Inherits index="TintColor" value="0"/>
@@ -664,8 +698,6 @@
         <Macros value="PhysicsDeathsSwarmGround"/>
         <Macros value="TerrainSquibAnimationsComplete"/>
         <Macros value="PhysicsDeathsVoidGround"/>
-        <Macros value="PhysicsDeathsVoidGround"/>
-        <Macros value="PistolWeaponSkills"/>
         <Macros value="DizzyAnim"/>
         <Macros value="ThrowAnimation2"/>
         <On index="65" Terms="Abil.attack.ReadyStop" Send="AnimGroupRemove Ready"/>
@@ -684,18 +716,25 @@
         <On Terms="AbilMorph.*.Finish; MorphFrom KianaC1" Send="Destroy"/>
         <On Terms="AbilMorph.*.Finish; MorphTo KianaC1" Send="Create"/>
         <On Terms="ActorCreation" Send="ModelSwap KianaC1 255 PredecessorDestroyImmediate,PreventAllDynamicTextureTransfers"/>
-        <On Terms="Abil.KianaC2Skin1.SourceCastStart" Send="PortraitCustomize KianaC2Portrait"/>
-        <On Terms="Abil.KianaC2Skin2.SourceCastStart" Send="PortraitCustomize KianaRebornC2Portrait"/>
-        <On Terms="Abil.KianaSkin1.SourceCastStart" Send="PortraitCustomize KianaC2RebornEx"/>
-        <On Terms="SelectionLocalUpdate.*.Start; ModelName KianaC2" Send="PortraitCustomize KianaC2Portrait"/>
-        <On Terms="SelectionLocalUpdate.*.Start; ModelName KianaC2Reborn" Send="PortraitCustomize KianaRebornC2Portrait"/>
-        <On Terms="SelectionLocalUpdate.*.Start; ModelName KianaC2RebornEx" Send="PortraitCustomize KianaExPortrait2"/>
         <On Terms="AbilTrain.StigmataUse.Finish" Send="Create StigmataUpgrade"/>
         <On Terms="WeaponStart" Send="AnimBracketClear Walk Instant"/>
-        <EventDataSound index="0" Name="KianaAttack1" Actor="" Sound="KianaAttackVoice1"/>
-        <EventDataSound Name="KianaAttack2" Sound="KianaAttackVoice2"/>
-        <EventDataSound Name="KianaAttack3" Sound="KianaC2AttackVoice3"/>
-        <EventDataSound Name="KianaAttack4" Sound="KianaC2AttackVoice4"/>
+        <On Terms="Abil.KianaC1Ultimate.TargetPrepStart" Send="AnimPlay Cover Cover PlayForever -1.000000 -1.000000 1.000000 AsTimeScale 0.000000 63"/>
+        <On Terms="Behavior.KianaC1Buff.Off" Send="AnimClear Cover"/>
+        <On Terms="Abil.KianaC1Ultimate.TargetPrepStart" Target="::PortraitGameSelf" Send="Signal UltraStart"/>
+        <On Terms="Behavior.KianaC1Buff.Off" Target="::PortraitGameSelf" Send="Signal UltraStop"/>
+        <On Terms="SelectionLocalUpdate.*.Start; ValidateUnit KianaC1Buff 0 KianaC1" Send="TimerSet 0.125000 PortraitDelay"/>
+        <On Terms="TimerExpired; TimerName PortraitDelay" Target="::PortraitGameSelf" Send="Signal UltraStart"/>
+        <On Terms="Behavior.KianaC1Buff.Off" Send="TimerKill PortraitDelay"/>
+        <On Terms="ActorCreation" Send="Create KianaC1WeaponLeft"/>
+        <On Terms="ActorCreation" Send="Create KianaC1WeaponRight"/>
+        <On Terms="Abil.SkillK23_2.SourcePrepStart" Send="AnimPlay Weapon Custom,07 0 -1.000000 -1.000000 1.000000 AsTimeScale 0.000000 20"/>
+        <On Terms="Abil.SkillK23_2.SourcePrepStart" Send="Create K23SlashModel"/>
+        <On Terms="ModelEvent; ModelEventName HideWeapon" Target="KianaC1WeaponLeft" Send="Signal Hide"/>
+        <On Terms="ModelEvent; ModelEventName HideWeapon" Target="KianaC1WeaponRight" Send="Signal Hide"/>
+        <On Terms="ModelEvent; ModelEventName ShowWeapon" Target="KianaC1WeaponLeft" Send="Signal Show"/>
+        <On Terms="ModelEvent; ModelEventName ShowWeapon" Target="KianaC1WeaponRight" Send="Signal Show"/>
+        <EventDataSound index="0" Name="KianaAttack1" Actor="" Sound="KianaC1AttackVoice1"/>
+        <EventDataSound Name="KianaAttack2" Sound="KianaC1AttackVoice2"/>
         <EventDataSound Name="KianaHit" Sound="KianaHit"/>
         <DeathArray index="Normal" SoundLink="Marine_DeathFXBloodSpray" VoiceLink="Kiana_Death"/>
         <DeathArray index="Disintegrate" SoundLink="Uni_DeathFXAcid"/>
@@ -776,23 +815,11 @@
             <Visuals TerrainPhysicsMaterial="Water" ActorModel="TerrainSquibHarnessContinuous" ModelLink="WaterRippleSmall"/>
         </TerrainSquibs>
         <WalkAnimMoveSpeed value="5.3203"/>
-        <AbilSoundArray AbilCmd="KianaC2Ultimate,Execute" Sound="KianaC2AttackVoiceUltimate"/>
-        <AbilSoundArray AbilCmd="KianaC2Skin2,Execute" Sound="Kiana_Dress"/>
-        <AbilSoundArray AbilCmd="KianaSkin1,Execute" Sound="Kiana_Dress"/>
+        <AbilSoundArray AbilCmd="KianaC1Ultimate,Execute" Sound="KianaC1Ultimate"/>
         <BarOffset value="65"/>
         <BarWidth value="36"/>
         <GlossaryAnim value="Spell"/>
-        <GroupIcon>
-            <Image index="0" value="Assets\Textures\Wireframe-KianaC2.tga"/>
-        </GroupIcon>
-        <HeroIcon value="Assets\Textures\Wireframe-KianaC2.tga"/>
         <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel0.dds"/>
-        <SoundArray index="Ready" value="Kiana_Ready"/>
-        <SoundArray index="Help" value="Kiana_Help"/>
-        <SoundArray index="What" value="Kiana_What"/>
-        <SoundArray index="Yes" value="Kiana_Yes"/>
-        <SoundArray index="Attack" value="Kiana_Attack"/>
-        <SoundArray index="Pissed" value="Kiana_Pissed"/>
         <SoundArray index="Movement" value="Kiana_Movement"/>
         <StatusBarFlags index="Shields" value="0"/>
         <StatusBarFlags index="Life" value="0"/>
@@ -801,11 +828,8 @@
         <StatusBarFlags index="Magazine" value="0"/>
         <StatusBarFlags index="Workers" value="0"/>
         <StatusBarFlags index="Custom" value="0"/>
-        <UnitIcon value="Assets\Textures\Wireframe-KianaC2.tga"/>
         <UnitKillRank Text="Text/Rank/KianaC1"/>
-        <Wireframe>
-            <Image index="0" value="Assets\Textures\Wireframe-KianaC2.tga"/>
-        </Wireframe>
+        <PortraitActor value="SeeleC1Portrait"/>
     </CActorUnit>
     <CActorSplat id="MobilizeSkill2CursorSplat" parent="TerranCursorSplat" abil="MobilizeSkill2"/>
     <CActorUnit id="RPC6626" parent="GenericUnitStandard" unitName="RPC6626">
@@ -1149,6 +1173,9 @@
         <On index="2" Terms="Effect.QuasiBlackHoleCP.Start" Send="Create"/>
         <HostSiteOps Ops="SOpShadow"/>
     </CActorModel>
+    <CActorSiteOpAttach id="SOpAttachTarget8">
+        <AttachQuery Methods="Target 8"/>
+    </CActorSiteOpAttach>
     <CActorSiteOpRandomPointInCircle id="SOpRandomPointInCircle1Dot8th">
         <Radius value="11.000000"/>
         <Mean value="7.000000"/>
@@ -1296,10 +1323,20 @@
             <Image value="Assets\Textures\Wireframe-Herrscher1st.tga"/>
         </Wireframe>
     </CActorUnit>
+    <CActorSplat id="K23Splat" parent="TerranCursorSplat" abil="SkillK23">
+        <Scale value="6.000000"/>
+    </CActorSplat>
+    <CActorSplat id="K23Splat2" parent="TerranCursorSplat" abil="SkillK23_2">
+        <Scale value="6.000000"/>
+    </CActorSplat>
     <CActorEventMacro id="Sizex2">
         <EditorCategories value=""/>
         <On Terms="Behavior.Sizex2.On" Send="SetScale 2.000000"/>
     </CActorEventMacro>
+    <CActorModel id="KianaC1GroundEffect" parent="ModelAnimationStyleOneShot">
+        <On Terms="Effect.KianaC1MeleeAttack3Damage.Start; At Caster" Send="Create"/>
+        <HostSiteOps Ops="SOpCasterPoint" HoldPosition="1" HoldRotation="1"/>
+    </CActorModel>
     <CActorSound id="TimeFractureIntro" parent="SoundOneShot">
         <On Terms="AbilMorph.*.Start; MorphTo Barracks" Send="Create"/>
     </CActorSound>
@@ -2358,7 +2395,7 @@
         <On Terms="Abil.SeeleC1Ultimate.SourcePrepStart" Send="Create"/>
     </CActorSound>
     <CActorPortrait id="SeeleC1Portrait">
-        <On Terms="Signal.*.UltraStart" Send="AnimPlay Cover Cover PlayForever"/>
+        <On Terms="Signal.*.UltraStart" Send="AnimPlay Cover Cover PlayForever -1.000000 -1.000000 -1.000000 AsAutomatic 0.000000 63"/>
         <On Terms="Signal.*.UltraStop" Send="AnimClear Cover"/>
         <On Terms="Signal.*.UltraStartDelay" Send="TimerSet 0.250000"/>
         <On Terms="TimerExpired" Send="Signal UltraStart"/>
@@ -6362,9 +6399,6 @@
             <Physics value="UltraliskAttackForce"/>
         </ImpactPhysics>
     </CActorAction>
-    <CActorSplat id="K23SkillSplat" parent="TerranCursorSplat" abil="SkillK23">
-        <Scale value="1.800000,1.800000,1.000000"/>
-    </CActorSplat>
     <CActorSplat id="K5SkillSplat" parent="TerranCursorSplat" abil="SkillK5">
         <Scale value="1.500000,1.500000,1.000000"/>
     </CActorSplat>
@@ -7603,7 +7637,10 @@
     <CActorModel id="K23GroundEffectModel" parent="ModelAnimationStyleContinuous">
         <On Terms="Effect.K23CP.Start; At Caster" Send="Create"/>
         <On Terms="Effect.K23CP.Stop" Send="AnimBracketStop BSD"/>
-        <HostSiteOps Ops="SOpShadow SOp90"/>
+        <On Terms="Effect.K23CP2.Start; At Caster" Send="Create"/>
+        <On Terms="Effect.K23CP2.Stop" Send="AnimBracketStop BSD"/>
+        <HostSiteOps Ops="SOpCasterUnit SOpShadow SOp90" HoldPosition="1" HoldRotation="1"/>
+        <Scale value="1.250000"/>
     </CActorModel>
     <CActorUnit id="Hydralisk">
         <Model value="HydraliskMod"/>
@@ -8348,6 +8385,13 @@
         <ModelFlags index="AllowHitTest" value="0"/>
         <Inherits index="TintColor" value="0"/>
     </CActorModel>
+    <CActorModel id="KianaC1Dress" parent="ModelAddition" unitName="">
+        <On Terms="Abil.KianaC1Ultimate.TargetPrepStart" Send="Create"/>
+        <On Terms="Behavior.KianaC1Buff.Off" Send="AnimBracketStop BSD"/>
+        <HostSiteOps Ops="SOpAttachTarget8 SOpMoveUpByDot25"/>
+        <Scale value="2.400000"/>
+        <ModelFlags index="AllowHitTest" value="0"/>
+    </CActorModel>
     <CActorModel id="WeaponPistolAttachKianaRight" parent="ModelAddition" unitName="">
         <On Terms="Behavior.K23Move.On" Send="ModelSwap WeaponK23Sword"/>
         <On Terms="Behavior.K23Move.Off" Send="ModelSwap WeaponK23"/>
@@ -8379,6 +8423,30 @@
         <Model value="WeaponK2"/>
         <ModelFlags index="AllowHitTest" value="0"/>
         <Macros value="WeaponPistolAttach"/>
+    </CActorModel>
+    <CActorModel id="KianaC1WeaponLeft" parent="ModelAddition" unitName="">
+        <On Terms="Signal.*.Hide" Send="SetVisibility"/>
+        <On Terms="Signal.*.Show" Send="SetVisibility 1"/>
+        <On Terms="UnitDeath" Send="Destroy"/>
+        <On Terms="Behavior.WeaponUseK23.On" Send="ModelSwap WeaponK23 255 PreventAllDynamicTextureTransfers"/>
+        <On Terms="Behavior.WeaponUseK23.Off" Send="ModelSwap WeaponK36 255 PreventAllDynamicTextureTransfers"/>
+        <On Terms="Behavior.K23Move.On" Send="ModelSwap WeaponVoid"/>
+        <On Terms="Behavior.K23Move.Off" Send="ModelSwap WeaponK23 255 PreventAllDynamicTextureTransfers"/>
+        <HostSiteOps Ops="SOpAttachTarget3"/>
+        <Model value="WeaponK36"/>
+        <ModelFlags index="AllowHitTest" value="0"/>
+    </CActorModel>
+    <CActorModel id="KianaC1WeaponRight" parent="ModelAddition" unitName="">
+        <On Terms="Signal.*.Hide" Send="SetVisibility"/>
+        <On Terms="Signal.*.Show" Send="SetVisibility 1"/>
+        <On Terms="UnitDeath" Send="Destroy"/>
+        <On Terms="Behavior.WeaponUseK23.On" Send="ModelSwap WeaponK23 255 PreventAllDynamicTextureTransfers"/>
+        <On Terms="Behavior.WeaponUseK23.Off" Send="ModelSwap WeaponK36 255 PreventAllDynamicTextureTransfers"/>
+        <On Terms="Behavior.K23Move.On" Send="ModelSwap WeaponK23Sword 255 PreventAllDynamicTextureTransfers"/>
+        <On Terms="Behavior.K23Move.Off" Send="ModelSwap WeaponK23 255 PreventAllDynamicTextureTransfers"/>
+        <HostSiteOps Ops="SOpAttachTarget2"/>
+        <Model value="WeaponK36"/>
+        <ModelFlags index="AllowHitTest" value="0"/>
     </CActorModel>
     <CActorForceSphere id="SeeleAttackDeathForce">
         <Host Subject="::Main" Scope="Target"/>

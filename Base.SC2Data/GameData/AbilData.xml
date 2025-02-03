@@ -301,6 +301,34 @@
         <CmdButtonArray index="Execute" DefaultButtonFace="MobilizeSkill2" Requirements="MobilizeRequirement"/>
         <CmdButtonArray index="Cancel" DefaultButtonFace="Cancel"/>
     </CAbilEffectTarget>
+    <CAbilMorph id="MorphToKianaC1">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="TrainKianaC1" Requirements="KianaC1CanMorph"/>
+        <Flags index="IgnoreFacing" value="1"/>
+        <InfoArray Unit="KianaC1"/>
+    </CAbilMorph>
+    <CAbilEffectTarget id="SkillK23_2">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Effect index="0" value="K23InitialSet2"/>
+        <Cost>
+            <Vital index="Energy" value="125"/>
+            <VitalFraction index="Life" value="0.1"/>
+            <Cooldown Location="Player" TimeUse="20"/>
+        </Cost>
+        <Range value="8"/>
+        <PrepTime value="0.5"/>
+        <FinishTime value="1.8"/>
+        <UninterruptibleArray index="Prep" value="1"/>
+        <UninterruptibleArray index="Cast" value="1"/>
+        <UninterruptibleArray index="Finish" value="1"/>
+        <CursorEffect value="K23CPSearchAll"/>
+        <IgnoreFilters value="-;Self"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="K23Skill2" Requirements="UsingK23Show">
+            <Flags index="ToSelection" value="1"/>
+            <Flags index="UseDefaultButton" value="1"/>
+            <Flags index="CreateDefaultButton" value="1"/>
+        </CmdButtonArray>
+    </CAbilEffectTarget>
     <CAbilTrain id="StarportTrain2">
         <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
         <Activity value="UI/Building"/>
@@ -3134,7 +3162,7 @@
         <Cost>
             <Vital index="Energy" value="200"/>
             <VitalFraction index="Life" value="0.5"/>
-            <VitalFraction index="Shields" value="100"/>
+            <VitalFraction index="Shields" value="1"/>
             <Cooldown Location="Player" TimeUse="40"/>
         </Cost>
         <Range value="6"/>
@@ -3244,8 +3272,9 @@
             <Unit value="BronyaC2"/>
         </InfoArray>
         <InfoArray index="Train6" Time="10">
-            <Button DefaultButtonFace="TrainBronyaC7" Requirements="BronyaC7CanTrain"/>
+            <Button DefaultButtonFace="TrainKianaC1" Requirements="KianaC1CanTrain"/>
             <Unit value="BronyaC7"/>
+            <Unit value="KianaC1"/>
         </InfoArray>
     </CAbilTrain>
     <CAbilResearch id="UnlockAvatar">
@@ -3279,6 +3308,11 @@
             <Resource index="Minerals" value="1000"/>
             <Resource index="Vespene" value="600"/>
             <Button DefaultButtonFace="UnlockBronyaC7" Requirements="BronyaC7CanUnlock"/>
+        </InfoArray>
+        <InfoArray index="Research7" Time="70" Upgrade="KianaC1Unlock">
+            <Resource index="Minerals" value="1000"/>
+            <Resource index="Vespene" value="600"/>
+            <Button DefaultButtonFace="UnlockKianaC1" Requirements="KianaC1CanUnlock"/>
         </InfoArray>
     </CAbilResearch>
     <CAbilMorph id="Unsiege"/>

@@ -100,6 +100,12 @@
         <AlertIcon value="Assets\Textures\btn-ability-terran-warpjump.dds"/>
         <Universal value="1"/>
     </CButton>
+    <CButton id="K23Skill2">
+        <Icon value="Assets\Textures\Skill_Kiana_Weapon_24.tga"/>
+        <AlertIcon value="Assets\Textures\Skill_Kiana_Weapon_24.tga"/>
+        <EditorCategories value="Race:Terran"/>
+        <DefaultButtonLayout Row="2"/>
+    </CButton>
     <CButton id="KianaC1Attack">
         <Icon value="Assets\Textures\KianaC1Attack.tga"/>
         <AlertIcon value="Assets\Textures\KianaC1Attack.tga"/>
@@ -253,6 +259,10 @@
         <Icon value="Assets\Textures\AvatarBronyaC7.tga"/>
         <AlertIcon value="Assets\Textures\AvatarBronyaC7.tga"/>
     </CButton>
+    <CButton id="TrainKianaC1">
+        <Icon value="Assets\Textures\AvatarKianaC1.tga"/>
+        <AlertIcon value="Assets\Textures\AvatarKianaC1.tga"/>
+    </CButton>
     <CButton id="TrainMeiC2">
         <Icon value="Assets\Textures\AvatarMeiC2.tga"/>
         <AlertIcon value="Assets\Textures\AvatarMeiC2.tga"/>
@@ -272,6 +282,12 @@
         <Icon value="Assets\Textures\AvatarBronyaC7.tga"/>
         <AlertTooltip value="Button/Tooltip/TrainBronyaC7"/>
         <AlertIcon value="Assets\Textures\AvatarBronyaC7.tga"/>
+    </CButton>
+    <CButton id="UnlockKianaC1">
+        <Tooltip value="Button/Tooltip/TrainBronyaC7"/>
+        <Icon value="Assets\Textures\AvatarKianaC1.tga"/>
+        <AlertTooltip value="Button/Tooltip/TrainBronyaC7"/>
+        <AlertIcon value="Assets\Textures\AvatarKianaC1.tga"/>
     </CButton>
     <CButton id="UnlockMeiC2">
         <Icon value="Assets\Textures\AvatarMeiC2.tga"/>

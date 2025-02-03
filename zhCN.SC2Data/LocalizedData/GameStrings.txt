@@ -112,6 +112,7 @@ Abil/Name/MeiC2Upgrade=脉冲装·绯红研发
 Abil/Name/MobilizeSkill1=紧急动员
 Abil/Name/MobilizeSkill2=空投支援
 Abil/Name/MorphToBronyaC2=MorphToBronyaC2
+Abil/Name/MorphToKianaC1=切换为空之律者
 Abil/Name/MorphToKianaC2=切换为领域装·白练
 Abil/Name/MorphToKianaC4=切换为白骑士·月光
 Abil/Name/NanoRepair2=纳米修复
@@ -143,6 +144,7 @@ Abil/Name/SevenThundersOfRetribution=电磁力消除
 Abil/Name/SiegeMode=火炮模式
 Abil/Name/SkillK17=眩晕跃迁
 Abil/Name/SkillK23=天火出鞘
+Abil/Name/SkillK23_2=天火出鞘 2
 Abil/Name/SkillK5=雷神之怒
 Abil/Name/SkillR11=暗色帷幕
 Abil/Name/SpawnHerrscher=生成律者
@@ -251,7 +253,6 @@ Behavior/Name/HonkaiSlow=减速
 Behavior/Name/IcyUnit=寒冰系单位
 Behavior/Name/K23Damage2=天火出鞘
 Behavior/Name/K5B=K5 B
-Behavior/Name/KianaC1Buff=KianaC1Buff
 Behavior/Name/KianaC2Dizzy=女武神充能
 Behavior/Name/KianaC2Evade2=闪避无敌帧
 Behavior/Name/KianaC2Ultimate=爆发状态
@@ -563,6 +564,7 @@ Button/Name/Interceptor=制造轻型战斗机
 Button/Name/Interceptor2=制造轻型战斗机
 Button/Name/K17Skill=眩晕跃迁
 Button/Name/K23Skill=天火出鞘
+Button/Name/K23Skill2=天火出鞘
 Button/Name/K5Skill=雷神之怒
 Button/Name/KianaBuilding=建造射击训练室
 Button/Name/KianaC1Attack=亚空连射/虚数荆棘
@@ -738,6 +740,7 @@ Button/Name/TerranVehiclePlatingLevel12=升级机甲钢板等级
 Button/Name/TerranVehicleWeaponsLevel12=升级机甲武器等级
 Button/Name/TrainBronyaC2=部署驱动装·山吹
 Button/Name/TrainBronyaC7=部署理之律者
+Button/Name/TrainKianaC1=部署空之律者
 Button/Name/TrainKianaC2=部署领域装·白练
 Button/Name/TrainKianaC4=部署白骑士·月光
 Button/Name/TrainMeiC2=部署脉冲装·绯红
@@ -751,6 +754,7 @@ Button/Name/UL_100Abil=巨型轰炸
 Button/Name/Ultralisk=变异为迦尼萨
 Button/Name/UnlockBronyaC2=解锁驱动装·山吹
 Button/Name/UnlockBronyaC7=解锁理之律者
+Button/Name/UnlockKianaC1=解锁空之律者
 Button/Name/UnlockKianaC2=解锁领域装·白练
 Button/Name/UnlockKianaC4=解锁白骑士·月光
 Button/Name/UnlockMeiC2=解锁脉冲装·绯红
@@ -939,12 +943,13 @@ Button/Tooltip/IceTablet2=使指石碑升级为极寒石碑，可以解锁终极
 Button/Tooltip/Interceptor=制造轻型战斗机。轻型战斗机拥有40点护盾和100点生命，占用0.5补给，可以对地和对空。</c>
 Button/Tooltip/Interceptor2=制造轻型战斗机。轻型战斗机拥有40点护盾和100点生命，占用0.5补给，可以对地和对空。</c>
 Button/Tooltip/K17Skill=向前方发射一枚眩晕弹，爆炸造成350%攻击力的物理伤害，并创造持续4.5秒的眩晕立场
-Button/Tooltip/K23Skill=消耗所有护盾和50%的生命，向前方爆发出天火圣裁的力量，造成大范围<d ref="Effect,K23Damage2,Amount"/>点元素伤害，并留下燃烧的地面，在<d ref="Effect,K23CP,PeriodCount*Effect,K23CP,PeriodicPeriodArray[0]/2"/>秒内造成造成<d ref="Effect,K23Damage,Amount*Effect,K23Persistent,PeriodCount"/>点伤害。受天火出鞘影响的单位<d ref="Behavior,K23Damage2,Duration"/>秒内被点燃并获得50%易伤，每秒有<d ref="Effect,K23Dizzy,Chance*100"/>%的概率眩晕<d ref="Effect,K23Dizzy,Duration"/>秒。<n/><c val="FFFF00">效果不分敌我。</c>
+Button/Tooltip/K23Skill=消耗所有护盾和50%的生命，向前方爆发出天火圣裁的力量，造成大范围<d ref="Effect,K23InitialDamage,Amount"/>点元素伤害，并留下燃烧的地面，在<d ref="Effect,K23CP,PeriodCount*Effect,K23CP,PeriodicPeriodArray[0]/2"/>秒内造成造成<d ref="Effect,K23CPDamage,Amount*Effect,K23CP,PeriodCount/2"/>点伤害。受天火出鞘影响的单位<d ref="Behavior,K23Damage2,Duration"/>秒内被点燃并获得50%易伤，每秒有<d ref="Effect,K23Dizzy,Chance*100"/>%的概率眩晕<d ref="Effect,K23Dizzy,Duration"/>秒。<n/><c val="FFFF00">效果不分敌我。</c>
+Button/Tooltip/K23Skill2=消耗少量护盾和生命，向前方爆发出天火圣裁的力量，造成大范围<d ref="Effect,K23InitialDamage2,Amount"/>点元素伤害，并留下燃烧的地面，在<d ref="Effect,K23CP,PeriodCount*Effect,K23CP,PeriodicPeriodArray[0]/2"/>秒内造成造成<d ref="Effect,K23CPDamage,Amount*Effect,K23CP,PeriodCount/2"/>点伤害。受天火出鞘影响的单位<d ref="Behavior,K23Damage2,Duration"/>秒内被点燃并获得50%易伤，每秒有<d ref="Effect,K23Dizzy,Chance*100"/>%的概率眩晕<d ref="Effect,K23Dizzy,Duration"/>秒。<n/><c val="FFFF00">利用空之律者的能力，可以大幅规避自身受到的伤害，并强化了杀伤效果。效果不分敌我。</c>
 Button/Tooltip/K5Skill=砸下雷锤击倒敌人，造成20点物理伤害，并将敌人陷入脆弱状态，降低8点护甲，持续10秒
 Button/Tooltip/KianaBuilding=为<c val="FFFF00">琪亚娜·卡斯兰娜</c>提供升级
-Button/Tooltip/KianaC1=第三代女武神装甲，设计理念为「泛用性全领域作战装甲」。<n/><n/><c val="#ColorAttackInfo">特点:物理伤害、眩晕、爆发状态、时空。<n/>部分招式可对空</c>
+Button/Tooltip/KianaC1=琪亚娜掌控了空之律者能力后的形态，可以在必要时爆发出强大的力量。<n/><n/><c val="#ColorAttackInfo">特点:物理伤害、时空锁定、大范围伤害和浮空。<n/>可对地、对空</c>
 Button/Tooltip/KianaC1Attack=远程攻击：亚空连射<n/>前三段攻击分别造成1、3、2次<d ref="Effect,KianaC1RangeAttackLeftDamage,Amount"/>点伤害，最后一击造成2次<d ref="Effect,KianaC1RangeAttackLeftDamage,Amount"/>点伤害并在目标处生成一个能量涡流，持续吸引敌人持续6秒，并使受影响的敌人受到的全伤害增加50%持续12秒。<n/><n/>近战攻击：虚数荆棘<n/>前两段攻击分别造成1次和2次<d ref="Effect,KianaC1MeleeAttackDamage,Amount"/>点范围伤害，最后一击造成<d ref="Effect,KianaC1MeleeAttack3Damage,Amount"/>点大范围伤害并使敌人眩晕。
-Button/Tooltip/KianaC1Ultimate=爆发律者之力，对大范围内敌人造成<d ref="Effect,KianaC1UltimateDamage,Amount"/>点伤害，并被时空锁定持续<d ref="Effect,TimeLock10s,Duration"/>秒，同时召唤亚空之矛进行三轮攻击。<n/><n/>之后进入<d ref="Behavior,KianaC1Buff,Duration"/>秒强化状态和霸体。期间普通攻击会召唤三支亚空之矛攻击(有<d ref="Behavior,KianaC1SummonAttackCD,Duration" precision="1"/>秒冷却时间，伤害<d ref="Effect,KianaC1SummonedAttackDamage,Amount"/>)，最后一击产生一个虚数空间将范围敌人时空锁定并召唤8支亚空之矛攻击；近战攻击额外召唤能量涡流，最后一击召唤贝纳勒斯发动吐息，造成12次直线范围25点伤害并击飞敌人。<n/><n/>强化状态结束时还会发射4支强化亚空之矛，每支造成20点范围伤害并击飞敌人。
+Button/Tooltip/KianaC1Ultimate=爆发律者之力，对大范围内敌人造成<d ref="Effect,KianaC1UltimateDamage,Amount"/>点伤害，并被时空锁定持续<d ref="Effect,TimeLock10s,Duration"/>秒，同时召唤亚空之矛进行三轮攻击。<n/><n/>之后进入<d ref="Behavior,KianaC1Buff,Duration"/>秒强化状态和霸体。期间远程普攻会召唤3支亚空之矛攻击(伤害<d ref="Effect,KianaC1SummonedAttackDamage,Amount"/>)，最后一击召唤贝纳勒斯发动吐息，对直线上的敌人造成<d ref="Effect,KianaC1DragonAttack1CP,PeriodCount"/>次<d ref="Effect,KianaC1DragonAttackDamage,Amount"/>点伤害并击飞敌人；近战普攻召唤5支亚空之矛攻击，最后一击召唤贝纳勒斯发动横扫吐息，对前方大范围敌人造成<d ref="Effect,KianaC1DragonAttack2CP,PeriodCount"/>次直线范围<d ref="Effect,KianaC1DragonAttackDamage,Amount"/>点伤害并击飞敌人。
 Button/Tooltip/KianaC2=第三代女武神装甲，设计理念为「泛用性全领域作战装甲」。<n/><n/><c val="#ColorAttackInfo">特点:物理伤害、眩晕、爆发状态、时空。<n/>部分招式可对空</c>
 Button/Tooltip/KianaC2Attack=使用枪斗术进行五连攻击<n/>第一击：<d ref="Effect,KianaC2Attack1Damage,Amount*10"/>%攻击力物理伤害<n/>第二击：<d ref="Effect,KianaC2Attack2Damage,Amount*10"/>%攻击力物理伤害<n/>第三击：<d ref="Effect,KianaC2Attack2Damage,Amount*10"/>%攻击力物理伤害<n/>第四击：<d ref="Effect,KianaC2Attack4Damage,Amount*10"/>%攻击力物理伤害×2<n/>第五击：250%攻击力物理伤害<n/><n/>第二、第三击附加对目标一次远程射击，造成<d ref="Effect,KianaC2PistolRanged,Amount*10"/>%攻击力远程物理伤害
 Button/Tooltip/KianaC2Branch=在普攻第二段时按下，将敌人踢飞并击落<n/>踢飞:50%攻击力物理伤害<n/>击落:275%攻击力物理伤害(可以对空)<n/><n/><c val="FFFF00">击飞敌人</c>
@@ -1913,13 +1918,20 @@ Effect/Name/K23Behavior=天火圣裁 点燃被动
 Effect/Name/K23BehaviorSearch=天火圣裁 点燃被动
 Effect/Name/K23BuffSet=K23 Buff Set
 Effect/Name/K23CP=K23 CP
+Effect/Name/K23CP2=K23 CP 2
 Effect/Name/K23CPDamage=K23 CP Damage
 Effect/Name/K23CPSearchAll=K23 CP Search All
 Effect/Name/K23CPSearchEnermy=K23 CP Search Enermy
 Effect/Name/K23Dizzy=K23 Dizzy
+Effect/Name/K23ImpactSet2=K23 Impact Set 2
 Effect/Name/K23InitialDamage=K23 Initial Damage
+Effect/Name/K23InitialDamage2=K23 Initial Damage 2
 Effect/Name/K23InitialSet=K23 Initial Set
+Effect/Name/K23InitialSet2=K23 Initial Set 2
 Effect/Name/K23SelfLaunch=K23 Self Launch
+Effect/Name/K23SelfLaunch2=K23 Self Launch 2
+Effect/Name/K23Teleport2=K23 Teleport 2
+Effect/Name/K23Teleport2Position=K23 Teleport 2 Position
 Effect/Name/K5Buff=雷神之怒 减甲
 Effect/Name/K5Damage=雷神之怒 伤害
 Effect/Name/K5Persistent=雷神之怒 (Persistent)
@@ -1928,11 +1940,21 @@ Effect/Name/K5Set=雷神之怒(Set)
 Effect/Name/K5Unit=雷神之怒 效果单位
 Effect/Name/KIANAC2UltimateSearch=Kiana C2 Ultimate Search
 Effect/Name/KianaATTACK=Kiana ATTACK
+Effect/Name/KianaC1BlackHole=KianaC1BlackHole
+Effect/Name/KianaC1BlackHoleForce=KianaC1BlackHoleForce
+Effect/Name/KianaC1BlackHoleSearch=KianaC1BlackHoleSearch
 Effect/Name/KianaC1Buff=KianaC1Buff
-Effect/Name/KianaC1SummonAttackCD=KianaC1SummonAttackCD
+Effect/Name/KianaC1DragonAttack1CP=KianaC1DragonAttack1CP
+Effect/Name/KianaC1DragonAttack1CU=KianaC1DragonAttack1CU
+Effect/Name/KianaC1DragonAttack1Search=KianaC1DragonAttack1Search
+Effect/Name/KianaC1DragonAttack1Set=KianaC1DragonAttack1Set
+Effect/Name/KianaC1DragonAttack2CP=KianaC1DragonAttack2CP
+Effect/Name/KianaC1DragonAttackDamage=KianaC1DragonAttackDamage
+Effect/Name/KianaC1DragonAttackSearchTemplate=KianaC1DragonAttackSearchTemplate
 Effect/Name/KianaC1SummonedAttack=KianaC1SummonedAttack
 Effect/Name/KianaC1SummonedAttackDamage=KianaC1SummonedAttackDamage
 Effect/Name/KianaC1SummonedAttackLaunch=KianaC1SummonedAttackLaunch
+Effect/Name/KianaC1SummonedMeleeAttack=KianaC1SummonedMeleeAttack
 Effect/Name/KianaC1UltimateCP=KianaC1UltimateCP
 Effect/Name/KianaC1UltimateDamage=KianaC1UltimateDamage
 Effect/Name/KianaC1UltimateLaunch=KianaC1UltimateLaunch
@@ -2596,8 +2618,10 @@ Param/Value/lib_6D9D7845_39FD372F=玩家
 Param/Value/lib_6D9D7845_3A331C88=<c val="FFFF00"> ？</c>
 Param/Value/lib_6D9D7845_43833243=源：
 Param/Value/lib_6D9D7845_4AA36070=外层：
+Param/Value/lib_6D9D7845_513313B5=30秒dps:
 Param/Value/lib_6D9D7845_5A332C43=0%
 Param/Value/lib_6D9D7845_5C21EF07=单位类型指定成功：
+Param/Value/lib_6D9D7845_5CD99C93=10秒dps:
 Param/Value/lib_6D9D7845_5E8897C5=%
 Param/Value/lib_6D9D7845_669BAB4C=已开启伤害数字显示
 Param/Value/lib_6D9D7845_6E5B8491=玩家
@@ -2606,6 +2630,7 @@ Param/Value/lib_6D9D7845_7C0536AE=已关闭伤害数字显示
 Param/Value/lib_6D9D7845_7C903D7D=<d Time="
 Param/Value/lib_6D9D7845_7ECEABCD=查看游戏机制帮助请点击屏幕右侧帮助按钮<n/>欢迎加入交流群 168430656
 Param/Value/lib_6D9D7845_88735CC1=>单位名称 根据输入的名称匹配最接近的单位类型(匹配成功会有提示)<n/>如只输入">"，会设置为当前选中的单位<n/>按下Ctrl+C也会设置为当前选中的单位<n/><n/><N 创建N个上述类型的单位，负数表示创建敌对单位<n/>按下Ctrl+V快捷创建一个己方该类型单位<n/><n/>-BSW 开图<n/><n/>-DPS 生成/移除DPS测试单位<n/><n/>-C 移除当前选中的单位<n/><n/>-K 杀死当前选中的单位<n/><n/>-ZY 给当前玩家添加1000地嗪10000矿10000气<n/><n/>-S XX 给选中单位添加buff<n/>	XX为buff代码:<n/>	LX 流血<n/>	XY 眩晕<n/>	DR 点燃<n/>	JF 击飞<n/>	MB 麻痹<n/>	DJ 冻结<n/>	SS 时空锁定<n/>	JZ 静滞(原版)<n/>	<n/>按下Alt + ~ 暂停/取消暂停所有单位<n/>按下Shift + ~ 将选中的单位10倍加速，再次按下关闭加速
+Param/Value/lib_6D9D7845_8CA6498A=<n/>
 Param/Value/lib_6D9D7845_8F5AA884=免疫
 Param/Value/lib_6D9D7845_94E456A7=0%
 Param/Value/lib_6D9D7845_AC83FEED=起始：
@@ -2626,6 +2651,7 @@ Param/Value/lib_6D9D7845_D5ABB218=:
 Param/Value/lib_6D9D7845_DC304578=已复活
 Param/Value/lib_6D9D7845_DDFD93D2=已设置装备模板
 Param/Value/lib_6D9D7845_DFAA2A41=火元素抗性
+Param/Value/lib_6D9D7845_E446A277=
 Param/Value/lib_6D9D7845_E64DF4DC=波次开始
 Param/Value/lib_6D9D7845_E9C646BC=能量不足
 Param/Value/lib_6D9D7845_F0143A1C=单位类型指定成功：
@@ -2643,7 +2669,6 @@ RequirementNode/Tooltip/CountBehaviorIceTabletFactoryCompleteOnlyAtUnit283309270
 RequirementNode/Tooltip/CountBehaviorKianaC2Attack2CompleteOnlyAtUnit3179731307=正在打出普攻第二段
 RequirementNode/Tooltip/CountBehaviorKianaC2BranchReadyCompleteOnlyAtUnit3957291497=普攻第二段期间
 RequirementNode/Tooltip/CountBehaviorKianaC2BranchReadyEvadeCompleteOnlyAtUnit880504611=触发闪避技能短时间内
-RequirementNode/Tooltip/CountBehaviorKianaLookForBuildingCompleteOnlyAtUnit979450497=在射击训练室附近
 RequirementNode/Tooltip/CountBehaviorLightningRodFactory2CompleteOnlyAtUnit1236727148=附加高压蓄电塔
 RequirementNode/Tooltip/CountBehaviorLightningRodFactoryCompleteOnlyAtUnit1653467348=附加蓄电塔
 RequirementNode/Tooltip/CountBehaviorStigmataCG5CompleteOnlyAtUnit3072367877=在兵营附属科技实验室中研究
@@ -2671,6 +2696,7 @@ RequirementNode/Tooltip/CountUpgradeB7CompleteOnly3077553746=需要在米高扬�
 RequirementNode/Tooltip/CountUpgradeBronyaC2UnlockCompleteOnly2420890365=已解锁该装甲
 RequirementNode/Tooltip/CountUpgradeDivineKey3rdCompleteOnly3918714543=在神之键阁研发涤罪七雷
 RequirementNode/Tooltip/CountUpgradeDivineKey4thCompleteOnly3501733459=需要研发第四神之键
+RequirementNode/Tooltip/CountUpgradeDivineKey7thCompleteOnly3249686718=需要在神之键阁中研发天火圣裁
 RequirementNode/Tooltip/CountUpgradeDivineKey9thCompleteOnly1761932935=在神之键阁中研发
 RequirementNode/Tooltip/CountUpgradeDivineKey9thCompleteOnly2608092753=已在神之键阁中解锁星海谐律
 RequirementNode/Tooltip/CountUpgradeFightersCompleteOnly316807905TechTreeCheat=在帝国研究院研发
@@ -2732,6 +2758,7 @@ RequirementNode/Tooltip/LTE960270413TechTreeCheatSumCountUpgradeDivineKey1stQueu
 RequirementNode/Tooltip/NoStigmataG1=与其它修改伤害类型的圣痕不可共存
 RequirementNode/Tooltip/Not1513537511CountUnitNukeMHTQueuedOrBetterAtUnit=发射仓中无战术核弹
 RequirementNode/Tooltip/Not157438788SumCountUnitBronyaC2QueuedOrBetterCountUnitBronyaC2RevivableCountUnitBronyaC7QueuedOrBetterCountUnitBronyaC7RevivableCountUnitBronyaC7MotorQueuedOrBetterCountUnitBronyaC7MotorRevivable=没有部署过布洛妮娅·扎伊切克
+RequirementNode/Tooltip/Not157438788SumCountUnitKianaC4QueuedOrBetterCountUnitKianaC4RevivableCountUnitKianaC2QueuedOrBetterCountUnitKianaC2RevivableCountUnitKianaC1QueuedOrBetterCountUnitKianaC1Revivable=没有部署过布洛妮娅·扎伊切克
 RequirementNode/Tooltip/Not1982903751SumCountUnitKianaC2QueuedOrBetterCountUnitKianaC2RevivableCountUnitKianaC4QueuedOrBetterCountUnitKianaC4Revivable=没有部署过琪亚娜·卡斯兰娜
 RequirementNode/Tooltip/Not2525757573CountUpgradeAvatarNoBronyaCompleteOnly=已有其他玩家选择该角色
 RequirementNode/Tooltip/Not2525757573CountUpgradeAvatarNoKianaCompleteOnly=已有其他玩家选择该角色
@@ -2787,7 +2814,7 @@ SimpleDisplay/SeeleC1Ultimate=<s val="@@@SimpleCommandRow">按%hotkey键</c>然�
 SimpleDisplay/SeeleC1Upgrade1=<s val="@@@SimpleCommandRow">按%hotkey键</c>然后</s> <IMG path="Assets\Textures\tutorialmouseleftbuttondown.dds" alignment="absolutemiddle"/> <s val="@@@SimpleCommandRow">地面自动攻击</s>
 SimpleDisplay/SeeleC1Upgrade2=
 Text/Rank/Herrscher=<c val="FFFF00">崩坏使徒</c>
-Text/Rank/KianaC1=领域装·白练
+Text/Rank/KianaC1=空之律者
 Text/Rank/KianaC2=领域装·白练
 Text/Rank/KianaC4=白骑士·月光
 Text/Rank/MeiC2=脉冲装·绯红
@@ -3013,6 +3040,7 @@ Upgrade/Name/HerrscherIndex=律者次序
 Upgrade/Name/HerrscherPhase=律者阶段
 Upgrade/Name/HonkaiTacticalJump=战术跳跃
 Upgrade/Name/KianaATTACK=琪亚娜攻击力
+Upgrade/Name/KianaC1Unlock=解锁空之律者
 Upgrade/Name/KianaC2Unlock=解锁领域装·白练
 Upgrade/Name/KianaC2Upgrade=女武神持久
 Upgrade/Name/KianaC2Upgrade2=女武神充能

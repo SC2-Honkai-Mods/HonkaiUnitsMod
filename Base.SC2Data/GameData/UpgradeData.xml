@@ -184,6 +184,7 @@
         <Race value="Terr"/>
         <EffectArray Reference="Effect,KianaATTACK,Amount" Value="4"/>
         <EffectArray Reference="Weapon,KianaATTACK,Level" Value="1"/>
+        <EffectArray Reference="Unit,KianaC1,Food" Value="-1"/>
         <EffectArray Reference="Unit,KianaC2,Food" Value="-1"/>
         <EffectArray Reference="Unit,KianaC4,Food" Value="-1"/>
         <EditorCategories value="UpgradeType:Talents"/>
@@ -218,6 +219,12 @@
     </CUpgrade>
     <CUpgrade id="KianaHealth">
         <Race value="Terr"/>
+        <EffectArray Reference="Unit,KianaC1,Food" Value="-1"/>
+        <EffectArray Reference="Unit,KianaC1,LifeArmor" Value="1"/>
+        <EffectArray Reference="Unit,KianaC1,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,KianaC1,LifeMax" Value="160"/>
+        <EffectArray Reference="Unit,KianaC1,LifeRegenRate" Value="0.500000"/>
+        <EffectArray Reference="Unit,KianaC1,LifeStart" Value="160"/>
         <EffectArray Reference="Unit,KianaC2,Food" Value="-1"/>
         <EffectArray Reference="Unit,KianaC2,LifeArmor" Value="1"/>
         <EffectArray Reference="Unit,KianaC2,LifeArmorLevel" Value="1"/>
@@ -250,6 +257,12 @@
     </CUpgrade>
     <CUpgrade id="KianaShield">
         <Race value="Terr"/>
+        <EffectArray Reference="Unit,KianaC1,ShieldsMax" Value="120"/>
+        <EffectArray Reference="Unit,KianaC1,Food" Value="-1"/>
+        <EffectArray Reference="Unit,KianaC1,ShieldArmor" Value="1"/>
+        <EffectArray Reference="Unit,KianaC1,ShieldRegenRate" Value="0.500000"/>
+        <EffectArray Reference="Unit,KianaC1,ShieldArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,KianaC1,ShieldsStart" Value="120"/>
         <EffectArray Reference="Unit,KianaC2,ShieldsMax" Value="120"/>
         <EffectArray Reference="Unit,KianaC2,Food" Value="-1"/>
         <EffectArray Reference="Unit,KianaC2,ShieldArmor" Value="1"/>
@@ -864,6 +877,7 @@
     </CUpgrade>
     <CUpgrade id="BronyaC2Unlock"/>
     <CUpgrade id="BronyaC7Unlock"/>
+    <CUpgrade id="KianaC1Unlock"/>
     <CUpgrade id="BronyaC2Upgrade1">
         <EffectArray Reference="Behavior,BronyaC2Shield,DamageResponse.ModifyLimit" Value="25"/>
         <MaxLevel value="4"/>

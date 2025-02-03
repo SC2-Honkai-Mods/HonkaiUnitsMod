@@ -109,6 +109,7 @@ Button/Hotkey/Hyperjump2=T
 Button/Hotkey/IceTablet=B
 Button/Hotkey/IceTablet2=D
 Button/Hotkey/Interceptor2=I
+Button/Hotkey/K23Skill2=R
 Button/Hotkey/KianaC2Attack=A
 Button/Hotkey/KianaC2Attack2=A
 Button/Hotkey/KianaC2Branch=A

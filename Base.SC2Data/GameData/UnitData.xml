@@ -411,6 +411,7 @@
             <Charge Link="CUnitKiana/Revive"/>
             <Cooldown Link="CUnitKiana/Revive"/>
         </ReviveInfoBase>
+        <LeaderAlias value="KianaC2"/>
     </CUnit>
     <CUnit default="1" id="CUnitBronya" parent="CUnitValkyrja">
         <AbilArray Link="MorphToBronyaC2"/>
@@ -559,10 +560,8 @@
         <FlagArray index="PlayerRevivable" value="0"/>
         <Attributes index="Summoned" value="1"/>
         <Mover value="FlyLow"/>
-        <Speed value="2.25"/>
-        <Acceleration value="1000"/>
         <StationaryTurningRate value="360"/>
-        <TurningRate value="360"/>
+        <TurningRate value="0"/>
         <Height value="6"/>
         <CostCategory value="Army"/>
         <DamageDealtXP value="1"/>
@@ -580,7 +579,7 @@
         <Radius value="0"/>
         <SeparationRadius value="0"/>
         <ScoreResult value="BuildOrder"/>
-        <MinimapRadius value="0.375"/>
+        <MinimapRadius value="0"/>
         <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
         <GlossaryPriority value="20"/>
     </CUnit>
@@ -822,8 +821,10 @@
         <AbilArray index="10" Link="Herrscher2RemoveMissile"/>
         <AbilArray index="11" Link="Herrscher2ReboundMissile"/>
         <AbilArray index="12" Link="KianaC1Ultimate"/>
+        <AbilArray Link="SkillK23_2"/>
         <BehaviorArray Link="HonkaiAttributeMech"/>
         <BehaviorArray Link="KianaC1RangeAttack1"/>
+        <BehaviorArray Link="WeaponUseK23"/>
         <CardLayouts index="0">
             <LayoutButtons Face="KianaC1Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="1" Column="0"/>
             <LayoutButtons Face="Herrscher2RemoveMissileOff" Type="AbilCmd" AbilCmd="Herrscher2RemoveMissile,Off" Row="2" Column="0"/>
@@ -831,18 +832,7 @@
             <LayoutButtons Face="Herrscher2ReboundMissileOff" Type="AbilCmd" AbilCmd="Herrscher2ReboundMissile,Off" Row="2" Column="1"/>
             <LayoutButtons Face="Herrscher2ReboundMissile" Type="AbilCmd" AbilCmd="Herrscher2ReboundMissile,On" Row="2" Column="1"/>
             <LayoutButtons Face="KianaC1Ultimate" Type="AbilCmd" AbilCmd="KianaC1Ultimate,Execute" Row="1" Column="1"/>
-        </CardLayouts>
-        <CardLayouts index="4" CardId="Equi">
-            <LayoutButtons index="6">
-                <Face value="ChangeAvatar"/>
-                <Type value="Submenu"/>
-                <AbilCmd value="KIANAC4TEST,255"/>
-                <Requirements value="KianaCanChangeAvatar"/>
-                <SubmenuCardId value="Avat"/>
-                <SubmenuIsSticky value="1"/>
-                <Row value="2"/>
-                <Column value="0"/>
-            </LayoutButtons>
+            <LayoutButtons Face="K23Skill2" Type="AbilCmd" AbilCmd="SkillK23_2,Execute" Row="1" Column="2"/>
         </CardLayouts>
         <CardLayouts index="6" CardId="Skin">
             <LayoutButtons Face="SkinKianaC2" Type="AbilCmd" AbilCmd="KianaC2Skin1,Execute" Row="0" Column="0"/>
@@ -851,7 +841,7 @@
         </CardLayouts>
         <CardLayouts index="7" CardId="Avat">
             <LayoutButtons index="1" Face="TrainKianaC4" Type="AbilCmd" AbilCmd="MorphToKianaC4,Execute" Row="0" Column="1"/>
-            <LayoutButtons index="2" Face="TrainKianaC2" Type="AbilCmd" AbilCmd="MorphToKianaC2,255" Row="0" Column="0"/>
+            <LayoutButtons index="2" Face="TrainKianaC2" Type="AbilCmd" AbilCmd="MorphToKianaC2,Execute" Row="0" Column="0"/>
         </CardLayouts>
         <EquipmentArray index="0">
             <Effect value="KianaATTACK"/>
@@ -866,6 +856,9 @@
         <WeaponArray Link="KianaC1RangeAttack2"/>
         <WeaponArray Link="KianaC1RangeAttack3"/>
         <WeaponArray Link="KianaC1RangeAttack4"/>
+        <EnergyStart value="200"/>
+        <EnergyMax value="400"/>
+        <EnergyRegenRate value="5"/>
     </CUnit>
     <CUnit id="RPC6626">
         <DeathTime value="30"/>
@@ -1425,6 +1418,8 @@
             <LayoutButtons Face="ArmorLevel2" Type="AbilCmd" AbilCmd="KianaUpgrade,Research1" Row="2" Column="1"/>
             <LayoutButtons Face="ATTACK" Type="AbilCmd" AbilCmd="KianaUpgrade,Research3" Row="2" Column="0"/>
             <LayoutButtons Face="ArmorLevel" Type="AbilCmd" AbilCmd="KianaUpgrade,Research2" Row="2" Column="2"/>
+            <LayoutButtons Face="UnlockKianaC1" Type="AbilCmd" AbilCmd="UnlockAvatar,Research7" Row="0" Column="2"/>
+            <LayoutButtons Face="TrainKianaC1" Type="AbilCmd" AbilCmd="TrainAvatar,Train6" Row="0" Column="2"/>
         </CardLayouts>
         <CardLayouts CardId="C2">
             <LayoutButtons Face="Cancel" Type="CancelSubmenu" Row="2" Column="4"/>
@@ -4820,7 +4815,7 @@
     </CUnit>
     <CUnit id="Herrscher2Weapon" parent="MISSILE">
         <Race value="Zerg"/>
-        <Mover value="MissileDefault"/>
+        <Mover value="Herrscher2ndWeapon"/>
         <EditorCategories value="ObjectType:Projectile,ObjectFamily:Campaign"/>
     </CUnit>
     <CUnit id="Herrscher2ReboundSource">
@@ -5817,6 +5812,7 @@
         <AbilArray Link="KianaC2Skin1"/>
         <AbilArray Link="KianaC2Skin2"/>
         <AbilArray Link="KianaSkin1"/>
+        <AbilArray Link="MorphToKianaC1"/>
         <BehaviorArray Link="HonkaiAttributeMech"/>
         <BehaviorArray Link="KianaC2Attack1"/>
         <BehaviorArray Link="KianaC2Dizzy"/>
@@ -5853,7 +5849,7 @@
         </CardLayouts>
         <CardLayouts index="7" CardId="Avat">
             <LayoutButtons index="1" Face="TrainKianaC4" Type="AbilCmd" AbilCmd="MorphToKianaC4,Execute" Row="0" Column="0"/>
-            <LayoutButtons index="2" removed="1"/>
+            <LayoutButtons index="2" Face="TrainKianaC1" Type="AbilCmd" AbilCmd="MorphToKianaC1,Execute" Row="0" Column="1"/>
         </CardLayouts>
         <ReviveInfoBase>
             <Charge Link="KianaC2/Revive"/>
@@ -6114,6 +6110,7 @@
         <SubgroupPriority value="39"/>
         <EditorCategories value="ObjectType:Unit,ObjectFamily:Coop"/>
         <GlossaryPriority value="20"/>
+        <LeaderAlias value="BronyaC2"/>
     </CUnit>
     <CUnit id="StarOfEdenWorld">
         <DeathRevealRadius value="0"/>
@@ -6164,7 +6161,7 @@
         <Attributes index="Summoned" value="1"/>
         <Speed value="2.25"/>
         <StationaryTurningRate value="360"/>
-        <TurningRate value="360"/>
+        <TurningRate value="0"/>
         <CostCategory value="Army"/>
         <DamageDealtXP value="1"/>
         <DamageTakenXP value="1"/>
@@ -6265,6 +6262,7 @@
         <ScoreKill value="100"/>
         <SubgroupPriority value="39"/>
         <EditorCategories value="ObjectType:Unit,ObjectFamily:Coop"/>
+        <LeaderAlias value="BronyaC2"/>
     </CUnit>
     <CUnit id="BronyaC7_Drill" parent="MISSILE">
         <Race value="Terr"/>
@@ -6368,6 +6366,7 @@
         <AbilArray Link="KianaC4BranchEnd"/>
         <AbilArray Link="KianaC4AttackSwitch"/>
         <AbilArray Link="KianaC4Ult"/>
+        <AbilArray Link="MorphToKianaC1"/>
         <BehaviorArray Link="HonkaiAttributeBio"/>
         <BehaviorArray Link="KianaC4Behavior"/>
         <BehaviorArray Link="KianaC4Behavior22"/>
@@ -6388,7 +6387,7 @@
             <LayoutButtons Face="SkinKiana01" Type="AbilCmd" AbilCmd="KianaSkin1,Execute" Row="0" Column="1"/>
         </CardLayouts>
         <CardLayouts index="7" CardId="Avat">
-            <LayoutButtons index="2" removed="1"/>
+            <LayoutButtons index="2" Face="TrainKianaC1" Type="AbilCmd" AbilCmd="MorphToKianaC1,Execute" Row="0" Column="1"/>
         </CardLayouts>
         <ReviveInfoBase>
             <Charge Link="KianaC4/Revive"/>

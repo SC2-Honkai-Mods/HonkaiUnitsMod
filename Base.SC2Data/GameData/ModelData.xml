@@ -155,6 +155,16 @@
         <UnitGlossaryCamera value="Star2CameraMid04"/>
     </CModel>
     <CModel id="ArmoryBuild"/>
+    <CModel id="KianaC1BlackHole" parent="PersistentSpellFX">
+        <Model value="Assets\Models\Kiana_C1\Kiana_C1_BlackHole.m3"/>
+        <EditorCategories value="Race:Protoss"/>
+        <RadiusLoose value="1.000000"/>
+    </CModel>
+    <CModel id="KianaC1Ultimate" parent="RacePersistentSpellFX" Race="Terran">
+        <Model value="Assets\Models\Kiana_C1\Kiana_C1_Ultimate.m3"/>
+        <Flags index="Wait" value="1"/>
+        <ShadowRadius value="0.000000"/>
+    </CModel>
     <CModel id="KinanPistolAttackLaunch" parent="LaunchFX">
         <Model value="Assets\Models\Kiana_C1\KianaRangedAttackBeam.m3"/>
         <EditorCategories value="Race:Terran"/>
@@ -210,13 +220,13 @@
         </Events>
         <Events>
             <Anim value="Attack,02"/>
-            <Name value="KianaAttack2"/>
+            <Name value="KianaAttack1"/>
             <Type value="Sound"/>
             <Time value="0.100000"/>
         </Events>
         <Events>
             <Anim value="Attack,03"/>
-            <Name value="KianaAttack3"/>
+            <Name value="KianaAttack1"/>
             <Type value="Sound"/>
             <Time value="0.100000"/>
         </Events>
@@ -224,27 +234,39 @@
             <Anim value="Attack,04"/>
             <Name value="KianaAttack2"/>
             <Type value="Sound"/>
-            <Time value="0.100000"/>
+            <Time value="0.600000"/>
         </Events>
         <Events>
             <Anim value="Attack,05"/>
-            <Name value="KianaAttack4"/>
+            <Name value="KianaAttack1"/>
             <Type value="Sound"/>
             <Time value="0.200000"/>
         </Events>
         <Events>
             <Anim value="Attack,06"/>
-            <Name value="KianaAttack3"/>
+            <Name value="KianaAttack1"/>
             <Type value="Sound"/>
             <Time value="0.200000"/>
         </Events>
         <Events>
             <Anim value="Attack,07"/>
-            <Name value="KianaAttack4"/>
+            <Name value="KianaAttack2"/>
             <Type value="Sound"/>
             <Time value="0.500000"/>
         </Events>
         <Events Anim="Thrown" Name="KianaHit" Type="Sound"/>
+        <Events Anim="Attack,01" Name="ShowWeapon" Type="Sound"/>
+        <Events Anim="Attack,05" Name="HideWeapon" Type="Sound"/>
+        <Events Anim="Walk" Name="ShowWeapon" Type="Sound"/>
+        <Events Anim="Stand" Name="ShowWeapon" Type="Sound"/>
+        <Events>
+            <Anim value="Attack,07"/>
+            <Name value="ShowWeapon"/>
+            <Type value="Sound"/>
+            <Time value="2.200000"/>
+        </Events>
+        <Events Anim="Attack,06" Name="HideWeapon" Type="Sound"/>
+        <Events Anim="Attack,07" Name="HideWeapon" Type="Sound"/>
         <Occlusion value="Show"/>
         <Radius value="0.375000"/>
         <SelectionOffset value="0.000000,0.000000,-0.500000"/>
@@ -253,10 +275,25 @@
         <SquibTypeDefault value="Flesh"/>
     </CModel>
     <CModel id="KianaC1Portrait" parent="MarinePortraitBase">
-        <Model value="Assets\Models\Kiana_C2_portrait\Kiana_C2_portrait.m3"/>
-        <RequiredAnims value="Assets\Models\Kiana_C2_portrait\Kiana_C2_portrait.m3a"/>
+        <Model value="Assets\Models\Kiana_C1\Kiana_C1_Portrait.m3"/>
         <FacialController value=""/>
         <Image value=""/>
+    </CModel>
+    <CModel id="KianaC1DragonAttack" parent="Doodad">
+        <Model value="Assets\Models\Kiana_C1\Kiana_C1_DragonBreath.m3"/>
+        <Flags index="Wait" value="0"/>
+        <Events>
+            <Anim value="Attack,01"/>
+            <Name value="Roar"/>
+            <Type value="Sound"/>
+            <Time value="1.000000"/>
+        </Events>
+        <Events>
+            <Anim value="Attack,02"/>
+            <Name value="Roar"/>
+            <Type value="Sound"/>
+            <Time value="1.350000"/>
+        </Events>
     </CModel>
     <CModel id="RPC6626Death" parent="BansheeDeathBase">
         <Model value="Assets\Models\BOSS_050_death\BOSS_050_death.m3"/>
@@ -813,6 +850,18 @@
     </CModel>
     <CModel id="KianaC1Blur" parent="RacePersistentSpellFX" Race="Terran">
         <Model value="Assets\Models\Kiana_C1\Kiana_C1_Blur.m3"/>
+        <Flags index="Wait" value="1"/>
+        <ShadowRadius value="0.000000"/>
+    </CModel>
+    <CModel id="KianaC1Blur3" parent="RacePersistentSpellFX" Race="Terran">
+        <Model value="Assets\Models\Kiana_C1\Kiana_C1_Blur3.m3"/>
+        <Flags index="Wait" value="1"/>
+        <ShadowRadius value="0.000000"/>
+        <ScaleMax value="4.000000,4.000000,4.000000"/>
+        <ScaleMin value="4.000000,4.000000,4.000000"/>
+    </CModel>
+    <CModel id="KianaC1GroundEffect" parent="RacePersistentSpellFX" Race="Terran">
+        <Model value="Assets\Models\Kiana_C1\Kiana_C1_GroundEffect.m3"/>
         <Flags index="Wait" value="1"/>
         <ShadowRadius value="0.000000"/>
     </CModel>
@@ -1783,7 +1832,7 @@
         <Model value="Assets\Models\Bronya_C7_MC_Morph\Bronya_C7_MC_Morph.m3"/>
     </CModel>
     <CModel id="K23GroundEffectModel" parent="PersistentSpellFX">
-        <Model value="Assets\Models\K23_GroundEffect\K23_GroundEffect.m3"/>
+        <Model value="Assets\Models\Pistols\K23_GroundEffect.m3"/>
         <EditorCategories value="Race:Terran"/>
         <RadiusLoose value="1.000000"/>
     </CModel>
@@ -2371,6 +2420,12 @@
         <ScaleMin value="2.700000,2.700000,2.700000"/>
         <ShadowRadius value="0.000000"/>
     </CModel>
+    <CModel id="KianaC1Dress" parent="RacePersistentSpellFX" Race="Terran">
+        <Model value="Assets\Models\Kiana_C1\Kiana_C1_Dress.m3"/>
+        <Flags index="Wait" value="1"/>
+        <Priority value="32"/>
+        <ShadowRadius value="0.000000"/>
+    </CModel>
     <CModel id="WeaponR11" parent="RacePersistentSpellFX" Race="Terran">
         <Model value="Assets\Models\Scythe\R11.m3"/>
         <Flags index="Wait" value="1"/>
@@ -2379,7 +2434,13 @@
         <AnimSpeed value="2.500000"/>
     </CModel>
     <CModel id="WeaponK23" parent="RacePersistentSpellFX" Race="Terran">
-        <Model value="Assets\Models\K23\K23.m3"/>
+        <Model value="Assets\Models\Pistols\K23.m3"/>
+        <Flags index="Wait" value="1"/>
+        <Priority value="32"/>
+        <ShadowRadius value="0.000000"/>
+    </CModel>
+    <CModel id="WeaponK36" parent="RacePersistentSpellFX" Race="Terran">
+        <Model value="Assets\Models\Pistols\K36.m3"/>
         <Flags index="Wait" value="1"/>
         <Priority value="32"/>
         <ShadowRadius value="0.000000"/>
@@ -2401,13 +2462,13 @@
         <ShadowRadius value="0.000000"/>
     </CModel>
     <CModel id="WeaponK23Sword" parent="RacePersistentSpellFX" Race="Terran">
-        <Model value="Assets\Models\K23Sword\K23Sword.m3"/>
+        <Model value="Assets\Models\Pistols\K23Sword.m3"/>
         <Flags index="Wait" value="1"/>
         <Priority value="32"/>
         <ShadowRadius value="0.000000"/>
     </CModel>
     <CModel id="WeaponK23Slash" parent="RacePersistentSpellFX" Race="Terran">
-        <Model value="Assets\Models\K23Slash\K23Slash.m3"/>
+        <Model value="Assets\Models\Pistols\K23Slash.m3"/>
         <Flags index="Wait" value="1"/>
         <Priority value="32"/>
         <ShadowRadius value="0.000000"/>

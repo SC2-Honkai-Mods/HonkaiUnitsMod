@@ -42,10 +42,10 @@
 <Effect id="RemoveTarget"/>
 <Effect id="WeaponB25EffectTriggerFinal"/>
 <Effect id="ForceDizzy10s"/>
+<Effect id="Flying"/>
 <Effect id="TargetBurn"/>
 <Effect id="Herrscher8thAbil2AddCharge"/>
 <Effect id="Palsy"/>
-<Effect id="Flying"/>
 <Effect id="ThrowTypeII"/>
 <Effect id="BronyaC7Gun2RealDamage"/>
 <Effect id="BronyaC7HitSearch"/>

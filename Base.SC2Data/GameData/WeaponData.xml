@@ -1225,7 +1225,7 @@
         <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
         <MinScanRange value="7"/>
         <Range value="7"/>
-        <Period value="1.3125"/>
+        <Period value="1.5"/>
         <DamagePoint value="0"/>
         <Backswing value="0"/>
         <LegacyOptions index="CanRetargetWhileChanneling" value="1"/>
@@ -1269,7 +1269,7 @@
         <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
         <MinScanRange value="7"/>
         <Range value="3"/>
-        <Period value="1.5"/>
+        <Period value="2"/>
         <DamagePoint value="0"/>
         <Backswing value="0"/>
         <LegacyOptions index="CanRetargetWhileChanneling" value="1"/>

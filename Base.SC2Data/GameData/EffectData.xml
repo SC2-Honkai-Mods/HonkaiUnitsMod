@@ -12,15 +12,215 @@
     <CEffectDamage default="1" id="DU_WEAP_SPLASH">
         <Flags index="Impact" value="1"/>
     </CEffectDamage>
+    <CEffectEnumArea default="1" id="KianaC1DragonAttackSearchTemplate">
+        <EditorCategories value=""/>
+        <Marker Link="Effect/KianaC1DragonAttackSearchTemplate"/>
+        <SearchFilters value="-;Self,Player,Ally,Stasis,Dead,Hidden"/>
+        <AreaArray>
+            <Arc value="0"/>
+            <RectangleWidth value="1.5"/>
+            <RectangleHeight value="15"/>
+            <Effect value="KianaC1DragonAttack1Set"/>
+        </AreaArray>
+        <LaunchLocation Value="TargetUnit"/>
+        <ImpactLocation Value="TargetPoint"/>
+        <AreaRelativeOffset value="0,-7"/>
+    </CEffectEnumArea>
     <CEffectApplyBehavior id="ForceDizzy10s">
         <EditorCategories value=""/>
         <Behavior value="HonkaiDizzy"/>
         <Flags index="UseDuration" value="1"/>
         <Duration value="10"/>
     </CEffectApplyBehavior>
-    <CEffectApplyBehavior id="KianaC1SummonAttackCD">
+    <CEffectCreatePersistent id="K23CP2">
+        <EditorCategories value="Race:Terran"/>
+        <WhichLocation Value="CasterPoint"/>
+        <TimeScaleSource Value="Caster"/>
+        <OffsetFacingFallback Value="CasterUnit"/>
+        <InitialEffect value="K23ImpactSet2"/>
+        <PeriodCount value="80"/>
+        <PeriodicEffectArray value="K23CPSearchAll"/>
+        <PeriodicEffectArray value="K23CPSearchEnermy"/>
+        <PeriodicPeriodArray value="0.5"/>
+        <PeriodicPeriodArray value="0"/>
+    </CEffectCreatePersistent>
+    <CEffectCreatePersistent id="K23Teleport2Position">
+        <EditorCategories value="Race:Terran"/>
+        <WhichLocation Value="CasterUnit"/>
+        <PeriodCount value="1"/>
+        <PeriodicEffectArray value="K23Teleport2"/>
+        <PeriodicOffsetArray value="0,8,0"/>
+        <PeriodicPeriodArray value="0"/>
+    </CEffectCreatePersistent>
+    <CEffectDamage id="K23InitialDamage2">
+        <EditorCategories value="Race:Terran"/>
+        <AINotifyFlags index="HurtFriend" value="1"/>
+        <AINotifyFlags index="HurtEnemy" value="1"/>
+        <ResponseFlags index="Acquire" value="1"/>
+        <ResponseFlags index="Flee" value="1"/>
+        <ImpactLocation Value="CasterPoint"/>
+        <Flags index="Notification" value="1"/>
+        <Kind value="Splash"/>
+        <KindSplash value="Splash"/>
+        <Amount value="400"/>
+        <AreaArray Radius="3" Fraction="1"/>
+        <AreaArray Radius="4.5" Fraction="0.75"/>
+        <AreaArray Radius="6" Fraction="0.5"/>
+        <SearchFilters value="-;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <ExcludeArray/>
+    </CEffectDamage>
+    <CEffectSet id="K23ImpactSet2">
+        <EditorCategories value="Race:Terran"/>
+        <EffectArray value="K23InitialDamage2"/>
+        <EffectArray value="K23Teleport2"/>
+    </CEffectSet>
+    <CEffectSet id="K23InitialSet2">
         <EditorCategories value=""/>
-    </CEffectApplyBehavior>
+        <EffectArray value="K23ApplySpeed"/>
+        <EffectArray value="K23ApplyInvincible"/>
+        <EffectArray value="K23SelfLaunch2"/>
+        <EffectArray value="NoUnfire2s"/>
+        <TargetLocationType value="Point"/>
+    </CEffectSet>
+    <CEffectLaunchMissile id="K23SelfLaunch2">
+        <EditorCategories value=""/>
+        <LaunchLocation Value="CasterUnit"/>
+        <ImpactLocation Value="TargetPoint"/>
+        <ImpactEffect value="K23CP2"/>
+        <Flags index="2D" value="1"/>
+        <Flags index="Placement" value="1"/>
+        <PlacementRange value="1"/>
+        <Movers Link="K23AbilityMover"/>
+        <DeathType value="Unknown"/>
+    </CEffectLaunchMissile>
+    <CEffectTeleport id="K23Teleport2">
+        <EditorCategories value="Race:Terran"/>
+        <WhichUnit Value="Caster"/>
+        <MinDistance value="0"/>
+        <PlacementAround Value="CasterUnit"/>
+        <PlacementRange value="8"/>
+        <Range value="12"/>
+        <TargetLocation Value="OriginPoint"/>
+        <TeleportFlags index="TestCliff" value="1"/>
+        <PlacementArc value="360"/>
+    </CEffectTeleport>
+    <CEffectCreatePersistent id="KianaC1BlackHole">
+        <EditorCategories value=""/>
+        <PeriodCount value="48"/>
+        <PeriodicEffectArray value="KianaC1BlackHoleSearch"/>
+        <PeriodicPeriodArray value="0.0625"/>
+    </CEffectCreatePersistent>
+    <CEffectApplyForce id="KianaC1BlackHoleForce">
+        <EditorCategories value=""/>
+        <WhichLocation Effect="KianaC1BlackHoleSearch" Value="TargetPoint"/>
+        <Amount value="-0.75"/>
+    </CEffectApplyForce>
+    <CEffectEnumArea id="KianaC1BlackHoleSearch">
+        <EditorCategories value=""/>
+        <SearchFilters value="-;Player,Ally,Structure,Missile,Stasis,Dead,Hidden"/>
+        <AreaArray Radius="1.5" Effect="KianaC1BlackHoleForce"/>
+        <ImpactLocation Value="TargetPoint"/>
+    </CEffectEnumArea>
+    <CEffectCreatePersistent id="KianaC1DragonAttack1CP">
+        <EditorCategories value=""/>
+        <WhichLocation Value="TargetUnit"/>
+        <PeriodCount value="11"/>
+        <PeriodicEffectArray value="KianaC1DragonAttack1Search"/>
+        <PeriodicPeriodArray value="1.25"/>
+        <PeriodicPeriodArray value="0.0625"/>
+        <PeriodicPeriodArray value="0.0625"/>
+        <PeriodicPeriodArray value="0.0625"/>
+        <PeriodicPeriodArray value="0.0625"/>
+        <PeriodicPeriodArray value="0.0625"/>
+        <PeriodicPeriodArray value="0.0625"/>
+        <PeriodicPeriodArray value="0.0625"/>
+        <PeriodicPeriodArray value="0.0625"/>
+        <PeriodicPeriodArray value="0.0625"/>
+        <PeriodicPeriodArray value="0.0625"/>
+        <FinalEffect value="KillTarget"/>
+    </CEffectCreatePersistent>
+    <CEffectCreateUnit id="KianaC1DragonAttack1CU">
+        <ValidatorArray value="KianaC1Buff"/>
+        <EditorCategories value=""/>
+        <WhichLocation Value="CasterUnit"/>
+        <CreateFlags index="SetFacing" value="1"/>
+        <SpawnEffect value="KianaC1DragonAttack1CP"/>
+        <SpawnUnit value="KianaC1Launcher"/>
+    </CEffectCreateUnit>
+    <CEffectCreateUnit id="KianaC1DragonAttack2CU">
+        <ValidatorArray value="KianaC1Buff"/>
+        <EditorCategories value=""/>
+        <WhichLocation Value="CasterUnit"/>
+        <CreateFlags index="SetFacing" value="1"/>
+        <SpawnEffect value="KianaC1DragonAttack2CP"/>
+        <SpawnUnit value="KianaC1Launcher"/>
+    </CEffectCreateUnit>
+    <CEffectCreatePersistent id="KianaC1DragonAttack2CP">
+        <EditorCategories value=""/>
+        <PeriodicPeriodArray value="1.625"/>
+        <PeriodicPeriodArray value="0.125"/>
+        <PeriodicPeriodArray value="0.125"/>
+        <PeriodicPeriodArray value="0.125"/>
+        <PeriodicPeriodArray value="0.125"/>
+        <PeriodicPeriodArray value="0.125"/>
+        <PeriodicPeriodArray value="0.125"/>
+        <PeriodicPeriodArray value="0.125"/>
+        <PeriodicPeriodArray value="0.125"/>
+        <PeriodicPeriodArray value="0.125"/>
+        <PeriodicPeriodArray value="0.125"/>
+        <PeriodicPeriodArray value="0.125"/>
+        <PeriodicPeriodArray value="0.125"/>
+        <PeriodicPeriodArray value="0.125"/>
+        <PeriodicPeriodArray value="0.125"/>
+        <PeriodicPeriodArray value="0.125"/>
+        <PeriodicPeriodArray value="0.125"/>
+        <PeriodicPeriodArray value="0.125"/>
+        <PeriodicPeriodArray value="0.125"/>
+        <PeriodicPeriodArray value="0.125"/>
+        <PeriodicPeriodArray value="0.125"/>
+        <PeriodCount value="21"/>
+        <PeriodicEffectArray value="KianaC1DragonAttack2Search1"/>
+        <PeriodicEffectArray value="KianaC1DragonAttack2Search2"/>
+        <PeriodicEffectArray value="KianaC1DragonAttack2Search3"/>
+        <PeriodicEffectArray value="KianaC1DragonAttack2Search4"/>
+        <PeriodicEffectArray value="KianaC1DragonAttack2Search5"/>
+        <PeriodicEffectArray value="KianaC1DragonAttack2Search6"/>
+        <PeriodicEffectArray value="KianaC1DragonAttack2Search7"/>
+        <PeriodicEffectArray value="KianaC1DragonAttack2Search8"/>
+        <PeriodicEffectArray value="KianaC1DragonAttack2Search9"/>
+        <PeriodicEffectArray value="KianaC1DragonAttack2Search10"/>
+        <PeriodicEffectArray value="KianaC1DragonAttack2Search11"/>
+        <PeriodicEffectArray value="KianaC1DragonAttack2Search8"/>
+        <PeriodicEffectArray value="KianaC1DragonAttack2Search12"/>
+        <PeriodicEffectArray value="KianaC1DragonAttack2Search13"/>
+        <PeriodicEffectArray value="KianaC1DragonAttack2Search6"/>
+        <PeriodicEffectArray value="KianaC1DragonAttack2Search14"/>
+        <PeriodicEffectArray value="KianaC1DragonAttack2Search15"/>
+        <PeriodicEffectArray value="KianaC1DragonAttack2Search16"/>
+        <PeriodicEffectArray value="KianaC1DragonAttack2Search17"/>
+        <PeriodicEffectArray value="KianaC1DragonAttack2Search3"/>
+        <PeriodicEffectArray value="KianaC1DragonAttack2Search2"/>
+        <WhichLocation Value="TargetUnit"/>
+        <FinalEffect value="KillTarget"/>
+    </CEffectCreatePersistent>
+    <CEffectSet id="KianaC1DragonAttack1Set">
+        <EditorCategories value=""/>
+        <EffectArray value="Flying"/>
+        <EffectArray value="KianaC1DragonAttackDamage"/>
+    </CEffectSet>
+    <CEffectDamage id="KianaC1DragonAttackDamage">
+        <EditorCategories value=""/>
+        <Kind value="Ranged"/>
+        <Amount value="35"/>
+    </CEffectDamage>
+    <CEffectCreatePersistent id="KianaC1SummonedMeleeAttack">
+        <ValidatorArray value="KianaC1Buff"/>
+        <EditorCategories value=""/>
+        <WhichLocation Value="TargetUnitOrPoint"/>
+        <PeriodCount value="5"/>
+        <PeriodicEffectArray value="KianaC1SummonedAttackLaunch"/>
+        <PeriodicPeriodArray value="0.0625"/>
+    </CEffectCreatePersistent>
     <CEffectDamage id="KianaC1UltimateSummonedDamage">
         <EditorCategories value=""/>
         <ImpactLocation Value="TargetPoint"/>
@@ -572,21 +772,17 @@
         <SearchFlags index="ExtendByUnitRadius" value="1"/>
         <SearchFlags index="OffsetByUnitRadius" value="1"/>
         <SearchFlags index="OffsetAreaByAngle" value="1"/>
-        <DebugTrace value="1"/>
     </CEffectDamage>
     <CEffectDamage id="KianaC1SummonedAttackDamage">
         <EditorCategories value=""/>
         <ImpactLocation Value="TargetUnit"/>
         <Kind value="Ranged"/>
-        <Amount value="10"/>
+        <Amount value="8"/>
     </CEffectDamage>
     <CEffectLaunchMissile id="KianaC1SummonedAttackLaunch">
         <EditorCategories value=""/>
-        <LaunchEffect value="KianaC1SummonAttackCD"/>
         <ImpactEffect value="KianaC1SummonedAttackDamage"/>
         <AmmoUnit value="Herrscher2Weapon"/>
-        <ImpactLocation Value="TargetUnitOrPoint"/>
-        <Movers Link="KianaC1Missile1"/>
         <LaunchOffset value="0,0,3"/>
     </CEffectLaunchMissile>
     <CEffectCreatePersistent id="KianaC1UltimateCP">
@@ -594,15 +790,188 @@
         <InitialEffect value="KianaC1UltimateTimeLockSearch"/>
         <FinalEffect value="KianaC1Buff"/>
         <PeriodCount value="4"/>
+        <PeriodicEffectArray value="BatiStart"/>
         <PeriodicEffectArray value="KianaC1UltimatePosition"/>
         <PeriodicEffectArray value="KianaC1UltimateDamage"/>
         <PeriodicEffectArray value="KianaC1UltimatePosition"/>
         <PeriodicEffectArray value="KianaC1UltimatePosition"/>
+        <PeriodicPeriodArray value="0"/>
         <PeriodicPeriodArray value="0.375"/>
         <PeriodicPeriodArray value="1"/>
         <PeriodicPeriodArray value="0"/>
         <PeriodicPeriodArray value="1"/>
     </CEffectCreatePersistent>
+    <CEffectEnumArea id="KianaC1DragonAttack1Search" parent="KianaC1DragonAttackSearchTemplate"/>
+    <CEffectEnumArea id="KianaC1DragonAttack2Search1" parent="KianaC1DragonAttackSearchTemplate">
+        <AreaArray index="0">
+            <Arc value="0"/>
+            <RectangleWidth value="1.5"/>
+            <RectangleHeight value="15"/>
+            <FacingAdjustment value="39.9902"/>
+            <Effect value="KianaC1DragonAttack1Set"/>
+        </AreaArray>
+        <AreaRelativeOffset value="4.4985,-5.363"/>
+    </CEffectEnumArea>
+    <CEffectEnumArea id="KianaC1DragonAttack2Search2" parent="KianaC1DragonAttackSearchTemplate">
+        <AreaArray index="0">
+            <Arc value="0"/>
+            <RectangleWidth value="1.5"/>
+            <RectangleHeight value="15"/>
+            <FacingAdjustment value="45"/>
+            <Effect value="KianaC1DragonAttack1Set"/>
+        </AreaArray>
+        <AreaRelativeOffset value="4.9497,-4.9497"/>
+    </CEffectEnumArea>
+    <CEffectEnumArea id="KianaC1DragonAttack2Search3" parent="KianaC1DragonAttackSearchTemplate">
+        <AreaArray index="0">
+            <Arc value="0"/>
+            <RectangleWidth value="1.5"/>
+            <RectangleHeight value="15"/>
+            <FacingAdjustment value="35.5957"/>
+            <Effect value="KianaC1DragonAttack1Set"/>
+        </AreaArray>
+        <AreaRelativeOffset value="4.0744,-5.692"/>
+    </CEffectEnumArea>
+    <CEffectEnumArea id="KianaC1DragonAttack2Search4" parent="KianaC1DragonAttackSearchTemplate">
+        <AreaArray index="0">
+            <Arc value="0"/>
+            <RectangleWidth value="1.5"/>
+            <RectangleHeight value="15"/>
+            <FacingAdjustment value="24.994"/>
+            <Effect value="KianaC1DragonAttack1Set"/>
+        </AreaArray>
+        <AreaRelativeOffset value="2.9577,-6.3444"/>
+    </CEffectEnumArea>
+    <CEffectEnumArea id="KianaC1DragonAttack2Search5" parent="KianaC1DragonAttackSearchTemplate">
+        <AreaArray index="0">
+            <Arc value="0"/>
+            <RectangleWidth value="1.5"/>
+            <RectangleHeight value="15"/>
+            <FacingAdjustment value="11.4916"/>
+            <Effect value="KianaC1DragonAttack1Set"/>
+        </AreaArray>
+        <AreaRelativeOffset value="1.3945,-6.8596"/>
+    </CEffectEnumArea>
+    <CEffectEnumArea id="KianaC1DragonAttack2Search6" parent="KianaC1DragonAttackSearchTemplate">
+        <AreaArray index="0">
+            <Arc value="0"/>
+            <RectangleWidth value="1.5"/>
+            <RectangleHeight value="15"/>
+            <FacingAdjustment value="-0.5932"/>
+            <Effect value="KianaC1DragonAttack1Set"/>
+        </AreaArray>
+        <AreaRelativeOffset value="-0.0725,-6.9995"/>
+    </CEffectEnumArea>
+    <CEffectEnumArea id="KianaC1DragonAttack2Search7" parent="KianaC1DragonAttackSearchTemplate">
+        <AreaArray index="0">
+            <Arc value="0"/>
+            <RectangleWidth value="1.5"/>
+            <RectangleHeight value="15"/>
+            <FacingAdjustment value="-13.9965"/>
+            <Effect value="KianaC1DragonAttack1Set"/>
+        </AreaArray>
+        <AreaRelativeOffset value="-1.693,-6.7922"/>
+    </CEffectEnumArea>
+    <CEffectEnumArea id="KianaC1DragonAttack2Search8" parent="KianaC1DragonAttackSearchTemplate">
+        <AreaArray index="0">
+            <Arc value="0"/>
+            <RectangleWidth value="1.5"/>
+            <RectangleHeight value="15"/>
+            <FacingAdjustment value="-25.796"/>
+            <Effect value="KianaC1DragonAttack1Set"/>
+        </AreaArray>
+        <AreaRelativeOffset value="-3.0461,-6.3024"/>
+    </CEffectEnumArea>
+    <CEffectEnumArea id="KianaC1DragonAttack2Search9" parent="KianaC1DragonAttackSearchTemplate">
+        <AreaArray index="0">
+            <Arc value="0"/>
+            <RectangleWidth value="1.5"/>
+            <RectangleHeight value="15"/>
+            <FacingAdjustment value="-32.992"/>
+            <Effect value="KianaC1DragonAttack1Set"/>
+        </AreaArray>
+        <AreaRelativeOffset value="-3.8117,-5.8713"/>
+    </CEffectEnumArea>
+    <CEffectEnumArea id="KianaC1DragonAttack2Search10" parent="KianaC1DragonAttackSearchTemplate">
+        <AreaArray index="0">
+            <Arc value="0"/>
+            <RectangleWidth value="1.5"/>
+            <RectangleHeight value="15"/>
+            <FacingAdjustment value="-33.9916"/>
+            <Effect value="KianaC1DragonAttack1Set"/>
+        </AreaArray>
+        <AreaRelativeOffset value="-3.9135,-5.804"/>
+    </CEffectEnumArea>
+    <CEffectEnumArea id="KianaC1DragonAttack2Search11" parent="KianaC1DragonAttackSearchTemplate">
+        <AreaArray index="0">
+            <Arc value="0"/>
+            <RectangleWidth value="1.5"/>
+            <RectangleHeight value="15"/>
+            <FacingAdjustment value="-30.9924"/>
+            <Effect value="KianaC1DragonAttack1Set"/>
+        </AreaArray>
+        <AreaRelativeOffset value="-3.6044,-6.0007"/>
+    </CEffectEnumArea>
+    <CEffectEnumArea id="KianaC1DragonAttack2Search12" parent="KianaC1DragonAttackSearchTemplate">
+        <AreaArray index="0">
+            <Arc value="0"/>
+            <RectangleWidth value="1.5"/>
+            <RectangleHeight value="15"/>
+            <FacingAdjustment value="-16.9958"/>
+            <Effect value="KianaC1DragonAttack1Set"/>
+        </AreaArray>
+        <AreaRelativeOffset value="-2.0461,-6.6943"/>
+    </CEffectEnumArea>
+    <CEffectEnumArea id="KianaC1DragonAttack2Search13" parent="KianaC1DragonAttackSearchTemplate">
+        <AreaArray index="0">
+            <Arc value="0"/>
+            <RectangleWidth value="1.5"/>
+            <RectangleHeight value="15"/>
+            <FacingAdjustment value="-7.998"/>
+            <Effect value="KianaC1DragonAttack1Set"/>
+        </AreaArray>
+        <AreaRelativeOffset value="-0.9738,-6.932"/>
+    </CEffectEnumArea>
+    <CEffectEnumArea id="KianaC1DragonAttack2Search14" parent="KianaC1DragonAttackSearchTemplate">
+        <AreaArray index="0">
+            <Arc value="0"/>
+            <RectangleWidth value="1.5"/>
+            <RectangleHeight value="15"/>
+            <FacingAdjustment value="5.9985"/>
+            <Effect value="KianaC1DragonAttack1Set"/>
+        </AreaArray>
+        <AreaRelativeOffset value="0.7314,-6.9616"/>
+    </CEffectEnumArea>
+    <CEffectEnumArea id="KianaC1DragonAttack2Search15" parent="KianaC1DragonAttackSearchTemplate">
+        <AreaArray index="0">
+            <Arc value="0"/>
+            <RectangleWidth value="1.5"/>
+            <RectangleHeight value="15"/>
+            <FacingAdjustment value="13.3923"/>
+            <Effect value="KianaC1DragonAttack1Set"/>
+        </AreaArray>
+        <AreaRelativeOffset value="1.6213,-6.8095"/>
+    </CEffectEnumArea>
+    <CEffectEnumArea id="KianaC1DragonAttack2Search16" parent="KianaC1DragonAttackSearchTemplate">
+        <AreaArray index="0">
+            <Arc value="0"/>
+            <RectangleWidth value="1.5"/>
+            <RectangleHeight value="15"/>
+            <FacingAdjustment value="20.9948"/>
+            <Effect value="KianaC1DragonAttack1Set"/>
+        </AreaArray>
+        <AreaRelativeOffset value="2.508,-6.5354"/>
+    </CEffectEnumArea>
+    <CEffectEnumArea id="KianaC1DragonAttack2Search17" parent="KianaC1DragonAttackSearchTemplate">
+        <AreaArray index="0">
+            <Arc value="0"/>
+            <RectangleWidth value="1.5"/>
+            <RectangleHeight value="15"/>
+            <FacingAdjustment value="28.993"/>
+            <Effect value="KianaC1DragonAttack1Set"/>
+        </AreaArray>
+        <AreaRelativeOffset value="3.3928,-6.1228"/>
+    </CEffectEnumArea>
     <CEffectSet id="KianaC1UltimateTimeLockSet">
         <EditorCategories value=""/>
         <EffectArray value="Flying"/>
@@ -4827,7 +5196,6 @@
         <EditorCategories value=""/>
     </CEffectSet>
     <CEffectTeleport id="Herrscher2ndBlinkTeleport">
-        <ValidatorArray value="CasterNotFungalGrowthed"/>
         <EditorCategories value="Race:Protoss"/>
         <WhichUnit Value="Caster"/>
         <ClearQueuedOrders value="0"/>
@@ -9093,13 +9461,17 @@
         <WhichLocation Value="TargetUnit"/>
         <TimeScaleSource Value="Caster"/>
         <InitialEffect value="KianaC1RangeAttack4Ready"/>
-        <PeriodCount value="4"/>
+        <PeriodCount value="7"/>
+        <PeriodicEffectArray value="KianaC1DragonAttack1CU"/>
         <PeriodicEffectArray value="KianaC1RangeAttackLeftDamage"/>
         <PeriodicEffectArray value="KianaC1SummonedAttack"/>
         <PeriodicEffectArray value="KianaC1RangeAttackRightDamage"/>
         <PeriodicEffectArray value="KianaC1SummonedAttack"/>
+        <PeriodicEffectArray value="KianaC1BlackHole"/>
         <PeriodicEffectArray value="VoidEffect"/>
+        <PeriodicPeriodArray value="0"/>
         <PeriodicPeriodArray value="0.75"/>
+        <PeriodicPeriodArray value="0"/>
         <PeriodicPeriodArray value="0"/>
         <PeriodicPeriodArray value="0"/>
         <PeriodicPeriodArray value="0"/>
@@ -9113,21 +9485,19 @@
         <PeriodicEffectArray value="KianaC1SummonedAttackLaunch"/>
         <PeriodicPeriodArray value="0.0625"/>
         <ValidatorArray value="KianaC1Buff"/>
-        <ValidatorArray value="KianaC1SummonAttackNoCD"/>
         <WhichLocation Value="TargetUnitOrPoint"/>
     </CEffectCreatePersistent>
-    <CEffectSet id="KianaC1SummonedMeleeAttack"/>
     <CEffectDamage id="KianaC1RangeAttackLeftDamage">
         <EditorCategories value=""/>
         <ImpactLocation Value="TargetUnit"/>
         <Kind value="Ranged"/>
-        <Amount value="20"/>
+        <Amount value="15"/>
     </CEffectDamage>
     <CEffectDamage id="KianaC1RangeAttackRightDamage">
         <EditorCategories value=""/>
         <ImpactLocation Value="TargetUnit"/>
         <Kind value="Ranged"/>
-        <Amount value="20"/>
+        <Amount value="15"/>
     </CEffectDamage>
     <CEffectApplyBehavior id="KianaC1MeleeAttack2Ready">
         <EditorCategories value=""/>
@@ -9252,12 +9622,16 @@
         <TimeScaleSource Value="Caster"/>
         <InitialEffect value="KianaC1MeleeAttack3Move"/>
         <PeriodCount value="4"/>
+        <PeriodicEffectArray value="KianaC1DragonAttack2CU"/>
         <PeriodicEffectArray value="KianaC1MeleeAttack3Ready"/>
         <PeriodicEffectArray value="KianaC1MeleeAttack3Damage"/>
+        <PeriodicEffectArray value="KianaC1MeleeAttack3Search"/>
         <PeriodicEffectArray value="KianaC1SummonedMeleeAttack"/>
         <PeriodicEffectArray value="VoidEffect"/>
         <PeriodicPeriodArray value="0"/>
-        <PeriodicPeriodArray value="0.8125"/>
+        <PeriodicPeriodArray value="0"/>
+        <PeriodicPeriodArray value="0.875"/>
+        <PeriodicPeriodArray value="0"/>
         <PeriodicPeriodArray value="0"/>
         <PeriodicPeriodArray value="0.5"/>
         <FinalEffect value="KianaC1MeleeAttack3Remove"/>
@@ -9268,7 +9642,7 @@
         <ImpactLocation Value="SourcePoint"/>
         <Kind value="Melee"/>
         <KindSplash value="Melee"/>
-        <Amount value="25"/>
+        <Amount value="20"/>
         <AreaArray Arc="119.9816" Radius="2" Fraction="1"/>
         <SearchFilters value="Ground;Self,Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable"/>
         <SearchFlags index="CallForHelp" value="1"/>
@@ -9281,7 +9655,7 @@
         <ImpactLocation Value="CasterPoint"/>
         <Kind value="Melee"/>
         <KindSplash value="Melee"/>
-        <Amount value="60"/>
+        <Amount value="45"/>
         <AreaArray Radius="2.5" Fraction="1"/>
         <SearchFilters value="Ground;Self,Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable"/>
         <SearchFlags index="CallForHelp" value="1"/>
@@ -9289,4 +9663,13 @@
         <SearchFlags index="OffsetByUnitRadius" value="1"/>
         <SearchFlags index="OffsetAreaByAngle" value="1"/>
     </CEffectDamage>
+    <CEffectEnumArea id="KianaC1MeleeAttack3Search">
+        <EditorCategories value=""/>
+        <ImpactLocation Value="CasterPoint"/>
+        <AreaArray Radius="2.5" Effect="Flying"/>
+        <SearchFilters value="Ground;Self,Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <SearchFlags index="CallForHelp" value="1"/>
+        <SearchFlags index="ExtendByUnitRadius" value="1"/>
+        <SearchFlags index="OffsetByUnitRadius" value="1"/>
+    </CEffectEnumArea>
 </Catalog>

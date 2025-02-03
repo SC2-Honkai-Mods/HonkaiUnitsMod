@@ -679,9 +679,6 @@
     <CRequirement id="KianaC4Upgrade4Researched">
         <NodeArray index="Use" Link="CountUpgradeKianaC4Upgrade4CompleteOnly"/>
     </CRequirement>
-    <CRequirement id="KianaCanChangeAvatar">
-        <NodeArray index="Use" Link="CountBehaviorKianaLookForBuildingCompleteOnlyAtUnit979450497"/>
-    </CRequirement>
     <CRequirement id="LearnTerranBuildingArmor">
         <NodeArray index="Use" Link="LTSumCountUpgradeTerranBuildingArmorQueuedOnlyCountUpgradeTerranBuildingArmorInProgressOnly1"/>
         <NodeArray index="Show" Link="LTCountUpgradeTerranBuildingArmorQueuedOrBetter4"/>
@@ -762,6 +759,9 @@
     <CRequirement id="UnfireState">
         <NodeArray index="Use" Link="CountBehaviorUnfireCompleteOnlyAtUnit4239173858"/>
     </CRequirement>
+    <CRequirement id="DK7Researched">
+        <NodeArray index="Use" Link="CountUpgradeDivineKey7thCompleteOnly3249686718"/>
+    </CRequirement>
     <CRequirement id="UnlockedAvatarKiana">
         <NodeArray index="Show" Link="CountUpgradeAvatarKianaCompleteOnly"/>
     </CRequirement>
@@ -778,13 +778,17 @@
         <EditorCategories value="TechType:Unit,Race:Terran"/>
         <NodeArray index="Show" Link="CountBehaviorWeaponUseK23CompleteOnlyAtUnit"/>
     </CRequirement>
+    <CRequirement id="UsingK23Show">
+        <EditorCategories value="TechType:Unit,Race:Terran"/>
+        <NodeArray index="Use" Link="CountBehaviorWeaponUseK23CompleteOnlyAtUnit"/>
+    </CRequirement>
     <CRequirement id="UsingK5">
         <EditorCategories value="TechType:Unit,Race:Terran"/>
         <NodeArray index="Show" Link="CountBehaviorWeaponUseK5CompleteOnlyAtUnit"/>
     </CRequirement>
     <CRequirement id="CanEquipK23">
         <EditorCategories value="TechType:Unit,Race:Terran"/>
-        <NodeArray index="Use" Link="NotCountBehaviorWeaponUseK23CompleteOnlyAtUnit3368134584"/>
+        <NodeArray index="Use" Link="AndCountUpgradeDivineKey7thCompleteOnly3249686718NotCountBehaviorWeaponUseK23CompleteOnlyAtUnit3368134584"/>
     </CRequirement>
     <CRequirement id="CanEquipK5">
         <EditorCategories value="TechType:Unit,Race:Terran"/>
@@ -922,12 +926,20 @@
         <NodeArray index="Use" Link="CountUpgradeBronyaC7UnlockCompleteOnly"/>
         <NodeArray index="Show" Link="Not157438788SumCountUnitBronyaC2QueuedOrBetterCountUnitBronyaC2RevivableCountUnitBronyaC7QueuedOrBetterCountUnitBronyaC7RevivableCountUnitBronyaC7MotorQueuedOrBetterCountUnitBronyaC7MotorRevivable"/>
     </CRequirement>
+    <CRequirement id="KianaC1CanTrain">
+        <NodeArray index="Use" Link="CountUpgradeKianaC1UnlockCompleteOnly"/>
+        <NodeArray index="Show" Link="Not157438788SumCountUnitKianaC4QueuedOrBetterCountUnitKianaC4RevivableCountUnitKianaC2QueuedOrBetterCountUnitKianaC2RevivableCountUnitKianaC1QueuedOrBetterCountUnitKianaC1Revivable"/>
+    </CRequirement>
     <CRequirement id="BronyaC2CanUnlock">
         <NodeArray index="Show" Link="NotCountUpgradeBronyaC2UnlockQueuedOrBetter"/>
     </CRequirement>
     <CRequirement id="BronyaC7CanUnlock">
         <NodeArray index="Use" Link="CountUpgradeHerrscherPhaseCompleteOnly"/>
         <NodeArray index="Show" Link="NotCountUpgradeBronyaC7UnlockQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="KianaC1CanUnlock">
+        <NodeArray index="Use" Link="CountUpgradeHerrscherPhaseCompleteOnly"/>
+        <NodeArray index="Show" Link="NotCountUpgradeKianaC1UnlockQueuedOrBetter"/>
     </CRequirement>
     <CRequirement id="BronyaC2Upgrade1Requirement">
         <NodeArray index="Show" Link="LTCountUpgradeBronyaC2Upgrade1QueuedOrBetter4"/>
@@ -952,5 +964,8 @@
     </CRequirement>
     <CRequirement id="BronyaC7CanMorph">
         <NodeArray index="Use" Link="CountUpgradeBronyaC7UnlockCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="KianaC1CanMorph">
+        <NodeArray index="Use" Link="CountUpgradeKianaC1UnlockCompleteOnly"/>
     </CRequirement>
 </Catalog>

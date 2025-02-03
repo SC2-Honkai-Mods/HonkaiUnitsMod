@@ -26,6 +26,8 @@ void lib6D9D7845_InitVariables () {
     lib6D9D7845_gv_globalE8B083E8AF95E6A8A1E5BC8F = (GameAttributeGameValue("3") == "0002");
     lib6D9D7845_gv_globalE88BB1E99B84E5A48DE6B4BB = true;
     lib6D9D7845_gv_globalE79086E4B98BE5BE8BE88085E68A80E883BDE5898AE5BCB1 = true;
+    lib6D9D7845_gv_dPSDialog = c_invalidDialogId;
+    lib6D9D7845_gv_dPSDialogItem = c_invalidDialogControlId;
     for (init_i = 0; init_i <= 16; init_i += 1) {
         for (init_j = 0; init_j <= 7; init_j += 1) {
             lib6D9D7845_gv_e794A8E688B7E887AAE58AA8E9858DE8A385[init_i][init_j] = -1;
@@ -321,7 +323,6 @@ fixed lib6D9D7845_gf_E5A4B9E8A792C2B1180 (fixed lp_sorce, fixed lp_target) {
 bool lib6D9D7845_gf_E58581E8AEB8E8B083E8AF95 () {
     // Automatic Variable Declarations
     // Implementation
-    return true;
     return lib6D9D7845_gv_globalE8B083E8AF95E6A8A1E5BC8F;
 }
 
@@ -1535,7 +1536,10 @@ fixed lib6D9D7845_gf_E5A5B3E6ADA6E7A59EE694BBE587BBE58A9BE4B998E695B0 (unit lp_e
 
     // Implementation
     auto72777ED2_val = UnitGetType(lp_e58D95E4BD8D);
-    if (auto72777ED2_val == "KianaC2") {
+    if (auto72777ED2_val == "KianaC1") {
+        return (libNtve_gf_CatalogReferenceGetAsReal("Effect,KianaATTACK,Amount", UnitGetOwner(lp_e58D95E4BD8D)) / 10.0);
+    }
+    else if (auto72777ED2_val == "KianaC2") {
         return (libNtve_gf_CatalogReferenceGetAsReal("Effect,KianaATTACK,Amount", UnitGetOwner(lp_e58D95E4BD8D)) / 10.0);
     }
     else if (auto72777ED2_val == "KianaC4") {
@@ -1619,6 +1623,27 @@ int lib6D9D7845_gf_ExtraDivineKeys (int lp_player) {
 
 // Triggers
 //--------------------------------------------------------------------------------------------------
+// Trigger: Debug 5
+//--------------------------------------------------------------------------------------------------
+bool lib6D9D7845_gt_Debug5_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Conditions
+    if (testConds) {
+        if (!(lib6D9D7845_gf_E58581E8AEB8E8B083E8AF95())) {
+            return false;
+        }
+    }
+
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib6D9D7845_gt_Debug5_Init () {
+    lib6D9D7845_gt_Debug5 = TriggerCreate("lib6D9D7845_gt_Debug5_Func");
+    TriggerAddEventKeyPressed(lib6D9D7845_gt_Debug5, c_playerAny, c_keyNumPad8, true, c_keyModifierStateIgnore, c_keyModifierStateIgnore, c_keyModifierStateIgnore);
+}
+
+//--------------------------------------------------------------------------------------------------
 // Trigger: ????????????
 //--------------------------------------------------------------------------------------------------
 bool lib6D9D7845_gt_E69BB4E696B0E4BABAE58FA3_Func (bool testConds, bool runActions) {
@@ -1671,10 +1696,17 @@ bool lib6D9D7845_gt_CreateDPSUnit_Func (bool testConds, bool runActions) {
     if ((lib6D9D7845_gv_dPSUnit != null)) {
         UnitRemove(lib6D9D7845_gv_dPSUnit);
         lib6D9D7845_gv_dPSUnit = null;
+        DialogDestroy(lib6D9D7845_gv_dPSDialog);
     }
     else {
         libNtve_gf_CreateUnitsWithDefaultFacing(1, "DPSTest", 0, 15, CameraGetTarget(EventPlayer()));
         lib6D9D7845_gv_dPSUnit = UnitLastCreated();
+        DialogCreate(400, 160, c_anchorTopLeft, 0, 0, true);
+        lib6D9D7845_gv_dPSDialog = DialogLastCreated();
+        libNtve_gf_CreateDialogItemLabel(DialogLastCreated(), 400, 160, c_anchorTopLeft, 50, 50, StringToText(""), ColorWithAlpha(0,0,0,0), false, 2.0);
+        lib6D9D7845_gv_dPSDialogItem = DialogControlLastCreated();
+        libNtve_gf_SetDialogItemStyle(DialogControlLastCreated(), "TimeLabel", PlayerGroupAll());
+        DialogSetVisible(DialogLastCreated(), PlayerGroupAll(), true);
     }
     return true;
 }
@@ -1736,8 +1768,7 @@ bool lib6D9D7845_gt_DPSStats_Func (bool testConds, bool runActions) {
     }
     lv__10E7A792E4BCA4E5AEB3 /= 10.0;
     lv__30E7A792E4BCA4E5AEB3 /= 30.0;
-    TriggerDebugOutput(1, (StringExternal("Param/Value/lib_6D9D7845_C48BFC0A") + FixedToText(lv__10E7A792E4BCA4E5AEB3, 2)), true);
-    TriggerDebugOutput(1, (StringExternal("Param/Value/lib_6D9D7845_FBE4912F") + FixedToText(lv__30E7A792E4BCA4E5AEB3, 2)), true);
+    libNtve_gf_SetDialogItemText(lib6D9D7845_gv_dPSDialogItem, (StringExternal("Param/Value/lib_6D9D7845_5CD99C93") + FixedToText(lv__10E7A792E4BCA4E5AEB3, 2) + StringExternal("Param/Value/lib_6D9D7845_8CA6498A") + StringExternal("Param/Value/lib_6D9D7845_513313B5") + FixedToText(lv__30E7A792E4BCA4E5AEB3, 2)), PlayerGroupAll());
     return true;
 }
 
@@ -1861,6 +1892,17 @@ bool lib6D9D7845_gt_Debug4_Func (bool testConds, bool runActions) {
     }
 
     libNtve_gf_SetUpgradeLevelForPlayer(1, "HerrscherPhase", 1);
+    libNtve_gf_SetUpgradeLevelForPlayer(1, "DivineKey7th", 1);
+    libNtve_gf_SetUpgradeLevelForPlayer(1, "DivineKey9th", 1);
+    libNtve_gf_SetUpgradeLevelForPlayer(1, "KianaATTACK", 16);
+    libNtve_gf_SetUpgradeLevelForPlayer(1, "KianaShield", 16);
+    libNtve_gf_SetUpgradeLevelForPlayer(1, "KianaHealth", 16);
+    libNtve_gf_SetUpgradeLevelForPlayer(1, "BronyaATTACK", 16);
+    libNtve_gf_SetUpgradeLevelForPlayer(1, "BronyaHealth", 16);
+    libNtve_gf_SetUpgradeLevelForPlayer(1, "BronyaShield", 16);
+    libNtve_gf_SetUpgradeLevelForPlayer(1, "StigmataCount", 3);
+    libNtve_gf_SetUpgradeLevelForPlayer(1, "StigmataCG1", 1);
+    libNtve_gf_SetUpgradeLevelForPlayer(1, "StigmataIG2", 1);
     return true;
 }
 
@@ -1893,10 +1935,7 @@ bool lib6D9D7845_gt_DebugEffect_Func (bool testConds, bool runActions) {
     TriggerDebugOutput(1, (StringExternal("Param/Value/lib_6D9D7845_AC83FEED") + UnitGetName(EventPlayerEffectUsedUnit(c_effectUnitOrigin))), true);
     TriggerDebugOutput(1, (StringExternal("Param/Value/lib_6D9D7845_4AA36070") + UnitGetName(EventPlayerEffectUsedUnit(c_effectUnitOuter))), true);
     TriggerDebugOutput(1, (StringExternal("Param/Value/lib_6D9D7845_FF52F463") + UnitGetName(EventPlayerEffectUsedUnit(c_effectUnitTarget))), true);
-    PlayerCreateEffectPoint(1, "DEBUGPOINT", EventPlayerEffectUsedPoint(c_effectLocationTargetPoint));
     PlayerCreateEffectPoint(1, "DEBUGPOINT", EventPlayerEffectUsedPoint(c_effectLocationOriginPoint));
-    PlayerCreateEffectPoint(1, "DEBUGPOINT", EventPlayerEffectUsedPoint(c_effectLocationOuterPoint));
-    PlayerCreateEffectPoint(1, "DEBUGPOINT", EventPlayerEffectUsedPoint(c_effectLocationSourcePoint));
     return false;
     return true;
 }
@@ -5330,6 +5369,33 @@ void lib6D9D7845_gt_E997AAE981BFE68A80E883BDE79BAEE6A087E8BDACE7A7BB_Init () {
 }
 
 //--------------------------------------------------------------------------------------------------
+// Trigger: ????????????
+//--------------------------------------------------------------------------------------------------
+bool lib6D9D7845_gt_E997AAE78EB0E8A1A5E4B881_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Conditions
+    if (testConds) {
+        if (!(lib6D9D7845_gf_E58581E8AEB8E8B083E8AF95())) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    UnitSetPosition(EventPlayerEffectUsedUnit(c_effectUnitCaster), EventPlayerEffectUsedPoint(c_effectLocationOriginPoint), false);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib6D9D7845_gt_E997AAE78EB0E8A1A5E4B881_Init () {
+    lib6D9D7845_gt_E997AAE78EB0E8A1A5E4B881 = TriggerCreate("lib6D9D7845_gt_E997AAE78EB0E8A1A5E4B881_Func");
+    TriggerAddEventPlayerEffectUsed(lib6D9D7845_gt_E997AAE78EB0E8A1A5E4B881, c_playerAny, "K23Teleport2");
+}
+
+//--------------------------------------------------------------------------------------------------
 // Trigger: ???????????????
 //--------------------------------------------------------------------------------------------------
 bool lib6D9D7845_gt_E5A5B3E6ADA6E7A59EE58585E883BD_Func (bool testConds, bool runActions) {
@@ -7903,6 +7969,7 @@ void lib6D9D7845_gt_ExtraDivineKeys_Init () {
 }
 
 void lib6D9D7845_InitTriggers () {
+    lib6D9D7845_gt_Debug5_Init();
     lib6D9D7845_gt_E69BB4E696B0E4BABAE58FA3_Init();
     lib6D9D7845_gt_CreateDPSUnit_Init();
     lib6D9D7845_gt_DPSStats_Init();
@@ -7990,6 +8057,7 @@ void lib6D9D7845_InitTriggers () {
     lib6D9D7845_gt_E5B9BBE5A283E98089E68BA9_Init();
     lib6D9D7845_gt_E9BB91E6B49E_Init();
     lib6D9D7845_gt_E997AAE981BFE68A80E883BDE79BAEE6A087E8BDACE7A7BB_Init();
+    lib6D9D7845_gt_E997AAE78EB0E8A1A5E4B881_Init();
     lib6D9D7845_gt_E5A5B3E6ADA6E7A59EE58585E883BD_Init();
     lib6D9D7845_gt_E997AAE981BFE99FB3E69588E9A286E59F9FE8A385C2B7E799BDE7BB83_Init();
     lib6D9D7845_gt_E997AAE981BFE99FB3E69588E799BDE9AA91E5A3ABC2B7E69C88E58589_Init();

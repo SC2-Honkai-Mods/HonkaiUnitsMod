@@ -38,7 +38,7 @@
         </MotionPhases>
         <MotionPhases YawPitchRoll="MAX"/>
     </CMoverMissile>
-    <CMoverMissile id="KianaC1Missile1">
+    <CMoverMissile id="Herrscher2ndWeapon">
         <MotionPhases>
             <Driver value="Guidance"/>
             <Acceleration value="4"/>
