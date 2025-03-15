@@ -24,6 +24,10 @@
         <OperandArray value="LTE57336687CountUpgradeSupplyCompleteOnly100"/>
         <OperandArray value="CountUpgradeHerrscherPhaseCompleteOnly2847090691"/>
     </CRequirementAnd>
+    <CRequirementCountBehavior id="CountBehaviorSaBackwardCompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="SaBackward" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
     <CRequirementCountBehavior id="CountBehaviorStarOfEdenWorldCompleteOnly">
         <Flags index="TechTreeCheat" value="0"/>
         <Count Link="StarOfEdenWorld" State="CompleteOnly"/>
@@ -212,6 +216,11 @@
         <OperandArray index="0" value="CountUpgradeBronyaShieldQueuedOrBetter"/>
         <OperandArray index="1" value="16"/>
     </CRequirementLT>
+    <CRequirementLT id="LTCountUpgradeVArmorUpgrade2QueuedOrBetter10">
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <OperandArray index="0" value="CountUpgradeVArmorUpgrade2QueuedOrBetter"/>
+        <OperandArray index="1" value="10"/>
+    </CRequirementLT>
     <CRequirementLTE id="LTE57336687CountUpgradeSupplyCompleteOnly100">
         <OperandArray index="0" value="CountUpgradeSupplyCompleteOnly"/>
         <OperandArray index="1" value="100"/>
@@ -238,6 +247,9 @@
     </CRequirementNot>
     <CRequirementNot id="Not723435156CountBehaviorWeaponUseB28CompleteOnly3451675864">
         <OperandArray index="0" value="CountBehaviorWeaponUseB28CompleteOnly3451675864"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountBehaviorSaBackwardCompleteOnlyAtUnit">
+        <OperandArray index="0" value="CountBehaviorSaBackwardCompleteOnlyAtUnit"/>
     </CRequirementNot>
     <CRequirementNot id="NotCountUnitDivineKey4thCompleteOnly">
         <OperandArray index="0" value="CountUnitDivineKey4thCompleteOnly"/>
@@ -2148,10 +2160,6 @@
     <CRequirementLT id="LTCountUpgradeUlAttackUpgradeQueuedOrBetter10">
         <OperandArray index="0" value="CountUpgradeUlAttackUpgradeQueuedOrBetter"/>
         <OperandArray index="1" value="10"/>
-    </CRequirementLT>
-    <CRequirementLT id="LTCountUpgradeVArmorUpgrade2QueuedOrBetter5">
-        <OperandArray index="0" value="CountUpgradeVArmorUpgrade2QueuedOrBetter"/>
-        <OperandArray index="1" value="5"/>
     </CRequirementLT>
     <CRequirementLT id="LTCountUpgradeVArmorUpgradeQueuedOrBetter8">
         <OperandArray index="0" value="CountUpgradeVArmorUpgradeQueuedOrBetter"/>

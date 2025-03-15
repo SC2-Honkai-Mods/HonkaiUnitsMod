@@ -294,6 +294,25 @@
         <LoiterInnerRadius value="5"/>
         <LoiterRadius value="9"/>
     </CWeaponStrafe>
+    <CWeaponLegacy id="SaForwardWeapon">
+        <EditorCategories value="Race:Protoss"/>
+        <Options index="OnlyFireAtAttackOrderTarget" value="0"/>
+        <Options index="DisplayCooldown" value="1"/>
+        <Icon value="Assets\Textures\btn-upgrade-protoss-airweaponslevel0.dds"/>
+        <DisplayEffect value="SaForwardWeaponDamage"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <MinScanRange value="15"/>
+        <Range value="15"/>
+        <Arc value="180"/>
+        <Period value="5.5"/>
+        <Effect value="SaForwardWeaponCP"/>
+        <LegacyOptions index="LockTurretWhileFiring" value="1"/>
+        <LegacyOptions index="Uninterruptible" value="1"/>
+        <LegacyOptions index="NoDeceleration" value="1"/>
+        <AllowedMovement value="Moving"/>
+        <DisplayAttackCount value="15"/>
+        <AcquirePrioritization value="ByAngle"/>
+    </CWeaponLegacy>
     <CWeaponLegacy id="SaCoreWeapon">
         <EditorCategories value="Race:Protoss"/>
         <Options index="OnlyFireWhileInAttackOrder" value="0"/>
@@ -309,6 +328,24 @@
         <Effect value="SaCoreLM"/>
         <LegacyOptions index="NoDeceleration" value="1"/>
         <LegacyOptions index="FaceTargetWhileInCooldown" value="0"/>
+        <AllowedMovement value="Moving"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="SaBackwardWeapon">
+        <EditorCategories value="Race:Protoss"/>
+        <Options index="Disabled" value="1"/>
+        <Options index="OnlyFireAtAttackOrderTarget" value="0"/>
+        <Options index="DisplayCooldown" value="1"/>
+        <Icon value="Assets\Textures\btn-upgrade-protoss-airweaponslevel0.dds"/>
+        <DisplayEffect value="SaBackwardWeaponDamage"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <MinScanRange value="15"/>
+        <Range value="15"/>
+        <Arc value="360"/>
+        <Period value="4.5"/>
+        <Effect value="SaBackwardWeaponCP"/>
+        <LegacyOptions index="LockTurretWhileFiring" value="1"/>
+        <LegacyOptions index="Uninterruptible" value="1"/>
+        <LegacyOptions index="NoDeceleration" value="1"/>
         <AllowedMovement value="Moving"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="SeeleATTACK">

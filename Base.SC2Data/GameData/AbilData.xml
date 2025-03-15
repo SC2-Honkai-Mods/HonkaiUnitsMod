@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CAbilEffectTarget id="SaUltimate">
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <Effect index="0" value="SaUltimateCU"/>
+        <Flags index="AllowMovement" value="1"/>
+        <Flags index="NoDeceleration" value="1"/>
+        <Cost/>
+        <Range value="9"/>
+        <AINotifyEffect value="AmorphousArmorcloudCP"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="SaUltimate"/>
+    </CAbilEffectTarget>
     <CAbilArmMagazine id="ArmSiloWithNuke">
         <InfoArray index="Ammo1" Time="250">
             <Charge Link="Abil/##id##"/>
@@ -42,6 +52,16 @@
         <CmdButtonArray index="Execute" DefaultButtonFace="AutoEquipAdd">
             <Flags index="ToSelection" value="1"/>
         </CmdButtonArray>
+    </CAbilEffectInstant>
+    <CAbilEffectInstant id="SaBackward">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Flags index="AllowMovement" value="1"/>
+        <FinishTime value="7.75"/>
+        <UninterruptibleArray index="Prep" value="1"/>
+        <UninterruptibleArray index="Cast" value="1"/>
+        <UninterruptibleArray index="Channel" value="1"/>
+        <UninterruptibleArray index="Finish" value="1"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="MorphToSaBackward" Requirements="SaForward"/>
     </CAbilEffectInstant>
     <CAbilEffectTarget id="Herrscher8thAbil2Select">
         <Cost>
@@ -307,6 +327,16 @@
         <Flags index="IgnoreFacing" value="1"/>
         <InfoArray Unit="KianaC1"/>
     </CAbilMorph>
+    <CAbilEffectInstant id="SaForward">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Flags index="AllowMovement" value="1"/>
+        <FinishTime value="7.75"/>
+        <UninterruptibleArray index="Prep" value="1"/>
+        <UninterruptibleArray index="Cast" value="1"/>
+        <UninterruptibleArray index="Channel" value="1"/>
+        <UninterruptibleArray index="Finish" value="1"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="MorphToSaForward" Requirements="SaBackward"/>
+    </CAbilEffectInstant>
     <CAbilEffectTarget id="SkillK23_2">
         <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
         <Effect index="0" value="K23InitialSet2"/>
@@ -2630,32 +2660,6 @@
         <CmdButtonArray index="Execute" DefaultButtonFace="TrainBronyaC7" Requirements="BronyaC7CanMorph"/>
         <Flags index="IgnoreFacing" value="1"/>
         <InfoArray Unit="BronyaC7"/>
-    </CAbilMorph>
-    <CAbilMorph id="MorphToSaForward">
-        <EditorCategories value="AbilityorEffectType:Units"/>
-        <Flags index="IgnoreFacing" value="1"/>
-        <InfoArray Unit="SaAfflication">
-            <SectionArray index="Abils">
-                <DurationArray index="Duration" value="8"/>
-            </SectionArray>
-            <SectionArray index="Actor">
-                <DurationArray index="Duration" value="8"/>
-            </SectionArray>
-        </InfoArray>
-        <CmdButtonArray index="Execute" DefaultButtonFace="MorphToSaForward"/>
-    </CAbilMorph>
-    <CAbilMorph id="MorphToSaBackward">
-        <EditorCategories value="AbilityorEffectType:Units"/>
-        <Flags index="IgnoreFacing" value="1"/>
-        <InfoArray Unit="SaAfflicationBackward">
-            <SectionArray index="Abils">
-                <DurationArray index="Duration" value="8"/>
-            </SectionArray>
-            <SectionArray index="Actor">
-                <DurationArray index="Duration" value="8"/>
-            </SectionArray>
-        </InfoArray>
-        <CmdButtonArray index="Execute" DefaultButtonFace="MorphToSaBackward"/>
     </CAbilMorph>
     <CAbilEffectTarget id="RO_010Abli1">
         <EditorCategories value="AbilityorEffectType:Units"/>

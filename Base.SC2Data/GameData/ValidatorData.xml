@@ -99,6 +99,7 @@
         <Value value="200"/>
     </CValidatorUnitCompareVital>
     <CValidatorUnitCompareVital id="HPgt0">
+        <WhichUnit Value="Caster"/>
         <Compare value="GT"/>
     </CValidatorUnitCompareVital>
     <CValidatorLocationEnumArea id="HaveEnemy150x24G">
@@ -177,6 +178,81 @@
         <Compare value="GT"/>
         <Behavior value="KianaC1Buff"/>
     </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="SaIsForward">
+        <Value value="1"/>
+        <Behavior value="SaForward"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="SaIsBackward">
+        <Value value="1"/>
+        <Behavior value="SaBackward"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="SaNotBreakdown">
+        <WhichUnit Value="Caster"/>
+        <Behavior value="SaBreakDown"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorCombine id="SaMorphBackward">
+        <CombineArray value="SaMorphBackwardThreat"/>
+        <CombineArray value="SaBehaviorNoFrontUnit"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="SaMorphForward">
+        <CombineArray value="SaMorphForwardThreat"/>
+        <CombineArray value="SaBehaviorNoBackUnit"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="SaMorphBackwardThreat">
+        <CombineArray value="ThreatensSa"/>
+        <CombineArray value="SaBehaviorNoFrontThreaten"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="SaMorphForwardThreat">
+        <CombineArray value="ThreatensSa"/>
+        <CombineArray value="SaBehaviorNoBackThreaten"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="SaUltimateCP">
+        <Type value="And"/>
+        <CombineArray value="SaNotBreakdown"/>
+        <CombineArray value="TargetIsUnit"/>
+    </CValidatorCombine>
+    <CValidatorLocationEnumArea id="SaSearchNoFrontThreaten">
+        <WhichLocation Value="CasterUnit"/>
+        <AreaArray Radius="15" Validator="ThreatensSaAndForward"/>
+        <Compare value="Eq"/>
+        <LaunchLocation Value="CasterUnit"/>
+        <SearchFilters value="Visible;Player,Ally,Neutral,Missile,Stasis,Dead,Hidden"/>
+    </CValidatorLocationEnumArea>
+    <CValidatorLocationEnumArea id="SaSearchNoBackThreaten">
+        <WhichLocation Value="CasterUnit"/>
+        <AreaArray Radius="15" Validator="ThreatensSaAndBackward"/>
+        <Compare value="Eq"/>
+        <LaunchLocation Value="CasterUnit"/>
+        <SearchFilters value="Visible;Player,Ally,Neutral,Missile,Stasis,Dead,Hidden"/>
+    </CValidatorLocationEnumArea>
+    <CValidatorLocationEnumArea id="SaSearchNoFrontUnit">
+        <WhichLocation Value="CasterUnit"/>
+        <AreaArray Radius="15" Validator="TargetForward"/>
+        <Compare value="Eq"/>
+        <LaunchLocation Value="CasterUnit"/>
+        <SearchFilters value="Visible;Player,Ally,Neutral,Missile,Stasis,Dead,Hidden"/>
+    </CValidatorLocationEnumArea>
+    <CValidatorLocationEnumArea id="SaSearchNoBackUnit">
+        <WhichLocation Value="CasterUnit"/>
+        <AreaArray Radius="15" Validator="TargetBackward"/>
+        <Compare value="Eq"/>
+        <LaunchLocation Value="CasterUnit"/>
+        <SearchFilters value="Visible;Player,Ally,Neutral,Missile,Stasis,Dead,Hidden"/>
+    </CValidatorLocationEnumArea>
+    <CValidatorCombine id="ThreatensSaAndBackward">
+        <Type value="And"/>
+        <CombineArray value="ThreatensSa"/>
+        <CombineArray value="TargetBackward"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="TargetBackward">
+        <CombineArray value="TargetForward"/>
+        <Negate value="1"/>
+    </CValidatorCombine>
+    <CValidatorLocationArc id="TargetForward">
+        <WhichLocation Value="SourceUnit"/>
+        <Arc value="180"/>
+        <Value Value="TargetPoint"/>
+    </CValidatorLocationArc>
     <CValidatorUnitCompareBehaviorCount id="TargetNoImaginary">
         <Behavior value="Herrscher8thAbil2B"/>
     </CValidatorUnitCompareBehaviorCount>
@@ -309,8 +385,16 @@
     <CValidatorUnitCompareBehaviorCount id="TargetHasNoBronyaC2Shield">
         <Behavior value="BronyaC2Shield"/>
     </CValidatorUnitCompareBehaviorCount>
+    <CValidatorCombine id="ThreatensSaAndForward">
+        <Type value="And"/>
+        <CombineArray value="ThreatensSa"/>
+        <CombineArray value="TargetForward"/>
+    </CValidatorCombine>
     <CValidatorUnitCompareAttackPriority id="ThreatensV3" parent="ThreatensUnit" unitLink="Baneling">
         <AttackerAlternateType value="Valkyrja3"/>
+    </CValidatorUnitCompareAttackPriority>
+    <CValidatorUnitCompareAttackPriority id="ThreatensSa" parent="ThreatensUnit" unitLink="Baneling">
+        <AttackerAlternateType value="SaAfflication"/>
     </CValidatorUnitCompareAttackPriority>
     <CValidatorLocationPlacement id="UL_040CanPlace">
         <ResultFailed value="Error"/>
@@ -778,7 +862,7 @@
         <Filters value="Missile;Player,Ally,Neutral"/>
     </CValidatorUnitFilters>
     <CValidatorUnitFilters id="TargetIsEnemyUnit">
-        <Filters value="Visible;Player,Ally,Neutral,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Filters value="Visible;Player,Ally,Neutral,Missile,Stasis,Dead,Hidden"/>
     </CValidatorUnitFilters>
     <CValidatorUnitCompareVital id="HerrscherUseShield">
         <WhichUnit Value="Source"/>

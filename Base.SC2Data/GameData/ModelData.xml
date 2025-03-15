@@ -155,6 +155,10 @@
         <UnitGlossaryCamera value="Star2CameraMid04"/>
     </CModel>
     <CModel id="ArmoryBuild"/>
+    <CModel id="SaBWLaunch" parent="PersistentSpellFX" Race="Terran">
+        <Model value="Assets\Models\BOSS_470\BOSS_470_BW_AttackLaunch.m3"/>
+        <ShadowRadius value="0.000000"/>
+    </CModel>
     <CModel id="KianaC1BlackHole" parent="PersistentSpellFX">
         <Model value="Assets\Models\Kiana_C1\Kiana_C1_BlackHole.m3"/>
         <EditorCategories value="Race:Protoss"/>
@@ -294,6 +298,10 @@
             <Type value="Sound"/>
             <Time value="1.350000"/>
         </Events>
+    </CModel>
+    <CModel id="SaWeapon1" parent="MissileFX">
+        <Model value="Assets\Models\BOSS_470\BOSS_470_Missile1.m3"/>
+        <EditorCategories value="Race:Protoss"/>
     </CModel>
     <CModel id="RPC6626Death" parent="BansheeDeathBase">
         <Model value="Assets\Models\BOSS_050_death\BOSS_050_death.m3"/>
@@ -497,6 +505,14 @@
         <UnitGlossaryCamera value="Star2CameraHigh04"/>
         <ScaleMax value="0.400000,0.400000,0.400000"/>
         <ScaleMin value="0.400000,0.400000,0.400000"/>
+        <Events Anim="Birth" Name="Sa_Intro" Type="Sound"/>
+    </CModel>
+    <CModel id="SaWeapon0" parent="MissileFX">
+        <Model value="Assets\Doodads\ChiseledRock\ChiseledRock.m3"/>
+        <EditorCategories value="Race:Protoss"/>
+        <ScaleMax value="0.200000,0.200000,0.200000"/>
+        <ScaleMin value="0.300000,0.300000,0.300000"/>
+        <VariationCount value="5"/>
     </CModel>
     <CModel id="StarOfEdenWorldAbil1Model" parent="OneShotSpellFX">
         <Model value="Assets\Models\Bronya_C7\StarOfEdenWorldExplode.m3"/>
@@ -618,6 +634,10 @@
         <Model value="Assets\Models\Bronya_C7\StarOfEdenWorld_Attack.m3"/>
         <AnimSpeed value="0.800000"/>
         <EditorCategories value="Race:Protoss"/>
+    </CModel>
+    <CModel id="WarningSplatFire" parent="UI">
+        <Model value="Assets\Models\Attack_Hint_Round\WarningSplatFire.m3"/>
+        <EditorCategories value="Race:Terran"/>
     </CModel>
     <CModel id="Valkyrja2DeathRagdoll" parent="UnitDeathRagdoll" Race="Terran">
         <Model value="Assets\Models\DG_080_death\DG_080_death_ragdoll.m3"/>
@@ -2354,6 +2374,18 @@
     <CModel id="WarHoundBeam">
         <AnimSpeed value="3.000000"/>
     </CModel>
+    <CModel id="WarningSplatNormal" parent="UI">
+        <Model value="Assets\Models\Attack_Hint_Round\WarningSplat.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="WarningSplatThunder" parent="UI">
+        <Model value="Assets\Models\Attack_Hint_Round\WarningSplatThunder.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="WarningSplatIce" parent="UI">
+        <Model value="Assets\Models\Attack_Hint_Round\WarningSplatIce.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
     <CModel id="WeaponCannonB12">
         <Model value="Assets\Models\Bronya_C1_Fire_Prepare\Bronya_C1_Fire_Prepare.m3"/>
     </CModel>
@@ -2424,6 +2456,11 @@
         <Model value="Assets\Models\Kiana_C1\Kiana_C1_Dress.m3"/>
         <Flags index="Wait" value="1"/>
         <Priority value="32"/>
+        <ShadowRadius value="0.000000"/>
+    </CModel>
+    <CModel id="SaLaser" parent="RacePersistentSpellFX" Race="Terran">
+        <Model value="Assets\Models\BOSS_470\BOSS_470_Laser.m3"/>
+        <Flags index="Wait" value="1"/>
         <ShadowRadius value="0.000000"/>
     </CModel>
     <CModel id="WeaponR11" parent="RacePersistentSpellFX" Race="Terran">
@@ -2596,5 +2633,9 @@
         <Model value="Assets\Effects\Protoss\ProtossUnitWarpIn\ProtossUnitWarpIn.m3"/>
         <SelectionRadius value="0.555400"/>
         <ShadowRadius value="0.555400"/>
+    </CModel>
+    <CModel id="SaUltimateWarning" parent="UI">
+        <Model value="Assets\Models\BOSS_470\SaWarningSplat.m3"/>
+        <EditorCategories value="Race:Terran"/>
     </CModel>
 </Catalog>

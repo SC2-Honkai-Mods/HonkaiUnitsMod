@@ -65,6 +65,43 @@
             <Overlays/>
         </MotionPhases>
     </CMoverMissile>
+    <CMoverMissile id="SaWeapon0">
+        <MotionPhases>
+            <Driver value="Throw"/>
+            <Acceleration value="3200"/>
+            <MaxSpeed value="7"/>
+            <ArrivalTestType value="Never"/>
+            <Outro value="0.25,-1,0.5"/>
+            <Timeout value="0.25"/>
+            <ThrowVector value="0,0.2,0.8"/>
+            <ThrowBandYaw value="45,-45,149.9963,-149.9963"/>
+            <ThrowBandPitch value="19.995,29.9597,29.9597,19.995"/>
+            <YawPitchRoll value="5759.6484"/>
+        </MotionPhases>
+        <MotionPhases>
+            <Driver value="Guidance"/>
+            <Acceleration value="4"/>
+            <MaxSpeed value="9"/>
+            <ActorTracking value="Linear"/>
+            <Outro value="-1"/>
+            <ThrowBandYaw value="-360,-360,-360,-360"/>
+            <ThrowBandPitch value="-360,-360,-360,-360"/>
+            <YawPitchRoll value="5759.6484"/>
+        </MotionPhases>
+    </CMoverMissile>
+    <CMoverMissile id="SaWeapon1">
+        <MotionPhases>
+            <Driver value="Guidance"/>
+            <Acceleration value="3200"/>
+            <MaxSpeed value="8"/>
+            <ClearanceAcceleration value="75"/>
+            <Outro value="-1"/>
+            <ThrowBandYaw value="-360,-360,-360,-360"/>
+            <ThrowBandPitch value="-360,-360,-360,-360"/>
+            <YawPitchRoll value="719.2968"/>
+        </MotionPhases>
+        <MotionPhases YawPitchRoll="MAX"/>
+    </CMoverMissile>
     <CMoverFlock id="Null">
         <Flags index="IgnoreMovementSuppression" value="1"/>
         <Flags index="RestoreHeight" value="1"/>

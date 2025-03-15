@@ -6,6 +6,11 @@
         <AlertIcon value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel1.dds"/>
         <EditorCategories value="Race:Terran"/>
     </CButton>
+    <CButton id="SaUltimate">
+        <Icon value="Assets\Textures\btn-ability-zerg-darkswarm.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-zerg-darkswarm.dds"/>
+        <EditorCategories value="Race:Zerg"/>
+    </CButton>
     <CButton id="AutoEquipAdd">
         <Icon value="Assets\Textures\ui_btn_aicommand_commandcard_idle.dds"/>
         <AlertIcon value="Assets\Textures\ui_btn_aicommand_commandcard_idle.dds"/>

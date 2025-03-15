@@ -257,6 +257,130 @@
         <SoundArray index="ClickError" value=""/>
         <SoundArray index="Highlight" value=""/>
     </CActorUnit>
+    <CActorUnit id="Herrscher4thWave2" parent="GenericUnitStandard" unitName="SaWave">
+        <Aliases value="_UnitLarge"/>
+        <Macros value="ChargingAnim"/>
+        <Macros value="TerrainSquibAnimations"/>
+        <Macros value="PhysicsDeathsSwarmGround"/>
+        <On Terms="ActorCreation" Send="SetTintColor {0,197,219 8.000000}"/>
+        <On Terms="ActorCreation" Send="Create Herrscher4thWaveLaunch"/>
+        <Model value="Herrscher4thWave"/>
+        <BuildModel value="Herrscher4thWave"/>
+        <DeathArray index="Normal" ModelLink="Herrscher4thWave" SoundLink="" VoiceLink=""/>
+        <DeathCustoms ModelLink="HallucinationDeath" SoundLink="Sentry_HallucinationDeathSmall" Name="Hallucination"/>
+        <PlacementModel value="Herrscher4thWave"/>
+        <PlacementSound value="Protoss_BuildingPlacementSmall"/>
+        <TerrainSquibs>
+            <MovementDistance value="0.150000,0.150000"/>
+            <IdlePeriod value="0.100000,0.250000"/>
+            <RangeUp value="0.600000"/>
+            <RangeDown value="0.600000"/>
+            <AttachQuery Methods="AMFilterCenter"/>
+            <Visuals TerrainPhysicsMaterial="Water" ActorModel="TerrainSquibHarnessContinuous" ModelLink="WaterRippleMedium"/>
+        </TerrainSquibs>
+        <WalkAnimMoveSpeed value="2.25"/>
+        <BarOffset value="90"/>
+        <BarWidth value="65"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\wireframe-protoss-disruptorphasemod.dds"/>
+        </GroupIcon>
+        <HighlightTooltip value="Unit/Name/Herrscher4thWave2"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-protoss-groundarmorlevel0.dds"/>
+        <SoundArray index="Birth" value=""/>
+        <SoundArray index="Ready" value=""/>
+        <SoundArray index="Help" value=""/>
+        <SoundArray index="What" value=""/>
+        <SoundArray index="Yes" value=""/>
+        <SoundArray index="Attack" value=""/>
+        <SoundArray index="Pissed" value=""/>
+        <SoundArray index="Movement" value=""/>
+        <SoundArray index="Turning" value=""/>
+        <SoundArray index="Board" value=""/>
+        <SoundArray index="Click" value=""/>
+        <SoundArray index="ClickError" value=""/>
+        <SoundArray index="Highlight" value=""/>
+        <StatusBarFlags index="Shields" value="0"/>
+        <StatusBarFlags index="Life" value="0"/>
+        <UnitIcon value="Assets\Textures\Btn-unit-protoss-disruptor.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\wireframe-protoss-disruptorphasemod.dds"/>
+        </Wireframe>
+    </CActorUnit>
+    <CActorModel id="SaLaser" parent="ModelAddition">
+        <On Terms="Effect.SaUltimateCP.Start" Send="Create"/>
+        <On Terms="Effect.SaUltimateCP.Stop" Send="AnimBracketStop BSD"/>
+        <HostSiteOps Ops="SOpAttachWeapon SOpForwardTargetPoint"/>
+    </CActorModel>
+    <CActorUnit id="SaTarget" parent="GenericUnitStandard" unitName="SaTarget">
+        <Macros value="PhysicsDeathsSwarmGround"/>
+        <Macros value="PhysicsDeathsVoidGround"/>
+        <AcceptedTransfers index="AnimProps" value="0"/>
+        <AcceptedTransfers index="Textures" value="0"/>
+        <AcceptedTransfers index="Status" value="0"/>
+        <Model value="Invisible"/>
+        <ModelFlags index="AllowHitTest" value="0"/>
+        <ModelFlags index="NeedsVolumeMonitoring" value="0"/>
+        <ModelFlags index="OutlineEmitter" value="1"/>
+        <BuildModel value=""/>
+        <DeathArray index="Normal" ModelLink="" SoundLink=""/>
+        <DeathCustoms index="0" removed="1"/>
+        <DeathCustoms index="1" removed="1"/>
+        <DeathCustoms index="2" removed="1"/>
+        <DeathCustoms index="3" removed="1"/>
+        <DeathCustoms index="4" removed="1"/>
+        <DeathActorModel value="UnitDeathModelWithDeathMotionGround"/>
+        <PlacementModel value=""/>
+        <PlacementSound value="Protoss_BuildingPlacementSmall"/>
+        <WalkAnimTimeScalingAsFlyer value="1"/>
+        <BarOffset value="0"/>
+        <HeroIcon value=""/>
+    </CActorUnit>
+    <CActorModel id="SaUltimateWarning" parent="ModelAnimationStyleContinuous" abil="Herrscher2ndUltimate">
+        <On Terms="Effect.SaUltimateSplat.Start" Send="Create"/>
+        <On Terms="Effect.SaUltimateSplat.Stop" Send="AnimBracketStop BSD"/>
+        <HostSiteOps Ops="SOpCasterPoint SOpShadow SOpForwardTargetPoint"/>
+        <Scale value="25.000000,25.000000,5.000000"/>
+        <ModelFlags index="UseSyncSeed" value="1"/>
+    </CActorModel>
+    <CActorModel id="SaBWLaunch" parent="ModelAnimationStyleOneShotUNIT">
+        <On index="2" Terms="Effect.SaBackwardWeaponCP.Start; At Caster" Send="Create"/>
+        <HostSiteOps Ops="SOpAttachWeapon"/>
+    </CActorModel>
+    <CActorAction id="SaForwardAttack" parent="GenericAttack" effectImpact="SaForwardWeaponDamage" effectLaunch="SaForwardWeaponLM">
+        <LaunchAttachQuery Methods="AMFilterWeapon" Fallback="Weapon"/>
+        <LaunchAssets Sound="SaBWLaunch"/>
+        <Missile value="SaWeapon0"/>
+        <ImpactMap index="None" Model="MothershipCoreAttackImpact" Sound="Missile_Basic_Impact_Sweetner"/>
+        <ImpactMap index="Flesh" ModelReaction="BloodTargetImpact"/>
+        <On Terms="ActorCreation" Send="SetTintColor {255,111,255 3.000000}"/>
+    </CActorAction>
+    <CActorAction id="SaBackwardAttack" parent="GenericAttack" effectImpact="SaBackwardWeaponDamage" effectLaunch="SaBackwardWeaponLM">
+        <LaunchAttachQuery Methods="AMFilterWeapon" Fallback="Weapon"/>
+        <LaunchAssets Sound="SaBWLaunch"/>
+        <Missile value="SaWeapon1"/>
+        <ImpactMap index="None" Model="MothershipCoreAttackImpact" Scale="2.000000" Sound="Missile_Basic_Impact_Sweetner"/>
+        <ImpactMap index="Flesh" ModelReaction="BloodTargetImpact"/>
+        <On Terms="ActorCreation" Send="SetTintColor {255,111,255 3.000000}"/>
+    </CActorAction>
+    <CActorModel id="SaBackwardWeaponSplat" parent="ModelAnimationStyleOneShot">
+        <On index="0" Terms="ActorCreation" Send="AnimBracketStart BSD Birth Stand Death ContentPlayOnce 1.333333 AsTimeScale"/>
+        <On Terms="Effect.SaBackwardWeaponCP.Start" Send="Create"/>
+        <HostSiteOps Ops="SOpTargetPoint SOpShadow" HoldPosition="1"/>
+        <Model value="WarningSplatNormal"/>
+    </CActorModel>
+    <CActorMissile id="SaWeapon1" parent="GenericAttackMissile" unitName="SaWeapon1">
+        <On Terms="UnitBirth" Send="SetTintColor {128,0,255 2.000000}"/>
+    </CActorMissile>
+    <CActorLookAt id="SaBackwardLookAt" parent="UnitTurret">
+        <On Terms="TurretEnable.SaBackward" Send="Create"/>
+        <On Terms="TurretDisable.SaBackward" Send="Destroy"/>
+        <On Terms="TurretTarget.SaBackward.Set" Send="LookAtEngage"/>
+        <On Terms="TurretTarget.SaBackward.Clear" Send="LookAtDisengage"/>
+        <Types Id="DefaultLookAtTurret">
+            <Start Group="Turret_Backward" Weight="1" Time="150"/>
+            <Stop Group="Turret_Backward" Weight="1" Time="200"/>
+        </Types>
+    </CActorLookAt>
     <CActorModel id="KianaC1BlackHole" parent="ModelAnimationStyleContinuous">
         <On Terms="Effect.KianaC1BlackHole.Start" Send="Create"/>
         <On Terms="Effect.KianaC1BlackHole.Stop" Send="AnimBracketStop BSD"/>
@@ -393,13 +517,13 @@
         <On Terms="Effect.Herrscher7thAbil2CP2.Start" Send="Create"/>
         <Sound value="HellionTank_AttackLaunch"/>
     </CActorSound>
-    <CActorModel id="Herrscher7thAbil2Warning" parent="ModelAnimationStyleContinuous" abil="Herrscher2ndUltimate">
+    <CActorModel id="Herrscher7thAbil2Warning" parent="ModelAnimationStyleOneShot" abil="Herrscher2ndUltimate">
+        <On index="0" Terms="ActorCreation" Send="AnimBracketStart BSD Birth Stand Death ContentPlayOnce 0.666667 AsTimeScale"/>
         <On Terms="Effect.Herrscher7thAbil2CP.Start" Send="Create"/>
-        <On Terms="Effect.Herrscher7thAbil2CP.Stop" Send="Destroy"/>
+        <Flags index="SuppressSaveLoad" value="0"/>
         <HostSiteOps Ops="SOpTargetPoint SOpShadow"/>
-        <Model value="TerranAOECursorSplat"/>
+        <Model value="WarningSplatFire"/>
         <Scale value="1.500000,1.500000,1.000000"/>
-        <ModelFlags index="UseSyncSeed" value="1"/>
     </CActorModel>
     <CActorModel id="Herrscher7thAbil2" parent="ModelAnimationStyleContinuous" abil="Herrscher2ndUltimate">
         <On Terms="Effect.Herrscher7thAbil2CP2.Start" Send="Create"/>
@@ -1180,11 +1304,21 @@
         <Radius value="11.000000"/>
         <Mean value="7.000000"/>
     </CActorSiteOpRandomPointInCircle>
+    <CActorLookAt id="SaForwardLookAt" parent="UnitTurret">
+        <On Terms="TurretEnable.SaForward" Send="Create"/>
+        <On Terms="TurretDisable.SaForward" Send="Destroy"/>
+        <On Terms="TurretTarget.SaForward.Set" Send="LookAtEngage"/>
+        <On Terms="TurretTarget.SaForward.Clear" Send="LookAtDisengage"/>
+        <Types Id="DefaultLookAtTurret">
+            <Start Group="Turret_Forward" Weight="1" Time="150"/>
+            <Stop Group="Turret_Forward" Weight="1" Time="200"/>
+        </Types>
+    </CActorLookAt>
     <CActorAction id="SaCoreAttack" parent="GenericAttack" effectImpact="SaCoreDamage" effectLaunch="SaCoreLM">
         <LaunchAttachQuery Methods="AMFilterWeapon AMPatternSaCore"/>
-        <LaunchAssets Sound="PhotonCannon_AttackLaunch"/>
+        <LaunchAssets Sound="MindSplatterCastSound"/>
         <Missile value="MothershipCoreAttackMissile"/>
-        <ImpactMap index="None" Model="MothershipCoreAttackImpact" Sound="PhotonCannon_AttackImpact"/>
+        <ImpactMap index="None" Model="MothershipCoreAttackImpact" Sound="PhysicsImpactDirtMassive"/>
         <ImpactMap index="Flesh" ModelReaction="BloodTargetImpact"/>
     </CActorAction>
     <CActorUnit id="SaCore" parent="GenericUnitBase" unitName="SaCore">
@@ -1211,7 +1345,6 @@
         </TerrainSquibs>
         <WalkAnimMoveSpeed value="2.25"/>
         <WalkAnimTimeScalingAsFlyer value="1"/>
-        <AbilSoundArray/>
         <BarOffset value="80"/>
         <BarWidth value="42"/>
         <CustomUnitStatusFrame value="Honkai_UnitStatus/GeneralStatusFrameTemplate"/>
@@ -1221,19 +1354,6 @@
         <HeroIcon value="Assets\Textures\Wireframe-Herrscher1st.tga"/>
         <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel0.dds"/>
         <SelectAbilCmd value="EMP,Execute"/>
-        <SoundArray index="Birth" value=""/>
-        <SoundArray index="Ready" value="Herrscher_Ready"/>
-        <SoundArray index="Help" value="Herrscher_Help"/>
-        <SoundArray index="What" value="Herrscher_What"/>
-        <SoundArray index="Yes" value="Herrscher_Yes"/>
-        <SoundArray index="Attack" value="Herrscher_Attack"/>
-        <SoundArray index="Pissed" value="Herrscher_Pissed"/>
-        <SoundArray index="Movement" value=""/>
-        <SoundArray index="Turning" value=""/>
-        <SoundArray index="Board" value=""/>
-        <SoundArray index="Click" value=""/>
-        <SoundArray index="ClickError" value=""/>
-        <SoundArray index="Highlight" value=""/>
         <StatusBarFlags index="Shields" value="0"/>
         <StatusBarFlags index="Life" value="0"/>
         <StatusBarFlags index="Energy" value="0"/>
@@ -1245,13 +1365,7 @@
             <Image value="Assets\Textures\Wireframe-Herrscher1st.tga"/>
         </Wireframe>
         <On Terms="ActorCreation" Send="SetOpacity 0.350000"/>
-        <GroupSoundArray index="Ready" value="Herrscher_Ready"/>
-        <GroupSoundArray index="Help" value="Herrscher_Help"/>
-        <GroupSoundArray index="What" value="Herrscher_What"/>
-        <GroupSoundArray index="Yes" value="Herrscher_Yes"/>
-        <GroupSoundArray index="Attack" value="Herrscher_Attack"/>
-        <GroupSoundArray index="Pissed" value="Herrscher_Pissed"/>
-        <GroupSoundArray index="Board" value=""/>
+        <EventDataSound index="0" Name="Sa_Intro" Actor="UnitSound" Sound="SaIntro"/>
     </CActorUnit>
     <CActorUnit id="SaAfflication" parent="GenericUnitBase" unitName="SaAfflication">
         <Aliases value="_UnitSmall"/>
@@ -1259,11 +1373,24 @@
         <Macros value="PhysicsDeathsSwarmGround"/>
         <Macros value="PhysicsDeathsVoidGround"/>
         <Macros value="AttackAnim5"/>
-        <On Terms="ActorCreation" Send="AnimGroupRemove A"/>
-        <On Terms="AbilMorph.*.Finish; MorphFrom SaAfflicationForward" Send="Destroy"/>
-        <On Terms="AbilMorph.*.Finish; MorphTo SaAfflicationForward" Send="Create"/>
-        <On Terms="AbilMorph.*.Start; MorphFrom SaAfflicationForward" Send="AnimPlay Morph Morph"/>
-        <On Terms="AbilMorph.*.Start; MorphFrom SaAfflicationForward" Send="AnimGroupApply A"/>
+        <On Terms="Abil.SaBackward.SourcePrepStart" Send="AnimPlay Morph Morph,A"/>
+        <On Terms="Abil.SaBackward.SourcePrepStart" Send="TimerSet 1.000000 ApplyA"/>
+        <On Terms="TimerExpired; TimerName ApplyA" Send="AnimGroupApply A"/>
+        <On Terms="Abil.SaForward.SourcePrepStart" Send="AnimPlay Morph Custom"/>
+        <On Terms="Abil.SaForward.SourcePrepStart" Send="TimerSet 1.000000 RemoveA"/>
+        <On Terms="TimerExpired; TimerName RemoveA" Send="AnimGroupRemove A"/>
+        <On Terms="WeaponStart.SaBackwardWeapon.AttackStart" Send="AnimPlay Attack Spell,03"/>
+        <On Terms="WeaponStart.SaForwardWeapon.AttackStart" Send="AnimPlay Attack Spell,06"/>
+        <On Terms="Effect.SaUltimateForwardStart.Start" Send="AnimBracketStart Ultimate Spell,05,Start Spell,05,Stand Spell,05,End"/>
+        <On Terms="Effect.SaUltimateBackwardStart.Start" Send="AnimBracketStart Ultimate Spell,01,Start,A Spell,01,Stand,A Spell,01,End,A"/>
+        <On Terms="Effect.SaUltimateCP.Stop" Send="AnimBracketStop Ultimate"/>
+        <On Terms="Behavior.SaBreakDown.On" Send="AnimBracketStop Ultimate Instant"/>
+        <On Terms="Behavior.SaBreakDown.On" Send="AnimBracketStart Cover Throw,Start Throw,Stand Throw,End"/>
+        <On Terms="Behavior.SaBreakDown.Off" Send="AnimBracketStop Cover"/>
+        <On Terms="Behavior.SaDeath.On" Send="SetTintColor {255,0,0 2.000000} 0.500000 Bounce Death 152.000000"/>
+        <On Terms="Behavior.SaDeath.Off" Send="ClearTintColor 0.000000 Death"/>
+        <On Terms="Behavior.SaBreakDown.On" Send="SetTintColor {255,128,255 2.000000} 0.500000 Bounce Break 151.000000"/>
+        <On Terms="Behavior.SaBreakDown.Off" Send="ClearTintColor 0.000000 Break"/>
         <AnimBlendTime value="-0.800000"/>
         <ModelFlags index="OutlineEmitter" value="1"/>
         <DeathArray index="Normal" SoundLink="Ghost_Explode"/>
@@ -1283,8 +1410,8 @@
         <WalkAnimMoveSpeed value="2.25"/>
         <WalkAnimTimeScalingAsFlyer value="1"/>
         <AbilSoundArray/>
-        <BarOffset value="80"/>
-        <BarWidth value="42"/>
+        <BarOffset value="160"/>
+        <BarWidth value="200"/>
         <CustomUnitStatusFrame value="Honkai_UnitStatus/GeneralStatusFrameTemplate"/>
         <GroupIcon>
             <Image value="Assets\Textures\Wireframe-Herrscher1st.tga"/>
@@ -1299,19 +1426,6 @@
         <HeroIcon value="Assets\Textures\Wireframe-Herrscher1st.tga"/>
         <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel0.dds"/>
         <SelectAbilCmd value="EMP,Execute"/>
-        <SoundArray index="Birth" value=""/>
-        <SoundArray index="Ready" value="Herrscher_Ready"/>
-        <SoundArray index="Help" value="Herrscher_Help"/>
-        <SoundArray index="What" value="Herrscher_What"/>
-        <SoundArray index="Yes" value="Herrscher_Yes"/>
-        <SoundArray index="Attack" value="Herrscher_Attack"/>
-        <SoundArray index="Pissed" value="Herrscher_Pissed"/>
-        <SoundArray index="Movement" value=""/>
-        <SoundArray index="Turning" value=""/>
-        <SoundArray index="Board" value=""/>
-        <SoundArray index="Click" value=""/>
-        <SoundArray index="ClickError" value=""/>
-        <SoundArray index="Highlight" value=""/>
         <StatusBarFlags index="Shields" value="0"/>
         <StatusBarFlags index="Life" value="0"/>
         <StatusBarFlags index="Energy" value="0"/>
@@ -1329,6 +1443,20 @@
     <CActorSplat id="K23Splat2" parent="TerranCursorSplat" abil="SkillK23_2">
         <Scale value="6.000000"/>
     </CActorSplat>
+    <CActorModel id="SaForwardWeaponSplat" parent="ModelAnimationStyleOneShot">
+        <On index="0" Terms="ActorCreation" Send="AnimBracketStart BSD Birth Stand Death ContentPlayOnce 0.666670 AsTimeScale"/>
+        <On Terms="Effect.SaForwardWeaponCP.Start" Send="Create"/>
+        <HostSiteOps Ops="SOpTargetPoint SOpShadow" HoldPosition="1"/>
+        <Model value="WarningSplatNormal"/>
+        <Scale value="2.000000,2.000000,1.000000"/>
+    </CActorModel>
+    <CActorTurret id="SaForwardTurret">
+        <On Terms="TurretEnable.SaForward" Send="Create"/>
+        <On Terms="TurretDisable.SaForward" Send="Destroy"/>
+    </CActorTurret>
+    <CActorMissile id="SaWeapon0" parent="GenericAttackMissile" unitName="SaWeapon0">
+        <On Terms="UnitBirth" Send="SetTintColor {128,0,255 2.000000}"/>
+    </CActorMissile>
     <CActorEventMacro id="Sizex2">
         <EditorCategories value=""/>
         <On Terms="Behavior.Sizex2.On" Send="SetScale 2.000000"/>
@@ -4612,26 +4740,13 @@
     <CActorSound id="IceFieldBirth" parent="SoundOneShot">
         <Sound value="Doodad_IceBridge00_StandWork"/>
     </CActorSound>
-    <CActorModel id="Herrscher5thIceFieldWarning" parent="ModelAddition" abil="Herrscher2ndUltimate">
-        <Inherits index="BaseModelScale" value="0"/>
-        <Inherits index="CastShadows" value="0"/>
-        <Inherits index="CloakEffect" value="0"/>
-        <Inherits index="CreepEngulfment" value="0"/>
-        <Inherits index="Decal" value="0"/>
-        <Inherits index="ModelMaterials" value="0"/>
-        <Inherits index="Opacity" value="0"/>
-        <Inherits index="Scale" value="0"/>
-        <Inherits index="TeamColor" value="0"/>
-        <Inherits index="TimeScale" value="0"/>
-        <Inherits index="TintColor" value="0"/>
-        <Inherits index="Visibility" value="0"/>
-        <Inherits index="WarpGroup" value="0"/>
-        <FogVisibility value="Visible"/>
+    <CActorModel id="Herrscher5thIceFieldWarning" parent="ModelAnimationStyleOneShot" abil="Herrscher2ndUltimate">
+        <On index="0" Terms="ActorCreation" Send="AnimBracketStart BSD Birth Stand Death ContentPlayOnce 0.666667 AsTimeScale"/>
         <On Terms="Effect.IceFieldCP.Start" Send="Create"/>
-        <On Terms="Effect.IceFieldCP.Stop" Send="Destroy"/>
-        <HostSiteOps Ops="SOpTargetPoint" HoldPosition="1" HoldRotation="1"/>
-        <Model value="ProtossAOECursorSplat"/>
-        <Scale value="1.500000"/>
+        <Flags index="SuppressSaveLoad" value="0"/>
+        <HostSiteOps Ops="SOpTargetPointStationary SOpShadow"/>
+        <Model value="WarningSplatIce"/>
+        <Scale value="1.500000,1.500000,1.000000"/>
     </CActorModel>
     <CActorUnit id="Herrscher5thIceField" parent="GenericUnitStandardNoAutoSoundLinks" unitName="Herrscher5thIceField">
         <On Terms="ActorCreation" Send="SetOpacity"/>
@@ -8298,6 +8413,19 @@
         <Host Subject="_Selectable"/>
         <Sound value="FireWall"/>
         <LoopCount value="-1"/>
+    </CActorSound>
+    <CActorSound id="SaLaserFinishSound" parent="SoundOneShot">
+        <On Terms="Effect.SaUltimateCP.Stop" Send="Create"/>
+        <Sound value="ImmortalMP_ReviveFinish"/>
+    </CActorSound>
+    <CActorSound id="SaLaserLoopSound" parent="SoundContinuous">
+        <On Terms="Effect.SaUltimateCP.Start" Send="Create"/>
+        <On Terms="Effect.SaUltimateCP.Stop" Send="Destroy"/>
+        <Sound value="ImmortalMP_ReviveLoop1"/>
+    </CActorSound>
+    <CActorSound id="SaLaserStartSound" parent="SoundOneShot">
+        <On Terms="Effect.SaUltimateCP.Start" Send="Create"/>
+        <Sound value="ImmortalMP_ReviveStart"/>
     </CActorSound>
     <CActorEventMacro id="WeaponCannonAnimations">
         <EditorCategories value=""/>

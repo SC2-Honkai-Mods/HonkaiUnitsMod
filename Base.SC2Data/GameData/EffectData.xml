@@ -26,6 +26,13 @@
         <ImpactLocation Value="TargetPoint"/>
         <AreaRelativeOffset value="0,-7"/>
     </CEffectEnumArea>
+    <CEffectModifyUnit id="AddCasterLife50">
+        <EditorCategories value=""/>
+        <ImpactUnit Value="Caster"/>
+        <VitalArray index="Life">
+            <ChangeFraction value="0.5"/>
+        </VitalArray>
+    </CEffectModifyUnit>
     <CEffectApplyBehavior id="ForceDizzy10s">
         <EditorCategories value=""/>
         <Behavior value="HonkaiDizzy"/>
@@ -1004,6 +1011,10 @@
         <ImpactLocation Value="TargetPoint"/>
         <AreaArray Radius="8"/>
     </CEffectEnumArea>
+    <CEffectApplyBehavior id="NoDeathSa">
+        <EditorCategories value=""/>
+        <WhichUnit Value="Caster"/>
+    </CEffectApplyBehavior>
     <CEffectCreatePersistent id="QuasiBlackHoleCP">
         <EditorCategories value=""/>
         <PeriodCount value="80"/>
@@ -1015,8 +1026,116 @@
         <AreaArray Radius="25" Effect="VortexWarpable"/>
         <ExcludeArray/>
     </CEffectEnumArea>
+    <CEffectApplyBehavior id="SaBackward">
+        <EditorCategories value=""/>
+    </CEffectApplyBehavior>
+    <CEffectModifyUnit id="SaBackwardLockOff">
+        <EditorCategories value=""/>
+        <ImpactUnit Value="Caster"/>
+        <ModifyTurret Action="ClearTarget" Turret="SaBackward">
+            <Target Value="TargetUnit"/>
+        </ModifyTurret>
+    </CEffectModifyUnit>
+    <CEffectModifyUnit id="SaBackwardLockOnPoint">
+        <EditorCategories value=""/>
+        <ImpactUnit Value="Caster"/>
+        <ModifyTurret Turret="SaBackward">
+            <Target Value="TargetUnit"/>
+        </ModifyTurret>
+    </CEffectModifyUnit>
+    <CEffectModifyUnit id="SaForwardLockOn">
+        <EditorCategories value=""/>
+        <ImpactUnit Value="Caster"/>
+        <ModifyTurret Turret="SaForward">
+            <Target Value="TargetUnit"/>
+            <Flags index="Tracking" value="1"/>
+        </ModifyTurret>
+    </CEffectModifyUnit>
+    <CEffectModifyUnit id="SaForwardLockOff">
+        <EditorCategories value=""/>
+        <ImpactUnit Value="Caster"/>
+        <ModifyTurret Action="ClearTarget" Turret="SaForward">
+            <Target Value="TargetUnit"/>
+        </ModifyTurret>
+    </CEffectModifyUnit>
+    <CEffectModifyUnit id="SaBackwardLockOn">
+        <EditorCategories value=""/>
+        <ImpactUnit Value="Caster"/>
+        <ModifyTurret Turret="SaBackward">
+            <Target Value="TargetUnit"/>
+            <Flags index="Tracking" value="1"/>
+        </ModifyTurret>
+    </CEffectModifyUnit>
+    <CEffectModifyUnit id="SaForwardLockOnPoint">
+        <EditorCategories value=""/>
+        <ImpactUnit Value="Caster"/>
+        <ModifyTurret Turret="SaForward">
+            <Target Value="TargetUnit"/>
+        </ModifyTurret>
+    </CEffectModifyUnit>
+    <CEffectApplyBehavior id="SaStopWeapon">
+        <EditorCategories value=""/>
+        <WhichUnit Value="Caster"/>
+    </CEffectApplyBehavior>
+    <CEffectApplyBehavior id="SaDeath">
+        <EditorCategories value=""/>
+        <WhichUnit Value="Caster"/>
+    </CEffectApplyBehavior>
+    <CEffectCreatePersistent id="SaForwardWeaponCP">
+        <ValidatorArray value="TargetForward"/>
+        <EditorCategories value=""/>
+        <WhichLocation Value="TargetUnit"/>
+        <InitialEffect value="SaForwardLockOnPoint"/>
+        <FinalEffect value="SaForwardLockOff"/>
+        <PeriodCount value="2"/>
+        <PeriodicEffectArray value="SaForwardWeaponLMPosition"/>
+        <PeriodicEffectArray value="SaStopWeapon"/>
+        <PeriodicPeriodArray value="3"/>
+        <PeriodicPeriodArray value="2.5"/>
+    </CEffectCreatePersistent>
+    <CEffectDamage id="SaForwardWeaponDamage" parent="DU_WEAP">
+        <EditorCategories value="Race:Protoss"/>
+        <Visibility value="Visible"/>
+        <Flags index="Impact" value="0"/>
+        <Kind value="Ranged"/>
+        <KindSplash value="Ranged"/>
+        <Amount value="80"/>
+        <AreaArray Radius="0.5" Fraction="1"/>
+        <SearchFilters value="-;Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+    </CEffectDamage>
+    <CEffectLaunchMissile id="SaForwardWeaponLM">
+        <EditorCategories value="Race:Protoss"/>
+        <ImpactLocation Value="TargetPoint"/>
+        <ImpactEffect value="SaForwardWeaponDamage"/>
+        <AmmoUnit value="SaWeapon0"/>
+    </CEffectLaunchMissile>
+    <CEffectRemoveBehavior id="SaForward">
+        <EditorCategories value=""/>
+        <BehaviorLink value="SaBackward"/>
+    </CEffectRemoveBehavior>
+    <CEffectCreatePersistent id="SaBackwardWeaponCP">
+        <EditorCategories value=""/>
+        <PeriodCount value="2"/>
+        <PeriodicEffectArray value="SaBackwardWeaponLM"/>
+        <PeriodicEffectArray value="SaStopWeapon"/>
+        <PeriodicPeriodArray value="1.5"/>
+        <PeriodicPeriodArray value="2.5"/>
+        <ValidatorArray value="TargetBackward"/>
+        <InitialEffect value="SaBackwardLockOnPoint"/>
+        <FinalEffect value="SaBackwardLockOff"/>
+        <WhichLocation Value="TargetUnit"/>
+    </CEffectCreatePersistent>
+    <CEffectDamage id="SaBackwardWeaponDamage" parent="DU_WEAP">
+        <EditorCategories value="Race:Protoss"/>
+        <Visibility value="Visible"/>
+        <Flags index="Impact" value="0"/>
+        <Kind value="Ranged"/>
+        <Amount value="300"/>
+        <KindSplash value="Ranged"/>
+        <AreaArray Radius="1" Fraction="1"/>
+        <SearchFilters value="-;Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+    </CEffectDamage>
     <CEffectLaunchMissile id="SaCoreLM">
-        <ValidatorArray index="0" value="PhotonCannonTargetFilters"/>
         <EditorCategories value="Race:Protoss"/>
         <ImpactEffect value="SaCoreDamage"/>
         <AmmoUnit value="RepulsorCannonWeapon"/>
@@ -1028,6 +1147,89 @@
         <Kind value="Ranged"/>
         <Amount value="8"/>
     </CEffectDamage>
+    <CEffectLaunchMissile id="SaBackwardWeaponLM">
+        <EditorCategories value="Race:Protoss"/>
+        <ImpactEffect value="SaBackwardWeaponDamage"/>
+        <AmmoUnit value="SaWeapon1"/>
+        <ImpactLocation Value="TargetPoint"/>
+    </CEffectLaunchMissile>
+    <CEffectRandomPointInCircle id="SaForwardWeaponLMPosition">
+        <EditorCategories value="Race:Protoss"/>
+        <WhichLocation Value="TargetPoint"/>
+        <Effect value="SaForwardWeaponLM"/>
+        <Count value="15"/>
+        <Radius value="1.5"/>
+    </CEffectRandomPointInCircle>
+    <CEffectApplyBehavior id="SaMorph">
+        <EditorCategories value=""/>
+        <WhichUnit Value="Caster"/>
+    </CEffectApplyBehavior>
+    <CEffectCreatePersistent id="SaUltimateCP">
+        <EditorCategories value=""/>
+        <WhichLocation Value="TargetUnit"/>
+        <Flags index="PersistUntilDestroyed" value="1"/>
+        <InitialEffect value="SaUltimateRotation"/>
+        <FinalEffect value="SaUltimateEndSet"/>
+        <PeriodicValidator value="SaUltimateCP"/>
+        <PeriodicEffectArray value="SaUltimateSet"/>
+        <PeriodicPeriodArray value="0.25"/>
+    </CEffectCreatePersistent>
+    <CEffectCreateUnit id="SaUltimateCU">
+        <EditorCategories value=""/>
+    </CEffectCreateUnit>
+    <CEffectCreatePersistent id="SaUltimateBackwardStart">
+        <EditorCategories value=""/>
+        <WhichLocation Value="TargetUnit"/>
+        <InitialEffect value="SaBackwardLockOn"/>
+        <PeriodCount value="1"/>
+        <PeriodicEffectArray value="SaUltimateCP"/>
+        <PeriodicPeriodArray value="1.5"/>
+    </CEffectCreatePersistent>
+    <CEffectEnumArea id="SaUltimateThrow">
+        <EditorCategories value=""/>
+        <LaunchLocation Value="TargetUnit"/>
+        <ImpactLocation Value="TargetUnit"/>
+        <SearchFilters value="-;Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <AreaArray RectangleWidth="2" RectangleHeight="25" Effect="Flying"/>
+    </CEffectEnumArea>
+    <CEffectApplyBehavior id="SaUltimateRotation">
+        <EditorCategories value=""/>
+    </CEffectApplyBehavior>
+    <CEffectSet id="SaUltimateSet">
+        <EditorCategories value=""/>
+        <EffectArray value="SaUltimateDamage"/>
+        <EffectArray value="SaUltimateThrow"/>
+    </CEffectSet>
+    <CEffectSet id="SaUltimateEndSet">
+        <EditorCategories value=""/>
+        <EffectArray value="KillTarget"/>
+        <EffectArray value="SaForwardLockOff"/>
+        <EffectArray value="SaBackwardLockOff"/>
+    </CEffectSet>
+    <CEffectDamage id="SaUltimateDamage">
+        <EditorCategories value=""/>
+        <Kind value="Ranged"/>
+        <KindSplash value="Ranged"/>
+        <Amount value="20"/>
+        <AreaArray RectangleWidth="2" RectangleHeight="25" Fraction="1"/>
+        <LaunchLocation Value="TargetUnit"/>
+        <ImpactLocation Value="TargetPoint"/>
+        <SearchFilters value="-;Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+    </CEffectDamage>
+    <CEffectCreatePersistent id="SaUltimateSplat">
+        <EditorCategories value=""/>
+        <PeriodCount value="1"/>
+        <PeriodicEffectArray value="VoidEffect"/>
+        <PeriodicPeriodArray value="20"/>
+    </CEffectCreatePersistent>
+    <CEffectCreatePersistent id="SaUltimateForwardStart">
+        <EditorCategories value=""/>
+        <WhichLocation Value="TargetUnit"/>
+        <InitialEffect value="SaForwardLockOn"/>
+        <PeriodCount value="1"/>
+        <PeriodicEffectArray value="SaUltimateCP"/>
+        <PeriodicPeriodArray value="2.5"/>
+    </CEffectCreatePersistent>
     <CEffectApplyBehavior id="Sizex2">
         <EditorCategories value=""/>
         <WhichUnit Value="Source"/>

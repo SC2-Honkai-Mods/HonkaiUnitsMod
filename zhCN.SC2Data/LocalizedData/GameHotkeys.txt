@@ -201,6 +201,7 @@ Button/Hotkey/ResearchSuperC=E
 Button/Hotkey/ResearchVHerrscher1st=D
 Button/Hotkey/ResearchVHerrscher1st2=D
 Button/Hotkey/ReviveKiana=R
+Button/Hotkey/SaUltimate=
 Button/Hotkey/SeeleC1Upgrade1=Q
 Button/Hotkey/SeeleC1Upgrade2=W
 Button/Hotkey/SeeleC1Upgrade3=E

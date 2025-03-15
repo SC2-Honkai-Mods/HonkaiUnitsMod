@@ -6,13 +6,16 @@ include "TriggerLibs/natives"
 // Constants
 const int lib6D9D7845_gv_e58F8CE69EAAE6ADA6E599A8E7B1BBE588ABE695B0 = 3;
 const int lib6D9D7845_gv_e9878DE782AEE6ADA6E599A8E7B1BBE588ABE695B0 = 12;
+const fixed lib6D9D7845_gv_saUltimateCDValue = 45.0;
+const fixed lib6D9D7845_gv_saUltimateStage1Duration = 20.0;
 const int lib6D9D7845_gv_e5BE8BE88085E7A78DE7B1BBE695B0 = 8;
 
 // Variable Declarations
-string lib6D9D7845_gv_lightDefault;
 bool lib6D9D7845_gv_globalE8B083E8AF95E6A8A1E5BC8F;
 bool lib6D9D7845_gv_globalE88BB1E99B84E5A48DE6B4BB;
 bool lib6D9D7845_gv_globalE79086E4B98BE5BE8BE88085E68A80E883BDE5898AE5BCB1;
+string lib6D9D7845_gv_e697A0E6A087E9A298E79A84E58F98E9878F001;
+string lib6D9D7845_gv_defaultLight;
 fixed[11] lib6D9D7845_gv_damagein10seconds;
 fixed[31] lib6D9D7845_gv_damagein30seconds;
 int lib6D9D7845_gv_damageIndex;
@@ -28,6 +31,11 @@ int lib6D9D7845_gv_e7ACACE59B9BE7A59EE4B98BE994AEE591BDE4BBA4E99DA2E69DBF;
 int lib6D9D7845_gv_e7ACACE59B9BE7A59EE4B98BE994AEE5AFB9E8AF9DE6A186;
 string[lib6D9D7845_gv_e58F8CE69EAAE6ADA6E599A8E7B1BBE588ABE695B0 + 1] lib6D9D7845_gv_e68980E69C89E58F8CE69EAAE6ADA6E599A8E68A80E883BD;
 string[lib6D9D7845_gv_e9878DE782AEE6ADA6E599A8E7B1BBE588ABE695B0 + 1] lib6D9D7845_gv_e68980E69C89E9878DE782AEE6ADA6E599A8;
+unit lib6D9D7845_gv_sa;
+sound lib6D9D7845_gv_zeroTime;
+sound lib6D9D7845_gv_zeroTimeRemix;
+sound lib6D9D7845_gv_zeroTimeRemix2;
+fixed lib6D9D7845_gv_saUltimateCD;
 string[lib6D9D7845_gv_e5BE8BE88085E7A78DE7B1BBE695B0 + 1] lib6D9D7845_gv_e5BE8BE88085E7A78DE7B1BB;
 int lib6D9D7845_gv_e5BE8BE88085E998B6E6AEB5;
 int lib6D9D7845_gv_e58D95E4BD8DE78AB6E68081UIE5AEBDE5BAA6;
@@ -48,9 +56,16 @@ unit lib6D9D7845_gv_e8999AE697A0E79BAEE6A087;
 int lib6D9D7845_gv_e793A6E696AFE58D95E6ACA1E98787E99B86E695B0;
 
 // Function Declarations
-void lib6D9D7845_gf_AIThinkRO_010 (int lp_owner, unit lp_unit, unitgroup lp_nearByUnits);
-void lib6D9D7845_gf_AIThinkUL_030 (int lp_owner, unit lp_unit, unitgroup lp_nearByUnits);
-void lib6D9D7845_gf_AIThinkCharge (unit lp_unit, unitgroup lp_nearByUnits, string lp_skill, string lp_cD);
+void lib6D9D7845_gf_AIThinkRO_010 (int lp_player, unit lp_caster, unitgroup lp_scanGroup);
+void lib6D9D7845_gf_AIThinkUL_030 (int lp_player, unit lp_caster, unitgroup lp_scanGroup);
+void lib6D9D7845_gf_AIThinkCharge (unit lp_caster, unitgroup lp_scanGroup, string lp_skill, string lp_cD);
+void lib6D9D7845_gf_AIThinkSaAfflication (int lp_player, unit lp_caster, unitgroup lp_scanGroup);
+void lib6D9D7845_gf_AIChanelSaAfflication (int lp_player, unit lp_caster, unitgroup lp_scanGroup);
+void lib6D9D7845_gf_AISaCommon (int lp_channel, int lp_player, unit lp_caster, unitgroup lp_scanGroup);
+bool lib6D9D7845_gf_E782B9E59CA8E58D95E4BD8DE79A84E6ADA3E99DA2 (point lp_point, unit lp_unit);
+bool lib6D9D7845_gf_E8A792E5BAA6E59CA8E58D95E4BD8DE79A84E6ADA3E99DA2 (fixed lp_direction, unit lp_unit);
+void lib6D9D7845_gf_SoundFadeIn (sound lp_sound, int lp_frames);
+void lib6D9D7845_gf_SoundFadeOut (sound lp_sound, int lp_frames);
 int lib6D9D7845_gf_GetDifficultyLevel ();
 unit lib6D9D7845_gf_E8999AE7958CE9998DE4B8B4E59CA8E79BB8E5AFB9E58D95E4BD8DE5818FE7A7BBE782B9E5889BE5BBBAE58D95E4BD8D (unit lp_e58D95E4BD8D, fixed lp_x, fixed lp_y, fixed lp_z, string lp_e58D95E4BD8DE7B1BBE59E8B, string lp_e69588E69E9C);
 unitgroup lib6D9D7845_gf_E6909CE7B4A2E8B7AFE5BE84E4B88AE79A84E58D95E4BD8D (point lp_e8B5B7E5A78BE782B9, point lp_e79BAEE6A087E782B9, fixed lp_e6909CE7B4A2E58D8AE5BE84, int lp_e6909CE7B4A2E78EA9E5AEB6, unitfilter lp_e7AD9BE98089E599A8);
@@ -71,9 +86,11 @@ void lib6D9D7845_gf_E7A7BBE999A4E9878DE782AEE7B1BBE6ADA6E599A8 (unit lp_e58D95E4
 void lib6D9D7845_gf_E781ABE7AEADE782AEE6ADA6E599A8E7B4A2E6958C (unit lp_e696BDE6B395E88085, unit lp_e79BAEE6A087E58D95E4BD8D, fixed lp_e6909CE7B4A2E58D8AE5BE84, string lp_e58F91E5B084E69588E69E9C);
 bool lib6D9D7845_gf_E5B09DE8AF95E58F91E5B883E68C87E4BBA4 (fixed lp_range, int lp_caster, unit lp_target, unitfilter lp_filter, abilcmd lp_command);
 void lib6D9D7845_gf_E9BB91E6B49E (unit lp_caster, point lp_center, fixed lp_r, int lp_p);
+void lib6D9D7845_gf_Sa (point lp_spawnPoint, fixed lp_spawnDir);
+void lib6D9D7845_gf_SaUltimate (unitgroup lp_sas);
+void lib6D9D7845_gf_SaRotateTarget (unit lp_center, unit lp_target, fixed lp_initialangle);
 void lib6D9D7845_gf_DoThrow (unit lp_target, point lp_sourcePoint);
 void lib6D9D7845_gf_ApplyAvatar (int lp_e78EA9E5AEB6, string lp_e8A792E889B2E58D87E7BAA7, string lp_e5A48DE98089E58D87E7BAA7, abilcmd lp_e9AB98E4BAAEE591BDE4BBA4);
-void lib6D9D7845_gf_E5A891 (point lp_spawnPoint, fixed lp_spawnDir);
 void lib6D9D7845_gf_E5889DE5A78BE58C96E59FBAE7A180E78AB6E68081 (actor lp_actor);
 void lib6D9D7845_gf_E69BB4E696B0E58D95E4BD8DE59FBAE7A180E78AB6E68081 (unit lp_unit, actor lp_actor, int lp_item);
 int lib6D9D7845_gf_E5889DE5A78BE58C96E5A4B4E5838F (int lp_dialog, unit lp_unit, string lp_model);
@@ -101,11 +118,11 @@ fixed lib6D9D7845_gf_Getrestraintinversed ();
 int lib6D9D7845_gf_ExtraDivineKeys (int lp_player);
 
 // Trigger Declarations
-trigger lib6D9D7845_gt_Debug5;
 trigger lib6D9D7845_gt_E69BB4E696B0E4BABAE58FA3;
 trigger lib6D9D7845_gt_CreateDPSUnit;
 trigger lib6D9D7845_gt_DPSStats;
 trigger lib6D9D7845_gt_Debug;
+trigger lib6D9D7845_gt_Debug5;
 trigger lib6D9D7845_gt_Debug2;
 trigger lib6D9D7845_gt_Debug3;
 trigger lib6D9D7845_gt_Debug4;

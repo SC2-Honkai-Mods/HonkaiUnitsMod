@@ -288,6 +288,12 @@
     <CRequirement id="RO_040CanAttack">
         <NodeArray index="Use" Link="NotCountBehaviorRO_040AttackCompleteOnlyAtUnit"/>
     </CRequirement>
+    <CRequirement id="SaBackward">
+        <NodeArray index="Show" Link="CountBehaviorSaBackwardCompleteOnlyAtUnit"/>
+    </CRequirement>
+    <CRequirement id="SaForward">
+        <NodeArray index="Show" Link="NotCountBehaviorSaBackwardCompleteOnlyAtUnit"/>
+    </CRequirement>
     <CRequirement id="SeeleArmorCanResearch">
         <NodeArray index="Show" Link="LTCountUpgradeSeeleHealthQueuedOrBetter16"/>
     </CRequirement>
@@ -600,7 +606,7 @@
     </CRequirement>
     <CRequirement id="HumanArmorCanUpgrade2">
         <NodeArray index="Use" Link="LTSumCountUpgradeVArmorUpgrade2QueuedOnlyCountUpgradeVArmorUpgrade2InProgressOnly1"/>
-        <NodeArray index="Show" Link="LTCountUpgradeVArmorUpgrade2QueuedOrBetter5"/>
+        <NodeArray index="Show" Link="LTCountUpgradeVArmorUpgrade2QueuedOrBetter10"/>
     </CRequirement>
     <CRequirement id="HumanArmorCanUpgrade22">
         <NodeArray index="Use" Link="LTSumCountUpgradeVAttackUpgrade2QueuedOnlyCountUpgradeVAttackUpgrade2InProgressOnly1"/>

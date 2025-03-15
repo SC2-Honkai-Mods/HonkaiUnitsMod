@@ -517,7 +517,7 @@
     </CUpgrade>
     <CUpgrade id="VArmorUpgrade">
         <EffectArray Reference="Unit,Valkyrja2,LifeArmorLevel" Value="1"/>
-        <EffectArray Reference="Unit,Marauder,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,Valkyrja3,LifeArmorLevel" Value="1"/>
         <EffectArray Reference="Behavior,VBuff,Modification.LifeArmorBonus" Value="1"/>
         <MaxLevel value="8"/>
     </CUpgrade>
@@ -755,10 +755,12 @@
     </CUpgrade>
     <CUpgrade id="VArmorUpgrade2">
         <EffectArray Reference="Unit,Valkyrja2,ShieldArmorLevel" Value="1"/>
-        <EffectArray Reference="Unit,Marauder,ShieldArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,Valkyrja3,ShieldArmorLevel" Value="1"/>
         <EffectArray Reference="Behavior,VBuff,Modification.ShieldArmorBonus" Value="1"/>
         <EffectArray Reference="Behavior,VBuff,Modification.VitalMaxArray[Shields]" Value="20"/>
-        <MaxLevel value="5"/>
+        <EffectArray Operation="Subtract" Reference="Unit,Valkyrja2,ShieldRegenDelay" Value="1.000000"/>
+        <EffectArray Operation="Subtract" Reference="Unit,Valkyrja3,ShieldRegenDelay" Value="1.000000"/>
+        <MaxLevel value="10"/>
     </CUpgrade>
     <CUpgrade id="B5">
         <Flags index="UpgradeCheat" value="0"/>

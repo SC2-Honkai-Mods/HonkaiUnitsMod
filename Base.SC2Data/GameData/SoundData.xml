@@ -137,7 +137,43 @@
         <SustainFade Time="1000" Volume="-12.000000"/>
         <SustainFade Time="1500" Volume="-24.000000"/>
         <SustainFade Time="2000" Volume="-96.000000"/>
-        <Volume value="-5.660000,-5.660000"/>
+        <Volume value="-8.570000,-8.570000"/>
+    </CSound>
+    <CSound id="SaBWLaunch" parent="Combat">
+        <EditorCategories value="Race:Neutral"/>
+        <AssetArray File="Assets\Sounds\PurifierProtossTurret_Launch01_1ch.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\PurifierProtossTurret_Launch02_1ch.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\PurifierProtossTurret_Launch03_1ch.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\PurifierProtossTurret_Launch04_1ch.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\PurifierProtossTurret_Launch05_1ch.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\PurifierProtossTurret_Launch06_1ch.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\PurifierProtossTurret_Launch07_1ch.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\PurifierProtossTurret_Launch08_1ch.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\PurifierProtossTurret_Launch09_1ch.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\PurifierProtossTurret_Launch10_1ch.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\PurifierProtossTurret_Launch11_1ch.wav" FacialGroup=""/>
+    </CSound>
+    <CSound id="SaIntro" parent="Combat">
+        <EditorCategories value="Race:Neutral"/>
+        <AssetArray File="Assets\Sounds\BOSS_470\Sa_Intro.wav" FacialGroup=""/>
+    </CSound>
+    <CSound id="SaZeroTime" parent="MUSIC">
+        <AssetArray File="Assets\Sounds\Music\ZeroTime_LOOP.mp3" FacialGroup=""/>
+        <DupeRepeatCount value="1"/>
+        <LoopCount value="-1"/>
+        <Volume value="6.000000,6.000000"/>
+    </CSound>
+    <CSound id="SaZeroTimeRemix" parent="MUSIC">
+        <AssetArray File="Assets\Sounds\Music\ZeroTime_Remix2_LOOP.mp3" FacialGroup=""/>
+        <DupeRepeatCount value="1"/>
+        <LoopCount value="-1"/>
+        <Volume value="6.000000,6.000000"/>
+    </CSound>
+    <CSound id="SaZeroTimeRemix2" parent="MUSIC">
+        <AssetArray File="Assets\Sounds\Music\ZeroTime_Remix_LOOP.mp3" FacialGroup=""/>
+        <DupeRepeatCount value="1"/>
+        <LoopCount value="-1"/>
+        <Volume value="6.000000,6.000000"/>
     </CSound>
     <CSound id="TimeFractureIntro" parent="Spell">
         <EditorCategories value="Race:Terran"/>
@@ -163,6 +199,15 @@
         <EditorCategories value="Race:Terran"/>
         <AssetArray File="Assets\Sounds\Effects\TimeFractureOutro.wav"/>
         <Pitch value="-1.500000,1.500000"/>
+    </CSound>
+    <CSound id="SaUltimateBell" parent="UI">
+        <AssetArray File="Assets\Sounds\Uni\UI\6Ch_Badge_Impact_Base_Bell.ogg" FacialGroup=""/>
+        <Flags index="Stream" value="1"/>
+        <SpeakerMix index="BackLeft" value="1.000000"/>
+        <SpeakerMix index="BackRight" value="1.000000"/>
+        <SpeakerMix index="SideLeft" value="0.125000"/>
+        <SpeakerMix index="SideRight" value="0.125000"/>
+        <Volume value="6.000000,6.000000"/>
     </CSound>
     <CSound id="UlyGeneral_Death" parent="Death">
         <EditorCategories value="Race:Zerg"/>

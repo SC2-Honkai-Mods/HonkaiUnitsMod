@@ -26,6 +26,7 @@ void lib6D9D7845_InitVariables () {
     lib6D9D7845_gv_globalE8B083E8AF95E6A8A1E5BC8F = (GameAttributeGameValue("3") == "0002");
     lib6D9D7845_gv_globalE88BB1E99B84E5A48DE6B4BB = true;
     lib6D9D7845_gv_globalE79086E4B98BE5BE8BE88085E68A80E883BDE5898AE5BCB1 = true;
+    lib6D9D7845_gv_defaultLight = "HonkaiDefault";
     lib6D9D7845_gv_dPSDialog = c_invalidDialogId;
     lib6D9D7845_gv_dPSDialogItem = c_invalidDialogControlId;
     for (init_i = 0; init_i <= 16; init_i += 1) {
@@ -57,7 +58,7 @@ void lib6D9D7845_InitVariables () {
 }
 
 // Functions
-void lib6D9D7845_gf_AIThinkRO_010 (int lp_owner, unit lp_unit, unitgroup lp_nearByUnits) {
+void lib6D9D7845_gf_AIThinkRO_010 (int lp_player, unit lp_caster, unitgroup lp_scanGroup) {
     // Variable Declarations
     unitgroup lv_enermies;
     unit lv_closest;
@@ -68,20 +69,20 @@ void lib6D9D7845_gf_AIThinkRO_010 (int lp_owner, unit lp_unit, unitgroup lp_near
 
     // Automatic Variable Declarations
     // Variable Initialization
-    lv_enermies = lp_nearByUnits;
-    lv_point = UnitGetPosition(lp_unit);
+    lv_enermies = lp_scanGroup;
+    lv_point = UnitGetPosition(lp_caster);
 
     // Implementation
-    lib6D9D7845_gf_AIThinkCharge(lp_unit, lp_nearByUnits, "RO_010Abli1", "Abil/RO_010Abli1");
+    lib6D9D7845_gf_AIThinkCharge(lp_caster, lp_scanGroup, "RO_010Abli1", "Abil/RO_010Abli1");
 }
 
-void lib6D9D7845_gf_AIThinkUL_030 (int lp_owner, unit lp_unit, unitgroup lp_nearByUnits) {
+void lib6D9D7845_gf_AIThinkUL_030 (int lp_player, unit lp_caster, unitgroup lp_scanGroup) {
     // Automatic Variable Declarations
     // Implementation
-    lib6D9D7845_gf_AIThinkCharge(lp_unit, lp_nearByUnits, "UL_030Abli", "Abil/RO_010Abli1");
+    lib6D9D7845_gf_AIThinkCharge(lp_caster, lp_scanGroup, "UL_030Abli", "Abil/RO_010Abli1");
 }
 
-void lib6D9D7845_gf_AIThinkCharge (unit lp_unit, unitgroup lp_nearByUnits, string lp_skill, string lp_cD) {
+void lib6D9D7845_gf_AIThinkCharge (unit lp_caster, unitgroup lp_scanGroup, string lp_skill, string lp_cD) {
     // Variable Declarations
     unitgroup lv_enermies;
     unit lv_closest;
@@ -95,11 +96,11 @@ void lib6D9D7845_gf_AIThinkCharge (unit lp_unit, unitgroup lp_nearByUnits, strin
     fixed autoF48678A3_ai;
 
     // Variable Initialization
-    lv_enermies = lp_nearByUnits;
-    lv_point = UnitGetPosition(lp_unit);
+    lv_enermies = lp_scanGroup;
+    lv_point = UnitGetPosition(lp_caster);
 
     // Implementation
-    if ((UnitAbilityGetCooldown(lp_unit, lp_skill, lp_cD) > 0.0)) {
+    if ((UnitAbilityGetCooldown(lp_caster, lp_skill, lp_cD) > 0.0)) {
         return ;
     }
 
@@ -122,13 +123,193 @@ void lib6D9D7845_gf_AIThinkCharge (unit lp_unit, unitgroup lp_nearByUnits, strin
             }
         }
         if ((lv_passable == true)) {
-            libNtve_gf_AICast(lp_unit, OrderTargetingPoint(AbilityCommand(lp_skill, 0), lv_closestpoint));
+            libNtve_gf_AICast(lp_caster, OrderTargetingPoint(AbilityCommand(lp_skill, 0), lv_closestpoint));
             return ;
         }
         else {
             UnitGroupRemove(lv_enermies, lv_closest);
         }
     }
+}
+
+void lib6D9D7845_gf_AIThinkSaAfflication (int lp_player, unit lp_caster, unitgroup lp_scanGroup) {
+    // Automatic Variable Declarations
+    // Implementation
+    lib6D9D7845_gf_AISaCommon(-1, lp_player, lp_caster, lp_scanGroup);
+}
+
+void lib6D9D7845_gf_AIChanelSaAfflication (int lp_player, unit lp_caster, unitgroup lp_scanGroup) {
+    // Automatic Variable Declarations
+    // Implementation
+}
+
+void lib6D9D7845_gf_AISaCommon (int lp_channel, int lp_player, unit lp_caster, unitgroup lp_scanGroup) {
+    // Variable Declarations
+    unitgroup lv_enermiesFront;
+    unitgroup lv_threatenFront;
+    unitgroup lv_enermiesBack;
+    unitgroup lv_threatenBack;
+    unit lv_target;
+    fixed lv_facing;
+    point lv_position;
+
+    // Automatic Variable Declarations
+    unitgroup autoCB79DE33_g;
+    int autoCB79DE33_u;
+
+    // Variable Initialization
+    lv_enermiesFront = UnitGroupEmpty();
+    lv_threatenFront = UnitGroupEmpty();
+    lv_enermiesBack = UnitGroupEmpty();
+    lv_threatenBack = UnitGroupEmpty();
+    lv_facing = UnitGetFacing(lp_caster);
+    lv_position = UnitGetPosition(lp_caster);
+
+    // Implementation
+    autoCB79DE33_g = UnitGroupFilterAlliance(lp_scanGroup, lp_player, c_unitAllianceEnemy, 0);
+    autoCB79DE33_u = UnitGroupCount(autoCB79DE33_g, c_unitCountAll);
+    for (;; autoCB79DE33_u -= 1) {
+        lv_target = UnitGroupUnitFromEnd(autoCB79DE33_g, autoCB79DE33_u);
+        if (lv_target == null) { break; }
+        if ((DistanceBetweenPoints(lv_position, UnitGetPosition(lv_target)) > 18.0)) {
+            continue;
+        }
+
+        if (lib6D9D7845_gf_E782B9E59CA8E58D95E4BD8DE79A84E6ADA3E99DA2(UnitGetPosition(lv_target), lp_caster)) {
+            UnitGroupAdd(lv_enermiesFront, lv_target);
+            if ((UnitCanAttackTarget(lv_target, lp_caster) == true)) {
+                UnitGroupAdd(lv_threatenFront, lv_target);
+            }
+
+        }
+        else {
+            UnitGroupAdd(lv_enermiesBack, lv_target);
+            if ((UnitCanAttackTarget(lv_target, lp_caster) == true)) {
+                UnitGroupAdd(lv_threatenBack, lv_target);
+            }
+
+        }
+    }
+    if ((UnitBehaviorCount(lp_caster, "SaForward") == 1)) {
+        if ((((libNtve_gf_UnitGroupIsDead(lv_threatenFront) == true) && (libNtve_gf_UnitGroupIsDead(lv_threatenBack) == false)) || ((libNtve_gf_UnitGroupIsDead(lv_enermiesFront) == true) && (libNtve_gf_UnitGroupIsDead(lv_enermiesBack) == false)))) {
+            libNtve_gf_AICast(lp_caster, Order(AbilityCommand("SaBackward", 0)));
+        }
+
+    }
+    else {
+        if ((((libNtve_gf_UnitGroupIsDead(lv_threatenFront) == false) && (libNtve_gf_UnitGroupIsDead(lv_threatenBack) == true)) || ((libNtve_gf_UnitGroupIsDead(lv_enermiesFront) == false) && (libNtve_gf_UnitGroupIsDead(lv_enermiesBack) == true)))) {
+            libNtve_gf_AICast(lp_caster, Order(AbilityCommand("SaForward", 0)));
+        }
+
+    }
+}
+
+bool lib6D9D7845_gf_E782B9E59CA8E58D95E4BD8DE79A84E6ADA3E99DA2 (point lp_point, unit lp_unit) {
+    // Variable Declarations
+    fixed lv_angle;
+
+    // Automatic Variable Declarations
+    // Variable Initialization
+    lv_angle = (AngleBetweenPoints(UnitGetPosition(lp_unit), lp_point) - UnitGetFacing(lp_unit));
+
+    // Implementation
+    if ((((lv_angle >= -90) && (lv_angle <= 90)) || ((lv_angle >= -450) && (lv_angle <= -270)) || ((lv_angle >= 270) && (lv_angle <= 450)))) {
+        return true;
+    }
+
+    return false;
+}
+
+bool lib6D9D7845_gf_E8A792E5BAA6E59CA8E58D95E4BD8DE79A84E6ADA3E99DA2 (fixed lp_direction, unit lp_unit) {
+    // Variable Declarations
+    fixed lv_angle;
+
+    // Automatic Variable Declarations
+    // Variable Initialization
+    lv_angle = (lp_direction - UnitGetFacing(lp_unit));
+
+    // Implementation
+    if ((((lv_angle >= -90) && (lv_angle <= 90)) || ((lv_angle >= -450) && (lv_angle <= -270)) || ((lv_angle >= 270) && (lv_angle <= 450)))) {
+        return true;
+    }
+
+    return false;
+}
+
+trigger auto_lib6D9D7845_gf_SoundFadeIn_Trigger = null;
+sound auto_lib6D9D7845_gf_SoundFadeIn_lp_sound;
+int auto_lib6D9D7845_gf_SoundFadeIn_lp_frames;
+
+void lib6D9D7845_gf_SoundFadeIn (sound lp_sound, int lp_frames) {
+    auto_lib6D9D7845_gf_SoundFadeIn_lp_sound = lp_sound;
+    auto_lib6D9D7845_gf_SoundFadeIn_lp_frames = lp_frames;
+
+    if (auto_lib6D9D7845_gf_SoundFadeIn_Trigger == null) {
+        auto_lib6D9D7845_gf_SoundFadeIn_Trigger = TriggerCreate("auto_lib6D9D7845_gf_SoundFadeIn_TriggerFunc");
+    }
+
+    TriggerExecute(auto_lib6D9D7845_gf_SoundFadeIn_Trigger, false, false);
+}
+
+bool auto_lib6D9D7845_gf_SoundFadeIn_TriggerFunc (bool testConds, bool runActions) {
+    sound lp_sound = auto_lib6D9D7845_gf_SoundFadeIn_lp_sound;
+    int lp_frames = auto_lib6D9D7845_gf_SoundFadeIn_lp_frames;
+
+    // Variable Declarations
+    fixed lv_n;
+
+    // Automatic Variable Declarations
+    int auto8774CA35_n;
+    int auto8774CA35_i;
+
+    // Variable Initialization
+
+    // Implementation
+    auto8774CA35_n = (lp_frames + 1);
+    for (auto8774CA35_i = 1; auto8774CA35_i <= auto8774CA35_n; auto8774CA35_i += 1) {
+        SoundSetVolume(lp_sound, (lv_n / lp_frames));
+        lv_n += 100.0;
+        Wait(0.0625, c_timeGame);
+    }
+    return true;
+}
+
+trigger auto_lib6D9D7845_gf_SoundFadeOut_Trigger = null;
+sound auto_lib6D9D7845_gf_SoundFadeOut_lp_sound;
+int auto_lib6D9D7845_gf_SoundFadeOut_lp_frames;
+
+void lib6D9D7845_gf_SoundFadeOut (sound lp_sound, int lp_frames) {
+    auto_lib6D9D7845_gf_SoundFadeOut_lp_sound = lp_sound;
+    auto_lib6D9D7845_gf_SoundFadeOut_lp_frames = lp_frames;
+
+    if (auto_lib6D9D7845_gf_SoundFadeOut_Trigger == null) {
+        auto_lib6D9D7845_gf_SoundFadeOut_Trigger = TriggerCreate("auto_lib6D9D7845_gf_SoundFadeOut_TriggerFunc");
+    }
+
+    TriggerExecute(auto_lib6D9D7845_gf_SoundFadeOut_Trigger, false, false);
+}
+
+bool auto_lib6D9D7845_gf_SoundFadeOut_TriggerFunc (bool testConds, bool runActions) {
+    sound lp_sound = auto_lib6D9D7845_gf_SoundFadeOut_lp_sound;
+    int lp_frames = auto_lib6D9D7845_gf_SoundFadeOut_lp_frames;
+
+    // Variable Declarations
+    fixed lv_n;
+
+    // Automatic Variable Declarations
+    int auto1A00289D_n;
+    int auto1A00289D_i;
+
+    // Variable Initialization
+
+    // Implementation
+    auto1A00289D_n = (lp_frames + 1);
+    for (auto1A00289D_i = 1; auto1A00289D_i <= auto1A00289D_n; auto1A00289D_i += 1) {
+        SoundSetVolume(lp_sound, (100.0 - (lv_n / lp_frames)));
+        lv_n += 100.0;
+        Wait(0.0625, c_timeGame);
+    }
+    return true;
 }
 
 int lib6D9D7845_gf_GetDifficultyLevel () {
@@ -323,6 +504,7 @@ fixed lib6D9D7845_gf_E5A4B9E8A792C2B1180 (fixed lp_sorce, fixed lp_target) {
 bool lib6D9D7845_gf_E58581E8AEB8E8B083E8AF95 () {
     // Automatic Variable Declarations
     // Implementation
+    return true;
     return lib6D9D7845_gv_globalE8B083E8AF95E6A8A1E5BC8F;
 }
 
@@ -871,6 +1053,465 @@ void lib6D9D7845_gf_E9BB91E6B49E (unit lp_caster, point lp_center, fixed lp_r, i
     }
 }
 
+trigger auto_lib6D9D7845_gf_Sa_Trigger = null;
+point auto_lib6D9D7845_gf_Sa_lp_spawnPoint;
+fixed auto_lib6D9D7845_gf_Sa_lp_spawnDir;
+
+void lib6D9D7845_gf_Sa (point lp_spawnPoint, fixed lp_spawnDir) {
+    auto_lib6D9D7845_gf_Sa_lp_spawnPoint = lp_spawnPoint;
+    auto_lib6D9D7845_gf_Sa_lp_spawnDir = lp_spawnDir;
+
+    if (auto_lib6D9D7845_gf_Sa_Trigger == null) {
+        auto_lib6D9D7845_gf_Sa_Trigger = TriggerCreate("auto_lib6D9D7845_gf_Sa_TriggerFunc");
+    }
+
+    TriggerExecute(auto_lib6D9D7845_gf_Sa_Trigger, false, false);
+}
+
+bool auto_lib6D9D7845_gf_Sa_TriggerFunc (bool testConds, bool runActions) {
+    point lp_spawnPoint = auto_lib6D9D7845_gf_Sa_lp_spawnPoint;
+    fixed lp_spawnDir = auto_lib6D9D7845_gf_Sa_lp_spawnDir;
+
+    // Variable Declarations
+    fixed lv_radius;
+    fixed lv_dir;
+    point lv_center;
+    unit lv_unitForward;
+    unit lv_unitLeft;
+    unit lv_unitRight;
+    unitgroup lv_sas;
+
+    // Automatic Variable Declarations
+    // Variable Initialization
+    lv_radius = 6.0;
+    lv_dir = lp_spawnDir;
+    lv_sas = UnitGroupEmpty();
+
+    // Implementation
+    if ((lib6D9D7845_gv_sa != null)) {
+        return true;
+    }
+
+    UnitCreate(1, "SaCore", c_unitCreateIgnorePlacement | c_unitCreateIgnoreBirth, 15, lp_spawnPoint, lp_spawnDir);
+    lib6D9D7845_gv_sa = UnitLastCreated();
+    UnitCreate(1, "SaAfflication", c_unitCreateIgnorePlacement | c_unitCreateIgnoreBirth, 15, PointWithOffsetPolar(lp_spawnPoint, lv_radius, lv_dir), lv_dir);
+    lv_unitForward = UnitLastCreated();
+    UnitCreate(1, "SaAfflication", c_unitCreateIgnorePlacement | c_unitCreateIgnoreBirth, 15, PointWithOffsetPolar(lp_spawnPoint, lv_radius, (lv_dir + 120.0)), (lv_dir + 120.0));
+    lv_unitLeft = UnitLastCreated();
+    UnitCreate(1, "SaAfflication", c_unitCreateIgnorePlacement | c_unitCreateIgnoreBirth, 15, PointWithOffsetPolar(lp_spawnPoint, lv_radius, (lv_dir - 120.0)), (lv_dir - 120.0));
+    lv_unitRight = UnitLastCreated();
+    UnitGroupAdd(lv_sas, lv_unitForward);
+    UnitGroupAdd(lv_sas, lv_unitLeft);
+    UnitGroupAdd(lv_sas, lv_unitRight);
+    SoundtrackPause(PlayerGroupAll(), c_soundtrackCategoryMusic, true, true);
+    SoundPlayForPlayer(SoundLink("SaZeroTime", -1), c_maxPlayers, PlayerGroupAll(), 100.0, 0.0);
+    lib6D9D7845_gv_zeroTime = SoundLastPlayed();
+    SoundPlayForPlayer(SoundLink("SaZeroTimeRemix", -1), c_maxPlayers, PlayerGroupAll(), 0.0, 0.0);
+    lib6D9D7845_gv_zeroTimeRemix = SoundLastPlayed();
+    SoundPlayForPlayer(SoundLink("SaZeroTimeRemix2", -1), c_maxPlayers, PlayerGroupAll(), 0.0, 0.0);
+    lib6D9D7845_gv_zeroTimeRemix2 = SoundLastPlayed();
+    lib6D9D7845_gv_saUltimateCD = -1.0;
+    while (true) {
+        if ((lib6D9D7845_gv_sa == null)) {
+            break;
+        }
+
+        if ((UnitIsAlive(lib6D9D7845_gv_sa) == false)) {
+            lib6D9D7845_gv_sa = null;
+            break;
+        }
+
+        if (((lv_unitForward == null) || (UnitIsAlive(lv_unitForward) == false) || (lv_unitLeft == null) || (UnitIsAlive(lv_unitLeft) == false) || (lv_unitRight == null) || (UnitIsAlive(lv_unitRight) == false))) {
+            UnitBehaviorRemove(lib6D9D7845_gv_sa, "NoDeath", 1);
+            UnitBehaviorRemove(lib6D9D7845_gv_sa, "SaDeath", 1);
+            UnitKill(lib6D9D7845_gv_sa);
+            lib6D9D7845_gv_sa = null;
+            break;
+        }
+
+        if ((UnitBehaviorCount(lv_unitForward, "SaDeath") == 1) && (UnitBehaviorCount(lv_unitLeft, "SaDeath") == 1) && (UnitBehaviorCount(lv_unitRight, "SaDeath") == 1)) {
+            UnitBehaviorRemove(lib6D9D7845_gv_sa, "NoDeath", 1);
+            UnitKill(lib6D9D7845_gv_sa);
+            lib6D9D7845_gv_sa = null;
+            UnitBehaviorRemove(lv_unitForward, "SaDeath", 1);
+            UnitKill(lv_unitForward);
+            UnitBehaviorRemove(lv_unitLeft, "SaDeath", 1);
+            UnitKill(lv_unitLeft);
+            UnitBehaviorRemove(lv_unitRight, "SaDeath", 1);
+            UnitKill(lv_unitRight);
+            break;
+        }
+
+        lv_center = UnitGetPosition(lib6D9D7845_gv_sa);
+        lv_dir = UnitGetFacing(lib6D9D7845_gv_sa);
+        UnitSetPosition(lv_unitForward, PointWithOffsetPolar(lv_center, lv_radius, lv_dir), true);
+        UnitSetFacing(lv_unitForward, lv_dir, 0.0625);
+        UnitSetPosition(lv_unitLeft, PointWithOffsetPolar(lv_center, lv_radius, (lv_dir + 120.0)), true);
+        UnitSetFacing(lv_unitLeft, (lv_dir + 120.0), 0.0625);
+        UnitSetPosition(lv_unitRight, PointWithOffsetPolar(lv_center, lv_radius, (lv_dir - 120.0)), true);
+        UnitSetFacing(lv_unitRight, (lv_dir - 120.0), 0.0625);
+        if ((lib6D9D7845_gv_saUltimateCD == -1.0) && (((UnitGetPropertyFixed(lv_unitLeft, c_unitPropLifePercent, c_unitPropCurrent) + UnitGetPropertyFixed(lv_unitRight, c_unitPropLifePercent, c_unitPropCurrent)) + UnitGetPropertyFixed(lv_unitForward, c_unitPropLifePercent, c_unitPropCurrent)) <= 275.0)) {
+            lib6D9D7845_gv_saUltimateCD = 0.0;
+            lib6D9D7845_gv_saUltimateCD = 10.0;
+        }
+
+        if (((lib6D9D7845_gv_saUltimateCD >= -0.125) && (lib6D9D7845_gv_saUltimateCD <= 0.0))) {
+            lib6D9D7845_gv_saUltimateCD = -256.0;
+            UnitBehaviorAdd(lv_unitLeft, "SaUltimatePrepare", lib6D9D7845_gv_sa, 1);
+            UnitBehaviorAdd(lv_unitRight, "SaUltimatePrepare", lib6D9D7845_gv_sa, 1);
+            UnitBehaviorAdd(lv_unitForward, "SaUltimatePrepare", lib6D9D7845_gv_sa, 1);
+        }
+
+        if ((lib6D9D7845_gv_saUltimateCD == -256.0) && (UnitOrderCount(lv_unitLeft) == 0) && (UnitOrderCount(lv_unitRight) == 0) && (UnitOrderCount(lv_unitForward) == 0)) {
+            lib6D9D7845_gf_SaUltimate(lv_sas);
+        }
+
+        if ((lib6D9D7845_gv_saUltimateCD > 0.0)) {
+            lib6D9D7845_gv_saUltimateCD -= 0.0625;
+        }
+
+        Wait(0.0625, c_timeGame);
+    }
+    SoundtrackPause(PlayerGroupAll(), c_soundtrackCategoryMusic, false, true);
+    SoundStop(lib6D9D7845_gv_zeroTime, true);
+    SoundStop(lib6D9D7845_gv_zeroTimeRemix, true);
+    SoundStop(lib6D9D7845_gv_zeroTimeRemix2, true);
+    return true;
+}
+
+trigger auto_lib6D9D7845_gf_SaUltimate_Trigger = null;
+unitgroup auto_lib6D9D7845_gf_SaUltimate_lp_sas;
+
+void lib6D9D7845_gf_SaUltimate (unitgroup lp_sas) {
+    auto_lib6D9D7845_gf_SaUltimate_lp_sas = lp_sas;
+
+    if (auto_lib6D9D7845_gf_SaUltimate_Trigger == null) {
+        auto_lib6D9D7845_gf_SaUltimate_Trigger = TriggerCreate("auto_lib6D9D7845_gf_SaUltimate_TriggerFunc");
+    }
+
+    TriggerExecute(auto_lib6D9D7845_gf_SaUltimate_Trigger, false, false);
+}
+
+bool auto_lib6D9D7845_gf_SaUltimate_TriggerFunc (bool testConds, bool runActions) {
+    unitgroup lp_sas = auto_lib6D9D7845_gf_SaUltimate_lp_sas;
+
+    // Variable Declarations
+    unit lv_afflication;
+    int[4] lv_dirs;
+    int lv_i;
+    int lv_j;
+    int lv_n;
+    int lv_max;
+    int lv_value;
+    fixed[4] lv_targets;
+    unitgroup lv_affectUnits;
+    unit lv_targetUnit;
+    unit[4] lv_targetUnits;
+    int[37] lv_scores;
+
+    // Automatic Variable Declarations
+    unitgroup auto02979C66_g;
+    int auto02979C66_u;
+    unitgroup autoD35A2BBA_g;
+    int autoD35A2BBA_u;
+    const int auto442B7DA8_ae = 35;
+    const int auto442B7DA8_ai = 1;
+    unitgroup autoC5FEA653_g;
+    int autoC5FEA653_u;
+    const int auto4DBB0B95_n = 4;
+    int auto4DBB0B95_i;
+    const int autoA02B2FDF_n = 5;
+    int autoA02B2FDF_i;
+    const int autoA1DAE809_n = 5;
+    int autoA1DAE809_i;
+    const int autoC80D4063_ae = 35;
+    const int autoC80D4063_ai = 1;
+    int autoAB306E77_n;
+    int autoAB306E77_i;
+    unitgroup auto7F1B537D_g;
+    int auto7F1B537D_u;
+    unit auto7F1B537D_var;
+    unitgroup auto4E89AAE1_g;
+    int auto4E89AAE1_u;
+    playergroup autoF08D8F6E_g;
+    int autoF08D8F6E_var;
+    unitgroup auto49D94F01_g;
+    int auto49D94F01_u;
+    unitgroup auto7BD0FCE1_g;
+    int auto7BD0FCE1_u;
+    unitgroup auto3619BC68_g;
+    int auto3619BC68_u;
+    unit auto3619BC68_var;
+    unitgroup auto70367FF0_g;
+    int auto70367FF0_u;
+
+    // Variable Initialization
+    lv_affectUnits = UnitGroupEmpty();
+
+    // Implementation
+    lib6D9D7845_gv_saUltimateCD = -512.0;
+    SoundPlayForPlayer(SoundLink("SaUltimateBell", -1), c_maxPlayers, PlayerGroupAll(), 200.0, 0.16);
+    SoundChannelSetVolume(PlayerGroupAll(), c_soundCategoryCombat, 50.0, 1.0);
+    UIDisplayMessage(PlayerGroupAll(), c_messageAreaSubtitle, (StringExternal("Param/Value/lib_6D9D7845_85D5F76D") + FixedToText(lib6D9D7845_gv_saUltimateStage1Duration, c_fixedPrecisionAny) + StringExternal("Param/Value/lib_6D9D7845_54207569")));
+    UnitPauseAll(true);
+    libNtve_gf_PauseUnit(lib6D9D7845_gv_sa, false);
+    UnitBehaviorAdd(lib6D9D7845_gv_sa, "SaUltimateCeaseCore", lib6D9D7845_gv_sa, 1);
+    auto02979C66_g = UnitGroupCopy(lp_sas);
+    auto02979C66_u = UnitGroupCount(auto02979C66_g, c_unitCountAll);
+    for (;; auto02979C66_u -= 1) {
+        lv_afflication = UnitGroupUnitFromEnd(auto02979C66_g, auto02979C66_u);
+        if (lv_afflication == null) { break; }
+        if ((UnitBehaviorCount(lv_afflication, "SaDeath") == 1)) {
+            UnitGroupRemove(lp_sas, lv_afflication);
+        }
+
+    }
+    autoD35A2BBA_g = lp_sas;
+    autoD35A2BBA_u = UnitGroupCount(autoD35A2BBA_g, c_unitCountAll);
+    for (;; autoD35A2BBA_u -= 1) {
+        lv_afflication = UnitGroupUnitFromEnd(autoD35A2BBA_g, autoD35A2BBA_u);
+        if (lv_afflication == null) { break; }
+        libNtve_gf_PauseUnit(lv_afflication, false);
+        UnitBehaviorAdd(lv_afflication, "SaShield", lv_afflication, 200);
+        lv_i = 0;
+        for ( ; ( (auto442B7DA8_ai >= 0 && lv_i <= auto442B7DA8_ae) || (auto442B7DA8_ai < 0 && lv_i >= auto442B7DA8_ae) ) ; lv_i += auto442B7DA8_ai ) {
+            lv_scores[lv_i] = 0;
+        }
+        autoC5FEA653_g = UnitGroupAlliance(UnitGetOwner(lv_afflication), c_unitAllianceEnemy, RegionCircle(UnitGetPosition(lv_afflication), 14.0), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0);
+        autoC5FEA653_u = UnitGroupCount(autoC5FEA653_g, c_unitCountAll);
+        for (;; autoC5FEA653_u -= 1) {
+            lv_targetUnit = UnitGroupUnitFromEnd(autoC5FEA653_g, autoC5FEA653_u);
+            if (lv_targetUnit == null) { break; }
+            lv_i = FloorI((AngleBetweenPoints(UnitGetPosition(lv_afflication), UnitGetPosition(lv_targetUnit)) / 10.0));
+            if ((lv_i < 0)) {
+                lv_i += 36;
+            }
+
+            if ((UnitCanAttackTarget(lv_targetUnit, lv_afflication) == true)) {
+                if ((UnitFilterMatch(lv_targetUnit, 0, UnitFilter((1 << c_targetFilterHeroic), 0, 0, 0)) == true)) {
+                    lv_n = 6;
+                }
+                else {
+                    lv_n = 3;
+                }
+            }
+            else {
+                lv_n = 1;
+            }
+            for (auto4DBB0B95_i = 1; auto4DBB0B95_i <= auto4DBB0B95_n; auto4DBB0B95_i += 1) {
+                if ((lv_i > 35)) {
+                    lv_i -= 36;
+                }
+
+                lv_scores[lv_i] += lv_n;
+                lv_i += 1;
+            }
+        }
+        lv_max = 0;
+        lv_n = 0;
+        lv_i = (FloorI((UnitGetFacing(lv_afflication) / 10.0)) + 5);
+        if ((lv_i < 0)) {
+            lv_i += 36;
+        }
+
+        for (autoA02B2FDF_i = 1; autoA02B2FDF_i <= autoA02B2FDF_n; autoA02B2FDF_i += 1) {
+            if ((lv_i > 35)) {
+                lv_i -= 36;
+            }
+
+            lv_scores[lv_i] = -1;
+            lv_i += 1;
+        }
+        lv_i += 13;
+        for (autoA1DAE809_i = 1; autoA1DAE809_i <= autoA1DAE809_n; autoA1DAE809_i += 1) {
+            if ((lv_i > 35)) {
+                lv_i -= 36;
+            }
+
+            lv_scores[lv_i] = -1;
+            lv_i += 1;
+        }
+        lv_i = 0;
+        for ( ; ( (autoC80D4063_ai >= 0 && lv_i <= autoC80D4063_ae) || (autoC80D4063_ai < 0 && lv_i >= autoC80D4063_ae) ) ; lv_i += autoC80D4063_ai ) {
+            if ((lv_scores[lv_i] > lv_max)) {
+                lv_max = lv_scores[lv_i];
+                lv_n = lv_i;
+                lv_scores[lv_i] = 0;
+            }
+
+        }
+        lv_dirs[lv_j] = lv_n;
+        UnitCreateEffectPoint(lv_afflication, "SaUltimateSplat", PointWithOffsetPolar(UnitGetPosition(lv_afflication), 9.0, ((lv_n * 10) + 20)));
+        if (lib6D9D7845_gf_E8A792E5BAA6E59CA8E58D95E4BD8DE79A84E6ADA3E99DA2(((lv_n * 10) + 20), lv_afflication)) {
+            if ((UnitBehaviorCount(lv_afflication, "SaBackward") == 1)) {
+                UnitBehaviorRemove(lv_afflication, "SaBackward", 1);
+                libNtve_gf_SendActorMessageToUnit(lv_afflication, "AnimPlay Morph Custom 0 -1.000000 -1.000000 1.000000 AsTimeScale");
+                libNtve_gf_SendActorMessageToUnit(lv_afflication, "TimerSet 1.000000 RemoveA");
+            }
+
+        }
+        else {
+            if ((UnitBehaviorCount(lv_afflication, "SaForward") == 1)) {
+                UnitBehaviorAdd(lv_afflication, "SaBackward", lv_afflication, 1);
+                libNtve_gf_SendActorMessageToUnit(lv_afflication, "AnimPlay Morph Morph,A 0 -1.000000 -1.000000 1.000000 AsTimeScale");
+                libNtve_gf_SendActorMessageToUnit(lv_afflication, "TimerSet 1.000000 ApplyA");
+            }
+
+        }
+        lv_j += 1;
+    }
+    GameSetLighting("HonkaiBlack", 1.0);
+    lib6D9D7845_gf_SoundFadeOut(lib6D9D7845_gv_zeroTime, 32);
+    lib6D9D7845_gf_SoundFadeIn(lib6D9D7845_gv_zeroTimeRemix, 32);
+    autoAB306E77_n = CeilingI((lib6D9D7845_gv_saUltimateStage1Duration / 0.0625));
+    for (autoAB306E77_i = 1; autoAB306E77_i <= autoAB306E77_n; autoAB306E77_i += 1) {
+        if (((lib6D9D7845_gv_sa == null))) {
+            break;
+        }
+
+        Wait(0.0625, c_timeGame);
+    }
+    UnitPauseAll(false);
+    lv_affectUnits = UnitGroup(null, c_playerAny, RegionEntireMap(), UnitFilter(0, 0, (1 << c_targetFilterMissile), 0), 0);
+    auto7F1B537D_g = lv_affectUnits;
+    auto7F1B537D_u = UnitGroupCount(auto7F1B537D_g, c_unitCountAll);
+    for (;; auto7F1B537D_u -= 1) {
+        auto7F1B537D_var = UnitGroupUnitFromEnd(auto7F1B537D_g, auto7F1B537D_u);
+        if (auto7F1B537D_var == null) { break; }
+        UnitBehaviorAdd(auto7F1B537D_var, "SaUltimateNoCommand", lib6D9D7845_gv_sa, 1);
+    }
+    auto4E89AAE1_g = lp_sas;
+    auto4E89AAE1_u = UnitGroupCount(auto4E89AAE1_g, c_unitCountAll);
+    for (;; auto4E89AAE1_u -= 1) {
+        lv_afflication = UnitGroupUnitFromEnd(auto4E89AAE1_g, auto4E89AAE1_u);
+        if (lv_afflication == null) { break; }
+        UnitBehaviorAdd(lv_afflication, "SaUltimateCast", lv_afflication, 1);
+    }
+    autoF08D8F6E_g = PlayerGroupAll();
+    autoF08D8F6E_var = -1;
+    while (true) {
+        autoF08D8F6E_var = PlayerGroupNextPlayer(autoF08D8F6E_g, autoF08D8F6E_var);
+        if (autoF08D8F6E_var < 0) { break; }
+        UnitClearSelection(autoF08D8F6E_var);
+    }
+    SoundPlayForPlayer(SoundLink("SaUltimateBell", -1), c_maxPlayers, PlayerGroupAll(), 200.0, 0.16);
+    GameSetLighting("HonkaiBlue", 1.0);
+    lib6D9D7845_gf_SoundFadeOut(lib6D9D7845_gv_zeroTimeRemix, 32);
+    lib6D9D7845_gf_SoundFadeIn(lib6D9D7845_gv_zeroTimeRemix2, 32);
+    lv_j = 0;
+    auto49D94F01_g = lp_sas;
+    auto49D94F01_u = UnitGroupCount(auto49D94F01_g, c_unitCountAll);
+    for (;; auto49D94F01_u -= 1) {
+        lv_afflication = UnitGroupUnitFromEnd(auto49D94F01_g, auto49D94F01_u);
+        if (lv_afflication == null) { break; }
+        libNtve_gf_UnitCreateFacingPoint(1, "SaTarget", 0, UnitGetOwner(lv_afflication), PointWithOffsetPolar(UnitGetPosition(lv_afflication), 14.0, (lv_dirs[lv_j] * 10)), UnitGetPosition(lv_afflication));
+        if ((UnitBehaviorCount(lv_afflication, "SaForward") == 1)) {
+            UnitCreateEffectUnit(lv_afflication, "SaUltimateForwardStart", UnitLastCreated());
+        }
+        else {
+            UnitCreateEffectUnit(lv_afflication, "SaUltimateBackwardStart", UnitLastCreated());
+        }
+        lib6D9D7845_gf_SaRotateTarget(lv_afflication, UnitLastCreated(), (lv_dirs[lv_j] * 10));
+        lv_targetUnits[lv_j] = UnitLastCreated();
+        lv_j += 1;
+    }
+    while (true) {
+        if ((lib6D9D7845_gv_sa == null)) {
+            break;
+        }
+
+        if ((UnitIsAlive(lv_targetUnits[0]) == false) && (UnitIsAlive(lv_targetUnits[1]) == false) && (UnitIsAlive(lv_targetUnits[2]) == false)) {
+            break;
+        }
+
+        Wait(0.0625, c_timeGame);
+    }
+    auto7BD0FCE1_g = lp_sas;
+    auto7BD0FCE1_u = UnitGroupCount(auto7BD0FCE1_g, c_unitCountAll);
+    for (;; auto7BD0FCE1_u -= 1) {
+        lv_afflication = UnitGroupUnitFromEnd(auto7BD0FCE1_g, auto7BD0FCE1_u);
+        if (lv_afflication == null) { break; }
+        UnitBehaviorRemove(lv_afflication, "SaUltimateCast", 1);
+        UnitBehaviorRemove(lv_afflication, "SaShield", 200);
+    }
+    auto3619BC68_g = lv_affectUnits;
+    auto3619BC68_u = UnitGroupCount(auto3619BC68_g, c_unitCountAll);
+    for (;; auto3619BC68_u -= 1) {
+        auto3619BC68_var = UnitGroupUnitFromEnd(auto3619BC68_g, auto3619BC68_u);
+        if (auto3619BC68_var == null) { break; }
+        UnitBehaviorRemove(auto3619BC68_var, "SaUltimateNoCommand", 1);
+    }
+    UnitBehaviorRemove(lib6D9D7845_gv_sa, "SaUltimateCeaseCore", 1);
+    lib6D9D7845_gv_saUltimateCD = lib6D9D7845_gv_saUltimateCDValue;
+    GameSetLighting(lib6D9D7845_gv_defaultLight, 1.0);
+    lib6D9D7845_gf_SoundFadeOut(lib6D9D7845_gv_zeroTimeRemix2, 32);
+    lib6D9D7845_gf_SoundFadeIn(lib6D9D7845_gv_zeroTime, 32);
+    SoundChannelSetVolume(PlayerGroupAll(), c_soundCategoryCombat, 100.0, 1.0);
+    auto70367FF0_g = lp_sas;
+    auto70367FF0_u = UnitGroupCount(auto70367FF0_g, c_unitCountAll);
+    for (;; auto70367FF0_u -= 1) {
+        lv_afflication = UnitGroupUnitFromEnd(auto70367FF0_g, auto70367FF0_u);
+        if (lv_afflication == null) { break; }
+        UnitBehaviorRemove(lv_afflication, "SaUltimatePrepare", 1);
+    }
+    return true;
+}
+
+trigger auto_lib6D9D7845_gf_SaRotateTarget_Trigger = null;
+unit auto_lib6D9D7845_gf_SaRotateTarget_lp_center;
+unit auto_lib6D9D7845_gf_SaRotateTarget_lp_target;
+fixed auto_lib6D9D7845_gf_SaRotateTarget_lp_initialangle;
+
+void lib6D9D7845_gf_SaRotateTarget (unit lp_center, unit lp_target, fixed lp_initialangle) {
+    auto_lib6D9D7845_gf_SaRotateTarget_lp_center = lp_center;
+    auto_lib6D9D7845_gf_SaRotateTarget_lp_target = lp_target;
+    auto_lib6D9D7845_gf_SaRotateTarget_lp_initialangle = lp_initialangle;
+
+    if (auto_lib6D9D7845_gf_SaRotateTarget_Trigger == null) {
+        auto_lib6D9D7845_gf_SaRotateTarget_Trigger = TriggerCreate("auto_lib6D9D7845_gf_SaRotateTarget_TriggerFunc");
+    }
+
+    TriggerExecute(auto_lib6D9D7845_gf_SaRotateTarget_Trigger, false, false);
+}
+
+bool auto_lib6D9D7845_gf_SaRotateTarget_TriggerFunc (bool testConds, bool runActions) {
+    unit lp_center = auto_lib6D9D7845_gf_SaRotateTarget_lp_center;
+    unit lp_target = auto_lib6D9D7845_gf_SaRotateTarget_lp_target;
+    fixed lp_initialangle = auto_lib6D9D7845_gf_SaRotateTarget_lp_initialangle;
+
+    // Variable Declarations
+    fixed lv_angle;
+
+    // Automatic Variable Declarations
+    // Variable Initialization
+    lv_angle = lp_initialangle;
+
+    // Implementation
+    while (true) {
+        if ((UnitBehaviorCount(lp_target, "SaUltimateRotation") == 1)) {
+            break;
+        }
+
+        Wait(0.0625, c_timeGame);
+    }
+    while (true) {
+        if ((lp_center == null)) {
+            UnitKill(lp_target);
+            break;
+        }
+
+        if ((UnitIsAlive(lp_target) == false)) {
+            break;
+        }
+
+        UnitSetPosition(lp_target, PointWithOffsetPolar(UnitGetPosition(lp_center), 14.0, lv_angle), true);
+        libNtve_gf_MakeUnitFacePoint(lp_target, UnitGetPosition(lp_center), 0.0);
+        Wait(0.0625, c_timeGame);
+        lv_angle += 0.125;
+    }
+    return true;
+}
+
 void lib6D9D7845_gf_DoThrow (unit lp_target, point lp_sourcePoint) {
     // Variable Declarations
     fixed lv_radius;
@@ -943,77 +1584,6 @@ void lib6D9D7845_gf_ApplyAvatar (int lp_e78EA9E5AEB6, string lp_e8A792E889B2E58D
         }
 
     }
-}
-
-trigger auto_lib6D9D7845_gf_E5A891_Trigger = null;
-point auto_lib6D9D7845_gf_E5A891_lp_spawnPoint;
-fixed auto_lib6D9D7845_gf_E5A891_lp_spawnDir;
-
-void lib6D9D7845_gf_E5A891 (point lp_spawnPoint, fixed lp_spawnDir) {
-    auto_lib6D9D7845_gf_E5A891_lp_spawnPoint = lp_spawnPoint;
-    auto_lib6D9D7845_gf_E5A891_lp_spawnDir = lp_spawnDir;
-
-    if (auto_lib6D9D7845_gf_E5A891_Trigger == null) {
-        auto_lib6D9D7845_gf_E5A891_Trigger = TriggerCreate("auto_lib6D9D7845_gf_E5A891_TriggerFunc");
-    }
-
-    TriggerExecute(auto_lib6D9D7845_gf_E5A891_Trigger, false, false);
-}
-
-bool auto_lib6D9D7845_gf_E5A891_TriggerFunc (bool testConds, bool runActions) {
-    point lp_spawnPoint = auto_lib6D9D7845_gf_E5A891_lp_spawnPoint;
-    fixed lp_spawnDir = auto_lib6D9D7845_gf_E5A891_lp_spawnDir;
-
-    // Variable Declarations
-    fixed lv_radius;
-    fixed lv_dir;
-    point lv_center;
-    unit lv_unitCore;
-    unit lv_unitForward;
-    unit lv_unitLeft;
-    unit lv_unitRight;
-
-    // Automatic Variable Declarations
-    // Variable Initialization
-    lv_radius = 6.0;
-    lv_dir = lp_spawnDir;
-
-    // Implementation
-    UnitCreate(1, "SaCore", c_unitCreateIgnorePlacement | c_unitCreateIgnoreBirth, 15, lp_spawnPoint, lp_spawnDir);
-    lv_unitCore = UnitLastCreated();
-    UnitCreate(1, "SaAfflication", c_unitCreateIgnorePlacement | c_unitCreateIgnoreBirth, 15, PointWithOffsetPolar(lp_spawnPoint, lv_radius, lv_dir), lv_dir);
-    lv_unitForward = UnitLastCreated();
-    UnitCreate(1, "SaAfflication", c_unitCreateIgnorePlacement | c_unitCreateIgnoreBirth, 15, PointWithOffsetPolar(lp_spawnPoint, lv_radius, (lv_dir + 120.0)), (lv_dir + 120.0));
-    lv_unitLeft = UnitLastCreated();
-    UnitCreate(1, "SaAfflication", c_unitCreateIgnorePlacement | c_unitCreateIgnoreBirth, 15, PointWithOffsetPolar(lp_spawnPoint, lv_radius, (lv_dir - 120.0)), (lv_dir - 120.0));
-    lv_unitRight = UnitLastCreated();
-    while (true) {
-        lv_center = UnitGetPosition(lv_unitCore);
-        lv_dir = UnitGetFacing(lv_unitCore);
-        if ((lv_unitForward != null)) {
-            UnitSetPosition(lv_unitForward, PointWithOffsetPolar(lv_center, lv_radius, lv_dir), true);
-            UnitSetFacing(lv_unitForward, lv_dir, 0.0625);
-        }
-
-        if ((lv_unitLeft != null)) {
-            UnitSetPosition(lv_unitLeft, PointWithOffsetPolar(lv_center, lv_radius, (lv_dir + 120.0)), true);
-            UnitSetFacing(lv_unitLeft, (lv_dir + 120.0), 0.0625);
-        }
-
-        if ((lv_unitRight != null)) {
-            UnitSetPosition(lv_unitRight, PointWithOffsetPolar(lv_center, lv_radius, (lv_dir - 120.0)), true);
-            UnitSetFacing(lv_unitRight, (lv_dir - 120.0), 0.0625);
-        }
-
-        if (((lv_unitForward == null) || (UnitIsAlive(lv_unitForward) == false)) && ((lv_unitLeft == null) || (UnitIsAlive(lv_unitLeft) == false)) && ((lv_unitRight == null) || (UnitIsAlive(lv_unitRight) == false))) {
-            UnitBehaviorRemove(lv_unitCore, "NoDeath", 1);
-            UnitKill(lv_unitCore);
-            break;
-        }
-
-        Wait(0.0625, c_timeGame);
-    }
-    return true;
 }
 
 void lib6D9D7845_gf_E5889DE5A78BE58C96E59FBAE7A180E78AB6E68081 (actor lp_actor) {
@@ -1299,7 +1869,20 @@ fixed lib6D9D7845_gf_E4BCA4E5AEB3E7BB93E7AE97E5878FE4BCA4 (unit lp_e4BCA4E5AEB3E
     lv_e5878FE4BCA4E7B3BBE695B0 = 1.0;
 
     // Implementation
+    if ((UnitBehaviorCount(lp_e4BCA4E5AEB3E79BAEE6A087E58D95E4BD8D, "SaShield") >= 1)) {
+        UnitBehaviorRemove(lp_e4BCA4E5AEB3E79BAEE6A087E58D95E4BD8D, "SaShield", 1);
+        UnitBehaviorSetDurationRemaining(lp_e4BCA4E5AEB3E79BAEE6A087E58D95E4BD8D, "SaShield", (UnitBehaviorCount(lp_e4BCA4E5AEB3E79BAEE6A087E58D95E4BD8D, "SaShield") * 50.0));
+        if ((UnitBehaviorCount(lp_e4BCA4E5AEB3E79BAEE6A087E58D95E4BD8D, "SaShield") == 0)) {
+            UnitBehaviorAdd(lp_e4BCA4E5AEB3E79BAEE6A087E58D95E4BD8D, "SaBreakDown", lp_e4BCA4E5AEB3E79BAEE6A087E58D95E4BD8D, 1);
+        }
+
+    }
+
     lv_e5878FE4BCA4E7B3BBE695B0 *= Pow(0.7, UnitBehaviorCount(lp_e4BCA4E5AEB3E79BAEE6A087E58D95E4BD8D, "StigmataCG4"));
+    if ((UnitBehaviorCount(lp_e4BCA4E5AEB3E79BAEE6A087E58D95E4BD8D, "Protect90Ex") >= 1)) {
+        lv_e5878FE4BCA4E7B3BBE695B0 *= 0.1;
+    }
+
     if ((UnitBehaviorCount(lp_e4BCA4E5AEB3E79BAEE6A087E58D95E4BD8D, "DefensiveMatrix") >= 1)) {
         lv_e5878FE4BCA4E7B3BBE695B0 *= 0.8;
     }
@@ -1623,27 +2206,6 @@ int lib6D9D7845_gf_ExtraDivineKeys (int lp_player) {
 
 // Triggers
 //--------------------------------------------------------------------------------------------------
-// Trigger: Debug 5
-//--------------------------------------------------------------------------------------------------
-bool lib6D9D7845_gt_Debug5_Func (bool testConds, bool runActions) {
-    // Automatic Variable Declarations
-    // Conditions
-    if (testConds) {
-        if (!(lib6D9D7845_gf_E58581E8AEB8E8B083E8AF95())) {
-            return false;
-        }
-    }
-
-    return true;
-}
-
-//--------------------------------------------------------------------------------------------------
-void lib6D9D7845_gt_Debug5_Init () {
-    lib6D9D7845_gt_Debug5 = TriggerCreate("lib6D9D7845_gt_Debug5_Func");
-    TriggerAddEventKeyPressed(lib6D9D7845_gt_Debug5, c_playerAny, c_keyNumPad8, true, c_keyModifierStateIgnore, c_keyModifierStateIgnore, c_keyModifierStateIgnore);
-}
-
-//--------------------------------------------------------------------------------------------------
 // Trigger: ????????????
 //--------------------------------------------------------------------------------------------------
 bool lib6D9D7845_gt_E69BB4E696B0E4BABAE58FA3_Func (bool testConds, bool runActions) {
@@ -1812,6 +2374,40 @@ void lib6D9D7845_gt_Debug_Init () {
 }
 
 //--------------------------------------------------------------------------------------------------
+// Trigger: Debug 5
+//--------------------------------------------------------------------------------------------------
+bool lib6D9D7845_gt_Debug5_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    unit lv_u;
+
+    // Automatic Variable Declarations
+    // Variable Initialization
+    lv_u = UnitGroupRandomUnit(UnitGroupSelected(1), c_unitCountAlive);
+
+    // Conditions
+    if (testConds) {
+        if (!(lib6D9D7845_gf_E58581E8AEB8E8B083E8AF95())) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    libNtve_gf_CreateLookAtTargetAtUnitAttachPoint(lv_u, "Ref_Target 08");
+    libNtve_gf_MakeUnitLookAtUnit(lv_u, "Turret_Forward", lv_u, "Ref_Target 08");
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib6D9D7845_gt_Debug5_Init () {
+    lib6D9D7845_gt_Debug5 = TriggerCreate("lib6D9D7845_gt_Debug5_Func");
+    TriggerAddEventKeyPressed(lib6D9D7845_gt_Debug5, c_playerAny, c_keyBackSlash, true, c_keyModifierStateIgnore, c_keyModifierStateIgnore, c_keyModifierStateIgnore);
+}
+
+//--------------------------------------------------------------------------------------------------
 // Trigger: Debug 2
 //--------------------------------------------------------------------------------------------------
 bool lib6D9D7845_gt_Debug2_Func (bool testConds, bool runActions) {
@@ -1834,10 +2430,9 @@ bool lib6D9D7845_gt_Debug2_Func (bool testConds, bool runActions) {
         return true;
     }
 
-    SoundChannelDSPInsert(PlayerGroupAll(), c_soundCategoryAlert, "Imaginary");
-    SoundChannelDSPInsert(PlayerGroupAll(), c_soundCategoryVoice, "Imaginary");
-    SoundChannelDSPInsert(PlayerGroupAll(), c_soundCategoryAlert, "Imaginary2");
-    SoundChannelDSPInsert(PlayerGroupAll(), c_soundCategoryVoice, "Imaginary2");
+    TriggerDebugOutput(1, ActorGetText(ActorFromActor(libNtve_gf_MainActorofUnit(lv_u), "SaBackwardLookAt")), true);
+    TriggerDebugOutput(1, ActorGetText(ActorFromActor(libNtve_gf_MainActorofUnit(lv_u), "SaForwardLookAt")), true);
+    TriggerDebugOutput(1, ActorGetText(libNtve_gf_MainActorofUnit(lv_u)), true);
     return true;
 }
 
@@ -1864,7 +2459,7 @@ bool lib6D9D7845_gt_Debug3_Func (bool testConds, bool runActions) {
         return true;
     }
 
-    GameSetLighting("HonkaiBlack", 0.25);
+    GameSetLighting("HonkaiBlue", 0.25);
     return true;
 }
 
@@ -1892,6 +2487,7 @@ bool lib6D9D7845_gt_Debug4_Func (bool testConds, bool runActions) {
     }
 
     libNtve_gf_SetUpgradeLevelForPlayer(1, "HerrscherPhase", 1);
+    libNtve_gf_SetUpgradeLevelForPlayer(1, "DivineKey7th", 1);
     libNtve_gf_SetUpgradeLevelForPlayer(1, "DivineKey9th", 1);
     libNtve_gf_SetUpgradeLevelForPlayer(1, "KianaATTACK", 16);
     libNtve_gf_SetUpgradeLevelForPlayer(1, "KianaShield", 16);
@@ -1902,6 +2498,8 @@ bool lib6D9D7845_gt_Debug4_Func (bool testConds, bool runActions) {
     libNtve_gf_SetUpgradeLevelForPlayer(1, "StigmataCount", 3);
     libNtve_gf_SetUpgradeLevelForPlayer(1, "StigmataCG1", 1);
     libNtve_gf_SetUpgradeLevelForPlayer(1, "StigmataIG2", 1);
+    libNtve_gf_SetUpgradeLevelForPlayer(1, "ROAttackUpgrade", 10);
+    libNtve_gf_SetUpgradeLevelForPlayer(1, "ROArmorUpgrade", 8);
     return true;
 }
 
@@ -1961,7 +2559,7 @@ bool lib6D9D7845_gt_DebugEffect_Func (bool testConds, bool runActions) {
     TriggerDebugOutput(1, (StringExternal("Param/Value/lib_6D9D7845_AC83FEED") + UnitGetName(EventPlayerEffectUsedUnit(c_effectUnitOrigin))), true);
     TriggerDebugOutput(1, (StringExternal("Param/Value/lib_6D9D7845_4AA36070") + UnitGetName(EventPlayerEffectUsedUnit(c_effectUnitOuter))), true);
     TriggerDebugOutput(1, (StringExternal("Param/Value/lib_6D9D7845_FF52F463") + UnitGetName(EventPlayerEffectUsedUnit(c_effectUnitTarget))), true);
-    PlayerCreateEffectPoint(1, "DEBUGPOINT", EventPlayerEffectUsedPoint(c_effectLocationOriginPoint));
+    PlayerCreateEffectPoint(1, "DEBUGPOINT", EventPlayerEffectUsedPoint(c_effectLocationTargetPoint));
     return false;
     return true;
 }
@@ -2366,9 +2964,6 @@ bool lib6D9D7845_gt_E58D95E4BD8DE6B58BE8AF95E7949FE68890_Func (bool testConds, b
     else if (auto773EE29B_val == "MC2") {
         lv_e58D95E4BD8D = "MeiC2";
     }
-    else if (auto773EE29B_val == "BC1") {
-        lv_e58D95E4BD8D = "BronyaC1";
-    }
     else if (auto773EE29B_val == "BC2") {
         lv_e58D95E4BD8D = "BronyaC2";
     }
@@ -2415,12 +3010,15 @@ bool lib6D9D7845_gt_E58D95E4BD8DE6B58BE8AF95E7949FE68890_Func (bool testConds, b
         lv_e58D95E4BD8D = "Herrscher12th";
     }
     else if (auto773EE29B_val == "Sa") {
-        lib6D9D7845_gf_E5A891(CameraGetTarget(1), -45.0);
+        lib6D9D7845_gf_Sa(CameraGetTarget(1), -45.0);
         libNtve_gf_SetAlliance(15, EventPlayer(), libNtve_ge_AllianceSetting_Enemy);
         PlayerSetAlliance(15, c_allianceIdVision, EventPlayer(), true);
         PlayerSetAlliance(15, c_allianceIdControl, EventPlayer(), true);
         PlayerSetAlliance(15, c_allianceIdSpend, EventPlayer(), true);
         return true;
+    }
+    else if (auto773EE29B_val == "Sa0") {
+        lv_e58D95E4BD8D = "SaAfflication";
     }
     else if (auto773EE29B_val == "GF") {
         lv_e58D95E4BD8D = "Drone";
@@ -8038,11 +8636,11 @@ void lib6D9D7845_gt_ExtraDivineKeys_Init () {
 }
 
 void lib6D9D7845_InitTriggers () {
-    lib6D9D7845_gt_Debug5_Init();
     lib6D9D7845_gt_E69BB4E696B0E4BABAE58FA3_Init();
     lib6D9D7845_gt_CreateDPSUnit_Init();
     lib6D9D7845_gt_DPSStats_Init();
     lib6D9D7845_gt_Debug_Init();
+    lib6D9D7845_gt_Debug5_Init();
     lib6D9D7845_gt_Debug2_Init();
     lib6D9D7845_gt_Debug3_Init();
     lib6D9D7845_gt_Debug4_Init();
