@@ -2263,6 +2263,7 @@
             <ModifyMinimumDamage value="1"/>
             <TargetFilters value="-;Player,Ally"/>
             <Priority value="100"/>
+            <Chance value="1"/>
         </DamageResponse>
     </CBehaviorBuff>
     <CBehaviorAttackModifier id="HonkaiAttributeBio">
