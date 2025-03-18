@@ -1152,7 +1152,7 @@ Button/Tooltip/StigmataTG3=提高自身20%<c val="FFFF00">雷元素穿透</c>
 Button/Tooltip/StigmataTG4=造成伤害时使目标获得30%<c val="FFFF00">雷元素易伤</c>，持续<d ref="Behavior,StigmataThunderBuff,Duration" precision="1"/>秒(不可叠加)
 Button/Tooltip/Stimpack=使<c val="ffff8a">女武神-看守者</c>能够为自己注射强化剂。强化剂会对使用者造成伤害，但能暂时提高攻击速度和移动速度。
 Button/Tooltip/TerranInfantryArmorLevel1=提升女武神单位的护甲，最多升级8次。<n/><n/><c val="FF0000">不能加成英雄单位</c>
-Button/Tooltip/TerranInfantryArmorLevel12=提升女武神单位的护盾护甲，并提高20点护盾值，最多升级5次<n/><n/><c val="FF0000">不能加成英雄单位</c>
+Button/Tooltip/TerranInfantryArmorLevel12=提升女武神单位的护盾护甲，并提高20点护盾值，并减少1秒的护盾恢复延迟（满级后消除护盾恢复延迟），最多升级<d ref="Upgrade,VArmorUpgrade2,MaxLevel"/>次<n/><n/><c val="FF0000">不能加成英雄单位</c>
 Button/Tooltip/TerranInfantryWeaponsLevel12=提升普通<c val="FFFF00">女武神-看守者</c>单位的火力，可升级8次。
 Button/Tooltip/TerranVehiclePlatingLevel12=提升机甲单位的护甲，可升级8次。
 Button/Tooltip/TerranVehicleWeaponsLevel12=提升机甲单位的火力，可升级10次。
@@ -1534,6 +1534,10 @@ DocInfo/PatchNote319=·修复了幻海梦蝶使用必杀技时会被打断的bug
 DocInfo/PatchNote320=·修复人口统计错误的bug
 DocInfo/PatchNote321=·修复了女武神cp远程伤害加成过高的bug
 DocInfo/PatchNote322=·加入了空之律者（琪亚娜）
+DocInfo/PatchNote323=·加入了娑(仅测试用，为完成)
+DocInfo/PatchNote324=·处于技能带来的无敌效果下的单位不再能被选为攻击目标
+DocInfo/PatchNote325=·普通女武神的护盾升级上限提高到10级，每一级额外减少1秒的护盾恢复延迟（满级后消除护盾恢复延迟）
+DocInfo/PatchNote326=·装备涤罪七雷或伊甸之星的普通女武神获得英雄标签，生命和护盾增益提高
 Effect/Name/AcidSalivaU=UL_030 Damage
 Effect/Name/AddCasterLife50=Add Caster Life 50%
 Effect/Name/AddDizzyCD=Add Dizzy CD
