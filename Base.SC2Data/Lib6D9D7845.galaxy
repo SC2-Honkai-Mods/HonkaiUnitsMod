@@ -2692,6 +2692,7 @@ bool lib6D9D7845_gt_E8B083E8AF95E58D87E7BAA7_Func (bool testConds, bool runActio
     else {
         TechTreeUpgradeAddLevel(1, "BattlecruiserEnableSpecializations", 1);
         TechTreeUpgradeAddLevel(1, "Fighters", 1);
+        TechTreeUpgradeAddLevel(1, "HerrscherPhase", 1);
         TechTreeUpgradeAddLevel(1, "ROAttackUpgrade", 10);
         TechTreeUpgradeAddLevel(1, "ROArmorUpgrade", 10);
         TechTreeUpgradeAddLevel(15, "BlinkTech", 10);
