@@ -7,7 +7,6 @@
         <Value>Assets\Textures\Arcade_Icon_HonkaiMod.tga</Value>
     </Icon>
     <Dependencies>
-        <Value>bnet:虚空之遗多人 (Mod)/0.0/999,file:Mods/VoidMulti.SC2Mod</Value>
         <Value>bnet:虚空之遗 (Mod)/0.0/999,file:Mods/Void.SC2Mod</Value>
         <Value>bnet:自由之翼 (战役)/0.0/999,file:Campaigns/Liberty.SC2Campaign</Value>
         <Value>bnet:崩坏3资源包 Honkai Impact 3rd Assets/0.0/209547,file:Mods\HonkaiAssetsMod.SC2Mod</Value>
@@ -94,6 +93,9 @@
             <Value>2.31</Value>
             <Value>2.32</Value>
             <Value>2.33</Value>
+            <Value>2.34</Value>
+            <Value>2.35</Value>
+            <Value>2.36</Value>
         </Version>
         <Date>
             <Value>2/3/2022</Value>
@@ -175,6 +177,9 @@
             <Value>9/13/2024</Value>
             <Value>2/3/2025</Value>
             <Value>3/18/2025</Value>
+            <Value>3/18/2025</Value>
+            <Value>10/25/2025</Value>
+            <Value>10/28/2025</Value>
         </Date>
         <Notes>
             <Value>1,2,3,4,5,6</Value>
@@ -256,6 +261,9 @@
             <Value>321</Value>
             <Value>322</Value>
             <Value>323,324,325,326</Value>
+            <Value>327</Value>
+            <Value>328,329,330,331</Value>
+            <Value>332,333,334,335,336</Value>
         </Notes>
     </PatchNote>
     <Preload>

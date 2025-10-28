@@ -9326,6 +9326,7 @@
             <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000137"/>
             <FunctionCall Type="FunctionCall" Library="6D9D7845" Id="3D1D5319"/>
             <FunctionCall Type="FunctionCall" Library="6D9D7845" Id="93235C77"/>
+            <FunctionCall Type="FunctionCall" Library="6D9D7845" Id="9D4DCD1A"/>
             <FunctionCall Type="FunctionCall" Library="6D9D7845" Id="0927BB60"/>
             <FunctionCall Type="FunctionCall" Library="6D9D7845" Id="F8F4FCE9"/>
             <FunctionCall Type="FunctionCall" Library="6D9D7845" Id="0C8067F0"/>
@@ -9376,6 +9377,29 @@
         <Element Type="Param" Id="A61D06D3">
             <ParameterDef Type="ParamDef" Library="Ntve" Id="00000256"/>
             <Value>Fighters</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Upgrade"/>
+        </Element>
+        <Element Type="FunctionCall" Id="9D4DCD1A">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000158"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="00000005"/>
+            <Parameter Type="Param" Library="6D9D7845" Id="3E8508A8"/>
+            <Parameter Type="Param" Library="6D9D7845" Id="6BA58262"/>
+            <Parameter Type="Param" Library="6D9D7845" Id="DFB719EC"/>
+        </Element>
+        <Element Type="Param" Id="3E8508A8">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000255"/>
+            <Value>1</Value>
+            <ValueType Type="int"/>
+        </Element>
+        <Element Type="Param" Id="6BA58262">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000257"/>
+            <Value>1</Value>
+            <ValueType Type="int"/>
+        </Element>
+        <Element Type="Param" Id="DFB719EC">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000256"/>
+            <Value>HerrscherPhase</Value>
             <ValueType Type="gamelink"/>
             <ValueGameType Type="Upgrade"/>
         </Element>

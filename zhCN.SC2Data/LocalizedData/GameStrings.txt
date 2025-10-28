@@ -442,7 +442,7 @@ Behavior/Tooltip/StigmataTG3=提高自身<d ref="$BehaviorStackCount:StigmataTG3
 Behavior/Tooltip/StigmataTG4=造成伤害时使目标获得20%<c val="FFFF00">雷元素易伤</c>，持续<d ref="Behavior,StigmataThunderBuff,Duration" precision="1"/>秒(不可叠加)
 Behavior/Tooltip/StigmataThunderBuff=<c val="FFFF00">受到的雷元素伤害提高30%</c>
 Behavior/Tooltip/Transfusion2=该单位正在持续恢复生命值。
-Behavior/Tooltip/UL_040=受到的物理伤害减少70%，该效果会在攻击期间短暂移除
+Behavior/Tooltip/UL_040=受到的物理伤害减少70%，该效果会在攻击期间、浮空状态以及眩晕状态下移除
 Behavior/Tooltip/Untimed=不会被时空减速
 Behavior/Tooltip/WeaponUseK17=在友方时空断裂中攻击速度提高80%，暴击率提高25%
 Behavior/Tooltip/WeaponUseK23=大范围内的敌人每秒有50%的概率被点燃；对被点燃的敌人造成的全伤提高40%
@@ -507,7 +507,6 @@ Button/Name/CosmicJuggernautInvertedHorizons2=视界反演
 Button/Name/CosmicJuggernautLoad=装载
 Button/Name/CosmicJuggernautUltimate=虚数之门
 Button/Name/CreateDG=孵化死士
-Button/Name/CycloneResearchLockOnDamageUpgrade2=研究电磁力场加速器
 Button/Name/DG010ug1=攻速加成
 Button/Name/DG010ug2=移速加成
 Button/Name/DG010ug3=提高数量
@@ -606,6 +605,7 @@ Button/Name/LightningRod=建造蓄电塔
 Button/Name/LightningRod2=升级为高压蓄电塔
 Button/Name/LurkerMP=变异为寒冰帝王
 Button/Name/MHT3=制造和平使者
+Button/Name/MHTUpgrade=研究电磁力场加速器
 Button/Name/MasteryTychusMedivacBuff=紧急动员
 Button/Name/Medivac=制造运输舰
 Button/Name/MedivacAutoLoad=战场救援系统
@@ -866,7 +866,6 @@ Button/Tooltip/CosmicJuggernautInvertedHorizons2=反转千界一乘的入口端�
 Button/Tooltip/CosmicJuggernautLoad=将单位装载进千界一乘。
 Button/Tooltip/CosmicJuggernautUltimate=短时间连接虚数之树，<d ref="Behavior,CosmicJuggernautUltimate,Duration"/>秒内为附近的单位补充能量
 Button/Tooltip/CreateDG=选择在目标地点孵化死士。死士移速缓慢，护甲较脆弱，但花费的资源少，孵化时间短。
-Button/Tooltip/CycloneResearchLockOnDamageUpgrade2=使<c val="ffff8a">和平使者</c>额外造成50%的火焰元素伤害。
 Button/Tooltip/DG010ug1=使守卫死士攻速提高50%<n/>
 Button/Tooltip/DG010ug2=使守卫死士移速提高50%<n/>
 Button/Tooltip/DG010ug3=使守卫死士数量上限提高10<n/>
@@ -992,6 +991,7 @@ Button/Tooltip/LiberatorAGMode=部署为防卫模式。在此模式下多维机�
 Button/Tooltip/LightningRod=解锁泰坦机甲、御雷机甲的雷电分支单位，并可研究雷电减伤。
 Button/Tooltip/LightningRod2=使蓄电塔升级为高压蓄电塔，可以解锁终极雷电分支机甲、升级麻痹时间。
 Button/Tooltip/MHT3=机动突击型载具。可以使用锁定技能在移动状态下快速开火。<n/><n/><c val="#ColorAttackInfo">可以对地和对空。</c>
+Button/Tooltip/MHTUpgrade=使<c val="ffff8a">和平使者</c>额外造成50%的火焰元素伤害。
 Button/Tooltip/MedivacAutoLoad=使“赫利俄斯”装载距离+3，并能自动装载生命值低于15%的单位(需要打开自动释放)。如果是生物单位，还可在<d ref="Behavior,MedivacHPBoost,Duration"/>秒内恢复该单位<d ref="Behavior,MedivacHPBoost,Modification.VitalMaxArray[0]*10"/>点生命值
 Button/Tooltip/MedivacAutoLoad2=右键打开自动释放后，可自动装载生命值低于15%的单位。如果是生物单位，还可在<d ref="Behavior,MedivacHPBoost,Duration"/>秒内恢复该单位<d ref="Behavior,MedivacHPBoost,Modification.VitalMaxArray[0]*10"/>点生命值
 Button/Tooltip/MeiBuilding=为<c val="FFFF00">雷电芽衣</c>提供升级
@@ -1151,9 +1151,9 @@ Button/Tooltip/StigmataTG2=造成的<c val="FFFF00">雷元素伤害</c>提高50%
 Button/Tooltip/StigmataTG3=提高自身20%<c val="FFFF00">雷元素穿透</c>
 Button/Tooltip/StigmataTG4=造成伤害时使目标获得30%<c val="FFFF00">雷元素易伤</c>，持续<d ref="Behavior,StigmataThunderBuff,Duration" precision="1"/>秒(不可叠加)
 Button/Tooltip/Stimpack=使<c val="ffff8a">女武神-看守者</c>能够为自己注射强化剂。强化剂会对使用者造成伤害，但能暂时提高攻击速度和移动速度。
-Button/Tooltip/TerranInfantryArmorLevel1=提升女武神单位的护甲，最多升级8次。<n/><n/><c val="FF0000">不能加成英雄单位</c>
-Button/Tooltip/TerranInfantryArmorLevel12=提升女武神单位的护盾护甲，并提高20点护盾值，并减少1秒的护盾恢复延迟（满级后消除护盾恢复延迟），最多升级<d ref="Upgrade,VArmorUpgrade2,MaxLevel"/>次<n/><n/><c val="FF0000">不能加成英雄单位</c>
-Button/Tooltip/TerranInfantryWeaponsLevel12=提升普通<c val="FFFF00">女武神-看守者</c>单位的火力，可升级8次。
+Button/Tooltip/TerranInfantryArmorLevel1=提升女武神单位的护甲，最多升级10次。<n/><n/><c val="FF0000">不能加成英雄单位</c>
+Button/Tooltip/TerranInfantryArmorLevel12=提升女武神单位的护盾护甲，并提高<d ref="Upgrade,VArmorUpgrade2,EffectArray[3].Value"/>点护盾值，并减少<d ref="Upgrade,VArmorUpgrade2,EffectArray[4].Value"/>秒的护盾恢复延迟（满级后消除护盾恢复延迟），最多升级<d ref="Upgrade,VArmorUpgrade2,MaxLevel"/>次<n/><n/><c val="FF0000">不能加成英雄单位</c>
+Button/Tooltip/TerranInfantryWeaponsLevel12=提升普通<c val="FFFF00">女武神-看守者</c>单位的火力，并提高<d ref="Upgrade,VAttackUpgrade2,EffectArray[2].Value" precision="2"/>射程，可升级10次。
 Button/Tooltip/TerranVehiclePlatingLevel12=提升机甲单位的护甲，可升级8次。
 Button/Tooltip/TerranVehicleWeaponsLevel12=提升机甲单位的火力，可升级10次。
 Button/Tooltip/TrainBronyaC7=琪亚娜掌控了空之律者能力后的形态，可以在必要时爆发出强大的力量。<n/><n/><c val="#ColorAttackInfo">特点:物理伤害、时空锁定、大范围伤害和浮空。<n/>可对地、对空</c>
@@ -1538,6 +1538,16 @@ DocInfo/PatchNote323=·加入了娑(仅测试用，未完成)
 DocInfo/PatchNote324=·处于技能带来的无敌效果下的单位不再能被选为攻击目标
 DocInfo/PatchNote325=·普通女武神的护盾升级上限提高到10级，每一级额外减少1秒的护盾恢复延迟（满级后消除护盾恢复延迟）
 DocInfo/PatchNote326=·装备涤罪七雷或伊甸之星的普通女武神获得英雄标签，生命和护盾增益提高
+DocInfo/PatchNote327=·修复了闪避无敌帧不生效的bug
+DocInfo/PatchNote328=·修复了空之律者（琪亚娜）可以更换武器的bug
+DocInfo/PatchNote329=·修复了布洛妮娅不能显示攻击力的bug
+DocInfo/PatchNote330=·增加了普通女武神的血量以及防爆护盾升级提升的血量
+DocInfo/PatchNote331=·女武神-看守者的武器升级每级额外增加0.4射程
+DocInfo/PatchNote332=·修复了琪亚娜可以重复训练的bug
+DocInfo/PatchNote333=·修复了部署理之律者技能错误指向空之律者的bug
+DocInfo/PatchNote334=·修复了大量建筑中训练和升级错乱的bug
+DocInfo/PatchNote335=·所有英雄女武神基础攻击力翻倍，每级提升从4降为3（最大攻击力74->68）
+DocInfo/PatchNote336=·维修总部要塞不再需要瓦斯
 Effect/Name/AcidSalivaU=UL_030 Damage
 Effect/Name/AddCasterLife50=Add Caster Life 50%
 Effect/Name/AddDizzyCD=Add Dizzy CD
@@ -2813,8 +2823,7 @@ RequirementNode/Tooltip/LTE960270413TechTreeCheatSumCountUpgradeDivineKey1stQueu
 RequirementNode/Tooltip/NoStigmataG1=与其它修改伤害类型的圣痕不可共存
 RequirementNode/Tooltip/Not1513537511CountUnitNukeMHTQueuedOrBetterAtUnit=发射仓中无战术核弹
 RequirementNode/Tooltip/Not157438788SumCountUnitBronyaC2QueuedOrBetterCountUnitBronyaC2RevivableCountUnitBronyaC7QueuedOrBetterCountUnitBronyaC7RevivableCountUnitBronyaC7MotorQueuedOrBetterCountUnitBronyaC7MotorRevivable=没有部署过布洛妮娅·扎伊切克
-RequirementNode/Tooltip/Not157438788SumCountUnitKianaC4QueuedOrBetterCountUnitKianaC4RevivableCountUnitKianaC2QueuedOrBetterCountUnitKianaC2RevivableCountUnitKianaC1QueuedOrBetterCountUnitKianaC1Revivable=没有部署过布洛妮娅·扎伊切克
-RequirementNode/Tooltip/Not1982903751SumCountUnitKianaC2QueuedOrBetterCountUnitKianaC2RevivableCountUnitKianaC4QueuedOrBetterCountUnitKianaC4Revivable=没有部署过琪亚娜·卡斯兰娜
+RequirementNode/Tooltip/Not1982903751SumCountUnitKianaC4QueuedOrBetterCountUnitKianaC4RevivableCountUnitKianaC2QueuedOrBetterCountUnitKianaC2RevivableCountUnitKianaC1QueuedOrBetterCountUnitKianaC1Revivable=没有部署过琪亚娜·卡斯兰娜
 RequirementNode/Tooltip/Not2525757573CountUpgradeAvatarNoBronyaCompleteOnly=已有其他玩家选择该角色
 RequirementNode/Tooltip/Not2525757573CountUpgradeAvatarNoKianaCompleteOnly=已有其他玩家选择该角色
 RequirementNode/Tooltip/Not2525757573CountUpgradeAvatarNoMeiCompleteOnly=已有其他玩家选择该角色
@@ -2835,38 +2844,6 @@ RequirementNode/Tooltip/Or152037771CountUnitFusionCoreCompleteOnlyTechTreeCheat=
 RequirementNode/Tooltip/Or1565659668CountBehaviorKianaC2BranchReadyCompleteOnlyAtUnit3957291497CountBehaviorKianaC2BranchReadyEvadeCompleteOnlyAtUnit880504611=正在打出普通攻击第二段或触发闪避技能
 RequirementNode/Tooltip/StigmataValidCount=圣痕数量未达到上限
 RequirementNode/Tooltip/Sum2900348999CountBehaviorLightningRodFactoryCompleteOnlyAtUnit1653467348CountBehaviorLightningRodFactory2CompleteOnlyAtUnit1236727148CountBehaviorIceTabletFactoryCompleteOnlyAtUnitCountBehaviorIceTab4120943232=需要附属蓄电塔、石碑或科技实验室
-SimpleDisplay/AvatarPick=<s val="@@@SimpleCommandRow">按%hotkey键</c>然后</s> <IMG path="Assets\Textures\tutorialmouseleftbuttondown.dds" alignment="absolutemiddle"/> <s val="@@@SimpleCommandRow">地面自动攻击</s>
-SimpleDisplay/KianaC1Attack=<s val="@@@SimpleCommandRow">按%hotkey键</c>然后</s> <IMG path="Assets\Textures\tutorialmouseleftbuttondown.dds" alignment="absolutemiddle"/> <s val="@@@SimpleCommandRow">地面自动攻击</s>
-SimpleDisplay/KianaC1Ultimate=<s val="@@@SimpleCommandRow">按%hotkey键</c>然后</s> <IMG path="Assets\Textures\tutorialmouseleftbuttondown.dds" alignment="absolutemiddle"/> <s val="@@@SimpleCommandRow">地面自动攻击</s>
-SimpleDisplay/KianaC2Attack=<s val="@@@SimpleCommandRow">按%hotkey键</c>然后</s> <IMG path="Assets\Textures\tutorialmouseleftbuttondown.dds" alignment="absolutemiddle"/> <s val="@@@SimpleCommandRow">地面自动攻击</s>
-SimpleDisplay/KianaC2Branch=<s val="@@@SimpleCommandRow">按%hotkey键</c>然后</s> <IMG path="Assets\Textures\tutorialmouseleftbuttondown.dds" alignment="absolutemiddle"/> <s val="@@@SimpleCommandRow">地面自动攻击</s>
-SimpleDisplay/KianaC2Evade=<s val="@@@SimpleCommandRow">按%hotkey键</c>然后</s> <IMG path="Assets\Textures\tutorialmouseleftbuttondown.dds" alignment="absolutemiddle"/> <s val="@@@SimpleCommandRow">地面自动攻击</s>
-SimpleDisplay/KianaC2Ultimate=<s val="@@@SimpleCommandRow">按%hotkey键</c>然后</s> <IMG path="Assets\Textures\tutorialmouseleftbuttondown.dds" alignment="absolutemiddle"/> <s val="@@@SimpleCommandRow">地面自动攻击</s>
-SimpleDisplay/KianaC2Upgrade1=<s val="@@@SimpleCommandRow">按%hotkey键</c>然后</s> <IMG path="Assets\Textures\tutorialmouseleftbuttondown.dds" alignment="absolutemiddle"/> <s val="@@@SimpleCommandRow">地面自动攻击</s>
-SimpleDisplay/KianaC2Upgrade2=<s val="@@@SimpleCommandRow">按%hotkey键</c>然后</s> <IMG path="Assets\Textures\tutorialmouseleftbuttondown.dds" alignment="absolutemiddle"/> <s val="@@@SimpleCommandRow">地面自动攻击</s>
-SimpleDisplay/KianaC2Upgrade3=<s val="@@@SimpleCommandRow">按%hotkey键</c>然后</s> <IMG path="Assets\Textures\tutorialmouseleftbuttondown.dds" alignment="absolutemiddle"/> <s val="@@@SimpleCommandRow">地面自动攻击</s>
-SimpleDisplay/KianaC4Attack=<s val="@@@SimpleCommandRow">按%hotkey键</c>然后</s> <IMG path="Assets\Textures\tutorialmouseleftbuttondown.dds" alignment="absolutemiddle"/> <s val="@@@SimpleCommandRow">地面自动攻击</s>
-SimpleDisplay/KianaC4Branch=<s val="@@@SimpleCommandRow">按%hotkey键</c>然后</s> <IMG path="Assets\Textures\tutorialmouseleftbuttondown.dds" alignment="absolutemiddle"/> <s val="@@@SimpleCommandRow">地面自动攻击</s>
-SimpleDisplay/KianaC4Evade=<s val="@@@SimpleCommandRow">按%hotkey键</c>然后</s> <IMG path="Assets\Textures\tutorialmouseleftbuttondown.dds" alignment="absolutemiddle"/> <s val="@@@SimpleCommandRow">地面自动攻击</s>
-SimpleDisplay/KianaC4QTE=<s val="@@@SimpleCommandRow">按%hotkey键</c>然后</s> <IMG path="Assets\Textures\tutorialmouseleftbuttondown.dds" alignment="absolutemiddle"/> <s val="@@@SimpleCommandRow">地面自动攻击</s>
-SimpleDisplay/KianaC4SwtichOff=<s val="@@@SimpleCommandRow">按%hotkey键</c>然后</s> <IMG path="Assets\Textures\tutorialmouseleftbuttondown.dds" alignment="absolutemiddle"/> <s val="@@@SimpleCommandRow">地面自动攻击</s>
-SimpleDisplay/KianaC4SwtichOn=<s val="@@@SimpleCommandRow">按%hotkey键</c>然后</s> <IMG path="Assets\Textures\tutorialmouseleftbuttondown.dds" alignment="absolutemiddle"/> <s val="@@@SimpleCommandRow">地面自动攻击</s>
-SimpleDisplay/KianaC4Ult=<s val="@@@SimpleCommandRow">按%hotkey键</c>然后</s> <IMG path="Assets\Textures\tutorialmouseleftbuttondown.dds" alignment="absolutemiddle"/> <s val="@@@SimpleCommandRow">地面自动攻击</s>
-SimpleDisplay/KianaC4Upgrade1=<s val="@@@SimpleCommandRow">按%hotkey键</c>然后</s> <IMG path="Assets\Textures\tutorialmouseleftbuttondown.dds" alignment="absolutemiddle"/> <s val="@@@SimpleCommandRow">地面自动攻击</s>
-SimpleDisplay/KianaC4Upgrade2=<s val="@@@SimpleCommandRow">按%hotkey键</c>然后</s> <IMG path="Assets\Textures\tutorialmouseleftbuttondown.dds" alignment="absolutemiddle"/> <s val="@@@SimpleCommandRow">地面自动攻击</s>
-SimpleDisplay/KianaC4Upgrade3=<s val="@@@SimpleCommandRow">按%hotkey键</c>然后</s> <IMG path="Assets\Textures\tutorialmouseleftbuttondown.dds" alignment="absolutemiddle"/> <s val="@@@SimpleCommandRow">地面自动攻击</s>
-SimpleDisplay/KianaC4Upgrade4=<s val="@@@SimpleCommandRow">按%hotkey键</c>然后</s> <IMG path="Assets\Textures\tutorialmouseleftbuttondown.dds" alignment="absolutemiddle"/> <s val="@@@SimpleCommandRow">地面自动攻击</s>
-SimpleDisplay/MeiC2Attack=<s val="@@@SimpleCommandRow">按%hotkey键</c>然后</s> <IMG path="Assets\Textures\tutorialmouseleftbuttondown.dds" alignment="absolutemiddle"/> <s val="@@@SimpleCommandRow">地面自动攻击</s>
-SimpleDisplay/MeiC2Branch=<s val="@@@SimpleCommandRow">按%hotkey键</c>然后</s> <IMG path="Assets\Textures\tutorialmouseleftbuttondown.dds" alignment="absolutemiddle"/> <s val="@@@SimpleCommandRow">地面自动攻击</s>
-SimpleDisplay/MeiC2Evade=<s val="@@@SimpleCommandRow">按%hotkey键</c>然后</s> <IMG path="Assets\Textures\tutorialmouseleftbuttondown.dds" alignment="absolutemiddle"/> <s val="@@@SimpleCommandRow">地面自动攻击</s>
-SimpleDisplay/RemoveStigmatas=<s val="@@@SimpleCommandRow">按%hotkey键</c>然后</s> <IMG path="Assets\Textures\tutorialmouseleftbuttondown.dds" alignment="absolutemiddle"/> <s val="@@@SimpleCommandRow">地面自动攻击</s>
-SimpleDisplay/ResearchVoidArchives=<s val="@@@SimpleCommandRow">按%hotkey键</c>然后</s> <IMG path="Assets\Textures\tutorialmouseleftbuttondown.dds" alignment="absolutemiddle"/> <s val="@@@SimpleCommandRow">地面自动攻击</s>
-SimpleDisplay/SeeleC1Attack=<s val="@@@SimpleCommandRow">按%hotkey键</c>然后</s> <IMG path="Assets\Textures\tutorialmouseleftbuttondown.dds" alignment="absolutemiddle"/> <s val="@@@SimpleCommandRow">地面自动攻击</s>
-SimpleDisplay/SeeleC1Charge=<s val="@@@SimpleCommandRow">按%hotkey键</c>然后</s> <IMG path="Assets\Textures\tutorialmouseleftbuttondown.dds" alignment="absolutemiddle"/> <s val="@@@SimpleCommandRow">地面自动攻击</s>
-SimpleDisplay/SeeleC1Evade=<s val="@@@SimpleCommandRow">按%hotkey键</c>然后</s> <IMG path="Assets\Textures\tutorialmouseleftbuttondown.dds" alignment="absolutemiddle"/> <s val="@@@SimpleCommandRow">地面自动攻击</s>
-SimpleDisplay/SeeleC1UltCharge=<s val="@@@SimpleCommandRow">按%hotkey键</c>然后</s> <IMG path="Assets\Textures\tutorialmouseleftbuttondown.dds" alignment="absolutemiddle"/> <s val="@@@SimpleCommandRow">地面自动攻击</s>
-SimpleDisplay/SeeleC1Ultimate=<s val="@@@SimpleCommandRow">按%hotkey键</c>然后</s> <IMG path="Assets\Textures\tutorialmouseleftbuttondown.dds" alignment="absolutemiddle"/> <s val="@@@SimpleCommandRow">地面自动攻击</s>
-SimpleDisplay/SeeleC1Upgrade1=<s val="@@@SimpleCommandRow">按%hotkey键</c>然后</s> <IMG path="Assets\Textures\tutorialmouseleftbuttondown.dds" alignment="absolutemiddle"/> <s val="@@@SimpleCommandRow">地面自动攻击</s>
 SimpleDisplay/SeeleC1Upgrade2=
 Text/Rank/Herrscher=<c val="FFFF00">崩坏使徒</c>
 Text/Rank/KianaC1=空之律者
@@ -2984,11 +2961,11 @@ Unit/Name/MHT3=MHT-3 和平使者
 Unit/Name/MeiBuilding=剑道训练室
 Unit/Name/MeiC2=雷电芽衣
 Unit/Name/MeiC2Wave=冲击波 - MeiC2
-Unit/Name/MercCompound=米高扬中央设计制造局
+Unit/Name/MercCompound=米高扬设计制造局
 Unit/Name/MissileTurret2=电磁炮台
 Unit/Name/Nuke2=崩坏能裂变弹
-Unit/Name/Nuke4=战术核弹头
-Unit/Name/NukeMHT=战术核弹头
+Unit/Name/Nuke4=战术核弹 头
+Unit/Name/NukeMHT=战术核弹 头
 Unit/Name/PlanetaryFortress2=总部要塞
 Unit/Name/PunisherGrenadesLMWeapon=马尔科夫C型
 Unit/Name/RO_010=泰坦机甲
@@ -3020,7 +2997,6 @@ Unit/Name/Roach=绯樱战车兽
 Unit/Name/SCV=后勤人员
 Unit/Name/SaAfflication=娑 -「惑障」
 Unit/Name/SaCore=娑 -「一心三惑」
-Unit/Name/SaTarget=Sa Target
 Unit/Name/SaWave=冲击波
 Unit/Name/SaWeapon0=娑 武器 0
 Unit/Name/SaWeapon1=娑 武器 1
@@ -3112,6 +3088,7 @@ Upgrade/Name/KianaC4Upgrade3=时空闪烁
 Upgrade/Name/KianaC4Upgrade4=冲击共振
 Upgrade/Name/KianaHealth=琪亚娜生命值
 Upgrade/Name/KianaShield=琪亚娜护盾值
+Upgrade/Name/MHTUpgrade=MHT Upgrade
 Upgrade/Name/MedicAutoLoad=战场救援系统
 Upgrade/Name/MeiC2Unlock=解锁脉冲装·绯红
 Upgrade/Name/OrbitalStrike2=轨道空降
