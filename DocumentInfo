@@ -96,6 +96,7 @@
             <Value>2.34</Value>
             <Value>2.35</Value>
             <Value>2.36</Value>
+            <Value>2.37</Value>
         </Version>
         <Date>
             <Value>2/3/2022</Value>
@@ -180,6 +181,7 @@
             <Value>3/18/2025</Value>
             <Value>10/25/2025</Value>
             <Value>10/28/2025</Value>
+            <Value>11/5/2025</Value>
         </Date>
         <Notes>
             <Value>1,2,3,4,5,6</Value>
@@ -264,6 +266,7 @@
             <Value>327</Value>
             <Value>328,329,330,331</Value>
             <Value>332,333,334,335,336</Value>
+            <Value>337,338,339,340,341,342,343</Value>
         </Notes>
     </PatchNote>
     <Preload>

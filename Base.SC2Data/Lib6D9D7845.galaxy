@@ -26,6 +26,7 @@ void lib6D9D7845_InitVariables () {
     lib6D9D7845_gv_globalE8B083E8AF95E6A8A1E5BC8F = (GameAttributeGameValue("3") == "0002");
     lib6D9D7845_gv_globalE88BB1E99B84E5A48DE6B4BB = true;
     lib6D9D7845_gv_globalE79086E4B98BE5BE8BE88085E68A80E883BDE5898AE5BCB1 = true;
+    lib6D9D7845_gv_globalE5BCB9E587BAE59CB0E59BBEE68F90E7A4BA = true;
     lib6D9D7845_gv_defaultLight = "HonkaiDefault";
     lib6D9D7845_gv_dPSDialog = c_invalidDialogId;
     lib6D9D7845_gv_dPSDialogItem = c_invalidDialogControlId;
@@ -3030,10 +3031,10 @@ bool lib6D9D7845_gt_E58D95E4BD8DE6B58BE8AF95E7949FE68890_Func (bool testConds, b
         lv_e58D95E4BD8D = "MissileTurret";
     }
     else if (auto773EE29B_val == "T2") {
-        lv_e58D95E4BD8D = "GunTurret1";
+        lv_e58D95E4BD8D = "SwarmMissile";
     }
     else if (auto773EE29B_val == "T3") {
-        lv_e58D95E4BD8D = "MissileTurret2";
+        lv_e58D95E4BD8D = "Railgun";
     }
     else if (auto773EE29B_val == "B") {
         lv_e58D95E4BD8D = "Pylon";
@@ -5475,7 +5476,7 @@ bool lib6D9D7845_gt_E5BCBAE588B6E587BBE9A39E_Func (bool testConds, bool runActio
         return true;
     }
 
-    if (((UnitBehaviorCount(lv_target, "Throw") > 0) || (UnitBehaviorCount(lv_target, "Precursor") > 0) || (UnitGetType(lv_target) == "CosmicJuggernaut") || (lv_type == "RichVespeneGeyser") || (lv_type == "VespeneGeyser") || (lv_type == "ProtossVespeneGeyser") || (lv_type == "PurifierVespeneGeyser") || (lv_type == "ShakurasVespeneGeyser") || (lv_type == "SpacePlatformGeyser") || (lv_type == "RefineryRich") || (lv_type == "Refinery") || (lv_type == "AutomatedRefinery") || (lv_type == "InfestedRefinery") || (lv_type == "ExtractorRich") || (lv_type == "Extractor") || (lv_type == "AssimilatorRich") || (lv_type == "Assimilator"))) {
+    if (((UnitBehaviorCount(lv_target, "Throw") > 0) || (UnitBehaviorCount(lv_target, "Precursor") > 0) || (UnitGetType(lv_target) == "CosmicJuggernaut") || (lv_type == "RichVespeneGeyser") || (lv_type == "VespeneGeyser") || (lv_type == "ProtossVespeneGeyser") || (lv_type == "SpacePlatformGeyser") || (lv_type == "RefineryRich") || (lv_type == "Refinery") || (lv_type == "AutomatedRefinery") || (lv_type == "InfestedRefinery") || (lv_type == "ExtractorRich") || (lv_type == "Extractor") || (lv_type == "AssimilatorRich") || (lv_type == "Assimilator"))) {
         return false;
     }
 
@@ -6943,6 +6944,29 @@ bool lib6D9D7845_gt_E5BE8BE88085E7949FE68890_Func (bool testConds, bool runActio
 void lib6D9D7845_gt_E5BE8BE88085E7949FE68890_Init () {
     lib6D9D7845_gt_E5BE8BE88085E7949FE68890 = TriggerCreate("lib6D9D7845_gt_E5BE8BE88085E7949FE68890_Func");
     TriggerAddEventPlayerEffectUsed(lib6D9D7845_gt_E5BE8BE88085E7949FE68890, c_playerAny, "SpawnHerrscherDummy");
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: ??????????????????
+//--------------------------------------------------------------------------------------------------
+bool lib6D9D7845_gt_E5BCB9E587BAE59CB0E59BBEE68F90E7A4BA_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    if ((lib6D9D7845_gv_globalE5BCB9E587BAE59CB0E59BBEE68F90E7A4BA == true)) {
+        UIDisplayMessage(PlayerGroupAll(), c_messageAreaSubtitle, StringExternal("Param/Value/lib_6D9D7845_CA7C4A94"));
+    }
+
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib6D9D7845_gt_E5BCB9E587BAE59CB0E59BBEE68F90E7A4BA_Init () {
+    lib6D9D7845_gt_E5BCB9E587BAE59CB0E59BBEE68F90E7A4BA = TriggerCreate("lib6D9D7845_gt_E5BCB9E587BAE59CB0E59BBEE68F90E7A4BA_Func");
+    TriggerAddEventTimeElapsed(lib6D9D7845_gt_E5BCB9E587BAE59CB0E59BBEE68F90E7A4BA, 5.0, c_timeGame);
 }
 
 //--------------------------------------------------------------------------------------------------
@@ -8525,7 +8549,7 @@ bool lib6D9D7845_gt_E8B584E6BA90E585B1E4BAAB_Func (bool testConds, bool runActio
         auto0FC8E4E9_ai = 1;
         lv_p = 1;
         for ( ; ( (auto0FC8E4E9_ai >= 0 && lv_p <= auto0FC8E4E9_ae) || (auto0FC8E4E9_ai <= 0 && lv_p >= auto0FC8E4E9_ae) ) ; lv_p += auto0FC8E4E9_ai ) {
-            if (((PlayerRace(lv_p) == "Zerg") || (PlayerRace(lv_p) == "Zerg2"))) {
+            if ((PlayerRace(lv_p) == "Zerg")) {
                 PlayerModifyPropertyInt(lv_p, c_playerPropVespene, c_playerPropOperAdd, lv_mount);
                 PlayerModifyPropertyInt(lv_p, c_playerPropTerrazine, c_playerPropOperAdd, lv_mount);
             }
@@ -8692,6 +8716,7 @@ void lib6D9D7845_InitTriggers () {
     lib6D9D7845_gt_E58F96E6B688E997AAE78381_Init();
     lib6D9D7845_gt_E5BE8BE88085E5889DE5A78BE58C96_Init();
     lib6D9D7845_gt_E5BE8BE88085E7949FE68890_Init();
+    lib6D9D7845_gt_E5BCB9E587BAE59CB0E59BBEE68F90E7A4BA_Init();
     lib6D9D7845_gt_E9809AE794A8E78AB6E68081E69DA1E5889BE5BBBA_Init();
     lib6D9D7845_gt_E9809AE794A8E78AB6E68081E69DA1E5A48DE6B4BB_Init();
     lib6D9D7845_gt_E5B9BBE6B5B7E6A2A6E89DB6E78AB6E68081E69DA1E5889BE5BBBA_Init();
