@@ -1,4 +1,5 @@
-﻿Abil/Name/AutoEquipAdd=自动配装-补充
+﻿Abil/Name/AttackArmorResearch=攻防研发
+Abil/Name/AutoEquipAdd=自动配装-补充
 Abil/Name/AutoEquipCancel=自动配装-取消
 Abil/Name/AutoEquipCopy=自动配装-复制
 Abil/Name/AutoEquipCover=自动配装-覆盖
@@ -178,7 +179,6 @@ Abil/Name/WeaponSwitchB5=B5 百手巨人初型
 Abil/Name/WeaponSwitchB6=B6 5th圣遗物
 Abil/Name/WeaponSwitchB7=B7 重装小兔19C
 Abil/Name/WeaponSwitchSevenThundersOfRetribution=涤罪七雷
-Abil/Name/evolutionchamberresearch=研发 (进化腔)(死士&崩坏兽能力)
 Abil/Name/que82=队列x2(8)
 Actor/AddonIndicator/Furnace2=T
 Actor/AddonIndicator/Furnace_1=T
@@ -537,7 +537,6 @@ Button/Name/Furnace=建造熔炉
 Button/Name/Furnace2=升级为烈火熔炉
 Button/Name/FusionCore=建造圣1504研究所
 Button/Name/GhostAcademy=建造崩坏能裂变弹发射井
-Button/Name/GunTurret1=建造蜂巢炮台
 Button/Name/Helios=制造“赫利俄斯”运输舰
 Button/Name/Hellion=制造重装小兔摩托
 Button/Name/HellionTank=制造重装小兔机甲
@@ -621,7 +620,6 @@ Button/Name/MeiC2Upgrade3=樱之魄
 Button/Name/MeiC2Upgrade4=魄之刃
 Button/Name/MercCompound=建造米高扬中央设计制造局
 Button/Name/MicroFiltering2=高效切割
-Button/Name/MissileTurret2=建造电磁炮台
 Button/Name/MobilizeSkill1=紧急动员
 Button/Name/MobilizeSkill2=空投支援
 Button/Name/MorphToSaBackward=变形为倒立
@@ -633,6 +631,8 @@ Button/Name/NukeCalldown2=崩坏能裂变弹打击
 Button/Name/NukeCalldownMHT=战术核打击
 Button/Name/PalsyDuration=麻痹时长
 Button/Name/R11Skill=暗色帷幕
+Button/Name/ROArmorUpgrade=升级机甲钢板等级
+Button/Name/ROAttackUpgrade=升级机甲武器等级
 Button/Name/RO_010=制造泰坦机甲
 Button/Name/RO_010Abli1=末日突袭
 Button/Name/RO_010Abli12=迅捷突进
@@ -663,6 +663,7 @@ Button/Name/RO_050=孵化死士机甲
 Button/Name/RO_050Abil=机械飞刃
 Button/Name/RO_060=制造多维机甲
 Button/Name/RPC=制造RPC-6626
+Button/Name/Railgun=建造电磁炮台
 Button/Name/RallyDeadgals=设定死士出生点
 Button/Name/Ravager=变异为熔岩帝王
 Button/Name/ReduceFire=火焰减伤
@@ -746,11 +747,7 @@ Button/Name/StigmataTG1=莫奈
 Button/Name/StigmataTG2=石川五右卫门
 Button/Name/StigmataTG3=贞仪
 Button/Name/StigmataTG4=艾琳·艾德勒
-Button/Name/TerranInfantryArmorLevel1=升级女武神护甲等级
-Button/Name/TerranInfantryArmorLevel12=升级女武神护盾等级
-Button/Name/TerranInfantryWeaponsLevel12=升级天命制式步枪等级
-Button/Name/TerranVehiclePlatingLevel12=升级机甲钢板等级
-Button/Name/TerranVehicleWeaponsLevel12=升级机甲武器等级
+Button/Name/SwarmMissile=建造蜂巢炮台
 Button/Name/TrainBronyaC2=部署驱动装·山吹
 Button/Name/TrainBronyaC7=部署理之律者
 Button/Name/TrainKianaC1=部署空之律者
@@ -760,6 +757,8 @@ Button/Name/TrainMeiC2=部署脉冲装·绯红
 Button/Name/TrainSeeleC1=部署幻海梦蝶
 Button/Name/Transfusion=哺液
 Button/Name/Transfusion2=创生
+Button/Name/TurretArmorUpgrade=升级建筑护甲等级
+Button/Name/TurretAttackUpgrade=升级建筑武器等级
 Button/Name/UL_030=变异为骑士级崩坏兽
 Button/Name/UL_040=变异为圣殿级崩坏兽
 Button/Name/UL_100=变异为旋翼级崩坏兽
@@ -773,6 +772,9 @@ Button/Name/UnlockKianaC4=解锁白骑士·月光
 Button/Name/UnlockMeiC2=解锁脉冲装·绯红
 Button/Name/UnlockSeeleC1=解锁幻海梦蝶
 Button/Name/Unsiege=机甲模式
+Button/Name/VArmorUpgrade=升级女武神护甲等级
+Button/Name/VShieldUpgrade=升级女武神护盾等级
+Button/Name/VWeaponUpgrade=升级女武神制式武器等级
 Button/Name/Valkyrja2=训练女武神-看守者
 Button/Name/Valkyrja3=训练女武神-压制者
 Button/Name/ValkyrjaDefence=崩坏能防护服
@@ -804,7 +806,7 @@ Button/Tooltip/ATTACK=为所有装甲提高4点攻击力，可升级16次<n/><c 
 Button/Tooltip/AdvancedMedic=提升“赫利俄斯”运输舰50%的治疗速度。减少治疗消耗能量的35%。
 Button/Tooltip/ArmorLevel=为所有装甲提高120点护盾和0.5护盾恢复速率，可升级16次(物理防御仅取决于生命护甲，护盾护甲并不生效)<n/><c val="FF0000">女武神装甲占用补给+1</c>
 Button/Tooltip/ArmorLevel2=为所有装甲提高160点生命值、1点生命装甲和0.5生命恢复率，可升级16次<n/><c val="FF0000">女武神装甲占用补给+1</c>
-Button/Tooltip/Armory=可研发部分武器。<n/>为重工厂和星港制造的单位提供武器和护甲升级方案。
+Button/Tooltip/Armory=为重工厂和星港制造的单位提供武器和护甲升级方案，升级部分机甲单位技能，以及研发部分重炮武器。
 Button/Tooltip/AutoEquip=以当前单位的装备为模板，自动配置装备（仅以选中所有单位中的“最佳单位”为准）。该类功能<c val="FFFF00">仅影响同类型单位</c>
 Button/Tooltip/AutoEquipAdd=以当前单位的装备为模板，为当前所有单位配装，但是不会卸下已有装备
 Button/Tooltip/AutoEquipCancel=取消给新训练单位的装备规则
@@ -894,14 +896,13 @@ Button/Tooltip/DivineKey4th=席卷所有沿途单位的风暴，每<d ref="Behav
 Button/Tooltip/DivineKey4thWeaponUnit=人工构造理想流体形成的风暴，每<d ref="Behavior,Herrscher4thWeaponTarget,Period" precision="1"/>秒对周围单位造成<d ref="Effect,Herrscher4thWeaponDamage,Amount"/>点伤害并有概率击退，持续<d ref="Behavior,TornadoTimedLife,Duration"/>秒。
 Button/Tooltip/DivineKeys=律者核心的研究基地，在击败律者后可在此研发相关武器或者升级
 Button/Tooltip/EnableBuildingAttack=允许爆虫自动将建筑视为攻击目标。<n/><n/>爆虫可对建筑造成<d ref="Effect,VolatileBurstU2,Amount "/>点伤害值。
-Button/Tooltip/EngineeringBay=提供女武神武器和护甲的升级方案，并可选择女武神装甲路线
+Button/Tooltip/EngineeringBay=提供女武神武器和护甲的升级方案，并可研发圣痕，为女武神提供进一步的强化
 Button/Tooltip/Equipment=更换武器、圣痕、外观、装甲等
 Button/Tooltip/FrozenDuration=使己方造成的冻结状态时间延长0.5秒，可升级4次。
 Button/Tooltip/Furnace=解锁泰坦机甲、御雷机甲的烈焰分支单位，并可研究火焰减伤。
 Button/Tooltip/Furnace2=使熔炉升级为烈火熔炉，可以解锁终极烈焰分支机甲、升级点燃伤害。
 Button/Tooltip/FusionCore=天命组织的科学研究所。<n/>可以研发部分武器，并为运输机、多维机甲、休伯利安号提供升级方案。<n/><n/><c val="ffff8a">开启：</c><n/>- 可在星港中建造休伯利安号
 Button/Tooltip/GhostAcademy=能够制造崩坏能裂变弹发射井，该弹头需要长时间部署，并能发射至<d ref="Abil,HonkaiNukeFire,Range[0]"/>码内有视野的地方。爆炸后会对大范围区域造成毁灭性打击。
-Button/Tooltip/GunTurret1=防御塔，可以造成范围火焰伤害，对轻甲单位造成额外伤害。<n/><n/><c val="FFFF00">可以对地</c>
 Button/Tooltip/Heal=治疗一个友方生物单位。<n/><n/><c val="f078ff">每1点能量恢复<d ref="-Effect,MedivacHealModifyTargetLife,VitalArray[0].Change/Effect,MedivacHealModifyCasterEnergy,VitalArray[2].Change"/>点生命值。</c><n/>
 Button/Tooltip/Helios=空中运输单位。可治疗附近的生物单位。
 Button/Tooltip/Herrscher10th=第十律者，可以将自己所捕获的猎物的力量为自己所用。
@@ -1005,11 +1006,10 @@ Button/Tooltip/MeiC2Upgrade2=使分支攻击可以连续发动2次
 Button/Tooltip/MeiC2Upgrade3=提高必杀技斩击次数，对单个敌人最高提高<d ref="Upgrade,MeiC2Upgrade3,EffectArray[0].Value*50"/>%物理伤害，可升级5次
 Button/Tooltip/MeiC2Upgrade4=能量上限提高<d ref="Upgrade,MeiC2Upgrade4,EffectArray[1].Value"/>，天照额外消耗<d ref="Upgrade,MeiC2Upgrade4,EffectArray[0].Value"/>点能量，释放后进入女武神状态，强化所有攻击，持续<d ref="Behavior,MeiC2Blade,Duration"/>秒。
 Button/Tooltip/MeiC2Wave=释放一道大范围冲击波，将遇到的一切单位击退。<n/><c val="FFFF00">半径越小的单位被击退距离越远</c>
-Button/Tooltip/MercCompound=可以研发部分武器
+Button/Tooltip/MercCompound=可以研发多种重炮武器
 Button/Tooltip/MicroFiltering=后勤人员高能瓦斯采集量+1，可升级6次
 Button/Tooltip/MicroFiltering2=工蜂采集量+1，可升级5次
 Button/Tooltip/MissileTurret=防御塔，可以造成单体物理伤害。<n/><n/><c val="#ColorAttackInfo">可以对地和对空</c><n/><c val="FFE303">侦测单位</c>
-Button/Tooltip/MissileTurret2=防御塔，可以造成高额元素伤害，射程极远。<n/><n/><c val="#ColorAttackInfo">可以对空和对地</c>
 Button/Tooltip/MobilizeSkill1=立即在目标位置部署100人口的女武神部队。<n/><n/><c val="FF0000">扣除40%的当前分数，分数倍率永久降低20%</c>
 Button/Tooltip/MobilizeSkill2=立即在目标位置空投100人口机甲部队。<n/><n/><c val="FF0000">扣除40%的当前分数，分数倍率永久降低20%</c>
 Button/Tooltip/NanoRepair2=治疗一个友方机械单位。<n/><n/><c val="f078ff">每消耗1点能量恢复32点生命值。</c>
@@ -1021,6 +1021,8 @@ Button/Tooltip/PalsyDuration=使己方造成的麻痹状态时间延长0.5秒，
 Button/Tooltip/PlanetaryFortress2=坚固的防御要塞。<n/>用于接收采集到的资源。<n/><n/><c val="ffff8a">可以对地。</c>
 Button/Tooltip/PsiStorm2=召唤一股持续<d time="4"/>的灵能风暴，对目标区域内的所有单位造成最多80点伤害。
 Button/Tooltip/R11Skill=攻击前方敌人，造成700%攻击力的物理伤害，并施加时空锁定。<n/><n/>幻海梦蝶使用时，如处于爆发状态，则回复250点暗影值<n/>若不处于爆发状态，则使自身进入相位穿行状态
+Button/Tooltip/ROArmorUpgrade=提升机甲单位的护甲，并提高10%生命值，可升级10次。
+Button/Tooltip/ROAttackUpgrade=提升机甲单位的火力，使伤害提高10%，可升级10次。
 Button/Tooltip/RO_010=重型机甲。可以对近距离目标造成范围伤害。<n/><n/><c val="FFFF8A">可以对地。</c>
 Button/Tooltip/RO_010Abli1=向前方快速冲刺，遇到敌人或时间结束时挥拳造成<d ref ="Effect,RO_010Abli1AttackDamage,Amount"/>点范围物理伤害并击飞附近的单位，最远突进20码
 Button/Tooltip/RO_010Abli12=向前方快速冲刺，遇到敌人或时间结束突刺造成<d ref ="Effect,RO_010Abli1AttackDamage2,Amount"/>点范围伤害并击飞附近的单位，最远突进18码
@@ -1056,6 +1058,7 @@ Button/Tooltip/RO_050Abil=发射左手的刀刃，造成<d ref="Effect,RO_050Abi
 Button/Tooltip/RO_060=重型飞行机甲。装载有能对敌方空中单位造成范围伤害的飞弹。可以切换为防卫模式以提供攻城火力。<n/><n/><c val="#ColorAttackInfo">可以对空。</c>
 Button/Tooltip/RPC=战术打击飞行器。可升级隐形技能。<n/><n/><c val="#ColorAttackInfo">可以对地。</c>
 Button/Tooltip/RPC6626=战术打击飞行器。可升级隐形技能。<n/><n/><c val="#ColorAttackInfo">可以对地。</c>
+Button/Tooltip/Railgun=防御塔，可以造成高额元素伤害，射程极远。<n/><n/><c val="#ColorAttackInfo">可以对空和对地</c>
 Button/Tooltip/RallyDeadgals=使孵化的死士在目标地点生成。<n/>目标必须在主巢附近。
 Button/Tooltip/RavagerCocoon=茧中包裹的绯樱战车兽正在变异为一个熔岩帝王。
 Button/Tooltip/ReduceFire=使己方所有单位受到的火焰元素伤害减少6%，可升级10次。
@@ -1079,7 +1082,8 @@ Button/Tooltip/ResearchDivineKey8th=可以操纵大脑信号、主掌意识的�
 Button/Tooltip/ResearchDivineKey9th=复现第九律者的"地之力量"的神之键，拥有控制重力，扭曲时空、制造黑洞的能力。<n/><n/>可以以重炮形态装备给<c val="FFFF00">女武神·压制者</c>。<n/>如果由<c val="FFFF00">布洛妮娅·扎伊切克</c>装备，则可进一步释放释放其中的力量。在解锁<c val="FFFF00">理之律者</c>装甲后，将会被改装，与理之律者的能力更好结合。
 Button/Tooltip/ResearchDrillClaws=使<c val="ffff8a">毒蛛机甲</c>潜地和激活的速度加快三倍。
 Button/Tooltip/ResearchFighters=为<c val="ffff8a">休伯利安号</c>搭载战斗机库，可以训练并释放轻型战斗机。
-Button/Tooltip/ResearchHiSecAutoTracking=<c val="ffff8a">导弹塔</c>射程+2,<c val="ffff8a">行星要塞</c>射程+3。
+Button/Tooltip/ResearchHiSecAutoTracking=<c val="ffff8a">蜂巢炮台</c>射程+1,<c val="ffff8a">导弹塔</c>射程+1.5,<c val="ffff8a">行星要塞</c>射程+2。可升级2次。
+Button/Tooltip/ResearchNeosteelFrame=使<c val="ffff8a">地堡</c>的舱位增加2，可升级2次。
 Button/Tooltip/ResearchPunisherGrenades=升级<c val="ffff8a">女武神-压制者</c>的武器，使其可以降低敌人的移动速度。
 Button/Tooltip/ResearchShieldWall=<c val="ffff8a">女武神-看守者</c>生命值+20。
 Button/Tooltip/ResearchSuperC=<c val="ffff8a">轨道控制基地</c>的初始能量和能量恢复率提高100%。
@@ -1151,11 +1155,7 @@ Button/Tooltip/StigmataTG2=造成的<c val="FFFF00">雷元素伤害</c>提高50%
 Button/Tooltip/StigmataTG3=提高自身20%<c val="FFFF00">雷元素穿透</c>
 Button/Tooltip/StigmataTG4=造成伤害时使目标获得30%<c val="FFFF00">雷元素易伤</c>，持续<d ref="Behavior,StigmataThunderBuff,Duration" precision="1"/>秒(不可叠加)
 Button/Tooltip/Stimpack=使<c val="ffff8a">女武神-看守者</c>能够为自己注射强化剂。强化剂会对使用者造成伤害，但能暂时提高攻击速度和移动速度。
-Button/Tooltip/TerranInfantryArmorLevel1=提升女武神单位的护甲，最多升级10次。<n/><n/><c val="FF0000">不能加成英雄单位</c>
-Button/Tooltip/TerranInfantryArmorLevel12=提升女武神单位的护盾护甲，并提高<d ref="Upgrade,VArmorUpgrade2,EffectArray[3].Value"/>点护盾值，并减少<d ref="Upgrade,VArmorUpgrade2,EffectArray[4].Value"/>秒的护盾恢复延迟（满级后消除护盾恢复延迟），最多升级<d ref="Upgrade,VArmorUpgrade2,MaxLevel"/>次<n/><n/><c val="FF0000">不能加成英雄单位</c>
-Button/Tooltip/TerranInfantryWeaponsLevel12=提升普通<c val="FFFF00">女武神-看守者</c>单位的火力，并提高<d ref="Upgrade,VAttackUpgrade2,EffectArray[2].Value" precision="2"/>射程，可升级10次。
-Button/Tooltip/TerranVehiclePlatingLevel12=提升机甲单位的护甲，可升级8次。
-Button/Tooltip/TerranVehicleWeaponsLevel12=提升机甲单位的火力，可升级10次。
+Button/Tooltip/SwarmMissile=防御塔，可以造成范围火焰伤害并点燃目标，对轻甲单位造成额外伤害。<n/><n/><c val="FFFF00">可以对地</c>
 Button/Tooltip/TrainBronyaC7=琪亚娜掌控了空之律者能力后的形态，可以在必要时爆发出强大的力量。<n/><n/><c val="#ColorAttackInfo">特点:物理伤害、时空锁定、大范围伤害和浮空。<n/>可对地、对空</c>
 Button/Tooltip/TrainKianaC1=琪亚娜掌控了空之律者能力后的形态，可以在必要时爆发出强大的力量。<n/><n/><c val="#ColorAttackInfo">特点:物理伤害、时空锁定、大范围伤害和浮空。<n/>可对地、对空</c>
 Button/Tooltip/TrainKianaC2=第三代女武神装甲，设计理念为「泛用性全领域作战装甲」。<n/><n/><c val="#ColorAttackInfo">能力:物理伤害、眩晕、爆发、时空。</c>
@@ -1165,6 +1165,8 @@ Button/Tooltip/TrainSeeleC1=试做型第四代女武神弑神装甲。<n/><n/><c
 Button/Tooltip/Transfusion=立即治疗生物单位<d ref="Effect,Transfusion,VitalArray[Life].Change"/>点生命值，并在<d ref="Behavior,Transfusion,Duration"/>秒内持续恢复额外<d ref="Behavior,Transfusion,Duration/Behavior,Transfusion,Period*Effect,TransfusionHealTick,VitalArray[Life].Change"  precision="3"/>点生命值。
 Button/Tooltip/Transfusion2=立即治疗生物单位<d ref="Effect,Transfusion2,VitalArray[Life].Change"/>点生命值，并在<d ref="Behavior,Transfusion2,Duration"/>秒内持续恢复额外<d ref="Behavior,Transfusion2,Duration/Behavior,Transfusion2,Period*Effect,TransfusionHealTick2,VitalArray[Life].Change"  precision="3"/>点生命值。
 Button/Tooltip/TuringAssistance=投射一个可以移动但无法攻击的无敌阴影。<d time="10"/>后，使徒传送到阴影所在位置。
+Button/Tooltip/TurretArmorUpgrade=提升建筑单位的护甲，并提高10%生命值，可升级10次。
+Button/Tooltip/TurretAttackUpgrade=提升建筑的火力，使伤害提高10%，可升级10次。
 Button/Tooltip/UL_030=近战单位，可以使用迅捷突进技能进行冲锋。<n/><n/><c val="ffff8a">可以对地。</c>
 Button/Tooltip/UL_040=高护甲近战单位，对来自正面的物理伤害有额外抗性，行动较为迟缓。<n/><n/><c val="ffff8a">可以对地。</c>
 Button/Tooltip/UL_100=远程飞行单位，武器和技能拥有远射程和范围伤害。
@@ -1176,6 +1178,9 @@ Button/Tooltip/UnlockMeiC2=第三代女武神装甲，设计理念为「白刃�
 Button/Tooltip/UnlockSeeleC1=<c val="#ColorAttackInfo">能力:物理伤害、爆发、AOE。不能对空。</c>
 Button/Tooltip/Unsiege=返回机甲模式。在该模式下，赫菲斯托斯可以移动，但火力有所下降。
 Button/Tooltip/UpgradeBuildingArmorLevel1=使<c val="ffff8a">建筑物</c>的护甲提高2。使<c val="ffff8a">地堡</c>的装载空间增加1。还会为<c val="ffff8a">指挥中心</c>和<c val="ffff8a">行星要塞</c>提供额外的装载空间，并使<c val="FFFF00">要塞总部</c>的生命值提高1000。可以升级4次.
+Button/Tooltip/VArmorUpgrade=提升女武神单位的护甲，并提高10%生命值，可升级10次。<n/><n/><c val="FF0000">不能加成英雄单位</c>
+Button/Tooltip/VShieldUpgrade=提升女武神单位的护盾护甲，并提高<d ref="Upgrade,VShieldUpgrade,EffectArray[3].Value"/>点护盾值，并减少<d ref="Upgrade,VShieldUpgrade,EffectArray[4].Value"/>秒的护盾恢复延迟（满级后消除护盾恢复延迟），可升级10次<n/><n/><c val="FF0000">不能加成英雄单位</c>
+Button/Tooltip/VWeaponUpgrade=提升普通<c val="FFFF00">女武神-看守者</c>单位的火力，并提高<d ref="Upgrade,VAttackUpgrade,EffectArray[2].Value" precision="2"/>射程，可升级10次。
 Button/Tooltip/Valkyrja2=通用型步兵。<n/><n/><c val="#ColorAttackInfo">可以对地和对空。</c>
 Button/Tooltip/Valkyrja3=重型突击步兵。<n/><n/><c val="#ColorAttackInfo">可以对地</c>
 Button/Tooltip/ValkyrjaDefence=使所有女武神在菌毯上时的生命流失速度降低75%。
@@ -1201,7 +1206,7 @@ Button/Tooltip/WidowMineBurrow=埋下毒蛛机甲并使其进入准备状态。�
 Button/Tooltip/WidowMineUnburrow=使毒蛛机甲出地并使其武器进入非激活状态，并可以移动。
 Button/Tooltip/Zergling=迅捷的肉搏型生物。可以变异为傲娇系崩坏兽。<n/><n/><c val="FFFF8A">可以对地。</c>
 Button/Tooltip/zerggroundarmor1=进化死士护甲等级，每一级增加所有死士1点护甲，最多升级6次
-Button/Tooltip/zerggroundarmor12=进化崩坏兽护甲等级，每一级增加所有崩坏兽1点护甲，最多升级6次
+Button/Tooltip/zerggroundarmor12=提升崩坏兽单位的护甲，并提高10%生命值，可升级10次。
 Button/Tooltip/zergmeleeweapons1=进化死士攻击等级，每一级增加所有死士10%攻击力，最多升级10次
 Button/Tooltip/zergmeleeweapons12=进化崩坏兽攻击等级，每一级增加所有崩坏兽10%攻击力，最多升级10次
 DOCSTR_0000=旋翼级崩坏兽
@@ -1548,6 +1553,13 @@ DocInfo/PatchNote333=·修复了部署理之律者技能错误指向空之律者
 DocInfo/PatchNote334=·修复了大量建筑中训练和升级错乱的bug
 DocInfo/PatchNote335=·所有英雄女武神基础攻击力翻倍，每级提升从4降为3（最大攻击力74->68）
 DocInfo/PatchNote336=·维修总部要塞不再需要瓦斯
+DocInfo/PatchNote337=·增加了防御塔的攻击和护甲升级
+DocInfo/PatchNote338=·蜂巢炮台伤害由5+3提高到8+4，并可以点燃目标
+DocInfo/PatchNote339=·提高了导弹塔的伤害和造价
+DocInfo/PatchNote340=·防御塔、机甲、普通女武神、死士、崩坏兽的护甲升级均提高到10级，每级提高5%生命值
+DocInfo/PatchNote341=·五种类型的攻防升级价格统一，并且允许并行升级
+DocInfo/PatchNote342=·瞬时自动追踪升级改为可升级2次，射程改为：蜂巢炮台4+1+1，导弹塔7+1.5+1.5，行星要塞6+2+2
+DocInfo/PatchNote343=·还原了工蜂的费用
 Effect/Name/AcidSalivaU=UL_030 Damage
 Effect/Name/AddCasterLife50=Add Caster Life 50%
 Effect/Name/AddDizzyCD=Add Dizzy CD
@@ -2303,6 +2315,8 @@ Effect/Name/RO_050BreakDownEnd=RO_050 Break Down End
 Effect/Name/RO_050CD=RO_050 CD
 Effect/Name/RO_050ShieldRecover=RO_050 Shield Recover
 Effect/Name/RadiusReduce=Radius Reduce
+Effect/Name/RailgunDamage=Railgun Damage
+Effect/Name/RailgunLaunchMissile=Railgun Launch Missile
 Effect/Name/ReaperKD8Knockback2=第II类击退
 Effect/Name/ReaperKD8KnockbackAB2=Reaper KD8 Knockback AB 2
 Effect/Name/ReaperKD8KnockbackCreatePHSet2=Reaper KD8 Knockback Create PH Set 2
@@ -2422,11 +2436,16 @@ Effect/Name/StigmataTG2=StigmataTG2
 Effect/Name/StigmataTG3=StigmataTG3
 Effect/Name/StigmataTG4=StigmataTG4
 Effect/Name/SuicideRecycle=Suicide(Recycle)
+Effect/Name/SwarmMissileCP=Swarm Missile CP
+Effect/Name/SwarmMissileDamage=Swarm Missile Damage
+Effect/Name/SwarmMissileImpactSet=Swarm Missile Impact Set
+Effect/Name/SwarmMissileLMLeft=Swarm Missile LM Left
+Effect/Name/SwarmMissileLMRight=Swarm Missile LM Right
+Effect/Name/SwarmMissileSearch=Swarm Missile Search
+Effect/Name/SwarmMissileSet=Swarm Missile Set
 Effect/Name/TargetBleed6secondLv1=目标1级流血6秒
 Effect/Name/TargetBurn=点燃
 Effect/Name/TargetSlow6second50=目标减速50%6秒
-Effect/Name/TempestDamage2=Tempest Damage 2
-Effect/Name/TempestLaunchMissile2=Tempest Launch Missile 2
 Effect/Name/ThorwEndSet=Thorw End Set
 Effect/Name/Throw=Throw
 Effect/Name/Throw2=击飞浮空 强制
@@ -2710,6 +2729,7 @@ Param/Value/lib_6D9D7845_C27F6894=已将伤害数字透明度改为
 Param/Value/lib_6D9D7845_C449B6AF=%
 Param/Value/lib_6D9D7845_C48BFC0A=10秒dps:
 Param/Value/lib_6D9D7845_C60BE856=%
+Param/Value/lib_6D9D7845_CA7C4A94=该mod目前缺少对战平衡性支持，请在大厅地图《崩坏生存》中游玩！
 Param/Value/lib_6D9D7845_D08246B5=已清除装备模板
 Param/Value/lib_6D9D7845_D5ABB218=:
 Param/Value/lib_6D9D7845_DC304578=已复活
@@ -2909,9 +2929,7 @@ Unit/Name/Furnace2=烈火熔炉
 Unit/Name/FusionCore=圣1504研究所
 Unit/Name/Ghost=不灭之刃
 Unit/Name/GhostAcademy=崩坏能裂变弹发射井
-Unit/Name/GunTower1=导弹塔
 Unit/Name/GunTower3=导弹塔
-Unit/Name/GunTurret1=蜂巢炮台
 Unit/Name/Helios=“赫利俄斯”医疗运输舰
 Unit/Name/Hellion=重装小兔摩托
 Unit/Name/HellionTank=重装小兔机甲
@@ -2962,7 +2980,6 @@ Unit/Name/MeiBuilding=剑道训练室
 Unit/Name/MeiC2=雷电芽衣
 Unit/Name/MeiC2Wave=冲击波 - MeiC2
 Unit/Name/MercCompound=米高扬设计制造局
-Unit/Name/MissileTurret2=电磁炮台
 Unit/Name/Nuke2=崩坏能裂变弹
 Unit/Name/Nuke4=战术核弹 头
 Unit/Name/NukeMHT=战术核弹 头
@@ -2990,6 +3007,8 @@ Unit/Name/RO_047=火焰爆弹
 Unit/Name/RO_050=死士机甲
 Unit/Name/RO_050AbilWeapon=死士机甲
 Unit/Name/RPC6626=RPC-6626
+Unit/Name/Railgun=电磁炮台
+Unit/Name/RailgunMissile=电磁炮弹
 Unit/Name/Ravager=熔岩帝王
 Unit/Name/RavagerBurrowed=熔岩帝王
 Unit/Name/RavagerCocoon=熔岩帝王茧
@@ -3009,8 +3028,8 @@ Unit/Name/StarOfEdenWorld=伊甸之星: 世界
 Unit/Name/Starport=天命空港
 Unit/Name/Stigmata=Stigmata
 Unit/Name/Stigmata2=Stigmata
+Unit/Name/SwarmMissile=蜂巢炮台
 Unit/Name/TuringAssistance=转向辅助单位
-Unit/Name/Turret2Missile=电磁炮弹
 Unit/Name/UL_030=骑士级崩坏兽
 Unit/Name/UL_040=圣殿级崩坏兽
 Unit/Name/UL_100=旋翼级崩坏兽
@@ -3109,12 +3128,14 @@ Upgrade/Name/SiegeTankUpgrade=机动底盘
 Upgrade/Name/StigmataCount=圣痕数量
 Upgrade/Name/StigmataTG1=StigmataTG1
 Upgrade/Name/Supply=人口统计
+Upgrade/Name/TurretArmorUpgrade=防御塔护甲升级
+Upgrade/Name/TurretAttackUpgrade=防御塔攻击升级
 Upgrade/Name/UlArmorUpgrade=崩坏兽护甲升级
 Upgrade/Name/UlAttackUpgrade=崩坏兽攻击升级
 Upgrade/Name/VArmorUpgrade=女武神护甲升级
-Upgrade/Name/VArmorUpgrade2=女武神护盾升级
-Upgrade/Name/VAttackUpgrade2=天命制式步枪升级
+Upgrade/Name/VAttackUpgrade=女武神制式武器升级
 Upgrade/Name/VHerrscher1st=理之律者装甲
+Upgrade/Name/VShieldUpgrade=女武神护盾升级
 Upgrade/Name/ValkyrjaDefence=崩坏能防护服
 Upgrade/Name/ValkyrjaShield=防暴护盾
 Upgrade/Name/ValkyrjaSnipe=狙杀
@@ -3165,7 +3186,6 @@ Weapon/Name/KianaC2Branch3=Kiana C2 Branch 3
 Weapon/Name/KianaC2Branch4=Kiana C2 Branch 4
 Weapon/Name/KianaC4Weapon=双枪
 Weapon/Name/KianaC4Weapon2=双枪(散射)
-Weapon/Name/LongboltMissile2=蜂巢飞弹
 Weapon/Name/MHT3Weapon=自感应三联装火神炮
 Weapon/Name/NeedleSpines2=骨针
 Weapon/Name/RO_010Weapon=机甲重拳
@@ -3175,11 +3195,12 @@ Weapon/Name/RO_034Weapon=超重型诱导弹
 Weapon/Name/RO_040Weapon=自爆雷
 Weapon/Name/RO_050Weapon=横扫
 Weapon/Name/RO_050Weapon2=钳击
+Weapon/Name/Railgun=电磁轰击
 Weapon/Name/SaBackwardWeapon=执行: 断绝
 Weapon/Name/SaCoreWeapon=加载: 满业
 Weapon/Name/SaForwardWeapon=加载: 应报
 Weapon/Name/SplitBomb=分裂炸弹
-Weapon/Name/Tempest2=电磁轰击
+Weapon/Name/SwarmMissile=蜂巢飞弹
 Weapon/Name/UL_030Weapon=刺击
 Weapon/Name/UL_040Weapon=突刺
 Weapon/Name/UnknownWeapon=提尔的断腕

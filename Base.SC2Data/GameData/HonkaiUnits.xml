@@ -40,6 +40,30 @@
         <ImpactLocation Value="TargetPoint"/>
         <AreaRelativeOffset value="0,-7"/>
     </CEffectEnumArea>
+    <CEffectDamage id="LongboltMissileU">
+        <Amount value="15"/>
+    </CEffectDamage>
+    <CEffectSet id="SwarmMissileImpactSet">
+        <EditorCategories value=""/>
+        <EffectArray value="TargetBurn"/>
+        <EffectArray value="SwarmMissileDamage"/>
+    </CEffectSet>
+    <CEffectLaunchMissile id="SwarmMissileLMLeft">
+        <EditorCategories value="Race:Terran"/>
+        <LaunchLocation Value="CasterUnit"/>
+        <ImpactLocation Value="TargetPoint"/>
+        <ImpactEffect value="SwarmMissileSearch"/>
+        <AmmoUnit value="LokiHurricaneMissileLeft"/>
+        <Movers Link="SwarmMissileMissile"/>
+    </CEffectLaunchMissile>
+    <CEffectLaunchMissile id="SwarmMissileLMRight">
+        <EditorCategories value="Race:Terran"/>
+        <LaunchLocation Value="CasterUnit"/>
+        <ImpactLocation Value="TargetPoint"/>
+        <ImpactEffect value="SwarmMissileSearch"/>
+        <AmmoUnit value="LokiHurricaneMissileRight"/>
+        <Movers Link="SwarmMissileMissile"/>
+    </CEffectLaunchMissile>
     <CEffectModifyUnit id="AddCasterLife50">
         <EditorCategories value=""/>
         <ImpactUnit Value="Caster"/>
@@ -997,6 +1021,71 @@
         <EffectArray value="Flying"/>
         <EffectArray value="TimeLock10s"/>
     </CEffectSet>
+    <CEffectCreatePersistent id="SwarmMissileSet">
+        <EditorCategories value="Race:Terran"/>
+        <TimeScaleSource Value="Caster"/>
+        <Flags index="Channeled" value="1"/>
+        <PeriodCount value="5"/>
+        <PeriodicEffectArray value="SwarmMissileCP"/>
+        <PeriodicOffsetArray value="-0.4,-0.4,0"/>
+        <PeriodicOffsetArray value="-0.4,0.4,0"/>
+        <PeriodicOffsetArray value="0.4,0.4,0"/>
+        <PeriodicOffsetArray value="0.4,-0.4,0"/>
+        <PeriodicPeriodArray value="0.01"/>
+        <HeightMap value="Ground"/>
+    </CEffectCreatePersistent>
+    <CEffectDamage id="SwarmMissileDamage">
+        <EditorCategories value="Race:Terran"/>
+        <ResponseFlags index="Acquire" value="1"/>
+        <ResponseFlags index="Flee" value="1"/>
+        <AttributeBonus index="Light" value="4"/>
+        <Visibility value="Visible"/>
+        <Flags index="Notification" value="1"/>
+        <Flags index="Impact" value="0"/>
+        <Kind value="Splash"/>
+        <KindSplash value="Splash"/>
+        <Amount value="8"/>
+        <Death value="Fire"/>
+        <SearchFilters value="-;Air,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <SearchFlags index="CallForHelp" value="1"/>
+        <SearchFlags index="ExtendByUnitRadius" value="1"/>
+        <SearchFlags index="SameCliff" value="0"/>
+    </CEffectDamage>
+    <CEffectEnumArea id="SwarmMissileSearch">
+        <EditorCategories value="Race:Terran"/>
+        <SearchFilters value="Ground;Self,Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <AreaArray Radius="0.6" Effect="SwarmMissileImpactSet"/>
+        <ImpactLocation Value="TargetPoint"/>
+    </CEffectEnumArea>
+    <CEffectCreatePersistent id="SwarmMissileCP">
+        <EditorCategories value="Race:Terran"/>
+        <Flags index="Channeled" value="1"/>
+        <Flags index="RandomOffset" value="1"/>
+        <PeriodCount value="2"/>
+        <PeriodicEffectArray value="SwarmMissileLMLeft"/>
+        <PeriodicEffectArray value="SwarmMissileLMRight"/>
+        <PeriodicOffsetArray value="0,0,0"/>
+        <PeriodicOffsetArray value="-0.15,0.15,0"/>
+        <PeriodicOffsetArray value="0,0.15,0"/>
+        <PeriodicOffsetArray value="0.15,0.15,0"/>
+        <PeriodicOffsetArray value="-0.15,0,0"/>
+        <PeriodicOffsetArray value="0,0,0"/>
+        <PeriodicOffsetArray value="0.15,0,0"/>
+        <PeriodicOffsetArray value="-0.15,-0.15,0"/>
+        <PeriodicOffsetArray value="0,-0.15,0"/>
+        <PeriodicOffsetArray value="0.15,-0.15,0"/>
+        <PeriodicOffsetArray value="-0.3,0.3,0"/>
+        <PeriodicOffsetArray value="0,0.3,0"/>
+        <PeriodicOffsetArray value="0.3,0.3,0"/>
+        <PeriodicOffsetArray value="-0.3,0,0"/>
+        <PeriodicOffsetArray value="0,0,0"/>
+        <PeriodicOffsetArray value="0.3,0,0"/>
+        <PeriodicOffsetArray value="-0.3,-0.3,0"/>
+        <PeriodicOffsetArray value="0,-0.3,0"/>
+        <PeriodicOffsetArray value="0.3,-0.3,0"/>
+        <PeriodicPeriodArray value="0.05"/>
+        <HeightMap value="Ground"/>
+    </CEffectCreatePersistent>
     <CEffectCreateHealer id="MedivacHeal2">
         <ValidatorArray value="noMarkers"/>
         <ValidatorArray value="NotWarpingIn"/>
@@ -8179,16 +8268,6 @@
         <EffectArray value="WeaponRemoveK17"/>
         <EffectArray value="WeaponRemoveK23"/>
     </CEffectSet>
-    <CEffectCreatePersistent id="LokiHurricaneMissile">
-        <PeriodicPeriodArray index="0" value="0.01"/>
-        <InitialEffect value=""/>
-        <PeriodicOffsetArray index="0" value="-0.4,-0.4,0"/>
-        <PeriodicOffsetArray index="1" value="-0.4,0.4,0"/>
-        <PeriodicOffsetArray index="2" value="0.4,0.4,0"/>
-        <PeriodicOffsetArray index="3" value="0.4,-0.4,0"/>
-        <PeriodCount value="5"/>
-        <HeightMap value="Ground"/>
-    </CEffectCreatePersistent>
     <CEffectCreatePersistent id="LokiHurricaneMissileBurstPersistent">
         <PeriodicOffsetArray index="1" value="-0.15,0.15,0"/>
         <PeriodicOffsetArray index="2" value="0,0.15,0"/>
@@ -8208,23 +8287,6 @@
         <PeriodicOffsetArray index="18" value="0.3,-0.3,0"/>
         <HeightMap value="Ground"/>
     </CEffectCreatePersistent>
-    <CEffectDamage id="LokiHurricaneMissileDamage">
-        <LaunchLocation Value="SourceUnit"/>
-        <AttributeBonus index="Light" value="3"/>
-        <Amount value="5"/>
-        <AreaArray index="0" removed="1"/>
-        <SearchFilters value="-;Air,Missile,Stasis,Dead,Hidden,Invulnerable"/>
-        <Kind value="Splash"/>
-        <KindSplash value="Splash"/>
-    </CEffectDamage>
-    <CEffectEnumArea id="LokiHurricaneMissileLeftDummy">
-        <AreaArray index="0" Radius="0.6" Effect="LokiHurricaneMissileDamage"/>
-        <SearchFilters value="-;Self,Player,Ally,Air,Missile,Stasis,Dead,Hidden,Invulnerable"/>
-    </CEffectEnumArea>
-    <CEffectEnumArea id="LokiHurricaneMissileRightDummy">
-        <AreaArray index="0" Radius="0.6" Effect="LokiHurricaneMissileDamage"/>
-        <SearchFilters value="-;Self,Player,Ally,Air,Missile,Stasis,Dead,Hidden,Invulnerable"/>
-    </CEffectEnumArea>
     <CEffectCreatePersistent id="K23CP">
         <EditorCategories value="Race:Terran"/>
         <WhichLocation Value="CasterPoint"/>
@@ -8316,6 +8378,22 @@
         <SearchFilters value="-;Self,Player,Ally,Air,Missile,Stasis,Dead,Hidden,Invulnerable"/>
         <AreaArray Arc="119.9816" Radius="0.5" Effect="PsiBlades2"/>
     </CEffectEnumArea>
+    <CEffectDamage id="RailgunDamage">
+        <EditorCategories value="Race:Terran"/>
+        <ResponseFlags index="Acquire" value="1"/>
+        <ResponseFlags index="Flee" value="1"/>
+        <ImpactLocation Value="TargetUnit"/>
+        <AttributeBonus index="Massive" value="30"/>
+        <Flags index="Notification" value="1"/>
+        <Amount value="100"/>
+        <Death value="Electrocute"/>
+        <SearchFlags index="CallForHelp" value="1"/>
+    </CEffectDamage>
+    <CEffectLaunchMissile id="RailgunLaunchMissile">
+        <EditorCategories value="Race:Protoss"/>
+        <ImpactEffect value="RailgunDamage"/>
+        <AmmoUnit value="RailgunMissile"/>
+    </CEffectLaunchMissile>
     <CEffectDamage id="PsiBlades22" parent="DU_WEAP">
         <ValidatorArray value="NotHidden"/>
         <EditorCategories value="Race:Zerg"/>
@@ -8413,23 +8491,6 @@
         <Duration value="6"/>
         <ValidatorArray index="0" value="TargetNotBuilding"/>
     </CEffectApplyBehavior>
-    <CEffectDamage id="TempestDamage2">
-        <EditorCategories value="Race:Protoss"/>
-        <ResponseFlags index="Acquire" value="1"/>
-        <ResponseFlags index="Flee" value="1"/>
-        <ImpactLocation Value="TargetUnit"/>
-        <AttributeBonus index="Massive" value="30"/>
-        <Visibility value="Visible"/>
-        <Flags index="Notification" value="1"/>
-        <Amount value="100"/>
-        <SearchFlags index="CallForHelp" value="1"/>
-        <Death value="Electrocute"/>
-    </CEffectDamage>
-    <CEffectLaunchMissile id="TempestLaunchMissile2">
-        <EditorCategories value="Race:Protoss"/>
-        <ImpactEffect value="TempestDamage2"/>
-        <AmmoUnit value="Turret2Missile"/>
-    </CEffectLaunchMissile>
     <CEffectApplyBehavior id="Throw">
         <EditorCategories value=""/>
     </CEffectApplyBehavior>
@@ -9885,6 +9946,44 @@
         <SearchFlags index="ExtendByUnitRadius" value="1"/>
         <SearchFlags index="OffsetByUnitRadius" value="1"/>
     </CEffectEnumArea>
+    <CAbilResearch id="AttackArmorResearch">
+        <EditorCategories value="AbilityorEffectType:Structures"/>
+        <InfoArray index="Research1" Time="110" Upgrade="ROAttackUpgrade">
+            <Resource index="Minerals" value="150"/>
+            <Resource index="Vespene" value="150"/>
+            <Button DefaultButtonFace="ROAttackUpgrade" Requirements="ROAttackCanUpgrade"/>
+        </InfoArray>
+        <InfoArray index="Research2" Time="110" Upgrade="ROArmorUpgrade">
+            <Resource index="Minerals" value="100"/>
+            <Resource index="Vespene" value="100"/>
+            <Button DefaultButtonFace="ROArmorUpgrade" Requirements="ROArmorCanUpgrade"/>
+        </InfoArray>
+        <InfoArray index="Research3" Time="110" Upgrade="VShieldUpgrade">
+            <Resource index="Minerals" value="150"/>
+            <Resource index="Vespene" value="150"/>
+            <Button DefaultButtonFace="VShieldUpgrade" State="Restricted" Requirements="VShieldCanUpgrade"/>
+        </InfoArray>
+        <InfoArray index="Research4" Time="110" Upgrade="VArmorUpgrade">
+            <Resource index="Minerals" value="100"/>
+            <Resource index="Vespene" value="100"/>
+            <Button DefaultButtonFace="VArmorUpgrade" State="Restricted" Requirements="HumanArmorCanUpgrade"/>
+        </InfoArray>
+        <InfoArray index="Research5" Time="110" Upgrade="VAttackUpgrade">
+            <Resource index="Minerals" value="150"/>
+            <Resource index="Vespene" value="150"/>
+            <Button DefaultButtonFace="VWeaponUpgrade" State="Restricted" Requirements="VWeaponUpgradeCanUpgrade"/>
+        </InfoArray>
+        <InfoArray index="Research6" Time="110" Upgrade="TurretAttackUpgrade">
+            <Resource index="Minerals" value="150"/>
+            <Resource index="Vespene" value="150"/>
+            <Button DefaultButtonFace="TurretAttackUpgrade" Requirements="TurretAttackCanUpgrade"/>
+        </InfoArray>
+        <InfoArray index="Research7" Time="110" Upgrade="TurretArmorUpgrade">
+            <Resource index="Minerals" value="100"/>
+            <Resource index="Vespene" value="100"/>
+            <Button DefaultButtonFace="TurretArmorUpgrade" Requirements="TurretArmorCanUpgrade"/>
+        </InfoArray>
+    </CAbilResearch>
     <CAbilEffectTarget id="SaUltimate">
         <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
         <Effect index="0" value="SaUltimateCU"/>
@@ -11006,12 +11105,6 @@
             <Flags index="ToSelection" value="1"/>
         </CmdButtonArray>
     </CAbilEffectTarget>
-    <CAbilResearch id="FusionCoreResearch">
-        <InfoArray index="Research1" Time="300">
-            <Resource index="Minerals" value="600"/>
-            <Resource index="Vespene" value="400"/>
-        </InfoArray>
-    </CAbilResearch>
     <CAbilResearch id="DivineKeysResearch">
         <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
         <InfoArray index="Research1" Time="84" Upgrade="DivineKey1st">
@@ -11074,10 +11167,10 @@
                 <Flags index="ShowInGlossary" value="1"/>
             </Button>
         </InfoArray>
-        <InfoArray index="Research2" Time="160" Upgrade="TerranBuildingArmor">
+        <InfoArray index="Research2" Time="160" Upgrade="NeosteelFrame">
             <Resource index="Minerals" value="150"/>
             <Resource index="Vespene" value="150"/>
-            <Button DefaultButtonFace="UpgradeBuildingArmorLevel1" State="Restricted" Requirements="LearnTerranBuildingArmor">
+            <Button DefaultButtonFace="ResearchNeosteelFrame" State="Restricted" Requirements="NeosteelFrameCanResearch">
                 <Flags index="ShowInGlossary" value="1"/>
             </Button>
         </InfoArray>
@@ -11091,25 +11184,17 @@
             <Resource index="Vespene" value="175"/>
             <Button DefaultButtonFace="ResearchSuperC" State="Restricted" Requirements="SuperCCanResearch"/>
         </InfoArray>
-        <InfoArray index="Research5" Time="180" Upgrade="VArmorUpgrade2">
-            <Resource index="Minerals" value="175"/>
-            <Resource index="Vespene" value="175"/>
-            <Button DefaultButtonFace="TerranInfantryArmorLevel12" State="Restricted" Requirements="HumanArmorCanUpgrade2"/>
+        <InfoArray index="Research5" Time="300" Upgrade="BattlecruiserEnableSpecializations">
+            <Resource index="Minerals" value="600"/>
+            <Resource index="Vespene" value="400"/>
+            <Button DefaultButtonFace="ResearchBattlecruiserSpecializations" State="Restricted" Requirements="LearnBattlecruiserSpecializations">
+                <Flags index="ShowInGlossary" value="1"/>
+            </Button>
         </InfoArray>
         <InfoArray index="Research6" Time="110" Upgrade="ValkyrjaShield">
             <Resource index="Minerals" value="100"/>
             <Resource index="Vespene" value="100"/>
             <Button DefaultButtonFace="ValkyrjaShield" Requirements="ValkyrjaShieldCR"/>
-        </InfoArray>
-        <InfoArray index="Research7" Time="110" Upgrade="VArmorUpgrade">
-            <Resource index="Minerals" value="125"/>
-            <Resource index="Vespene" value="125"/>
-            <Button DefaultButtonFace="TerranInfantryArmorLevel1" State="Restricted" Requirements="HumanArmorCanUpgrade"/>
-        </InfoArray>
-        <InfoArray index="Research8" Time="110" Upgrade="VAttackUpgrade2">
-            <Resource index="Minerals" value="100"/>
-            <Resource index="Vespene" value="100"/>
-            <Button DefaultButtonFace="TerranInfantryWeaponsLevel12" State="Restricted" Requirements="HumanArmorCanUpgrade22"/>
         </InfoArray>
         <InfoArray index="Research9" Time="220" Upgrade="MicroFiltering">
             <Resource index="Minerals" value="250"/>
@@ -11257,12 +11342,12 @@
         <InfoArray index="Research1" Time="135" Upgrade="ROAttackUpgrade">
             <Resource index="Minerals" value="150"/>
             <Resource index="Vespene" value="150"/>
-            <Button DefaultButtonFace="TerranVehicleWeaponsLevel12" Requirements="ROAttackCanUpgrade"/>
+            <Button DefaultButtonFace="ROAttackUpgrade" Requirements="ROAttackCanUpgrade"/>
         </InfoArray>
         <InfoArray index="Research2" Time="135" Upgrade="ROArmorUpgrade">
             <Resource index="Minerals" value="150"/>
             <Resource index="Vespene" value="150"/>
-            <Button DefaultButtonFace="TerranVehiclePlatingLevel12" Requirements="ROArmorCanUpgrade"/>
+            <Button DefaultButtonFace="ROArmorUpgrade" Requirements="ROArmorCanUpgrade"/>
         </InfoArray>
     </CAbilResearch>
     <CAbilEffectTarget id="CalldownMULE">
@@ -13136,11 +13221,11 @@
         <InfoArray index="Build15" Unit="MercCompound" Time="65">
             <Button DefaultButtonFace="MercCompound" Requirements="HaveStarport"/>
         </InfoArray>
-        <InfoArray index="Build18" Unit="GunTurret1" Time="40">
-            <Button DefaultButtonFace="GunTurret1" Requirements="HaveHighTower"/>
+        <InfoArray index="Build18" Unit="SwarmMissile" Time="40">
+            <Button DefaultButtonFace="SwarmMissile" Requirements="HaveHighTower"/>
         </InfoArray>
-        <InfoArray index="Build21" Unit="MissileTurret2" Time="45">
-            <Button DefaultButtonFace="MissileTurret2" Requirements="HaveHighTower"/>
+        <InfoArray index="Build21" Unit="Railgun" Time="45">
+            <Button DefaultButtonFace="Railgun" Requirements="HaveHighTower"/>
         </InfoArray>
     </CAbilBuild>
     <CAbilTrain id="TrainAvatar">
@@ -13426,24 +13511,6 @@
             <Button Requirements="ZergGasLimit"/>
         </InfoArray>
     </CAbilBuild>
-    <CAbilResearch id="evolutionchamberresearch">
-        <InfoArray index="Research1" Time="50" Upgrade="DeadgalAttackUpgrade">
-            <Resource index="Minerals" value="150"/>
-            <Resource index="Vespene" value="150"/>
-            <Button Requirements="DeadgalAttackCanUpgrade"/>
-        </InfoArray>
-        <InfoArray index="Research2" Time="70" Upgrade="DeadgalArmorUpgrade">
-            <Button DefaultButtonFace="zerggroundarmor1" Requirements="DeadgalArmorCanUpgrade"/>
-        </InfoArray>
-        <InfoArray index="Research3" Time="70" Upgrade="UlAttackUpgrade">
-            <Resource index="Minerals" value="150"/>
-            <Resource index="Vespene" value="150"/>
-            <Button DefaultButtonFace="zergmeleeweapons12" Requirements="UllAttackCanUpgrade"/>
-        </InfoArray>
-        <InfoArray index="Research4" Time="80" Upgrade="UlArmorUpgrade">
-            <Button DefaultButtonFace="zerggroundarmor12" Requirements="UlArmorCanUpgrade"/>
-        </InfoArray>
-    </CAbilResearch>
     <CAbilMorph id="BronyaC7MorphToMotor">
         <AbilSetId value="HellionMode"/>
         <EditorCategories value="Race:Terran,AbilityorEffectType:MorphsandBurrows"/>
@@ -14686,6 +14753,12 @@
         <Abil value="UL_100Abil"/>
         <TargetFind value="UL_100"/>
     </CTacticalOrder>
+    <CRequirement id="LearnTerranDefenseRangeBonus">
+        <NodeArray index="Show" Link="LTCountUpgradeHiSecAutoTrackingQueuedOrBetter2"/>
+    </CRequirement>
+    <CRequirement id="NeosteelFrameCanResearch">
+        <NodeArray index="Show" Link="LTCountUpgradeNeosteelFrameQueuedOrBetter2"/>
+    </CRequirement>
     <CRequirement id="AvatarCanUnlockKiana">
         <NodeArray index="Use" Link="Not2525757573CountUpgradeAvatarNoKianaCompleteOnly"/>
         <NodeArray index="Show" Link="NoAvatarChosen"/>
@@ -15290,16 +15363,13 @@
         <NodeArray index="Show" Link="LTCountUpgradeReduceThunderQueuedOrBetter10"/>
     </CRequirement>
     <CRequirement id="SCVGatherCanUpgrade">
-        <NodeArray index="Use" Link="LTSumCountUpgradeMicroFilteringQueuedOnlyCountUpgradeMicroFilteringInProgressOnly1"/>
         <NodeArray index="Show" Link="LTCountUpgradeMicroFilteringQueuedOrBetter6"/>
     </CRequirement>
-    <CRequirement id="HumanArmorCanUpgrade2">
-        <NodeArray index="Use" Link="LTSumCountUpgradeVArmorUpgrade2QueuedOnlyCountUpgradeVArmorUpgrade2InProgressOnly1"/>
-        <NodeArray index="Show" Link="LTCountUpgradeVArmorUpgrade2QueuedOrBetter10"/>
+    <CRequirement id="VShieldCanUpgrade">
+        <NodeArray index="Show" Link="LTCountUpgradeVShieldUpgradeQueuedOrBetter10"/>
     </CRequirement>
-    <CRequirement id="HumanArmorCanUpgrade22">
-        <NodeArray index="Use" Link="LTSumCountUpgradeVAttackUpgrade2QueuedOnlyCountUpgradeVAttackUpgrade2InProgressOnly1"/>
-        <NodeArray index="Show" Link="LTCountUpgradeVAttackUpgrade2QueuedOrBetter10"/>
+    <CRequirement id="VWeaponUpgradeCanUpgrade">
+        <NodeArray index="Show" Link="LTCountUpgradeVAttackUpgradeQueuedOrBetter10"/>
     </CRequirement>
     <CRequirement id="CommanderRaynorOrbitalDropPodsCanUpgrade">
         <NodeArray index="Show" Link="NotCountUpgradeOrbitalStrike2QueuedOrBetter"/>
@@ -15308,12 +15378,16 @@
         <NodeArray index="Show" Link="NotCountUpgradeUltraCapacitorsQueuedOrBetter"/>
     </CRequirement>
     <CRequirement id="ROArmorCanUpgrade">
-        <NodeArray index="Use" Link="LTSumCountUpgradeROArmorUpgradeQueuedOnlyCountUpgradeROArmorUpgradeInProgressOnly1"/>
-        <NodeArray index="Show" Link="LTCountUpgradeROArmorUpgradeQueuedOrBetter8"/>
+        <NodeArray index="Show" Link="LTCountUpgradeROArmorUpgradeQueuedOrBetter10"/>
     </CRequirement>
     <CRequirement id="ROAttackCanUpgrade">
-        <NodeArray index="Use" Link="LTSumCountUpgradeROAttackUpgradeQueuedOnlyCountUpgradeROAttackUpgradeInProgressOnly1"/>
         <NodeArray index="Show" Link="LTCountUpgradeROAttackUpgradeQueuedOrBetter10"/>
+    </CRequirement>
+    <CRequirement id="TurretArmorCanUpgrade">
+        <NodeArray index="Show" Link="LTCountUpgradeTurretArmorUpgradeQueuedOrBetter10"/>
+    </CRequirement>
+    <CRequirement id="TurretAttackCanUpgrade">
+        <NodeArray index="Show" Link="LTCountUpgradeTurretAttackUpgradeQueuedOrBetter10"/>
     </CRequirement>
     <CRequirement id="FireSuppressionSystemsCanResearch">
         <NodeArray index="Show" Link="NotCountUpgradeFireSuppressionSystemsQueuedOrBetter"/>
@@ -15325,8 +15399,7 @@
         <NodeArray index="Show" Link="CountBehaviorHerrscher2ReboundMissileCompleteOnlyAtUnit"/>
     </CRequirement>
     <CRequirement id="HumanArmorCanUpgrade">
-        <NodeArray index="Use" Link="LTSumCountUpgradeVArmorUpgradeQueuedOnlyCountUpgradeVArmorUpgradeInProgressOnly1"/>
-        <NodeArray index="Show" Link="LTCountUpgradeKianaC4Upgrade4QueuedOnly10"/>
+        <NodeArray index="Show" Link="LTCountUpgradeVArmorUpgradeQueuedOnly10"/>
     </CRequirement>
     <CRequirement id="KianaC2CanMorph">
         <NodeArray index="Use" Link="AndCountUpgradeKianaC2UnlockCompleteOnly2420890365"/>
@@ -15922,6 +15995,11 @@
     <CButton id="SkinSeeleC102">
         <Icon value="Assets\Textures\711_04_02.dds"/>
         <AlertIcon value="Assets\Textures\711_04_02.dds"/>
+    </CButton>
+    <CButton id="VArmorUpgrade">
+        <Icon value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel1.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel1.dds"/>
+        <EditorCategories value="Race:Terran"/>
     </CButton>
     <CButton id="TrainBronyaC7">
         <Icon value="Assets\Textures\AvatarBronyaC7.tga"/>
@@ -16617,24 +16695,34 @@
         <EditorCategories value="Race:Terran"/>
         <TintRacially value="1"/>
     </CButton>
-    <CButton id="TerranInfantryArmorLevel12">
+    <CButton id="VShieldUpgrade">
         <Icon value="Assets\Textures\btn-upgrade-protoss-shieldslevel1.dds"/>
         <AlertIcon value="Assets\Textures\btn-upgrade-protoss-shieldslevel1.dds"/>
         <EditorCategories value="Race:Terran"/>
     </CButton>
-    <CButton id="TerranInfantryWeaponsLevel12">
+    <CButton id="VWeaponUpgrade">
         <Icon value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel1.dds"/>
         <AlertIcon value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel1.dds"/>
         <EditorCategories value="Race:Terran"/>
     </CButton>
-    <CButton id="TerranVehiclePlatingLevel12">
+    <CButton id="ROArmorUpgrade">
         <Icon value="Assets\Textures\btn-upgrade-terran-vehicleplatinglevel1.dds"/>
         <AlertIcon value="Assets\Textures\btn-upgrade-terran-vehicleplatinglevel1.dds"/>
         <EditorCategories value="Race:Terran"/>
     </CButton>
-    <CButton id="TerranVehicleWeaponsLevel12">
+    <CButton id="ROAttackUpgrade">
         <Icon value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel1.dds"/>
         <AlertIcon value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel1.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="TurretArmorUpgrade">
+        <Icon value="Assets\Textures\btn-upgrade-terran-buildingarmor.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-terran-buildingarmor.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="TurretAttackUpgrade">
+        <Icon value="Assets\Textures\btn-upgrade-swann-multilockweaponsystem.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-swann-multilockweaponsystem.dds"/>
         <EditorCategories value="Race:Terran"/>
     </CButton>
     <CButton id="Transfusion2">
@@ -17020,12 +17108,12 @@
         <Icon value="Assets\Textures\btn-unit-GunTower2.tga"/>
         <AlertIcon value="Assets\Textures\btn-unit-GunTower2.tga"/>
     </CButton>
-    <CButton id="GunTurret1">
+    <CButton id="SwarmMissile">
         <Icon value="Assets\Textures\btn-unit-GunTower1.tga"/>
         <AlertIcon value="Assets\Textures\btn-unit-GunTower1.tga"/>
         <EditorCategories value="Race:Terran"/>
     </CButton>
-    <CButton id="MissileTurret2">
+    <CButton id="Railgun">
         <Icon value="Assets\Textures\btn-unit-GunTower3.tga"/>
         <AlertIcon value="Assets\Textures\btn-unit-GunTower3.tga"/>
         <EditorCategories value="Race:Terran"/>
@@ -17075,7 +17163,6 @@
         <AlertIcon value="Assets\Textures\BTN-Ability-Terran-HaywireMissile.dds"/>
         <EditorCategories value="Race:Terran"/>
     </CButton>
-    <CButton id="TerranInfantryArmorLevel1"/>
     <CButton id="TrainKianaC2">
         <Icon value="Assets\Textures\AvatarKianaC2.tga"/>
         <AlertIcon value="Assets\Textures\AvatarKianaC2.tga"/>
@@ -17409,6 +17496,22 @@
         <EditorCategories value="Race:Neutral"/>
         <Universal value="1"/>
     </CButton>
+    <CRequirementLT id="LTCountUpgradeHiSecAutoTrackingQueuedOrBetter2">
+        <OperandArray index="0" value="CountUpgradeHiSecAutoTrackingQueuedOrBetter"/>
+        <OperandArray index="1" value="2"/>
+    </CRequirementLT>
+    <CRequirementLT id="LTCountUpgradeNeosteelFrameQueuedOrBetter2">
+        <OperandArray index="0" value="CountUpgradeNeosteelFrameQueuedOrBetter"/>
+        <OperandArray index="1" value="2"/>
+    </CRequirementLT>
+    <CRequirementCountUpgrade id="CountUpgradeTurretArmorUpgradeQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="TurretArmorUpgrade" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeTurretAttackUpgradeQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="TurretAttackUpgrade" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
     <CRequirementConst id="03861215421"/>
     <CRequirementAnd id="AndCountUpgradeBronyaC2UnlockCompleteOnly2420890365">
         <OperandArray value="CountUpgradeBronyaC2UnlockCompleteOnly2420890365"/>
@@ -17601,10 +17704,6 @@
         <Flags index="TechTreeCheat" value="0"/>
         <Count Link="KianaC1Unlock" State="QueuedOrBetter"/>
     </CRequirementCountUpgrade>
-    <CRequirementCountUpgrade id="CountUpgradeKianaC4Upgrade4QueuedOnly">
-        <Flags index="TechTreeCheat" value="0"/>
-        <Count Link="KianaC4Upgrade4"/>
-    </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeMHTUpgradeCompleteOnly">
         <Flags index="TechTreeCheat" value="0"/>
         <Count Link="MHTUpgrade" State="CompleteOnly"/>
@@ -17616,6 +17715,14 @@
     <CRequirementCountUpgrade id="CountUpgradeSupplyCompleteOnly">
         <Flags index="TechTreeCheat" value="0"/>
         <Count Link="Supply" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeVAttackUpgradeQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="VAttackUpgrade" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeVShieldUpgradeQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="VShieldUpgrade" State="QueuedOrBetter"/>
     </CRequirementCountUpgrade>
     <CRequirementLT id="LTCountUpgradeBronyaATTACKQueuedOrBetter16">
         <OperandArray index="0" value="CountUpgradeBronyaATTACKQueuedOrBetter"/>
@@ -17637,16 +17744,28 @@
         <OperandArray index="0" value="CountUpgradeBronyaShieldQueuedOrBetter"/>
         <OperandArray index="1" value="16"/>
     </CRequirementLT>
-    <CRequirementLT id="LTCountUpgradeKianaC4Upgrade4QueuedOnly10">
-        <OperandArray index="0" value="CountUpgradeKianaC4Upgrade4QueuedOnly"/>
+    <CRequirementLT id="LTCountUpgradeROArmorUpgradeQueuedOrBetter10">
+        <OperandArray index="0" value="CountUpgradeROArmorUpgradeQueuedOrBetter"/>
         <OperandArray index="1" value="10"/>
     </CRequirementLT>
-    <CRequirementLT id="LTCountUpgradeVArmorUpgrade2QueuedOrBetter10">
-        <OperandArray index="0" value="CountUpgradeVArmorUpgrade2QueuedOrBetter"/>
+    <CRequirementLT id="LTCountUpgradeTurretArmorUpgradeQueuedOrBetter10">
+        <OperandArray index="0" value="CountUpgradeTurretArmorUpgradeQueuedOrBetter"/>
         <OperandArray index="1" value="10"/>
     </CRequirementLT>
-    <CRequirementLT id="LTCountUpgradeVAttackUpgrade2QueuedOrBetter10">
-        <OperandArray index="0" value="CountUpgradeVAttackUpgrade2QueuedOrBetter"/>
+    <CRequirementLT id="LTCountUpgradeTurretAttackUpgradeQueuedOrBetter10">
+        <OperandArray index="0" value="CountUpgradeTurretAttackUpgradeQueuedOrBetter"/>
+        <OperandArray index="1" value="10"/>
+    </CRequirementLT>
+    <CRequirementLT id="LTCountUpgradeVArmorUpgradeQueuedOnly10">
+        <OperandArray index="0" value="CountUpgradeVArmorUpgradeQueuedOnly"/>
+        <OperandArray index="1" value="10"/>
+    </CRequirementLT>
+    <CRequirementLT id="LTCountUpgradeVAttackUpgradeQueuedOrBetter10">
+        <OperandArray index="0" value="CountUpgradeVAttackUpgradeQueuedOrBetter"/>
+        <OperandArray index="1" value="10"/>
+    </CRequirementLT>
+    <CRequirementLT id="LTCountUpgradeVShieldUpgradeQueuedOrBetter10">
+        <OperandArray index="0" value="CountUpgradeVShieldUpgradeQueuedOrBetter"/>
         <OperandArray index="1" value="10"/>
     </CRequirementLT>
     <CRequirementLTE id="LTE57336687CountUpgradeSupplyCompleteOnly100">
@@ -19397,14 +19516,6 @@
         <Flags index="TechTreeCheat" value="0"/>
         <Count Link="KianaC4Upgrade4" State="QueuedOrBetter"/>
     </CRequirementCountUpgrade>
-    <CRequirementCountUpgrade id="CountUpgradeMicroFilteringInProgressOnly">
-        <Flags index="TechTreeCheat" value="0"/>
-        <Count Link="MicroFiltering" State="InProgressOnly"/>
-    </CRequirementCountUpgrade>
-    <CRequirementCountUpgrade id="CountUpgradeMicroFilteringQueuedOnly">
-        <Flags index="TechTreeCheat" value="0"/>
-        <Count Link="MicroFiltering"/>
-    </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeMicroFilteringQueuedOrBetter">
         <Flags index="TechTreeCheat" value="0"/>
         <Count Link="MicroFiltering" State="QueuedOrBetter"/>
@@ -19417,25 +19528,9 @@
         <Flags index="TechTreeCheat" value="0"/>
         <Count Link="OrbitalStrike2" State="QueuedOrBetter"/>
     </CRequirementCountUpgrade>
-    <CRequirementCountUpgrade id="CountUpgradeROArmorUpgradeInProgressOnly">
-        <Flags index="TechTreeCheat" value="0"/>
-        <Count Link="ROArmorUpgrade" State="InProgressOnly"/>
-    </CRequirementCountUpgrade>
-    <CRequirementCountUpgrade id="CountUpgradeROArmorUpgradeQueuedOnly">
-        <Flags index="TechTreeCheat" value="0"/>
-        <Count Link="ROArmorUpgrade"/>
-    </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeROArmorUpgradeQueuedOrBetter">
         <Flags index="TechTreeCheat" value="0"/>
         <Count Link="ROArmorUpgrade" State="QueuedOrBetter"/>
-    </CRequirementCountUpgrade>
-    <CRequirementCountUpgrade id="CountUpgradeROAttackUpgradeInProgressOnly">
-        <Flags index="TechTreeCheat" value="0"/>
-        <Count Link="ROAttackUpgrade" State="InProgressOnly"/>
-    </CRequirementCountUpgrade>
-    <CRequirementCountUpgrade id="CountUpgradeROAttackUpgradeQueuedOnly">
-        <Flags index="TechTreeCheat" value="0"/>
-        <Count Link="ROAttackUpgrade"/>
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeROAttackUpgradeQueuedOrBetter">
         <Flags index="TechTreeCheat" value="0"/>
@@ -19489,37 +19584,9 @@
         <Flags index="TechTreeCheat" value="0"/>
         <Count Link="UltraCapacitors" State="QueuedOrBetter"/>
     </CRequirementCountUpgrade>
-    <CRequirementCountUpgrade id="CountUpgradeVArmorUpgrade2InProgressOnly">
-        <Flags index="TechTreeCheat" value="0"/>
-        <Count Link="VArmorUpgrade2" State="InProgressOnly"/>
-    </CRequirementCountUpgrade>
-    <CRequirementCountUpgrade id="CountUpgradeVArmorUpgrade2QueuedOnly">
-        <Flags index="TechTreeCheat" value="0"/>
-        <Count Link="VArmorUpgrade2"/>
-    </CRequirementCountUpgrade>
-    <CRequirementCountUpgrade id="CountUpgradeVArmorUpgrade2QueuedOrBetter">
-        <Flags index="TechTreeCheat" value="0"/>
-        <Count Link="VArmorUpgrade2" State="QueuedOrBetter"/>
-    </CRequirementCountUpgrade>
-    <CRequirementCountUpgrade id="CountUpgradeVArmorUpgradeInProgressOnly">
-        <Flags index="TechTreeCheat" value="0"/>
-        <Count Link="VArmorUpgrade" State="InProgressOnly"/>
-    </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeVArmorUpgradeQueuedOnly">
         <Flags index="TechTreeCheat" value="0"/>
         <Count Link="VArmorUpgrade"/>
-    </CRequirementCountUpgrade>
-    <CRequirementCountUpgrade id="CountUpgradeVAttackUpgrade2InProgressOnly">
-        <Flags index="TechTreeCheat" value="0"/>
-        <Count Link="VAttackUpgrade2" State="InProgressOnly"/>
-    </CRequirementCountUpgrade>
-    <CRequirementCountUpgrade id="CountUpgradeVAttackUpgrade2QueuedOnly">
-        <Flags index="TechTreeCheat" value="0"/>
-        <Count Link="VAttackUpgrade2"/>
-    </CRequirementCountUpgrade>
-    <CRequirementCountUpgrade id="CountUpgradeVAttackUpgrade2QueuedOrBetter">
-        <Flags index="TechTreeCheat" value="0"/>
-        <Count Link="VAttackUpgrade2" State="QueuedOrBetter"/>
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeValkyrjaDefenceQueuedOrBetter">
         <Flags index="TechTreeCheat" value="0"/>
@@ -19561,10 +19628,6 @@
         <OperandArray index="0" value="CountUpgradeKianaC4Upgrade1QueuedOrBetter"/>
         <OperandArray index="1" value="3"/>
     </CRequirementLT>
-    <CRequirementLT id="LTCountUpgradeROArmorUpgradeQueuedOrBetter8">
-        <OperandArray index="0" value="CountUpgradeROArmorUpgradeQueuedOrBetter"/>
-        <OperandArray index="1" value="8"/>
-    </CRequirementLT>
     <CRequirementLT id="LTCountUpgradeROAttackUpgradeQueuedOrBetter10">
         <OperandArray index="0" value="CountUpgradeROAttackUpgradeQueuedOrBetter"/>
         <OperandArray index="1" value="10"/>
@@ -19597,36 +19660,12 @@
         <OperandArray index="0" value="SumCountUpgradeDeadgalAttackUpgradeQueuedOnlyCountUpgradeDeadgalAttackUpgradeInProgressOnly"/>
         <OperandArray index="1" value="1"/>
     </CRequirementLT>
-    <CRequirementLT id="LTSumCountUpgradeMicroFilteringQueuedOnlyCountUpgradeMicroFilteringInProgressOnly1">
-        <OperandArray index="0" value="SumCountUpgradeMicroFilteringQueuedOnlyCountUpgradeMicroFilteringInProgressOnly"/>
-        <OperandArray index="1" value="1"/>
-    </CRequirementLT>
-    <CRequirementLT id="LTSumCountUpgradeROArmorUpgradeQueuedOnlyCountUpgradeROArmorUpgradeInProgressOnly1">
-        <OperandArray index="0" value="SumCountUpgradeROArmorUpgradeQueuedOnlyCountUpgradeROArmorUpgradeInProgressOnly"/>
-        <OperandArray index="1" value="1"/>
-    </CRequirementLT>
-    <CRequirementLT id="LTSumCountUpgradeROAttackUpgradeQueuedOnlyCountUpgradeROAttackUpgradeInProgressOnly1">
-        <OperandArray index="0" value="SumCountUpgradeROAttackUpgradeQueuedOnlyCountUpgradeROAttackUpgradeInProgressOnly"/>
-        <OperandArray index="1" value="1"/>
-    </CRequirementLT>
     <CRequirementLT id="LTSumCountUpgradeUlArmorUpgradeQueuedOnlyCountUpgradeUlArmorUpgradeInProgressOnly1">
         <OperandArray index="0" value="SumCountUpgradeUlArmorUpgradeQueuedOnlyCountUpgradeUlArmorUpgradeInProgressOnly"/>
         <OperandArray index="1" value="1"/>
     </CRequirementLT>
     <CRequirementLT id="LTSumCountUpgradeUlAttackUpgradeQueuedOnlyCountUpgradeUlAttackUpgradeInProgressOnly1">
         <OperandArray index="0" value="SumCountUpgradeUlAttackUpgradeQueuedOnlyCountUpgradeUlAttackUpgradeInProgressOnly"/>
-        <OperandArray index="1" value="1"/>
-    </CRequirementLT>
-    <CRequirementLT id="LTSumCountUpgradeVArmorUpgrade2QueuedOnlyCountUpgradeVArmorUpgrade2InProgressOnly1">
-        <OperandArray index="0" value="SumCountUpgradeVArmorUpgrade2QueuedOnlyCountUpgradeVArmorUpgrade2InProgressOnly"/>
-        <OperandArray index="1" value="1"/>
-    </CRequirementLT>
-    <CRequirementLT id="LTSumCountUpgradeVArmorUpgradeQueuedOnlyCountUpgradeVArmorUpgradeInProgressOnly1">
-        <OperandArray index="0" value="SumCountUpgradeVArmorUpgradeQueuedOnlyCountUpgradeVArmorUpgradeInProgressOnly"/>
-        <OperandArray index="1" value="1"/>
-    </CRequirementLT>
-    <CRequirementLT id="LTSumCountUpgradeVAttackUpgrade2QueuedOnlyCountUpgradeVAttackUpgrade2InProgressOnly1">
-        <OperandArray index="0" value="SumCountUpgradeVAttackUpgrade2QueuedOnlyCountUpgradeVAttackUpgrade2InProgressOnly"/>
         <OperandArray index="1" value="1"/>
     </CRequirementLT>
     <CRequirementNE id="NECountUnitBronyaC1CompleteOnly0">
@@ -19978,21 +20017,9 @@
         <OperandArray value="CountUpgradeFrozenDurationQueuedOnly"/>
         <OperandArray value="CountUpgradeFrozenDurationInProgressOnly"/>
     </CRequirementSum>
-    <CRequirementSum id="SumCountUpgradeMicroFilteringQueuedOnlyCountUpgradeMicroFilteringInProgressOnly">
-        <OperandArray value="CountUpgradeMicroFilteringQueuedOnly"/>
-        <OperandArray value="CountUpgradeMicroFilteringInProgressOnly"/>
-    </CRequirementSum>
     <CRequirementSum id="SumCountUpgradePalsyDurationQueuedOnlyCountUpgradePalsyDurationInProgressOnly">
         <OperandArray value="CountUpgradePalsyDurationQueuedOnly"/>
         <OperandArray value="CountUpgradePalsyDurationInProgressOnly"/>
-    </CRequirementSum>
-    <CRequirementSum id="SumCountUpgradeROArmorUpgradeQueuedOnlyCountUpgradeROArmorUpgradeInProgressOnly">
-        <OperandArray value="CountUpgradeROArmorUpgradeQueuedOnly"/>
-        <OperandArray value="CountUpgradeROArmorUpgradeInProgressOnly"/>
-    </CRequirementSum>
-    <CRequirementSum id="SumCountUpgradeROAttackUpgradeQueuedOnlyCountUpgradeROAttackUpgradeInProgressOnly">
-        <OperandArray value="CountUpgradeROAttackUpgradeQueuedOnly"/>
-        <OperandArray value="CountUpgradeROAttackUpgradeInProgressOnly"/>
     </CRequirementSum>
     <CRequirementSum id="SumCountUpgradeReduceFireQueuedOnlyCountUpgradeReduceFireInProgressOnly">
         <OperandArray value="CountUpgradeReduceFireQueuedOnly"/>
@@ -20017,18 +20044,6 @@
     <CRequirementSum id="SumCountUpgradeUlAttackUpgradeQueuedOnlyCountUpgradeUlAttackUpgradeInProgressOnly">
         <OperandArray value="CountUpgradeUlAttackUpgradeQueuedOnly"/>
         <OperandArray value="CountUpgradeUlAttackUpgradeInProgressOnly"/>
-    </CRequirementSum>
-    <CRequirementSum id="SumCountUpgradeVArmorUpgrade2QueuedOnlyCountUpgradeVArmorUpgrade2InProgressOnly">
-        <OperandArray value="CountUpgradeVArmorUpgrade2QueuedOnly"/>
-        <OperandArray value="CountUpgradeVArmorUpgrade2InProgressOnly"/>
-    </CRequirementSum>
-    <CRequirementSum id="SumCountUpgradeVArmorUpgradeQueuedOnlyCountUpgradeVArmorUpgradeInProgressOnly">
-        <OperandArray value="CountUpgradeVArmorUpgradeQueuedOnly"/>
-        <OperandArray value="CountUpgradeVArmorUpgradeInProgressOnly"/>
-    </CRequirementSum>
-    <CRequirementSum id="SumCountUpgradeVAttackUpgrade2QueuedOnlyCountUpgradeVAttackUpgrade2InProgressOnly">
-        <OperandArray value="CountUpgradeVAttackUpgrade2QueuedOnly"/>
-        <OperandArray value="CountUpgradeVAttackUpgrade2InProgressOnly"/>
     </CRequirementSum>
     <CRequirementCountUpgrade id="UpgradeRoach2CompleteOnly">
         <Count Link="UL_040"/>
@@ -20571,6 +20586,18 @@
             <Image value="Assets\Textures\wireframe-protoss-disruptorphasemod.dds"/>
         </Wireframe>
     </CActorUnit>
+    <CActorAction id="SwarmMissileLeftAttack" parent="GenericAttack" effectImpact="SwarmMissileSearch" effectLaunch="SwarmMissileLMLeft">
+        <LaunchAttachQuery Methods="AMFilterWeapon01" Fallback="Weapon"/>
+        <LaunchAssets Sound="Loki_HurricaneAttackLaunch"/>
+        <Missile value="LokiHurricaneLeftAttackMissile"/>
+        <ImpactMap index="None" Model="LokiHurricaneAttackImpact" Sound="Loki_HurricaneAttackImpact"/>
+    </CActorAction>
+    <CActorAction id="SwarmMissileRightAttack" parent="GenericAttack" effectImpact="SwarmMissileSearch" effectLaunch="SwarmMissileLMRight">
+        <LaunchAttachQuery Methods="AMFilterWeapon02" Fallback="Weapon"/>
+        <LaunchAssets Sound="Loki_HurricaneAttackLaunch"/>
+        <Missile value="LokiHurricaneRightAttackMissile"/>
+        <ImpactMap index="None" Model="LokiHurricaneAttackImpact" Sound="Loki_HurricaneAttackImpact"/>
+    </CActorAction>
     <CActorModel id="SaLaser" parent="ModelAddition">
         <On Terms="Effect.SaUltimateCP.Start" Send="Create"/>
         <On Terms="Effect.SaUltimateCP.Stop" Send="AnimBracketStop BSD"/>
@@ -22477,18 +22504,12 @@
         <Model value="HuoDouFireBallMissile"/>
         <Scale value="4.000000"/>
     </CActorMissile>
-    <CActorSiteOpLocalOffset id="SOpHerrscher7thAbil1">
-        <LocalOffset value="0.000000,0.000000,15.000000"/>
-    </CActorSiteOpLocalOffset>
-    <CActorSiteOpRotationVariancer id="SOpRotVariancerForward302">
-        <ForwardAngle value="90.000000"/>
-    </CActorSiteOpRotationVariancer>
-    <CActorMissile id="Turret2Missile" unitName="TempestWeapon">
+    <CActorMissile id="RailgunMissile" unitName="TempestWeapon">
         <Aliases value="_Unit"/>
         <Aliases value="_Missile"/>
         <Macros value="GlobalLoopMacro"/>
         <Macros value="GlobalLoopMacroMore"/>
-        <On Terms="UnitBirth.Turret2Missile" Send="Create"/>
+        <On Terms="UnitBirth.RailgunMissile" Send="Create"/>
         <On Terms="UnitBirth" Send="AnimBracketStart Lifetime Birth Walk"/>
         <On Terms="UnitDeath" Send="Destroy"/>
         <On Terms="ActorOrphan" Send="Destroy"/>
@@ -22497,6 +22518,12 @@
         <Scale value="0.400000"/>
         <PreHost value="_ActorAction"/>
     </CActorMissile>
+    <CActorSiteOpLocalOffset id="SOpHerrscher7thAbil1">
+        <LocalOffset value="0.000000,0.000000,15.000000"/>
+    </CActorSiteOpLocalOffset>
+    <CActorSiteOpRotationVariancer id="SOpRotVariancerForward302">
+        <ForwardAngle value="90.000000"/>
+    </CActorSiteOpRotationVariancer>
     <CActorUnit id="Valkyrja3" parent="CActorUnitWithIcon" unitName="Valkyrja3">
         <Aliases value="_UnitMedium"/>
         <Macros value="UnloadDropAnim"/>
@@ -25649,12 +25676,12 @@
         <AutoScaleFactor value="1.000000"/>
     </CActorModel>
     <CActorRange id="MissileTurret2ProtectRange" parent="RangeWeapon" weapon="LongboltMissile">
-        <Weapon value="LongboltMissile2"/>
+        <Weapon value="SwarmMissile"/>
         <Icon value="Assets\Textures\RadarIcon2.dds"/>
         <IconArcLength value="2.000000"/>
     </CActorRange>
     <CActorRange id="MissileTurret3ProtectRange" parent="RangeWeapon" weapon="LongboltMissile">
-        <Weapon value="Tempest2"/>
+        <Weapon value="Railgun"/>
         <Icon value="Assets\Textures\RadarIcon2.dds"/>
         <IconArcLength value="2.000000"/>
     </CActorRange>
@@ -26674,8 +26701,8 @@
         <On Terms="UnitCreation.LightningRodFactory" Send="Create"/>
         <On Terms="UnitCreation.LightningRod2" Send="Create"/>
         <On Terms="UnitCreation.LightningRodFactory2" Send="Create"/>
-        <On Terms="UnitCreation.GunTurret1" Send="Create"/>
-        <On Terms="UnitCreation.MissileTurret2" Send="Create"/>
+        <On Terms="UnitCreation.SwarmMissile" Send="Create"/>
+        <On Terms="UnitCreation.Railgun" Send="Create"/>
         <On Terms="UnitDeath" Target="TerranFlameLoopSmall" Send="Destroy"/>
         <On Terms="UnitDeath" Target="TerranFlameSetFire" Send="Destroy"/>
         <On Terms="UnitDeath" Target="TerranFlameSetFireTransition" Send="Destroy"/>
@@ -27434,6 +27461,43 @@
             <Image index="0" value="Assets\Textures\Wireframe-Hyperion.tga"/>
         </Wireframe>
     </CActorUnit>
+    <CActorUnit id="SwarmMissile" parent="TerranBuildingEx" unitName="MissileTurret">
+        <Aliases value="_UnitHuge"/>
+        <On index="0" Terms="UnitBirth.SwarmMissile"/>
+        <On index="1" Terms="UnitBirth.SwarmMissile"/>
+        <On index="2" Terms="UnitRevive.SwarmMissile"/>
+        <On index="3" Terms="UnitRevive.SwarmMissile"/>
+        <On index="4" Terms="UnitConstruction.SwarmMissile.Start"/>
+        <On index="5" Terms="UnitConstruction.SwarmMissile.Finish"/>
+        <On index="69" Terms="UnitConstruction.SwarmMissile.Start" Send="Create MissileTurretBuild"/>
+        <On index="70" Terms="UnitConstruction.SwarmMissile.Start" Send="Create BuildingTerrainFlatten"/>
+        <On index="71" Terms="UnitConstruction.SwarmMissile.Cancel" Target="_BuildingTerrainFlatten" Send="Destroy"/>
+        <On index="72" Terms="UnitConstruction.SwarmMissile.Finish" Target="_BuildingTerrainFlatten" Send="Destroy"/>
+        <On index="73" Terms="UnitConstruction.SwarmMissile.Start" Send="QueryRadius 1.750000 BuildingCrushQueryResponse"/>
+        <On index="74" Terms="UnitBirth.SwarmMissile.Normal" Send="Create BuildingTerrainFlatten"/>
+        <On index="75" Terms="UnitBirth.SwarmMissile.Suppressed" Send="Create BuildingTerrainFlattenInstant"/>
+        <On index="76" Terms="UnitBirth.SwarmMissile.EditorPlaced" Send="Create BuildingTerrainFlattenEditor"/>
+        <On index="77" Terms="UnitDeath.SwarmMissile" Target="_BuildingTerrainFlatten" Send="Destroy"/>
+        <Model value="SwarmMissile"/>
+        <CreepHeightClass value="Small"/>
+        <BuildModel value="SwarmMissile"/>
+        <DeathArray index="Normal" ModelLink="SwarmMissileDeath"/>
+        <DeathArray index="UnderConstruction" ModelLink="TerranBuildingDeath" SoundLink="MissileTurret_Explode"/>
+        <PlacementModel value="SwarmMissile"/>
+        <PlacementSound value="Terran_BuildingPlacementSmall"/>
+        <PlacementActorModel value="MissileTurretSkinnablePlacementModel2"/>
+        <BarOffset value="90"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\btn-unit-GunTower1.tga"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\btn-unit-GunTower1.tga"/>
+        <HighlightTooltip value="Unit/Name/SwarmMissile"/>
+        <UnitFlags index="ShowBlobShadow" value="0"/>
+        <UnitIcon value="Assets\Textures\btn-unit-GunTower1.tga"/>
+        <Wireframe>
+            <Image value="Assets\Textures\btn-unit-GunTower1.tga"/>
+        </Wireframe>
+    </CActorUnit>
     <!--                                                                                         -->
     <!-- Brood Lord ............................................................................ -->
     <!--                                                                                         -->
@@ -27488,67 +27552,30 @@
         <DeathCustoms index="14" removed="1"/>
         <DeathCustoms index="15" removed="1"/>
     </CActorUnit>
-    <CActorUnit id="GunTower1" parent="TerranBuildingEx" unitName="MissileTurret">
-        <Aliases value="_UnitHuge"/>
-        <On index="0" Terms="UnitBirth.GunTurret1"/>
-        <On index="1" Terms="UnitBirth.GunTurret1"/>
-        <On index="2" Terms="UnitRevive.GunTurret1"/>
-        <On index="3" Terms="UnitRevive.GunTurret1"/>
-        <On index="4" Terms="UnitConstruction.GunTurret1.Start"/>
-        <On index="5" Terms="UnitConstruction.GunTurret1.Finish"/>
-        <On index="69" Terms="UnitConstruction.GunTurret1.Start" Send="Create MissileTurretBuild"/>
-        <On index="70" Terms="UnitConstruction.GunTurret1.Start" Send="Create BuildingTerrainFlatten"/>
-        <On index="71" Terms="UnitConstruction.GunTurret1.Cancel" Target="_BuildingTerrainFlatten" Send="Destroy"/>
-        <On index="72" Terms="UnitConstruction.GunTurret1.Finish" Target="_BuildingTerrainFlatten" Send="Destroy"/>
-        <On index="73" Terms="UnitConstruction.GunTurret1.Start" Send="QueryRadius 1.750000 BuildingCrushQueryResponse"/>
-        <On index="74" Terms="UnitBirth.GunTurret1.Normal" Send="Create BuildingTerrainFlatten"/>
-        <On index="75" Terms="UnitBirth.GunTurret1.Suppressed" Send="Create BuildingTerrainFlattenInstant"/>
-        <On index="76" Terms="UnitBirth.GunTurret1.EditorPlaced" Send="Create BuildingTerrainFlattenEditor"/>
-        <On index="77" Terms="UnitDeath.GunTurret1" Target="_BuildingTerrainFlatten" Send="Destroy"/>
-        <Model value="GunTurret1"/>
-        <CreepHeightClass value="Small"/>
-        <BuildModel value="GunTurret1"/>
-        <DeathArray index="Normal" ModelLink="MissileTurretDeath3"/>
-        <DeathArray index="UnderConstruction" ModelLink="TerranBuildingDeath" SoundLink="MissileTurret_Explode"/>
-        <PlacementSound value="Terran_BuildingPlacementSmall"/>
-        <PlacementActorModel value="MissileTurretSkinnablePlacementModel2"/>
-        <BarOffset value="90"/>
-        <GroupIcon>
-            <Image value="Assets\Textures\btn-unit-GunTower1.tga"/>
-        </GroupIcon>
-        <HeroIcon value="Assets\Textures\btn-unit-GunTower1.tga"/>
-        <HighlightTooltip value="Unit/Name/GunTower1"/>
-        <UnitFlags index="ShowBlobShadow" value="0"/>
-        <UnitIcon value="Assets\Textures\btn-unit-GunTower1.tga"/>
-        <Wireframe>
-            <Image value="Assets\Textures\btn-unit-GunTower1.tga"/>
-        </Wireframe>
-        <PlacementModel value="GunTurret1"/>
-    </CActorUnit>
     <CActorModel id="GunTurret1Build" parent="TerranBuildingBuildSmall">
         <Model value="MissileTurretBuild"/>
     </CActorModel>
     <CActorUnit id="GunTower3" parent="TerranBuildingEx" unitName="MissileTurret">
         <Aliases value="_UnitHuge"/>
-        <On index="0" Terms="UnitBirth.MissileTurret2"/>
-        <On index="1" Terms="UnitBirth.MissileTurret2"/>
-        <On index="2" Terms="UnitRevive.MissileTurret2"/>
-        <On index="3" Terms="UnitRevive.MissileTurret2"/>
-        <On index="4" Terms="UnitConstruction.MissileTurret2.Start"/>
-        <On index="5" Terms="UnitConstruction.MissileTurret2.Finish"/>
-        <On index="69" Terms="UnitConstruction.MissileTurret2.Start" Send="Create MissileTurretBuild"/>
-        <On index="70" Terms="UnitConstruction.MissileTurret2.Start" Send="Create BuildingTerrainFlatten"/>
-        <On index="71" Terms="UnitConstruction.MissileTurret2.Cancel" Target="_BuildingTerrainFlatten" Send="Destroy"/>
-        <On index="72" Terms="UnitConstruction.MissileTurret2.Finish" Target="_BuildingTerrainFlatten" Send="Destroy"/>
-        <On index="73" Terms="UnitConstruction.MissileTurret2.Start" Send="QueryRadius 1.750000 BuildingCrushQueryResponse"/>
-        <On index="74" Terms="UnitBirth.MissileTurret2.Normal" Send="Create BuildingTerrainFlatten"/>
-        <On index="75" Terms="UnitBirth.MissileTurret2.Suppressed" Send="Create BuildingTerrainFlattenInstant"/>
-        <On index="76" Terms="UnitBirth.MissileTurret2.EditorPlaced" Send="Create BuildingTerrainFlattenEditor"/>
-        <On index="77" Terms="UnitDeath.MissileTurret2" Target="_BuildingTerrainFlatten" Send="Destroy"/>
-        <Model value="GunTower3"/>
+        <On index="0" Terms="UnitBirth.Railgun"/>
+        <On index="1" Terms="UnitBirth.Railgun"/>
+        <On index="2" Terms="UnitRevive.Railgun"/>
+        <On index="3" Terms="UnitRevive.Railgun"/>
+        <On index="4" Terms="UnitConstruction.Railgun.Start"/>
+        <On index="5" Terms="UnitConstruction.Railgun.Finish"/>
+        <On index="69" Terms="UnitConstruction.Railgun.Start" Send="Create MissileTurretBuild"/>
+        <On index="70" Terms="UnitConstruction.Railgun.Start" Send="Create BuildingTerrainFlatten"/>
+        <On index="71" Terms="UnitConstruction.Railgun.Cancel" Target="_BuildingTerrainFlatten" Send="Destroy"/>
+        <On index="72" Terms="UnitConstruction.Railgun.Finish" Target="_BuildingTerrainFlatten" Send="Destroy"/>
+        <On index="73" Terms="UnitConstruction.Railgun.Start" Send="QueryRadius 1.750000 BuildingCrushQueryResponse"/>
+        <On index="74" Terms="UnitBirth.Railgun.Normal" Send="Create BuildingTerrainFlatten"/>
+        <On index="75" Terms="UnitBirth.Railgun.Suppressed" Send="Create BuildingTerrainFlattenInstant"/>
+        <On index="76" Terms="UnitBirth.Railgun.EditorPlaced" Send="Create BuildingTerrainFlattenEditor"/>
+        <On index="77" Terms="UnitDeath.Railgun" Target="_BuildingTerrainFlatten" Send="Destroy"/>
+        <Model value="Railgun"/>
         <CreepHeightClass value="Small"/>
-        <BuildModel value="GunTower3"/>
-        <DeathArray index="Normal" ModelLink="MissileTurretDeath2"/>
+        <BuildModel value="Railgun"/>
+        <DeathArray index="Normal" ModelLink="RailgunDeath"/>
         <DeathArray index="UnderConstruction" ModelLink="TerranBuildingDeath" SoundLink="MissileTurret_Explode"/>
         <PlacementSound value="Terran_BuildingPlacementSmall"/>
         <PlacementActorModel value="MissileTurretSkinnablePlacementModel3"/>
@@ -27563,7 +27590,7 @@
         <Wireframe>
             <Image value="Assets\Textures\btn-unit-GunTower3.tga"/>
         </Wireframe>
-        <PlacementModel value="GunTower3"/>
+        <PlacementModel value="Railgun"/>
     </CActorUnit>
     <CActorTurret id="MissileTurret22">
         <On Terms="TurretEnable.MissileTurret2" Send="Create"/>
@@ -27666,6 +27693,17 @@
         <ActionFlags index="LaunchForceSite" value="1"/>
         <Lifetime value="0.500000"/>
     </CActorAction>
+    <CActorAction id="RailgunAttack" parent="GenericAttack" effectImpact="RailgunDamage" effectLaunch="RailgunLaunchMissile">
+        <On Terms="ActorCreation" Send="SetTintColor {57,29,254 2.000000}"/>
+        <LaunchAttachQuery Methods="AMFilterWeapon"/>
+        <LaunchAssets Sound="Tempest_AirAttackLaunch"/>
+        <Missile value="RailgunMissile"/>
+        <ImpactPointSiteOps Ops="SOpTargetPointStationary SOpUpDefault"/>
+        <ImpactMap index="None" Sound="Tempest_AirAttackImpact"/>
+        <ImpactMap index="Flesh" ModelReaction="BloodTargetImpact"/>
+        <ImpactPhysics Name="KineticOverloadImpact" MatchKeys="Basic" Physics="TempestAttackForce"/>
+        <ShieldFlashType value="Full"/>
+    </CActorAction>
     <CActorLookAt id="MissileTurretLockOnTurretLookAt2" parent="UnitTurret">
         <On Terms="TurretEnable.MissileTurret2" Send="Create"/>
         <On Terms="TurretTarget.MissileTurret2.Set" Send="LookAtEngage"/>
@@ -27694,17 +27732,6 @@
         <ImpactMap index="None" Model="" Sound="Thor_HandGunAttackImpact" ModelReaction="CycloneMissileImpact"/>
         <ImpactModel value="GenericAttackImpactModelPoint"/>
         <ImpactSound value="GenericAttackImpactSoundPoint"/>
-        <ShieldFlashType value="Full"/>
-    </CActorAction>
-    <CActorAction id="TempestAttack2" parent="GenericAttack" effectImpact="TempestDamage2" effectLaunch="TempestLaunchMissile2">
-        <On Terms="ActorCreation" Send="SetTintColor {57,29,254 2.000000}"/>
-        <LaunchAttachQuery Methods="AMFilterWeapon"/>
-        <LaunchAssets Sound="Tempest_AirAttackLaunch"/>
-        <Missile value="Turret2Missile"/>
-        <ImpactPointSiteOps Ops="SOpTargetPointStationary SOpUpDefault"/>
-        <ImpactMap index="None" Model="TempestAttackImpact2" Sound="Tempest_AirAttackImpact"/>
-        <ImpactMap index="Flesh" ModelReaction="BloodTargetImpact"/>
-        <ImpactPhysics Name="KineticOverloadImpact" MatchKeys="Basic" Physics="TempestAttackForce"/>
         <ShieldFlashType value="Full"/>
     </CActorAction>
     <CActorMissile id="RO_030AttackMissile" parent="GenericAttackMissile" unitName="RO_030Weapon">
@@ -29962,7 +29989,7 @@
     <CModel id="MissileTurretDeath">
         <Model value="Assets\Models\GunTower2\GunTower2Death.m3"/>
     </CModel>
-    <CModel id="MissileTurretDeath3" parent="MissileTurretDeathBase">
+    <CModel id="SwarmMissileDeath" parent="MissileTurretDeathBase">
         <Model value="Assets\Models\GunTower1\GunTower1Death.m3"/>
     </CModel>
     <CModel id="RO_041GroundEffectModel" parent="PersistentSpellFX">
@@ -30241,7 +30268,7 @@
         <Model value="Assets\Models\BOSS_150\BOSS_150_Nuke.m3"/>
         <EditorCategories value="Race:Terran"/>
     </CModel>
-    <CModel id="TempestAttackImpact2" parent="ImpactFX">
+    <CModel id="RailgunAttackImpact" parent="ImpactFX">
         <Model value="Assets\Effects\Protoss\TempestPlasmaMissileImpact\TempestPlasmaMissileImpact.m3"/>
         <EditorCategories value="Race:Protoss"/>
         <ScaleMax value="0.400000,0.400000,0.400000"/>
@@ -31077,7 +31104,7 @@
         <SelectionRadius value="0.750000"/>
         <ShadowRadius value="0.750000"/>
     </CModel>
-    <CModel id="GunTurret1" parent="MissileTurretBase">
+    <CModel id="SwarmMissile" parent="MissileTurretBase">
         <Model value="Assets\Models\GunTower1\GunTower1.m3"/>
         <AttachProps index="0" Id="Ref_Weapon 01">
             <Keys index="SetA" value="0"/>
@@ -31090,7 +31117,7 @@
         <AttachProps index="3" removed="1"/>
         <AttachProps index="4" removed="1"/>
     </CModel>
-    <CModel id="GunTower3" parent="MissileTurretBase">
+    <CModel id="Railgun" parent="MissileTurretBase">
         <Model value="Assets\Models\GunTower3\GunTower3.m3"/>
         <AttachProps index="0" removed="1"/>
         <AttachProps index="1" removed="1"/>
@@ -31098,7 +31125,7 @@
         <AttachProps index="3" removed="1"/>
         <AttachProps index="4" removed="1"/>
     </CModel>
-    <CModel id="MissileTurretDeath2" parent="MissileTurretDeathBase">
+    <CModel id="RailgunDeath" parent="MissileTurretDeathBase">
         <Model value="Assets\Models\GunTower3\GunTower3Death.m3"/>
     </CModel>
     <CModel id="StFreyaDeath" parent="BuildingDeathEx" Race="Terran" low="EngineeringBayDeathLow">
@@ -32775,17 +32802,16 @@
     <CWeaponLegacy id="LongboltMissile">
         <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
     </CWeaponLegacy>
-    <CWeaponLegacy id="LongboltMissile2">
+    <CWeaponLegacy id="SwarmMissile">
         <EditorCategories value="Race:Terran"/>
+        <Options index="DisplayCooldown" value="1"/>
         <Icon value="Assets\Textures\btn-upgrade-terran-hisecautotracking.dds"/>
-        <DisplayEffect value="LokiHurricaneMissileDamage"/>
+        <DisplayEffect value="SwarmMissileDamage"/>
         <DisplayAttackCount value="10"/>
         <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
         <Range value="4"/>
-        <RangeSlop value="0"/>
         <Period value="3.5"/>
-        <Effect value="LokiHurricaneMissile"/>
-        <Options index="DisplayCooldown" value="1"/>
+        <Effect value="SwarmMissileSet"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="ParasiteSpore">
         <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
@@ -32843,14 +32869,14 @@
         <Period value="3"/>
         <Effect value="UL_040Persistent"/>
     </CWeaponLegacy>
-    <CWeaponLegacy id="Tempest2">
-        <EditorCategories value="Race:Protoss"/>
+    <CWeaponLegacy id="Railgun">
+        <EditorCategories value="Race:Terran"/>
         <Icon value="Assets\Textures\btn-upgrade-protoss-airweaponslevel0.dds"/>
-        <DisplayEffect value="TempestDamage2"/>
+        <DisplayEffect value="RailgunDamage"/>
         <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
         <Range value="13"/>
         <Period value="4"/>
-        <Effect value="TempestLaunchMissile2"/>
+        <Effect value="RailgunLaunchMissile"/>
         <AllowedMovement value="Slowing"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="UL_030Weapon">
@@ -33629,37 +33655,7 @@
             <YawPitchRoll value="5759.6484"/>
         </MotionPhases>
     </CMoverMissile>
-    <CMoverMissile id="B5Missile">
-        <MotionPhases>
-            <Driver value="Throw"/>
-            <Acceleration value="3200"/>
-            <Speed value="1"/>
-            <MaxSpeed value="8"/>
-            <Outro value="2.5,3.5"/>
-            <ThrowRotationType value="ThrowForward"/>
-            <ThrowVector value="0,-1,0"/>
-            <ThrowBandYaw value="74.9926,-74.9926,64.995,-64.995"/>
-            <ThrowBandPitch value="45,-45,4.9987,-4.9987"/>
-        </MotionPhases>
-        <MotionPhases>
-            <Driver value="Guidance"/>
-            <Acceleration value="3200"/>
-            <AccelerationRange value="7"/>
-            <MaxSpeed value="16"/>
-            <ActorTracking value="Actual"/>
-            <Outro value="-2.5,-1.5"/>
-            <YawPitchRoll value="359.2968"/>
-            <Overlays Scale="1,1"/>
-        </MotionPhases>
-        <MotionPhases>
-            <Driver value="Guidance"/>
-            <ThrowBandYaw value="-360,-360,-360,-360"/>
-            <ThrowBandPitch value="-360,-360,-360,-360"/>
-            <YawPitchRoll value="5759.6484"/>
-            <Overlays Scale="0.5,0.5"/>
-        </MotionPhases>
-    </CMoverMissile>
-    <CMoverMissile id="LokiHurricaneMissile2">
+    <CMoverMissile id="SwarmMissileMissile">
         <MotionPhases>
             <Driver value="Throw"/>
             <Acceleration value="10"/>
@@ -33701,6 +33697,36 @@
             <RevolverAccel value="45"/>
             <RevolverAccelRange value="337.5"/>
         </MotionOverlays>
+    </CMoverMissile>
+    <CMoverMissile id="B5Missile">
+        <MotionPhases>
+            <Driver value="Throw"/>
+            <Acceleration value="3200"/>
+            <Speed value="1"/>
+            <MaxSpeed value="8"/>
+            <Outro value="2.5,3.5"/>
+            <ThrowRotationType value="ThrowForward"/>
+            <ThrowVector value="0,-1,0"/>
+            <ThrowBandYaw value="74.9926,-74.9926,64.995,-64.995"/>
+            <ThrowBandPitch value="45,-45,4.9987,-4.9987"/>
+        </MotionPhases>
+        <MotionPhases>
+            <Driver value="Guidance"/>
+            <Acceleration value="3200"/>
+            <AccelerationRange value="7"/>
+            <MaxSpeed value="16"/>
+            <ActorTracking value="Actual"/>
+            <Outro value="-2.5,-1.5"/>
+            <YawPitchRoll value="359.2968"/>
+            <Overlays Scale="1,1"/>
+        </MotionPhases>
+        <MotionPhases>
+            <Driver value="Guidance"/>
+            <ThrowBandYaw value="-360,-360,-360,-360"/>
+            <ThrowBandPitch value="-360,-360,-360,-360"/>
+            <YawPitchRoll value="5759.6484"/>
+            <Overlays Scale="0.5,0.5"/>
+        </MotionPhases>
     </CMoverMissile>
     <CMoverMissile id="B25Missile">
         <MotionPhases>
@@ -33762,26 +33788,6 @@
             <AccelerationRange value="1000"/>
             <ThrowBandYaw value="-360,-360,-360,-360"/>
             <ThrowBandPitch value="-360,-360,-360,-360"/>
-        </MotionPhases>
-    </CMoverMissile>
-    <CMoverMissile id="LokiHurricaneMissile">
-        <MotionPhases index="0">
-            <Speed value="10"/>
-            <MaxSpeed value="20"/>
-            <ThrowBandYaw value="74.9707,-74.9707,64.995,-64.995"/>
-            <AdaptableParabolaIsUpright value="1"/>
-        </MotionPhases>
-        <MotionPhases index="1">
-            <MaxSpeed value="24"/>
-            <ThrowBandYaw value="-360,-360,-360,-360"/>
-            <ThrowBandPitch value="-360,-360,-360,-360"/>
-            <AdaptableParabolaIsUpright value="1"/>
-        </MotionPhases>
-        <MotionPhases index="2">
-            <ThrowBandYaw value="-360,-360,-360,-360"/>
-            <ThrowBandPitch value="-360,-360,-360,-360"/>
-            <AdaptableParabolaIsUpright value="1"/>
-            <YawPitchRoll value="5759.6484"/>
         </MotionPhases>
     </CMoverMissile>
     <CMoverMissile id="RO_030Abli2">
@@ -35657,6 +35663,7 @@
         <AttackTargetPriority value="11"/>
         <BehaviorArray Link="TerranBuildingBurnDown"/>
         <BehaviorArray Link="FireSuppressionSystem"/>
+        <BehaviorArray Link="TurretBuff"/>
         <Radius value="1"/>
         <SeparationRadius value="1"/>
         <Footprint value="Footprint2x2Contour"/>
@@ -35669,8 +35676,25 @@
         <HotkeyCategory value="Unit/Category/TerranUnits"/>
         <AIEvaluateAlias value="CUnitBuildingTerr"/>
     </CUnit>
+    <CUnit id="EvolutionChamber">
+        <DeathTime value="30"/>
+        <AbilArray index="2" Link="AttackArmorResearch"/>
+        <AbilArray Link="HumanTech"/>
+        <CardLayouts index="0">
+            <LayoutButtons index="2" AbilCmd="evolutionchamberresearch,Research2" Column="1"/>
+            <LayoutButtons index="3" Face="zergmeleeweapons1" AbilCmd="evolutionchamberresearch,Research1" Column="0"/>
+            <LayoutButtons index="4" Face="zergmeleeweapons12" AbilCmd="evolutionchamberresearch,Research3" Row="1" Column="0"/>
+            <LayoutButtons index="5" Face="zerggroundarmor12" AbilCmd="evolutionchamberresearch,Research4" Row="1" Column="1"/>
+            <LayoutButtons index="6" Face="MicroFiltering2" AbilCmd="HumanTech,Research9" Column="2"/>
+            <LayoutButtons index="7" removed="1"/>
+            <LayoutButtons index="8" removed="1"/>
+            <LayoutButtons index="9" removed="1"/>
+            <LayoutButtons index="10" removed="1"/>
+        </CardLayouts>
+    </CUnit>
     <CUnit id="MercCompound">
         <DeathTime value="30"/>
+        <BehaviorArray Link="TurretBuff"/>
         <CostResource index="Minerals" value="300"/>
         <CostResource index="Vespene" value="200"/>
         <AbilArray index="1" Link="que5"/>
@@ -36568,23 +36592,24 @@
         <Attributes index="Summoned" value="1"/>
     </CUnit>
     <CUnit id="Armory">
+        <AbilArray index="2" Link="AttackArmorResearch"/>
         <AbilArray Link="CannonResearch"/>
         <AbilArray Link="HumanTech"/>
-        <AbilArray Link="FactoryTechLabResearch"/>
         <BehaviorArray Link="FireSuppressionSystem"/>
+        <BehaviorArray Link="TurretBuff"/>
         <CardLayouts index="0">
             <LayoutButtons index="0" Face="Cancel" AbilCmd="que5,CancelLast" Row="2" Column="4"/>
             <LayoutButtons index="1" Face="CancelBuilding" AbilCmd="BuildInProgress,Cancel" Row="2" Column="4"/>
             <LayoutButtons index="2" Face="Halt" AbilCmd="BuildInProgress,Halt" Row="2" Column="3"/>
             <LayoutButtons index="3" Face="RO_040ChargeUpgrade" AbilCmd="HumanTech,Research18" Row="1" Column="2"/>
-            <LayoutButtons index="4" Face="TerranVehicleWeaponsLevel12" AbilCmd="ArmoryResearch,Research1" Row="0" Column="0"/>
-            <LayoutButtons index="5" Face="TerranVehiclePlatingLevel12" AbilCmd="ArmoryResearch,Research2" Row="0" Column="1"/>
-            <LayoutButtons index="6" Face="WeaponB15" AbilCmd="CannonResearch,Research3" Row="1" Column="0"/>
-            <LayoutButtons index="7" Face="WeaponB22" AbilCmd="CannonResearch,Research5" Row="1"/>
+            <LayoutButtons index="4" Face="ROAttackUpgrade" AbilCmd="AttackArmorResearch,Research1" Row="0" Column="0"/>
+            <LayoutButtons index="5" Face="ROArmorUpgrade" AbilCmd="AttackArmorResearch,Research2" Row="0" Column="1"/>
+            <LayoutButtons index="6" Face="WeaponB15" AbilCmd="CannonResearch,Research3" Column="3"/>
+            <LayoutButtons index="7" Face="WeaponB22" AbilCmd="CannonResearch,Research5" Column="4"/>
             <LayoutButtons index="8" Face="WeaponB25" AbilCmd="CannonResearch,Research7" Column="2"/>
-            <LayoutButtons index="9" Face="CommanderRaynorOrbitalDropPods" AbilCmd="HumanTech,Research11" Row="0" Column="3"/>
+            <LayoutButtons index="9" Face="CommanderRaynorOrbitalDropPods" AbilCmd="HumanTech,Research11"/>
             <LayoutButtons index="10" Face="ResearchFighters" AbilCmd="HumanTech,Research16" Column="3"/>
-            <LayoutButtons index="11" Face="SiegeTankUpgrade" AbilCmd="HumanTech,Research17" Row="0" Column="4"/>
+            <LayoutButtons index="11" Face="SiegeTankUpgrade" AbilCmd="HumanTech,Research17" Column="1"/>
             <LayoutButtons index="12" Face="SelectBuilder" Type="SelectBuilder" AbilCmd="" Column="3"/>
             <LayoutButtons index="13" Face="SelectBuilder" Type="SelectBuilder" AbilCmd="" Column="3"/>
             <LayoutButtons index="14" Face="MHTUpgrade" AbilCmd="HumanTech,Research20" Column="4"/>
@@ -36801,19 +36826,23 @@
             <LayoutButtons index="12" removed="1"/>
         </CardLayouts>
         <BehaviorArray Link="FireSuppressionSystem"/>
+        <BehaviorArray Link="TurretBuff"/>
         <DeathTime value="30"/>
         <AbilArray index="2" Link="HonkaiBarracksTrain"/>
     </CUnit>
     <CUnit id="BarracksFlying">
         <BehaviorArray Link="FireSuppressionSystem"/>
+        <BehaviorArray Link="TurretBuff"/>
         <DeathTime value="30"/>
     </CUnit>
     <CUnit id="BarracksReactor">
         <BehaviorArray Link="FireSuppressionSystem"/>
+        <BehaviorArray Link="TurretBuff"/>
         <DeathTime value="30"/>
     </CUnit>
     <CUnit id="BarracksTechLab">
         <BehaviorArray Link="FireSuppressionSystem"/>
+        <BehaviorArray Link="TurretBuff"/>
         <CardLayouts index="0">
             <LayoutButtons index="2" Face="ValkyrjaShield" AbilCmd="HumanTech,Research6"/>
             <LayoutButtons index="3" Face="ValkyrjaSnipe" AbilCmd="HumanTech,Research15"/>
@@ -36825,17 +36854,17 @@
     </CUnit>
     <CUnit id="Bunker">
         <BehaviorArray Link="FireSuppressionSystem"/>
+        <BehaviorArray Link="TurretBuff"/>
         <DeathTime value="30"/>
-    </CUnit>
-    <CUnit id="ColonistBiodome">
-        <BehaviorArray Link="FireSuppressionSystem"/>
     </CUnit>
     <CUnit id="CommandCenter">
         <BehaviorArray Link="FireSuppressionSystem"/>
+        <BehaviorArray Link="TurretBuff"/>
         <DeathTime value="30"/>
     </CUnit>
     <CUnit id="CommandCenterFlying">
         <BehaviorArray Link="FireSuppressionSystem"/>
+        <BehaviorArray Link="TurretBuff"/>
         <DeathTime value="30"/>
     </CUnit>
     <CUnit id="CosmicJuggernaut">
@@ -36897,19 +36926,21 @@
         <AbilArray index="1" Link="que82"/>
         <AbilArray index="2" Link="HumanTech"/>
         <AbilArray Link="StigmataResearch"/>
+        <AbilArray Link="AttackArmorResearch"/>
         <BehaviorArray Link="FireSuppressionSystem"/>
+        <BehaviorArray Link="TurretBuff"/>
         <CardLayouts index="0">
             <LayoutButtons index="0" Face="Cancel" AbilCmd="que5,CancelLast" Row="2" Column="4"/>
             <LayoutButtons index="1" Face="CancelBuilding" AbilCmd="BuildInProgress,Cancel" Row="2" Column="4"/>
             <LayoutButtons index="2" Face="Halt" AbilCmd="BuildInProgress,Halt" Row="2" Column="3"/>
             <LayoutButtons index="3" Face="ValkyrjaDefence" AbilCmd="HumanTech,Research12" Row="1" Column="2"/>
             <LayoutButtons index="4" Face="StigmataCount" AbilCmd="HumanTech,Research13"/>
-            <LayoutButtons index="5" Face="TerranInfantryArmorLevel1" AbilCmd="HumanTech,Research7" Row="0" Column="2"/>
+            <LayoutButtons index="5" Face="VArmorUpgrade" AbilCmd="AttackArmorResearch,Research4" Row="0" Column="2"/>
             <LayoutButtons index="6" Face="SelectBuilder" Type="SelectBuilder" AbilCmd="" Column="3"/>
             <LayoutButtons index="7" Face="Rally" AbilCmd="Rally,Rally1" Row="0" Column="4"/>
             <LayoutButtons index="8" Face="SelectBuilder" Type="SelectBuilder" AbilCmd="" Column="3"/>
-            <LayoutButtons index="9" Face="TerranInfantryWeaponsLevel12" AbilCmd="HumanTech,Research8" Column="0"/>
-            <LayoutButtons index="10" Face="TerranInfantryArmorLevel12" AbilCmd="HumanTech,Research5"/>
+            <LayoutButtons index="9" Face="VWeaponUpgrade" AbilCmd="AttackArmorResearch,Research5" Column="0"/>
+            <LayoutButtons index="10" Face="VShieldUpgrade" AbilCmd="AttackArmorResearch,Research3"/>
             <LayoutButtons index="11" Face="StigmataResearch1" Type="Submenu" SubmenuCardId="G2" SubmenuIsSticky="1" Row="2"/>
             <LayoutButtons>
                 <Face value="StigmataResearch3"/>
@@ -37189,8 +37220,8 @@
         <Mover value="Herrscher7thAbil1Mover"/>
         <EditorCategories value="ObjectType:Projectile,ObjectFamily:Melee"/>
     </CUnit>
-    <CUnit id="Turret2Missile" parent="MISSILE">
-        <Race value="Prot"/>
+    <CUnit id="RailgunMissile" parent="MISSILE">
+        <Race value="Terr"/>
         <Mover value="MissileDefault"/>
         <EditorCategories value="ObjectFamily:Melee,ObjectType:Projectile"/>
     </CUnit>
@@ -38196,6 +38227,7 @@
         <AbilArray Link="DivineKeysResearch"/>
         <BehaviorArray index="0" removed="1"/>
         <BehaviorArray index="1" removed="1"/>
+        <BehaviorArray index="2" removed="1"/>
         <CardLayouts>
             <LayoutButtons Face="Cancel" Type="AbilCmd" AbilCmd="que5,CancelLast" Row="2" Column="4"/>
             <LayoutButtons Face="CancelBuilding" Type="AbilCmd" AbilCmd="BuildInProgress,Cancel" Row="2" Column="4"/>
@@ -38529,11 +38561,13 @@
             <LayoutButtons Face="RO_047" Type="AbilCmd" AbilCmd="FactoryTrain2,Train18" Row="1" Column="2"/>
         </CardLayouts>
         <BehaviorArray Link="FireSuppressionSystem"/>
+        <BehaviorArray Link="TurretBuff"/>
         <DeathTime value="30"/>
         <AbilArray index="2" Link="FactoryTrain2"/>
     </CUnit>
     <CUnit id="FactoryFlying">
         <BehaviorArray Link="FireSuppressionSystem"/>
+        <BehaviorArray Link="TurretBuff"/>
         <DeathTime value="30"/>
         <CardLayouts index="0">
             <LayoutButtons index="1" Face="Stop" AbilCmd="stop,Stop" Row="0"/>
@@ -38549,10 +38583,12 @@
     </CUnit>
     <CUnit id="FactoryReactor">
         <BehaviorArray Link="FireSuppressionSystem"/>
+        <BehaviorArray Link="TurretBuff"/>
         <DeathTime value="30"/>
     </CUnit>
     <CUnit id="FactoryTechLab">
         <BehaviorArray Link="FireSuppressionSystem"/>
+        <BehaviorArray Link="TurretBuff"/>
         <CardLayouts index="0">
             <LayoutButtons index="1" Face="CancelBuilding" AbilCmd="BuildInProgress,Cancel" Row="2" Column="4"/>
             <LayoutButtons index="2" removed="1"/>
@@ -39530,8 +39566,6 @@
         <AbilArray Link="BuildInProgress"/>
         <AbilArray Link="que5Addon"/>
         <AbilArray Link="IceTabletFactoryMorph3"/>
-        <BehaviorArray index="0" Link="FireSuppressionSystem"/>
-        <BehaviorArray index="1" removed="1"/>
         <CardLayouts>
             <LayoutButtons Face="Cancel" Type="AbilCmd" AbilCmd="que5LongBlend,CancelLast" Row="2" Column="4"/>
             <LayoutButtons Face="CancelBuilding" Type="AbilCmd" AbilCmd="BuildInProgress,Cancel" Row="2" Column="4"/>
@@ -39559,8 +39593,6 @@
         <AbilArray Link="BuildInProgress"/>
         <AbilArray Link="que5Addon"/>
         <AbilArray Link="IceTabletFactoryMorph2"/>
-        <BehaviorArray index="0" Link="FireSuppressionSystem"/>
-        <BehaviorArray index="1" removed="1"/>
         <CardLayouts>
             <LayoutButtons Face="Cancel" Type="AbilCmd" AbilCmd="que5LongBlend,CancelLast" Row="2" Column="4"/>
             <LayoutButtons Face="CancelBuilding" Type="AbilCmd" AbilCmd="BuildInProgress,Cancel" Row="2" Column="4"/>
@@ -39632,8 +39664,7 @@
         <AbilArray Link="IceTabletMorph2"/>
         <AbilArray Link="GeneralUpgrades"/>
         <AbilArray Link="IceTabletUpgrade2"/>
-        <BehaviorArray index="0" Link="FireSuppressionSystem"/>
-        <BehaviorArray index="1" Link="AddonConstructPause"/>
+        <BehaviorArray Link="AddonConstructPause"/>
         <CardLayouts>
             <LayoutButtons Face="Cancel" Type="AbilCmd" AbilCmd="que5Addon,CancelLast" Row="2" Column="4"/>
             <LayoutButtons Face="CancelUpgradeMorph" Type="AbilCmd" AbilCmd="IceTabletUpgrade2,Cancel" Row="2" Column="4"/>
@@ -39673,8 +39704,6 @@
         <AbilArray Link="que5Addon"/>
         <AbilArray Link="IceTabletMorph3"/>
         <AbilArray Link="GeneralUpgrades"/>
-        <BehaviorArray index="0" Link="FireSuppressionSystem"/>
-        <BehaviorArray index="1" removed="1"/>
         <CardLayouts>
             <LayoutButtons Face="Cancel" Type="AbilCmd" AbilCmd="que5Addon,CancelLast" Row="2" Column="4"/>
             <LayoutButtons Face="CancelBuilding" Type="AbilCmd" AbilCmd="BuildInProgress,Cancel" Row="2" Column="4"/>
@@ -39985,10 +40014,12 @@
         </ReviveInfoBase>
     </CUnit>
     <CUnit id="FusionCore">
-        <AbilArray Link="CannonResearch"/>
+        <AbilArray index="2" Link="CannonResearch"/>
         <AbilArray Link="HumanTech"/>
         <BehaviorArray Link="FireSuppressionSystem"/>
+        <BehaviorArray Link="TurretBuff"/>
         <CardLayouts index="0">
+            <LayoutButtons index="0" AbilCmd="HumanTech,Research5"/>
             <LayoutButtons index="4" Face="SelectBuilder" Type="SelectBuilder" AbilCmd="" Row="1" Column="3"/>
             <LayoutButtons index="5" Face="HonkaiTacticalJumpUpgrade" Type="AbilCmd" AbilCmd="HumanTech,Research19" Row="0" Column="1"/>
             <LayoutButtons Face="WeaponB23" Type="AbilCmd" AbilCmd="CannonResearch,Research6" Row="1" Column="0"/>
@@ -40260,17 +40291,20 @@
         <AbilArray Link="BuildInProgress"/>
         <AbilArray Link="que5"/>
         <AbilArray Link="HumanTech"/>
+        <AbilArray Link="AttackArmorResearch"/>
         <CardLayouts>
             <LayoutButtons Face="Cancel" Type="AbilCmd" AbilCmd="que5,CancelLast" Row="2" Column="4"/>
             <LayoutButtons Face="CancelBuilding" Type="AbilCmd" AbilCmd="BuildInProgress,Cancel" Row="2" Column="4"/>
             <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="BuildInProgress,Halt" Row="2" Column="3"/>
             <LayoutButtons Face="SelectBuilder" Type="SelectBuilder" Row="1" Column="3"/>
             <LayoutButtons Face="Rally" Type="AbilCmd" AbilCmd="Rally,Rally1" Row="1" Column="4"/>
-            <LayoutButtons Face="UpgradeBuildingArmorLevel1" Type="AbilCmd" AbilCmd="HumanTech,Research2" Row="0" Column="1"/>
-            <LayoutButtons Face="ResearchHiSecAutoTracking" Type="AbilCmd" AbilCmd="HumanTech,Research1" Row="0" Column="0"/>
+            <LayoutButtons Face="TurretArmorUpgrade" Type="AbilCmd" AbilCmd="AttackArmorResearch,Research7" Row="0" Column="1"/>
+            <LayoutButtons Face="TurretAttackUpgrade" Type="AbilCmd" AbilCmd="AttackArmorResearch,Research6" Row="0" Column="0"/>
             <LayoutButtons Face="CommanderRaynorFireSuppressionTalent" Type="AbilCmd" AbilCmd="HumanTech,Research3" Row="1" Column="0"/>
-            <LayoutButtons Face="ResearchSuperC" Type="AbilCmd" AbilCmd="HumanTech,Research4" Row="0" Column="2"/>
-            <LayoutButtons Face="MicroFiltering" Type="AbilCmd" AbilCmd="HumanTech,Research9" Row="0" Column="3"/>
+            <LayoutButtons Face="ResearchHiSecAutoTracking" Type="AbilCmd" AbilCmd="HumanTech,Research1" Row="0" Column="2"/>
+            <LayoutButtons Face="ResearchNeosteelFrame" Type="AbilCmd" AbilCmd="HumanTech,Research2" Row="0" Column="3"/>
+            <LayoutButtons Face="ResearchSuperC" Type="AbilCmd" AbilCmd="HumanTech,Research4" Row="1" Column="1"/>
+            <LayoutButtons Face="MicroFiltering" Type="AbilCmd" AbilCmd="HumanTech,Research9" Row="1" Column="2"/>
         </CardLayouts>
         <Radius value="1.25"/>
         <SeparationRadius value="1.25"/>
@@ -40283,24 +40317,9 @@
         <GlossaryPriority value="256"/>
         <AIEvaluateAlias value="HighTower"/>
         <TechTreeUnlockedUnitArray value="MissileTurret"/>
-        <TechTreeUnlockedUnitArray value="GunTurret1"/>
-        <TechTreeUnlockedUnitArray value="MissileTurret2"/>
+        <TechTreeUnlockedUnitArray value="SwarmMissile"/>
+        <TechTreeUnlockedUnitArray value="Railgun"/>
         <TechTreeUnlockedUnitArray value="SensorTower"/>
-    </CUnit>
-    <CUnit id="EvolutionChamber">
-        <CardLayouts index="0">
-            <LayoutButtons index="2" AbilCmd="evolutionchamberresearch,Research2" Column="1"/>
-            <LayoutButtons index="3" Face="zergmeleeweapons1" AbilCmd="evolutionchamberresearch,Research1" Column="0"/>
-            <LayoutButtons index="4" Face="zergmeleeweapons12" AbilCmd="evolutionchamberresearch,Research3" Row="1" Column="0"/>
-            <LayoutButtons index="5" Face="zerggroundarmor12" AbilCmd="evolutionchamberresearch,Research4" Row="1" Column="1"/>
-            <LayoutButtons index="6" Face="MicroFiltering2" AbilCmd="HumanTech,Research9" Column="2"/>
-            <LayoutButtons index="7" removed="1"/>
-            <LayoutButtons index="8" removed="1"/>
-            <LayoutButtons index="9" removed="1"/>
-            <LayoutButtons index="10" removed="1"/>
-        </CardLayouts>
-        <AbilArray Link="HumanTech"/>
-        <DeathTime value="30"/>
     </CUnit>
     <CUnit id="Hatchery">
         <CostResource index="Minerals" value="150"/>
@@ -40457,8 +40476,6 @@
             <LayoutButtons Face="CreepTumor" Type="AbilCmd" AbilCmd="ZergBuild,Build2" Row="0" Column="2"/>
         </CardLayouts>
         <Food value="-0.5"/>
-        <CostResource index="Minerals" value="30"/>
-        <CostResource index="Vespene" value="5"/>
         <Speed value="0.8125"/>
         <SpeedBonusCreep value="2"/>
         <WeaponArray index="0" removed="1"/>
@@ -40470,15 +40487,17 @@
     </CUnit>
     <CUnit id="DroneBurrowed">
         <Food value="-0.5"/>
-        <CostResource index="Minerals" value="30"/>
-        <CostResource index="Vespene" value="5"/>
         <DeathTime value="30"/>
         <ScoreKill value="35"/>
     </CUnit>
     <CUnit id="MissileTurret">
         <AttackTargetPriority value="20"/>
         <BehaviorArray Link="FireSuppressionSystem"/>
+        <BehaviorArray Link="TurretBuff"/>
         <DeathTime value="30"/>
+        <LifeStart value="400"/>
+        <LifeMax value="400"/>
+        <CostResource index="Minerals" value="175"/>
     </CUnit>
     <CUnit id="RO_031AbilUnit">
         <Race value="Terr"/>
@@ -40515,14 +40534,17 @@
     </CUnit>
     <CUnit id="OrbitalCommand">
         <BehaviorArray Link="FireSuppressionSystem"/>
+        <BehaviorArray Link="TurretBuff"/>
         <DeathTime value="30"/>
     </CUnit>
     <CUnit id="OrbitalCommandFlying">
         <BehaviorArray Link="FireSuppressionSystem"/>
+        <BehaviorArray Link="TurretBuff"/>
         <DeathTime value="30"/>
     </CUnit>
     <CUnit id="PlanetaryFortress">
         <BehaviorArray Link="FireSuppressionSystem"/>
+        <BehaviorArray Link="TurretBuff"/>
         <DeathTime value="30"/>
     </CUnit>
     <CUnit id="B1Missile" parent="MISSILE">
@@ -40591,6 +40613,7 @@
         <AbilArray Link="MobilizeSkill2"/>
         <BehaviorArray Link="TerranBuildingBurnDown"/>
         <BehaviorArray Link="FireSuppressionSystem"/>
+        <BehaviorArray Link="TurretBuff"/>
         <WeaponArray Link="TwinIbiksCannon" Turret="PlanetaryFortress"/>
         <CardLayouts>
             <LayoutButtons Face="SupplyDrop" Type="AbilCmd" AbilCmd="SupplyDrop,Execute" Row="2" Column="1"/>
@@ -40719,18 +40742,18 @@
     </CUnit>
     <CUnit id="Reactor">
         <BehaviorArray Link="FireSuppressionSystem"/>
+        <BehaviorArray Link="TurretBuff"/>
         <DeathTime value="30"/>
     </CUnit>
     <CUnit id="Refinery">
         <BehaviorArray Link="FireSuppressionSystem"/>
+        <BehaviorArray Link="TurretBuff"/>
         <DeathTime value="30"/>
     </CUnit>
     <CUnit id="RefineryRich">
         <BehaviorArray Link="FireSuppressionSystem"/>
+        <BehaviorArray Link="TurretBuff"/>
         <DeathTime value="30"/>
-    </CUnit>
-    <CUnit id="RenegadeMissileTurret">
-        <BehaviorArray Link="FireSuppressionSystem"/>
     </CUnit>
     <CUnit id="RoachBurrowed">
         <BehaviorArray Link="HonkaiAttributeUl"/>
@@ -40809,6 +40832,7 @@
     </CUnit>
     <CUnit id="SensorTower">
         <BehaviorArray Link="FireSuppressionSystem"/>
+        <BehaviorArray Link="TurretBuff"/>
         <DeathTime value="30"/>
     </CUnit>
     <CUnit id="SiegeTankSieged">
@@ -40820,6 +40844,7 @@
     </CUnit>
     <CUnit id="Starport">
         <BehaviorArray Link="FireSuppressionSystem"/>
+        <BehaviorArray Link="TurretBuff"/>
         <CardLayouts index="0">
             <LayoutButtons index="0" Face="Helios" AbilCmd="StarportTrain2,Train1" Column="1"/>
             <LayoutButtons index="1" Face="RPC" AbilCmd="StarportTrain2,Train2" Column="2"/>
@@ -40847,14 +40872,17 @@
     </CUnit>
     <CUnit id="StarportFlying">
         <BehaviorArray Link="FireSuppressionSystem"/>
+        <BehaviorArray Link="TurretBuff"/>
         <DeathTime value="30"/>
     </CUnit>
     <CUnit id="StarportReactor">
         <BehaviorArray Link="FireSuppressionSystem"/>
+        <BehaviorArray Link="TurretBuff"/>
         <DeathTime value="30"/>
     </CUnit>
     <CUnit id="StarportTechLab">
         <BehaviorArray Link="FireSuppressionSystem"/>
+        <BehaviorArray Link="TurretBuff"/>
         <CardLayouts index="0">
             <LayoutButtons index="2" Face="AdvancedMedic" AbilCmd="HumanTech,Research10" Column="1"/>
             <LayoutButtons index="3" Face="MedivacAutoLoad" AbilCmd="HumanTech,Research14" Column="0"/>
@@ -40868,6 +40896,7 @@
     </CUnit>
     <CUnit id="SupplyDepot">
         <BehaviorArray Link="FireSuppressionSystem"/>
+        <BehaviorArray Link="TurretBuff"/>
         <DeathTime value="30"/>
     </CUnit>
     <CUnit id="SupplyDepotLowered">
@@ -40875,6 +40904,7 @@
         <TechTreeUnlockedUnitArray value="HighTower"/>
         <TechTreeUnlockedUnitArray value="EngineeringBay"/>
         <BehaviorArray Link="FireSuppressionSystem"/>
+        <BehaviorArray Link="TurretBuff"/>
         <DeathTime value="30"/>
     </CUnit>
     <CUnit id="Target">
@@ -41096,8 +41126,8 @@
             <Weapon value="KianaATTACK"/>
         </EquipmentArray>
     </CUnit>
-    <CUnit id="GunTurret1" parent="CUnitBuildingTerr">
-        <Name value="Unit/Name/GunTurret1"/>
+    <CUnit id="SwarmMissile" parent="CUnitBuildingTerr">
+        <Name value="Unit/Name/SwarmMissile"/>
         <Facing value="0"/>
         <FlagArray index="AIDefense" value="1"/>
         <LifeStart value="600"/>
@@ -41106,15 +41136,14 @@
         <StationaryTurningRate value="720"/>
         <TurningRate value="720"/>
         <Sight value="11"/>
-        <CostResource index="Minerals" value="100"/>
+        <CostResource index="Minerals" value="150"/>
         <CostResource index="Vespene" value="50"/>
         <AttackTargetPriority value="20"/>
         <AbilArray Link="BuildInProgress"/>
         <AbilArray Link="stop"/>
         <AbilArray Link="attack"/>
-        <BehaviorArray index="1" Link="UnderConstruction"/>
-        <BehaviorArray Link="FireSuppressionSystem"/>
-        <WeaponArray Link="LongboltMissile2" Turret="MissileTurret"/>
+        <BehaviorArray Link="UnderConstruction"/>
+        <WeaponArray Link="SwarmMissile" Turret="MissileTurret"/>
         <CardLayouts>
             <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="BuildInProgress,Halt" Row="2" Column="3"/>
             <LayoutButtons Face="CancelBuilding" Type="AbilCmd" AbilCmd="BuildInProgress,Cancel" Row="2" Column="4"/>
@@ -41131,16 +41160,10 @@
         <MinimapRadius value="0.75"/>
         <GlossaryCategory value="Unit/Category/TerranUnits"/>
         <GlossaryPriority value="310"/>
-        <GlossaryStrongArray value="Banshee"/>
-        <GlossaryStrongArray value="Mutalisk"/>
-        <GlossaryStrongArray value="Phoenix"/>
-        <GlossaryWeakArray value="Marine"/>
-        <GlossaryWeakArray value="Zergling"/>
-        <GlossaryWeakArray value="Zealot"/>
-        <AIEvaluateAlias value="GunTurret1"/>
+        <AIEvaluateAlias value="SwarmMissile"/>
     </CUnit>
-    <CUnit id="MissileTurret2" parent="CUnitBuildingTerr">
-        <Name value="Unit/Name/MissileTurret2"/>
+    <CUnit id="Railgun" parent="CUnitBuildingTerr">
+        <Name value="Unit/Name/Railgun"/>
         <Facing value="0"/>
         <FlagArray index="AIDefense" value="1"/>
         <FlagArray index="AcquireRally" value="1"/>
@@ -41156,9 +41179,8 @@
         <AbilArray Link="BuildInProgress"/>
         <AbilArray Link="stop"/>
         <AbilArray Link="attack"/>
-        <BehaviorArray index="1" Link="UnderConstruction"/>
-        <BehaviorArray Link="FireSuppressionSystem"/>
-        <WeaponArray Link="Tempest2" Turret="MissileTurret2"/>
+        <BehaviorArray Link="UnderConstruction"/>
+        <WeaponArray Link="Railgun" Turret="MissileTurret2"/>
         <CardLayouts>
             <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="BuildInProgress,Halt" Row="2" Column="3"/>
             <LayoutButtons Face="CancelBuilding" Type="AbilCmd" AbilCmd="BuildInProgress,Cancel" Row="2" Column="4"/>
@@ -41175,13 +41197,7 @@
         <MinimapRadius value="0.75"/>
         <GlossaryCategory value="Unit/Category/TerranUnits"/>
         <GlossaryPriority value="310"/>
-        <GlossaryStrongArray value="Banshee"/>
-        <GlossaryStrongArray value="Mutalisk"/>
-        <GlossaryStrongArray value="Phoenix"/>
-        <GlossaryWeakArray value="Marine"/>
-        <GlossaryWeakArray value="Zergling"/>
-        <GlossaryWeakArray value="Zealot"/>
-        <AIEvaluateAlias value="MissileTurret2"/>
+        <AIEvaluateAlias value="Railgun"/>
     </CUnit>
     <CUnit id="Ravager">
         <BehaviorArray Link="HonkaiAttributeUl"/>
@@ -41199,8 +41215,8 @@
     <CUnit id="SCV">
         <CardLayouts index="1">
             <LayoutButtons Face="HighTower" Type="AbilCmd" AbilCmd="TerranBuild,Build13" Row="1" Column="2"/>
-            <LayoutButtons Face="GunTurret1" Type="AbilCmd" AbilCmd="TerranBuild,Build18" Row="1" Column="3"/>
-            <LayoutButtons Face="MissileTurret2" Type="AbilCmd" AbilCmd="TerranBuild,Build21" Row="2" Column="3"/>
+            <LayoutButtons Face="SwarmMissile" Type="AbilCmd" AbilCmd="TerranBuild,Build18" Row="1" Column="3"/>
+            <LayoutButtons Face="Railgun" Type="AbilCmd" AbilCmd="TerranBuild,Build21" Row="2" Column="3"/>
             <LayoutButtons Face="KianaBuilding" Type="AbilCmd" AbilCmd="AvatarBuild,Build1" Row="0" Column="3"/>
             <LayoutButtons Face="SeeleBuilding" Type="AbilCmd" AbilCmd="AvatarBuild,Build4" Row="0" Column="3"/>
             <LayoutButtons Face="MeiBuilding" Type="AbilCmd" AbilCmd="AvatarBuild,Build2" Row="0" Column="3"/>
@@ -41249,6 +41265,7 @@
     </CUnit>
     <CUnit id="TechLab">
         <BehaviorArray Link="FireSuppressionSystem"/>
+        <BehaviorArray Link="TurretBuff"/>
         <DeathTime value="30"/>
     </CUnit>
     <CUnit id="UltraliskBurrowed">
@@ -42818,6 +42835,13 @@
     <CBehaviorBuff id="Protect90Ex">
         <EditorCategories value="AbilityorEffectType:Units"/>
     </CBehaviorBuff>
+    <CBehaviorBuff id="TurretBuff">
+        <Alignment value="Positive"/>
+        <BehaviorFlags index="Permanent" value="1"/>
+        <BehaviorFlags index="EnabledWhileDead" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <InfoFlags index="Hidden" value="1"/>
+    </CBehaviorBuff>
     <CBehaviorBuff id="SaShield">
         <EditorCategories value="AbilityorEffectType:Units"/>
         <DisplayDuration index="Self" value="1"/>
@@ -44021,7 +44045,6 @@
         <InfoIcon value="Assets\Textures\btn-ability-hornerhan-mechbioweaponupgrades-c.dds"/>
         <BehaviorFlags index="Permanent" value="1"/>
         <BehaviorFlags index="EnabledWhileDead" value="1"/>
-        <Face value="test_value=1 test_value2=aaa"/>
     </CBehaviorBuff>
     <CBehaviorResource id="HighYieldMineralFieldMinerals">
         <Capacity value="1000000"/>
@@ -45312,6 +45335,13 @@
             <WeaponDisableArray value="KianaC1RangeAttack4"/>
         </Modification>
     </CBehaviorBuff>
+    <CUpgrade id="NeosteelFrame">
+        <EffectArray index="2" Operation="Set" Reference="Actor,Bunker,Wireframe.Image[0]" Value="Assets\Textures\wireframe-terran-bunker-neosteelframe.dds"/>
+        <EffectArray index="3" Operation="Set" Reference="Actor,Bunker,GroupIcon.Image[0]" Value="Assets\Textures\wireframe-terran-bunker-neosteelframe.dds"/>
+        <EffectArray index="4" removed="1"/>
+        <EffectArray index="5" removed="1"/>
+        <MaxLevel value="2"/>
+    </CUpgrade>
     <CUpgrade id="ExtraDivineKeysArchaeology">
         <MaxLevel value="127"/>
     </CUpgrade>
@@ -45503,6 +45533,127 @@
         <MaxLevel value="16"/>
         <AffectedUnitArray value="KianaC2"/>
         <AffectedUnitArray value="KianaC4"/>
+    </CUpgrade>
+    <CUpgrade id="TurretArmorUpgrade">
+        <EffectArray Reference="Behavior,TurretBuff,Modification.LifeArmorBonus" Value="1"/>
+        <EffectArray Reference="Behavior,TurretBuff,Modification.VitalMaxFractionArray[Life]" Value="0.05"/>
+        <EffectArray Reference="Unit,CommandCenter,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,CommandCenterFlying,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,OrbitalCommand,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,OrbitalCommandFlying,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,PlanetaryFortress,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,PlanetaryFortress2,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,Refinery,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,RefineryRich,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,SupplyDepot,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,SupplyDepotLowered,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,EngineeringBay,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,Barracks,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,BarracksFlying,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,StarportReactor,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,FactoryReactor,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,BarracksReactor,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,Reactor,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,TechLab,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,BarracksTechLab,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,FactoryTechLab,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,StarportTechLab,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,GhostAcademy,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,MissileTurret,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,SensorTower,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,Bunker,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,Factory,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,FactoryFlying,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,Armory,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,Starport,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,StarportFlying,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,FusionCore,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,HighTower,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,SwarmMissile,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,Railgun,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,MercCompound,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,DivineKeys,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,KianaBuilding,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,MeiBuilding,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,BronyaBuilding,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,SeeleBuilding,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,IceTablet,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,IceTabletFactory,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,IceTablet2,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,IceTabletFactory2,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,Furnace,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,FurnaceFactory,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,Furnace2,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,FurnaceFactory2,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,LightningRod,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,LightningRodFactory,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,LightningRod2,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,LightningRodFactory2,LifeArmorLevel" Value="1"/>
+        <MaxLevel value="10"/>
+        <AffectedUnitArray value="CommandCenter"/>
+        <AffectedUnitArray value="CommandCenterFlying"/>
+        <AffectedUnitArray value="OrbitalCommand"/>
+        <AffectedUnitArray value="OrbitalCommandFlying"/>
+        <AffectedUnitArray value="PlanetaryFortress"/>
+        <AffectedUnitArray value="PlanetaryFortress2"/>
+        <AffectedUnitArray value="Refinery"/>
+        <AffectedUnitArray value="RefineryRich"/>
+        <AffectedUnitArray value="SupplyDepot"/>
+        <AffectedUnitArray value="SupplyDepotLowered"/>
+        <AffectedUnitArray value="EngineeringBay"/>
+        <AffectedUnitArray value="Barracks"/>
+        <AffectedUnitArray value="BarracksFlying"/>
+        <AffectedUnitArray value="StarportReactor"/>
+        <AffectedUnitArray value="FactoryReactor"/>
+        <AffectedUnitArray value="BarracksReactor"/>
+        <AffectedUnitArray value="Reactor"/>
+        <AffectedUnitArray value="TechLab"/>
+        <AffectedUnitArray value="BarracksTechLab"/>
+        <AffectedUnitArray value="FactoryTechLab"/>
+        <AffectedUnitArray value="StarportTechLab"/>
+        <AffectedUnitArray value="GhostAcademy"/>
+        <AffectedUnitArray value="MissileTurret"/>
+        <AffectedUnitArray value="SensorTower"/>
+        <AffectedUnitArray value="Bunker"/>
+        <AffectedUnitArray value="Factory"/>
+        <AffectedUnitArray value="FactoryFlying"/>
+        <AffectedUnitArray value="Armory"/>
+        <AffectedUnitArray value="Starport"/>
+        <AffectedUnitArray value="StarportFlying"/>
+        <AffectedUnitArray value="FusionCore"/>
+        <AffectedUnitArray value="HighTower"/>
+        <AffectedUnitArray value="SwarmMissile"/>
+        <AffectedUnitArray value="Railgun"/>
+        <AffectedUnitArray value="MercCompound"/>
+        <AffectedUnitArray value="DivineKeys"/>
+        <AffectedUnitArray value="KianaBuilding"/>
+        <AffectedUnitArray value="MeiBuilding"/>
+        <AffectedUnitArray value="BronyaBuilding"/>
+        <AffectedUnitArray value="SeeleBuilding"/>
+        <AffectedUnitArray value="IceTablet"/>
+        <AffectedUnitArray value="IceTabletFactory"/>
+        <AffectedUnitArray value="IceTablet2"/>
+        <AffectedUnitArray value="IceTabletFactory2"/>
+        <AffectedUnitArray value="Furnace"/>
+        <AffectedUnitArray value="FurnaceFactory"/>
+        <AffectedUnitArray value="Furnace2"/>
+        <AffectedUnitArray value="FurnaceFactory2"/>
+        <AffectedUnitArray value="LightningRod"/>
+        <AffectedUnitArray value="LightningRodFactory"/>
+        <AffectedUnitArray value="LightningRod2"/>
+        <AffectedUnitArray value="LightningRodFactory2"/>
+    </CUpgrade>
+    <CUpgrade id="TurretAttackUpgrade">
+        <EffectArray Reference="Behavior,TurretBuff,Modification.DamageDealtFraction[Melee]" Value="0.1"/>
+        <EffectArray Reference="Behavior,TurretBuff,Modification.DamageDealtFraction[Ranged]" Value="0.1"/>
+        <EffectArray Reference="Behavior,TurretBuff,Modification.DamageDealtFraction[Spell]" Value="0.1"/>
+        <EffectArray Reference="Behavior,TurretBuff,Modification.DamageDealtFraction[Splash]" Value="0.1"/>
+        <EffectArray Reference="Behavior,TurretBuff,Modification.DamageDealtFraction[NoProc]" Value="0.1"/>
+        <EffectArray Reference="Weapon,LongboltMissile,Level" Value="1"/>
+        <EffectArray Reference="Weapon,Railgun,Level" Value="1"/>
+        <EffectArray Reference="Weapon,SwarmMissile,Level" Value="1"/>
+        <EffectArray Reference="Weapon,TwinIbiksCannon,Level" Value="1"/>
+        <MaxLevel value="10"/>
     </CUpgrade>
     <CUpgrade id="RO_040Charge">
         <Flags index="UpgradeCheat" value="0"/>
@@ -45816,22 +45967,26 @@
         <AffectedUnitArray value="Valkyrja2"/>
         <AffectedUnitArray value="Marauder"/>
     </CUpgrade>
-    <CUpgrade id="VAttackUpgrade2">
+    <CUpgrade id="VAttackUpgrade">
         <EffectArray Reference="Effect,ValkyrjaRifleDamage,Amount" Value="1"/>
         <EffectArray Reference="Weapon,ValkyrjaRifle,Level" Value="1"/>
         <EffectArray Reference="Weapon,ValkyrjaRifle,Range" Value="0.4"/>
-        <MaxLevel value="10"/>
         <AffectedUnitArray value="Valkyrja2"/>
+        <MaxLevel value="10"/>
     </CUpgrade>
     <CUpgrade id="HiSecAutoTracking">
-        <EffectArray index="0" Value="2"/>
-        <EffectArray index="1" Value="3"/>
-        <EffectArray index="2" Value="2"/>
+        <EffectArray index="0" Value="1.5"/>
+        <EffectArray index="1" Value="2"/>
+        <EffectArray index="2" Reference="Weapon,SwarmMissile,Range"/>
+        <EffectArray index="3" removed="1"/>
+        <EffectArray index="4" removed="1"/>
+        <MaxLevel value="2"/>
     </CUpgrade>
     <CUpgrade id="VArmorUpgrade">
         <EffectArray Reference="Unit,Valkyrja2,LifeArmorLevel" Value="1"/>
         <EffectArray Reference="Unit,Valkyrja3,LifeArmorLevel" Value="1"/>
         <EffectArray Reference="Behavior,VBuff,Modification.LifeArmorBonus" Value="1"/>
+        <EffectArray Reference="Behavior,VBuff,Modification.VitalMaxFractionArray[Life]" Value="0.05"/>
         <MaxLevel value="10"/>
     </CUpgrade>
     <CUpgrade id="KianaC2Unlock"/>
@@ -45860,51 +46015,9 @@
         <EffectArray Operation="Set" Reference="Button,KianaC4Evade,AlertTooltip" Value="Button/Tooltip/KianaC4EvadeUpgraded"/>
     </CUpgrade>
     <CUpgrade id="KianaC4Upgrade4"/>
-    <CUpgrade id="TerranBuildingArmor">
-        <EffectArray/>
-        <EffectArray/>
-        <EffectArray/>
-        <EffectArray/>
-        <EffectArray Value="1"/>
-        <EffectArray Value="1"/>
-        <EffectArray Value="2"/>
-        <EffectArray Value="2"/>
-        <EffectArray Reference="Unit,HighTower,LifeArmor" Value="2.000000"/>
-        <EffectArray Reference="Unit,HighTower,LifeArmorLevel" Value="2"/>
-        <EffectArray Reference="Unit,GunTurret1,LifeArmor" Value="2.000000"/>
-        <EffectArray Reference="Unit,GunTurret1,LifeArmorLevel" Value="2"/>
-        <EffectArray Reference="Unit,MissileTurret2,LifeArmor" Value="2.000000"/>
-        <EffectArray Reference="Unit,MissileTurret2,LifeArmorLevel" Value="2"/>
-        <EffectArray Reference="Unit,PlanetaryFortress2,LifeArmor" Value="2"/>
-        <EffectArray Reference="Unit,PlanetaryFortress2,LifeArmorLevel" Value="2"/>
-        <EffectArray Reference="Unit,MercCompound,LifeArmor" Value="2"/>
-        <EffectArray Reference="Unit,MercCompound,LifeArmorLevel" Value="2"/>
-        <EffectArray Reference="Unit,PlanetaryFortress2,LifeStart" Value="1000"/>
-        <EffectArray Reference="Unit,PlanetaryFortress2,LifeMax" Value="1000"/>
-        <EffectArray Reference="Unit,Bunker,LifeStart" Value="100"/>
-        <EffectArray Reference="Unit,Bunker,LifeMax" Value="100"/>
-        <EffectArray Reference="Unit,SupplyDepot,LifeStart" Value="100"/>
-        <EffectArray Reference="Unit,SupplyDepot,LifeMax" Value="100"/>
-        <EffectArray Reference="Unit,SupplyDepotLowered,LifeStart" Value="100"/>
-        <EffectArray Reference="Unit,SupplyDepotLowered,LifeMax" Value="100"/>
-        <EffectArray Reference="Unit,DivineKeys,LifeArmor" Value="2"/>
-        <EffectArray Reference="Unit,DivineKeys,LifeArmorLevel" Value="2"/>
-        <EffectArray Reference="Unit,KianaBuilding,LifeArmor" Value="2"/>
-        <EffectArray Reference="Unit,KianaBuilding,LifeArmorLevel" Value="2"/>
-        <AffectedUnitArray value="HighTower"/>
-        <AffectedUnitArray value="GunTurret1"/>
-        <AffectedUnitArray value="MissileTurret2"/>
-        <AffectedUnitArray value="PlanetaryFortress2"/>
-        <AffectedUnitArray value="MercCompound"/>
-        <AffectedUnitArray value="Bunker"/>
-        <AffectedUnitArray value="SupplyDepot"/>
-        <AffectedUnitArray value="SupplyDepotLowered"/>
-        <AffectedUnitArray value="DivineKeys"/>
-        <AffectedUnitArray value="KianaBuilding"/>
-        <MaxLevel value="4"/>
-    </CUpgrade>
     <CUpgrade id="UlArmorUpgrade">
         <EffectArray Reference="Behavior,UlBuff,Modification.LifeArmorBonus" Value="1"/>
+        <EffectArray Reference="Behavior,UlBuff,Modification.VitalMaxFractionArray[Life]" Value="0.05"/>
         <EffectArray Reference="Unit,UL_030,LifeArmorLevel" Value="1"/>
         <EffectArray Reference="Unit,UL_040,LifeArmorLevel" Value="1"/>
         <EffectArray Reference="Unit,HydraliskBurrowed,LifeArmorLevel" Value="1"/>
@@ -45923,7 +46036,7 @@
         <EffectArray Reference="Unit,Hydralisk,LifeArmorLevel" Value="1"/>
         <EffectArray Reference="Unit,Ultralisk,LifeArmorLevel" Value="1"/>
         <EffectArray Reference="Unit,UltraliskBurrowed,LifeArmorLevel" Value="1"/>
-        <MaxLevel value="6"/>
+        <MaxLevel value="10"/>
     </CUpgrade>
     <CUpgrade id="DeadgalAttackUpgrade">
         <EffectArray Reference="Behavior,DeadgalBuff,Modification.DamageDealtFraction[Melee]" Value="0.1"/>
@@ -45931,9 +46044,6 @@
         <EffectArray Reference="Behavior,DeadgalBuff,Modification.DamageDealtFraction[Spell]" Value="0.1"/>
         <EffectArray Reference="Behavior,DeadgalBuff,Modification.DamageDealtFraction[Splash]" Value="0.1"/>
         <EffectArray Reference="Behavior,DeadgalBuff,Modification.DamageDealtFraction[NoProc]" Value="0.1"/>
-        <EffectArray Reference="Abil,evolutionchamberresearch,InfoArray[Research1].Resource[Vespene]" Value="100"/>
-        <EffectArray Reference="Abil,evolutionchamberresearch,InfoArray[Research1].Resource[Minerals]" Value="100"/>
-        <EffectArray Reference="Abil,evolutionchamberresearch,InfoArray[Research1].Time" Value="5.000000"/>
         <EffectArray Reference="Weapon,DeadgalScythe,Level" Value="1"/>
         <EffectArray Reference="Weapon,DeadgalScythe2,Level" Value="1"/>
         <EffectArray Reference="Weapon,DeadgalScythe3,Level" Value="1"/>
@@ -45946,37 +46056,21 @@
         <MaxLevel value="10"/>
     </CUpgrade>
     <CUpgrade id="DeadgalArmorUpgrade">
-        <EffectArray Reference="Abil,evolutionchamberresearch,InfoArray[Research2].Resource[Vespene]" Value="100"/>
-        <EffectArray Reference="Abil,evolutionchamberresearch,InfoArray[Research2].Resource[Minerals]" Value="100"/>
-        <EffectArray Reference="Abil,evolutionchamberresearch,InfoArray[Research2].Time" Value="5.000000"/>
+        <EffectArray Reference="Behavior,DeadgalBuff,Modification.VitalMaxFractionArray[Life]" Value="0.05"/>
+        <EffectArray Reference="Behavior,DeadgalBuff,Modification.LifeArmorBonus" Value="1"/>
         <EffectArray Reference="Unit,DG_010,LifeArmorLevel" Value="1"/>
-        <EffectArray Reference="Unit,DG_010,LifeArmor" Value="1"/>
         <EffectArray Reference="Unit,DG_011,LifeArmorLevel" Value="1"/>
-        <EffectArray Reference="Unit,DG_011,LifeArmor" Value="1"/>
         <EffectArray Reference="Unit,DG_012,LifeArmorLevel" Value="1"/>
-        <EffectArray Reference="Unit,DG_012,LifeArmor" Value="1"/>
         <EffectArray Reference="Unit,DG_013,LifeArmorLevel" Value="1"/>
-        <EffectArray Reference="Unit,DG_013,LifeArmor" Value="1"/>
         <EffectArray Reference="Unit,RO_050,LifeArmorLevel" Value="1"/>
-        <EffectArray Reference="Unit,RO_050,LifeArmor" Value="1"/>
-        <EffectArray Reference="Unit,DG_020,LifeArmor" Value="1"/>
         <EffectArray Reference="Unit,DG_020,LifeArmorLevel" Value="1"/>
-        <EffectArray Reference="Unit,DG_020,LifeArmor" Value="1"/>
         <EffectArray Reference="Unit,DG_021,LifeArmorLevel" Value="1"/>
-        <EffectArray Reference="Unit,DG_020,LifeArmor" Value="1"/>
         <EffectArray Reference="Unit,DG_023,LifeArmorLevel" Value="1"/>
-        <AffectedUnitArray value="DG_010"/>
-        <AffectedUnitArray value="DG_011"/>
-        <AffectedUnitArray value="DG_012"/>
-        <AffectedUnitArray value="DG_013"/>
-        <AffectedUnitArray value="DG_020"/>
-        <AffectedUnitArray value="DG_021"/>
-        <AffectedUnitArray value="DG_023"/>
-        <AffectedUnitArray value="RO_050"/>
-        <MaxLevel value="6"/>
+        <MaxLevel value="10"/>
     </CUpgrade>
     <CUpgrade id="ROArmorUpgrade">
         <EffectArray Reference="Behavior,RobotUnit,Modification.LifeArmorBonus" Value="1"/>
+        <EffectArray Reference="Behavior,RobotUnit,Modification.VitalMaxFractionArray[Life]" Value="0.05"/>
         <EffectArray Reference="Unit,Helios,LifeArmorLevel" Value="1"/>
         <EffectArray Reference="Unit,RO_040,LifeArmorLevel" Value="1"/>
         <EffectArray Reference="Unit,Liberator,LifeArmorLevel" Value="1"/>
@@ -45994,7 +46088,7 @@
         <EffectArray Reference="Unit,RO_034,LifeArmorLevel" Value="1"/>
         <EffectArray Reference="Unit,RO_035,LifeArmorLevel" Value="1"/>
         <EffectArray Reference="Unit,RO_037,LifeArmorLevel" Value="1"/>
-        <MaxLevel value="8"/>
+        <MaxLevel value="10"/>
     </CUpgrade>
     <CUpgrade id="UlAttackUpgrade">
         <EffectArray Reference="Behavior,UlBuff,Modification.DamageDealtFraction[Melee]" Value="0.1"/>
@@ -46002,9 +46096,6 @@
         <EffectArray Reference="Behavior,UlBuff,Modification.DamageDealtFraction[Spell]" Value="0.1"/>
         <EffectArray Reference="Behavior,UlBuff,Modification.DamageDealtFraction[Splash]" Value="0.1"/>
         <EffectArray Reference="Behavior,UlBuff,Modification.DamageDealtFraction[NoProc]" Value="0.1"/>
-        <EffectArray Reference="Abil,evolutionchamberresearch,InfoArray[Research3].Resource[Vespene]" Value="100"/>
-        <EffectArray Reference="Abil,evolutionchamberresearch,InfoArray[Research3].Resource[Minerals]" Value="100"/>
-        <EffectArray Reference="Abil,evolutionchamberresearch,InfoArray[Research3].Time" Value="5.000000"/>
         <EffectArray Reference="Weapon,UL_030Weapon,Level" Value="1"/>
         <EffectArray Reference="Weapon,UL_040Weapon,Level" Value="1"/>
         <EffectArray Reference="Weapon,AcidSaliva,Level" Value="1"/>
@@ -46070,7 +46161,7 @@
         <AffectedUnitArray value="OrbitalCommandFlying"/>
         <AffectedUnitArray value="PlanetaryFortress2"/>
     </CUpgrade>
-    <CUpgrade id="VArmorUpgrade2">
+    <CUpgrade id="VShieldUpgrade">
         <EffectArray Reference="Unit,Valkyrja2,ShieldArmorLevel" Value="1"/>
         <EffectArray Reference="Unit,Valkyrja3,ShieldArmorLevel" Value="1"/>
         <EffectArray Reference="Behavior,VBuff,Modification.ShieldArmorBonus" Value="1"/>

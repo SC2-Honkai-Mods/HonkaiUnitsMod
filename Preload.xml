@@ -43,9 +43,9 @@
 <Behavior id="SpecialKill"/>
 <Behavior id="Boost"/>
 <Behavior id="VortexWarpableHeight"/>
+<Effect id="TargetBurn"/>
 <Effect id="ForceDizzy10s"/>
 <Effect id="Flying"/>
-<Effect id="TargetBurn"/>
 <Effect id="Herrscher8thAbil2AddCharge"/>
 <Effect id="Palsy"/>
 <Effect id="HonkaiHyperjumpInitialCP"/>
