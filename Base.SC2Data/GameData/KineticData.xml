@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CKineticTranslate id="TransleLeft">
+        <Cycles value="1"/>
+        <Duration value="5"/>
+        <XOffset value="10"/>
+    </CKineticTranslate>
+</Catalog>

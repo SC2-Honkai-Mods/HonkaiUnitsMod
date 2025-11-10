@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CItem id="WeaponK17">
+        <Class value="Gun"/>
+        <EquipBehaviorArray value="WeaponUseK17"/>
+        <EquipBehaviorArray value="K17AttackSpeed"/>
+        <Container value="WeaponPistolSlot"/>
+    </CItem>
+    <CItem id="WeaponK5">
+        <Class value="Gun"/>
+        <EquipBehaviorArray value="WeaponUseK5"/>
+        <Container value="WeaponPistolSlot"/>
+    </CItem>
+    <CItem id="WeaponK23">
+        <Class value="Gun"/>
+        <EquipBehaviorArray value="WeaponUseK23"/>
+        <EquipBehaviorArray value="K23AM"/>
+        <Container value="WeaponPistolSlot"/>
+    </CItem>
+</Catalog>

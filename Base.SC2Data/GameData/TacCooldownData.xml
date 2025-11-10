@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CTacCooldown id="UL_100Cooldowns">
+        <UnitLink value="UL_100"/>
+        <TacAbilData index="0" AbilLink="UL_100Abil">
+            <Cooldown index="0" value="1"/>
+            <Cooldown index="1" value="1"/>
+            <Cooldown index="2" value="5"/>
+            <Cooldown index="3" value="5"/>
+        </TacAbilData>
+    </CTacCooldown>
+</Catalog>

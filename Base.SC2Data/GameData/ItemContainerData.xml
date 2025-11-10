@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CItemContainer id="WeaponPistolSlot">
+        <Slots>
+            <EmptyFace value="WeaponPistolSlot"/>
+            <Equip value="1"/>
+            <Row value="1"/>
+            <Column value="1"/>
+            <Classes value="Gun"/>
+        </Slots>
+        <ModelHeight value="1"/>
+        <ModelWidth value="5"/>
+    </CItemContainer>
+</Catalog>

@@ -7,6 +7,7 @@
 <Abil id="SkillK17"/>
 <Actor id="SYSTEM_ActorConfig"/>
 <Behavior id="Precursor"/>
+<Behavior id="RO_060Barrage"/>
 <Behavior id="Herrscher8thAbil2"/>
 <Behavior id="BronyaC2Shield"/>
 <Behavior id="SaBackward"/>
@@ -117,6 +118,7 @@
 <Soundtrack id="MusicHerrscher8thAbil2"/>
 <Unit id="SiegeTankSieged"/>
 <Unit id="SiegeTank"/>
+<Unit id="RO_060Barrage"/>
 <Unit id="CosmicJuggernaut"/>
 <Unit id="RO_010"/>
 <Unit id="BronyaC7CannonTarget"/>
