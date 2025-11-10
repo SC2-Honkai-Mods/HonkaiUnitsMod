@@ -852,24 +852,6 @@ bool lib6D9D7845_gf_E5A48DE6B4BBE68C87E5AE9AE7B1BBE59E8BE79A84E58D95E4BD8D (stri
     }
 }
 
-void lib6D9D7845_gf_E7A7BBE999A4E58F8CE69EAAE7B1BBE6ADA6E599A8E68A80E883BD (unit lp_e58D95E4BD8D) {
-    // Variable Declarations
-    int lv_e5BA8FE58FB7;
-
-    // Automatic Variable Declarations
-    int autoE5900764_ae;
-    const int autoE5900764_ai = 1;
-
-    // Variable Initialization
-
-    // Implementation
-    autoE5900764_ae = (lib6D9D7845_gv_e58F8CE69EAAE6ADA6E599A8E7B1BBE588ABE695B0 - 1);
-    lv_e5BA8FE58FB7 = 0;
-    for ( ; ( (autoE5900764_ai >= 0 && lv_e5BA8FE58FB7 <= autoE5900764_ae) || (autoE5900764_ai < 0 && lv_e5BA8FE58FB7 >= autoE5900764_ae) ) ; lv_e5BA8FE58FB7 += autoE5900764_ai ) {
-        UnitAbilityRemove(lp_e58D95E4BD8D, lib6D9D7845_gv_e68980E69C89E58F8CE69EAAE6ADA6E599A8E68A80E883BD[lv_e5BA8FE58FB7]);
-    }
-}
-
 void lib6D9D7845_gf_E7A7BBE999A4E9878DE782AEE7B1BBE6ADA6E599A8 (unit lp_e58D95E4BD8D) {
     // Variable Declarations
     int lv_e5BA8FE58FB7;
@@ -1661,6 +1643,9 @@ bool lib6D9D7845_gf_E9809AE794A8E78AB6E68081E58D95E4BD8D (unit lp_unit) {
     else if (autoA59200CC_val == "KianaC4") {
         return true;
     }
+    else if (autoA59200CC_val == "KianaC1") {
+        return true;
+    }
     else if (autoA59200CC_val == "MeiC2") {
         return true;
     }
@@ -2377,40 +2362,6 @@ void lib6D9D7845_gt_Debug_Init () {
 }
 
 //--------------------------------------------------------------------------------------------------
-// Trigger: Debug 5
-//--------------------------------------------------------------------------------------------------
-bool lib6D9D7845_gt_Debug5_Func (bool testConds, bool runActions) {
-    // Variable Declarations
-    unit lv_u;
-
-    // Automatic Variable Declarations
-    // Variable Initialization
-    lv_u = UnitGroupRandomUnit(UnitGroupSelected(1), c_unitCountAlive);
-
-    // Conditions
-    if (testConds) {
-        if (!(lib6D9D7845_gf_E58581E8AEB8E8B083E8AF95())) {
-            return false;
-        }
-    }
-
-    // Actions
-    if (!runActions) {
-        return true;
-    }
-
-    libNtve_gf_CreateLookAtTargetAtUnitAttachPoint(lv_u, "Ref_Target 08");
-    libNtve_gf_MakeUnitLookAtUnit(lv_u, "Turret_Forward", lv_u, "Ref_Target 08");
-    return true;
-}
-
-//--------------------------------------------------------------------------------------------------
-void lib6D9D7845_gt_Debug5_Init () {
-    lib6D9D7845_gt_Debug5 = TriggerCreate("lib6D9D7845_gt_Debug5_Func");
-    TriggerAddEventKeyPressed(lib6D9D7845_gt_Debug5, c_playerAny, c_keyBackSlash, true, c_keyModifierStateIgnore, c_keyModifierStateIgnore, c_keyModifierStateIgnore);
-}
-
-//--------------------------------------------------------------------------------------------------
 // Trigger: Debug 2
 //--------------------------------------------------------------------------------------------------
 bool lib6D9D7845_gt_Debug2_Func (bool testConds, bool runActions) {
@@ -2433,9 +2384,7 @@ bool lib6D9D7845_gt_Debug2_Func (bool testConds, bool runActions) {
         return true;
     }
 
-    TriggerDebugOutput(1, ActorGetText(ActorFromActor(libNtve_gf_MainActorofUnit(lv_u), "SaBackwardLookAt")), true);
-    TriggerDebugOutput(1, ActorGetText(ActorFromActor(libNtve_gf_MainActorofUnit(lv_u), "SaForwardLookAt")), true);
-    TriggerDebugOutput(1, ActorGetText(libNtve_gf_MainActorofUnit(lv_u)), true);
+    UnitInventoryContainerOpen(PlayerGroupAll(), lv_u, 1, true);
     return true;
 }
 
@@ -2510,6 +2459,40 @@ bool lib6D9D7845_gt_Debug4_Func (bool testConds, bool runActions) {
 void lib6D9D7845_gt_Debug4_Init () {
     lib6D9D7845_gt_Debug4 = TriggerCreate("lib6D9D7845_gt_Debug4_Func");
     TriggerAddEventKeyPressed(lib6D9D7845_gt_Debug4, c_playerAny, c_keyNumPad7, true, c_keyModifierStateIgnore, c_keyModifierStateIgnore, c_keyModifierStateIgnore);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Debug 5
+//--------------------------------------------------------------------------------------------------
+bool lib6D9D7845_gt_Debug5_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    unit lv_u;
+
+    // Automatic Variable Declarations
+    // Variable Initialization
+    lv_u = UnitGroupRandomUnit(UnitGroupSelected(1), c_unitCountAlive);
+
+    // Conditions
+    if (testConds) {
+        if (!(lib6D9D7845_gf_E58581E8AEB8E8B083E8AF95())) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    libNtve_gf_CreateLookAtTargetAtUnitAttachPoint(lv_u, "Ref_Target 08");
+    libNtve_gf_MakeUnitLookAtUnit(lv_u, "Turret_Forward", lv_u, "Ref_Target 08");
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib6D9D7845_gt_Debug5_Init () {
+    lib6D9D7845_gt_Debug5 = TriggerCreate("lib6D9D7845_gt_Debug5_Func");
+    TriggerAddEventKeyPressed(lib6D9D7845_gt_Debug5, c_playerAny, c_keyBackSlash, true, c_keyModifierStateIgnore, c_keyModifierStateIgnore, c_keyModifierStateIgnore);
 }
 
 //--------------------------------------------------------------------------------------------------
@@ -2924,7 +2907,7 @@ bool lib6D9D7845_gt_E58D95E4BD8DE6B58BE8AF95E7949FE68890_Func (bool testConds, b
         lv_e58D95E4BD8D = "RO_050";
     }
     else if (auto773EE29B_val == "RO_060") {
-        lv_e58D95E4BD8D = "Liberator";
+        lv_e58D95E4BD8D = "RO_060";
     }
     else if (auto773EE29B_val == "MHT") {
         lv_e58D95E4BD8D = "MHT3";
@@ -4447,88 +4430,154 @@ void lib6D9D7845_gt_E586B0E7BB93E5BCB9E6A1A9E78886E782B8E6A8A1E59E8B_Init () {
 }
 
 //--------------------------------------------------------------------------------------------------
-// Trigger: ????????????-K23
+// Trigger: RO_060 Barrage
 //--------------------------------------------------------------------------------------------------
-bool lib6D9D7845_gt_E58887E68DA2E6ADA6E599A8K23_Func (bool testConds, bool runActions) {
+bool lib6D9D7845_gt_RO_060Barrage_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    unit lv_u;
+    point lv_target;
+    fixed lv_direction;
+
     // Automatic Variable Declarations
+    // Variable Initialization
+    lv_u = EventPlayerEffectUsedUnit(c_effectUnitCaster);
+    lv_target = EventPlayerEffectUsedPoint(c_effectLocationTargetPoint);
+    lv_direction = (AngleBetweenPoints(UnitGetPosition(lv_u), lv_target) + RandomFixed(-7.5, 7.5));
+
     // Actions
     if (!runActions) {
         return true;
     }
 
-    lib6D9D7845_gf_E7A7BBE999A4E58F8CE69EAAE7B1BBE6ADA6E599A8E68A80E883BD(EventUnit());
-    UnitAbilityAdd(EventUnit(), "SkillK23");
+    UnitCreate(1, "RO_060Barrage", c_unitCreateIgnorePlacement, UnitGetOwner(lv_u), UnitGetPosition(lv_u), lv_direction);
+    UnitBehaviorAdd(UnitLastCreated(), "RO_060Barrage", lv_u, 1);
     return true;
 }
 
 //--------------------------------------------------------------------------------------------------
-void lib6D9D7845_gt_E58887E68DA2E6ADA6E599A8K23_Init () {
-    lib6D9D7845_gt_E58887E68DA2E6ADA6E599A8K23 = TriggerCreate("lib6D9D7845_gt_E58887E68DA2E6ADA6E599A8K23_Func");
-    TriggerAddEventUnitAbility(lib6D9D7845_gt_E58887E68DA2E6ADA6E599A8K23, null, AbilityCommand("KianaWeaponSwitchK23", 0), c_abilEffectStageFinish, true);
+void lib6D9D7845_gt_RO_060Barrage_Init () {
+    lib6D9D7845_gt_RO_060Barrage = TriggerCreate("lib6D9D7845_gt_RO_060Barrage_Func");
+    TriggerAddEventPlayerEffectUsed(lib6D9D7845_gt_RO_060Barrage, c_playerAny, "RO_060BarrageDummy");
 }
 
 //--------------------------------------------------------------------------------------------------
-// Trigger: ????????????-K5
+// Trigger: K5 On
 //--------------------------------------------------------------------------------------------------
-bool lib6D9D7845_gt_E58887E68DA2E6ADA6E599A8K5_Func (bool testConds, bool runActions) {
+bool lib6D9D7845_gt_K5On_Func (bool testConds, bool runActions) {
     // Automatic Variable Declarations
     // Actions
     if (!runActions) {
         return true;
     }
 
-    lib6D9D7845_gf_E7A7BBE999A4E58F8CE69EAAE7B1BBE6ADA6E599A8E68A80E883BD(EventUnit());
     UnitAbilityAdd(EventUnit(), "SkillK5");
     return true;
 }
 
 //--------------------------------------------------------------------------------------------------
-void lib6D9D7845_gt_E58887E68DA2E6ADA6E599A8K5_Init () {
-    lib6D9D7845_gt_E58887E68DA2E6ADA6E599A8K5 = TriggerCreate("lib6D9D7845_gt_E58887E68DA2E6ADA6E599A8K5_Func");
-    TriggerAddEventUnitAbility(lib6D9D7845_gt_E58887E68DA2E6ADA6E599A8K5, null, AbilityCommand("KianaWeaponSwitchK5", 0), c_abilEffectStageFinish, true);
+void lib6D9D7845_gt_K5On_Init () {
+    lib6D9D7845_gt_K5On = TriggerCreate("lib6D9D7845_gt_K5On_Func");
+    TriggerAddEventUnitBehaviorChange(lib6D9D7845_gt_K5On, null, "WeaponUseK5", c_unitBehaviorChangeCreate);
 }
 
 //--------------------------------------------------------------------------------------------------
-// Trigger: ????????????-K17
+// Trigger: K5 Off
 //--------------------------------------------------------------------------------------------------
-bool lib6D9D7845_gt_E58887E68DA2E6ADA6E599A8K17_Func (bool testConds, bool runActions) {
+bool lib6D9D7845_gt_K5Off_Func (bool testConds, bool runActions) {
     // Automatic Variable Declarations
     // Actions
     if (!runActions) {
         return true;
     }
 
-    lib6D9D7845_gf_E7A7BBE999A4E58F8CE69EAAE7B1BBE6ADA6E599A8E68A80E883BD(EventUnit());
+    UnitAbilityRemove(EventUnit(), "SkillK5");
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib6D9D7845_gt_K5Off_Init () {
+    lib6D9D7845_gt_K5Off = TriggerCreate("lib6D9D7845_gt_K5Off_Func");
+    TriggerAddEventUnitBehaviorChange(lib6D9D7845_gt_K5Off, null, "WeaponUseK5", c_unitBehaviorChangeDestroy);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: K17 On
+//--------------------------------------------------------------------------------------------------
+bool lib6D9D7845_gt_K17On_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
     UnitAbilityAdd(EventUnit(), "SkillK17");
     return true;
 }
 
 //--------------------------------------------------------------------------------------------------
-void lib6D9D7845_gt_E58887E68DA2E6ADA6E599A8K17_Init () {
-    lib6D9D7845_gt_E58887E68DA2E6ADA6E599A8K17 = TriggerCreate("lib6D9D7845_gt_E58887E68DA2E6ADA6E599A8K17_Func");
-    TriggerAddEventUnitAbility(lib6D9D7845_gt_E58887E68DA2E6ADA6E599A8K17, null, AbilityCommand("KianaWeaponSwitchK17", 0), c_abilEffectStageFinish, true);
+void lib6D9D7845_gt_K17On_Init () {
+    lib6D9D7845_gt_K17On = TriggerCreate("lib6D9D7845_gt_K17On_Func");
+    TriggerAddEventUnitBehaviorChange(lib6D9D7845_gt_K17On, null, "WeaponUseK17", c_unitBehaviorChangeCreate);
 }
 
 //--------------------------------------------------------------------------------------------------
-// Trigger: ??????????????????
+// Trigger: K17 Off
 //--------------------------------------------------------------------------------------------------
-bool lib6D9D7845_gt_E58F8CE69EAAE6ADA6E599A8E99B86E59088_Func (bool testConds, bool runActions) {
+bool lib6D9D7845_gt_K17Off_Func (bool testConds, bool runActions) {
     // Automatic Variable Declarations
     // Actions
     if (!runActions) {
         return true;
     }
 
-    lib6D9D7845_gv_e68980E69C89E58F8CE69EAAE6ADA6E599A8E68A80E883BD[0] = "SkillK23";
-    lib6D9D7845_gv_e68980E69C89E58F8CE69EAAE6ADA6E599A8E68A80E883BD[1] = "SkillK5";
-    lib6D9D7845_gv_e68980E69C89E58F8CE69EAAE6ADA6E599A8E68A80E883BD[2] = "SkillK17";
+    UnitAbilityRemove(EventUnit(), "SkillK17");
     return true;
 }
 
 //--------------------------------------------------------------------------------------------------
-void lib6D9D7845_gt_E58F8CE69EAAE6ADA6E599A8E99B86E59088_Init () {
-    lib6D9D7845_gt_E58F8CE69EAAE6ADA6E599A8E99B86E59088 = TriggerCreate("lib6D9D7845_gt_E58F8CE69EAAE6ADA6E599A8E99B86E59088_Func");
-    TriggerAddEventMapInit(lib6D9D7845_gt_E58F8CE69EAAE6ADA6E599A8E99B86E59088);
+void lib6D9D7845_gt_K17Off_Init () {
+    lib6D9D7845_gt_K17Off = TriggerCreate("lib6D9D7845_gt_K17Off_Func");
+    TriggerAddEventUnitBehaviorChange(lib6D9D7845_gt_K17Off, null, "WeaponUseK17", c_unitBehaviorChangeDestroy);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: K23 On
+//--------------------------------------------------------------------------------------------------
+bool lib6D9D7845_gt_K23On_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    UnitAbilityAdd(EventUnit(), "SkillK23");
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib6D9D7845_gt_K23On_Init () {
+    lib6D9D7845_gt_K23On = TriggerCreate("lib6D9D7845_gt_K23On_Func");
+    TriggerAddEventUnitBehaviorChange(lib6D9D7845_gt_K23On, null, "WeaponUseK23", c_unitBehaviorChangeCreate);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: K23 Off
+//--------------------------------------------------------------------------------------------------
+bool lib6D9D7845_gt_K23Off_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    UnitAbilityRemove(EventUnit(), "SkillK23");
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib6D9D7845_gt_K23Off_Init () {
+    lib6D9D7845_gt_K23Off = TriggerCreate("lib6D9D7845_gt_K23Off_Func");
+    TriggerAddEventUnitBehaviorChange(lib6D9D7845_gt_K23Off, null, "WeaponUseK23", c_unitBehaviorChangeDestroy);
 }
 
 //--------------------------------------------------------------------------------------------------
@@ -5618,11 +5667,6 @@ bool lib6D9D7845_gt_E7B2BEE7A59EE5B9B2E689B0_Func (bool testConds, bool runActio
 
     if ((UnitGetType(lv_target) == "SiegeTankSieged")) {
         UnitIssueOrder(lv_target, Order(AbilityCommand("Unsiege", 0)), c_orderQueueReplace);
-        return true;
-    }
-
-    if ((UnitGetType(lv_target) == "LiberatorAG")) {
-        UnitIssueOrder(lv_target, Order(AbilityCommand("LiberatorMorphtoAA", 0)), c_orderQueueReplace);
         return true;
     }
 
@@ -8604,10 +8648,10 @@ void lib6D9D7845_InitTriggers () {
     lib6D9D7845_gt_CreateDPSUnit_Init();
     lib6D9D7845_gt_DPSStats_Init();
     lib6D9D7845_gt_Debug_Init();
-    lib6D9D7845_gt_Debug5_Init();
     lib6D9D7845_gt_Debug2_Init();
     lib6D9D7845_gt_Debug3_Init();
     lib6D9D7845_gt_Debug4_Init();
+    lib6D9D7845_gt_Debug5_Init();
     lib6D9D7845_gt_Debug6_Init();
     lib6D9D7845_gt_DebugEffect_Init();
     lib6D9D7845_gt_DebugUnitBehavior_Init();
@@ -8649,10 +8693,13 @@ void lib6D9D7845_InitTriggers () {
     lib6D9D7845_gt_E8999AE7A9BAE4B887E8978FE7949FE68890_Init();
     lib6D9D7845_gt_E79086E4B98BE5BE8BE88085E8A385E794B2E7949FE68890_Init();
     lib6D9D7845_gt_E586B0E7BB93E5BCB9E6A1A9E78886E782B8E6A8A1E59E8B_Init();
-    lib6D9D7845_gt_E58887E68DA2E6ADA6E599A8K23_Init();
-    lib6D9D7845_gt_E58887E68DA2E6ADA6E599A8K5_Init();
-    lib6D9D7845_gt_E58887E68DA2E6ADA6E599A8K17_Init();
-    lib6D9D7845_gt_E58F8CE69EAAE6ADA6E599A8E99B86E59088_Init();
+    lib6D9D7845_gt_RO_060Barrage_Init();
+    lib6D9D7845_gt_K5On_Init();
+    lib6D9D7845_gt_K5Off_Init();
+    lib6D9D7845_gt_K17On_Init();
+    lib6D9D7845_gt_K17Off_Init();
+    lib6D9D7845_gt_K23On_Init();
+    lib6D9D7845_gt_K23Off_Init();
     lib6D9D7845_gt_E8AEBEE7BDAEE783ADE883BDE69DA1_Init();
     lib6D9D7845_gt_E58887E68DA2E6ADA6E599A8B5_Init();
     lib6D9D7845_gt_E58887E68DA2E6ADA6E599A8B7_Init();

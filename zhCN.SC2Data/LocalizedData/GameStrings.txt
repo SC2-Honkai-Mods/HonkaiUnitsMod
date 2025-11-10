@@ -15,6 +15,7 @@ Abil/Name/BronyaC7Gun2=构造浮游炮II型
 Abil/Name/BronyaC7MorphToMotor=骑乘模式
 Abil/Name/BronyaMorphToAvatar=普通模式
 Abil/Name/BuildHerrscherCore=折跃神之键阁
+Abil/Name/BuyWeaponPistol=购买双枪武器
 Abil/Name/CannonResearch=重炮武器研发
 Abil/Name/ChooseAvatar=选择角色
 Abil/Name/CosmicJuggernautBlink=重新部署
@@ -93,9 +94,6 @@ Abil/Name/KianaC4Ult=女武神能爆
 Abil/Name/KianaC4Upgrade=白骑士·月光研发
 Abil/Name/KianaSkin1=更换外观 阳光海滩
 Abil/Name/KianaUpgrade=琪亚娜属性升级
-Abil/Name/KianaWeaponSwitchK17=琪亚娜-武器切换-能量跃迁者
-Abil/Name/KianaWeaponSwitchK23=琪亚娜-武器切换-天火圣裁
-Abil/Name/KianaWeaponSwitchK5=琪亚娜-武器切换-索尔之锤
 Abil/Name/LaunchDivineKey4th=发射第四神之键
 Abil/Name/LaunchInterceptors2=发射拦截机 2
 Abil/Name/LaunchInterceptorsHyperion=发射拦截机
@@ -116,7 +114,10 @@ Abil/Name/MorphToBronyaC2=MorphToBronyaC2
 Abil/Name/MorphToKianaC1=切换为空之律者
 Abil/Name/MorphToKianaC2=切换为领域装·白练
 Abil/Name/MorphToKianaC4=切换为白骑士·月光
+Abil/Name/MorphtoRO_060=Morph to RO_060
+Abil/Name/MorphtoRO_060_Defense=Morph to RO_060 Defense
 Abil/Name/NanoRepair2=纳米修复
+Abil/Name/PistolInventory=双枪槽位
 Abil/Name/Queue1MHT=队列(1)(MHT)
 Abil/Name/RO_010Abli1=末日突袭
 Abil/Name/RO_010Abli1End=末日突袭
@@ -148,7 +149,6 @@ Abil/Name/SevenThundersOfRetribution=电磁力消除
 Abil/Name/SiegeMode=火炮模式
 Abil/Name/SkillK17=眩晕跃迁
 Abil/Name/SkillK23=天火出鞘
-Abil/Name/SkillK23_2=天火出鞘 2
 Abil/Name/SkillK5=雷神之怒
 Abil/Name/SkillR11=暗色帷幕
 Abil/Name/SpawnHerrscher=生成律者
@@ -294,6 +294,7 @@ Behavior/Name/RO_031AbilUnitMoveToTarget=RO_031 Abil Unit Move To Target
 Behavior/Name/RO_032IceMissile=爆炸倒计时
 Behavior/Name/RO_033FireMissile=爆炸倒计时
 Behavior/Name/RO_050BreakDown=瘫痪
+Behavior/Name/RO_060Barrage=RO_060 Barrage
 Behavior/Name/RobotUnit=机甲单位
 Behavior/Name/SaDeath=Sa Death
 Behavior/Name/SaIntro=Sa Intro
@@ -574,7 +575,6 @@ Button/Name/Interceptor=制造轻型战斗机
 Button/Name/Interceptor2=制造轻型战斗机
 Button/Name/K17Skill=眩晕跃迁
 Button/Name/K23Skill=天火出鞘
-Button/Name/K23Skill2=天火出鞘
 Button/Name/K5Skill=雷神之怒
 Button/Name/KianaBuilding=建造射击训练室
 Button/Name/KianaC1Attack=亚空连射/虚数荆棘
@@ -622,6 +622,8 @@ Button/Name/MercCompound=建造米高扬中央设计制造局
 Button/Name/MicroFiltering2=高效切割
 Button/Name/MobilizeSkill1=紧急动员
 Button/Name/MobilizeSkill2=空投支援
+Button/Name/MorphToRO_060=炮台形态
+Button/Name/MorphToRO_060_Defense=堡垒形态
 Button/Name/MorphToSaBackward=变形为倒立
 Button/Name/MorphToSaForward=变形为正面
 Button/Name/NanoRepair2=纳米修复
@@ -792,9 +794,11 @@ Button/Name/WeaponB34=真理之钥
 Button/Name/WeaponB5=百手巨人初型
 Button/Name/WeaponB6=5th圣遗物
 Button/Name/WeaponB7=重装小兔19C
+Button/Name/WeaponK17=能量跃迁者
 Button/Name/WeaponK23=天火圣裁
 Button/Name/WeaponK5=索尔之锤
-Button/Name/WeaponK52=能量跃迁者
+Button/Name/WeaponPistolSlot=双枪武器槽位
+Button/Name/WeaponPistolTrade=购买双枪武器
 Button/Name/WeaponSevenThundersOfRetribution=涤罪七雷
 Button/Name/WidowMineUnburrow=解除地雷<n/>
 Button/Name/Zergling=变异为咬咬怪
@@ -806,7 +810,6 @@ Button/Tooltip/ATTACK=为所有装甲提高4点攻击力，可升级16次<n/><c 
 Button/Tooltip/AdvancedMedic=提升“赫利俄斯”运输舰50%的治疗速度。减少治疗消耗能量的35%。
 Button/Tooltip/ArmorLevel=为所有装甲提高120点护盾和0.5护盾恢复速率，可升级16次(物理防御仅取决于生命护甲，护盾护甲并不生效)<n/><c val="FF0000">女武神装甲占用补给+1</c>
 Button/Tooltip/ArmorLevel2=为所有装甲提高160点生命值、1点生命装甲和0.5生命恢复率，可升级16次<n/><c val="FF0000">女武神装甲占用补给+1</c>
-Button/Tooltip/Armory=为重工厂和星港制造的单位提供武器和护甲升级方案，升级部分机甲单位技能，以及研发部分重炮武器。
 Button/Tooltip/AutoEquip=以当前单位的装备为模板，自动配置装备（仅以选中所有单位中的“最佳单位”为准）。该类功能<c val="FFFF00">仅影响同类型单位</c>
 Button/Tooltip/AutoEquipAdd=以当前单位的装备为模板，为当前所有单位配装，但是不会卸下已有装备
 Button/Tooltip/AutoEquipCancel=取消给新训练单位的装备规则
@@ -896,7 +899,6 @@ Button/Tooltip/DivineKey4th=席卷所有沿途单位的风暴，每<d ref="Behav
 Button/Tooltip/DivineKey4thWeaponUnit=人工构造理想流体形成的风暴，每<d ref="Behavior,Herrscher4thWeaponTarget,Period" precision="1"/>秒对周围单位造成<d ref="Effect,Herrscher4thWeaponDamage,Amount"/>点伤害并有概率击退，持续<d ref="Behavior,TornadoTimedLife,Duration"/>秒。
 Button/Tooltip/DivineKeys=律者核心的研究基地，在击败律者后可在此研发相关武器或者升级
 Button/Tooltip/EnableBuildingAttack=允许爆虫自动将建筑视为攻击目标。<n/><n/>爆虫可对建筑造成<d ref="Effect,VolatileBurstU2,Amount "/>点伤害值。
-Button/Tooltip/EngineeringBay=提供女武神武器和护甲的升级方案，并可研发圣痕，为女武神提供进一步的强化
 Button/Tooltip/Equipment=更换武器、圣痕、外观、装甲等
 Button/Tooltip/FrozenDuration=使己方造成的冻结状态时间延长0.5秒，可升级4次。
 Button/Tooltip/Furnace=解锁泰坦机甲、御雷机甲的烈焰分支单位，并可研究火焰减伤。
@@ -953,11 +955,11 @@ Button/Tooltip/HyperionInterceptorUnit=能够自动攻击航母目标的战斗�
 Button/Tooltip/Hyperjump2=<d time="3"/>后折跃至目标位置。舰船在折跃时处于无敌状态。<n/><n/><c val="#ColorAttackInfo">不需要视野。自动释放开启时，会在生命值少于25%时自动撤退到最近的基地</c>
 Button/Tooltip/IceTablet=解锁泰坦机甲、御雷机甲的寒冰分支单位，并可研究冰冻减伤。
 Button/Tooltip/IceTablet2=使指石碑升级为极寒石碑，可以解锁终极寒冰分支机甲、升级冻结时间。
+Button/Tooltip/ImperialInstitute=为重工厂和星港制造的单位提供武器和护甲升级方案，升级部分机甲单位技能，以及研发部分重炮武器。
 Button/Tooltip/Interceptor=制造轻型战斗机。轻型战斗机拥有40点护盾和100点生命，占用0.5补给，可以对地和对空。</c>
 Button/Tooltip/Interceptor2=制造轻型战斗机。轻型战斗机拥有40点护盾和100点生命，占用0.5补给，可以对地和对空。</c>
 Button/Tooltip/K17Skill=向前方发射一枚眩晕弹，爆炸造成350%攻击力的物理伤害，并创造持续4.5秒的眩晕立场
-Button/Tooltip/K23Skill=消耗所有护盾和50%的生命，向前方爆发出天火圣裁的力量，造成大范围<d ref="Effect,K23InitialDamage,Amount"/>点元素伤害，并留下燃烧的地面，在<d ref="Effect,K23CP,PeriodCount*Effect,K23CP,PeriodicPeriodArray[0]/2"/>秒内造成造成<d ref="Effect,K23CPDamage,Amount*Effect,K23CP,PeriodCount/2"/>点伤害。受天火出鞘影响的单位<d ref="Behavior,K23Damage2,Duration"/>秒内被点燃并获得50%易伤，每秒有<d ref="Effect,K23Dizzy,Chance*100"/>%的概率眩晕<d ref="Effect,K23Dizzy,Duration"/>秒。<n/><c val="FFFF00">效果不分敌我。</c>
-Button/Tooltip/K23Skill2=消耗少量护盾和生命，向前方爆发出天火圣裁的力量，造成大范围<d ref="Effect,K23InitialDamage2,Amount"/>点元素伤害，并留下燃烧的地面，在<d ref="Effect,K23CP,PeriodCount*Effect,K23CP,PeriodicPeriodArray[0]/2"/>秒内造成造成<d ref="Effect,K23CPDamage,Amount*Effect,K23CP,PeriodCount/2"/>点伤害。受天火出鞘影响的单位<d ref="Behavior,K23Damage2,Duration"/>秒内被点燃并获得50%易伤，每秒有<d ref="Effect,K23Dizzy,Chance*100"/>%的概率眩晕<d ref="Effect,K23Dizzy,Duration"/>秒。<n/><c val="FFFF00">利用空之律者的能力，可以大幅规避自身受到的伤害，并强化了杀伤效果。效果不分敌我。</c>
+Button/Tooltip/K23Skill=消耗所有护盾和50%的生命，向前方爆发出天火圣裁的力量，造成大范围<d ref="Effect,K23InitialDamage,Amount"/>点元素伤害，并留下燃烧的地面，在<d ref="Effect,K23CP,PeriodCount*Effect,K23CP,PeriodicPeriodArray[0]/2"/>秒内造成造成<d ref="Effect,K23CPDamage,Amount*Effect,K23CP,PeriodCount/2"/>点伤害。受天火出鞘影响的单位<d ref="Behavior,K23Damage2,Duration"/>秒内被点燃并获得50%易伤，每秒有<d ref="Effect,K23Dizzy,Chance*100"/>%的概率眩晕<d ref="Effect,K23Dizzy,Duration"/>秒。<n/><c val="FFFF00">效果不分敌我。</c><n/><n/><c val="FFFF00">空之律者装备时，利用律者的能力，可以大幅规避自身受到的伤害</c>
 Button/Tooltip/K5Skill=砸下雷锤击倒敌人，造成20点物理伤害，并将敌人陷入脆弱状态，降低8点护甲，持续10秒
 Button/Tooltip/KianaBuilding=为<c val="FFFF00">琪亚娜·卡斯兰娜</c>提供升级
 Button/Tooltip/KianaC1=琪亚娜掌控了空之律者能力后的形态，可以在必要时爆发出强大的力量。<n/><n/><c val="#ColorAttackInfo">特点:物理伤害、时空锁定、大范围伤害和浮空。<n/>可对地、对空</c>
@@ -986,9 +988,6 @@ Button/Tooltip/KianaC4Upgrade2=使白骑士·月光普通攻击改为范围物�
 Button/Tooltip/KianaC4Upgrade3=使白骑士·月光极限闪避效果增加一次充能，冷却时间降低2秒
 Button/Tooltip/KianaC4Upgrade4=使白骑士·月光对处于眩晕或麻痹状态的敌人造成的物理和元素伤害提高150%
 Button/Tooltip/LaunchDivineKey4th=将第四神之键发射升空
-Button/Tooltip/Liberator=重型飞行机甲。装载有能对敌方空中单位造成范围伤害的飞弹。可以切换为防卫模式以提供攻城火力。<n/><n/><c val="#ColorAttackInfo">可以对空。</c>
-Button/Tooltip/LiberatorAAMode=变回战机模式。在这个模式下多维机甲可以自由移动，但只能攻击空中目标。
-Button/Tooltip/LiberatorAGMode=部署为防卫模式。在此模式下多维机甲可对地面单位造成大量单体伤害。在此模式下多维机甲无法移动。
 Button/Tooltip/LightningRod=解锁泰坦机甲、御雷机甲的雷电分支单位，并可研究雷电减伤。
 Button/Tooltip/LightningRod2=使蓄电塔升级为高压蓄电塔，可以解锁终极雷电分支机甲、升级麻痹时间。
 Button/Tooltip/MHT3=机动突击型载具。可以使用锁定技能在移动状态下快速开火。<n/><n/><c val="#ColorAttackInfo">可以对地和对空。</c>
@@ -1012,6 +1011,8 @@ Button/Tooltip/MicroFiltering2=工蜂采集量+1，可升级5次
 Button/Tooltip/MissileTurret=防御塔，可以造成单体物理伤害。<n/><n/><c val="#ColorAttackInfo">可以对地和对空</c><n/><c val="FFE303">侦测单位</c>
 Button/Tooltip/MobilizeSkill1=立即在目标位置部署100人口的女武神部队。<n/><n/><c val="FF0000">扣除40%的当前分数，分数倍率永久降低20%</c>
 Button/Tooltip/MobilizeSkill2=立即在目标位置空投100人口机甲部队。<n/><n/><c val="FF0000">扣除40%的当前分数，分数倍率永久降低20%</c>
+Button/Tooltip/MorphToRO_060=变回炮台形态。在这个模式下多维机甲可以自由移动，但只能造成单体伤害。
+Button/Tooltip/MorphToRO_060_Defense=部署为堡垒形态。在此模式下多维机甲可以释放大量弹幕，造成大范围伤害。在此模式下多维机甲无法移动。
 Button/Tooltip/NanoRepair2=治疗一个友方机械单位。<n/><n/><c val="f078ff">每消耗1点能量恢复32点生命值。</c>
 Button/Tooltip/NukeArm=在发射井中部署崩坏能裂变弹。<n/>崩坏能裂变弹由发射井直接发生，可对大范围内的目标造成最多<d ref="Effect,NukeDamage2,Amount"/> (+<d ref="Effect,NukeDamage2,AttributeBonus[9]"/>对英雄单位) 点火焰元素伤害。<n/><c val="FFFF00">伤害不分敌我</c>
 Button/Tooltip/NukeArmMHT=在发射仓中部署一枚战术核弹。<n/>发射命中后可对大范围内的目标造成最多<d ref="Effect,NukeDamageMHT,Amount"/>点火焰元素伤害。<n/><c val="FFFF00">伤害不分敌我</c>
@@ -1055,7 +1056,8 @@ Button/Tooltip/RO_047=逆熵的自爆型攻击机甲，自爆后可以额外造�
 Button/Tooltip/RO_047Ability=自爆时向外发射5枚火焰弹，每一发对沿途的敌人造成<d ref="Effect,RO_047SplatDamage,Amount"/>点火焰伤害并点燃。
 Button/Tooltip/RO_050=特殊的死士单位，死士与机甲的结合产物。可以使用机械飞刃击飞敌人。<n/><n/><c val="FFFF8A">可以对地。</c>
 Button/Tooltip/RO_050Abil=发射左手的刀刃，造成<d ref="Effect,RO_050AbilDamage,Amount"/>点伤害并击退敌人。
-Button/Tooltip/RO_060=重型飞行机甲。装载有能对敌方空中单位造成范围伤害的飞弹。可以切换为防卫模式以提供攻城火力。<n/><n/><c val="#ColorAttackInfo">可以对空。</c>
+Button/Tooltip/RO_060=重型飞行机甲。装载有能造成大量单体伤害的机炮。可以切换为防卫模式以发射空对空弹幕。<n/><n/><c val="#ColorAttackInfo">可以对地和对空。</c>
+Button/Tooltip/RO_060_Defense=无法移动的防卫战机。可对空中单位发射弹幕，造成大范围伤害。可以切换为机动模式进行单体攻击。<n/><n/><c val="#ColorAttackInfo">可以对空。</c>
 Button/Tooltip/RPC=战术打击飞行器。可升级隐形技能。<n/><n/><c val="#ColorAttackInfo">可以对地。</c>
 Button/Tooltip/RPC6626=战术打击飞行器。可升级隐形技能。<n/><n/><c val="#ColorAttackInfo">可以对地。</c>
 Button/Tooltip/Railgun=防御塔，可以造成高额元素伤害，射程极远。<n/><n/><c val="#ColorAttackInfo">可以对空和对地</c>
@@ -1199,9 +1201,10 @@ Button/Tooltip/WeaponB34=布洛妮娅使用理之律者的力量构造的蓄力�
 Button/Tooltip/WeaponB5=米高扬中央设计制造局设计的崩坏能重炮，可以发射多枚导弹，最多锁定5个目标。每发命中有10%的概率随机使敌人眩晕/麻痹/冻结2秒，并额外造成10点火焰/雷电/冰冻元素伤害。<n/><n/><c val="FFFF00">可以对地和对空</c>
 Button/Tooltip/WeaponB6=使用拟似律者核心物质驱动的蓄力炮，蓄力炮，每发产生9个子母弹，短暂延迟后造成5点范围物理伤害<n/>物理伤害提高20%<n/><n/><c val="FFFF00">可以对地和对空</c>
 Button/Tooltip/WeaponB7=米高扬中央设计制造局设计的速射激光武器，速射武器，持续射击会过热<n/>杀死敌人时后，物理伤害提高75%，持续3秒<n/><n/><c val="FFFF00">可以对地和对空</c><n/>
+Button/Tooltip/WeaponK17=通过在希儿身上进行的实验所得到的数据，逆熵对量子技术的研究获得了长足的进步，并基于量子技术开发了这把武器。
 Button/Tooltip/WeaponK23=由旧文明第七律者核心制成的神之键，拥有最强大的破坏力。
 Button/Tooltip/WeaponK5=天命“诸神座”系列武器，内部储存了大量崩坏能粒子，在激发时可以具现出强力的能量块。
-Button/Tooltip/WeaponK52=通过在希儿身上进行的实验所得到的数据，逆熵对量子技术的研究获得了长足的进步，并基于量子技术开发了这把武器。
+Button/Tooltip/WeaponPistolTrade=购买高级双枪武器
 Button/Tooltip/WidowMineBurrow=埋下毒蛛机甲并使其进入准备状态。激活时无法移动。
 Button/Tooltip/WidowMineUnburrow=使毒蛛机甲出地并使其武器进入非激活状态，并可以移动。
 Button/Tooltip/Zergling=迅捷的肉搏型生物。可以变异为傲娇系崩坏兽。<n/><n/><c val="FFFF8A">可以对地。</c>
@@ -1560,6 +1563,13 @@ DocInfo/PatchNote340=·防御塔、机甲、普通女武神、死士、崩坏兽
 DocInfo/PatchNote341=·五种类型的攻防升级价格统一，并且允许并行升级
 DocInfo/PatchNote342=·瞬时自动追踪升级改为可升级2次，射程改为：蜂巢炮台4+1+1，导弹塔7+1.5+1.5，行星要塞6+2+2
 DocInfo/PatchNote343=·还原了工蜂的费用
+DocInfo/PatchNote344=·修复了压制者不能装备真理之钥的bug
+DocInfo/PatchNote345=·修复了白练装备天火圣裁会崩溃的bug
+DocInfo/PatchNote346=·使用物品系统重做了双枪武器
+DocInfo/PatchNote347=·重做了多维机甲
+DocInfo/PatchNote348=·修复了月光王座主炮会自动对中立目标使用的bug
+DocInfo/PatchNote349=·天火出鞘不再需要消耗护盾
+DocInfo/PatchNote350=·修复了多维机甲的演算体bug
 Effect/Name/AcidSalivaU=UL_030 Damage
 Effect/Name/AddCasterLife50=Add Caster Life 50%
 Effect/Name/AddDizzyCD=Add Dizzy CD
@@ -1751,6 +1761,7 @@ Effect/Name/DelayedSuicide=延时自爆
 Effect/Name/DivineKey4thLaunchSet=Divine Key 4th Launch Set
 Effect/Name/DivineKey4ththCU=Divine Key 4th CU
 Effect/Name/Dizzy=Dizzy
+Effect/Name/DropWeaponDummy=Drop Weapon Dummy
 Effect/Name/EndFlyEnd=结束浮空结束
 Effect/Name/EquipmentCopy=装备辅助-目标
 Effect/Name/EvadeCoolDown=应用闪避冷却
@@ -1945,14 +1956,10 @@ Effect/Name/IceFieldSearch2=Ice Field Search
 Effect/Name/IceFieldSmall=Ice Field Small
 Effect/Name/IceFieldTimedLife=Ice Field Timed Life
 Effect/Name/InterceptorsLaunchInstance=Interceptors Launch Instance
-Effect/Name/K17AttackSpeed=应用能量跃迁者攻速提升
-Effect/Name/K17AttackSpeedRemove=移除能量跃迁者攻速提升
 Effect/Name/K17BombDamage=眩晕弹 (Damage)
 Effect/Name/K17BombPersistent=眩晕弹 (Persistent)
 Effect/Name/K17BombSearch=眩晕弹 (Search)
 Effect/Name/K17Persistent=眩晕跃迁 (Persistent)
-Effect/Name/K23AM=天火圣裁
-Effect/Name/K23AMR=天火圣裁
 Effect/Name/K23ApplyBurn=K23 Apply Burn
 Effect/Name/K23ApplyEnermyBuff=K23 Apply Enermy Buff
 Effect/Name/K23ApplyInvincible=K23 Apply Invincible
@@ -1961,18 +1968,16 @@ Effect/Name/K23Behavior=天火圣裁 点燃被动
 Effect/Name/K23BehaviorSearch=天火圣裁 点燃被动
 Effect/Name/K23BuffSet=K23 Buff Set
 Effect/Name/K23CP=K23 CP
-Effect/Name/K23CP2=K23 CP 2
 Effect/Name/K23CPDamage=K23 CP Damage
 Effect/Name/K23CPSearchAll=K23 CP Search All
 Effect/Name/K23CPSearchEnermy=K23 CP Search Enermy
 Effect/Name/K23Dizzy=K23 Dizzy
-Effect/Name/K23ImpactSet2=K23 Impact Set 2
+Effect/Name/K23ImpactSet=K23 Impact Set
+Effect/Name/K23ImpactSwitch=K23 Impact Switch
 Effect/Name/K23InitialDamage=K23 Initial Damage
-Effect/Name/K23InitialDamage2=K23 Initial Damage 2
+Effect/Name/K23InitialDamageNoCaster=K23 Initial Damage No Caster
 Effect/Name/K23InitialSet=K23 Initial Set
-Effect/Name/K23InitialSet2=K23 Initial Set 2
 Effect/Name/K23SelfLaunch=K23 Self Launch
-Effect/Name/K23SelfLaunch2=K23 Self Launch 2
 Effect/Name/K23Teleport2=K23 Teleport 2
 Effect/Name/K23Teleport2Position=K23 Teleport 2 Position
 Effect/Name/K5Buff=雷神之怒 减甲
@@ -2139,10 +2144,6 @@ Effect/Name/KianaC4UltimateAttackFinalDamage=Kiana C4 Ultimate Attack Final Dama
 Effect/Name/KianaC4UltimateAttackFinalPower=Kiana C4 Ultimate Attack Final Power
 Effect/Name/KianaC4UltimateAttackFinalSearch=Kiana C4 Ultimate Attack Final Search
 Effect/Name/KianaC4UltimateStart=Kiana C4 Ultimate Start
-Effect/Name/KianaWeaponSwitchK17=双枪-武器切换-能量跃迁者
-Effect/Name/KianaWeaponSwitchK23=双枪-武器切换-天火圣裁
-Effect/Name/KianaWeaponSwitchK5=双枪-武器切换-索尔之锤
-Effect/Name/KianaWeaponSwitcjh=双枪-移除武器
 Effect/Name/KillTarget=Kill Target
 Effect/Name/Lightninged=感电100%
 Effect/Name/Lightninged2=感电50%
@@ -2314,6 +2315,13 @@ Effect/Name/RO_050BreakDown=RO_050 Break Down
 Effect/Name/RO_050BreakDownEnd=RO_050 Break Down End
 Effect/Name/RO_050CD=RO_050 CD
 Effect/Name/RO_050ShieldRecover=RO_050 Shield Recover
+Effect/Name/RO_060AttackCP=RO_060 Attack CP
+Effect/Name/RO_060AttackDamage=RO_060 Attack Damage
+Effect/Name/RO_060AttackLM=RO_060 Attack LM
+Effect/Name/RO_060BarrageCD=RO_060 Barrage CD
+Effect/Name/RO_060BarrageDamage=RO_060 Barrage Damage
+Effect/Name/RO_060BarrageDummy=RO_060 Barrage Dummy
+Effect/Name/RO_060BarrageSearch=RO_060 Barrage Search
 Effect/Name/RadiusReduce=Radius Reduce
 Effect/Name/RailgunDamage=Railgun Damage
 Effect/Name/RailgunLaunchMissile=Railgun Launch Missile
@@ -2617,6 +2625,7 @@ Effect/Name/WeaponCannonB34DamageSet=Weapon Cannon B34 Damage Set
 Effect/Name/WeaponCannonB34DamageSplash=Weapon Cannon B34 Damage Splash
 Effect/Name/WeaponCannonB34Launch=Weapon Cannon B34 Launch
 Effect/Name/WeaponCannonB34LaunchPoint=Weapon Cannon B34 Launch Point
+Effect/Name/WeaponRemoveAllPistols=Weapon Remove All Pistols
 Effect/Name/WeaponRemoveB1=Weapon Remove B1
 Effect/Name/WeaponRemoveB15=Weapon Remove B15
 Effect/Name/WeaponRemoveB18=Weapon Remove B18
@@ -2646,6 +2655,7 @@ Effect/Name/WeaponSwitchB6=武器切换-B6
 Effect/Name/WeaponSwitchB7=武器切换-B7
 Effect/Name/WeaponSwitchCannonRemoveAll=移除武器
 Effect/Name/WeaponSwitchCannonRemoveAll2=移除武器2
+Effect/Name/WeaponSwitchK5=Weapon Switch K5
 Effect/Name/WeaponUseB1=Weapon Use B1
 Effect/Name/WeaponUseB15=Weapon Use B15
 Effect/Name/WeaponUseB18=Weapon Use B18
@@ -2857,6 +2867,7 @@ RequirementNode/Tooltip/Not3631109650CountBehaviorStigmataCG5CompleteOnlyAtUnit3
 RequirementNode/Tooltip/Not3631109650CountBehaviorStigmataPG4CompleteOnlyAtUnit=只能叠加一层
 RequirementNode/Tooltip/Not3631109650CountBehaviorStigmataPG5CompleteOnlyAtUnit=只能叠加一层
 RequirementNode/Tooltip/Not4263432363CountBehaviorWeaponUseB28CompleteOnly=没有其它单位装备伊甸之星
+RequirementNode/Tooltip/Not431030283CountUnitWeaponK23CompleteOnly=场上已存在天火圣裁
 RequirementNode/Tooltip/Not723435156CountBehaviorWeaponUseB28CompleteOnly3451675864=只能装备给一个单位
 RequirementNode/Tooltip/Not723435156SumCountBehaviorWeaponUseB28CompleteOnlyCountBehaviorStarOfEdenWorldCompleteOnly=只能装备给一个单位
 RequirementNode/Tooltip/NotFinished=敬请期待！
@@ -2885,7 +2896,6 @@ Unit/LifeArmorName/HonkaiArmor=崩坏能护甲
 Unit/LifeArmorName/HonkaiShield=崩坏能护盾
 Unit/LifeArmorName/ROPlating=机甲钢板
 Unit/LifeArmorName/TerranInfantryShield=女武神护盾
-Unit/Name/Armory=帝国研究院
 Unit/Name/B15FireMissile=B15 Fire Missile
 Unit/Name/B15ThunderMissile=B15 Thunder Missile
 Unit/Name/B1Missile=B1 Missile
@@ -2922,8 +2932,8 @@ Unit/Name/DPSTest=DPS测试单位
 Unit/Name/DivineKey4th=第四神之键
 Unit/Name/DivineKey4thWeaponUnit=人造理想流体风暴
 Unit/Name/DivineKeys=神之键阁
-Unit/Name/EngineeringBay=圣芙蕾雅学园
 Unit/Name/Factory=逆熵重工
+Unit/Name/FreeWeaponUnit=Free Weapon Unit
 Unit/Name/Furnace=熔炉
 Unit/Name/Furnace2=烈火熔炉
 Unit/Name/FusionCore=圣1504研究所
@@ -2963,6 +2973,7 @@ Unit/Name/Hydralisk=寒冰战车兽
 Unit/Name/HyperionInterceptor=轻型战斗机
 Unit/Name/IceTablet=石碑
 Unit/Name/IceTablet2=极寒石碑
+Unit/Name/ImperialInstitute=帝国研究院
 Unit/Name/KianaBuilding=射击训练室
 Unit/Name/KianaC1=琪亚娜·卡斯兰娜
 Unit/Name/KianaC1Launcher=亚空之矛发射源
@@ -2970,8 +2981,8 @@ Unit/Name/KianaC2=琪亚娜·卡斯兰娜
 Unit/Name/KianaC4=琪亚娜·卡斯兰娜
 Unit/Name/KianaC4QTEMissile=光翼展开 发射物
 Unit/Name/Larva=崩坏幼虫
-Unit/Name/Liberator=多维机甲
-Unit/Name/LiberatorAG=多维机甲
+Unit/Name/LiberatorAGMorphModel2=解放者
+Unit/Name/LiberatorMorphModel2=解放者
 Unit/Name/LightningRod=蓄电塔
 Unit/Name/LightningRod2=高压蓄电塔
 Unit/Name/LurkerMP=寒冰帝王
@@ -3006,6 +3017,10 @@ Unit/Name/RO_042=寒冰机甲
 Unit/Name/RO_047=火焰爆弹
 Unit/Name/RO_050=死士机甲
 Unit/Name/RO_050AbilWeapon=死士机甲
+Unit/Name/RO_060=多维机甲
+Unit/Name/RO_060Barrage=RO_060 Barrage
+Unit/Name/RO_060Missile=RO_060 Missile
+Unit/Name/RO_060_Defense=多维机甲
 Unit/Name/RPC6626=RPC-6626
 Unit/Name/Railgun=电磁炮台
 Unit/Name/RailgunMissile=电磁炮弹
@@ -3016,6 +3031,7 @@ Unit/Name/Roach=绯樱战车兽
 Unit/Name/SCV=后勤人员
 Unit/Name/SaAfflication=娑 -「惑障」
 Unit/Name/SaCore=娑 -「一心三惑」
+Unit/Name/SaTarget=Sa Target
 Unit/Name/SaWave=冲击波
 Unit/Name/SaWeapon0=娑 武器 0
 Unit/Name/SaWeapon1=娑 武器 1
@@ -3024,6 +3040,7 @@ Unit/Name/SeeleC1=希儿·芙乐艾
 Unit/Name/SiegeTank=赫菲斯托斯
 Unit/Name/SplitBomb=分裂炸弹
 Unit/Name/SplitBomb2=分裂炸弹2
+Unit/Name/StFreya=圣芙蕾雅学园
 Unit/Name/StarOfEdenWorld=伊甸之星: 世界
 Unit/Name/Starport=天命空港
 Unit/Name/Stigmata=Stigmata
@@ -3038,6 +3055,9 @@ Unit/Name/Ultralisk=迦尼萨
 Unit/Name/Valkyrja2=女武神-看守者
 Unit/Name/Valkyrja3=女武神-压制者
 Unit/Name/VoidArchives=虚空万藏
+Unit/Name/WeaponK17=能量跃迁者
+Unit/Name/WeaponK23=天火圣裁
+Unit/Name/WeaponK5=索尔之锤
 Unit/Name/Zergling=咬咬怪
 Upgrade/Name/AdvancedMedic=高级医疗系统
 Upgrade/Name/B15=苍玄之书
@@ -3195,6 +3215,8 @@ Weapon/Name/RO_034Weapon=超重型诱导弹
 Weapon/Name/RO_040Weapon=自爆雷
 Weapon/Name/RO_050Weapon=横扫
 Weapon/Name/RO_050Weapon2=钳击
+Weapon/Name/RO_060Barrage=弹幕射击
+Weapon/Name/RO_060Weapon=直线射击
 Weapon/Name/Railgun=电磁轰击
 Weapon/Name/SaBackwardWeapon=执行: 断绝
 Weapon/Name/SaCoreWeapon=加载: 满业

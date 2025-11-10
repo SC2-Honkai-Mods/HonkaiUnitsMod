@@ -1,0 +1,1338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CWeapon default="1">
+        <Options index="NeverMiss" value="0"/>
+    </CWeapon>
+    <CWeaponLegacy default="1">
+        <Options index="NeverMiss" value="0"/>
+    </CWeaponLegacy>
+    <CWeaponStrafe default="1">
+        <Options index="NeverMiss" value="0"/>
+    </CWeaponStrafe>
+    <CWeaponLegacy id="RO_060Weapon">
+        <EditorCategories value="Race:Terran"/>
+        <Options index="DisplayCooldown" value="1"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-shipweaponslevel0.dds"/>
+        <DisplayEffect value="RO_060AttackDamage"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="11"/>
+        <Arc value="360"/>
+        <Period value="4"/>
+        <DamagePoint value="0"/>
+        <Effect value="RO_060AttackCP"/>
+        <AllowedMovement value="Moving"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="RO_060Barrage">
+        <EditorCategories value="Race:Terran"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-shipweaponslevel0.dds"/>
+        <DisplayEffect value="RO_060BarrageDamage"/>
+        <TargetFilters value="Air,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="15"/>
+        <Arc value="360"/>
+        <Period value="1"/>
+        <DamagePoint value="0"/>
+        <Effect value="RO_060BarrageDummy"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="90mmCannons">
+        <Options index="NeverMiss" value="0"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="AcidSpew">
+        <Range value="10"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="BacklashRockets2">
+        <EditorCategories value="Race:Terran"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-shipweaponslevel0.dds"/>
+        <DisplayEffect value="BacklashRocketsU"/>
+        <DisplayAttackCount value="2"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <MinScanRange value="6"/>
+        <Range value="6"/>
+        <Marker>
+            <MatchFlags index="Id" value="1"/>
+        </Marker>
+        <Period value="0.375"/>
+        <Effect value="BacklashRockets"/>
+        <LegacyOptions index="KeepChanneling" value="1"/>
+        <AllowedMovement value="Slowing"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="BattlecruiserWeaponSwitch"/>
+    <CWeaponLegacy id="Herrscher8thWeapon">
+        <EditorCategories value="Race:Zerg"/>
+        <Icon value="Assets\Textures\btn-ability-zeratul-darkarchon-maelstrom.dds"/>
+        <DisplayEffect value="Herrscher8thAttackDamage"/>
+        <DisplayAttackCount value="1"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <MinScanRange value="12"/>
+        <Range value="3"/>
+        <Period value="1"/>
+        <Effect value="Herrscher8thAttackDamage"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="HonkaiHyperionWeaponSwitch">
+        <EditorCategories value="Race:Terran"/>
+        <Options index="Hidden" value="1"/>
+        <Options index="OnlyFireWhileInAttackOrder" value="0"/>
+        <Options index="OnlyFireAtAttackOrderTarget" value="0"/>
+        <Options index="LinkedCooldown" value="0"/>
+        <Options index="IgnoreThreat" value="1"/>
+        <Options index="IgnoreAttackPriority" value="1"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-shipweaponslevel0.dds"/>
+        <DisplayEffect value="HonkaiHyperionAGDamage"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <AcquireTargetSorts>
+            <SortArray value="TSTrackedByBattlecruiser"/>
+            <SortArray value="TSThreatenBattlecruiser"/>
+            <SortArray value="TSPriorityDesc"/>
+            <SortArray value="TSTransientBattlecruiser"/>
+            <SortArray value="GroundTarget"/>
+        </AcquireTargetSorts>
+        <Range value="6"/>
+        <Arc value="360"/>
+        <Marker Count="0" Link="Effect/BattlecruiserAttackTrackerCP">
+            <MatchFlags index="CasterUnit" value="1"/>
+        </Marker>
+        <Period value="0.225"/>
+        <Effect value="HonkaiHyperionDamageSet"/>
+        <AllowedMovement value="Moving"/>
+        <RandomDelayMin value="0"/>
+        <RandomDelayMax value="0"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="BronyaC7Gun2">
+        <EditorCategories value="Race:Protoss"/>
+        <Options index="Hidden" value="1"/>
+        <Options index="OnlyFireWhileInAttackOrder" value="0"/>
+        <Options index="OnlyFireAtAttackOrderTarget" value="0"/>
+        <Options index="RequireEnabledAttackAbil" value="0"/>
+        <Options index="NeverMiss" value="1"/>
+        <Icon value="Assets\Textures\btn-upgrade-protoss-airweaponslevel0.dds"/>
+        <DisplayEffect value="BronyaC7Gun2RealDamage"/>
+        <TargetFilters value="-;Ally,Neutral,Enemy,Missile,Dead"/>
+        <AcquireCliffLevelRange value="-5,5"/>
+        <MinScanRange value="12"/>
+        <Range value="500"/>
+        <RangeSlop value="4"/>
+        <TeleportResetRange value="0"/>
+        <ArcSlop value="9.9975"/>
+        <Cost>
+            <Cooldown TimeUse="0.25"/>
+        </Cost>
+        <Period value="0.5"/>
+        <Backswing value="0.75"/>
+        <Effect value="BronyaC7Gun2PC"/>
+        <LegacyOptions index="CanRetargetWhileChanneling" value="1"/>
+        <LegacyOptions index="NoDeceleration" value="1"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="Cannon_B6">
+        <EditorCategories value="Race:Terran"/>
+        <Options index="ContinuousScan" value="1"/>
+        <Options index="DisplayCooldown" value="1"/>
+        <Icon value="Assets\Textures\Weapon_Cannon_B6_46_5.tga"/>
+        <DisplayEffect value="WeaponB6DamageAOE"/>
+        <DisplayAttackCount value="3"/>
+        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <MinScanRange value="10"/>
+        <Range value="7"/>
+        <Period value="0.25"/>
+        <DamagePoint value="0"/>
+        <Backswing value="0"/>
+        <Effect value="WeaponB6ChargePersistent"/>
+        <LegacyOptions index="CanRetargetWhileChanneling" value="1"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="Cannon_B28">
+        <EditorCategories value="Race:Terran"/>
+        <Icon value="Assets\Textures\Weapon_Cannon_B28_194_5.tga"/>
+        <DisplayEffect value="WeaponB28Damage"/>
+        <DisplayAttackCount value="1"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <MinScanRange value="10"/>
+        <Range value="7"/>
+        <Period value="0.25"/>
+        <DamagePoint value="0"/>
+        <Backswing value="0"/>
+        <Effect value="WeaponB28ChargePersistent"/>
+        <LegacyOptions index="CanRetargetWhileChanneling" value="1"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="Cannon_B34">
+        <EditorCategories value="Race:Terran"/>
+        <Options index="ContinuousScan" value="1"/>
+        <Options index="DisplayCooldown" value="1"/>
+        <Icon value="Assets\Textures\Weapon_Cannon_B34_263_5.tga"/>
+        <DisplayEffect value="Weapon_Cannon_B34Damage"/>
+        <DisplayAttackCount value="3"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <MinScanRange value="10"/>
+        <Range value="7"/>
+        <Period value="0.25"/>
+        <DamagePoint value="0"/>
+        <Backswing value="0"/>
+        <Effect value="WeaponB34ChargePersistent"/>
+        <LegacyOptions index="CanRetargetWhileChanneling" value="1"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="Cannon_B15">
+        <EditorCategories value="Race:Terran"/>
+        <Icon value="Assets\Textures\Weapon_Cannon_B15_121_5.tga"/>
+        <DisplayEffect value="WeaponB15FireDamageAOE"/>
+        <DisplayAttackCount value="3"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <MinScanRange value="10"/>
+        <Range value="6"/>
+        <Period value="0.25"/>
+        <DamagePoint value="0"/>
+        <Backswing value="0"/>
+        <Effect value="WeaponB15ChargePersistent"/>
+        <LegacyOptions index="CanRetargetWhileChanneling" value="1"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="Cannon_B22">
+        <EditorCategories value="Race:Terran"/>
+        <Icon value="Assets\Textures\Weapon_Cannon_B22_172_5.tga"/>
+        <DisplayEffect value="B22Damage"/>
+        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="6"/>
+        <TeleportResetRange value="0"/>
+        <ArcSlop value="0"/>
+        <Period value="0.1875"/>
+        <Backswing value="0.25"/>
+        <Effect value="WeaponB22Persistent"/>
+        <LegacyOptions index="CanRetargetWhileChanneling" value="1"/>
+        <AllowedMovement value="Moving"/>
+        <MinScanRange value="10"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="Cannon_B26">
+        <EditorCategories value="Race:Terran"/>
+        <Icon value="Assets\Textures\Weapon_Cannon_B26_178_5.tga"/>
+        <DisplayEffect value="B7Damage3"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="6"/>
+        <TeleportResetRange value="0"/>
+        <ArcSlop value="0"/>
+        <Period value="0.1875"/>
+        <Backswing value="0.25"/>
+        <Effect value="WeaponB26Persistent"/>
+        <LegacyOptions index="CanRetargetWhileChanneling" value="1"/>
+        <AllowedMovement value="Moving"/>
+        <MinScanRange value="10"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="Cannon_B25">
+        <EditorCategories value="Race:Terran"/>
+        <Icon value="Assets\Textures\Weapon_Cannon_B25_177_5.tga"/>
+        <DisplayEffect value="WeaponB25Damage"/>
+        <DisplayAttackCount value="18"/>
+        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <MinScanRange value="6"/>
+        <Range value="6"/>
+        <Period value="0.25"/>
+        <DamagePoint value="0"/>
+        <Backswing value="0"/>
+        <Effect value="WeaponB25ChargePersistent"/>
+        <LegacyOptions index="CanRetargetWhileChanneling" value="1"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="BOSS_010Weapon">
+        <EditorCategories value="Race:Zerg"/>
+        <Options index="Melee" value="1"/>
+        <Icon value="Assets\Textures\btn-upgrade-zerg-meleeattacks-level0.dds"/>
+        <DisplayEffect value="BOSS_010AttackDamage"/>
+        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <AcquirePrioritization value="ByAngle"/>
+        <Range value="1"/>
+        <Cost>
+            <Cooldown Link="Abil/UltraliskWeaponCooldown" Location="Unit" TimeUse="0.86"/>
+        </Cost>
+        <Period value="0.86"/>
+        <DamagePoint value="0.3332"/>
+        <Effect value="BOSS_010AttackAreaSet"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="CrucioShockCannon">
+        <AcquireTargetSorts>
+            <SortArray value="NoGroundFriendlyWithin125"/>
+        </AcquireTargetSorts>
+        <Options index="NeverMiss" value="0"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="DG_020Melee">
+        <EditorCategories value="Race:Zerg"/>
+        <Options index="Melee" value="1"/>
+        <Icon value="Assets\Textures\btn-upgrade-protoss-groundweaponslevel0.dds"/>
+        <DisplayEffect value="DG_020MeleeDamage"/>
+        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="0.5"/>
+        <RangeSlop value="100"/>
+        <Period value="1.5"/>
+        <DamagePoint value="0.6"/>
+        <Effect value="DG_020MeleeDamage"/>
+        <LegacyOptions index="Uninterruptible" value="1"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="DG_020Shoot">
+        <EditorCategories value="Race:Zerg"/>
+        <Icon value="Assets\Textures\btn-upgrade-zerg-missileattacks-level0.dds"/>
+        <DisplayEffect value="ArrowDamage"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <MinScanRange value="5.5"/>
+        <Period value="3"/>
+        <DamagePoint value="1.667"/>
+        <Effect value="ArrowLaunchMissile"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="DG_021Shoot">
+        <EditorCategories value="Race:Zerg"/>
+        <Icon value="Assets\Textures\btn-upgrade-zerg-missileattacks-level0.dds"/>
+        <DisplayEffect value="ArrowDamage2"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <MinScanRange value="7"/>
+        <Range value="6"/>
+        <Period value="3"/>
+        <DamagePoint value="1.667"/>
+        <Effect value="ArrowLaunchMissile2"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="DG_023Shoot">
+        <EditorCategories value="Race:Zerg"/>
+        <Icon value="Assets\Textures\btn-upgrade-zerg-missileattacks-level0.dds"/>
+        <DisplayEffect value="ArrowDamage22"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <MinScanRange value="9"/>
+        <Range value="7"/>
+        <Period value="3"/>
+        <DamagePoint value="1.667"/>
+        <Effect value="ArrowLaunchMissile22"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="Herrscher7thWeapon">
+        <EditorCategories value="Race:Zerg"/>
+        <Options index="LinkedCooldown" value="0"/>
+        <Icon value="Assets\Textures\btn-tips-walloffire.dds"/>
+        <DisplayEffect value="Herrscher7thWeaponExplode"/>
+        <DisplayAttackCount value="1"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <MinScanRange value="12"/>
+        <Period value="5"/>
+        <Effect value="Herrscher7thWeaponCP"/>
+    </CWeaponLegacy>
+    <CWeaponStrafe id="HyperionInterceptorBeam">
+        <EditorCategories value="Race:Terran"/>
+        <Options index="NeverMiss" value="1"/>
+        <Icon value="Assets\Textures\btn-upgrade-protoss-airweaponslevel0.dds"/>
+        <DisplayEffect value="HyperionInterceptorDamage"/>
+        <DisplayAttackCount value="2"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <TeleportResetRange value="0"/>
+        <Arc value="19.6875"/>
+        <Period value="3"/>
+        <Effect value="HyperionInterceptorCP"/>
+        <LoiterInnerRadius value="5"/>
+        <LoiterRadius value="9"/>
+    </CWeaponStrafe>
+    <CWeaponLegacy id="SaForwardWeapon">
+        <EditorCategories value="Race:Protoss"/>
+        <Options index="OnlyFireAtAttackOrderTarget" value="0"/>
+        <Options index="DisplayCooldown" value="1"/>
+        <Icon value="Assets\Textures\btn-upgrade-protoss-airweaponslevel0.dds"/>
+        <DisplayEffect value="SaForwardWeaponDamage"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <MinScanRange value="15"/>
+        <Range value="15"/>
+        <Arc value="180"/>
+        <Period value="5.5"/>
+        <Effect value="SaForwardWeaponCP"/>
+        <LegacyOptions index="LockTurretWhileFiring" value="1"/>
+        <LegacyOptions index="Uninterruptible" value="1"/>
+        <LegacyOptions index="NoDeceleration" value="1"/>
+        <AllowedMovement value="Moving"/>
+        <DisplayAttackCount value="15"/>
+        <AcquirePrioritization value="ByAngle"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="SaCoreWeapon">
+        <EditorCategories value="Race:Protoss"/>
+        <Options index="OnlyFireWhileInAttackOrder" value="0"/>
+        <Options index="OnlyFireAtAttackOrderTarget" value="0"/>
+        <Options index="NeverMiss" value="1"/>
+        <Icon value="Assets\Textures\btn-upgrade-protoss-airweaponslevel0.dds"/>
+        <DisplayEffect value="SaCoreDamage"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <MinScanRange value="20"/>
+        <Range value="9"/>
+        <Arc value="360"/>
+        <Period value="0.125"/>
+        <Effect value="SaCoreLM"/>
+        <LegacyOptions index="NoDeceleration" value="1"/>
+        <LegacyOptions index="FaceTargetWhileInCooldown" value="0"/>
+        <AllowedMovement value="Moving"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="SaBackwardWeapon">
+        <EditorCategories value="Race:Protoss"/>
+        <Options index="Disabled" value="1"/>
+        <Options index="OnlyFireAtAttackOrderTarget" value="0"/>
+        <Options index="DisplayCooldown" value="1"/>
+        <Icon value="Assets\Textures\btn-upgrade-protoss-airweaponslevel0.dds"/>
+        <DisplayEffect value="SaBackwardWeaponDamage"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <MinScanRange value="15"/>
+        <Range value="15"/>
+        <Arc value="360"/>
+        <Period value="4.5"/>
+        <Effect value="SaBackwardWeaponCP"/>
+        <LegacyOptions index="LockTurretWhileFiring" value="1"/>
+        <LegacyOptions index="Uninterruptible" value="1"/>
+        <LegacyOptions index="NoDeceleration" value="1"/>
+        <AllowedMovement value="Moving"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="SeeleATTACK">
+        <EditorCategories value=""/>
+        <Tip value="Weapon/Tip/ATTACK"/>
+        <Options index="Melee" value="1"/>
+        <Icon value="Assets\Textures\Pistol_K1.tga"/>
+        <Range value="0"/>
+        <Period value="0"/>
+        <Effect value="VoidEffect"/>
+        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Name value="Weapon/Name/ATTACK"/>
+        <DisplayName value="Weapon/Name/ATTACK"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="NeedleSpines2">
+        <EditorCategories value="Race:Zerg"/>
+        <Icon value="Assets\Textures\btn-upgrade-zerg-missileattacks-level0.dds"/>
+        <DisplayEffect value="NeedleSpinesDamage"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <MinScanRange value="5.5"/>
+        <Period value="0.825"/>
+        <DamagePoint value="0.208"/>
+        <Effect value="NeedleSpinesLaunchMissile"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="SplitBomb">
+        <EditorCategories value="Race:Zerg"/>
+        <Icon value="Assets\Textures\btn-upgrade-zerg-airattacks-level0.dds"/>
+        <DisplayEffect value="SplitBombDamage"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="9"/>
+        <Arc value="360"/>
+        <Period value="4.2"/>
+        <Effect value="SplitBombLM"/>
+        <AllowedMovement value="Slowing"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="RO_050Weapon2">
+        <EditorCategories value="Race:Zerg"/>
+        <Icon value="Assets\Textures\btn-upgrade-zerg-seismicspines.dds"/>
+        <DisplayEffect value="RO_050AbilDamage"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="6"/>
+        <RangeSlop value="2"/>
+        <Period value="1.85"/>
+        <Effect value="RO_050AbilLM"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="RO_034Weapon">
+        <EditorCategories value="Race:Terran"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel0.dds"/>
+        <DisplayEffect value="RO_034WeaponDamage"/>
+        <DisplayAttackCount value="4"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <AcquirePrioritization value="ByAngle"/>
+        <MinScanRange value="10"/>
+        <Range value="9"/>
+        <Period value="4"/>
+        <Effect value="RO_034WeaponPersistent"/>
+        <LegacyOptions index="KeepChanneling" value="1"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="RO_050Weapon">
+        <EditorCategories value="Race:Zerg"/>
+        <Options index="Melee" value="1"/>
+        <Icon value="Assets\Textures\btn-upgrade-protoss-groundweaponslevel0.dds"/>
+        <DisplayEffect value="PsiBlades23"/>
+        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="0.5"/>
+        <RangeSlop value="100"/>
+        <Period value="2.3125"/>
+        <Effect value="DeadgalScythePercistent3"/>
+        <LegacyOptions index="Uninterruptible" value="1"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="MHT3Weapon">
+        <EditorCategories value="Race:Terran"/>
+        <Options index="OnlyFireWhileInAttackOrder" value="0"/>
+        <Options index="OnlyFireAtAttackOrderTarget" value="0"/>
+        <Options index="NeverMiss" value="1"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel0.dds"/>
+        <DisplayEffect value="MHT3WeaponDamage"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <MinScanRange value="9"/>
+        <Range value="8"/>
+        <MinimumRange value="1"/>
+        <Period value="0.125"/>
+        <Effect value="MHT3WeaponSet"/>
+        <AllowedMovement value="Moving"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="ValkyrjaRifle">
+        <EditorCategories value="Race:Terran"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel0.dds"/>
+        <DisplayEffect value="ValkyrjaRifleDamage"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <MinScanRange value="5.5"/>
+        <Period value="0.8608"/>
+        <DamagePoint value="0.05"/>
+        <Backswing value="0.75"/>
+        <Effect value="ValkyrjaRifleDamageCase"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="Herrscher3rdWeapon2">
+        <EditorCategories value="Race:Zerg"/>
+        <Icon value="Assets\Textures\btn-ability-protoss-psistorm-color.dds"/>
+        <DisplayEffect value="Herrscher3rdAttackDamage"/>
+        <DisplayAttackCount value="1"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <MinScanRange value="12"/>
+        <Range value="8"/>
+        <Period value="1.75"/>
+        <Effect value="Herrscher3rdAttackDamage"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="Herrscher5thWeapon1">
+        <EditorCategories value="Race:Zerg"/>
+        <Options index="LinkedCooldown" value="0"/>
+        <Options index="DisplayCooldown" value="1"/>
+        <Icon value="Assets\Textures\btn-upgrade-vorazun-stasiswardpermanentlycloaked.dds"/>
+        <DisplayEffect value="Herrscher5thWeapon1Damage"/>
+        <DisplayAttackCount value="1"/>
+        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <AcquireTargetSorts RequestCount="1">
+            <SortArray value="TSFarthestDistance"/>
+        </AcquireTargetSorts>
+        <MinScanRange value="10"/>
+        <Range value="6"/>
+        <ArcSlop value="360"/>
+        <Period value="6"/>
+        <Effect value="Herrscher5thWeapon1CP"/>
+        <LegacyOptions index="FaceTargetWhileInCooldown" value="0"/>
+        <AllowedMovement value="Moving"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="Herrscher5thWeapon2">
+        <EditorCategories value="Race:Zerg"/>
+        <Options index="LinkedCooldown" value="0"/>
+        <Icon value="Assets\Textures\btn-upgrade-karax_solarlance.dds"/>
+        <DisplayEffect value="Herrscher5thWeapon2Damage"/>
+        <DisplayAttackCount value="1"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <MinScanRange value="12"/>
+        <Range value="6"/>
+        <Period value="1.5"/>
+        <Effect value="Herrscher5thWeapon2Launch"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="HerrscherWeapon">
+        <EditorCategories value="Race:Zerg"/>
+        <Icon value="Assets\Textures\btn-ability-protoss-psistorm-color.dds"/>
+        <DisplayEffect value="Herrscher3rdAttackDamage"/>
+        <DisplayAttackCount value="1"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <MinScanRange value="12"/>
+        <Period value="1.75"/>
+        <Effect value="Herrscher3rdAttackDamage"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="Herrscher4thWeapon">
+        <EditorCategories value="Race:Zerg"/>
+        <Icon value="Assets\Textures\tornadoes_coop.dds"/>
+        <DisplayEffect value="Herrscher4thWeaponDamage"/>
+        <DisplayAttackCount value="1"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <MinScanRange value="16"/>
+        <Range value="13"/>
+        <Period value="5"/>
+        <Effect value="Herrscher4thWeaponCU"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="Herrscher6thWeapon">
+        <EditorCategories value="Race:Zerg"/>
+        <Icon value="Assets\Textures\btn-ability-protoss-soulabsorption.dds"/>
+        <DisplayEffect value="Herrscher6thAttackDamage"/>
+        <DisplayAttackCount value="1"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <MinScanRange value="12"/>
+        <Period value="0.75"/>
+        <Effect value="Herrscher6thImpactSet"/>
+        <AcquireTargetSorts RequestCount="1">
+            <SortArray value="TSLifeFraction"/>
+            <SortArray value="TSDistance"/>
+        </AcquireTargetSorts>
+        <Range value="4"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="ImpalerTentacle">
+        <Range value="10"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="RO_031Weapon">
+        <EditorCategories value="Race:Terran"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel0.dds"/>
+        <DisplayEffect value="RO_031WeaponDamage"/>
+        <DisplayAttackCount value="4"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <AcquirePrioritization value="ByAngle"/>
+        <MinScanRange value="10"/>
+        <Range value="9"/>
+        <Period value="4"/>
+        <Effect value="RO_031WeaponPersistent"/>
+        <LegacyOptions index="KeepChanneling" value="1"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="UnknownWeapon">
+        <EditorCategories value="Race:Terran"/>
+        <Icon value="Assets\Textures\Weapon_Cannon_B23_173_5.tga"/>
+        <DisplayEffect value="WeaponB23DamageAOE"/>
+        <DisplayAttackCount value="3"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <MinScanRange value="10"/>
+        <Range value="7"/>
+        <Period value="0.25"/>
+        <DamagePoint value="0"/>
+        <Backswing value="0"/>
+        <Effect value="WeaponB23ChargePersistent"/>
+        <LegacyOptions index="CanRetargetWhileChanneling" value="1"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="Cannon_B5">
+        <EditorCategories value="Race:Terran"/>
+        <Icon value="Assets\Textures\Weapon_Cannon_B5_47_5.tga"/>
+        <DisplayEffect value="WeaponB5Damage"/>
+        <DisplayAttackCount value="15"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <MinScanRange value="10"/>
+        <Range value="7"/>
+        <Period value="0.25"/>
+        <DamagePoint value="0"/>
+        <Backswing value="0"/>
+        <Effect value="WeaponB5ChargePersistent"/>
+        <LegacyOptions index="CanRetargetWhileChanneling" value="1"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="DG_013Weapon">
+        <EditorCategories value="Race:Zerg"/>
+        <Icon value="Assets\Textures\btn-upgrade-zerg-missileattacks-level0.dds"/>
+        <DisplayEffect value="DG_013WeaponDamage"/>
+        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Period value="4.2"/>
+        <Effect value="DG_013WeaponPercistent"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="DeadgalScythe2">
+        <EditorCategories value="Race:Zerg"/>
+        <Options index="Melee" value="1"/>
+        <Icon value="Assets\Textures\btn-upgrade-protoss-groundweaponslevel0.dds"/>
+        <DisplayEffect value="PsiBlades22"/>
+        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="0.5"/>
+        <RangeSlop value="100"/>
+        <Period value="2.4"/>
+        <Effect value="DeadgalScythePercistent2"/>
+        <LegacyOptions index="Uninterruptible" value="1"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="DeadgalScythe3">
+        <EditorCategories value="Race:Zerg"/>
+        <Options index="Melee" value="1"/>
+        <Icon value="Assets\Textures\btn-upgrade-protoss-groundweaponslevel0.dds"/>
+        <DisplayEffect value="PsiBlades223"/>
+        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="0.5"/>
+        <RangeSlop value="100"/>
+        <Period value="2.4"/>
+        <Effect value="DeadgalScythePercistent22"/>
+        <LegacyOptions index="Uninterruptible" value="1"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="Herrscher2ndWeapon">
+        <EditorCategories value="Race:Zerg"/>
+        <Icon value="Assets\Textures\btn-upgrade-zerg-missileattacks-level0.dds"/>
+        <DisplayEffect value="Herrscher2WeaponDamage"/>
+        <DisplayAttackCount value="1"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <MinScanRange value="12"/>
+        <Range value="7"/>
+        <Period value="0.675"/>
+        <Effect value="Herrscher2WeaponLaunchMissile"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="Cannon_B18">
+        <EditorCategories value="Race:Terran"/>
+        <Icon value="Assets\Textures\Weapon_Cannon_B18_133_5.tga"/>
+        <DisplayEffect value="B18Damage"/>
+        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <MinScanRange value="7"/>
+        <Marker>
+            <MatchFlags index="Id" value="1"/>
+        </Marker>
+        <Period value="0.5"/>
+        <DamagePoint value="0.25"/>
+        <Effect value="B18Set"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="KianaATTACK">
+        <Name value="Weapon/Name/ATTACK"/>
+        <EditorCategories value=""/>
+        <Tip value="Weapon/Tip/ATTACK"/>
+        <Options index="Melee" value="1"/>
+        <Icon value="Assets\Textures\Weapon_Pistol_K1_01_1.tga"/>
+        <DisplayName value="Weapon/Name/ATTACK"/>
+        <Range value="0"/>
+        <Period value="0"/>
+        <Effect value="VoidEffect"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="RO_030Weapon">
+        <EditorCategories value="Race:Terran"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel0.dds"/>
+        <DisplayEffect value="RO_030WeaponDamage"/>
+        <DisplayAttackCount value="4"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <AcquirePrioritization value="ByAngle"/>
+        <MinScanRange value="10"/>
+        <Range value="9"/>
+        <Period value="4"/>
+        <Effect value="RO_030WeaponPersistent"/>
+        <LegacyOptions index="KeepChanneling" value="1"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="KianaC2Attack1">
+        <EditorCategories value="Race:Terran"/>
+        <Options index="Hidden" value="1"/>
+        <Options index="Melee" value="1"/>
+        <Options index="DisplayCooldown" value="1"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <AcquireTargetSorts>
+            <SortArray value="TSThreatenKianaC2"/>
+            <SortArray value="TSPriorityDesc"/>
+            <SortArray value="GroundTarget"/>
+        </AcquireTargetSorts>
+        <MinScanRange value="7"/>
+        <Range value="3.6"/>
+        <Period value="0.6875"/>
+        <DamagePoint value="0"/>
+        <Backswing value="0.625"/>
+        <LegacyOptions index="CanRetargetWhileChanneling" value="1"/>
+        <AllowedMovement value="Moving"/>
+        <RandomDelayMin value="0"/>
+        <RandomDelayMax value="0"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="KianaC2Attack2">
+        <EditorCategories value="Race:Terran"/>
+        <Options index="Hidden" value="1"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <AcquireTargetSorts>
+            <SortArray value="TSThreatenKianaC2"/>
+            <SortArray value="TSPriorityDesc"/>
+            <SortArray value="GroundTarget"/>
+        </AcquireTargetSorts>
+        <MinScanRange value="7"/>
+        <Range value="6"/>
+        <Period value="0.5"/>
+        <DamagePoint value="0"/>
+        <Backswing value="0.4375"/>
+        <LegacyOptions index="CanRetargetWhileChanneling" value="1"/>
+        <AllowedMovement value="Slowing"/>
+        <RandomDelayMin value="0"/>
+        <RandomDelayMax value="0"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="KianaC2Attack3">
+        <EditorCategories value="Race:Terran"/>
+        <Options index="Hidden" value="1"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <AcquireTargetSorts>
+            <SortArray value="TSThreatenKianaC2"/>
+            <SortArray value="TSPriorityDesc"/>
+            <SortArray value="GroundTarget"/>
+        </AcquireTargetSorts>
+        <MinScanRange value="7"/>
+        <Range value="6"/>
+        <Period value="0.5"/>
+        <DamagePoint value="0"/>
+        <Backswing value="0.4375"/>
+        <LegacyOptions index="CanRetargetWhileChanneling" value="1"/>
+        <AllowedMovement value="Slowing"/>
+        <RandomDelayMin value="0"/>
+        <RandomDelayMax value="0"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="KianaC2Attack4">
+        <EditorCategories value="Race:Terran"/>
+        <Options index="Hidden" value="1"/>
+        <Options index="Melee" value="1"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <AcquireTargetSorts>
+            <SortArray value="TSThreatenKianaC2"/>
+            <SortArray value="TSPriorityDesc"/>
+            <SortArray value="GroundTarget"/>
+        </AcquireTargetSorts>
+        <MinScanRange value="7"/>
+        <Range value="1.8"/>
+        <Period value="0.625"/>
+        <DamagePoint value="0"/>
+        <Backswing value="0.5625"/>
+        <LegacyOptions index="CanRetargetWhileChanneling" value="1"/>
+        <AllowedMovement value="Slowing"/>
+        <RandomDelayMin value="0"/>
+        <RandomDelayMax value="0"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="KianaC2Attack5">
+        <EditorCategories value="Race:Terran"/>
+        <Options index="Hidden" value="1"/>
+        <Options index="Melee" value="1"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <AcquireTargetSorts>
+            <SortArray value="TSThreatenKianaC2"/>
+            <SortArray value="TSPriorityDesc"/>
+            <SortArray value="GroundTarget"/>
+        </AcquireTargetSorts>
+        <MinScanRange value="8"/>
+        <Range value="2.1"/>
+        <Period value="0.9375"/>
+        <DamagePoint value="0"/>
+        <Backswing value="0.875"/>
+        <LegacyOptions index="CanRetargetWhileChanneling" value="1"/>
+        <AllowedMovement value="Slowing"/>
+        <RandomDelayMin value="0"/>
+        <RandomDelayMax value="0"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="KianaC2Branch3">
+        <EditorCategories value="Race:Terran"/>
+        <Options index="Hidden" value="1"/>
+        <Options index="Melee" value="1"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <AcquireTargetSorts>
+            <SortArray value="TSThreatenKianaC2"/>
+            <SortArray value="TSPriorityDesc"/>
+            <SortArray value="GroundTarget"/>
+        </AcquireTargetSorts>
+        <MinScanRange value="7"/>
+        <Range value="1.6"/>
+        <Period value="0.4375"/>
+        <DamagePoint value="0"/>
+        <Backswing value="0.375"/>
+        <LegacyOptions index="CanRetargetWhileChanneling" value="1"/>
+        <AllowedMovement value="Slowing"/>
+        <RandomDelayMin value="0"/>
+        <RandomDelayMax value="0"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="KianaC2Branch4">
+        <EditorCategories value="Race:Terran"/>
+        <Options index="Hidden" value="1"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <AcquireTargetSorts>
+            <SortArray value="TSThreatenKianaC2"/>
+            <SortArray value="TSPriorityDesc"/>
+            <SortArray value="GroundTarget"/>
+        </AcquireTargetSorts>
+        <MinScanRange value="7"/>
+        <Period value="1.9375"/>
+        <DamagePoint value="0"/>
+        <Backswing value="1.875"/>
+        <LegacyOptions index="CanRetargetWhileChanneling" value="1"/>
+        <LegacyOptions index="Uninterruptible" value="1"/>
+        <AllowedMovement value="Slowing"/>
+        <RandomDelayMin value="0"/>
+        <RandomDelayMax value="0"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="DeadgalScythe">
+        <EditorCategories value="Race:Zerg"/>
+        <Options index="Melee" value="1"/>
+        <Icon value="Assets\Textures\btn-upgrade-protoss-groundweaponslevel0.dds"/>
+        <DisplayEffect value="PsiBlades2"/>
+        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="0.5"/>
+        <Period value="2.4"/>
+        <Effect value="DeadgalScythePercistent"/>
+        <RangeSlop value="100"/>
+        <LegacyOptions index="Uninterruptible" value="1"/>
+        <Backswing value="2.25"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="KianaC4Weapon">
+        <EditorCategories value=""/>
+        <DisplayEffect value="KianaC4Attack"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="7"/>
+        <Period value="0.75"/>
+        <Effect value="KianaC4Attack"/>
+        <RangeDisplayFlags index="CollapseBuffed" value="1"/>
+        <Icon value="Assets\Textures\Pistol_K1.tga"/>
+        <Options index="Hidden" value="1"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="KianaC4Weapon2">
+        <EditorCategories value=""/>
+        <Options index="Hidden" value="1"/>
+        <Icon value="Assets\Textures\Pistol_K1.tga"/>
+        <DisplayEffect value="KianaC4PistolRangedAir"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="7"/>
+        <RangeDisplayFlags index="CollapseBuffed" value="1"/>
+        <Period value="0.75"/>
+        <Effect value="KianaC4Attack2"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="LongboltMissile">
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="SwarmMissile">
+        <EditorCategories value="Race:Terran"/>
+        <Options index="DisplayCooldown" value="1"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-hisecautotracking.dds"/>
+        <DisplayEffect value="SwarmMissileDamage"/>
+        <DisplayAttackCount value="10"/>
+        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="4"/>
+        <Period value="3.5"/>
+        <Effect value="SwarmMissileSet"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="ParasiteSpore">
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="Cannon_B1">
+        <EditorCategories value="Race:Terran"/>
+        <Icon value="Assets\Textures\Weapon_Cannon_B1_38_3.tga"/>
+        <DisplayEffect value="WeaponB1DamageAOE"/>
+        <DisplayAttackCount value="3"/>
+        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <MinScanRange value="8"/>
+        <Range value="6"/>
+        <Period value="0.25"/>
+        <DamagePoint value="0"/>
+        <Backswing value="0"/>
+        <Effect value="WeaponB1ChargePersistent"/>
+        <LegacyOptions index="CanRetargetWhileChanneling" value="1"/>
+        <LegacyOptions index="Uninterruptible" value="1"/>
+        <Options index="ContinuousScan" value="1"/>
+        <Options index="DisplayCooldown" value="1"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="Herrscher1stWeapon">
+        <EditorCategories value="Race:Zerg"/>
+        <Icon value="Assets\Textures\btn-upgrade-protoss-alarak-ascendant&apos;spsiorbtravelsfurther.dds"/>
+        <DisplayEffect value="PsiBlastDamage"/>
+        <DisplayAttackCount value="1"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="6"/>
+        <Period value="1.75"/>
+        <Effect value="PsiBlastLaunchMissile"/>
+        <MinScanRange value="12"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="RO_010Weapon">
+        <EditorCategories value="Race:Terran"/>
+        <Options index="Melee" value="1"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel0.dds"/>
+        <DisplayEffect value="RO_010AttackDamage"/>
+        <DisplayAttackCount value="1"/>
+        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <AcquirePrioritization value="ByAngle"/>
+        <MinScanRange value="7"/>
+        <Range value="1"/>
+        <Period value="2"/>
+        <Effect value="RO_010AttackPersistence"/>
+        <LegacyOptions index="KeepChanneling" value="1"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="UL_040Weapon">
+        <EditorCategories value="Race:Zerg"/>
+        <Options index="Melee" value="1"/>
+        <Options index="LinkedCooldown" value="0"/>
+        <Icon value="Assets\Textures\btn-upgrade-zerg-meleeattacks-level0.dds"/>
+        <DisplayEffect value="UL_040Damage"/>
+        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="0.5"/>
+        <Period value="3"/>
+        <Effect value="UL_040Persistent"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="Railgun">
+        <EditorCategories value="Race:Terran"/>
+        <Icon value="Assets\Textures\btn-upgrade-protoss-airweaponslevel0.dds"/>
+        <DisplayEffect value="RailgunDamage"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="13"/>
+        <Period value="4"/>
+        <Effect value="RailgunLaunchMissile"/>
+        <AllowedMovement value="Slowing"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="UL_030Weapon">
+        <EditorCategories value="Race:Zerg"/>
+        <Options index="Melee" value="1"/>
+        <Options index="LinkedCooldown" value="0"/>
+        <Icon value="Assets\Textures\btn-upgrade-zerg-meleeattacks-level0.dds"/>
+        <DisplayEffect value="UL_030Damage"/>
+        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="0.5"/>
+        <Period value="1.75"/>
+        <Effect value="UL_030Persistent"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="Cannon_B7">
+        <EditorCategories value="Race:Terran"/>
+        <Icon value="Assets\Textures\Weapon_Cannon_B7_48_5.tga"/>
+        <DisplayEffect value="B7Damage3"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="6"/>
+        <TeleportResetRange value="0"/>
+        <ArcSlop value="0"/>
+        <Period value="0.1875"/>
+        <Backswing value="0.25"/>
+        <Effect value="B7Persistent"/>
+        <LegacyOptions index="CanRetargetWhileChanneling" value="1"/>
+        <AllowedMovement value="Moving"/>
+        <MinScanRange value="10"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="ValkyrjaSevenThundersOfRetribution">
+        <EditorCategories value="Race:Terran"/>
+        <Icon value="Assets\Textures\btn-SevenThundersOfRetribution.tga"/>
+        <DisplayEffect value="SevenThundersOfRetributionDamage"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <MinScanRange value="9"/>
+        <Range value="8"/>
+        <Period value="1.4"/>
+        <DamagePoint value="1"/>
+        <Backswing value="1"/>
+        <Effect value="SevenThundersOfRetributionDamage"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="RO_040Weapon">
+        <EditorCategories value="Race:Terran"/>
+        <Options index="Melee" value="1"/>
+        <Icon value="Assets\Textures\btn-ability-terran-unstablepayload.dds"/>
+        <DisplayEffect value="RO_040Damage"/>
+        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <AcquireFilters value="Ground,Visible;Self,Player,Ally,Neutral,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="0.5"/>
+        <Arc value="360"/>
+        <Period value="0.25"/>
+        <DamagePoint value="0"/>
+        <Effect value="RO_040Attack"/>
+        <LegacyOptions index="NoDeceleration" value="1"/>
+        <AllowedMovement value="Moving"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="BronyaC7Gun">
+        <EditorCategories value="Race:Protoss"/>
+        <Options index="Hidden" value="1"/>
+        <Options index="OnlyFireWhileInAttackOrder" value="0"/>
+        <Options index="OnlyFireAtAttackOrderTarget" value="0"/>
+        <Options index="RequireEnabledAttackAbil" value="0"/>
+        <Options index="NeverMiss" value="1"/>
+        <Icon value="Assets\Textures\btn-upgrade-protoss-airweaponslevel0.dds"/>
+        <DisplayEffect value="BronyaC7Gun1Damage"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="6"/>
+        <RangeSlop value="4"/>
+        <TeleportResetRange value="0"/>
+        <ArcSlop value="9.9975"/>
+        <Cost>
+            <Cooldown TimeUse="0.25"/>
+        </Cost>
+        <Period value="0.5"/>
+        <Backswing value="0.75"/>
+        <Effect value="BronyaC7Gun1PC"/>
+        <LegacyOptions index="CanRetargetWhileChanneling" value="1"/>
+        <LegacyOptions index="NoDeceleration" value="1"/>
+        <AllowedMovement value="Moving"/>
+        <AcquireCliffLevelRange value="-5,5"/>
+        <MinScanRange value="12"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="Valkyrja3Basic">
+        <EditorCategories value=""/>
+        <Options index="Hidden" value="1"/>
+        <DisplayEffect value="Valkyrja3AttackDamageNormal"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Period value="1.5"/>
+        <Effect value="Valkyrja3AttackNormal"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="WeaponBronyaC7">
+        <EditorCategories value="Race:Protoss"/>
+        <Icon value="Assets\Textures\Weapon_Cannon_B34_263_5.tga"/>
+        <DisplayEffect value="Weapon_Cannon_B34Damage"/>
+        <DisplayAttackCount value="2"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="9"/>
+        <Period value="2"/>
+        <DamagePoint value="0"/>
+        <Effect value="BronyaC7AttackSwitch"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="Bronya_C7_Motor">
+        <EditorCategories value="Race:Protoss"/>
+        <Options index="Melee" value="1"/>
+        <Icon value="Assets\Textures\btn-ability-terran-hercules-tacticaljump.dds"/>
+        <DisplayEffect value="BronyaMotorAttackDamage"/>
+        <DisplayAttackCount value="6"/>
+        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="1"/>
+        <Period value="1.5"/>
+        <DamagePoint value="0"/>
+        <Effect value="BronyaMotorAttack"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="BronyaC7Cannon">
+        <EditorCategories value="Race:Protoss"/>
+        <Icon value="Assets\Textures\btn-upgrade-protoss-groundweaponslevel0.dds"/>
+        <DisplayEffect value="Weapon_Cannon_B34Damage"/>
+        <DisplayAttackCount value="1"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="6"/>
+        <Period value="1000"/>
+        <DamagePoint value="0"/>
+        <Effect value="Weapon_Cannon_B34"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="SeeleC1UltCharge">
+        <EditorCategories value="Race:Terran"/>
+        <Options index="Disabled" value="1"/>
+        <Options index="Hidden" value="1"/>
+        <Options index="Melee" value="1"/>
+        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Period value="1.625"/>
+        <DamagePoint value="0"/>
+        <Backswing value="1.625"/>
+        <LegacyOptions index="CanRetargetWhileChanneling" value="1"/>
+        <LegacyOptions index="Uninterruptible" value="1"/>
+        <AllowedMovement value="Slowing"/>
+        <RandomDelayMin value="0"/>
+        <RandomDelayMax value="0"/>
+        <Arc value="45"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="SeeleC1Attack1">
+        <EditorCategories value="Race:Terran"/>
+        <Options index="Hidden" value="1"/>
+        <Options index="Melee" value="1"/>
+        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <MinScanRange value="7"/>
+        <Range value="3"/>
+        <Period value="0.6875"/>
+        <DamagePoint value="0"/>
+        <Backswing value="0.6875"/>
+        <LegacyOptions index="CanRetargetWhileChanneling" value="1"/>
+        <LegacyOptions index="Uninterruptible" value="1"/>
+        <AllowedMovement value="Slowing"/>
+        <RandomDelayMin value="0"/>
+        <RandomDelayMax value="0"/>
+        <Arc value="45"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="SeeleC1Attack2">
+        <EditorCategories value="Race:Terran"/>
+        <Options index="Hidden" value="1"/>
+        <Options index="Melee" value="1"/>
+        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <MinScanRange value="7"/>
+        <Range value="3"/>
+        <Period value="0.9375"/>
+        <DamagePoint value="0"/>
+        <Backswing value="0.9375"/>
+        <LegacyOptions index="CanRetargetWhileChanneling" value="1"/>
+        <LegacyOptions index="Uninterruptible" value="1"/>
+        <AllowedMovement value="Slowing"/>
+        <RandomDelayMin value="0"/>
+        <RandomDelayMax value="0"/>
+        <Arc value="45"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="SeeleC1Attack3">
+        <EditorCategories value="Race:Terran"/>
+        <Options index="Hidden" value="1"/>
+        <Options index="Melee" value="1"/>
+        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <MinScanRange value="7"/>
+        <Range value="3"/>
+        <Period value="1.5"/>
+        <DamagePoint value="0"/>
+        <Backswing value="1.5"/>
+        <LegacyOptions index="CanRetargetWhileChanneling" value="1"/>
+        <LegacyOptions index="Uninterruptible" value="1"/>
+        <AllowedMovement value="Slowing"/>
+        <RandomDelayMin value="0"/>
+        <RandomDelayMax value="0"/>
+        <Arc value="45"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="SeeleC1Attack4">
+        <EditorCategories value="Race:Terran"/>
+        <Options index="Hidden" value="1"/>
+        <Options index="Melee" value="1"/>
+        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <MinScanRange value="7"/>
+        <Range value="3"/>
+        <Period value="1.125"/>
+        <DamagePoint value="0"/>
+        <Backswing value="1.125"/>
+        <LegacyOptions index="CanRetargetWhileChanneling" value="1"/>
+        <LegacyOptions index="Uninterruptible" value="1"/>
+        <AllowedMovement value="Slowing"/>
+        <RandomDelayMin value="0"/>
+        <RandomDelayMax value="0"/>
+        <Arc value="45"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="SeeleC1Attack5">
+        <EditorCategories value="Race:Terran"/>
+        <Options index="Hidden" value="1"/>
+        <Options index="Melee" value="1"/>
+        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <MinScanRange value="8"/>
+        <Range value="3"/>
+        <Period value="2.125"/>
+        <DamagePoint value="0"/>
+        <Backswing value="2.0625"/>
+        <LegacyOptions index="CanRetargetWhileChanneling" value="1"/>
+        <LegacyOptions index="Uninterruptible" value="1"/>
+        <AllowedMovement value="Slowing"/>
+        <RandomDelayMin value="0"/>
+        <RandomDelayMax value="0"/>
+        <Arc value="45"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="MeiC2Attack1">
+        <EditorCategories value="Race:Terran"/>
+        <Options index="Hidden" value="1"/>
+        <Options index="Melee" value="1"/>
+        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <MinScanRange value="7"/>
+        <Range value="2"/>
+        <Period value="0.1875"/>
+        <DamagePoint value="0"/>
+        <Backswing value="0.1875"/>
+        <LegacyOptions index="CanRetargetWhileChanneling" value="1"/>
+        <AllowedMovement value="Moving"/>
+        <RandomDelayMin value="0"/>
+        <RandomDelayMax value="0"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="MeiC2Attack2">
+        <EditorCategories value="Race:Terran"/>
+        <Options index="Hidden" value="1"/>
+        <Options index="Melee" value="1"/>
+        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <MinScanRange value="7"/>
+        <Range value="3"/>
+        <Period value="0.625"/>
+        <DamagePoint value="0"/>
+        <LegacyOptions index="CanRetargetWhileChanneling" value="1"/>
+        <AllowedMovement value="Slowing"/>
+        <RandomDelayMin value="0"/>
+        <RandomDelayMax value="0"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="MeiC2Attack3">
+        <EditorCategories value="Race:Terran"/>
+        <Options index="Hidden" value="1"/>
+        <Options index="Melee" value="1"/>
+        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <MinScanRange value="7"/>
+        <Range value="6"/>
+        <Period value="0.5625"/>
+        <DamagePoint value="0"/>
+        <LegacyOptions index="CanRetargetWhileChanneling" value="1"/>
+        <AllowedMovement value="Slowing"/>
+        <RandomDelayMin value="0"/>
+        <RandomDelayMax value="0"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="MeiC2Attack4">
+        <EditorCategories value="Race:Terran"/>
+        <Options index="Hidden" value="1"/>
+        <Options index="Melee" value="1"/>
+        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <MinScanRange value="7"/>
+        <Range value="1.8"/>
+        <Period value="0.5625"/>
+        <DamagePoint value="0"/>
+        <LegacyOptions index="CanRetargetWhileChanneling" value="1"/>
+        <AllowedMovement value="Slowing"/>
+        <RandomDelayMin value="0"/>
+        <RandomDelayMax value="0"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="MeiC2Attack5">
+        <EditorCategories value="Race:Terran"/>
+        <Options index="Hidden" value="1"/>
+        <Options index="Melee" value="1"/>
+        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <MinScanRange value="8"/>
+        <Range value="2.1"/>
+        <Period value="1.125"/>
+        <DamagePoint value="0"/>
+        <Backswing value="1.0625"/>
+        <LegacyOptions index="CanRetargetWhileChanneling" value="1"/>
+        <AllowedMovement value="Slowing"/>
+        <RandomDelayMin value="0"/>
+        <RandomDelayMax value="0"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="MeiATTACK">
+        <Name value="Weapon/Name/ATTACK"/>
+        <EditorCategories value=""/>
+        <Tip value="Weapon/Tip/ATTACK"/>
+        <Options index="Melee" value="1"/>
+        <Icon value="Assets\Textures\Weapon_Katana_M1_13_1.tga"/>
+        <DisplayName value="Weapon/Name/ATTACK"/>
+        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="0"/>
+        <Period value="0"/>
+        <Effect value="VoidEffect"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="BronyaATTACK">
+        <Name value="Weapon/Name/ATTACK"/>
+        <EditorCategories value=""/>
+        <Tip value="Weapon/Tip/ATTACK"/>
+        <Icon value="Assets\Textures\Weapon_Cannon_B1_38_3.tga"/>
+        <DisplayName value="Weapon/Name/ATTACK"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="0"/>
+        <Period value="0"/>
+        <Effect value="VoidEffect"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="KianaC1RangeAttack1">
+        <EditorCategories value="Race:Terran"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <MinScanRange value="7"/>
+        <Range value="7"/>
+        <Period value="0.75"/>
+        <DamagePoint value="0"/>
+        <Backswing value="0"/>
+        <LegacyOptions index="CanRetargetWhileChanneling" value="1"/>
+        <AllowedMovement value="Moving"/>
+        <RandomDelayMin value="0"/>
+        <RandomDelayMax value="0"/>
+        <Options index="Hidden" value="1"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="KianaC1RangeAttack2">
+        <EditorCategories value="Race:Terran"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <MinScanRange value="7"/>
+        <Range value="7"/>
+        <Period value="0.8125"/>
+        <DamagePoint value="0"/>
+        <Backswing value="0"/>
+        <LegacyOptions index="CanRetargetWhileChanneling" value="1"/>
+        <AllowedMovement value="Slowing"/>
+        <RandomDelayMin value="0"/>
+        <RandomDelayMax value="0"/>
+        <Options index="Hidden" value="1"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="KianaC1RangeAttack3">
+        <EditorCategories value="Race:Terran"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <MinScanRange value="7"/>
+        <Range value="7"/>
+        <Period value="0.8125"/>
+        <DamagePoint value="0"/>
+        <Backswing value="0"/>
+        <LegacyOptions index="CanRetargetWhileChanneling" value="1"/>
+        <AllowedMovement value="Slowing"/>
+        <RandomDelayMin value="0"/>
+        <RandomDelayMax value="0"/>
+        <Options index="Hidden" value="1"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="KianaC1RangeAttack4">
+        <EditorCategories value="Race:Terran"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <MinScanRange value="7"/>
+        <Range value="7"/>
+        <Period value="1.5"/>
+        <DamagePoint value="0"/>
+        <Backswing value="0"/>
+        <LegacyOptions index="CanRetargetWhileChanneling" value="1"/>
+        <AllowedMovement value="Slowing"/>
+        <RandomDelayMin value="0"/>
+        <RandomDelayMax value="0"/>
+        <Options index="Hidden" value="1"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="KianaC1MeleeAttack1">
+        <EditorCategories value="Race:Terran"/>
+        <Options index="Hidden" value="1"/>
+        <Options index="Melee" value="1"/>
+        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <MinScanRange value="7"/>
+        <Range value="3"/>
+        <Period value="0.75"/>
+        <DamagePoint value="0"/>
+        <Backswing value="0"/>
+        <LegacyOptions index="CanRetargetWhileChanneling" value="1"/>
+        <AllowedMovement value="Moving"/>
+        <RandomDelayMin value="0"/>
+        <RandomDelayMax value="0"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="KianaC1MeleeAttack2">
+        <EditorCategories value="Race:Terran"/>
+        <Options index="Hidden" value="1"/>
+        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <MinScanRange value="7"/>
+        <Range value="3"/>
+        <Period value="0.875"/>
+        <DamagePoint value="0"/>
+        <Backswing value="0"/>
+        <LegacyOptions index="CanRetargetWhileChanneling" value="1"/>
+        <AllowedMovement value="Slowing"/>
+        <RandomDelayMin value="0"/>
+        <RandomDelayMax value="0"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="KianaC1MeleeAttack3">
+        <EditorCategories value="Race:Terran"/>
+        <Options index="Hidden" value="1"/>
+        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <MinScanRange value="7"/>
+        <Range value="3"/>
+        <Period value="2"/>
+        <DamagePoint value="0"/>
+        <Backswing value="0"/>
+        <LegacyOptions index="CanRetargetWhileChanneling" value="1"/>
+        <AllowedMovement value="Slowing"/>
+        <RandomDelayMin value="0"/>
+        <RandomDelayMax value="0"/>
+    </CWeaponLegacy>
+</Catalog>
