@@ -9,7 +9,7 @@
 作者精力有限，诚挚欢迎合作。创作理念是在还原崩坏3的单位和技能的同时，适应RTS的游戏风格。**作者不接受任何形式的众筹或资金支持，并保留对项目制作方向的一切决定权。**
 
 ## 问题反馈
-如需提交Bug反馈、特性请求或参与讨论，请在本仓库的[Issues](https://github.com/SC2-Honkai-Mods/HonkaiUnitsMod/issues)板块发言。
+如需提交Bug反馈、特性请求或参与讨论，请在本仓库的[Issues](https://github.com/SC2-Honkai-Mods/HonkaiUnitsMod/issues)板块发言，或加入群聊168430656。
 
 ## 开发
 在使用GitHub下载本项目并进行发布前，请务必删除 .git 目录、.github 目录以及 .gitattributes 文件。
