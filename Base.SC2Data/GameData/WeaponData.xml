@@ -10,7 +10,6 @@
         <Options index="NeverMiss" value="0"/>
     </CWeaponStrafe>
     <CWeaponLegacy id="RO_060Weapon">
-        <EditorCategories value="Race:Terran"/>
         <Options index="DisplayCooldown" value="1"/>
         <Icon value="Assets\Textures\btn-upgrade-terran-shipweaponslevel0.dds"/>
         <DisplayEffect value="RO_060AttackDamage"/>
@@ -23,7 +22,6 @@
         <AllowedMovement value="Moving"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="RO_060Barrage">
-        <EditorCategories value="Race:Terran"/>
         <Icon value="Assets\Textures\btn-upgrade-terran-shipweaponslevel0.dds"/>
         <DisplayEffect value="RO_060BarrageDamage"/>
         <TargetFilters value="Air,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
@@ -40,7 +38,6 @@
         <Range value="10"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="BacklashRockets2">
-        <EditorCategories value="Race:Terran"/>
         <Icon value="Assets\Textures\btn-upgrade-terran-shipweaponslevel0.dds"/>
         <DisplayEffect value="BacklashRocketsU"/>
         <DisplayAttackCount value="2"/>
@@ -57,7 +54,6 @@
     </CWeaponLegacy>
     <CWeaponLegacy id="BattlecruiserWeaponSwitch"/>
     <CWeaponLegacy id="Herrscher8thWeapon">
-        <EditorCategories value="Race:Zerg"/>
         <Icon value="Assets\Textures\btn-ability-zeratul-darkarchon-maelstrom.dds"/>
         <DisplayEffect value="Herrscher8thAttackDamage"/>
         <DisplayAttackCount value="1"/>
@@ -68,7 +64,6 @@
         <Effect value="Herrscher8thAttackDamage"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="HonkaiHyperionWeaponSwitch">
-        <EditorCategories value="Race:Terran"/>
         <Options index="Hidden" value="1"/>
         <Options index="OnlyFireWhileInAttackOrder" value="0"/>
         <Options index="OnlyFireAtAttackOrderTarget" value="0"/>
@@ -97,7 +92,6 @@
         <RandomDelayMax value="0"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="BronyaC7Gun2">
-        <EditorCategories value="Race:Protoss"/>
         <Options index="Hidden" value="1"/>
         <Options index="OnlyFireWhileInAttackOrder" value="0"/>
         <Options index="OnlyFireAtAttackOrderTarget" value="0"/>
@@ -122,7 +116,6 @@
         <LegacyOptions index="NoDeceleration" value="1"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="Cannon_B6">
-        <EditorCategories value="Race:Terran"/>
         <Options index="ContinuousScan" value="1"/>
         <Options index="DisplayCooldown" value="1"/>
         <Icon value="Assets\Textures\Weapon_Cannon_B6_46_5.tga"/>
@@ -138,7 +131,6 @@
         <LegacyOptions index="CanRetargetWhileChanneling" value="1"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="Cannon_B28">
-        <EditorCategories value="Race:Terran"/>
         <Icon value="Assets\Textures\Weapon_Cannon_B28_194_5.tga"/>
         <DisplayEffect value="WeaponB28Damage"/>
         <DisplayAttackCount value="1"/>
@@ -152,7 +144,6 @@
         <LegacyOptions index="CanRetargetWhileChanneling" value="1"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="Cannon_B34">
-        <EditorCategories value="Race:Terran"/>
         <Options index="ContinuousScan" value="1"/>
         <Options index="DisplayCooldown" value="1"/>
         <Icon value="Assets\Textures\Weapon_Cannon_B34_263_5.tga"/>
@@ -168,7 +159,6 @@
         <LegacyOptions index="CanRetargetWhileChanneling" value="1"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="Cannon_B15">
-        <EditorCategories value="Race:Terran"/>
         <Icon value="Assets\Textures\Weapon_Cannon_B15_121_5.tga"/>
         <DisplayEffect value="WeaponB15FireDamageAOE"/>
         <DisplayAttackCount value="3"/>
@@ -182,7 +172,6 @@
         <LegacyOptions index="CanRetargetWhileChanneling" value="1"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="Cannon_B22">
-        <EditorCategories value="Race:Terran"/>
         <Icon value="Assets\Textures\Weapon_Cannon_B22_172_5.tga"/>
         <DisplayEffect value="B22Damage"/>
         <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
@@ -197,7 +186,6 @@
         <MinScanRange value="10"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="Cannon_B26">
-        <EditorCategories value="Race:Terran"/>
         <Icon value="Assets\Textures\Weapon_Cannon_B26_178_5.tga"/>
         <DisplayEffect value="B7Damage3"/>
         <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
@@ -212,7 +200,6 @@
         <MinScanRange value="10"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="Cannon_B25">
-        <EditorCategories value="Race:Terran"/>
         <Icon value="Assets\Textures\Weapon_Cannon_B25_177_5.tga"/>
         <DisplayEffect value="WeaponB25Damage"/>
         <DisplayAttackCount value="18"/>
@@ -226,7 +213,6 @@
         <LegacyOptions index="CanRetargetWhileChanneling" value="1"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="BOSS_010Weapon">
-        <EditorCategories value="Race:Zerg"/>
         <Options index="Melee" value="1"/>
         <Icon value="Assets\Textures\btn-upgrade-zerg-meleeattacks-level0.dds"/>
         <DisplayEffect value="BOSS_010AttackDamage"/>
@@ -247,7 +233,6 @@
         <Options index="NeverMiss" value="0"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="DG_020Melee">
-        <EditorCategories value="Race:Zerg"/>
         <Options index="Melee" value="1"/>
         <Icon value="Assets\Textures\btn-upgrade-protoss-groundweaponslevel0.dds"/>
         <DisplayEffect value="DG_020MeleeDamage"/>
@@ -260,7 +245,6 @@
         <LegacyOptions index="Uninterruptible" value="1"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="DG_020Shoot">
-        <EditorCategories value="Race:Zerg"/>
         <Icon value="Assets\Textures\btn-upgrade-zerg-missileattacks-level0.dds"/>
         <DisplayEffect value="ArrowDamage"/>
         <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
@@ -270,7 +254,6 @@
         <Effect value="ArrowLaunchMissile"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="DG_021Shoot">
-        <EditorCategories value="Race:Zerg"/>
         <Icon value="Assets\Textures\btn-upgrade-zerg-missileattacks-level0.dds"/>
         <DisplayEffect value="ArrowDamage2"/>
         <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
@@ -281,7 +264,6 @@
         <Effect value="ArrowLaunchMissile2"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="DG_023Shoot">
-        <EditorCategories value="Race:Zerg"/>
         <Icon value="Assets\Textures\btn-upgrade-zerg-missileattacks-level0.dds"/>
         <DisplayEffect value="ArrowDamage22"/>
         <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
@@ -292,7 +274,6 @@
         <Effect value="ArrowLaunchMissile22"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="Herrscher7thWeapon">
-        <EditorCategories value="Race:Zerg"/>
         <Options index="LinkedCooldown" value="0"/>
         <Icon value="Assets\Textures\btn-tips-walloffire.dds"/>
         <DisplayEffect value="Herrscher7thWeaponExplode"/>
@@ -303,7 +284,6 @@
         <Effect value="Herrscher7thWeaponCP"/>
     </CWeaponLegacy>
     <CWeaponStrafe id="HyperionInterceptorBeam">
-        <EditorCategories value="Race:Terran"/>
         <Options index="NeverMiss" value="1"/>
         <Icon value="Assets\Textures\btn-upgrade-protoss-airweaponslevel0.dds"/>
         <DisplayEffect value="HyperionInterceptorDamage"/>
@@ -317,7 +297,6 @@
         <LoiterRadius value="9"/>
     </CWeaponStrafe>
     <CWeaponLegacy id="SaForwardWeapon">
-        <EditorCategories value="Race:Protoss"/>
         <Options index="OnlyFireAtAttackOrderTarget" value="0"/>
         <Options index="DisplayCooldown" value="1"/>
         <Icon value="Assets\Textures\btn-upgrade-protoss-airweaponslevel0.dds"/>
@@ -336,7 +315,6 @@
         <AcquirePrioritization value="ByAngle"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="SaCoreWeapon">
-        <EditorCategories value="Race:Protoss"/>
         <Options index="OnlyFireWhileInAttackOrder" value="0"/>
         <Options index="OnlyFireAtAttackOrderTarget" value="0"/>
         <Options index="NeverMiss" value="1"/>
@@ -353,7 +331,6 @@
         <AllowedMovement value="Moving"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="SaBackwardWeapon">
-        <EditorCategories value="Race:Protoss"/>
         <Options index="Disabled" value="1"/>
         <Options index="OnlyFireAtAttackOrderTarget" value="0"/>
         <Options index="DisplayCooldown" value="1"/>
@@ -365,6 +342,24 @@
         <Arc value="360"/>
         <Period value="4.5"/>
         <Effect value="SaBackwardWeaponCP"/>
+        <LegacyOptions index="LockTurretWhileFiring" value="1"/>
+        <LegacyOptions index="Uninterruptible" value="1"/>
+        <LegacyOptions index="NoDeceleration" value="1"/>
+        <AllowedMovement value="Moving"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="SaForwardMelee">
+        <Options index="OnlyFireAtAttackOrderTarget" value="0"/>
+        <Options index="DisplayCooldown" value="1"/>
+        <Icon value="Assets\Textures\btn-upgrade-protoss-airweaponslevel0.dds"/>
+        <DisplayEffect value="SaForwardMeleeDamage1"/>
+        <DisplayAttackCount value="15"/>
+        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <AcquirePrioritization value="ByAngle"/>
+        <MinScanRange value="15"/>
+        <Range value="1.5"/>
+        <Arc value="119.9926"/>
+        <Period value="4.625"/>
+        <Effect value="SaForwardMeleeCP"/>
         <LegacyOptions index="LockTurretWhileFiring" value="1"/>
         <LegacyOptions index="Uninterruptible" value="1"/>
         <LegacyOptions index="NoDeceleration" value="1"/>
@@ -383,7 +378,6 @@
         <DisplayName value="Weapon/Name/ATTACK"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="NeedleSpines2">
-        <EditorCategories value="Race:Zerg"/>
         <Icon value="Assets\Textures\btn-upgrade-zerg-missileattacks-level0.dds"/>
         <DisplayEffect value="NeedleSpinesDamage"/>
         <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
@@ -393,7 +387,6 @@
         <Effect value="NeedleSpinesLaunchMissile"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="SplitBomb">
-        <EditorCategories value="Race:Zerg"/>
         <Icon value="Assets\Textures\btn-upgrade-zerg-airattacks-level0.dds"/>
         <DisplayEffect value="SplitBombDamage"/>
         <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
@@ -404,7 +397,6 @@
         <AllowedMovement value="Slowing"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="RO_050Weapon2">
-        <EditorCategories value="Race:Zerg"/>
         <Icon value="Assets\Textures\btn-upgrade-zerg-seismicspines.dds"/>
         <DisplayEffect value="RO_050AbilDamage"/>
         <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
@@ -414,7 +406,6 @@
         <Effect value="RO_050AbilLM"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="RO_034Weapon">
-        <EditorCategories value="Race:Terran"/>
         <Icon value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel0.dds"/>
         <DisplayEffect value="RO_034WeaponDamage"/>
         <DisplayAttackCount value="4"/>
@@ -427,7 +418,6 @@
         <LegacyOptions index="KeepChanneling" value="1"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="RO_050Weapon">
-        <EditorCategories value="Race:Zerg"/>
         <Options index="Melee" value="1"/>
         <Icon value="Assets\Textures\btn-upgrade-protoss-groundweaponslevel0.dds"/>
         <DisplayEffect value="PsiBlades23"/>
@@ -439,7 +429,6 @@
         <LegacyOptions index="Uninterruptible" value="1"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="MHT3Weapon">
-        <EditorCategories value="Race:Terran"/>
         <Options index="OnlyFireWhileInAttackOrder" value="0"/>
         <Options index="OnlyFireAtAttackOrderTarget" value="0"/>
         <Options index="NeverMiss" value="1"/>
@@ -454,7 +443,6 @@
         <AllowedMovement value="Moving"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="ValkyrjaRifle">
-        <EditorCategories value="Race:Terran"/>
         <Icon value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel0.dds"/>
         <DisplayEffect value="ValkyrjaRifleDamage"/>
         <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
@@ -465,7 +453,6 @@
         <Effect value="ValkyrjaRifleDamageCase"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="Herrscher3rdWeapon2">
-        <EditorCategories value="Race:Zerg"/>
         <Icon value="Assets\Textures\btn-ability-protoss-psistorm-color.dds"/>
         <DisplayEffect value="Herrscher3rdAttackDamage"/>
         <DisplayAttackCount value="1"/>
@@ -476,7 +463,6 @@
         <Effect value="Herrscher3rdAttackDamage"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="Herrscher5thWeapon1">
-        <EditorCategories value="Race:Zerg"/>
         <Options index="LinkedCooldown" value="0"/>
         <Options index="DisplayCooldown" value="1"/>
         <Icon value="Assets\Textures\btn-upgrade-vorazun-stasiswardpermanentlycloaked.dds"/>
@@ -495,7 +481,6 @@
         <AllowedMovement value="Moving"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="Herrscher5thWeapon2">
-        <EditorCategories value="Race:Zerg"/>
         <Options index="LinkedCooldown" value="0"/>
         <Icon value="Assets\Textures\btn-upgrade-karax_solarlance.dds"/>
         <DisplayEffect value="Herrscher5thWeapon2Damage"/>
@@ -507,7 +492,6 @@
         <Effect value="Herrscher5thWeapon2Launch"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="HerrscherWeapon">
-        <EditorCategories value="Race:Zerg"/>
         <Icon value="Assets\Textures\btn-ability-protoss-psistorm-color.dds"/>
         <DisplayEffect value="Herrscher3rdAttackDamage"/>
         <DisplayAttackCount value="1"/>
@@ -517,7 +501,6 @@
         <Effect value="Herrscher3rdAttackDamage"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="Herrscher4thWeapon">
-        <EditorCategories value="Race:Zerg"/>
         <Icon value="Assets\Textures\tornadoes_coop.dds"/>
         <DisplayEffect value="Herrscher4thWeaponDamage"/>
         <DisplayAttackCount value="1"/>
@@ -528,7 +511,6 @@
         <Effect value="Herrscher4thWeaponCU"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="Herrscher6thWeapon">
-        <EditorCategories value="Race:Zerg"/>
         <Icon value="Assets\Textures\btn-ability-protoss-soulabsorption.dds"/>
         <DisplayEffect value="Herrscher6thAttackDamage"/>
         <DisplayAttackCount value="1"/>
@@ -546,7 +528,6 @@
         <Range value="10"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="RO_031Weapon">
-        <EditorCategories value="Race:Terran"/>
         <Icon value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel0.dds"/>
         <DisplayEffect value="RO_031WeaponDamage"/>
         <DisplayAttackCount value="4"/>
@@ -559,7 +540,6 @@
         <LegacyOptions index="KeepChanneling" value="1"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="UnknownWeapon">
-        <EditorCategories value="Race:Terran"/>
         <Icon value="Assets\Textures\Weapon_Cannon_B23_173_5.tga"/>
         <DisplayEffect value="WeaponB23DamageAOE"/>
         <DisplayAttackCount value="3"/>
@@ -573,7 +553,6 @@
         <LegacyOptions index="CanRetargetWhileChanneling" value="1"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="Cannon_B5">
-        <EditorCategories value="Race:Terran"/>
         <Icon value="Assets\Textures\Weapon_Cannon_B5_47_5.tga"/>
         <DisplayEffect value="WeaponB5Damage"/>
         <DisplayAttackCount value="15"/>
@@ -587,7 +566,6 @@
         <LegacyOptions index="CanRetargetWhileChanneling" value="1"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="DG_013Weapon">
-        <EditorCategories value="Race:Zerg"/>
         <Icon value="Assets\Textures\btn-upgrade-zerg-missileattacks-level0.dds"/>
         <DisplayEffect value="DG_013WeaponDamage"/>
         <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
@@ -595,7 +573,6 @@
         <Effect value="DG_013WeaponPercistent"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="DeadgalScythe2">
-        <EditorCategories value="Race:Zerg"/>
         <Options index="Melee" value="1"/>
         <Icon value="Assets\Textures\btn-upgrade-protoss-groundweaponslevel0.dds"/>
         <DisplayEffect value="PsiBlades22"/>
@@ -607,7 +584,6 @@
         <LegacyOptions index="Uninterruptible" value="1"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="DeadgalScythe3">
-        <EditorCategories value="Race:Zerg"/>
         <Options index="Melee" value="1"/>
         <Icon value="Assets\Textures\btn-upgrade-protoss-groundweaponslevel0.dds"/>
         <DisplayEffect value="PsiBlades223"/>
@@ -619,7 +595,6 @@
         <LegacyOptions index="Uninterruptible" value="1"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="Herrscher2ndWeapon">
-        <EditorCategories value="Race:Zerg"/>
         <Icon value="Assets\Textures\btn-upgrade-zerg-missileattacks-level0.dds"/>
         <DisplayEffect value="Herrscher2WeaponDamage"/>
         <DisplayAttackCount value="1"/>
@@ -630,7 +605,6 @@
         <Effect value="Herrscher2WeaponLaunchMissile"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="Cannon_B18">
-        <EditorCategories value="Race:Terran"/>
         <Icon value="Assets\Textures\Weapon_Cannon_B18_133_5.tga"/>
         <DisplayEffect value="B18Damage"/>
         <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
@@ -654,7 +628,6 @@
         <Effect value="VoidEffect"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="RO_030Weapon">
-        <EditorCategories value="Race:Terran"/>
         <Icon value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel0.dds"/>
         <DisplayEffect value="RO_030WeaponDamage"/>
         <DisplayAttackCount value="4"/>
@@ -667,7 +640,6 @@
         <LegacyOptions index="KeepChanneling" value="1"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="KianaC2Attack1">
-        <EditorCategories value="Race:Terran"/>
         <Options index="Hidden" value="1"/>
         <Options index="Melee" value="1"/>
         <Options index="DisplayCooldown" value="1"/>
@@ -688,7 +660,6 @@
         <RandomDelayMax value="0"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="KianaC2Attack2">
-        <EditorCategories value="Race:Terran"/>
         <Options index="Hidden" value="1"/>
         <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
         <AcquireTargetSorts>
@@ -707,7 +678,6 @@
         <RandomDelayMax value="0"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="KianaC2Attack3">
-        <EditorCategories value="Race:Terran"/>
         <Options index="Hidden" value="1"/>
         <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
         <AcquireTargetSorts>
@@ -726,7 +696,6 @@
         <RandomDelayMax value="0"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="KianaC2Attack4">
-        <EditorCategories value="Race:Terran"/>
         <Options index="Hidden" value="1"/>
         <Options index="Melee" value="1"/>
         <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
@@ -746,7 +715,6 @@
         <RandomDelayMax value="0"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="KianaC2Attack5">
-        <EditorCategories value="Race:Terran"/>
         <Options index="Hidden" value="1"/>
         <Options index="Melee" value="1"/>
         <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
@@ -766,7 +734,6 @@
         <RandomDelayMax value="0"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="KianaC2Branch3">
-        <EditorCategories value="Race:Terran"/>
         <Options index="Hidden" value="1"/>
         <Options index="Melee" value="1"/>
         <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
@@ -786,7 +753,6 @@
         <RandomDelayMax value="0"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="KianaC2Branch4">
-        <EditorCategories value="Race:Terran"/>
         <Options index="Hidden" value="1"/>
         <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
         <AcquireTargetSorts>
@@ -805,7 +771,6 @@
         <RandomDelayMax value="0"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="DeadgalScythe">
-        <EditorCategories value="Race:Zerg"/>
         <Options index="Melee" value="1"/>
         <Icon value="Assets\Textures\btn-upgrade-protoss-groundweaponslevel0.dds"/>
         <DisplayEffect value="PsiBlades2"/>
@@ -843,7 +808,6 @@
         <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="SwarmMissile">
-        <EditorCategories value="Race:Terran"/>
         <Options index="DisplayCooldown" value="1"/>
         <Icon value="Assets\Textures\btn-upgrade-terran-hisecautotracking.dds"/>
         <DisplayEffect value="SwarmMissileDamage"/>
@@ -857,7 +821,6 @@
         <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="Cannon_B1">
-        <EditorCategories value="Race:Terran"/>
         <Icon value="Assets\Textures\Weapon_Cannon_B1_38_3.tga"/>
         <DisplayEffect value="WeaponB1DamageAOE"/>
         <DisplayAttackCount value="3"/>
@@ -874,7 +837,6 @@
         <Options index="DisplayCooldown" value="1"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="Herrscher1stWeapon">
-        <EditorCategories value="Race:Zerg"/>
         <Icon value="Assets\Textures\btn-upgrade-protoss-alarak-ascendant&apos;spsiorbtravelsfurther.dds"/>
         <DisplayEffect value="PsiBlastDamage"/>
         <DisplayAttackCount value="1"/>
@@ -885,7 +847,6 @@
         <MinScanRange value="12"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="RO_010Weapon">
-        <EditorCategories value="Race:Terran"/>
         <Options index="Melee" value="1"/>
         <Icon value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel0.dds"/>
         <DisplayEffect value="RO_010AttackDamage"/>
@@ -899,7 +860,6 @@
         <LegacyOptions index="KeepChanneling" value="1"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="UL_040Weapon">
-        <EditorCategories value="Race:Zerg"/>
         <Options index="Melee" value="1"/>
         <Options index="LinkedCooldown" value="0"/>
         <Icon value="Assets\Textures\btn-upgrade-zerg-meleeattacks-level0.dds"/>
@@ -910,7 +870,6 @@
         <Effect value="UL_040Persistent"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="Railgun">
-        <EditorCategories value="Race:Terran"/>
         <Icon value="Assets\Textures\btn-upgrade-protoss-airweaponslevel0.dds"/>
         <DisplayEffect value="RailgunDamage"/>
         <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
@@ -920,7 +879,6 @@
         <AllowedMovement value="Slowing"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="UL_030Weapon">
-        <EditorCategories value="Race:Zerg"/>
         <Options index="Melee" value="1"/>
         <Options index="LinkedCooldown" value="0"/>
         <Icon value="Assets\Textures\btn-upgrade-zerg-meleeattacks-level0.dds"/>
@@ -931,7 +889,6 @@
         <Effect value="UL_030Persistent"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="Cannon_B7">
-        <EditorCategories value="Race:Terran"/>
         <Icon value="Assets\Textures\Weapon_Cannon_B7_48_5.tga"/>
         <DisplayEffect value="B7Damage3"/>
         <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
@@ -946,7 +903,6 @@
         <MinScanRange value="10"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="ValkyrjaSevenThundersOfRetribution">
-        <EditorCategories value="Race:Terran"/>
         <Icon value="Assets\Textures\btn-SevenThundersOfRetribution.tga"/>
         <DisplayEffect value="SevenThundersOfRetributionDamage"/>
         <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
@@ -958,7 +914,6 @@
         <Effect value="SevenThundersOfRetributionDamage"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="RO_040Weapon">
-        <EditorCategories value="Race:Terran"/>
         <Options index="Melee" value="1"/>
         <Icon value="Assets\Textures\btn-ability-terran-unstablepayload.dds"/>
         <DisplayEffect value="RO_040Damage"/>
@@ -973,7 +928,6 @@
         <AllowedMovement value="Moving"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="BronyaC7Gun">
-        <EditorCategories value="Race:Protoss"/>
         <Options index="Hidden" value="1"/>
         <Options index="OnlyFireWhileInAttackOrder" value="0"/>
         <Options index="OnlyFireAtAttackOrderTarget" value="0"/>
@@ -1007,7 +961,6 @@
         <Effect value="Valkyrja3AttackNormal"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="WeaponBronyaC7">
-        <EditorCategories value="Race:Protoss"/>
         <Icon value="Assets\Textures\Weapon_Cannon_B34_263_5.tga"/>
         <DisplayEffect value="Weapon_Cannon_B34Damage"/>
         <DisplayAttackCount value="2"/>
@@ -1018,7 +971,6 @@
         <Effect value="BronyaC7AttackSwitch"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="Bronya_C7_Motor">
-        <EditorCategories value="Race:Protoss"/>
         <Options index="Melee" value="1"/>
         <Icon value="Assets\Textures\btn-ability-terran-hercules-tacticaljump.dds"/>
         <DisplayEffect value="BronyaMotorAttackDamage"/>
@@ -1030,7 +982,6 @@
         <Effect value="BronyaMotorAttack"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="BronyaC7Cannon">
-        <EditorCategories value="Race:Protoss"/>
         <Icon value="Assets\Textures\btn-upgrade-protoss-groundweaponslevel0.dds"/>
         <DisplayEffect value="Weapon_Cannon_B34Damage"/>
         <DisplayAttackCount value="1"/>
@@ -1041,7 +992,6 @@
         <Effect value="Weapon_Cannon_B34"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="SeeleC1UltCharge">
-        <EditorCategories value="Race:Terran"/>
         <Options index="Disabled" value="1"/>
         <Options index="Hidden" value="1"/>
         <Options index="Melee" value="1"/>
@@ -1057,7 +1007,6 @@
         <Arc value="45"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="SeeleC1Attack1">
-        <EditorCategories value="Race:Terran"/>
         <Options index="Hidden" value="1"/>
         <Options index="Melee" value="1"/>
         <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
@@ -1074,7 +1023,6 @@
         <Arc value="45"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="SeeleC1Attack2">
-        <EditorCategories value="Race:Terran"/>
         <Options index="Hidden" value="1"/>
         <Options index="Melee" value="1"/>
         <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
@@ -1091,7 +1039,6 @@
         <Arc value="45"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="SeeleC1Attack3">
-        <EditorCategories value="Race:Terran"/>
         <Options index="Hidden" value="1"/>
         <Options index="Melee" value="1"/>
         <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
@@ -1108,7 +1055,6 @@
         <Arc value="45"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="SeeleC1Attack4">
-        <EditorCategories value="Race:Terran"/>
         <Options index="Hidden" value="1"/>
         <Options index="Melee" value="1"/>
         <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
@@ -1125,7 +1071,6 @@
         <Arc value="45"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="SeeleC1Attack5">
-        <EditorCategories value="Race:Terran"/>
         <Options index="Hidden" value="1"/>
         <Options index="Melee" value="1"/>
         <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
@@ -1142,7 +1087,6 @@
         <Arc value="45"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="MeiC2Attack1">
-        <EditorCategories value="Race:Terran"/>
         <Options index="Hidden" value="1"/>
         <Options index="Melee" value="1"/>
         <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
@@ -1157,7 +1101,6 @@
         <RandomDelayMax value="0"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="MeiC2Attack2">
-        <EditorCategories value="Race:Terran"/>
         <Options index="Hidden" value="1"/>
         <Options index="Melee" value="1"/>
         <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
@@ -1171,7 +1114,6 @@
         <RandomDelayMax value="0"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="MeiC2Attack3">
-        <EditorCategories value="Race:Terran"/>
         <Options index="Hidden" value="1"/>
         <Options index="Melee" value="1"/>
         <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
@@ -1185,7 +1127,6 @@
         <RandomDelayMax value="0"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="MeiC2Attack4">
-        <EditorCategories value="Race:Terran"/>
         <Options index="Hidden" value="1"/>
         <Options index="Melee" value="1"/>
         <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
@@ -1199,7 +1140,6 @@
         <RandomDelayMax value="0"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="MeiC2Attack5">
-        <EditorCategories value="Race:Terran"/>
         <Options index="Hidden" value="1"/>
         <Options index="Melee" value="1"/>
         <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
@@ -1237,7 +1177,6 @@
         <Effect value="VoidEffect"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="KianaC1RangeAttack1">
-        <EditorCategories value="Race:Terran"/>
         <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
         <MinScanRange value="7"/>
         <Range value="7"/>
@@ -1251,7 +1190,6 @@
         <Options index="Hidden" value="1"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="KianaC1RangeAttack2">
-        <EditorCategories value="Race:Terran"/>
         <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
         <MinScanRange value="7"/>
         <Range value="7"/>
@@ -1265,7 +1203,6 @@
         <Options index="Hidden" value="1"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="KianaC1RangeAttack3">
-        <EditorCategories value="Race:Terran"/>
         <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
         <MinScanRange value="7"/>
         <Range value="7"/>
@@ -1279,7 +1216,6 @@
         <Options index="Hidden" value="1"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="KianaC1RangeAttack4">
-        <EditorCategories value="Race:Terran"/>
         <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
         <MinScanRange value="7"/>
         <Range value="7"/>
@@ -1293,7 +1229,6 @@
         <Options index="Hidden" value="1"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="KianaC1MeleeAttack1">
-        <EditorCategories value="Race:Terran"/>
         <Options index="Hidden" value="1"/>
         <Options index="Melee" value="1"/>
         <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
@@ -1308,7 +1243,6 @@
         <RandomDelayMax value="0"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="KianaC1MeleeAttack2">
-        <EditorCategories value="Race:Terran"/>
         <Options index="Hidden" value="1"/>
         <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
         <MinScanRange value="7"/>
@@ -1322,7 +1256,6 @@
         <RandomDelayMax value="0"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="KianaC1MeleeAttack3">
-        <EditorCategories value="Race:Terran"/>
         <Options index="Hidden" value="1"/>
         <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
         <MinScanRange value="7"/>

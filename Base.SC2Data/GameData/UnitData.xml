@@ -546,6 +546,119 @@
         <HotkeyCategory value="Unit/Category/TerranUnits"/>
         <AIEvaluateAlias value="CUnitBuildingTerr"/>
     </CUnit>
+    <CUnit id="AntiEntropyFactory" parent="CUnitBuildingTerr">
+        <Name value="Unit/Name/AntiEntropyFactory"/>
+        <Collide index="Locust" value="0"/>
+        <Collide index="Phased" value="0"/>
+        <LifeStart value="1250"/>
+        <LifeMax value="1250"/>
+        <CostResource index="Minerals" value="150"/>
+        <CostResource index="Vespene" value="100"/>
+        <RepairTime value="60"/>
+        <AbilArray Link="BuildInProgress"/>
+        <AbilArray Link="que5"/>
+        <AbilArray Link="AntiEntropyFactoryTrain"/>
+        <AbilArray Link="FactoryAddOns"/>
+        <AbilArray Link="Rally"/>
+        <AbilArray Link="AntiEntropyFactoryLiftOff"/>
+        <BehaviorArray Link="ReactorQueue"/>
+        <CardLayouts>
+            <LayoutButtons Face="RO_031" Type="AbilCmd" AbilCmd="AntiEntropyFactoryTrain,Train9" Row="1" Column="1"/>
+            <LayoutButtons Face="RO_032" Type="AbilCmd" AbilCmd="AntiEntropyFactoryTrain,Train10" Row="1" Column="1"/>
+            <LayoutButtons Face="RO_033" Type="AbilCmd" AbilCmd="AntiEntropyFactoryTrain,Train11" Row="1" Column="1"/>
+            <LayoutButtons Face="SiegeTank" Type="AbilCmd" AbilCmd="AntiEntropyFactoryTrain,Train30" Row="0" Column="3"/>
+            <LayoutButtons Face="Rally" Type="AbilCmd" AbilCmd="Rally,Rally1" Row="1" Column="4"/>
+            <LayoutButtons Face="Lift" Type="AbilCmd" AbilCmd="AntiEntropyFactoryLiftOff,Execute" Row="2" Column="3"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="BuildInProgress,Halt" Row="2" Column="3"/>
+            <LayoutButtons Face="Cancel" Type="AbilCmd" AbilCmd="que5,CancelLast" Row="2" Column="4"/>
+            <LayoutButtons Face="CancelBuilding" Type="AbilCmd" AbilCmd="BuildInProgress,Cancel" Row="2" Column="4"/>
+            <LayoutButtons Face="Cancel" Type="AbilCmd" AbilCmd="FactoryAddOns,Halt" Row="2" Column="4"/>
+            <LayoutButtons Face="BuildTechLabFactory" Type="AbilCmd" AbilCmd="FactoryAddOns,Build1" Row="2" Column="4"/>
+            <LayoutButtons Face="SelectBuilder" Type="SelectBuilder" Row="1" Column="3"/>
+            <LayoutButtons Face="CommanderRaynorOrbitalDropPods2" Type="Passive" Requirements="CommanderRaynorOrbitalDropPodsUpgraded" Row="1" Column="3"/>
+            <LayoutButtons Face="RO_040" Type="AbilCmd" AbilCmd="AntiEntropyFactoryTrain,Train15" Row="0" Column="2"/>
+            <LayoutButtons Face="MHT3" Type="AbilCmd" AbilCmd="AntiEntropyFactoryTrain,Train29" Row="0" Column="4"/>
+            <LayoutButtons Face="RO_010" Type="AbilCmd" AbilCmd="AntiEntropyFactoryTrain,Train1" Row="0" Column="0"/>
+            <LayoutButtons Face="RO_030" Type="AbilCmd" AbilCmd="AntiEntropyFactoryTrain,Train8" Row="0" Column="1"/>
+            <LayoutButtons Face="LightningRod" Type="AbilCmd" AbilCmd="FactoryAddOns,Build3" Row="2" Column="0"/>
+            <LayoutButtons Face="IceTablet" Type="AbilCmd" AbilCmd="FactoryAddOns,Build4" Row="2" Column="1"/>
+            <LayoutButtons Face="Furnace" Type="AbilCmd" AbilCmd="FactoryAddOns,Build5" Row="2" Column="2"/>
+            <LayoutButtons Face="RO_041" Type="AbilCmd" AbilCmd="AntiEntropyFactoryTrain,Train16" Row="1" Column="2"/>
+            <LayoutButtons Face="RO_042" Type="AbilCmd" AbilCmd="AntiEntropyFactoryTrain,Train17" Row="1" Column="2"/>
+            <LayoutButtons Face="RO_047" Type="AbilCmd" AbilCmd="AntiEntropyFactoryTrain,Train18" Row="1" Column="2"/>
+        </CardLayouts>
+        <Radius value="1.625"/>
+        <SeparationRadius value="1.625"/>
+        <Footprint value="Footprint3x3Contour"/>
+        <PlacementFootprint value="Footprint3x3"/>
+        <ScoreMake value="250"/>
+        <ScoreKill value="250"/>
+        <SubgroupPriority value="3"/>
+        <MinimapRadius value="1.625"/>
+        <TacticalAI value="Factory"/>
+        <TechAliasArray value="Alias_AntiEntropyFactory"/>
+        <GlossaryPriority value="322"/>
+        <AIEvaluateAlias value="AntiEntropyFactory"/>
+    </CUnit>
+    <CUnit id="AntiEntropyFactoryFlying" parent="CUnitBuildingTerr">
+        <Name value="Unit/Name/AntiEntropyFactory"/>
+        <FlagArray index="Turnable" value="1"/>
+        <FogVisibility value="Hidden"/>
+        <PlaneArray index="Ground" value="0"/>
+        <PlaneArray index="Air" value="1"/>
+        <Collide index="Burrow" value="0"/>
+        <Collide index="Ground" value="0"/>
+        <Collide index="Structure" value="0"/>
+        <Collide index="RoachBurrow" value="0"/>
+        <Collide index="ForceField" value="0"/>
+        <Collide index="Locust" value="0"/>
+        <Collide index="Phased" value="0"/>
+        <Collide index="Small" value="0"/>
+        <Collide index="Flying" value="1"/>
+        <LifeStart value="1250"/>
+        <LifeMax value="1250"/>
+        <Mover value="Fly"/>
+        <Speed value="0.9375"/>
+        <Acceleration value="1.3125"/>
+        <StationaryTurningRate value="720"/>
+        <TurningRate value="720"/>
+        <Height value="3.25"/>
+        <VisionHeight value="4"/>
+        <CostResource index="Minerals" value="150"/>
+        <CostResource index="Vespene" value="100"/>
+        <RepairTime value="60"/>
+        <AbilArray Link="FactoryAddOns"/>
+        <AbilArray Link="AntiEntropyFactoryLand"/>
+        <AbilArray Link="move"/>
+        <AbilArray Link="stop"/>
+        <CardLayouts>
+            <LayoutButtons Face="Land" Type="AbilCmd" AbilCmd="AntiEntropyFactoryLand,Execute" Row="2" Column="3"/>
+            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
+            <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
+            <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="2"/>
+            <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
+            <LayoutButtons Face="IceTablet" Type="AbilCmd" AbilCmd="FactoryAddOns,Build4" Row="2" Column="1"/>
+            <LayoutButtons Face="LightningRod" Type="AbilCmd" AbilCmd="FactoryAddOns,Build3" Row="2" Column="0"/>
+            <LayoutButtons Face="Furnace" Type="AbilCmd" AbilCmd="FactoryAddOns,Build5" Row="2" Column="2"/>
+            <LayoutButtons Face="Reactor" Type="AbilCmd" AbilCmd="FactoryAddOns,Build2" Row="1" Column="4"/>
+            <LayoutButtons Face="BuildTechLabFactory" Type="AbilCmd" AbilCmd="FactoryAddOns,Build1" Row="2" Column="4"/>
+        </CardLayouts>
+        <Radius value="1.625"/>
+        <SeparationRadius value="1.625"/>
+        <Footprint value=""/>
+        <PlacementFootprint value=""/>
+        <ScoreKill value="250"/>
+        <ScoreResult value=""/>
+        <SubgroupPriority value="3"/>
+        <MinimapRadius value="1.625"/>
+        <LeaderAlias value="Factory"/>
+        <HotkeyAlias value="Factory"/>
+        <TechAliasArray value="Alias_AntiEntropyFactory"/>
+        <GlossaryPriority value="0"/>
+        <GlossaryAlias value="Factory"/>
+        <HotkeyCategory value=""/>
+        <AIEvaluateAlias value="AntiEntropyFactoryFlying"/>
+    </CUnit>
     <CUnit id="RO_060Missile" parent="MISSILE_INVULNERABLE">
         <Race value="Terr"/>
         <EditorCategories value="ObjectType:Projectile,ObjectFamily:Melee"/>
@@ -700,8 +813,7 @@
         <TurningRate value="719.4726"/>
         <Sight value="9"/>
         <CostCategory value="Technology"/>
-        <CostResource index="Minerals" value="225"/>
-        <CostResource index="Vespene" value="100"/>
+        <CostResource index="Minerals" value="200"/>
         <RepairTime value="35"/>
         <AttackTargetPriority value="11"/>
         <AbilArray Link="BuildInProgress"/>
@@ -792,8 +904,8 @@
         <SeparationRadius value="2.5"/>
         <Footprint value="Footprint5x5Contour"/>
         <PlacementFootprint value="Footprint5x5DropOff"/>
-        <ScoreMake value="325"/>
-        <ScoreKill value="325"/>
+        <ScoreMake value="200"/>
+        <ScoreKill value="200"/>
         <ScoreResult value="BuildOrder"/>
         <SubgroupPriority value="3"/>
         <MinimapRadius value="2.5"/>
@@ -1080,7 +1192,7 @@
         <ScoreMake value="100"/>
         <ScoreKill value="100"/>
         <MinimapRadius value="0"/>
-        <EditorCategories value="ObjectType:Unit,ObjectFamily:Coop"/>
+        <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
     </CUnit>
     <CUnit id="KianaC1Launcher">
         <DeathRevealRadius value="0"/>
@@ -1201,7 +1313,7 @@
         <ScoreMake value="100"/>
         <ScoreKill value="100"/>
         <MinimapRadius value="0"/>
-        <EditorCategories value="ObjectType:Unit,ObjectFamily:Coop"/>
+        <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
         <Attributes index="Summoned" value="1"/>
     </CUnit>
     <CUnit id="HonkaiHyperion">
@@ -1616,7 +1728,7 @@
         <ScoreResult value="BuildOrder"/>
         <SubgroupPriority value="60"/>
         <MinimapRadius value="1"/>
-        <EditorCategories value="ObjectType:Unit,ObjectFamily:Coop"/>
+        <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
         <TacticalAIThink value="AIThinkMedivac"/>
         <AIEvalFactor value="0.2"/>
         <GlossaryCategory value="Unit/Category/TerranUnits"/>
@@ -1624,13 +1736,12 @@
         <HotkeyCategory value="Unit/Category/TerranUnits"/>
     </CUnit>
     <CUnit id="SaWeapon1" parent="MISSILE">
-        <Race value="Prot"/>
+        <Race value="Zerg"/>
         <EditorCategories value="ObjectType:Projectile,ObjectFamily:Melee"/>
     </CUnit>
     <CUnit id="SaCore">
         <DeathTime value="30"/>
         <DeathRevealRadius value="3"/>
-        <Facing value="90"/>
         <Race value="Zerg"/>
         <Mob value="Multiplayer"/>
         <FlagArray index="Untargetable" value="1"/>
@@ -1647,20 +1758,12 @@
         <Attributes index="Structure" value="1"/>
         <LifeStart value="200"/>
         <LifeMax value="200"/>
-        <LifeArmor value="2"/>
-        <LifeRegenRate value="1"/>
-        <LifeRegenRateCreep value="2"/>
+        <LifeArmor value="9999"/>
+        <LifeRegenRate value="200"/>
         <LifeArmorName value="Unit/LifeArmorName/HonkaiArmor"/>
-        <EnergyStart value="500"/>
-        <EnergyMax value="1000"/>
-        <EnergyRegenRate value="10"/>
-        <ShieldsStart value="3000"/>
-        <ShieldsMax value="3000"/>
-        <ShieldArmor value="2"/>
-        <ShieldRegenRate value="8"/>
         <ShieldArmorName value="Unit/LifeArmorName/HonkaiShield"/>
         <Mover value="Fly"/>
-        <Speed value="0.5"/>
+        <Speed value="0.3515"/>
         <SpeedBonusCreep value="1"/>
         <Acceleration value="0.125"/>
         <LateralAcceleration value="46.0625"/>
@@ -1669,13 +1772,7 @@
         <Sight value="32"/>
         <Height value="3"/>
         <VisionHeight value="10"/>
-        <Food value="-10"/>
         <CostCategory value="Army"/>
-        <RepairTime value="40"/>
-        <AttackTargetPriority value="25"/>
-        <DamageDealtXP value="1"/>
-        <DamageTakenXP value="1"/>
-        <KillXP value="30"/>
         <AbilArray Link="stop"/>
         <AbilArray Link="attack"/>
         <AbilArray Link="move"/>
@@ -1695,8 +1792,6 @@
         <Radius value="5"/>
         <SeparationRadius value="2.5"/>
         <InnerRadius value="2.5"/>
-        <CargoSize value="2"/>
-        <ScoreKill value="6000"/>
         <ScoreResult value="BuildOrder"/>
         <SubgroupPriority value="82"/>
         <MinimapRadius value="2.5"/>
@@ -1708,10 +1803,12 @@
         <Deceleration value="0.125"/>
     </CUnit>
     <CUnit id="SaAfflication">
+        <Description value="Button/Tooltip/SaCore"/>
         <DeathTime value="30"/>
         <DeathRevealRadius value="3"/>
         <Facing value="90"/>
         <Race value="Zerg"/>
+        <Gender value="Female"/>
         <FlagArray index="Hero" value="1"/>
         <FlagArray index="PreventDestroy" value="1"/>
         <FlagArray index="UseLineOfSight" value="1"/>
@@ -1720,15 +1817,21 @@
         <PlaneArray index="Ground" value="1"/>
         <PlaneArray index="Air" value="1"/>
         <Collide index="Flying" value="1"/>
-        <LifeStart value="10000"/>
-        <LifeMax value="10000"/>
+        <Attributes index="Light" value="1"/>
+        <Attributes index="Armored" value="1"/>
+        <Attributes index="Biological" value="1"/>
+        <Attributes index="Psionic" value="1"/>
+        <Attributes index="Massive" value="1"/>
+        <Attributes index="Heroic" value="1"/>
+        <LifeStart value="5000"/>
+        <LifeMax value="5000"/>
         <LifeArmor value="10"/>
         <LifeRegenRate value="1"/>
-        <LifeRegenRateCreep value="2"/>
         <LifeArmorName value="Unit/LifeArmorName/HonkaiArmor"/>
-        <ShieldsStart value="5000"/>
-        <ShieldsMax value="5000"/>
+        <ShieldsStart value="2500"/>
+        <ShieldsMax value="2500"/>
         <ShieldArmor value="10"/>
+        <ShieldRegenDelay value="1"/>
         <ShieldArmorName value="Unit/LifeArmorName/HonkaiShield"/>
         <Mover value="Fly"/>
         <Speed value="1"/>
@@ -1740,15 +1843,13 @@
         <VisionHeight value="10"/>
         <Food value="-5"/>
         <CostCategory value="Army"/>
-        <RepairTime value="40"/>
-        <AttackTargetPriority value="25"/>
-        <DamageDealtXP value="1"/>
-        <DamageTakenXP value="1"/>
-        <KillXP value="30"/>
+        <AttackTargetPriority value="20"/>
+        <KillXP value="5000"/>
         <AbilArray Link="stop"/>
         <AbilArray Link="attack"/>
         <AbilArray Link="SaBackward"/>
         <AbilArray Link="SaForward"/>
+        <AbilArray Link="SaAbil1"/>
         <BehaviorArray Link="BaTi"/>
         <BehaviorArray Link="Detector10"/>
         <BehaviorArray Link="NoDeathSa"/>
@@ -1756,6 +1857,11 @@
         <BehaviorArray Link="SaIntro"/>
         <BehaviorArray Link="SaIntroHeight"/>
         <BehaviorArray Link="Protect90Ex"/>
+        <WeaponArray Link="SaForwardMelee"/>
+        <WeaponArray Link="SaForwardWeapon"/>
+        <WeaponArray Link="SaBackwardWeapon"/>
+        <WeaponArray Turret="SaForward"/>
+        <WeaponArray Turret="SaBackward"/>
         <CardLayouts>
             <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
             <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
@@ -1764,6 +1870,7 @@
             <LayoutButtons Face="AttackGhost" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
             <LayoutButtons Face="MorphToSaBackward" Type="AbilCmd" AbilCmd="SaBackward,Execute" Row="2" Column="0"/>
             <LayoutButtons Face="MorphToSaForward" Type="AbilCmd" AbilCmd="SaForward,Execute" Row="2" Column="0"/>
+            <LayoutButtons Face="SaAbil1" Type="AbilCmd" AbilCmd="SaAbil1,Execute" Row="1" Column="0"/>
         </CardLayouts>
         <Radius value="3"/>
         <SeparationRadius value="2.5"/>
@@ -1773,27 +1880,15 @@
         <SubgroupPriority value="82"/>
         <MinimapRadius value="2.5"/>
         <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
-        <AIEvalFactor value="1.2"/>
-        <GlossaryPriority value="70"/>
-        <HotkeyCategory value="Unit/Category/HonkaiUnits"/>
-        <Description value="Button/Tooltip/SaCore"/>
-        <Attributes index="Light" value="1"/>
-        <Attributes index="Armored" value="1"/>
-        <Attributes index="Biological" value="1"/>
-        <Attributes index="Massive" value="1"/>
-        <Attributes index="Heroic" value="1"/>
-        <WeaponArray Link="SaForwardWeapon"/>
-        <WeaponArray Link="SaBackwardWeapon"/>
-        <WeaponArray Turret="SaForward"/>
-        <WeaponArray Turret="SaBackward"/>
-        <Gender value="Female"/>
         <TacticalAIThink value="lib6D9D7845_gf_AIThinkSaAfflication"/>
         <TacticalAIChannel value="lib6D9D7845_gf_AIChanelSaAfflication"/>
         <TacticalAIFilters value="Visible;Player,Ally,Neutral,Missile,Stasis,Dead,Hidden"/>
-        <ShieldRegenDelay value="1"/>
+        <AIEvalFactor value="1.2"/>
+        <GlossaryPriority value="70"/>
+        <HotkeyCategory value="Unit/Category/HonkaiUnits"/>
     </CUnit>
     <CUnit id="SaWeapon0" parent="MISSILE">
-        <Race value="Prot"/>
+        <Race value="Zerg"/>
         <EditorCategories value="ObjectType:Projectile,ObjectFamily:Melee"/>
     </CUnit>
     <CUnit id="FreeWeaponUnit">
@@ -1926,7 +2021,7 @@
         <SeparationRadius value="0"/>
         <SubgroupPriority value="17"/>
         <MinimapRadius value="0.375"/>
-        <EditorCategories value="ObjectType:Unit,ObjectFamily:Coop"/>
+        <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
         <KillDisplay value="Never"/>
         <Attributes index="Summoned" value="1"/>
     </CUnit>
@@ -2062,6 +2157,7 @@
         <BehaviorArray Link="FireSuppressionSystem"/>
         <BehaviorArray Link="TurretBuff"/>
         <DeathTime value="30"/>
+        <AddedOnArray index="1" UnitLink="AntiEntropyFactory"/>
     </CUnit>
     <CUnit id="BarracksTechLab">
         <BehaviorArray Link="FireSuppressionSystem"/>
@@ -2075,6 +2171,7 @@
         <DeathTime value="30"/>
         <AbilArray index="5" Link="HumanTech"/>
         <AbilArray Link="StigmataResearch"/>
+        <AddedOnArray index="1" UnitLink="AntiEntropyFactory"/>
     </CUnit>
     <CUnit id="Bunker">
         <BehaviorArray Link="FireSuppressionSystem"/>
@@ -2936,7 +3033,7 @@
     <CUnit id="SplitBomb2" parent="MISSILE">
         <Race value="Zerg"/>
         <Mover value="MissileDefault"/>
-        <EditorCategories value="ObjectFamily:Campaign,ObjectType:Projectile"/>
+        <EditorCategories value="ObjectFamily:Melee,ObjectType:Projectile"/>
     </CUnit>
     <CUnit id="Stigmata2">
         <Race value="Terr"/>
@@ -2977,7 +3074,7 @@
             <LayoutButtons Face="Cancel" Type="AbilCmd" AbilCmd="que5LongBlend,CancelLast" Row="2" Column="4"/>
             <LayoutButtons Face="CancelBuilding" Type="AbilCmd" AbilCmd="BuildInProgress,Cancel" Row="2" Column="4"/>
         </CardLayouts>
-        <AddedOnArray UnitLink="Factory" BehaviorLink="FurnaceFactory" ParentBehaviorLink="AddonIsWorking"/>
+        <AddedOnArray UnitLink="AntiEntropyFactory" BehaviorLink="FurnaceFactory" ParentBehaviorLink="AddonIsWorking"/>
         <AddOnOffsetX value="2.5"/>
         <AddOnOffsetY value="-0.5"/>
         <ScoreMake value="250"/>
@@ -2997,7 +3094,7 @@
         <LifeStart value="750"/>
         <LifeMax value="750"/>
         <CostResource index="Minerals" value="150"/>
-        <CostResource index="Vespene" value="100"/>
+        <CostResource index="Vespene" value="50"/>
         <AbilArray Link="BuildInProgress"/>
         <AbilArray Link="que5Addon"/>
         <AbilArray Link="FurnaceMorph2"/>
@@ -3011,7 +3108,7 @@
             <LayoutButtons Face="ReduceFire" Type="AbilCmd" AbilCmd="GeneralUpgrades,Research3" Row="0" Column="0"/>
             <LayoutButtons Face="Furnace2" Type="AbilCmd" AbilCmd="FurnaceUpgrade,Execute" Row="2" Column="0"/>
         </CardLayouts>
-        <AddedOnArray UnitLink="Factory" BehaviorLink="FurnaceFactory" ParentBehaviorLink="AddonIsWorking"/>
+        <AddedOnArray UnitLink="AntiEntropyFactory" BehaviorLink="FurnaceFactory" ParentBehaviorLink="AddonIsWorking"/>
         <AddOnOffsetX value="2.5"/>
         <AddOnOffsetY value="-0.5"/>
         <ScoreMake value="250"/>
@@ -3047,7 +3144,7 @@
             <LayoutButtons Face="Cancel" Type="AbilCmd" AbilCmd="que5LongBlend,CancelLast" Row="2" Column="4"/>
             <LayoutButtons Face="CancelBuilding" Type="AbilCmd" AbilCmd="BuildInProgress,Cancel" Row="2" Column="4"/>
         </CardLayouts>
-        <AddedOnArray UnitLink="Factory" BehaviorLink="FurnaceFactory2" ParentBehaviorLink="AddonIsWorking"/>
+        <AddedOnArray UnitLink="AntiEntropyFactory" BehaviorLink="FurnaceFactory2" ParentBehaviorLink="AddonIsWorking"/>
         <AddOnOffsetX value="2.5"/>
         <AddOnOffsetY value="-0.5"/>
         <ScoreMake value="625"/>
@@ -3068,8 +3165,8 @@
         <Attributes index="Armored" value="0"/>
         <LifeStart value="1250"/>
         <LifeMax value="1250"/>
-        <CostResource index="Minerals" value="400"/>
-        <CostResource index="Vespene" value="225"/>
+        <CostResource index="Minerals" value="300"/>
+        <CostResource index="Vespene" value="150"/>
         <AbilArray Link="BuildInProgress"/>
         <AbilArray Link="que5Addon"/>
         <AbilArray Link="FurnaceMorph22"/>
@@ -3080,7 +3177,7 @@
             <LayoutButtons Face="ReduceFire" Type="AbilCmd" AbilCmd="GeneralUpgrades,Research3" Row="0" Column="0"/>
             <LayoutButtons Face="BurnDamage" Type="AbilCmd" AbilCmd="GeneralUpgrades,Research6" Row="0" Column="1"/>
         </CardLayouts>
-        <AddedOnArray UnitLink="Factory" BehaviorLink="FurnaceFactory2" ParentBehaviorLink="AddonIsWorking"/>
+        <AddedOnArray UnitLink="AntiEntropyFactory" BehaviorLink="FurnaceFactory2" ParentBehaviorLink="AddonIsWorking"/>
         <AddOnOffsetX value="2.5"/>
         <AddOnOffsetY value="-0.5"/>
         <ScoreMake value="625"/>
@@ -3098,7 +3195,7 @@
     <CUnit id="SplitBomb" parent="MISSILE">
         <Race value="Zerg"/>
         <Mover value="MissileDefault"/>
-        <EditorCategories value="ObjectFamily:Campaign,ObjectType:Projectile"/>
+        <EditorCategories value="ObjectFamily:Melee,ObjectType:Projectile"/>
     </CUnit>
     <CUnit id="RO_033Missile2">
         <DeathRevealRadius value="0"/>
@@ -3264,7 +3361,6 @@
         <ScoreKill value="125"/>
         <SubgroupPriority value="76"/>
         <MinimapRadius value="0.5"/>
-        <EditorCategories value="ObjectType:Unit,ObjectFamily:Coop"/>
         <GlossaryPriority value="60"/>
         <RankDisplay value="Default"/>
     </CUnit>
@@ -3665,63 +3761,11 @@
         <EditorCategories value=""/>
         <Attributes index="Summoned" value="1"/>
     </CUnit>
-    <CUnit id="Factory">
-        <CardLayouts index="0">
-            <LayoutButtons index="0" Face="RO_031" AbilCmd="FactoryTrain2,Train9" Row="1" Column="1"/>
-            <LayoutButtons index="1" AbilCmd="FactoryTrain2,Train30" Column="3"/>
-            <LayoutButtons index="2" Face="Rally" Type="AbilCmd" AbilCmd="Rally,Rally1" Row="1" Column="4"/>
-            <LayoutButtons index="3" Face="Lift" AbilCmd="FactoryLiftOff,Execute" Row="2" Column="3"/>
-            <LayoutButtons index="4" Face="Halt" AbilCmd="BuildInProgress,Halt"/>
-            <LayoutButtons index="5" Face="Cancel" AbilCmd="que5,CancelLast" Column="4"/>
-            <LayoutButtons index="6" Face="Cancel" AbilCmd="FactoryAddOns,Halt" Column="4"/>
-            <LayoutButtons index="7" Face="CancelBuilding" AbilCmd="BuildInProgress,Cancel" Column="4"/>
-            <LayoutButtons index="8" Face="SelectBuilder" Type="SelectBuilder" AbilCmd="" Row="1" Column="3"/>
-            <LayoutButtons index="9" Face="RO_040" AbilCmd="FactoryTrain2,Train15" Row="0" Column="2"/>
-            <LayoutButtons index="10" Face="MHT3" AbilCmd="FactoryTrain2,Train29" Row="0"/>
-            <LayoutButtons index="11" Face="RO_010" Type="AbilCmd" AbilCmd="FactoryTrain2,Train1" Row="0" Column="0"/>
-            <LayoutButtons index="12">
-                <Face value="CommanderRaynorOrbitalDropPods2"/>
-                <Type value="Passive"/>
-                <AbilCmd value=""/>
-                <Requirements value="CommanderRaynorOrbitalDropPodsUpgraded"/>
-                <Row value="1"/>
-                <Column value="3"/>
-            </LayoutButtons>
-            <LayoutButtons Face="RO_032" Type="AbilCmd" AbilCmd="FactoryTrain2,Train10" Row="1" Column="1"/>
-            <LayoutButtons Face="RO_033" Type="AbilCmd" AbilCmd="FactoryTrain2,Train11" Row="1" Column="1"/>
-            <LayoutButtons Face="RO_030" Type="AbilCmd" AbilCmd="FactoryTrain2,Train8" Row="0" Column="1"/>
-            <LayoutButtons Face="LightningRod" Type="AbilCmd" AbilCmd="FactoryAddOns,Build3" Row="2" Column="0"/>
-            <LayoutButtons Face="IceTablet" Type="AbilCmd" AbilCmd="FactoryAddOns,Build4" Row="2" Column="1"/>
-            <LayoutButtons Face="Furnace" Type="AbilCmd" AbilCmd="FactoryAddOns,Build5" Row="2" Column="2"/>
-            <LayoutButtons Face="RO_041" Type="AbilCmd" AbilCmd="FactoryTrain2,Train16" Row="1" Column="2"/>
-            <LayoutButtons Face="RO_042" Type="AbilCmd" AbilCmd="FactoryTrain2,Train17" Row="1" Column="2"/>
-            <LayoutButtons Face="RO_047" Type="AbilCmd" AbilCmd="FactoryTrain2,Train18" Row="1" Column="2"/>
-        </CardLayouts>
-        <BehaviorArray Link="FireSuppressionSystem"/>
-        <BehaviorArray Link="TurretBuff"/>
-        <DeathTime value="30"/>
-        <AbilArray index="2" Link="FactoryTrain2"/>
-    </CUnit>
-    <CUnit id="FactoryFlying">
-        <BehaviorArray Link="FireSuppressionSystem"/>
-        <BehaviorArray Link="TurretBuff"/>
-        <DeathTime value="30"/>
-        <CardLayouts index="0">
-            <LayoutButtons index="1" Face="Stop" AbilCmd="stop,Stop" Row="0"/>
-            <LayoutButtons index="2" Face="Move" AbilCmd="move,Move" Row="0"/>
-            <LayoutButtons index="3" Face="MoveHoldPosition" AbilCmd="move,HoldPos" Column="2"/>
-            <LayoutButtons index="4" Face="MovePatrol" AbilCmd="move,Patrol" Column="3"/>
-            <LayoutButtons index="5" Face="IceTablet" AbilCmd="FactoryAddOns,Build4" Row="2" Column="1"/>
-            <LayoutButtons index="6" Face="LightningRod" AbilCmd="FactoryAddOns,Build3" Row="2" Column="0"/>
-            <LayoutButtons Face="Furnace" Type="AbilCmd" AbilCmd="FactoryAddOns,Build5" Row="2" Column="2"/>
-            <LayoutButtons Face="Reactor" Type="AbilCmd" AbilCmd="FactoryAddOns,Build2" Row="1" Column="4"/>
-            <LayoutButtons Face="BuildTechLabFactory" Type="AbilCmd" AbilCmd="FactoryAddOns,Build1" Row="2" Column="4"/>
-        </CardLayouts>
-    </CUnit>
     <CUnit id="FactoryReactor">
         <BehaviorArray Link="FireSuppressionSystem"/>
         <BehaviorArray Link="TurretBuff"/>
         <DeathTime value="30"/>
+        <AddedOnArray index="1" UnitLink="AntiEntropyFactory"/>
     </CUnit>
     <CUnit id="FactoryTechLab">
         <BehaviorArray Link="FireSuppressionSystem"/>
@@ -3733,6 +3777,7 @@
             <LayoutButtons index="4" removed="1"/>
         </CardLayouts>
         <DeathTime value="30"/>
+        <AddedOnArray index="1" UnitLink="AntiEntropyFactory"/>
     </CUnit>
     <CUnit id="Herrscher11th">
         <DeathTime value="30"/>
@@ -4117,7 +4162,7 @@
         <ScoreMake value="100"/>
         <ScoreKill value="100"/>
         <MinimapRadius value="0"/>
-        <EditorCategories value="ObjectType:Unit,ObjectFamily:Coop"/>
+        <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
         <Attributes index="Summoned" value="1"/>
     </CUnit>
     <CUnit id="Herrscher5th">
@@ -4678,7 +4723,7 @@
             <LayoutButtons Face="Cancel" Type="AbilCmd" AbilCmd="que5LongBlend,CancelLast" Row="2" Column="4"/>
             <LayoutButtons Face="CancelBuilding" Type="AbilCmd" AbilCmd="BuildInProgress,Cancel" Row="2" Column="4"/>
         </CardLayouts>
-        <AddedOnArray UnitLink="Factory" BehaviorLink="LightningRodFactory2" ParentBehaviorLink="AddonIsWorking"/>
+        <AddedOnArray UnitLink="AntiEntropyFactory" BehaviorLink="LightningRodFactory2" ParentBehaviorLink="AddonIsWorking"/>
         <AddOnOffsetX value="2.5"/>
         <AddOnOffsetY value="-0.5"/>
         <ScoreMake value="625"/>
@@ -4707,7 +4752,7 @@
             <LayoutButtons Face="Cancel" Type="AbilCmd" AbilCmd="que5LongBlend,CancelLast" Row="2" Column="4"/>
             <LayoutButtons Face="CancelBuilding" Type="AbilCmd" AbilCmd="BuildInProgress,Cancel" Row="2" Column="4"/>
         </CardLayouts>
-        <AddedOnArray UnitLink="Factory" BehaviorLink="IceTabletFactory" ParentBehaviorLink="AddonIsWorking"/>
+        <AddedOnArray UnitLink="AntiEntropyFactory" BehaviorLink="IceTabletFactory" ParentBehaviorLink="AddonIsWorking"/>
         <AddOnOffsetX value="2.5"/>
         <AddOnOffsetY value="-0.5"/>
         <ScoreMake value="250"/>
@@ -4734,7 +4779,7 @@
             <LayoutButtons Face="Cancel" Type="AbilCmd" AbilCmd="que5LongBlend,CancelLast" Row="2" Column="4"/>
             <LayoutButtons Face="CancelBuilding" Type="AbilCmd" AbilCmd="BuildInProgress,Cancel" Row="2" Column="4"/>
         </CardLayouts>
-        <AddedOnArray UnitLink="Factory" BehaviorLink="IceTabletFactory2" ParentBehaviorLink="AddonIsWorking"/>
+        <AddedOnArray UnitLink="AntiEntropyFactory" BehaviorLink="IceTabletFactory2" ParentBehaviorLink="AddonIsWorking"/>
         <AddOnOffsetX value="2.5"/>
         <AddOnOffsetY value="-0.5"/>
         <ScoreMake value="625"/>
@@ -4756,8 +4801,8 @@
         <Attributes index="Armored" value="0"/>
         <LifeStart value="1250"/>
         <LifeMax value="1250"/>
-        <CostResource index="Minerals" value="400"/>
-        <CostResource index="Vespene" value="225"/>
+        <CostResource index="Minerals" value="300"/>
+        <CostResource index="Vespene" value="150"/>
         <AbilArray Link="BuildInProgress"/>
         <AbilArray Link="que5Addon"/>
         <AbilArray Link="LightningRodMorph2"/>
@@ -4768,7 +4813,7 @@
             <LayoutButtons Face="ReduceThunder" Type="AbilCmd" AbilCmd="GeneralUpgrades,Research1" Row="0" Column="0"/>
             <LayoutButtons Face="PalsyDuration" Type="AbilCmd" AbilCmd="GeneralUpgrades,Research5" Row="0" Column="1"/>
         </CardLayouts>
-        <AddedOnArray UnitLink="Factory" BehaviorLink="LightningRodFactory2" ParentBehaviorLink="AddonIsWorking"/>
+        <AddedOnArray UnitLink="AntiEntropyFactory" BehaviorLink="LightningRodFactory2" ParentBehaviorLink="AddonIsWorking"/>
         <AddOnOffsetX value="2.5"/>
         <AddOnOffsetY value="-0.5"/>
         <ScoreMake value="625"/>
@@ -4795,7 +4840,7 @@
         <LifeStart value="750"/>
         <LifeMax value="750"/>
         <CostResource index="Minerals" value="150"/>
-        <CostResource index="Vespene" value="100"/>
+        <CostResource index="Vespene" value="50"/>
         <AbilArray Link="BuildInProgress"/>
         <AbilArray Link="que5Addon"/>
         <AbilArray Link="IceTabletMorph2"/>
@@ -4809,7 +4854,7 @@
             <LayoutButtons Face="ReduceIce" Type="AbilCmd" AbilCmd="GeneralUpgrades,Research2" Row="0" Column="0"/>
             <LayoutButtons Face="IceTablet2" Type="AbilCmd" AbilCmd="IceTabletUpgrade2,Execute" Row="2" Column="0"/>
         </CardLayouts>
-        <AddedOnArray UnitLink="Factory" BehaviorLink="IceTabletFactory" ParentBehaviorLink="AddonIsWorking"/>
+        <AddedOnArray UnitLink="AntiEntropyFactory" BehaviorLink="IceTabletFactory" ParentBehaviorLink="AddonIsWorking"/>
         <AddOnOffsetX value="2.5"/>
         <AddOnOffsetY value="-0.5"/>
         <ScoreMake value="250"/>
@@ -4835,8 +4880,8 @@
         <Attributes index="Armored" value="0"/>
         <LifeStart value="1250"/>
         <LifeMax value="1250"/>
-        <CostResource index="Minerals" value="400"/>
-        <CostResource index="Vespene" value="225"/>
+        <CostResource index="Minerals" value="300"/>
+        <CostResource index="Vespene" value="150"/>
         <AbilArray Link="BuildInProgress"/>
         <AbilArray Link="que5Addon"/>
         <AbilArray Link="IceTabletMorph3"/>
@@ -4847,7 +4892,7 @@
             <LayoutButtons Face="ReduceIce" Type="AbilCmd" AbilCmd="GeneralUpgrades,Research2" Row="0" Column="0"/>
             <LayoutButtons Face="FrozenDuration" Type="AbilCmd" AbilCmd="GeneralUpgrades,Research4" Row="0" Column="1"/>
         </CardLayouts>
-        <AddedOnArray UnitLink="Factory" BehaviorLink="IceTabletFactory2" ParentBehaviorLink="AddonIsWorking"/>
+        <AddedOnArray UnitLink="AntiEntropyFactory" BehaviorLink="IceTabletFactory2" ParentBehaviorLink="AddonIsWorking"/>
         <AddOnOffsetX value="2.5"/>
         <AddOnOffsetY value="-0.5"/>
         <ScoreMake value="625"/>
@@ -5119,7 +5164,7 @@
         <LifeStart value="750"/>
         <LifeMax value="750"/>
         <CostResource index="Minerals" value="150"/>
-        <CostResource index="Vespene" value="100"/>
+        <CostResource index="Vespene" value="50"/>
         <AbilArray Link="BuildInProgress"/>
         <AbilArray Link="que5Addon"/>
         <AbilArray Link="LightningRodMorph"/>
@@ -5133,7 +5178,7 @@
             <LayoutButtons Face="ReduceThunder" Type="AbilCmd" AbilCmd="GeneralUpgrades,Research1" Row="0" Column="0"/>
             <LayoutButtons Face="LightningRod2" Type="AbilCmd" AbilCmd="LightningRodUpgrade,Execute" Row="2" Column="0"/>
         </CardLayouts>
-        <AddedOnArray UnitLink="Factory" BehaviorLink="LightningRodFactory" ParentBehaviorLink="AddonIsWorking"/>
+        <AddedOnArray UnitLink="AntiEntropyFactory" BehaviorLink="LightningRodFactory" ParentBehaviorLink="AddonIsWorking"/>
         <AddOnOffsetX value="2.5"/>
         <AddOnOffsetY value="-0.5"/>
         <ScoreMake value="250"/>
@@ -5272,7 +5317,7 @@
     <CUnit id="Herrscher2Weapon" parent="MISSILE">
         <Race value="Zerg"/>
         <Mover value="Herrscher2ndWeapon"/>
-        <EditorCategories value="ObjectType:Projectile,ObjectFamily:Campaign"/>
+        <EditorCategories value="ObjectType:Projectile,ObjectFamily:Melee"/>
     </CUnit>
     <CUnit id="Herrscher2ReboundSource">
         <DeathRevealRadius value="0"/>
@@ -5320,7 +5365,7 @@
     <CUnit id="KianaC4QTEMissile" parent="MISSILE">
         <Race value="Terr"/>
         <BehaviorArray Link="Untimed"/>
-        <EditorCategories value="ObjectType:Projectile,ObjectFamily:Coop"/>
+        <EditorCategories value="ObjectType:Projectile,ObjectFamily:Melee"/>
     </CUnit>
     <CUnit id="Herrscher1st">
         <DeathTime value="30"/>
@@ -5876,6 +5921,7 @@
         <BehaviorArray Link="FireSuppressionSystem"/>
         <BehaviorArray Link="TurretBuff"/>
         <DeathTime value="30"/>
+        <AddedOnArray index="1" UnitLink="AntiEntropyFactory"/>
     </CUnit>
     <CUnit id="Refinery">
         <BehaviorArray Link="FireSuppressionSystem"/>
@@ -5939,7 +5985,7 @@
             <LayoutButtons Face="Cancel" Type="AbilCmd" AbilCmd="que5LongBlend,CancelLast" Row="2" Column="4"/>
             <LayoutButtons Face="CancelBuilding" Type="AbilCmd" AbilCmd="BuildInProgress,Cancel" Row="2" Column="4"/>
         </CardLayouts>
-        <AddedOnArray UnitLink="Factory" BehaviorLink="LightningRodFactory" ParentBehaviorLink="AddonIsWorking"/>
+        <AddedOnArray UnitLink="AntiEntropyFactory" BehaviorLink="LightningRodFactory" ParentBehaviorLink="AddonIsWorking"/>
         <AddOnOffsetX value="2.5"/>
         <AddOnOffsetY value="-0.5"/>
         <ScoreMake value="250"/>
@@ -6010,6 +6056,7 @@
         <BehaviorArray Link="FireSuppressionSystem"/>
         <BehaviorArray Link="TurretBuff"/>
         <DeathTime value="30"/>
+        <AddedOnArray index="1" UnitLink="AntiEntropyFactory"/>
     </CUnit>
     <CUnit id="StarportTechLab">
         <BehaviorArray Link="FireSuppressionSystem"/>
@@ -6023,6 +6070,7 @@
         </CardLayouts>
         <AbilArray Link="HumanTech"/>
         <DeathTime value="30"/>
+        <AddedOnArray index="1" UnitLink="AntiEntropyFactory"/>
     </CUnit>
     <CUnit id="SupplyDepot">
         <BehaviorArray Link="FireSuppressionSystem"/>
@@ -6380,6 +6428,7 @@
         <BehaviorArray Link="FireSuppressionSystem"/>
         <BehaviorArray Link="TurretBuff"/>
         <DeathTime value="30"/>
+        <AddedOnArray index="1" UnitLink="AntiEntropyFactory"/>
     </CUnit>
     <CUnit id="UltraliskBurrowed">
         <BehaviorArray Link="UlBuff"/>
@@ -6472,7 +6521,6 @@
         <ScoreMake value="100"/>
         <ScoreKill value="100"/>
         <SubgroupPriority value="39"/>
-        <EditorCategories value="ObjectType:Unit,ObjectFamily:Coop"/>
         <GlossaryPriority value="20"/>
         <LeaderAlias value="BronyaC2"/>
         <EquipmentArray>
@@ -6631,7 +6679,6 @@
         <ScoreMake value="100"/>
         <ScoreKill value="100"/>
         <SubgroupPriority value="39"/>
-        <EditorCategories value="ObjectType:Unit,ObjectFamily:Coop"/>
         <LeaderAlias value="BronyaC2"/>
         <EquipmentArray>
             <Effect value="BronyaATTACK"/>

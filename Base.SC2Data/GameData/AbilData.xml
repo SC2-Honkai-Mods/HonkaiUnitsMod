@@ -1,8 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CAbilMorphPlacement id="AntiEntropyFactoryLand" parent="TerranBuildingLand" unit="AntiEntropyFactory"/>
+    <CAbilMorph id="AntiEntropyFactoryLiftOff" parent="TerranBuildingLiftOff" unit="AntiEntropyFactoryFlying"/>
+    <CAbilEffectInstant id="SaAbil1">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="SaAbil1CP"/>
+        <Flags index="AutoCast" value="1"/>
+        <Flags index="AutoCastOn" value="1"/>
+        <Flags index="BestUnit" value="1"/>
+        <Cost>
+            <Cooldown TimeUse="60"/>
+        </Cost>
+        <Range value="500"/>
+        <AutoCastFilters value="Visible;Player,Ally,Neutral,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <AutoCastRange value="9"/>
+        <AutoCastValidatorArray value="TargetIsEnemyUnit"/>
+        <FinishTime value="8"/>
+        <UninterruptibleArray index="Prep" value="1"/>
+        <UninterruptibleArray index="Cast" value="1"/>
+        <UninterruptibleArray index="Channel" value="1"/>
+        <UninterruptibleArray index="Finish" value="1"/>
+        <AINotifyEffect value="RO_031Abil"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="SaAbil1" Requirements="SaForward"/>
+    </CAbilEffectInstant>
     <CAbilMorph id="MorphtoRO_060">
         <AbilSetId value="MorphToRO_060"/>
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="MorphToRO_060">
             <Flags index="ToSelection" value="1"/>
         </CmdButtonArray>
@@ -27,7 +50,7 @@
     </CAbilMorph>
     <CAbilMorph id="MorphtoRO_060_Defense">
         <AbilSetId value="MorphToRO_060_Defense"/>
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="MorphToRO_060_Defense"/>
         <Flags index="IgnoreFacing" value="1"/>
         <Flags index="WaitUntilStopped" value="0"/>
@@ -95,7 +118,7 @@
         </InfoArray>
     </CAbilResearch>
     <CAbilEffectTarget id="SaUltimate">
-        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Effect index="0" value="SaUltimateCU"/>
         <Flags index="AllowMovement" value="1"/>
         <Flags index="NoDeceleration" value="1"/>
@@ -148,7 +171,7 @@
         </CmdButtonArray>
     </CAbilEffectInstant>
     <CAbilEffectInstant id="SaBackward">
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Flags index="AllowMovement" value="1"/>
         <FinishTime value="7.75"/>
         <UninterruptibleArray index="Prep" value="1"/>
@@ -167,7 +190,7 @@
         <CmdButtonArray index="Execute" DefaultButtonFace="Herrscher8thAbil2Select"/>
     </CAbilEffectTarget>
     <CAbilEffectInstant id="Herrscher8thAbil12">
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Effect index="0" value="Herrscher8thAbil2Trigger"/>
         <Flags index="AutoCast" value="1"/>
         <Flags index="AutoCastOn" value="1"/>
@@ -175,7 +198,7 @@
         <Cost>
             <Vital index="Energy" value="200"/>
             <Charge CountMax="1" CountStart="1" CountUse="1"/>
-            <Cooldown TimeUse="40"/>
+            <Cooldown TimeUse="100"/>
         </Cost>
         <Range value="500"/>
         <AutoCastFilters value="Visible;Player,Ally,Neutral,Missile,Dead,Hidden"/>
@@ -189,7 +212,7 @@
         <CmdButtonArray index="Execute" DefaultButtonFace="Herrscher8thAbil2"/>
     </CAbilEffectInstant>
     <CAbilEffectTarget id="Herrscher8thAbil1">
-        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Effect index="0" value="Herrscher8thAbil1Search"/>
         <Flags index="AutoCast" value="1"/>
         <Flags index="AutoCastOn" value="1"/>
@@ -220,7 +243,7 @@
     </CAbilEffectTarget>
     <CAbilEffectTarget id="Herrscher7thAbil3">
         <Alignment value="Negative"/>
-        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Effect index="0" value="Herrscher7thWaveCU"/>
         <Flags index="AllowMovement" value="1"/>
         <Flags index="AutoCast" value="1"/>
@@ -244,7 +267,7 @@
         <CmdButtonArray index="Execute" DefaultButtonFace="Herrscher7thAbil3"/>
     </CAbilEffectTarget>
     <CAbilEffectInstant id="Herrscher7thAbil12">
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Flags index="AutoCast" value="1"/>
         <Flags index="AutoCastOn" value="1"/>
         <Flags index="BestUnit" value="1"/>
@@ -265,21 +288,21 @@
         <FinishTime value="8"/>
     </CAbilEffectInstant>
     <CAbilAttack id="HonkaiHyperionAttack">
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <TargetMessage value="Abil/TargetMessage/attack"/>
         <MinAttackSpeedMultiplier value="0.25"/>
         <MaxAttackSpeedMultiplier value="128"/>
     </CAbilAttack>
     <CAbilMove id="HonkaiHyperionMove">
         <AbilSetId value="Move"/>
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
     </CAbilMove>
     <CAbilStop id="HonkaiHyperionStop">
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
     </CAbilStop>
     <CAbilEffectTarget id="BlinkUL_040">
         <AbilSetId value="Blnk"/>
-        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Effect index="0" value="Blink"/>
         <Flags index="BestUnit" value="0"/>
         <Flags index="RequireTargetVision" value="0"/>
@@ -313,6 +336,7 @@
         <UninterruptibleArray index="Cast" value="1"/>
         <UninterruptibleArray index="Finish" value="1"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="BronyaC2Abil2"/>
+        <TargetFilters value="-;Player,Ally,Missile,Stasis,Dead,Hidden"/>
     </CAbilEffectTarget>
     <CAbilEffectTarget id="BronyaC2Shield">
         <EditorCategories value="AbilityorEffectType:Units"/>
@@ -343,7 +367,7 @@
     </CAbilEffectTarget>
     <CAbilArmMagazine id="HyperionHangar">
         <AbilSetId value="CarrierHanger"/>
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Flags index="Retarget" value="1"/>
         <Leash value="12"/>
         <InfoArray index="Ammo1" Time="20" Manage="Recall" Unit="HyperionInterceptor">
@@ -362,7 +386,7 @@
         <MaxCount value="4"/>
     </CAbilArmMagazine>
     <CAbilEffectInstant id="KianaC1Ultimate">
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Effect index="0" value="KianaC1UltimateCP"/>
         <Flags index="AllowMovement" value="1"/>
         <Flags index="AllowMovingSuppressed" value="1"/>
@@ -402,7 +426,7 @@
     </CAbilEffectTarget>
     <CAbilEffectTarget id="MobilizeSkill2">
         <TechPlayer value="Owner"/>
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Effect index="0" value="MobilizeSkill2Trigger"/>
         <Cost>
             <Cooldown Link="Abil/MobilizeSkill1" Location="Player" TimeUse="180"/>
@@ -426,7 +450,7 @@
         </InfoArray>
     </CAbilMorph>
     <CAbilEffectInstant id="SaForward">
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Flags index="AllowMovement" value="1"/>
         <FinishTime value="7.75"/>
         <UninterruptibleArray index="Prep" value="1"/>
@@ -436,7 +460,7 @@
         <CmdButtonArray index="Execute" DefaultButtonFace="MorphToSaForward" Requirements="SaBackward"/>
     </CAbilEffectInstant>
     <CAbilTrain id="StarportTrain2">
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
+        <EditorCategories value="AbilityorEffectType:Structures"/>
         <Activity value="UI/Building"/>
         <InfoArray index="Train1" Time="60">
             <Button DefaultButtonFace="Helios" State="Restricted"/>
@@ -511,7 +535,7 @@
     </CAbilEffectTarget>
     <CAbilTransport id="HeliosTransport">
         <AbilSetId value="ULdM"/>
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <CmdButtonArray index="Load" DefaultButtonFace="MedivacLoad"/>
         <CmdButtonArray index="UnloadAll">
             <Flags index="Hidden" value="1"/>
@@ -537,7 +561,7 @@
     </CAbilTransport>
     <CAbilEffectTarget id="MobilizeSkill1">
         <TechPlayer value="Owner"/>
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Effect index="0" value="MobilizeSkill1Trigger"/>
         <Cost>
             <Cooldown Location="Player" TimeUse="180"/>
@@ -551,7 +575,7 @@
         <CmdButtonArray index="Cancel" DefaultButtonFace="Cancel"/>
     </CAbilEffectTarget>
     <CAbilEffectTarget id="StarOfEdenWorldAbil1">
-        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Effect index="0" value="StarOfEdenWorldAbil1CP"/>
         <Flags index="AutoCast" value="1"/>
         <Flags index="AutoCastOn" value="1"/>
@@ -565,7 +589,7 @@
         <CmdButtonArray index="Execute" DefaultButtonFace="StarOfEdenWorldAbil1" Requirements="StarOfEdenWorldAutoEquip"/>
     </CAbilEffectTarget>
     <CAbilEffectInstant id="BronyaC7Gun2">
-        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Effect index="0" value="BronyaC7Gun2CreateOffset"/>
         <Flags index="AutoCast" value="1"/>
         <Flags index="AutoCastOn" value="1"/>
@@ -582,7 +606,7 @@
         <CmdButtonArray index="Execute" DefaultButtonFace="BronyaC7ConstructCannon2"/>
     </CAbilEffectInstant>
     <CAbilArmMagazine id="HMT3ArmNuke">
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
+        <EditorCategories value="AbilityorEffectType:Structures"/>
         <Launch value="ReleaseAtSource"/>
         <Flags index="BestUnit" value="1"/>
         <InfoArray index="Ammo1" Time="30" Unit="NukeMHT">
@@ -617,7 +641,7 @@
     </CAbilResearch>
     <CAbilEffectInstant id="CosmicJuggernautUltimate">
         <Alignment value="Negative"/>
-        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Flags index="BestUnit" value="1"/>
         <Cost>
             <Cooldown Location="Player" TimeUse="240"/>
@@ -651,7 +675,7 @@
         <CmdButtonArray index="Execute" DefaultButtonFace="CosmicJuggernautInvertedHorizons" Requirements="CosmicJuggernautCanPlaceExit"/>
     </CAbilEffectTarget>
     <CAbilEffectTarget id="DG_023Abil">
-        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Effect index="0" value="DG_023AbilOffset"/>
         <Flags index="AutoCast" value="1"/>
         <Flags index="AutoCastOn" value="1"/>
@@ -675,8 +699,8 @@
         <CmdButtonArray index="Execute" DefaultButtonFace="DG_023Skill"/>
         <CmdButtonArray index="Cancel" DefaultButtonFace="Cancel"/>
     </CAbilEffectTarget>
-    <CAbilTrain id="FactoryTrain2">
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
+    <CAbilTrain id="AntiEntropyFactoryTrain">
+        <EditorCategories value="AbilityorEffectType:Structures"/>
         <Activity value="UI/Building"/>
         <Range value="6"/>
         <InfoArray index="Train1" Time="36">
@@ -730,7 +754,7 @@
         </Cost>
     </CAbilEffectTarget>
     <CAbilEffectTarget id="DG_021Abil">
-        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Effect index="0" value="DG_021AbilCP0"/>
         <Flags index="AllowMovingSuppressed" value="1"/>
         <Flags index="AllowTurningSuppressed" value="1"/>
@@ -758,7 +782,7 @@
         <CmdButtonArray index="Cancel" DefaultButtonFace="Cancel"/>
     </CAbilEffectTarget>
     <CAbilEffectInstant id="BronyaC7Gun1">
-        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Effect index="0" value="BronyaC7Gun1CreateOffset"/>
         <Flags index="AutoCast" value="1"/>
         <Flags index="AutoCastOn" value="1"/>
@@ -780,7 +804,7 @@
         <CmdButtonArray index="Execute" DefaultButtonFace="SkinSeeleC1"/>
     </CAbilEffectInstant>
     <CAbilQueue id="Queue1MHT">
-        <EditorCategories value="Race:Neutral,AbilityorEffectType:Structures"/>
+        <EditorCategories value="AbilityorEffectType:Structures"/>
         <QueueSize value="1"/>
         <Flags index="Passive" value="1"/>
     </CAbilQueue>
@@ -799,7 +823,7 @@
     <CAbilEffectTarget id="MHTLaunchNuke">
         <TechPlayer value="Owner"/>
         <Alignment value="Negative"/>
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Effect index="0" value="NukeLaunchCPMHT"/>
         <Range value="15"/>
         <Arc value="360"/>
@@ -861,7 +885,7 @@
         <CmdButtonArray index="Execute" DefaultButtonFace="MeiC2Evade"/>
     </CAbilEffectInstant>
     <CAbilEffectInstant id="MeiC2EvadeMoving">
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Flags index="Transient" value="1"/>
         <Cost>
             <Cooldown Operation="Add" TimeUse="0.001"/>
@@ -874,7 +898,7 @@
         <CmdButtonArray index="Execute" DefaultButtonFace="MeiC2Evade" Requirements="UnitMoving"/>
     </CAbilEffectInstant>
     <CAbilEffectInstant id="Herrscher7thAbil1">
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Flags index="AutoCast" value="1"/>
         <Flags index="AutoCastOn" value="1"/>
         <Flags index="BestUnit" value="1"/>
@@ -1000,7 +1024,7 @@
         </InfoArray>
     </CAbilResearch>
     <CAbilEffectInstant id="SeeleC1EvadeMoving">
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Flags index="Transient" value="1"/>
         <Cost>
             <Cooldown Operation="Add" TimeUse="0.001"/>
@@ -1107,7 +1131,7 @@
         <CmdButtonArray index="Execute" DefaultButtonFace="SeeleC1UltCharge" Requirements="SeeleC1Ultimate"/>
     </CAbilEffectInstant>
     <CAbilEffectTarget id="MeiC2Ult">
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Effect index="0" value="MeiC2UltSet"/>
         <Cost>
             <Vital index="Energy" value="50"/>
@@ -1127,7 +1151,7 @@
         </CmdButtonArray>
     </CAbilEffectTarget>
     <CAbilEffectTarget id="SkillR11">
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Effect index="0" value="R11Persistent"/>
         <Cost>
             <Vital index="Energy" value="4"/>
@@ -1201,7 +1225,7 @@
     </CAbilBuild>
     <CAbilEffectTarget id="UL_100Abil">
         <Alignment value="Negative"/>
-        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Effect index="0" value="UL_100AbilLaunchMissile"/>
         <Cost>
             <Vital index="Energy" value="75"/>
@@ -1215,7 +1239,7 @@
         </CmdButtonArray>
     </CAbilEffectTarget>
     <CAbilResearch id="DivineKeysResearch">
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
+        <EditorCategories value="AbilityorEffectType:Structures"/>
         <InfoArray index="Research1" Time="84" Upgrade="DivineKey1st">
             <Button DefaultButtonFace="ResearchDivineKey1st" Requirements="DivineKey1stCanResearch"/>
         </InfoArray>
@@ -1268,7 +1292,7 @@
         <CmdButtonArray index="Execute" DefaultButtonFace="MedivacAutoLoad2" Requirements="MedivacAutoLoadResearched"/>
     </CAbilEffectTarget>
     <CAbilResearch id="HumanTech">
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
+        <EditorCategories value="AbilityorEffectType:Structures"/>
         <InfoArray index="Research1" Time="80" Upgrade="HiSecAutoTracking">
             <Resource index="Minerals" value="100"/>
             <Resource index="Vespene" value="100"/>
@@ -1367,7 +1391,7 @@
         </InfoArray>
     </CAbilResearch>
     <CAbilTrain id="HonkaiBarracksTrain">
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
+        <EditorCategories value="AbilityorEffectType:Structures"/>
         <InfoArray index="Train2" Time="25">
             <Button DefaultButtonFace="Valkyrja2" State="Restricted"/>
             <Unit value="Valkyrja2"/>
@@ -1378,7 +1402,7 @@
         </InfoArray>
     </CAbilTrain>
     <CAbilEffectTarget id="Herrscher5thIceField">
-        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Effect index="0" value="IceFieldCP"/>
         <Flags index="AutoCast" value="1"/>
         <Flags index="AutoCastOn" value="1"/>
@@ -1402,7 +1426,7 @@
     </CAbilEffectTarget>
     <CAbilEffectTarget id="Herrscher4thWave">
         <Alignment value="Negative"/>
-        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Effect index="0" value="Herrscher4thWaveCP"/>
         <Flags index="AllowMovement" value="1"/>
         <Flags index="AutoCast" value="1"/>
@@ -1426,7 +1450,7 @@
         <AutoCastFilters value="Visible;Player,Ally,Neutral,Missile,Dead,Hidden"/>
     </CAbilEffectTarget>
     <CAbilEffectTarget id="Herrscher6thDeathCloud">
-        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Effect index="0" value="Herrscher6thDeathCloudCP"/>
         <Flags index="AllowMovement" value="1"/>
         <Flags index="AutoCast" value="1"/>
@@ -1476,7 +1500,7 @@
         </CmdButtonArray>
     </CAbilEffectTarget>
     <CAbilResearch id="GeneralUpgrades">
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
+        <EditorCategories value="AbilityorEffectType:Structures"/>
         <InfoArray index="Research1" Time="100" Upgrade="ReduceThunder">
             <Resource index="Minerals" value="175"/>
             <Resource index="Vespene" value="175"/>
@@ -1533,7 +1557,7 @@
     </CAbilBuild>
     <CAbilEffectTarget id="Herrscher3rdAbil2">
         <Alignment value="Negative"/>
-        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Effect index="0" value="Herrscher3rdAbil2Search"/>
         <Flags index="AllowMovement" value="1"/>
         <Flags index="AutoCast" value="1"/>
@@ -1550,7 +1574,6 @@
         <AutoCastValidatorArray value="TargetNotBuilding"/>
         <AutoCastValidatorArray value="TargrtNotBaTi"/>
         <CursorEffect value="Herrscher3rdAbil2Search"/>
-        <AINotifyEffect value=""/>
         <CmdButtonArray index="Execute" DefaultButtonFace="Herrscher3rdAbil2"/>
     </CAbilEffectTarget>
     <CAbilEffectTarget id="Herrscher3rdAbil1">
@@ -1598,42 +1621,42 @@
         <TargetFilters value="-;Self,Missile,Stasis,Dead,Hidden,Invulnerable"/>
     </CAbilEffectTarget>
     <CAbilMorph id="LightningRodFactoryMorph2">
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
+        <EditorCategories value="AbilityorEffectType:Structures"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="TechLabFactory" Requirements="ShowIfHaveFactAddOnParent"/>
         <Flags index="Automatic" value="1"/>
         <Flags index="Produce" value="1"/>
         <InfoArray Unit="LightningRodFactory2"/>
     </CAbilMorph>
     <CAbilMorph id="IceTabletFactoryMorph3">
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
+        <EditorCategories value="AbilityorEffectType:Structures"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="TechLabFactory" Requirements="ShowIfHaveFactAddOnParent"/>
         <Flags index="Automatic" value="1"/>
         <Flags index="Produce" value="1"/>
         <InfoArray Unit="IceTabletFactory"/>
     </CAbilMorph>
     <CAbilMorph id="IceTabletFactoryMorph2">
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
+        <EditorCategories value="AbilityorEffectType:Structures"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="TechLabFactory" Requirements="ShowIfHaveFactAddOnParent"/>
         <Flags index="Automatic" value="1"/>
         <Flags index="Produce" value="1"/>
         <InfoArray Unit="IceTabletFactory2"/>
     </CAbilMorph>
     <CAbilMorph id="FurnaceFactoryMorph">
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
+        <EditorCategories value="AbilityorEffectType:Structures"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="TechLabFactory" Requirements="ShowIfHaveFactAddOnParent"/>
         <Flags index="Automatic" value="1"/>
         <Flags index="Produce" value="1"/>
         <InfoArray Unit="FurnaceFactory"/>
     </CAbilMorph>
     <CAbilMorph id="FurnaceFactoryMorph2">
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
+        <EditorCategories value="AbilityorEffectType:Structures"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="TechLabFactory" Requirements="ShowIfHaveFactAddOnParent"/>
         <Flags index="Automatic" value="1"/>
         <Flags index="Produce" value="1"/>
         <InfoArray Unit="FurnaceFactory2"/>
     </CAbilMorph>
     <CAbilMorph id="LightningRodMorph2">
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
+        <EditorCategories value="AbilityorEffectType:Structures"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="TechLab" Requirements="ShowIfHaveNoAddOnParent"/>
         <Flags index="Automatic" value="1"/>
         <InfoArray Unit="LightningRod2">
@@ -1643,7 +1666,7 @@
         </InfoArray>
     </CAbilMorph>
     <CAbilMorph id="IceTabletMorph2">
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
+        <EditorCategories value="AbilityorEffectType:Structures"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="TechLab" Requirements="ShowIfHaveNoAddOnParent"/>
         <Flags index="Automatic" value="1"/>
         <InfoArray Unit="IceTablet">
@@ -1653,7 +1676,7 @@
         </InfoArray>
     </CAbilMorph>
     <CAbilMorph id="IceTabletUpgrade2">
-        <EditorCategories value="Race:Terran,AbilityorEffectType:MorphsandBurrows"/>
+        <EditorCategories value="AbilityorEffectType:MorphsandBurrows"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="IceTablet2" State="Restricted" Requirements="ReduceIce3"/>
         <CmdButtonArray index="Cancel" DefaultButtonFace="CancelUpgradeMorph"/>
         <Flags index="BestUnit" value="1"/>
@@ -1678,7 +1701,7 @@
         <Activity value="UI/Upgrading"/>
     </CAbilMorph>
     <CAbilMorph id="IceTabletMorph3">
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
+        <EditorCategories value="AbilityorEffectType:Structures"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="TechLab" Requirements="ShowIfHaveNoAddOnParent"/>
         <Flags index="Automatic" value="1"/>
         <InfoArray Unit="IceTablet2">
@@ -1688,7 +1711,7 @@
         </InfoArray>
     </CAbilMorph>
     <CAbilMorph id="FurnaceMorph2">
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
+        <EditorCategories value="AbilityorEffectType:Structures"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="TechLab" Requirements="ShowIfHaveNoAddOnParent"/>
         <Flags index="Automatic" value="1"/>
         <InfoArray Unit="Furnace">
@@ -1698,7 +1721,7 @@
         </InfoArray>
     </CAbilMorph>
     <CAbilMorph id="FurnaceUpgrade">
-        <EditorCategories value="Race:Terran,AbilityorEffectType:MorphsandBurrows"/>
+        <EditorCategories value="AbilityorEffectType:MorphsandBurrows"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="Furnace2" State="Restricted" Requirements="ReduceFire3"/>
         <CmdButtonArray index="Cancel" DefaultButtonFace="CancelUpgradeMorph"/>
         <Flags index="BestUnit" value="1"/>
@@ -1723,7 +1746,7 @@
         <Activity value="UI/Upgrading"/>
     </CAbilMorph>
     <CAbilMorph id="FurnaceMorph22">
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
+        <EditorCategories value="AbilityorEffectType:Structures"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="TechLab" Requirements="ShowIfHaveNoAddOnParent"/>
         <Flags index="Automatic" value="1"/>
         <InfoArray Unit="Furnace2">
@@ -1736,7 +1759,7 @@
         <CmdButtonArray index="Execute" Requirements=""/>
     </CAbilEffectTarget>
     <CAbilBuild id="BuildHerrscherCore">
-        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <FlagArray index="PeonDisableCollision" value="1"/>
         <FlagArray index="PeonMaintained" value="0"/>
         <InfoArray index="Build1" Unit="DivineKeys" Time="100">
@@ -1747,7 +1770,7 @@
         <ConstructionMover value="Construction"/>
     </CAbilBuild>
     <CAbilEffectTarget id="NanoRepair2">
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Flags index="AllowMovement" value="1"/>
         <Flags index="AutoCast" value="1"/>
         <Flags index="AutoCastOn" value="1"/>
@@ -1785,7 +1808,7 @@
             <LineTexture value="Assets\Textures\WayPointLine.dds"/>
         </OrderArray>
         <AbilSetId value="ULdS"/>
-        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <CmdButtonArray index="Load" DefaultButtonFace="NydusCanalLoad"/>
         <CmdButtonArray index="UnloadAll" DefaultButtonFace="NydusCanalUnloadAll">
             <Flags index="ToSelection" value="1"/>
@@ -1814,7 +1837,7 @@
         <LoadValidatorArray value="CanLoad"/>
     </CAbilTransport>
     <CAbilEffectTarget id="RO_032Abli1">
-        <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Effect index="0" value="RO_032CU"/>
         <Flags index="AutoCast" value="1"/>
         <Flags index="AutoCastOn" value="1"/>
@@ -1840,7 +1863,7 @@
     </CAbilEffectTarget>
     <CAbilEffectInstant id="RO_031Abil">
         <Alignment value="Negative"/>
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Effect index="0" value="RO_031AbilPersistent"/>
         <Flags index="AutoCast" value="1"/>
         <Flags index="AutoCastOn" value="1"/>
@@ -1862,7 +1885,7 @@
         <AutoCastFilters value="Visible;Player,Ally,Neutral,Structure,Missile,Dead,Hidden"/>
     </CAbilEffectInstant>
     <CAbilMorph id="LightningRodFactoryMorph">
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
+        <EditorCategories value="AbilityorEffectType:Structures"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="TechLabFactory" Requirements="ShowIfHaveFactAddOnParent"/>
         <Flags index="Automatic" value="1"/>
         <Flags index="Produce" value="1"/>
@@ -1984,7 +2007,7 @@
         <TargetFilters value="-;Self,Structure,Heroic,Dead,Hidden"/>
     </CAbilEffectTarget>
     <CAbilEffectInstant id="HerrscherConstructRO_030">
-        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Effect index="0" value="HerrscherConstructCreateRO_030Persistence"/>
         <Flags index="AutoCast" value="1"/>
         <Flags index="AutoCastOn" value="1"/>
@@ -2002,7 +2025,7 @@
         <CmdButtonArray index="Execute" DefaultButtonFace="Construct4RO_0302"/>
     </CAbilEffectInstant>
     <CAbilEffectInstant id="HerrscherConstructRO_010">
-        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Effect index="0" value="HerrscherConstructCreateRO_010Persistence"/>
         <Flags index="AutoCast" value="1"/>
         <Flags index="AutoCastOn" value="1"/>
@@ -2068,7 +2091,7 @@
         </InfoArray>
     </CAbilResearch>
     <CAbilEffectInstant id="KianaC4EvadeMoving">
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Cost>
             <Cooldown Operation="Add" TimeUse="0.001"/>
         </Cost>
@@ -2083,7 +2106,7 @@
         <Flags index="Transient" value="1"/>
     </CAbilEffectInstant>
     <CAbilEffectInstant id="KianaC4EvadeIdle">
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Flags index="AllowMovement" value="1"/>
         <Flags index="AllowTurningSuppressed" value="1"/>
         <Cost>
@@ -2098,7 +2121,7 @@
     </CAbilEffectInstant>
     <CAbilEffectTarget id="KianaC4Ult">
         <Alignment value="Negative"/>
-        <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <PrepEffect value="KianaC4UltimateStart"/>
         <Effect index="0" value="KianaC4Ultimate"/>
         <Cost>
@@ -2117,7 +2140,7 @@
         <Flags index="AutoCastOn" value="1"/>
     </CAbilEffectTarget>
     <CAbilEffectTarget id="RO_033Abli1">
-        <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Effect index="0" value="RO_033CU"/>
         <Flags index="AutoCast" value="1"/>
         <Flags index="AutoCastOn" value="1"/>
@@ -2142,7 +2165,7 @@
         </CmdButtonArray>
     </CAbilEffectTarget>
     <CAbilEffectTarget id="RO_050Abil">
-        <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Effect index="0" value="RO_050AbilLM"/>
         <Flags index="AutoCast" value="1"/>
         <Flags index="AutoCastOn" value="1"/>
@@ -2168,7 +2191,7 @@
         <Flags index="AutoCastOn" value="1"/>
     </CAbilEffectTarget>
     <CAbilMorph id="LightningRodMorph">
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
+        <EditorCategories value="AbilityorEffectType:Structures"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="TechLab" Requirements="ShowIfHaveNoAddOnParent"/>
         <Flags index="Automatic" value="1"/>
         <InfoArray Unit="LightningRod">
@@ -2184,7 +2207,7 @@
         </CmdButtonArray>
     </CAbilEffectTarget>
     <CAbilEffectTarget id="CosmicJuggernautCharge">
-        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <DataCollection value="ShieldBatteryRechargeEx5"/>
         <Flags index="AutoCast" value="1"/>
         <Flags index="AutoCastOn" value="1"/>
@@ -2481,7 +2504,7 @@
         <Flags index="Transient" value="1"/>
     </CAbilTrain>
     <CAbilMorph id="LightningRodUpgrade">
-        <EditorCategories value="Race:Terran,AbilityorEffectType:MorphsandBurrows"/>
+        <EditorCategories value="AbilityorEffectType:MorphsandBurrows"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="LightningRod2" State="Restricted" Requirements="ReduceThunder3"/>
         <CmdButtonArray index="Cancel" DefaultButtonFace="CancelUpgradeMorph"/>
         <Flags index="BestUnit" value="1"/>
@@ -2507,7 +2530,7 @@
     </CAbilMorph>
     <CAbilEffectTarget id="ValkyrjaSnipe">
         <Alignment value="Negative"/>
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Effect index="0" value="ValkyrjaSnipeCase"/>
         <Flags index="AutoCast" value="1"/>
         <Flags index="AutoCastOn" value="1"/>
@@ -2542,7 +2565,7 @@
     <CAbilEffectTarget id="HonkaiNukeFire">
         <TechPlayer value="Owner"/>
         <Alignment value="Negative"/>
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Effect index="0" value="NukeLaunchCP"/>
         <Range value="50"/>
         <Arc value="360"/>
@@ -2558,7 +2581,7 @@
     </CAbilEffectTarget>
     <CAbilEffectTarget id="Herrscher6thHeal">
         <Alignment value="Positive"/>
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Effect index="0" value="TransfusionImpactSet2"/>
         <Flags index="AllowMovement" value="1"/>
         <Flags index="AutoCast" value="1"/>
@@ -2589,7 +2612,7 @@
     </CAbilEffectTarget>
     <CAbilEffectTarget id="SevenThundersOfRetribution">
         <Alignment value="Negative"/>
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Effect index="0" value="SevenThundersOfRetributionSet"/>
         <Flags index="AutoCast" value="1"/>
         <Flags index="AutoCastOn" value="1"/>
@@ -2611,7 +2634,7 @@
     <CAbilEffectInstant id="WeaponSwitchB1">
         <Alignment value="Positive"/>
         <OrderArray index="0" Model="Assets\UI\Cursors\WayPointConfirm_Void\WayPointConfirm_Void.m3"/>
-        <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Flags index="BestUnit" value="1"/>
         <Flags index="Transient" value="1"/>
         <Cost>
@@ -2627,7 +2650,7 @@
     <CAbilEffectInstant id="WeaponSwitchB22">
         <Alignment value="Positive"/>
         <OrderArray index="0" Model="Assets\UI\Cursors\WayPointConfirm_Void\WayPointConfirm_Void.m3"/>
-        <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Flags index="BestUnit" value="1"/>
         <Flags index="Transient" value="1"/>
         <Cost>
@@ -2641,7 +2664,7 @@
     <CAbilEffectInstant id="WeaponSwitchB25">
         <Alignment value="Positive"/>
         <OrderArray index="0" Model="Assets\UI\Cursors\WayPointConfirm_Void\WayPointConfirm_Void.m3"/>
-        <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Flags index="BestUnit" value="1"/>
         <Flags index="Transient" value="1"/>
         <Cost>
@@ -2655,7 +2678,7 @@
     <CAbilEffectInstant id="WeaponSwitchB26">
         <Alignment value="Positive"/>
         <OrderArray index="0" Model="Assets\UI\Cursors\WayPointConfirm_Void\WayPointConfirm_Void.m3"/>
-        <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Flags index="BestUnit" value="1"/>
         <Flags index="Transient" value="1"/>
         <Cost>
@@ -2669,7 +2692,7 @@
     <CAbilEffectInstant id="WeaponSwitchB34">
         <Alignment value="Positive"/>
         <OrderArray index="0" Model="Assets\UI\Cursors\WayPointConfirm_Void\WayPointConfirm_Void.m3"/>
-        <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Flags index="BestUnit" value="1"/>
         <Flags index="Transient" value="1"/>
         <Cost>
@@ -2683,7 +2706,7 @@
     <CAbilEffectInstant id="WeaponSwitchB28">
         <Alignment value="Positive"/>
         <OrderArray index="0" Model="Assets\UI\Cursors\WayPointConfirm_Void\WayPointConfirm_Void.m3"/>
-        <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Flags index="BestUnit" value="1"/>
         <Flags index="Transient" value="1"/>
         <Cost>
@@ -2698,7 +2721,7 @@
     <CAbilEffectInstant id="WeaponSwitchB5">
         <Alignment value="Positive"/>
         <OrderArray index="0" Model="Assets\UI\Cursors\WayPointConfirm_Void\WayPointConfirm_Void.m3"/>
-        <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Flags index="BestUnit" value="1"/>
         <Flags index="Transient" value="1"/>
         <Cost>
@@ -2811,7 +2834,7 @@
         </CmdButtonArray>
     </CAbilEffectInstant>
     <CAbilEffectTarget id="RO_030Abli1">
-        <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Flags index="AutoCast" value="1"/>
         <Flags index="AutoCastOn" value="1"/>
         <Cost>
@@ -2832,7 +2855,7 @@
         </CmdButtonArray>
     </CAbilEffectTarget>
     <CAbilEffectInstant id="HerrscherConstructRPC">
-        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Effect index="0" value="HerrscherConstructCreateRPC"/>
         <Flags index="AutoCast" value="1"/>
         <Flags index="AutoCastOn" value="1"/>
@@ -2886,7 +2909,7 @@
         <AutoCastValidatorArray value="TargetIsEnemyGroound"/>
     </CAbilEffectTarget>
     <CAbilTrain id="DeadgalTrain">
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
+        <EditorCategories value="AbilityorEffectType:Structures"/>
         <Activity value="UI/Building"/>
         <InfoArray index="Train1" Time="3" Location="Rally">
             <Button DefaultButtonFace="DG_010" Requirements="DG010Req"/>
@@ -2913,7 +2936,7 @@
         </InfoArray>
     </CAbilTrain>
     <CAbilEffectInstant id="HerrscherConstructRO_036">
-        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Effect index="0" value="HerrscherConstructCreateRO_036Persistence"/>
         <Flags index="AutoCast" value="1"/>
         <Flags index="AutoCastOn" value="1"/>
@@ -3050,7 +3073,7 @@
         </InfoArray>
     </CAbilResearch>
     <CAbilEffectInstant id="KianaC2Branch">
-        <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Effect index="0" value="KianaC2BranchReady"/>
         <Flags index="AutoCast" value="1"/>
         <Flags index="Transient" value="1"/>
@@ -3067,7 +3090,7 @@
         <BehaviorArray value="KianaC4Behavior2"/>
     </CAbilBehavior>
     <CAbilEffectInstant id="KianaC4Branch">
-        <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Effect index="0" value="KianaC4BranchApply"/>
         <Flags index="AutoCast" value="1"/>
         <Flags index="PassengerAcquireExternal" value="1"/>
@@ -3083,7 +3106,7 @@
         <AutoCastValidatorArray value="TargetIsEnemyGroound"/>
     </CAbilEffectInstant>
     <CAbilEffectInstant id="KianaC2EvadeIdle">
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Flags index="AllowMovement" value="1"/>
         <Flags index="AllowTurningSuppressed" value="1"/>
         <PrepTime value="0.1"/>
@@ -3097,7 +3120,7 @@
         </Cost>
     </CAbilEffectInstant>
     <CAbilEffectInstant id="KianaC4BranchEnd">
-        <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Effect index="0" value="KianaC4BranchRemove"/>
         <SmartPriority value="50"/>
         <AutoCastRange value="3"/>
@@ -3110,7 +3133,7 @@
         <CmdButtonArray index="Execute" DefaultButtonFace="Cancel" Requirements="KianaC4BranchCanCancel"/>
     </CAbilEffectInstant>
     <CAbilEffectInstant id="KianaC4QTE">
-        <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Effect index="0" value="KianaC2BranchReady"/>
         <Flags index="AbortOnAllianceChange" value="0"/>
         <Flags index="AutoCast" value="1"/>
@@ -3134,7 +3157,7 @@
         <AutoCastValidatorArray value="TargetIsEnemyUnit"/>
     </CAbilEffectInstant>
     <CAbilEffectInstant id="KianaC2EvadeMoving">
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <PrepTime value="0.1"/>
         <FinishTime value="0.26"/>
         <UninterruptibleArray index="Prep" value="1"/>
@@ -3158,7 +3181,7 @@
         <Flags index="Transient" value="1"/>
     </CAbilEffectInstant>
     <CAbilEffectInstant id="KianaC2Ultimate">
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Effect index="0" value="KianaC2UltimateCP"/>
         <Flags index="AllowMovement" value="1"/>
         <Flags index="AllowMovingSuppressed" value="1"/>
@@ -3203,7 +3226,7 @@
         </InfoArray>
     </CAbilTrain>
     <CAbilRally id="RallyHatchery2">
-        <EditorCategories value="Race:Zerg,AbilityorEffectType:Structures"/>
+        <EditorCategories value="AbilityorEffectType:Structures"/>
         <InfoArray index="0" UseFilters="Armored;Worker">
             <SetValidators value="NotResourcesOrEnemyTargetType"/>
         </InfoArray>
@@ -3215,9 +3238,11 @@
         <CmdButtonArray index="Rally2" DefaultButtonFace="RallyEgg"/>
         <CmdButtonArray index="Rally3" DefaultButtonFace="RallyDeadgals"/>
     </CAbilRally>
-    <CAbilMorph id="SiegeMode"/>
+    <CAbilMorph id="SiegeMode">
+        <CmdButtonArray index="Execute" Requirements=""/>
+    </CAbilMorph>
     <CAbilEffectTarget id="SkillK23">
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Effect index="0" value="K23InitialSet"/>
         <Cost>
             <Vital index="Energy" value="200"/>
@@ -3239,7 +3264,7 @@
         </CmdButtonArray>
     </CAbilEffectTarget>
     <CAbilEffectTarget id="SkillK5">
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Cost>
             <Vital index="Energy" value="18"/>
             <Cooldown TimeUse="13"/>
@@ -3260,7 +3285,7 @@
         <IgnoreFilters value="-;Self"/>
     </CAbilEffectTarget>
     <CAbilEffectTarget id="SkillK17">
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Effect index="0" value="K17Persistent"/>
         <Cost>
             <Vital index="Energy" value="14"/>
@@ -3296,6 +3321,9 @@
         <InfoArray index="Build10">
             <Button Requirements="HaveFusionCore"/>
         </InfoArray>
+        <InfoArray index="Build11" Unit="AntiEntropyFactory">
+            <Button DefaultButtonFace="AntiEntropyFactory"/>
+        </InfoArray>
         <InfoArray index="Build13" Unit="HighTower" Time="75">
             <Button DefaultButtonFace="HighTower" Requirements="HaveSupplyDepot"/>
         </InfoArray>
@@ -3311,7 +3339,7 @@
         </InfoArray>
     </CAbilBuild>
     <CAbilTrain id="TrainAvatar">
-        <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <InfoArray index="Train1" Time="10">
             <Button DefaultButtonFace="TrainKianaC2" Requirements="KianaC2CanTrain"/>
             <Unit value="KianaC2"/>
@@ -3342,7 +3370,7 @@
         </InfoArray>
     </CAbilTrain>
     <CAbilResearch id="UnlockAvatar">
-        <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <InfoArray index="Research1" Time="70" Upgrade="KianaC2Unlock">
             <Resource index="Minerals" value="400"/>
             <Resource index="Vespene" value="200"/>
@@ -3426,7 +3454,7 @@
     <CAbilEffectInstant id="WeaponSwitchSevenThundersOfRetribution">
         <Alignment value="Positive"/>
         <OrderArray index="0" Model="Assets\UI\Cursors\WayPointConfirm_Void\WayPointConfirm_Void.m3"/>
-        <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Effect index="0" value="SevenThundersOfRetribution"/>
         <Flags index="BestUnit" value="1"/>
         <Flags index="Transient" value="1"/>
@@ -3441,7 +3469,7 @@
     <CAbilEffectInstant id="WeaponSwitchB6">
         <Alignment value="Positive"/>
         <OrderArray index="0" Model="Assets\UI\Cursors\WayPointConfirm_Void\WayPointConfirm_Void.m3"/>
-        <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Flags index="BestUnit" value="1"/>
         <Flags index="Transient" value="1"/>
         <Cost>
@@ -3455,7 +3483,7 @@
     <CAbilEffectInstant id="WeaponSwitchB7">
         <Alignment value="Positive"/>
         <OrderArray index="0" Model="Assets\UI\Cursors\WayPointConfirm_Void\WayPointConfirm_Void.m3"/>
-        <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Flags index="BestUnit" value="1"/>
         <Flags index="Transient" value="1"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="WeaponB7" Requirements="CanEquipB7">
@@ -3469,7 +3497,7 @@
     <CAbilEffectInstant id="WeaponSwitchB18">
         <Alignment value="Positive"/>
         <OrderArray index="0" Model="Assets\UI\Cursors\WayPointConfirm_Void\WayPointConfirm_Void.m3"/>
-        <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Flags index="BestUnit" value="1"/>
         <Flags index="Transient" value="1"/>
         <Cost>
@@ -3483,7 +3511,7 @@
     <CAbilEffectInstant id="WeaponSwitchB15">
         <Alignment value="Positive"/>
         <OrderArray index="0" Model="Assets\UI\Cursors\WayPointConfirm_Void\WayPointConfirm_Void.m3"/>
-        <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Flags index="BestUnit" value="1"/>
         <Flags index="Transient" value="1"/>
         <Cost>
@@ -3497,7 +3525,7 @@
     <CAbilEffectInstant id="WeaponSwitchB23">
         <Alignment value="Positive"/>
         <OrderArray index="0" Model="Assets\UI\Cursors\WayPointConfirm_Void\WayPointConfirm_Void.m3"/>
-        <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Flags index="BestUnit" value="1"/>
         <Flags index="Transient" value="1"/>
         <Cost>
@@ -3510,7 +3538,7 @@
     </CAbilEffectInstant>
     <CAbilMorph id="RO_042Burrow">
         <AbilSetId value="BrwD"/>
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="RO_042Burrow" Requirements="RO_040CanAttack">
             <Flags index="ToSelection" value="1"/>
         </CmdButtonArray>
@@ -3534,7 +3562,7 @@
     </CAbilMorph>
     <CAbilMorph id="RO_042Unburrow">
         <AbilSetId value="BrwU"/>
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="RO_042Unburrow" Requirements="RO_042CanAttack">
             <Flags index="ToSelection" value="1"/>
         </CmdButtonArray>
@@ -3555,7 +3583,7 @@
     </CAbilMorph>
     <CAbilEffectTarget id="HonkaiHyperionGun">
         <Alignment value="Negative"/>
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Effect index="0" value="Yamato"/>
         <Flags index="AbortOnAllianceChange" value="0"/>
         <Flags index="AllowMovement" value="1"/>
@@ -3596,7 +3624,7 @@
     </CAbilBuild>
     <CAbilMorph id="BronyaC7MorphToMotor">
         <AbilSetId value="HellionMode"/>
-        <EditorCategories value="Race:Terran,AbilityorEffectType:MorphsandBurrows"/>
+        <EditorCategories value="AbilityorEffectType:MorphsandBurrows"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="BronyaC7MorphToMotor">
             <Flags index="ToSelection" value="1"/>
         </CmdButtonArray>
@@ -3615,7 +3643,7 @@
     </CAbilMorph>
     <CAbilMorph id="BronyaMorphToAvatar">
         <AbilSetId value="TankMode"/>
-        <EditorCategories value="Race:Terran,AbilityorEffectType:MorphsandBurrows"/>
+        <EditorCategories value="AbilityorEffectType:MorphsandBurrows"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="BronyaC7MorphToAvatar">
             <Flags index="ToSelection" value="1"/>
         </CmdButtonArray>
@@ -3633,7 +3661,7 @@
         </InfoArray>
     </CAbilMorph>
     <CAbilQueue id="que82">
-        <EditorCategories value="Race:Neutral,AbilityorEffectType:Structures"/>
+        <EditorCategories value="AbilityorEffectType:Structures"/>
         <QueueCount value="2"/>
         <QueueSize value="8"/>
     </CAbilQueue>

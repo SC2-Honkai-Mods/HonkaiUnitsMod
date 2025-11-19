@@ -4,7 +4,6 @@
         <?token id="Race" value="Terran"?>
         <Model value="Assets\Models\Seele_C1\Seele_C1.m3"/>
         <RequiredAnims value="Assets\Models\Seele_C1\Seele_C1.m3a"/>
-        <EditorCategories value="Race:Terran"/>
         <Events Anim="Thrown" Name="SeeleHit" Type="Sound"/>
         <Events>
             <Anim value="Blink,01"/>
@@ -159,11 +158,9 @@
     </CModel>
     <CModel id="RO_060Barrage" parent="MissileFX">
         <Model value="Assets\Models\RO_060\RO_060_Barrage.m3"/>
-        <EditorCategories value="Race:Terran"/>
     </CModel>
     <CModel id="RO_060AimBeam" parent="PersistentSpellFX">
         <Model value="Assets\Effects\Terran\TargetingDroneBeam\TargetingDroneBeam.m3"/>
-        <EditorCategories value="Race:Terran"/>
     </CModel>
     <CModel id="RO_060Death" parent="UnitDeath" Race="Terran">
         <Model value="Assets\Models\RO_060\RO_060_death.m3"/>
@@ -194,7 +191,6 @@
     </CModel>
     <CModel id="KianaC1BlackHole" parent="PersistentSpellFX">
         <Model value="Assets\Models\Kiana_C1\Kiana_C1_BlackHole.m3"/>
-        <EditorCategories value="Race:Protoss"/>
         <RadiusLoose value="1.000000"/>
     </CModel>
     <CModel id="KianaC1Ultimate" parent="RacePersistentSpellFX" Race="Terran">
@@ -204,7 +200,6 @@
     </CModel>
     <CModel id="KinanPistolAttackLaunch" parent="LaunchFX">
         <Model value="Assets\Models\Kiana_C1\KianaRangedAttackBeam.m3"/>
-        <EditorCategories value="Race:Terran"/>
     </CModel>
     <CModel id="Herrscher8thProjector" parent="PersistentSpellFX" Race="Terran">
         <Model value="Assets\Models\Herrscher8thProject\Herrscher8thProject.m3"/>
@@ -221,11 +216,9 @@
     </CModel>
     <CModel id="Herrscher8thAbil1" parent="OneShotSpellFX" Prefix="Units\">
         <Model value="Assets\Effects\Protoss\DarkArchon_Confusion\DarkArchon_Confusion.m3"/>
-        <EditorCategories value="Race:Zerg"/>
     </CModel>
     <CModel id="Herrscher7thFireWall" parent="Unit">
         <Model value="Assets\Models\Herrscher7th\FireWall.m3"/>
-        <EditorCategories value="Race:Protoss"/>
         <Radius value="2.500000"/>
         <ScaleMax value="0.250000,0.250000,0.400000"/>
         <ScaleMin value="0.250000,0.250000,0.400000"/>
@@ -234,11 +227,9 @@
     </CModel>
     <CModel id="Herrscher7thFireColumn" parent="OneShotSpellFX" Prefix="Units\">
         <Model value="Assets\Models\Herrscher7th\FireColumn.m3"/>
-        <EditorCategories value="Race:Zerg"/>
     </CModel>
     <CModel id="Herrscher7thWave" parent="Unit">
         <Model value="Assets\Effects\Protoss\Alarak_DestructionWave\Alarak_DestructionWave.m3"/>
-        <EditorCategories value="Race:Protoss"/>
         <Radius value="0.375000"/>
         <SelectionRadius value="0.416500"/>
         <ShadowRadius value="0.416500"/>
@@ -334,7 +325,6 @@
     </CModel>
     <CModel id="SaWeapon1" parent="MissileFX">
         <Model value="Assets\Models\BOSS_470\BOSS_470_Missile1.m3"/>
-        <EditorCategories value="Race:Protoss"/>
     </CModel>
     <CModel id="RPC6626Death" parent="BansheeDeathBase">
         <Model value="Assets\Models\BOSS_050_death\BOSS_050_death.m3"/>
@@ -449,14 +439,12 @@
     </CModel>
     <CModel id="BronyaC2Abil2Project" parent="PersistentSpellFX">
         <Model value="Assets\Models\Bronya_C2\Bronya_C2_Shoot_Project.m3"/>
-        <EditorCategories value="Race:Terran"/>
     </CModel>
     <CModel id="BronyaC7CannonAttachStarOfEden">
         <Model value="Assets\Models\Bronya_C7\StarOfEdenWorld.m3"/>
     </CModel>
     <CModel id="BronyaC2ShieldModel" parent="PersistentSpellFX">
         <Model value="Assets\Models\Bronya_C2\Bronya_C2_Shield.m3"/>
-        <EditorCategories value="Race:Terran"/>
         <SelectionRadius value="0.555400"/>
         <ShadowRadius value="0.555400"/>
     </CModel>
@@ -493,12 +481,10 @@
     </CModel>
     <CModel id="QuasiBlackHole" parent="PersistentSpellFX">
         <Model value="Assets\Models\QuasiBlackHole\QuasiBlackHole.m3"/>
-        <EditorCategories value="Race:Protoss"/>
         <RadiusLoose value="2.000000"/>
     </CModel>
     <CModel id="HuoDouFireBallMissile" parent="MissileFX">
         <Model value="Assets\Models\Fire_Ball_Huo_Dou\Fire_Ball_Huo_Dou.m3"/>
-        <EditorCategories value="Race:Zerg"/>
     </CModel>
     <CModel id="RPC66262" parent="BansheeBase">
         <Model value="Assets\Models\BOSS_050\BOSS_050.m3"/>
@@ -542,14 +528,12 @@
     </CModel>
     <CModel id="SaWeapon0" parent="MissileFX">
         <Model value="Assets\Doodads\ChiseledRock\ChiseledRock.m3"/>
-        <EditorCategories value="Race:Protoss"/>
         <ScaleMax value="0.200000,0.200000,0.200000"/>
         <ScaleMin value="0.300000,0.300000,0.300000"/>
         <VariationCount value="5"/>
     </CModel>
     <CModel id="StarOfEdenWorldAbil1Model" parent="OneShotSpellFX">
         <Model value="Assets\Models\Bronya_C7\StarOfEdenWorldExplode.m3"/>
-        <EditorCategories value="Race:Protoss"/>
         <AnimSpeed value="0.800000"/>
     </CModel>
     <CModel id="PowerupBronya" parent="BuildingEx" Race="Terran">
@@ -581,13 +565,11 @@
     <CModel id="Bronya_C7AttackImpactSmall" parent="ImpactFX">
         <Model value="Assets\Models\Bronya_C7_explode\Bronya_C7_explode.m3"/>
         <AnimSpeed value="1.400000"/>
-        <EditorCategories value="Race:Terran"/>
         <ScaleMax value="0.700000,0.700000,0.700000"/>
         <ScaleMin value="0.400000,0.400000,0.400000"/>
     </CModel>
     <CModel id="Bronya_C7AttackLaunch1" parent="LaunchFX">
         <Model value="Assets\Models\Bronya_C7_Drill\Bronya_C7_Drill3.m3"/>
-        <EditorCategories value="Race:Terran"/>
         <ScaleMax value="2.000000,1.110000,2.000000"/>
         <ScaleMin value="2.000000,1.110000,2.000000"/>
         <AnimSpeed value="2.000000"/>
@@ -626,18 +608,15 @@
     </CModel>
     <CModel id="MHTNukeExplode" parent="OneShotSpellFX">
         <Model value="Assets\Effects\Terran\Nuke\Nuke.m3"/>
-        <EditorCategories value="Race:Terran"/>
         <RadiusLoose value="1.000000"/>
         <ScaleMax value="0.600000,0.600000,0.800000"/>
         <ScaleMin value="0.600000,0.600000,0.800000"/>
     </CModel>
     <CModel id="Herrscher2ndUltimateBeam" parent="PersistentSpellFX">
         <Model value="Assets\Effects\Protoss\ColossusBeam\ColossusBeam.m3"/>
-        <EditorCategories value="Race:Terran"/>
     </CModel>
     <CModel id="DG_021Missile" parent="MissileFX">
         <Model value="Assets\Models\DG_020_Arrow\DG_021_Arrow.m3"/>
-        <EditorCategories value="Race:Zerg"/>
     </CModel>
     <CModel id="SeeleC1_04_01Portrait" parent="MarinePortraitBase">
         <Model value="Assets\Models\Seele_C1\Seele_C1_04_01_Portrait.m3"/>
@@ -659,18 +638,15 @@
     </CModel>
     <CModel id="BronyaC7Drill2" parent="MissileFX">
         <Model value="Assets\Models\Bronya_C7_Drill\Bronya_C7_Drill2.m3"/>
-        <EditorCategories value="Race:Terran"/>
         <ScaleMax value="2.000000,2.000000,2.000000"/>
         <ScaleMin value="2.000000,2.000000,2.000000"/>
     </CModel>
     <CModel id="StarOfEdenWorldAbil1WeaponModel" parent="OneShotSpellFX">
         <Model value="Assets\Models\Bronya_C7\StarOfEdenWorld_Attack.m3"/>
         <AnimSpeed value="0.800000"/>
-        <EditorCategories value="Race:Protoss"/>
     </CModel>
     <CModel id="WarningSplatFire" parent="UI">
         <Model value="Assets\Models\Attack_Hint_Round\WarningSplatFire.m3"/>
-        <EditorCategories value="Race:Terran"/>
     </CModel>
     <CModel id="Valkyrja2DeathRagdoll" parent="UnitDeathRagdoll" Race="Terran">
         <Model value="Assets\Models\DG_080_death\DG_080_death_ragdoll.m3"/>
@@ -684,12 +660,10 @@
     </CModel>
     <CModel id="RO_041GroundEffectModel" parent="PersistentSpellFX">
         <Model value="Assets\Models\RO_040\RO_041_Project.m3"/>
-        <EditorCategories value="Race:Terran"/>
         <RadiusLoose value="1.000000"/>
     </CModel>
     <CModel id="MeiC2Wave" parent="Unit">
         <Model value="Assets\Models\Mei_C2\Mei_C2_wave.m3"/>
-        <EditorCategories value="Race:Protoss"/>
         <Radius value="0.375000"/>
         <SelectionRadius value="0.416500"/>
         <ShadowRadius value="0.416500"/>
@@ -735,7 +709,6 @@
     </CModel>
     <CModel id="B6Missile2" parent="MissileFX">
         <Model value="Assets\Models\B6_2ndBullet\B6_2ndBullet.m3"/>
-        <EditorCategories value="Race:Terran"/>
     </CModel>
     <CModel id="BattlecruiserDeath">
         <Model value="Assets\Models\Hyperion_Honkai\Hyperion_Honkai_Death.m3"/>
@@ -809,7 +782,6 @@
     </CModel>
     <CModel id="FireExplodeSmall">
         <Model value="Assets\Doodads\DOM_Explosion_Med\DOM_Explosion_Med.m3"/>
-        <EditorCategories value="Race:Terran"/>
         <ScaleMax value="0.750000,0.750000,0.750000"/>
         <ScaleMin value="0.750000,0.750000,0.750000"/>
     </CModel>
@@ -824,7 +796,6 @@
     </CModel>
     <CModel id="RO_042GroundEffectModel" parent="PersistentSpellFX">
         <Model value="Assets\Models\RO_040\RO_042_attract.m3"/>
-        <EditorCategories value="Race:Terran"/>
         <RadiusLoose value="1.000000"/>
     </CModel>
     <CModel id="FurnaceDeath" parent="ReactorDeathBase">
@@ -921,11 +892,9 @@
     <CModel id="SeeleC1" parent="CModelSeeleC1"/>
     <CModel id="NeedleSpinesWeapon2" parent="MissileFX">
         <Model value="Assets\Effects\Zerg\HydraliskMissile\HydraliskMissile.m3"/>
-        <EditorCategories value="Race:Zerg"/>
     </CModel>
     <CModel id="DG_020Missile" parent="MissileFX">
         <Model value="Assets\Models\DG_020_Arrow\DG_020_Arrow.m3"/>
-        <EditorCategories value="Race:Zerg"/>
         <TextureDeclares Prefix="DG_020">
             <Adaptions Slot="main.diffuse"/>
         </TextureDeclares>
@@ -937,36 +906,29 @@
     </CModel>
     <CModel id="SevenThundersOfRetributionImpactModel" parent="PersistentSpellFX">
         <Model value="Assets\Effects\Zerg\ZurvanLatentEnergy\ZurvanLatentEnergy.m3"/>
-        <EditorCategories value="Race:Protoss"/>
         <Radius value="1.250000"/>
     </CModel>
     <CModel id="SevenThundersOfRetributionAbilityBeam" parent="PersistentSpellFX">
         <Model value="Assets\Effects\Protoss\DisruptorBeam\DisruptorBeam.m3"/>
-        <EditorCategories value="Race:Terran"/>
         <ScaleMax value="0.500000,0.500000,0.500000"/>
         <ScaleMin value="0.500000,0.500000,0.500000"/>
     </CModel>
     <CModel id="SevenThundersOfRetributionAbilityImpact" parent="ImpactFX">
         <Model value="Assets\Effects\Protoss\AmonShard_Blue_Aoe_Missile_Impact\AmonShard_Blue_Aoe_Missile_Impact.m3"/>
-        <EditorCategories value="Race:Terran"/>
     </CModel>
     <CModel id="PinkExplode">
         <Model value="Assets\Models\Explode_Pink\Explode_Pink.m3"/>
-        <EditorCategories value="Race:Terran"/>
     </CModel>
     <CModel id="MHTNuke" parent="MissileFX">
         <Model value="Assets\Models\BOSS_150\BOSS_150_Nuke.m3"/>
-        <EditorCategories value="Race:Terran"/>
     </CModel>
     <CModel id="RailgunAttackImpact" parent="ImpactFX">
         <Model value="Assets\Effects\Protoss\TempestPlasmaMissileImpact\TempestPlasmaMissileImpact.m3"/>
-        <EditorCategories value="Race:Protoss"/>
         <ScaleMax value="0.400000,0.400000,0.400000"/>
         <ScaleMin value="0.400000,0.400000,0.400000"/>
     </CModel>
     <CModel id="UL_100AbilAreaModel" parent="PersistentSpellFX">
         <Model value="Assets\Models\UL_100\UL_100_Area.m3"/>
-        <EditorCategories value="Race:Protoss"/>
         <RadiusLoose value="1.000000"/>
     </CModel>
     <CModel id="RPCHyperjumpLaunch" parent="BattlecruiserHyperjumpOutBase">
@@ -987,7 +949,6 @@
     <CModel id="GodKeysBuild" parent="CyberneticsCoreBuildBase"/>
     <CModel id="CosmicJuggernaut" parent="Unit">
         <Model value="Assets\Models\CosmicJuggernaut\CosmicJuggernaut.m3"/>
-        <EditorCategories value="Race:Protoss"/>
         <Radius value="0.375000"/>
         <ScaleMax value="2.000000,2.000000,2.000000"/>
         <ScaleMin value="2.000000,2.000000,2.000000"/>
@@ -997,7 +958,6 @@
     </CModel>
     <CModel id="CosmicJuggernautUlt" parent="PersistentSpellFX">
         <Model value="Assets\Effects\Protoss\PurifyLaunch\PurifyLaunch.m3"/>
-        <EditorCategories value="Race:Protoss"/>
         <Flags index="CloakedUndetectedIsHidden" value="1"/>
     </CModel>
     <CModel id="Furnace2" parent="TechLabBase">
@@ -1007,11 +967,9 @@
     </CModel>
     <CModel id="FireExplode">
         <Model value="Assets\Doodads\DOM_Explosion_Med\DOM_Explosion_Med.m3"/>
-        <EditorCategories value="Race:Terran"/>
     </CModel>
     <CModel id="FireExplodeLarge">
         <Model value="Assets\Doodads\DOM_Explosion_Lg\DOM_Explosion_Lg.m3"/>
-        <EditorCategories value="Race:Terran"/>
         <ScaleMax value="1.500000,1.500000,1.500000"/>
         <ScaleMin value="1.500000,1.500000,1.500000"/>
     </CModel>
@@ -1066,18 +1024,15 @@
     </CModel>
     <CModel id="RO_032MissileIce" parent="MissileFX" Prefix="Units\" Race="Protoss">
         <Model value="Assets\Models\RO_030_Misslie\RO_030_Misslie.m3"/>
-        <EditorCategories value="Race:Protoss"/>
         <Radius value="0.250000"/>
         <SelectionRadius value="0.250000"/>
         <UnitGlossaryCamera value="Star2CameraMid05"/>
     </CModel>
     <CModel id="ShieldBatteryRechargeEx5@ActionImpact2" parent="OneShotSpellFX">
         <Model value="Assets\Effects\Protoss\ProtossShield_Battery_Beam_Impact\ProtossShield_Battery_Beam_Impact.m3"/>
-        <EditorCategories value="Race:Protoss"/>
     </CModel>
     <CModel id="ShieldBatteryRechargeEx5@Beam2" parent="PersistentSpellFX">
         <Model value="Assets\Effects\Protoss\ProtossShield_Battery_Beam\ProtossShield_Battery_Beam.m3"/>
-        <EditorCategories value="Race:Protoss"/>
         <Priority value="16"/>
     </CModel>
     <CModel id="UL_100Portrait" parent="ViperPortraitBase">
@@ -1165,13 +1120,11 @@
     </CModel>
     <CModel id="IceExplodeLarge">
         <Model value="Assets\COOP\Mengsk\Effects\Ghost_Mengsk_COOP_Immolate_Explosion\Ghost_Mengsk_COOP_Immolate_Explosion.m3"/>
-        <EditorCategories value="Race:Terran"/>
         <ScaleMax value="2.500000,2.500000,2.500000"/>
         <ScaleMin value="2.500000,2.500000,2.500000"/>
     </CModel>
     <CModel id="RO_033MissileFire" parent="MissileFX" Prefix="Units\" Race="Protoss">
         <Model value="Assets\Models\RO_030_Misslie\RO_030_Misslie_Fire.m3"/>
-        <EditorCategories value="Race:Protoss"/>
         <Radius value="0.250000"/>
         <SelectionRadius value="0.250000"/>
         <UnitGlossaryCamera value="Star2CameraMid05"/>
@@ -1200,7 +1153,6 @@
     </CModel>
     <CModel id="DG_013Missile" parent="MissileFX">
         <Model value="Assets\Models\DG_013_Missile\DG_013_Missile.m3"/>
-        <EditorCategories value="Race:Zerg"/>
     </CModel>
     <CModel id="BanelingMod" parent="BanelingBase">
         <Model value="Assets\Models\UL_050\UL_050.m3"/>
@@ -1270,7 +1222,6 @@
     </CModel>
     <CModel id="Herrscher4thWave" parent="Unit">
         <Model value="Assets\Effects\Protoss\Alarak_DestructionWave\Alarak_DestructionWave.m3"/>
-        <EditorCategories value="Race:Protoss"/>
         <Radius value="0.375000"/>
         <SelectionRadius value="0.416500"/>
         <ShadowRadius value="0.416500"/>
@@ -1325,14 +1276,12 @@
     </CModel>
     <CModel id="Herrscher2Explode" parent="ImpactFX">
         <Model value="Assets\Models\Herrscher2nd_Explode\Herrscher2nd_Explode.m3"/>
-        <EditorCategories value="Race:Zerg"/>
         <ShadowRadius value="0.000000"/>
         <ScaleMax value="1.500000,1.500000,1.500000"/>
         <ScaleMin value="1.500000,1.500000,1.500000"/>
     </CModel>
     <CModel id="Herrscher2Rebound" parent="Unit">
         <Model value="Assets\Models\Herrscher2nd_Rebound_Effect\Herrscher2nd_Rebound_Effect.m3"/>
-        <EditorCategories value="Race:Zerg"/>
         <Flags index="Wait" value="0"/>
         <Priority value="24"/>
         <ScaleMax value="4.000000,4.000000,4.000000"/>
@@ -1345,37 +1294,29 @@
     <CModel id="Herrscher3rdAOEModel" parent="PersistentSpellFX">
         <Model value="Assets\Effects\Protoss\PsiStorm\PsiStorm.m3"/>
         <AnimSpeed value="6.000000"/>
-        <EditorCategories value="Race:Protoss"/>
         <RadiusLoose value="1.000000"/>
     </CModel>
     <CModel id="HonkaiLightningedModel" parent="PersistentSpellFX">
         <Model value="Assets\Models\Honkai_Lightninged\Honkai_Lightninged.m3"/>
-        <EditorCategories value="Race:Protoss"/>
     </CModel>
     <CModel id="HonkaiPalsyImpactModel" parent="PersistentSpellFX">
         <Model value="Assets\Models\Honkai_Palsy\Honkai_Palsy.m3"/>
-        <EditorCategories value="Race:Protoss"/>
     </CModel>
     <CModel id="HonkaiPalsyImpactModel2" parent="PersistentSpellFX">
         <Model value="Assets\Models\Honkai_Frailty\Honkai_Frailty.m3"/>
-        <EditorCategories value="Race:Protoss"/>
     </CModel>
     <CModel id="HonkaiSlowModel" parent="PersistentSpellFX">
         <Model value="Assets\Models\Honkai_Slow\Honkai_Slow.m3"/>
-        <EditorCategories value="Race:Protoss"/>
     </CModel>
     <CModel id="HonkaiTimeLockImpactModel2" parent="PersistentSpellFX">
         <Model value="Assets\Models\Honkai_TimeLock\Honkai_TimeLock.m3"/>
-        <EditorCategories value="Race:Protoss"/>
     </CModel>
     <CModel id="K17EffectModel" parent="PersistentSpellFX">
         <Model value="Assets\Models\K17_Effect\K17_Effect.m3"/>
-        <EditorCategories value="Race:Terran"/>
         <RadiusLoose value="1.000000"/>
     </CModel>
     <CModel id="Herrscher2ndWeapon" parent="MissileFX">
         <Model value="Assets\Models\Herrscher2nd_weapon\Herrscher2nd_weapon.m3"/>
-        <EditorCategories value="Race:Zerg"/>
         <ScaleMax value="0.500000,0.500000,0.500000"/>
         <ScaleMin value="0.500000,0.500000,0.500000"/>
     </CModel>
@@ -1390,7 +1331,6 @@
     </CModel>
     <CModel id="B28BlackHoleSmall" parent="PersistentSpellFX">
         <Model value="Assets\Effects\Protoss\Taldarim_Mothership_Black_Hole\Taldarim_Mothership_Black_Hole.m3"/>
-        <EditorCategories value="Race:Terran"/>
         <RadiusLoose value="1.000000"/>
     </CModel>
     <CModel id="KianaRebornC2Portrait" parent="MarinePortraitBase">
@@ -1401,7 +1341,6 @@
     </CModel>
     <CModel id="KianaC4UltimateEffectModel" parent="PersistentSpellFX">
         <Model value="Assets\Models\Kiana_C4_Ultimate_Effect\Kiana_C4_Ultimate_Effect.m3"/>
-        <EditorCategories value="Race:Terran"/>
         <Events Anim="Birth" Name="Attack" Type="Sound"/>
         <Events Anim="Birth" Name="Attack" Type="Sound"/>
         <Events>
@@ -1448,25 +1387,22 @@
     </CModel>
     <CModel id="Herrscher2Removal" parent="ImpactFX">
         <Model value="Assets\Models\Herrscher2nd_Removal_Effect\Herrscher2nd_Removal_Effect.m3"/>
-        <EditorCategories value="Race:Zerg"/>
         <ShadowRadius value="0.000000"/>
         <ScaleMax value="2.000000,2.000000,2.000000"/>
     </CModel>
     <CModel id="B23Missile" parent="MissileFX">
         <Model value="Assets\Models\B23_Bullet\B23_Bullet.m3"/>
-        <EditorCategories value="Race:Terran"/>
     </CModel>
     <CModel id="B28Missile" parent="MissileFX">
         <Model value="Assets\Models\B28_Bullet\B28_Bullet.m3"/>
-        <EditorCategories value="Race:Terran"/>
     </CModel>
     <CModel id="LightningBoltH3" parent="Doodad">
         <Model value="Assets\Doodads\LightningBolt\LightningBolt.m3"/>
+        <Flags index="VariationFallback" value="0"/>
         <Flags index="Wait" value="0"/>
     </CModel>
     <CModel id="Herrscher4thWeapon" parent="Unit">
         <Model value="Assets\COOP\Zeratul\Effects\EnergyTornado_Zeratul_COOP\EnergyTornado_Zeratul_COOP.m3"/>
-        <EditorCategories value="Race:Protoss"/>
         <Radius value="0.375000"/>
         <SelectionRadius value="0.416500"/>
         <ShadowRadius value="0.416500"/>
@@ -1613,7 +1549,6 @@
     </CModel>
     <CModel id="Herrscher1stkeymodel" parent="PersistentSpellFX">
         <Model value="Assets\Models\Herrscher1st_effect\Herrscher1st_effect.m3"/>
-        <EditorCategories value="Race:Terran"/>
         <RadiusLoose value="1.000000"/>
         <Events>
             <Anim value="Birth"/>
@@ -1636,7 +1571,6 @@
     </CModel>
     <CModel id="KianaC4QTEMissile" parent="MissileFX">
         <Model value="Assets\Models\Kiana_C4_QTE\Kiana_C4_QTE.m3"/>
-        <EditorCategories value="Race:Zerg"/>
     </CModel>
     <CModel id="EngineeringBayPlacement">
         <Model value="Assets\Models\Powerup_placement\Powerup_placement.m3"/>
@@ -1652,7 +1586,6 @@
     </CModel>
     <CModel id="GroundFire" parent="PersistentSpellFX">
         <Model value="Assets\Models\Particles\GroundFire.m3"/>
-        <EditorCategories value="Race:Terran"/>
         <RadiusLoose value="1.000000"/>
         <ScaleMax value="1.250000,1.250000,1.250000"/>
         <ScaleMin value="1.250000,1.250000,1.250000"/>
@@ -1886,7 +1819,6 @@
     </CModel>
     <CModel id="K23GroundEffectModel" parent="PersistentSpellFX">
         <Model value="Assets\Models\Pistols\K23_GroundEffect.m3"/>
-        <EditorCategories value="Race:Terran"/>
         <RadiusLoose value="1.000000"/>
     </CModel>
     <CModel id="HonkaiBurningImpactModel" parent="ImpactFX">
@@ -1905,7 +1837,6 @@
     </CModel>
     <CModel id="Invisible2" Race="Neutral">
         <Model value="Assets\Units\Test\InvisibleUnit\InvisibleUnit.m3"/>
-        <EditorCategories value="Race:Neutral"/>
         <Flags index="TeenSafe" value="1"/>
         <Radius value="-1.000000"/>
         <SelectionRadius value="0.000000"/>
@@ -1913,7 +1844,6 @@
     </CModel>
     <CModel id="KianaC2BranchEffect">
         <Model value="Assets\Models\KianaC2Branch04\KianaC2Branch04.m3"/>
-        <EditorCategories value="Race:Terran"/>
     </CModel>
     <CModel id="KianaC2Reborn" parent="Unit" Race="Terran">
         <Model value="Assets\Models\Kiana_C2_Reborn\Kiana_C2_Reborn.m3"/>
@@ -2051,11 +1981,9 @@
     </CModel>
     <CModel id="IceExplode">
         <Model value="Assets\COOP\Mengsk\Effects\Ghost_Mengsk_COOP_Immolate_Explosion\Ghost_Mengsk_COOP_Immolate_Explosion.m3"/>
-        <EditorCategories value="Race:Terran"/>
     </CModel>
     <CModel id="TerranExplodeSmall">
         <Model value="Assets\Effects\Terran\TerranLargeUnitDeath\TerranLargeUnitDeath.m3"/>
-        <EditorCategories value="Race:Terran"/>
         <ScaleMax value="0.600000,0.600000,0.600000"/>
         <ScaleMin value="0.600000,0.600000,0.600000"/>
     </CModel>
@@ -2096,7 +2024,6 @@
     </CModel>
     <CModel id="HonkaiDizzyImpactModel" parent="PersistentSpellFX">
         <Model value="Assets\Models\Honkai_Dizzy\Honkai_Dizzy.m3"/>
-        <EditorCategories value="Race:Protoss"/>
     </CModel>
     <CModel id="ParasiteSporeWeapon">
         <Model value="Assets\Models\UL_080_bullet\UL_080_bullet.m3"/>
@@ -2202,11 +2129,9 @@
     </CModel>
     <CModel id="DG_013Impact" parent="ImpactFX">
         <Model value="Assets\Models\DG_013_Spray\DG_013_Spray.m3"/>
-        <EditorCategories value="Race:Zerg"/>
     </CModel>
     <CModel id="B15IceAttackBeam" parent="PersistentSpellFX">
         <Model value="Assets\Effects\Terran\DiamondbackBeam\DiamondbackBeam.m3"/>
-        <EditorCategories value="Race:Protoss"/>
         <RadiusLoose value="1.000000"/>
     </CModel>
     <CModel id="LightningRod" parent="TechLabBase">
@@ -2216,7 +2141,6 @@
     </CModel>
     <CModel id="Herrscher3rdBehaviorEffectBeam" parent="PersistentSpellFX">
         <Model value="Assets\Effects\Protoss\ProbeBeam\ProbeBeam.m3"/>
-        <EditorCategories value="Race:Protoss"/>
         <Priority value="16"/>
     </CModel>
     <CModel id="TechLabBuild2" parent="TechLabBuildBase"/>
@@ -2337,7 +2261,6 @@
     </CModel>
     <CModel id="K17AttackLaunch" parent="LaunchFX">
         <Model value="Assets\Models\K17_Launch_Effect\K17_Launch_Effect.m3"/>
-        <EditorCategories value="Race:Terran"/>
         <Radius value="0.000000"/>
         <ScaleMax value="4.000000,4.000000,4.000000"/>
         <ScaleMin value="4.000000,4.000000,4.000000"/>
@@ -2398,7 +2321,6 @@
     <CModel id="VoidRayAttackBeam2" parent="MissileFX">
         <Model value="Assets\Effects\Protoss\WarpRayMissile\WarpRayMissile.m3"/>
         <LowQualityModel value="VoidRayAttackBeamLow"/>
-        <EditorCategories value="Race:Protoss"/>
         <RadiusLoose value="1.000000"/>
     </CModel>
     <CModel id="WarHoundBeam">
@@ -2406,15 +2328,12 @@
     </CModel>
     <CModel id="WarningSplatNormal" parent="UI">
         <Model value="Assets\Models\Attack_Hint_Round\WarningSplat.m3"/>
-        <EditorCategories value="Race:Terran"/>
     </CModel>
     <CModel id="WarningSplatThunder" parent="UI">
         <Model value="Assets\Models\Attack_Hint_Round\WarningSplatThunder.m3"/>
-        <EditorCategories value="Race:Terran"/>
     </CModel>
     <CModel id="WarningSplatIce" parent="UI">
         <Model value="Assets\Models\Attack_Hint_Round\WarningSplatIce.m3"/>
-        <EditorCategories value="Race:Terran"/>
     </CModel>
     <CModel id="WeaponCannonB12">
         <Model value="Assets\Models\Bronya_C1_Fire_Prepare\Bronya_C1_Fire_Prepare.m3"/>
@@ -2598,7 +2517,6 @@
     </CModel>
     <CModel id="RO_047AttackModel" parent="ImpactFX">
         <Model value="Assets\Models\RO_040\RO_047_bullets.m3"/>
-        <EditorCategories value="Race:Zerg"/>
     </CModel>
     <CModel id="ZergSmallUnitDeathLow2" parent="UnitDeath" Race="Zerg">
         <Model value="Assets\Effects\Zerg\ZergSmallUnitDeath\ZergSmallUnitDeath_low.m3"/>
@@ -2640,19 +2558,16 @@
     </CModel>
     <CModel id="BronyaC7_Drill" parent="MissileFX">
         <Model value="Assets\Models\Bronya_C7_Drill\Bronya_C7_Drill.m3"/>
-        <EditorCategories value="Race:Terran"/>
         <ScaleMax value="0.700000,0.700000,0.700000"/>
         <ScaleMin value="0.700000,0.700000,0.700000"/>
     </CModel>
     <CModel id="BronyaC7AttackLaunch" parent="LaunchFX">
         <Model value="Assets\Models\Bronya_C7_launch\Bronya_C7_launch.m3"/>
-        <EditorCategories value="Race:Terran"/>
         <ScaleMax value="0.800000,0.800000,0.800000"/>
         <ScaleMin value="0.600000,0.600000,0.600000"/>
     </CModel>
     <CModel id="BronyaC7AttackImpact" parent="ImpactFX">
         <Model value="Assets\Models\Bronya_C7_explode\Bronya_C7_explode.m3"/>
-        <EditorCategories value="Race:Terran"/>
         <AnimSpeed value="1.400000"/>
         <ScaleMax value="1.400000,1.400000,1.400000"/>
     </CModel>
@@ -2661,7 +2576,6 @@
     </CModel>
     <CModel id="BronyaConstructCannonBeam" parent="PersistentSpellFX">
         <Model value="Assets\Models\Bronya_C7_Weapon_Create_Beam\Bronya_C7_Weapon_Create_Beam.m3"/>
-        <EditorCategories value="Race:Protoss"/>
         <RadiusLoose value="1.000000"/>
         <AnimSpeed value="0.600000"/>
     </CModel>
@@ -2672,6 +2586,5 @@
     </CModel>
     <CModel id="SaUltimateWarning" parent="UI">
         <Model value="Assets\Models\BOSS_470\SaWarningSplat.m3"/>
-        <EditorCategories value="Race:Terran"/>
     </CModel>
 </Catalog>
