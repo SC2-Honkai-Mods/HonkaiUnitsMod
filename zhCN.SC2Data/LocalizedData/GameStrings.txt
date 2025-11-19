@@ -1,4 +1,7 @@
-﻿Abil/Name/AttackArmorResearch=攻防研发
+﻿Abil/Name/AntiEntropyFactoryLand=着陆
+Abil/Name/AntiEntropyFactoryLiftOff=升空
+Abil/Name/AntiEntropyFactoryTrain=训练(逆熵重工)
+Abil/Name/AttackArmorResearch=攻防研发
 Abil/Name/AutoEquipAdd=自动配装-补充
 Abil/Name/AutoEquipCancel=自动配装-取消
 Abil/Name/AutoEquipCopy=自动配装-复制
@@ -31,7 +34,6 @@ Abil/Name/DG_023Abil=飞身冻击
 Abil/Name/DK4thAbility=构造人造理想流体
 Abil/Name/DeadgalTrain=训练(死士)
 Abil/Name/DivineKeysResearch=研发 (神之键阁)
-Abil/Name/FactoryTrain2=训练(逆熵重工)
 Abil/Name/FurnaceFactoryMorph=熔炉(重工厂)
 Abil/Name/FurnaceFactoryMorph2=烈火熔炉(重工厂)
 Abil/Name/FurnaceMorph2=熔炉(已分离)
@@ -133,6 +135,7 @@ Abil/Name/RO_042Unburrow=寒冰机甲 出地
 Abil/Name/RO_050Abil=机械飞刃
 Abil/Name/RallyHatchery2=孵化场集结2
 Abil/Name/RemoveStigmatas=移除圣痕
+Abil/Name/SaAbil1=启动: 湮没
 Abil/Name/SaBackward=变形为倒立
 Abil/Name/SaForward=变形为正面
 Abil/Name/SaUltimate=锚定:泯灭
@@ -450,6 +453,7 @@ Behavior/Tooltip/WeaponUseK23=大范围内的敌人每秒有50%的概率被点�
 Behavior/Tooltip/WeaponUseK5=暴击率提高15%
 Button/Name/ATTACK=升级女武神装甲攻击力
 Button/Name/AdvancedMedic=高级医疗系统
+Button/Name/AntiEntropyFactory=建造逆熵重工
 Button/Name/ArmorLevel=升级女武神装甲护盾
 Button/Name/ArmorLevel2=升级女武神装甲护甲
 Button/Name/Armory=建造帝国研究院
@@ -603,7 +607,7 @@ Button/Name/Liberator=制造多维机甲
 Button/Name/LightningRod=建造蓄电塔
 Button/Name/LightningRod2=升级为高压蓄电塔
 Button/Name/LurkerMP=变异为寒冰帝王
-Button/Name/MHT3=制造和平使者
+Button/Name/MHT3=制造MHT-3和平使者
 Button/Name/MHTUpgrade=研究电磁力场加速器
 Button/Name/MasteryTychusMedivacBuff=紧急动员
 Button/Name/Medivac=制造运输舰
@@ -691,6 +695,7 @@ Button/Name/ResearchSuperC=研究超级电容
 Button/Name/ResearchVHerrscher1st=研发理之律者装甲
 Button/Name/ReviveKiana=重新部署琪亚娜·卡斯兰娜
 Button/Name/Roach=变异为绯樱战车兽
+Button/Name/SaAbil1=启动: 湮没
 Button/Name/SaUltimate=锚定:泯灭
 Button/Name/SeeleBuilding=建造枢纽港
 Button/Name/SeeleC1Attack=幻影之镰
@@ -808,6 +813,8 @@ Button/Name/zergmeleeweapons1=进化死士攻击等级
 Button/Name/zergmeleeweapons12=进化崩坏兽攻击等级
 Button/Tooltip/ATTACK=为所有装甲提高4点攻击力，可升级16次<n/><c val="FF0000">女武神装甲占用补给+1</c>
 Button/Tooltip/AdvancedMedic=提升“赫利俄斯”运输舰50%的治疗速度。减少治疗消耗能量的35%。
+Button/Tooltip/AntiEntropyFactory=逆熵机甲的生产设施。
+Button/Tooltip/AntiEntropyFactoryFlying=逆熵重工必须着陆才能开始生产单位。
 Button/Tooltip/ArmorLevel=为所有装甲提高120点护盾和0.5护盾恢复速率，可升级16次(物理防御仅取决于生命护甲，护盾护甲并不生效)<n/><c val="FF0000">女武神装甲占用补给+1</c>
 Button/Tooltip/ArmorLevel2=为所有装甲提高160点生命值、1点生命装甲和0.5生命恢复率，可升级16次<n/><c val="FF0000">女武神装甲占用补给+1</c>
 Button/Tooltip/AutoEquip=以当前单位的装备为模板，自动配置装备（仅以选中所有单位中的“最佳单位”为准）。该类功能<c val="FFFF00">仅影响同类型单位</c>
@@ -924,7 +931,7 @@ Button/Tooltip/Herrscher2nd=第二律者，可以操纵空间，创造虚数空�
 Button/Tooltip/Herrscher2nd2=第二律者，可以操纵空间，创造虚数空间进行攻击和防御。
 Button/Tooltip/Herrscher3rd=第三律者，拥有掌握电磁场的能力。
 Button/Tooltip/Herrscher3rdAbil1=射出2道高压电流，使电流路径上的敌方单位获得感电效果，受到的雷电伤害提高100%。命中后还可弹射2次，每次额外弹射一个单位，分别使路径上的敌方单位获得50%和25%的雷电易伤。若命中机械单位，弹射次数额外增加一次，且弹射范围略微增加。<n/>电流对路径上的非机械单位造成少量雷电伤害。
-Button/Tooltip/Herrscher3rdAbil2=释放一道天雷，麻痹目标及其附近单位，持续<d ref="Effect,Herrscher3rdAbil2Palsy,Duration"/>秒
+Button/Tooltip/Herrscher3rdAbil2=释放一道天雷，麻痹目标及其附近单位，持续<d ref="Behavior,HonkaiPalsy,Duration"/>秒
 Button/Tooltip/Herrscher4th=第四律者，拥有控制并创造理想流体的能力。
 Button/Tooltip/Herrscher4thWave=释放一道大范围冲击波，将遇到的一切单位击退。<n/><c val="FFFF00">半径越小的单位被击退距离越远</c>
 Button/Tooltip/Herrscher4thWeaponUnit=席卷所有沿途单位的风暴，每<d ref="Behavior,Herrscher4thWeaponTarget,Period" precision="1"/>秒对周围单位造成<d ref="Effect,Herrscher4thWeaponDamage,Amount"/>点伤害，持续<d ref="Behavior,Herrscher4thWeaponTarget,Duration" precision="1"/>秒。
@@ -940,7 +947,7 @@ Button/Tooltip/Herrscher7thAbil3=释放一道缓慢推进的火焰墙，对沿�
 Button/Tooltip/Herrscher7thWave=释放一道大范围冲击波，将遇到的一切单位击退。<n/><c val="FFFF00">半径越小的单位被击退距离越远</c>
 Button/Tooltip/Herrscher8th=第八律者，拥有操控生物之思想的能力。
 Button/Tooltip/Herrscher8thAbil1=对范围内的目标施加错误指令。
-Button/Tooltip/Herrscher8thAbil2=使所有敌方单位陷入幻境，只能移动并无法造成伤害。每个敌方玩家都会有一个单位被幻境附身，该单位周围会出现一个光环，该单位在光环内部，但未必在正中间。光环会跟随单位移动。<n/><n/>用屏幕左侧面板技能可以选择被幻境附身的单位。如果选择正确，会立即解除幻境效果；如果选择错误，则会使该玩家的所有单位被强制眩晕<d ref="Effect,ForceDizzy10s,Duration"/>秒。
+Button/Tooltip/Herrscher8thAbil2=使所有敌方单位陷入幻境，只能移动并无法造成伤害。每个人类玩家都会有一个单位被幻境附身，该单位周围会出现一个光环，该单位在光环内部，但未必在正中间。光环会跟随单位移动。<n/><n/>用屏幕左侧面板技能可以选择被幻境附身的单位。如果选择正确，会立即解除幻境效果，并眩晕所有崩坏势力单位<d ref="Effect,ForceDizzy10s,Duration"/>秒；如果选择错误，则会使该玩家的所有单位被强制眩晕<d ref="Effect,ForceDizzy10s,Duration"/>秒。
 Button/Tooltip/Herrscher8thAbil2Select=你陷入幻境了！在幻境影响下你的单位均只能移动并无法造成伤害，必须找出被幻境附身的单位！<n/><n/>选择被意识之律者幻境附身的单位，结束幻境。如果选择正确，会立即解除幻境效果；如果选择错误，则会使所有己方单位被强制眩晕<d ref="Effect,ForceDizzy10s,Duration"/>秒。<n/><n/>被幻境附身的单位周围会出现一个光环，该单位在光环内部，但未必在正中间。光环会跟随单位移动。<n/><n/>每个人族玩家都会有一个被幻境附身的单位。
 Button/Tooltip/Herrscher8thAbil2Selector=
 Button/Tooltip/Herrscher9th=第九律者，可以控制自然界四大力之一的引力。
@@ -1029,7 +1036,7 @@ Button/Tooltip/RO_010Abli1=向前方快速冲刺，遇到敌人或时间结束�
 Button/Tooltip/RO_010Abli12=向前方快速冲刺，遇到敌人或时间结束突刺造成<d ref ="Effect,RO_010Abli1AttackDamage2,Amount"/>点范围伤害并击飞附近的单位，最远突进18码
 Button/Tooltip/RO_010Abli1End=立即停止突进并直接发动砸地
 Button/Tooltip/RO_010Abli1End2=立即停止突进并直接发动突刺
-Button/Tooltip/RO_030=重型机甲。可以对远距离目标造成范围伤害。<n/><n/><c val="FFFF8A">可以对空和地。</c>
+Button/Tooltip/RO_030=重型机甲。可以对远距离目标造成范围伤害。<n/><n/><c val="FFFF8A">可以对空和地。附属蓄电塔、熔炉或石碑后可制造御雷机甲变种。</c>
 Button/Tooltip/RO_0302=重型机甲。可以对远距离目标造成范围伤害。<n/><n/><c val="FFFF8A">可以对空和地。</c>
 Button/Tooltip/RO_030Abil=在1.25秒内向一个目标点发射20发飞弹，每一发可造成<d ref="Effect,RO_030AbliDamage,Amount"/>点小范围物理伤害，飞弹会自动寻找目标
 Button/Tooltip/RO_031=重型机甲。可以对远距离目标造成范围伤害。<n/><n/><c val="FFFF8A">可以对空和地。</c>
@@ -1042,7 +1049,7 @@ Button/Tooltip/RO_033Abil=发射一枚燃烧弹桩，造成<d ref="Effect,RO_033
 Button/Tooltip/RO_034=重型机甲。可以对远距离目标造成范围伤害。<n/><n/><c val="FFFF8A">可以对空和地。</c>
 Button/Tooltip/RO_035=重型机甲。可以对远距离目标造成范围伤害。<n/><n/><c val="FFFF8A">可以对空和地。</c>
 Button/Tooltip/RO_037=重型机甲。可以对远距离目标造成范围伤害。<n/><n/><c val="FFFF8A">可以对空和地。</c>
-Button/Tooltip/RO_040=逆熵的自爆型攻击机甲，造价低廉，但实战效果显著。<n/><n/><c val="#ColorAttackInfo">可以对地。</c>
+Button/Tooltip/RO_040=逆熵的自爆型攻击机甲，造价低廉，但实战效果显著。<n/><n/><c val="#ColorAttackInfo">可以对地。附属蓄电塔、熔炉或石碑后可制造御雷机甲变种。</c>
 Button/Tooltip/RO_040Charge=准备<d ref="Behavior,RO_040ChargePreapre,Duration"precision="2"/>秒后向敌人发动冲锋，期间遇到任何敌人都将立即自爆，最多移动码后自爆。
 Button/Tooltip/RO_040ChargeUpgrade=解锁毒蛛机甲及其变种的突袭式自爆雷技能，使之可以向敌人快速冲锋，并在接触敌人时自爆。
 Button/Tooltip/RO_040Weapon=准备<d ref="Behavior,RO_040Attack,Duration"precision="2"/>秒后自爆，对地面单位和建筑造成大范围<d ref="Effect,RO_040Damage,Amount"/>点物理伤害。
@@ -1093,6 +1100,7 @@ Button/Tooltip/ResearchVHerrscher1st=适用于布洛妮娅的女武神装甲，�
 Button/Tooltip/ResearchVHerrscher1st2=适用于布洛妮娅的女武神装甲，使用浮游炮远距离攻击，并可在普通模式和骑乘模式之间切换。同时解锁重炮武器<c val="FFFF00">真理之钥</c>。<n/><n/><c val="FFFF00">律者核心改装只能研究一个分支</c>。
 Button/Tooltip/ReviveKiana=琪亚娜·卡斯兰娜音生命值过低从战场上撤离后，可在此重新部署。
 Button/Tooltip/Roach=突击单位。潜地后能快速恢复生命值。可以变异为熔岩帝王。<n/><n/><c val="ffff8a">可以对地。</c>
+Button/Tooltip/SaAbil1=短暂延迟后，在单位周围不断随机召唤火焰柱、雷击和冰封，分别造成<d ref="Effect,SaAbil1FireDamage,Amount"/>点对应的元素伤害伤害，并附加点燃、麻痹和冻结。
 Button/Tooltip/SaCore=将本体扎根于海中的庞然巨物，为了应对异常情况，排除不稳定因素所创造的自动歼灭机制。
 Button/Tooltip/SaUltimate=
 Button/Tooltip/SaWave=释放一道大范围冲击波，将遇到的一切单位击退。<n/><c val="FFFF00">半径越小的单位被击退距离越远</c>
@@ -1212,8 +1220,6 @@ Button/Tooltip/zerggroundarmor1=进化死士护甲等级，每一级增加所有
 Button/Tooltip/zerggroundarmor12=提升崩坏兽单位的护甲，并提高10%生命值，可升级10次。
 Button/Tooltip/zergmeleeweapons1=进化死士攻击等级，每一级增加所有死士10%攻击力，最多升级10次
 Button/Tooltip/zergmeleeweapons12=进化崩坏兽攻击等级，每一级增加所有崩坏兽10%攻击力，最多升级10次
-DOCSTR_0000=旋翼级崩坏兽
-DOCSTR_0001=Control+W
 DocInfo/DescLong=崩坏3风格单位，包括女武神、机甲、崩坏兽、死士等。<n/>本身也可以作为对战mod使用，但没有调整过游戏平衡性。<n/>如需联系作者或者讨论交流可以加群 168430656
 DocInfo/DescShort=2~4
 DocInfo/HowToPlayBasic00=输入-INFO可查看游戏机制，输入-HELP可查看指令帮助。
@@ -1570,6 +1576,15 @@ DocInfo/PatchNote347=·重做了多维机甲
 DocInfo/PatchNote348=·修复了月光王座主炮会自动对中立目标使用的bug
 DocInfo/PatchNote349=·天火出鞘不再需要消耗护盾
 DocInfo/PatchNote350=·修复了多维机甲的演算体bug
+DocInfo/PatchNote351=·修复了赫菲斯托斯无法进入攻城模式的bug
+DocInfo/PatchNote352=·微型过滤升级的采气量，升级次数由6降低为4
+DocInfo/PatchNote353=·下调了部分建筑的造价
+DocInfo/PatchNote354=·修复了重力弹能伤害无敌单位的bug
+DocInfo/PatchNote355=·修复了逆熵重工按钮错乱的bug
+DocInfo/PatchNote356=·加入了娑 -「一心三惑」
+DocInfo/PatchNote357=·提高了多维机甲两种模式下的攻击伤害
+DocInfo/PatchNote358=·将娑的攻击优先级降低为一般
+DocInfo/PatchNote359=·娑在必杀技期间新生成的单位也会被暂停
 Effect/Name/AcidSalivaU=UL_030 Damage
 Effect/Name/AddCasterLife50=Add Caster Life 50%
 Effect/Name/AddDizzyCD=Add Dizzy CD
@@ -2338,6 +2353,24 @@ Effect/Name/ReaperKD8KnockbackRB2=Reaper KD8 Knockback RB 2
 Effect/Name/ReaperKD8KnockbackRB3=Reaper KD8 Knockback RB 强制
 Effect/Name/RemoveInvincibleOuter=解除无敌(外层单位)
 Effect/Name/RemoveTarget=Remove Target
+Effect/Name/SaAbil1CP=Sa Abil 1 CP
+Effect/Name/SaAbil1Fire=Sa Abil 1 Fire
+Effect/Name/SaAbil1FireDamage=Sa Abil 1 Fire Damage
+Effect/Name/SaAbil1FireSearch=Sa Abil 1 Fire Search
+Effect/Name/SaAbil1FireSet=Sa Abil 1 Fire Set
+Effect/Name/SaAbil1Ice=Sa Abil 1 Ice
+Effect/Name/SaAbil1IceDamage=Sa Abil 1 Ice Damage
+Effect/Name/SaAbil1IceSearch=Sa Abil 1 Ice Search
+Effect/Name/SaAbil1IceSet=Sa Abil 1 Ice Set
+Effect/Name/SaAbil1LockTarget=Sa Abil 1 Lock Target
+Effect/Name/SaAbil1LockTargetSwitch=Sa Abil 1 Lock Target Switch
+Effect/Name/SaAbil1RandomEffect=Sa Abil 1 Random Effect
+Effect/Name/SaAbil1RandomPos=Sa Abil 1 Random Pos
+Effect/Name/SaAbil1RandomPosNoTarget=Sa Abil 1 Random Pos No Target
+Effect/Name/SaAbil1Thunder=Sa Abil 1 Thunder
+Effect/Name/SaAbil1ThunderDamage=Sa Abil 1 Thunder Damage
+Effect/Name/SaAbil1ThunderSearch=Sa Abil 1 Thunder Search
+Effect/Name/SaAbil1ThunderSet=Sa Abil 1 Thunder Set
 Effect/Name/SaBackward=Sa Backward
 Effect/Name/SaBackwardLockOff=Sa Backward Lock Off
 Effect/Name/SaBackwardLockOn=Sa Backward Lock On
@@ -2352,6 +2385,11 @@ Effect/Name/SaForward=Sa Forward
 Effect/Name/SaForwardLockOff=Sa Forward Lock Off
 Effect/Name/SaForwardLockOn=Sa Forward Lock On
 Effect/Name/SaForwardLockOnPoint=Sa Forward Lock On Point
+Effect/Name/SaForwardMeleeCP=Sa Forward Melee CP
+Effect/Name/SaForwardMeleeDamage1=Sa Forward Melee Damage 1
+Effect/Name/SaForwardMeleeDamage2=Sa Forward Melee Damage 2
+Effect/Name/SaForwardMeleeSearch1=Sa Forward Melee Search 1
+Effect/Name/SaForwardMeleeSearch2=Sa Forward Melee Search 2
 Effect/Name/SaForwardWeaponCP=Sa Forward Weapon CP
 Effect/Name/SaForwardWeaponDamage=Sa Forward Weapon Damage
 Effect/Name/SaForwardWeaponLM=Sa Forward Weapon LM
@@ -2710,7 +2748,7 @@ Param/Value/lib_6D9D7845_43833243=源：
 Param/Value/lib_6D9D7845_4440FF56=娑将在<d time="10"/>秒后发动
 Param/Value/lib_6D9D7845_4AA36070=外层：
 Param/Value/lib_6D9D7845_513313B5=30秒dps:
-Param/Value/lib_6D9D7845_54207569="/>秒后发动激光束进行横扫攻击，攻击期间玩家的单位将无法接受指令，请对单位进行提前部署。(惑障在激光攻击期间被攻击一定次数会陷入瘫痪)
+Param/Value/lib_6D9D7845_54207569="/>后发动激光束进行横扫攻击，攻击期间玩家的单位将无法接受指令，请对单位进行提前部署。(惑障在激光攻击期间被攻击一定次数会陷入瘫痪)
 Param/Value/lib_6D9D7845_5A332C43=0%
 Param/Value/lib_6D9D7845_5C21EF07=单位类型指定成功：
 Param/Value/lib_6D9D7845_5CD99C93=10秒dps:
@@ -2756,6 +2794,7 @@ Param/Value/lib_6D9D7845_FBE4912F=30秒dps:
 Param/Value/lib_6D9D7845_FF52F463=目标：
 Param/Value/lib_6D9D7845_FFAB6942=雷元素抗性
 Param/Value/lib_6D9D7845_FFDCEE7E=指令：<n/><n/>-D 开关伤害数字<n/><n/>-D S 开关小型伤害数字<n/><n/>-D x 将伤害数字透明度设置为x，x为0~100的实数<n/><n/>其它指令需要开启调试模式才能使用，请在调试模式下输入-HELP查看<n/><n/>欢迎加入交流群 168430656
+Race/Name/Zerg=崩坏
 RequirementNode/Tooltip/03861215421=暂未开放
 RequirementNode/Tooltip/CountBehaviorFurnaceFactory2CompleteOnlyAtUnit1232702942=附加极寒石碑
 RequirementNode/Tooltip/CountBehaviorFurnaceFactoryCompleteOnlyAtUnit2833092702=附加石碑
@@ -2775,6 +2814,7 @@ RequirementNode/Tooltip/CountBehaviorWeaponUseB28CompleteOnly3451675864=没有�
 RequirementNode/Tooltip/CountBehaviorWeaponUseK17CompleteOnlyAtUnit628373971=当前未装备能量跃迁者
 RequirementNode/Tooltip/CountBehaviorWeaponUseK23CompleteOnlyAtUnit3368134584=当前未装备天火圣裁
 RequirementNode/Tooltip/CountBehaviorWeaponUseK5CompleteOnlyAtUnit3301302742=当前未装备索尔之锤
+RequirementNode/Tooltip/CountUnitAlias_AntiEntropyFactoryCompleteOnly1207743462TechTreeCheat=逆熵重工
 RequirementNode/Tooltip/CountUnitHyperionInterceptorCompleteOnlyAtUnit3128815872=机库中有战斗机
 RequirementNode/Tooltip/CountUnitNukeCompleteOnlyAtUnit1398243897=在发射井中部署崩坏能裂变弹
 RequirementNode/Tooltip/CountUnitNukeMHTCompleteOnlyAtUnit2146895046=在发射仓中部署战术核弹
@@ -2896,6 +2936,7 @@ Unit/LifeArmorName/HonkaiArmor=崩坏能护甲
 Unit/LifeArmorName/HonkaiShield=崩坏能护盾
 Unit/LifeArmorName/ROPlating=机甲钢板
 Unit/LifeArmorName/TerranInfantryShield=女武神护盾
+Unit/Name/AntiEntropyFactory=逆熵重工
 Unit/Name/B15FireMissile=B15 Fire Missile
 Unit/Name/B15ThunderMissile=B15 Thunder Missile
 Unit/Name/B1Missile=B1 Missile
@@ -2932,7 +2973,6 @@ Unit/Name/DPSTest=DPS测试单位
 Unit/Name/DivineKey4th=第四神之键
 Unit/Name/DivineKey4thWeaponUnit=人造理想流体风暴
 Unit/Name/DivineKeys=神之键阁
-Unit/Name/Factory=逆熵重工
 Unit/Name/FreeWeaponUnit=Free Weapon Unit
 Unit/Name/Furnace=熔炉
 Unit/Name/Furnace2=烈火熔炉
@@ -3031,7 +3071,6 @@ Unit/Name/Roach=绯樱战车兽
 Unit/Name/SCV=后勤人员
 Unit/Name/SaAfflication=娑 -「惑障」
 Unit/Name/SaCore=娑 -「一心三惑」
-Unit/Name/SaTarget=Sa Target
 Unit/Name/SaWave=冲击波
 Unit/Name/SaWeapon0=娑 武器 0
 Unit/Name/SaWeapon1=娑 武器 1
@@ -3220,6 +3259,7 @@ Weapon/Name/RO_060Weapon=直线射击
 Weapon/Name/Railgun=电磁轰击
 Weapon/Name/SaBackwardWeapon=执行: 断绝
 Weapon/Name/SaCoreWeapon=加载: 满业
+Weapon/Name/SaForwardMelee=启动; 毁除
 Weapon/Name/SaForwardWeapon=加载: 应报
 Weapon/Name/SplitBomb=分裂炸弹
 Weapon/Name/SwarmMissile=蜂巢飞弹

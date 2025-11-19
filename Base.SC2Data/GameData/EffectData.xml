@@ -33,27 +33,21 @@
         <EditorCategories value=""/>
     </CEffectApplyBehavior>
     <CEffectEnumArea id="RO_060BarrageSearch">
-        <EditorCategories value="Race:Terran"/>
         <SearchFilters value="Air;Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable"/>
         <AreaArray Radius="0.6" Effect="RO_060BarrageDamage"/>
     </CEffectEnumArea>
-    <CEffectSet id="RO_060BarrageDummy">
-        <EditorCategories value="Race:Terran"/>
-    </CEffectSet>
+    <CEffectSet id="RO_060BarrageDummy"/>
     <CEffectDamage id="RO_060AttackDamage" parent="DU_WEAP">
-        <EditorCategories value="Race:Terran"/>
         <ImpactLocation Value="TargetUnit"/>
         <Visibility value="Visible"/>
         <Kind value="Ranged"/>
-        <Amount value="80"/>
+        <Amount value="120"/>
     </CEffectDamage>
     <CEffectLaunchMissile id="RO_060AttackLM">
-        <EditorCategories value="Race:Terran"/>
         <ImpactEffect value="RO_060AttackDamage"/>
         <AmmoUnit value="RO_060Missile"/>
     </CEffectLaunchMissile>
     <CEffectCreatePersistent id="RO_060AttackCP">
-        <EditorCategories value="Race:Terran"/>
         <WhichLocation Value="TargetUnit"/>
         <Flags index="Channeled" value="1"/>
         <PeriodCount value="1"/>
@@ -61,27 +55,186 @@
         <PeriodicPeriodArray value="0.875"/>
     </CEffectCreatePersistent>
     <CEffectDamage id="RO_060BarrageDamage" parent="DU_WEAP">
-        <EditorCategories value="Race:Terran"/>
         <ImpactLocation Value="TargetUnit"/>
         <Visibility value="Visible"/>
         <Kind value="Ranged"/>
-        <Amount value="7"/>
+        <Amount value="10"/>
     </CEffectDamage>
     <CEffectSwitch id="K23ImpactSwitch">
-        <EditorCategories value="Race:Terran"/>
         <CaseArray Validator="CasterIsKianaC1" Effect="K23ImpactSet"/>
         <CaseDefault value="K23InitialDamage"/>
     </CEffectSwitch>
     <CEffectDamage id="LongboltMissileU">
         <Amount value="15"/>
     </CEffectDamage>
+    <CEffectCreatePersistent id="SaAbil1CP">
+        <EditorCategories value=""/>
+        <Flags index="Channeled" value="1"/>
+        <PeriodCount value="10"/>
+        <PeriodicEffectArray value="SaAbil1LockTargetSwitch"/>
+        <PeriodicPeriodArray value="0.875"/>
+    </CEffectCreatePersistent>
+    <CEffectCreatePersistent id="SaAbil1Fire">
+        <EditorCategories value=""/>
+        <PeriodCount value="1"/>
+        <PeriodicEffectArray value="SaAbil1FireSearch"/>
+        <PeriodicPeriodArray value="4"/>
+    </CEffectCreatePersistent>
+    <CEffectSet id="SaAbil1IceSet">
+        <EditorCategories value=""/>
+        <EffectArray value="Frozen"/>
+        <EffectArray value="SaAbil1IceDamage"/>
+    </CEffectSet>
+    <CEffectCreatePersistent id="SaAbil1Thunder">
+        <EditorCategories value=""/>
+        <PeriodCount value="1"/>
+        <PeriodicEffectArray value="SaAbil1ThunderSearch"/>
+        <PeriodicPeriodArray value="4"/>
+    </CEffectCreatePersistent>
+    <CEffectEnumArea id="SaAbil1LockTarget">
+        <EditorCategories value=""/>
+        <ImpactLocation Value="CasterUnit"/>
+        <SearchFilters value="Visible;Player,Ally,Neutral,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <TargetSorts>
+            <SortArray value="TSRandom"/>
+        </TargetSorts>
+        <AreaArray MaxCount="1" Radius="10" Effect="SaAbil1RandomPos"/>
+    </CEffectEnumArea>
+    <CEffectSwitch id="SaAbil1LockTargetSwitch">
+        <EditorCategories value=""/>
+        <CaseArray Validator="AnyEnermyWithinCasterRange10" Effect="SaAbil1LockTarget"/>
+        <CaseDefault value="SaAbil1RandomPosNoTarget"/>
+    </CEffectSwitch>
+    <CEffectSet id="SaAbil1RandomEffect">
+        <EditorCategories value=""/>
+        <EffectArray value="SaAbil1Fire"/>
+        <EffectArray value="SaAbil1Thunder"/>
+        <EffectArray value="SaAbil1Ice"/>
+        <Random value="1"/>
+        <MinCount value="1"/>
+        <MaxCount value="1"/>
+    </CEffectSet>
+    <CEffectRandomPointInCircle id="SaAbil1RandomPos">
+        <EditorCategories value=""/>
+        <Effect value="SaAbil1RandomEffect"/>
+        <Radius value="3"/>
+    </CEffectRandomPointInCircle>
+    <CEffectRandomPointInCircle id="SaAbil1RandomPosNoTarget">
+        <EditorCategories value=""/>
+        <Effect value="SaAbil1RandomEffect"/>
+        <Radius value="10"/>
+    </CEffectRandomPointInCircle>
+    <CEffectCreatePersistent id="SaAbil1Ice">
+        <EditorCategories value=""/>
+        <PeriodCount value="1"/>
+        <PeriodicEffectArray value="SaAbil1IceSearch"/>
+        <PeriodicPeriodArray value="4"/>
+    </CEffectCreatePersistent>
+    <CEffectDamage id="SaAbil1FireDamage">
+        <EditorCategories value=""/>
+        <Kind value="Splash"/>
+        <Amount value="50"/>
+    </CEffectDamage>
+    <CEffectDamage id="SaAbil1IceDamage">
+        <EditorCategories value=""/>
+        <Kind value="NoProc"/>
+        <Amount value="50"/>
+    </CEffectDamage>
+    <CEffectEnumArea id="SaAbil1ThunderSearch">
+        <EditorCategories value=""/>
+        <ImpactLocation Value="TargetPoint"/>
+        <SearchFilters value="Visible;Player,Ally,Neutral,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <AreaArray Radius="1.5" Effect="SaAbil1ThunderSet"/>
+    </CEffectEnumArea>
+    <CEffectEnumArea id="SaAbil1FireSearch">
+        <EditorCategories value=""/>
+        <ImpactLocation Value="TargetPoint"/>
+        <SearchFilters value="Visible;Player,Ally,Neutral,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <AreaArray Radius="1.5" Effect="SaAbil1FireSet"/>
+    </CEffectEnumArea>
+    <CEffectEnumArea id="SaAbil1IceSearch">
+        <EditorCategories value=""/>
+        <ImpactLocation Value="TargetPoint"/>
+        <SearchFilters value="Visible;Player,Ally,Neutral,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <AreaArray Radius="1.5" Effect="SaAbil1IceSet"/>
+    </CEffectEnumArea>
+    <CEffectEnumArea id="SaForwardMeleeSearch1">
+        <EditorCategories value=""/>
+        <LaunchLocation Value="CasterUnit"/>
+        <ImpactLocation Value="TargetPoint"/>
+        <SearchFilters value="Ground;Self,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <AreaArray Arc="149.9963" Radius="3" Effect="Flying"/>
+        <SearchFlags index="SameCliff" value="1"/>
+    </CEffectEnumArea>
+    <CEffectSet id="SaAbil1ThunderSet">
+        <EditorCategories value=""/>
+        <EffectArray value="Palsy"/>
+        <EffectArray value="SaAbil1ThunderDamage"/>
+    </CEffectSet>
+    <CEffectDamage id="SaAbil1ThunderDamage">
+        <EditorCategories value=""/>
+        <Amount value="50"/>
+    </CEffectDamage>
+    <CEffectSet id="SaAbil1FireSet">
+        <EditorCategories value=""/>
+        <EffectArray value="TargetBurn"/>
+        <EffectArray value="SaAbil1FireDamage"/>
+    </CEffectSet>
+    <CEffectDamage id="SaForwardMeleeDamage1" parent="DU_WEAP">
+        <LaunchLocation Value="CasterUnit"/>
+        <ImpactLocation Value="TargetPoint"/>
+        <Visibility value="Visible"/>
+        <Flags index="Impact" value="0"/>
+        <KindSplash value="Melee"/>
+        <Amount value="100"/>
+        <AreaArray Arc="149.9963" Radius="3" Fraction="1"/>
+        <SearchFilters value="Ground;Self,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+    </CEffectDamage>
+    <CEffectCreatePersistent id="SaForwardMeleeCP">
+        <ValidatorArray value="TargetForward"/>
+        <EditorCategories value=""/>
+        <WhichLocation Value="CasterUnit"/>
+        <OffsetVectorStartLocation Value="CasterUnit"/>
+        <OffsetVectorEndLocation Value="CasterUnit"/>
+        <OffsetFacingFallback Value="CasterUnit"/>
+        <Flags index="Channeled" value="1"/>
+        <PeriodCount value="4"/>
+        <PeriodicEffectArray value="SaForwardMeleeSearch1"/>
+        <PeriodicEffectArray value="SaForwardMeleeDamage1"/>
+        <PeriodicEffectArray value="SaForwardMeleeSearch2"/>
+        <PeriodicEffectArray value="SaForwardMeleeDamage2"/>
+        <PeriodicOffsetArray value="0.5,-1.5,0"/>
+        <PeriodicOffsetArray value="0.5,-1.5,0"/>
+        <PeriodicOffsetArray value="-0.5,-2.75,0"/>
+        <PeriodicOffsetArray value="-0.5,-2.75,0"/>
+        <PeriodicPeriodArray value="0.875"/>
+        <PeriodicPeriodArray value="0"/>
+        <PeriodicPeriodArray value="1.1875"/>
+        <PeriodicPeriodArray value="0"/>
+    </CEffectCreatePersistent>
+    <CEffectDamage id="SaForwardMeleeDamage2" parent="DU_WEAP">
+        <LaunchLocation Value="CasterUnit"/>
+        <ImpactLocation Value="TargetPoint"/>
+        <Visibility value="Visible"/>
+        <Flags index="Impact" value="0"/>
+        <KindSplash value="Melee"/>
+        <Amount value="100"/>
+        <AreaArray Radius="2" Fraction="1"/>
+        <SearchFilters value="Ground;Self,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+    </CEffectDamage>
+    <CEffectEnumArea id="SaForwardMeleeSearch2">
+        <EditorCategories value=""/>
+        <ImpactLocation Value="TargetPoint"/>
+        <SearchFilters value="Ground;Self,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <AreaArray Radius="2" Effect="ThrowSet"/>
+        <SearchFlags index="SameCliff" value="1"/>
+    </CEffectEnumArea>
     <CEffectSet id="SwarmMissileImpactSet">
         <EditorCategories value=""/>
         <EffectArray value="TargetBurn"/>
         <EffectArray value="SwarmMissileDamage"/>
     </CEffectSet>
     <CEffectLaunchMissile id="SwarmMissileLMLeft">
-        <EditorCategories value="Race:Terran"/>
         <LaunchLocation Value="CasterUnit"/>
         <ImpactLocation Value="TargetPoint"/>
         <ImpactEffect value="SwarmMissileSearch"/>
@@ -89,7 +242,6 @@
         <Movers Link="SwarmMissileMissile"/>
     </CEffectLaunchMissile>
     <CEffectLaunchMissile id="SwarmMissileLMRight">
-        <EditorCategories value="Race:Terran"/>
         <LaunchLocation Value="CasterUnit"/>
         <ImpactLocation Value="TargetPoint"/>
         <ImpactEffect value="SwarmMissileSearch"/>
@@ -110,7 +262,6 @@
         <Duration value="10"/>
     </CEffectApplyBehavior>
     <CEffectDamage id="K23InitialDamageNoCaster">
-        <EditorCategories value="Race:Terran"/>
         <AINotifyFlags index="HurtFriend" value="1"/>
         <AINotifyFlags index="HurtEnemy" value="1"/>
         <ResponseFlags index="Acquire" value="1"/>
@@ -127,7 +278,6 @@
         <SearchFilters value="-;Missile,Stasis,Dead,Hidden,Invulnerable"/>
     </CEffectDamage>
     <CEffectCreatePersistent id="K23Teleport2Position">
-        <EditorCategories value="Race:Terran"/>
         <WhichLocation Value="CasterUnit"/>
         <PeriodCount value="1"/>
         <PeriodicEffectArray value="K23Teleport2"/>
@@ -135,12 +285,10 @@
         <PeriodicPeriodArray value="0"/>
     </CEffectCreatePersistent>
     <CEffectSet id="K23ImpactSet">
-        <EditorCategories value="Race:Terran"/>
         <EffectArray value="K23InitialDamageNoCaster"/>
         <EffectArray value="K23Teleport2"/>
     </CEffectSet>
     <CEffectTeleport id="K23Teleport2">
-        <EditorCategories value="Race:Terran"/>
         <WhichUnit Value="Caster"/>
         <MinDistance value="0"/>
         <PlacementAround Value="CasterUnit"/>
@@ -278,7 +426,6 @@
         <SearchFlags index="CallForHelp" value="1"/>
     </CEffectDamage>
     <CEffectLaunchMissile id="KianaC1UltimateLaunch">
-        <EditorCategories value="Race:Zerg"/>
         <LaunchLocation Value="TargetPoint"/>
         <ImpactLocation Value="TargetPoint"/>
         <LaunchOffset value="0,0.1,15"/>
@@ -371,20 +518,16 @@
         <AreaRelativeOffset value="0,1"/>
     </CEffectEnumArea>
     <CEffectApplyBehavior id="Herrscher7thWaveSpawnAB">
-        <EditorCategories value="Race:Protoss"/>
         <Behavior value="Herrscher7thWaveTarget"/>
     </CEffectApplyBehavior>
     <CEffectModifyUnit id="Herrscher7thWaveSpawnMU">
-        <EditorCategories value="Race:Protoss"/>
         <FacingLocation Value="CasterUnit"/>
     </CEffectModifyUnit>
     <CEffectSet id="Herrscher7thWaveSpawnSet">
-        <EditorCategories value="Race:Protoss"/>
         <EffectArray value="Herrscher7thWaveSpawnAB"/>
         <EffectArray value="Herrscher7thWaveSpawnMU"/>
     </CEffectSet>
     <CEffectCreateUnit id="Herrscher7thWaveCU">
-        <EditorCategories value="Race:Zerg"/>
         <WhichLocation Value="CasterPoint"/>
         <CreateFlags index="DropOff" value="0"/>
         <CreateFlags index="OffsetByRadius" value="0"/>
@@ -451,24 +594,20 @@
     </CEffectSet>
     <CEffectLaunchMissile id="HonkaiHyperionAALM">
         <ValidatorArray index="0" value="BattlecruiserIsNotYamatoing"/>
-        <EditorCategories value="Race:Terran"/>
         <ImpactEffect value="HonkaiHyperionAADamage"/>
         <AmmoUnit value="ATALaserBatteryLMWeapon"/>
     </CEffectLaunchMissile>
     <CEffectDamage id="HonkaiHyperionAADamage" parent="DU_WEAP_MISSILE">
-        <EditorCategories value="Race:Terran"/>
         <Visibility value="Visible"/>
         <Flags index="Impact" value="0"/>
         <Amount value="10"/>
     </CEffectDamage>
     <CEffectLaunchMissile id="HonkaiHyperionAGLM">
         <ValidatorArray index="0" value="BattlecruiserIsNotYamatoing"/>
-        <EditorCategories value="Race:Terran"/>
         <ImpactEffect value="HonkaiHyperionAGDamage"/>
         <AmmoUnit value="ATSLaserBatteryLMWeapon"/>
     </CEffectLaunchMissile>
     <CEffectDamage id="HonkaiHyperionAGDamage" parent="DU_WEAP_MISSILE">
-        <EditorCategories value="Race:Terran"/>
         <Visibility value="Visible"/>
         <Flags index="Impact" value="0"/>
         <Amount value="15"/>
@@ -490,27 +629,22 @@
     </CEffectDamage>
     <CEffectDamage id="AcidSalivaU"/>
     <CEffectDamage id="ArrowDamage2" parent="DU_WEAP">
-        <EditorCategories value="Race:Zerg"/>
         <Kind value="Splash"/>
         <Amount value="25"/>
     </CEffectDamage>
     <CEffectDamage id="ArrowDamage22" parent="DU_WEAP">
-        <EditorCategories value="Race:Zerg"/>
         <Kind value="NoProc"/>
         <Amount value="25"/>
     </CEffectDamage>
     <CEffectLaunchMissile id="ArrowLaunchMissile22">
-        <EditorCategories value="Race:Zerg"/>
         <ImpactEffect value="DG_023AttackSet"/>
         <AmmoUnit value="DG_023Missile"/>
     </CEffectLaunchMissile>
     <CEffectSet id="HonkaiHyperionDamageSet">
-        <EditorCategories value="Race:Terran"/>
         <EffectArray value="HonkaiHyperionTrackerAB"/>
         <EffectArray value="BattlecruiserDamageSwitch2"/>
     </CEffectSet>
     <CEffectSwitch id="BattlecruiserDamageSwitch2">
-        <EditorCategories value="Race:Terran"/>
         <Marker Count="0" Link="Effect/BattlecruiserAttackTrackerCP">
             <MatchFlags index="CasterUnit" value="1"/>
         </Marker>
@@ -518,7 +652,6 @@
         <CaseDefault value="HonkaiHyperionAALM"/>
     </CEffectSwitch>
     <CEffectApplyBehavior id="HonkaiHyperionTrackerAB">
-        <EditorCategories value="Race:Terran"/>
         <Behavior value="BattlecruiserTransientTracker"/>
     </CEffectApplyBehavior>
     <CEffectApplyBehavior id="BronyaC2Abil2">
@@ -529,6 +662,7 @@
         <EditorCategories value=""/>
         <Kind value="Ranged"/>
         <Amount value="10"/>
+        <ValidatorArray value="NotInvulnerable"/>
     </CEffectDamage>
     <CEffectEnumArea id="BronyaC2Abil2PeriodicSearch">
         <EditorCategories value=""/>
@@ -603,7 +737,6 @@
         <AreaArray Radius="1.5" Effect="Herrscher4thWeaponDamage"/>
     </CEffectEnumArea>
     <CEffectDamage id="Herrscher7thAbil1AirDamage" parent="DU_WEAP">
-        <EditorCategories value="Race:Zerg"/>
         <ImpactLocation Effect="Herrscher7thAbil1Launch" Value="TargetPoint"/>
         <Kind value="Splash"/>
         <KindSplash value="Splash"/>
@@ -614,7 +747,6 @@
         <AttributeBonus index="Light" value="20"/>
     </CEffectDamage>
     <CEffectEnumArea id="Herrscher7thAbil1AirFireSearch">
-        <EditorCategories value="Race:Terran"/>
         <AINotifyFlags index="HurtFriend" value="1"/>
         <AINotifyFlags index="HurtEnemy" value="1"/>
         <SearchFilters value="Air;Player,Ally,Missile,Destructible,Stasis,Dead,Hidden,Invulnerable"/>
@@ -702,7 +834,6 @@
         <EffectArray value="QuasiBlackHoleCP"/>
     </CEffectSet>
     <CEffectCreateUnit id="HonkaiHyperjumpCreatePrecursor">
-        <EditorCategories value="Race:Terran"/>
         <WhichLocation Value="TargetPoint"/>
         <CreateFlags index="PlacementIgnoreBlockers" value="1"/>
         <CreateFlags index="Precursor" value="1"/>
@@ -727,7 +858,6 @@
         <PeriodicPeriodArray value="0"/>
     </CEffectCreatePersistent>
     <CEffectApplyBehavior id="HonkaiHyperjumpInitialDelaySuppressWeaponAB">
-        <EditorCategories value="Race:Terran"/>
         <WhichUnit Value="Caster"/>
         <Behavior value="HonkaiHyperjumpInitialDelaySuppressWeapon"/>
     </CEffectApplyBehavior>
@@ -737,7 +867,6 @@
         <BehaviorLink value="HonkaiHyperjumpInitialDelaySuppressWeapon"/>
     </CEffectRemoveBehavior>
     <CEffectTeleport id="HonkaiHyperjumpTeleport">
-        <EditorCategories value="Race:Terran"/>
         <WhichUnit Value="Caster"/>
         <ClearQueuedOrders value="0"/>
         <PlacementAround Effect="HonkaiHyperjumpCreatePrecursor"/>
@@ -747,43 +876,35 @@
         <TeleportFlags index="TestZone" value="1"/>
     </CEffectTeleport>
     <CEffectApplyBehavior id="HonkaiHyperjumpTeleportAB">
-        <EditorCategories value="Race:Terran"/>
         <WhichUnit Value="Caster"/>
         <Behavior value="HonkaiHyperjumpTeleport"/>
     </CEffectApplyBehavior>
     <CEffectApplyBehavior id="HonkaiHyperjumpTeleportInAB">
-        <EditorCategories value="Race:Terran"/>
         <WhichUnit Value="Caster"/>
         <Behavior value="HonkaiHyperjumpTeleportIn"/>
     </CEffectApplyBehavior>
     <CEffectApplyBehavior id="HonkaiHyperjumpTeleportOutAB">
-        <EditorCategories value="Race:Terran"/>
         <WhichUnit Value="Caster"/>
         <Behavior value="HonkaiHyperjumpTeleportOut"/>
     </CEffectApplyBehavior>
     <CEffectSet id="HonkaiHyperjumpTeleportOutABSet">
-        <EditorCategories value="Race:Terran"/>
         <EffectArray value="HonkaiHyperjumpTeleportOutAB"/>
         <EffectArray value="HonkaiHyperjumpTeleportOutTargetAB"/>
     </CEffectSet>
     <CEffectApplyBehavior id="HonkaiHyperjumpTeleportOutTargetAB">
-        <EditorCategories value="Race:Terran"/>
         <Behavior value="HokaiHyperjumpTeleportOutTargetSuppressCollision"/>
     </CEffectApplyBehavior>
     <CEffectSet id="HonkaiHyperjumpTeleportSet">
-        <EditorCategories value="Race:Terran"/>
         <EffectArray value="HonkaiHyperjumpTeleport"/>
         <EffectArray value="HonkaiHyperjumpTeleportAB"/>
     </CEffectSet>
     <CEffectDamage id="HyperionInterceptorDamage" parent="DU_WEAP">
-        <EditorCategories value="Race:Terran"/>
         <Visibility value="Visible"/>
         <Flags index="Impact" value="0"/>
         <Kind value="Ranged"/>
         <Amount value="14"/>
     </CEffectDamage>
     <CEffectCreatePersistent id="HyperionInterceptorCP">
-        <EditorCategories value="Race:Terran"/>
         <WhichLocation Value="TargetUnit"/>
         <TimeScaleSource Value="Caster"/>
         <InitialEffect value="HyperionInterceptorDamage"/>
@@ -1024,7 +1145,6 @@
         <EffectArray value="TimeLock10s"/>
     </CEffectSet>
     <CEffectCreatePersistent id="SwarmMissileSet">
-        <EditorCategories value="Race:Terran"/>
         <TimeScaleSource Value="Caster"/>
         <Flags index="Channeled" value="1"/>
         <PeriodCount value="5"/>
@@ -1037,7 +1157,6 @@
         <HeightMap value="Ground"/>
     </CEffectCreatePersistent>
     <CEffectDamage id="SwarmMissileDamage">
-        <EditorCategories value="Race:Terran"/>
         <ResponseFlags index="Acquire" value="1"/>
         <ResponseFlags index="Flee" value="1"/>
         <AttributeBonus index="Light" value="4"/>
@@ -1054,13 +1173,11 @@
         <SearchFlags index="SameCliff" value="0"/>
     </CEffectDamage>
     <CEffectEnumArea id="SwarmMissileSearch">
-        <EditorCategories value="Race:Terran"/>
         <SearchFilters value="Ground;Self,Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable"/>
         <AreaArray Radius="0.6" Effect="SwarmMissileImpactSet"/>
         <ImpactLocation Value="TargetPoint"/>
     </CEffectEnumArea>
     <CEffectCreatePersistent id="SwarmMissileCP">
-        <EditorCategories value="Race:Terran"/>
         <Flags index="Channeled" value="1"/>
         <Flags index="RandomOffset" value="1"/>
         <PeriodCount value="2"/>
@@ -1101,7 +1218,6 @@
         <ValidatorArray value="MedivacHealTargetFilter"/>
         <ValidatorArray value="NotDisintegrating"/>
         <ValidatorArray value="TargetNot6thB"/>
-        <EditorCategories value="Race:Terran"/>
         <DrainVital value="Energy"/>
         <DrainVitalCostFactor value="0.33"/>
         <RechargeVitalRate value="9"/>
@@ -1199,7 +1315,6 @@
         <PeriodicPeriodArray value="2.5"/>
     </CEffectCreatePersistent>
     <CEffectDamage id="SaForwardWeaponDamage" parent="DU_WEAP">
-        <EditorCategories value="Race:Protoss"/>
         <Visibility value="Visible"/>
         <Flags index="Impact" value="0"/>
         <Kind value="Ranged"/>
@@ -1209,7 +1324,6 @@
         <SearchFilters value="-;Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable"/>
     </CEffectDamage>
     <CEffectLaunchMissile id="SaForwardWeaponLM">
-        <EditorCategories value="Race:Protoss"/>
         <ImpactLocation Value="TargetPoint"/>
         <ImpactEffect value="SaForwardWeaponDamage"/>
         <AmmoUnit value="SaWeapon0"/>
@@ -1231,7 +1345,6 @@
         <WhichLocation Value="TargetUnit"/>
     </CEffectCreatePersistent>
     <CEffectDamage id="SaBackwardWeaponDamage" parent="DU_WEAP">
-        <EditorCategories value="Race:Protoss"/>
         <Visibility value="Visible"/>
         <Flags index="Impact" value="0"/>
         <Kind value="Ranged"/>
@@ -1241,25 +1354,21 @@
         <SearchFilters value="-;Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable"/>
     </CEffectDamage>
     <CEffectLaunchMissile id="SaCoreLM">
-        <EditorCategories value="Race:Protoss"/>
         <ImpactEffect value="SaCoreDamage"/>
         <AmmoUnit value="RepulsorCannonWeapon"/>
     </CEffectLaunchMissile>
     <CEffectDamage id="SaCoreDamage" parent="DU_WEAP">
-        <EditorCategories value="Race:Protoss"/>
         <Visibility value="Visible"/>
         <Flags index="Impact" value="0"/>
         <Kind value="Ranged"/>
         <Amount value="8"/>
     </CEffectDamage>
     <CEffectLaunchMissile id="SaBackwardWeaponLM">
-        <EditorCategories value="Race:Protoss"/>
         <ImpactEffect value="SaBackwardWeaponDamage"/>
         <AmmoUnit value="SaWeapon1"/>
         <ImpactLocation Value="TargetPoint"/>
     </CEffectLaunchMissile>
     <CEffectRandomPointInCircle id="SaForwardWeaponLMPosition">
-        <EditorCategories value="Race:Protoss"/>
         <WhichLocation Value="TargetPoint"/>
         <Effect value="SaForwardWeaponLM"/>
         <Count value="15"/>
@@ -1367,7 +1476,6 @@
         <WhichUnit Value="Outer"/>
     </CEffectRemoveBehavior>
     <CEffectCreatePersistent id="StarOfEdenWorldAbil1CP">
-        <EditorCategories value="Race:Protoss"/>
         <InitialEffect value="StarOfEdenWorldAbil1CreateOffset"/>
         <PeriodCount value="48"/>
         <PeriodicEffectArray value="StarOfEdenWorldAbil1ForceTrigger"/>
@@ -1424,7 +1532,6 @@
         <CaseDefault value="BronyaC7Attack2"/>
     </CEffectSwitch>
     <CEffectCreatePersistent id="BronyaC7Attack1">
-        <EditorCategories value="Race:Protoss"/>
         <WhichLocation Value="TargetUnit"/>
         <TimeScaleSource Value="Caster"/>
         <Flags index="Channeled" value="1"/>
@@ -1435,7 +1542,6 @@
         <FinalEffect value="BronyaC7AttackAdd"/>
     </CEffectCreatePersistent>
     <CEffectCreatePersistent id="BronyaC7Attack2">
-        <EditorCategories value="Race:Protoss"/>
         <WhichLocation Value="TargetUnit"/>
         <TimeScaleSource Value="Caster"/>
         <Flags index="Channeled" value="1"/>
@@ -1463,7 +1569,6 @@
         <BehaviorLink value="BronyaC7Weapon"/>
     </CEffectRemoveBehavior>
     <CEffectCreateUnit id="StarOfEdenWorldAbil1CU">
-        <EditorCategories value="Race:Protoss"/>
         <WhichLocation Value="TargetPoint"/>
         <CreateFlags index="DropOff" value="0"/>
         <CreateFlags index="ProvideFood" value="0"/>
@@ -1472,7 +1577,6 @@
         <SpawnUnit value="StarOfEdenWorld"/>
     </CEffectCreateUnit>
     <CEffectCreatePersistent id="StarOfEdenWorldAbil1CreateOffset">
-        <EditorCategories value="Race:Protoss"/>
         <WhichLocation Value="CasterPoint"/>
         <PeriodCount value="4"/>
         <PeriodicEffectArray value="StarOfEdenWorldAbil1CU"/>
@@ -1489,17 +1593,14 @@
         <EffectArray value="BronyaC7Gun2Damage"/>
     </CEffectSet>
     <CEffectDamage id="BronyaC7Gun2Damage">
-        <EditorCategories value="Race:Protoss"/>
         <DamageModifierSource Value="Caster"/>
     </CEffectDamage>
     <CEffectDamage id="BronyaC7Gun2RealDamage">
-        <EditorCategories value="Race:Protoss"/>
         <DamageModifierSource Value="Caster"/>
         <Kind value="NoProc"/>
         <Amount value="10"/>
     </CEffectDamage>
     <CEffectCreatePersistent id="BronyaC7Gun2PC">
-        <EditorCategories value="Race:Protoss"/>
         <TimeScaleSource Value="Caster"/>
         <Flags index="Channeled" value="1"/>
         <Flags index="PersistUntilDestroyed" value="1"/>
@@ -1509,7 +1610,6 @@
         <WhichLocation Value="TargetUnit"/>
     </CEffectCreatePersistent>
     <CEffectSet id="BronyaC7Gun2AB">
-        <EditorCategories value="Race:Protoss"/>
         <EffectArray value="BronyaC7Gun2Timer"/>
         <EffectArray value="HerrscherConstructCommand22"/>
     </CEffectSet>
@@ -1524,7 +1624,6 @@
         <EffectArray value="BronyaC7Gun1Damage"/>
     </CEffectSet>
     <CEffectCreateUnit id="BronyaC7Gun2CU">
-        <EditorCategories value="Race:Protoss"/>
         <WhichLocation Value="TargetPoint"/>
         <CreateFlags index="DropOff" value="0"/>
         <CreateFlags index="ProvideFood" value="0"/>
@@ -1534,7 +1633,6 @@
         <SpawnUnit value="BronyaC7Gun2"/>
     </CEffectCreateUnit>
     <CEffectCreatePersistent id="BronyaC7Gun2CreateOffset">
-        <EditorCategories value="Race:Protoss"/>
         <WhichLocation Value="CasterUnit"/>
         <PeriodCount value="5"/>
         <PeriodicEffectArray value="BronyaC7Gun2CU"/>
@@ -1546,7 +1644,6 @@
         <PeriodicPeriodArray value="0.75"/>
     </CEffectCreatePersistent>
     <CEffectDamage id="BronyaC7Gun2Kill">
-        <EditorCategories value="Race:Protoss"/>
         <ResponseFlags index="Acquire" value="1"/>
         <ResponseFlags index="Flee" value="1"/>
         <Flags index="Kill" value="1"/>
@@ -1554,7 +1651,6 @@
         <SearchFlags index="CallForHelp" value="1"/>
     </CEffectDamage>
     <CEffectApplyBehavior id="BronyaC7Gun2Timer">
-        <EditorCategories value="Race:Protoss"/>
         <Behavior value="BronyaC7Gun2ConstructTimedLife"/>
     </CEffectApplyBehavior>
     <CEffectDamage id="BronyaC7HitDamage">
@@ -1609,7 +1705,6 @@
         <EffectArray value="ThrowSet"/>
     </CEffectSet>
     <CEffectSet id="BronyaC7Gun1AB">
-        <EditorCategories value="Race:Protoss"/>
         <EffectArray value="BronyaC7Gun1Timer"/>
         <EffectArray value="HerrscherConstructCommand2"/>
     </CEffectSet>
@@ -1619,7 +1714,6 @@
         <AreaArray Radius="0.25" Effect="VoidEffect"/>
     </CEffectEnumArea>
     <CEffectCreatePersistent id="DG_021AbilCP0">
-        <EditorCategories value="Race:Zerg"/>
         <OffsetVectorStartLocation Value="TargetPoint"/>
         <Flags index="Channeled" value="1"/>
         <InitialEffect value="DG_021AbilDummy"/>
@@ -1644,7 +1738,6 @@
         <EffectArray value="Suicide"/>
     </CEffectSet>
     <CEffectCreatePersistent id="Herrscher7thAbil1GroundCP">
-        <EditorCategories value="Race:Terran"/>
         <WhichLocation Effect="Herrscher7thAbil1Launch"/>
         <OffsetFacingFallback Value="CasterUnit"/>
         <InitialEffect value="Herrscher7thAbil1GroundImpact"/>
@@ -1653,7 +1746,6 @@
         <PeriodicPeriodArray value="0.25"/>
     </CEffectCreatePersistent>
     <CEffectDamage id="Herrscher7thAbil1GroundImpact" parent="DU_WEAP">
-        <EditorCategories value="Race:Zerg"/>
         <ImpactLocation Value="TargetPoint"/>
         <Kind value="Splash"/>
         <KindSplash value="Splash"/>
@@ -1664,7 +1756,6 @@
         <AttributeBonus index="Light" value="20"/>
     </CEffectDamage>
     <CEffectEnumArea id="Herrscher7thAbil1GroundFireSearch">
-        <EditorCategories value="Race:Terran"/>
         <AINotifyFlags index="HurtFriend" value="1"/>
         <AINotifyFlags index="HurtEnemy" value="1"/>
         <LaunchLocation Value="TargetPoint"/>
@@ -1699,7 +1790,6 @@
         <FacingLocation Value="SourceUnit"/>
     </CEffectModifyUnit>
     <CEffectCreateUnit id="BronyaC7Gun1CU">
-        <EditorCategories value="Race:Protoss"/>
         <WhichLocation Value="TargetPoint"/>
         <CreateFlags index="DropOff" value="0"/>
         <CreateFlags index="ProvideFood" value="0"/>
@@ -1709,7 +1799,6 @@
         <SpawnUnit value="BronyaC7Gun1"/>
     </CEffectCreateUnit>
     <CEffectCreatePersistent id="BronyaC7Gun1CreateOffset">
-        <EditorCategories value="Race:Protoss"/>
         <WhichLocation Value="CasterUnit"/>
         <PeriodCount value="7"/>
         <PeriodicEffectArray value="BronyaC7Gun1CU"/>
@@ -1723,7 +1812,6 @@
         <PeriodicPeriodArray value="0.3125"/>
     </CEffectCreatePersistent>
     <CEffectDamage id="BronyaC7Gun1Kill">
-        <EditorCategories value="Race:Protoss"/>
         <ResponseFlags index="Acquire" value="1"/>
         <ResponseFlags index="Flee" value="1"/>
         <Flags index="Kill" value="1"/>
@@ -1731,7 +1819,6 @@
         <SearchFlags index="CallForHelp" value="1"/>
     </CEffectDamage>
     <CEffectApplyBehavior id="BronyaC7Gun1Timer">
-        <EditorCategories value="Race:Protoss"/>
         <Behavior value="BronyaC7Gun1ConstructTimedLife"/>
     </CEffectApplyBehavior>
     <CEffectModifyUnit id="HerrscherConstructCommand22">
@@ -1784,14 +1871,12 @@
         <EditorCategories value=""/>
     </CEffectApplyBehavior>
     <CEffectDamage id="MHT3WeaponDamage" parent="DU_WEAP">
-        <EditorCategories value="Race:Terran"/>
         <Flags index="Impact" value="0"/>
         <Kind value="Ranged"/>
         <Amount value="8"/>
     </CEffectDamage>
     <CEffectDamage id="MHT3WeaponFireDamage" parent="DU_WEAP">
         <ValidatorArray value="MHTUpgrade"/>
-        <EditorCategories value="Race:Terran"/>
         <Flags index="Impact" value="0"/>
         <Kind value="Splash"/>
         <Amount value="4"/>
@@ -1883,7 +1968,6 @@
         <Count value="1"/>
     </CEffectRemoveBehavior>
     <CEffectLaunchMissile id="Herrscher7thAbil1Launch">
-        <EditorCategories value="Race:Zerg"/>
         <LaunchLocation Value="TargetPoint"/>
         <ImpactLocation Value="TargetPoint"/>
         <LaunchOffset value="0,0.1,15"/>
@@ -1897,7 +1981,6 @@
         <InitialOffset value="0,-20,0"/>
     </CEffectCreatePersistent>
     <CEffectDamage id="NukeDamageMHT">
-        <EditorCategories value="Race:Terran"/>
         <AINotifyFlags index="HurtFriend" value="1"/>
         <AINotifyFlags index="HurtEnemy" value="1"/>
         <AINotifyFlags index="MajorDanger" value="1"/>
@@ -2006,7 +2089,6 @@
         <AreaRelativeOffset value="-1.902,-0.618"/>
     </CEffectEnumArea>
     <CEffectDamage id="RO_047SplatDamage" parent="DU_WEAP">
-        <EditorCategories value="Race:Zerg"/>
         <Kind value="Splash"/>
         <KindSplash value="Splash"/>
         <Amount value="15"/>
@@ -2020,26 +2102,22 @@
         <SpawnUnit value="DG_013Effect"/>
     </CEffectCreateUnit>
     <CEffectSet id="DG_023AbilSet">
-        <EditorCategories value="Race:Terran"/>
         <EffectArray value="DG_023Damage"/>
         <EffectArray value="DG_023Search"/>
         <EffectArray value="DG_023EffectUnit2"/>
     </CEffectSet>
     <CEffectLaunchMissile id="DG_021AbilLaunchMissile22">
-        <EditorCategories value="Race:Zerg"/>
         <ImpactLocation Value="TargetPoint"/>
         <ImpactEffect value="DG_021AbilCP"/>
         <AmmoUnit value="DG_021Missile"/>
         <Movers Link="ArrowHigh"/>
     </CEffectLaunchMissile>
     <CEffectLaunchMissile id="DG_023AbilLaunchMissile">
-        <EditorCategories value="Race:Zerg"/>
         <ImpactLocation Value="TargetPoint"/>
         <ImpactEffect value="DG_023AbilSet"/>
         <AmmoUnit value="DG_023Missile"/>
     </CEffectLaunchMissile>
     <CEffectDamage id="DG_021Damage" parent="DU_WEAP">
-        <EditorCategories value="Race:Zerg"/>
         <ImpactLocation Value="TargetPoint"/>
         <Kind value="Splash"/>
         <KindSplash value="Splash"/>
@@ -2048,12 +2126,10 @@
         <SearchFilters value="Ground;Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable"/>
     </CEffectDamage>
     <CEffectLaunchMissile id="ArrowLaunchMissile2">
-        <EditorCategories value="Race:Zerg"/>
         <ImpactEffect value="ArrowDamage2"/>
         <AmmoUnit value="DG_021Missile"/>
     </CEffectLaunchMissile>
     <CEffectDamage id="DG_020MeleeDamage" parent="DU_WEAP">
-        <EditorCategories value="Race:Zerg"/>
         <Amount value="18"/>
     </CEffectDamage>
     <CEffectEnumArea id="BOSS_010AttackArea">
@@ -2085,16 +2161,13 @@
         <KindSplash value="Melee"/>
         <Amount value="12"/>
     </CEffectDamage>
-    <CEffectApplyBehavior id="CosmicJuggernautUltimate">
-        <EditorCategories value="Race:Protoss"/>
-    </CEffectApplyBehavior>
+    <CEffectApplyBehavior id="CosmicJuggernautUltimate"/>
     <CEffectApplyBehavior id="CosmicJuggernautInvertedHorizonDummy">
         <ValidatorArray index="0" removed="1"/>
         <EditorCategories value=""/>
         <Behavior value="CosmicJuggernautEmpty"/>
     </CEffectApplyBehavior>
     <CEffectDamage id="DG_023Damage" parent="DU_WEAP">
-        <EditorCategories value="Race:Zerg"/>
         <ImpactLocation Value="TargetPoint"/>
         <Kind value="NoProc"/>
         <KindSplash value="NoProc"/>
@@ -2117,7 +2190,6 @@
         <EffectArray value="TargetSlow6second50"/>
     </CEffectSet>
     <CEffectEnumArea id="DG_023Search">
-        <EditorCategories value="Race:Zerg"/>
         <ResponseFlags index="Acquire" value="1"/>
         <ResponseFlags index="Flee" value="1"/>
         <SearchFilters value="Ground;Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable"/>
@@ -2132,19 +2204,16 @@
         <Flags index="Impact" value="0"/>
     </CEffectDamage>
     <CEffectCreatePersistent id="DeadgalScythePercistent3">
-        <EditorCategories value="Race:Zerg"/>
         <Flags index="Channeled" value="1"/>
         <PeriodCount value="1"/>
         <PeriodicEffectArray value="DeadgalScytheSearch3"/>
         <PeriodicPeriodArray value="0.8125"/>
     </CEffectCreatePersistent>
     <CEffectEnumArea id="DeadgalScytheSearch3">
-        <EditorCategories value="Race:Zerg"/>
         <SearchFilters value="-;Self,Player,Ally,Air,Missile,Stasis,Dead,Hidden,Invulnerable"/>
         <AreaArray Arc="90" Radius="0.5" Effect="PsiBlades23"/>
     </CEffectEnumArea>
     <CEffectCreatePersistent id="DG_021AbilCP">
-        <EditorCategories value="Race:Terran"/>
         <OffsetVectorStartLocation Value="TargetPoint"/>
         <OffsetFacingFallback Value="CasterUnit"/>
         <InitialEffect value="DG_021Damage"/>
@@ -2153,7 +2222,6 @@
         <PeriodicPeriodArray value="0.25"/>
     </CEffectCreatePersistent>
     <CEffectEnumArea id="DeathImpactBrunSearch2">
-        <EditorCategories value="Race:Terran"/>
         <AINotifyFlags index="HurtFriend" value="1"/>
         <AINotifyFlags index="HurtEnemy" value="1"/>
         <SearchFilters value="-;Player,Ally,Air,Missile,Destructible,Stasis,Dead,Hidden,Invulnerable"/>
@@ -2194,12 +2262,10 @@
         <PeriodicPeriodArray value="5"/>
     </CEffectCreatePersistent>
     <CEffectDamage id="ArrowDamage" parent="DU_WEAP">
-        <EditorCategories value="Race:Zerg"/>
         <Kind value="Ranged"/>
         <Amount value="20"/>
     </CEffectDamage>
     <CEffectLaunchMissile id="ArrowLaunchMissile">
-        <EditorCategories value="Race:Zerg"/>
         <ImpactEffect value="ArrowDamage"/>
         <AmmoUnit value="DG_020Missile"/>
     </CEffectLaunchMissile>
@@ -2313,7 +2379,6 @@
         <CaseArray Validator="AirUnitFilter" Effect="KianaC4PistolRangedAir"/>
     </CEffectSwitch>
     <CEffectDamage id="KianaC4PistolRanged" parent="DU_WEAP">
-        <EditorCategories value="Race:Terran"/>
         <Kind value="Ranged"/>
         <Amount value="15"/>
         <SearchFilters value="Air;Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable"/>
@@ -2383,7 +2448,6 @@
         <ValidatorArray value="MeiC2Upgrade2"/>
     </CEffectCreatePersistent>
     <CEffectCreatePersistent id="R11Persistent">
-        <EditorCategories value="Race:Terran"/>
         <TimeScaleSource Value="Caster"/>
         <OffsetVectorStartLocation Value="TargetPoint"/>
         <PeriodCount value="3"/>
@@ -2395,7 +2459,6 @@
         <PeriodicPeriodArray value="0"/>
     </CEffectCreatePersistent>
     <CEffectEnumArea id="R11Search">
-        <EditorCategories value="Race:Terran"/>
         <AINotifyFlags index="HurtEnemy" value="1"/>
         <LaunchLocation Value="CasterUnit"/>
         <ImpactLocation Value="CasterPoint"/>
@@ -2435,7 +2498,6 @@
         <EffectArray value="EvadeCoolDown"/>
     </CEffectSet>
     <CEffectCreatePersistent id="MeiC2EvadeIdleMove">
-        <EditorCategories value="Race:Terran"/>
         <WhichLocation Value="CasterPoint"/>
         <Flags index="Channeled" value="1"/>
         <PeriodCount value="11"/>
@@ -2467,7 +2529,6 @@
         <EffectArray value="EvadeCoolDown"/>
     </CEffectSet>
     <CEffectCreatePersistent id="MeiC2EvadeMovingMove">
-        <EditorCategories value="Race:Terran"/>
         <WhichLocation Value="CasterPoint"/>
         <Flags index="Channeled" value="1"/>
         <PeriodCount value="10"/>
@@ -2559,7 +2620,6 @@
         <EffectArray value="RO_047SplatDamage"/>
     </CEffectSet>
     <CEffectCreatePersistent id="SeeleC1UltCharge">
-        <EditorCategories value="Race:Terran"/>
         <WhichLocation Value="TargetUnit"/>
         <TimeScaleSource Value="Caster"/>
         <Flags index="Channeled" value="1"/>
@@ -2617,7 +2677,6 @@
         <BehaviorLink value="SeeleC1UltCharge"/>
     </CEffectRemoveBehavior>
     <CEffectApplyBehavior id="SeeleC1UltChargeSpeed">
-        <EditorCategories value="Race:Terran"/>
         <WhichUnit Value="Caster"/>
     </CEffectApplyBehavior>
     <CEffectDamage id="SeeleC1UltimateDamage">
@@ -2640,7 +2699,6 @@
         <EffectArray value="EvadeCoolDown"/>
     </CEffectSet>
     <CEffectCreatePersistent id="SeeleC1EvadeMovingMove">
-        <EditorCategories value="Race:Terran"/>
         <WhichLocation Value="CasterPoint"/>
         <PeriodCount value="10"/>
         <PeriodicEffectArray value="EvadingMoveForce"/>
@@ -2671,7 +2729,6 @@
         <EffectArray value="EvadeCoolDown"/>
     </CEffectSet>
     <CEffectCreatePersistent id="SeeleC1EvadeIdleMove">
-        <EditorCategories value="Race:Terran"/>
         <WhichLocation Value="CasterPoint"/>
         <PeriodCount value="11"/>
         <PeriodicEffectArray value="VoidEffect"/>
@@ -2695,7 +2752,6 @@
         <Behavior value="SeeleC1EvadeBackwardSpeed"/>
     </CEffectApplyBehavior>
     <CEffectApplyBehavior id="SeeleC1UltimateApply">
-        <EditorCategories value="Race:Terran"/>
         <WhichUnit Value="Caster"/>
         <Behavior value="SeeleC1Ultimate"/>
     </CEffectApplyBehavior>
@@ -2739,7 +2795,6 @@
         <SearchFlags index="OffsetAreaByAngle" value="1"/>
     </CEffectDamage>
     <CEffectDamage id="KianaATTACK" parent="DU_WEAP">
-        <EditorCategories value="Race:Terran"/>
         <Amount value="20"/>
     </CEffectDamage>
     <CEffectCreatePersistent id="KianaC2UltimateTimeCrack">
@@ -2752,7 +2807,6 @@
         <PeriodicPeriodArray value="0.25"/>
     </CEffectCreatePersistent>
     <CEffectDamage id="SeeleATTACK" parent="DU_WEAP">
-        <EditorCategories value="Race:Terran"/>
         <Amount value="20"/>
     </CEffectDamage>
     <CEffectSet id="SeeleC1ChargeAttackModel">
@@ -2942,17 +2996,14 @@
         <WhichUnit Value="Caster"/>
     </CEffectApplyBehavior>
     <CEffectDamage id="SevenThundersOfRetributionAbilityDamage" parent="DU_WEAP">
-        <EditorCategories value="Race:Terran"/>
         <Kind value="Spell"/>
         <Amount value="600"/>
     </CEffectDamage>
     <CEffectSet id="SevenThundersOfRetributionAbilityEffectDamageSet">
-        <EditorCategories value="Race:Terran"/>
         <EffectArray value="SevenThundersOfRetributionAbilityEffectDamageShield"/>
         <EffectArray value="SevenThundersOfRetributionAbilityEffectDamageLife"/>
     </CEffectSet>
     <CEffectDamage id="SevenThundersOfRetributionAbilityEffectDamageShield" parent="DU_WEAP">
-        <EditorCategories value="Race:Terran"/>
         <Flags index="Notification" value="0"/>
         <Flags index="NoScaledDealtBonus" value="1"/>
         <Flags index="NoFractionDealtBonus" value="1"/>
@@ -2966,7 +3017,6 @@
         <VitalFractionMax index="Shields" value="0.005"/>
     </CEffectDamage>
     <CEffectDamage id="SevenThundersOfRetributionAbilityEffectDamageLife" parent="DU_WEAP">
-        <EditorCategories value="Race:Terran"/>
         <Flags index="Notification" value="0"/>
         <Flags index="NoScaledDealtBonus" value="1"/>
         <Flags index="NoFractionDealtBonus" value="1"/>
@@ -2991,7 +3041,6 @@
         <EditorCategories value=""/>
     </CEffectSet>
     <CEffectDamage id="SplitBombDamage2" parent="DU_WEAP_MISSILE">
-        <EditorCategories value="Race:Zerg"/>
         <Visibility value="Visible"/>
         <KindSplash value="Ranged"/>
         <Amount value="12"/>
@@ -3000,7 +3049,6 @@
         <SearchFilters value="-;Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable"/>
     </CEffectDamage>
     <CEffectLaunchMissile id="SplitBombLM2">
-        <EditorCategories value="Race:Zerg"/>
         <ImpactEffect value="SplitBombDamage2"/>
         <AmmoUnit value="SplitBomb2"/>
     </CEffectLaunchMissile>
@@ -3414,7 +3462,6 @@
         <Player Value="Origin"/>
     </CEffectIssueOrder>
     <CEffectSet id="MHT3WeaponSet">
-        <EditorCategories value="Race:Terran"/>
         <EffectArray value="MHT3WeaponDamage"/>
         <EffectArray value="MHT3WeaponFireDamage"/>
     </CEffectSet>
@@ -3464,7 +3511,6 @@
         <TimeScaleSource Value="Global"/>
     </CEffectApplyForce>
     <CEffectApplyBehavior id="UL_100AbilSlowApplyBuff">
-        <EditorCategories value="Race:Protoss"/>
         <Behavior value="HonkaiSlow"/>
         <Flags index="UseDuration" value="1"/>
         <Duration value="0.5"/>
@@ -3472,27 +3518,23 @@
     </CEffectApplyBehavior>
     <CEffectDamage id="PsiStormDamage2">
         <ValidatorArray value="PsiStormUTargetFilters"/>
-        <EditorCategories value="Race:Protoss"/>
         <Visibility value="Hidden"/>
         <Amount value="10"/>
     </CEffectDamage>
     <CEffectDamage id="PsiStormDamageInitial2">
         <ValidatorArray value="PsiStormUTargetFilters"/>
-        <EditorCategories value="Race:Protoss"/>
         <ResponseFlags index="Acquire" value="1"/>
         <ResponseFlags index="Flee" value="1"/>
         <Flags index="Notification" value="1"/>
         <Amount value="10"/>
     </CEffectDamage>
     <CEffectCreatePersistent id="UL_100AbilSlowPersistent">
-        <EditorCategories value="Race:Protoss"/>
         <InitialEffect value="UL_100AbilSlowSearch"/>
         <PeriodCount value="32"/>
         <PeriodicEffectArray value="UL_100AbilSlowSearch"/>
         <PeriodicPeriodArray value="0.25"/>
     </CEffectCreatePersistent>
     <CEffectEnumArea id="UL_100AbilSlowSearch">
-        <EditorCategories value="Race:Protoss"/>
         <AINotifyFlags index="HurtFriend" value="1"/>
         <AINotifyFlags index="HurtEnemy" value="1"/>
         <SearchFilters value="Ground;Player,Ally,Structure,Missile,Stasis,Dead,Hidden,Invulnerable"/>
@@ -3500,7 +3542,6 @@
         <SearchFlags index="CallForHelp" value="1"/>
     </CEffectEnumArea>
     <CEffectSet id="UL_100AbilInitialSet">
-        <EditorCategories value="Race:Zerg"/>
         <EffectArray value="UL_100AbilDamage"/>
         <EffectArray value="UL_100AbilSlowPersistent"/>
         <TargetLocationType value="Point"/>
@@ -3532,7 +3573,6 @@
         <SpawnUnit value="CosmicJuggernaut"/>
     </CEffectCreateUnit>
     <CEffectDamage id="SplitBombDamage" parent="DU_WEAP_MISSILE">
-        <EditorCategories value="Race:Zerg"/>
         <Visibility value="Visible"/>
         <KindSplash value="Ranged"/>
         <Amount value="24"/>
@@ -3541,7 +3581,6 @@
         <SearchFilters value="-;Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable"/>
     </CEffectDamage>
     <CEffectDamage id="UL_100AbilDamage" parent="DU_WEAP_MISSILE">
-        <EditorCategories value="Race:Zerg"/>
         <ImpactLocation Value="TargetPoint"/>
         <Visibility value="Visible"/>
         <KindSplash value="Ranged"/>
@@ -3550,7 +3589,6 @@
         <SearchFilters value="Ground;Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable"/>
     </CEffectDamage>
     <CEffectLaunchMissile id="SplitBombLM">
-        <EditorCategories value="Race:Zerg"/>
         <ImpactEffect value="SplitBombSet"/>
         <AmmoUnit value="SplitBomb"/>
         <LaunchEffect value="UL_100AddKite"/>
@@ -3559,7 +3597,6 @@
         <EditorCategories value=""/>
     </CEffectApplyBehavior>
     <CEffectCreatePersistent id="InterceptorsLaunchInstance">
-        <EditorCategories value="Race:Protoss"/>
         <WhichLocation Value="TargetUnit"/>
         <PeriodCount value="4"/>
         <PeriodicValidator value="CasterNotDead"/>
@@ -3577,7 +3614,6 @@
         <ValidatorArray value="NotThorWreckage"/>
         <ValidatorArray value="NotOdinWreckage"/>
         <ValidatorArray value="NotVortexd"/>
-        <EditorCategories value="Race:Terran"/>
         <DrainVital value="Energy"/>
         <DrainVitalCostFactor value="0.0312"/>
         <RechargeVitalRate value="128"/>
@@ -3593,13 +3629,11 @@
         <EffectArray value="RemoveInvincibleOuter"/>
     </CEffectSet>
     <CEffectDamage id="RO_033AbliDamage2" parent="DU_WEAP_SPLASH">
-        <EditorCategories value="Race:Terran"/>
         <KindSplash value="Splash"/>
         <Amount value="32"/>
         <Death value="Blast"/>
     </CEffectDamage>
     <CEffectDamage id="RO_033AbliDamage" parent="DU_WEAP_SPLASH">
-        <EditorCategories value="Race:Terran"/>
         <KindSplash value="Splash"/>
         <Amount value="60"/>
         <Death value="Blast"/>
@@ -3629,7 +3663,6 @@
         <SpawnRange value="6"/>
     </CEffectCreateUnit>
     <CEffectLaunchMissile id="RO_033LM">
-        <EditorCategories value="Race:Terran"/>
         <LaunchEffect value="RO_033MissileAB"/>
         <ImpactEffect value="RO_033AbilHitSet"/>
         <AmmoUnit value="RO_033Missile"/>
@@ -3648,7 +3681,6 @@
         <AreaArray Radius="3" Effect="RO_033AbilExplodeSet"/>
     </CEffectEnumArea>
     <CEffectLaunchMissile id="RO_050AbilLM">
-        <EditorCategories value="Race:Zerg"/>
         <ImpactEffect value="RO_050AbilSet"/>
         <Flags index="Return" value="1"/>
         <AmmoUnit value="RO_050AbilWeapon"/>
@@ -3657,7 +3689,6 @@
         <Movers Link="MissileDefault"/>
     </CEffectLaunchMissile>
     <CEffectDamage id="RO_050AbilDamage" parent="DU_WEAP_MISSILE">
-        <EditorCategories value="Race:Zerg"/>
         <Amount value="30"/>
     </CEffectDamage>
     <CEffectApplyBehavior id="MedivacHPBoost">
@@ -3696,17 +3727,14 @@
     </CEffectApplyBehavior>
     <CEffectDamage id="PsiBlades23" parent="DU_WEAP">
         <ValidatorArray value="NotHidden"/>
-        <EditorCategories value="Race:Zerg"/>
         <Amount value="18"/>
         <Death value="Eviscerate"/>
     </CEffectDamage>
     <CEffectLaunchMissile id="RO_034AttackLaunchMissile">
-        <EditorCategories value="Race:Terran"/>
         <ImpactEffect value="RO_034WeaponDamage"/>
         <AmmoUnit value="RO_030Weapon"/>
     </CEffectLaunchMissile>
     <CEffectDamage id="RO_034WeaponDamage" parent="DU_WEAP_SPLASH">
-        <EditorCategories value="Race:Terran"/>
         <Kind value="Ranged"/>
         <KindSplash value="Ranged"/>
         <Amount value="24"/>
@@ -3718,7 +3746,6 @@
         <SearchFlags index="SameCliff" value="0"/>
     </CEffectDamage>
     <CEffectCreatePersistent id="RO_034WeaponPersistent">
-        <EditorCategories value="Race:Terran"/>
         <WhichLocation Value="TargetUnit"/>
         <TimeScaleSource Value="Caster"/>
         <Flags index="Channeled" value="1"/>
@@ -3740,7 +3767,6 @@
         <EffectArray value="RO_032AbliDamage2"/>
     </CEffectSet>
     <CEffectDamage id="RO_032AbliDamage" parent="DU_WEAP_SPLASH">
-        <EditorCategories value="Race:Terran"/>
         <Kind value="NoProc"/>
         <KindSplash value="NoProc"/>
         <Amount value="60"/>
@@ -3751,7 +3777,6 @@
         <SearchFlags index="SameCliff" value="0"/>
     </CEffectDamage>
     <CEffectDamage id="RO_032AbliDamage2" parent="DU_WEAP_SPLASH">
-        <EditorCategories value="Race:Terran"/>
         <Kind value="NoProc"/>
         <KindSplash value="NoProc"/>
         <Amount value="20"/>
@@ -3778,7 +3803,6 @@
         <SpawnRange value="6"/>
     </CEffectCreateUnit>
     <CEffectLaunchMissile id="RO_032LM">
-        <EditorCategories value="Race:Terran"/>
         <ImpactEffect value="RO_032AbilHitSet"/>
         <AmmoUnit value="RO_032Missile"/>
         <LaunchEffect value="RO_032MissileAB"/>
@@ -3831,7 +3855,6 @@
     </CEffectRemoveBehavior>
     <CEffectCreateHealer id="CosmicJuggernautCharge">
         <ValidatorArray value="CosmicJuggernautCharged"/>
-        <EditorCategories value="Race:Protoss"/>
         <PeriodicEffect value="ShieldBatteryRechargeEx5@RevealSearch"/>
         <DrainVital value="Energy"/>
         <RechargeVital value="Energy"/>
@@ -3965,12 +3988,10 @@
         <Death value="Normal"/>
     </CEffectDamage>
     <CEffectDamage id="SevenThundersOfRetributionDamage" parent="DU_WEAP">
-        <EditorCategories value="Race:Terran"/>
         <Kind value="Spell"/>
         <Amount value="45"/>
     </CEffectDamage>
     <CEffectSet id="SevenThundersOfRetributionSet">
-        <EditorCategories value="Race:Terran"/>
         <EffectArray value="SevenThundersOfRetributionAbilityDamage"/>
         <EffectArray value="SevenThundersOfRetributionEffect"/>
     </CEffectSet>
@@ -3998,29 +4019,24 @@
         <PeriodicPeriodArray value="0.375"/>
     </CEffectCreatePersistent>
     <CEffectDamage id="ValkyrjaRifleDamageFire" parent="DU_WEAP">
-        <EditorCategories value="Race:Terran"/>
         <Kind value="Splash"/>
         <Amount value="8.4"/>
     </CEffectDamage>
     <CEffectSwitch id="ValkyrjaRifleDamageCase">
-        <EditorCategories value="Race:Terran"/>
         <CaseDefault value="ValkyrjaRifleDamage"/>
         <CaseArray Validator="StigmataFG1" Effect="ValkyrjaRifleDamageFire"/>
         <CaseArray Validator="StigmataTG1" Effect="ValkyrjaRifleDamageThunder"/>
         <CaseArray Validator="StigmataIG1" Effect="ValkyrjaRifleDamageIce"/>
     </CEffectSwitch>
     <CEffectDamage id="ValkyrjaRifleDamageThunder" parent="DU_WEAP">
-        <EditorCategories value="Race:Terran"/>
         <Kind value="Spell"/>
         <Amount value="8.4"/>
     </CEffectDamage>
     <CEffectDamage id="ValkyrjaRifleDamageIce" parent="DU_WEAP">
-        <EditorCategories value="Race:Terran"/>
         <Kind value="NoProc"/>
         <Amount value="8.4"/>
     </CEffectDamage>
     <CEffectCreatePersistent id="ValkyrjaSnipeHigherCP">
-        <EditorCategories value="Race:Terran"/>
         <ResponseFlags index="Acquire" value="1"/>
         <ResponseFlags index="Flee" value="1"/>
         <WhichLocation Value="TargetUnit"/>
@@ -4032,7 +4048,6 @@
         <PeriodicPeriodArray value="0.25"/>
     </CEffectCreatePersistent>
     <CEffectDamage id="ValkyrjaSnipeDamage" parent="DU_WEAP">
-        <EditorCategories value="Race:Terran"/>
         <ImpactLocation Value="TargetUnit"/>
         <ArmorReduction value="0"/>
         <Kind value="Ranged"/>
@@ -4040,7 +4055,6 @@
         <Death value="Silentkill"/>
     </CEffectDamage>
     <CEffectDamage id="ValkyrjaRifleDamage" parent="DU_WEAP">
-        <EditorCategories value="Race:Terran"/>
         <Kind value="Ranged"/>
         <Amount value="7"/>
     </CEffectDamage>
@@ -4061,7 +4075,6 @@
         <SearchFlags index="SameCliff" value="0"/>
     </CEffectDamage>
     <CEffectDamage id="Herrscher5thWeapon2Damage" parent="DU_WEAP_SPLASH">
-        <EditorCategories value="Race:Zerg"/>
         <Kind value="NoProc"/>
         <KindSplash value="NoProc"/>
         <Amount value="25"/>
@@ -4075,18 +4088,15 @@
     </CEffectDamage>
     <CEffectEnumArea id="Herrscher5thWeapon2Search">
         <ValidatorArray value="CliffLevelGE1"/>
-        <EditorCategories value="Race:Zerg"/>
         <SearchFilters value="-;Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable"/>
         <AreaArray Radius="1.5" Effect="TargetSlow6second50"/>
         <SearchFlags index="CallForHelp" value="1"/>
     </CEffectEnumArea>
     <CEffectLaunchMissile id="Herrscher5thWeapon2Launch">
-        <EditorCategories value="Race:Zerg"/>
         <ImpactEffect value="Herrscher5thWeapon2ImpactSet"/>
         <AmmoUnit value="Herrscher5thWeaponMissile"/>
     </CEffectLaunchMissile>
     <CEffectSet id="Herrscher5thWeapon2ImpactSet">
-        <EditorCategories value="Race:Zerg"/>
         <EffectArray value="Herrscher5thWeapon2Damage"/>
         <EffectArray value="Herrscher5thWeapon2Search"/>
     </CEffectSet>
@@ -4108,7 +4118,6 @@
         <Flags index="UseDuration" value="1"/>
     </CEffectApplyBehavior>
     <CEffectCreateUnit id="IceField">
-        <EditorCategories value="Race:Protoss"/>
         <WhichLocation Value="TargetPoint"/>
         <CreateFlags index="DropOff" value="0"/>
         <CreateFlags index="Placement" value="0"/>
@@ -4119,7 +4128,6 @@
         <SpawnRange value="0"/>
     </CEffectCreateUnit>
     <CEffectCreateUnit id="IceFieldSmall">
-        <EditorCategories value="Race:Protoss"/>
         <WhichLocation Value="TargetPoint"/>
         <CreateFlags index="DropOff" value="0"/>
         <CreateFlags index="Placement" value="0"/>
@@ -4130,12 +4138,10 @@
         <SpawnRange value="0"/>
     </CEffectCreateUnit>
     <CEffectEnumArea id="IceFieldSearch2">
-        <EditorCategories value="Race:Protoss"/>
         <SearchFilters value="-;Player,Ally,Dead,Hidden"/>
         <AreaArray Radius="1.5" Effect="IceFieldAB"/>
     </CEffectEnumArea>
     <CEffectApplyBehavior id="IceFieldTimedLife">
-        <EditorCategories value="Race:Protoss"/>
         <Behavior value="IceFieldFate"/>
     </CEffectApplyBehavior>
     <CEffectCreatePersistent id="Herrscher4thWaveCP">
@@ -4152,7 +4158,6 @@
         <PeriodicPeriodArray value="0"/>
     </CEffectCreatePersistent>
     <CEffectCreateUnit id="Herrscher4thWeaponCU2">
-        <EditorCategories value="Race:Zerg"/>
         <WhichLocation Value="TargetPoint"/>
         <CreateFlags index="DropOff" value="0"/>
         <CreateFlags index="OffsetByRadius" value="0"/>
@@ -4183,7 +4188,6 @@
         <AreaArray Radius="1.5" Effect="ThrowSet12"/>
     </CEffectEnumArea>
     <CEffectApplyBehavior id="Herrscher4thWaveSpawnAB">
-        <EditorCategories value="Race:Protoss"/>
         <Behavior value="Herrscher4thWaveTarget"/>
     </CEffectApplyBehavior>
     <CEffectDamage id="Herrscher4thAbilDamage">
@@ -4197,26 +4201,21 @@
         <Death value="Disintegrate"/>
     </CEffectDamage>
     <CEffectModifyUnit id="Herrscher4thWeaponSpawnMU">
-        <EditorCategories value="Race:Protoss"/>
         <FacingLocation Value="CasterUnit"/>
     </CEffectModifyUnit>
     <CEffectModifyUnit id="Herrscher4thWaveSpawnMU">
-        <EditorCategories value="Race:Protoss"/>
         <FacingLocation Value="CasterUnit"/>
     </CEffectModifyUnit>
     <CEffectSet id="Herrscher4thWeaponSpawnSet">
-        <EditorCategories value="Race:Protoss"/>
         <EffectArray value="Herrscher4thWeaponSpawnAB"/>
         <EffectArray value="Herrscher4thWeaponSpawnMU"/>
     </CEffectSet>
     <CEffectSet id="Herrscher4thWaveSpawnSet">
-        <EditorCategories value="Race:Protoss"/>
         <EffectArray value="Herrscher4thWaveSpawnAB"/>
         <EffectArray value="Herrscher4thWaveSpawnMU"/>
     </CEffectSet>
     <CEffectDamage id="Herrscher6thDeathCloudDamage">
         <ValidatorArray value=""/>
-        <EditorCategories value="Race:Zerg"/>
         <ResponseFlags index="Acquire" value="1"/>
         <ResponseFlags index="Flee" value="1"/>
         <ImpactLocation Value="TargetUnit"/>
@@ -4238,18 +4237,15 @@
         <Maximum value="40"/>
     </CEffectDamage>
     <CEffectApplyBehavior id="Herrscher6thDeathCloudAB">
-        <EditorCategories value="Race:Zerg"/>
         <Behavior value="Herrscher6thDeathCloud"/>
     </CEffectApplyBehavior>
     <CEffectCreatePersistent id="Herrscher6thDeathCloudCP">
-        <EditorCategories value="Race:Zerg"/>
         <InitialEffect value="Herrscher6thDeathCloudSearch"/>
         <PeriodCount value="30"/>
         <PeriodicEffectArray value="Herrscher6thDeathCloudSearch"/>
         <PeriodicPeriodArray value="0.5"/>
     </CEffectCreatePersistent>
     <CEffectEnumArea id="Herrscher6thDeathCloudSearch">
-        <EditorCategories value="Race:Zerg"/>
         <ImpactLocation Value="TargetPoint"/>
         <SearchFilters value="-;Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable"/>
         <AreaArray Radius="3.5" Effect="Herrscher6thDeathCloudAB"/>
@@ -4269,7 +4265,6 @@
         <WhichUnit Value="Caster"/>
     </CEffectApplyBehavior>
     <CEffectDamage id="B22Damage" parent="DU_WEAP">
-        <EditorCategories value="Race:Terran"/>
         <DamageModifierSource Value="Caster"/>
         <Visibility value="Visible"/>
         <Kind value="Ranged"/>
@@ -4303,8 +4298,7 @@
         <Kind value="Ranged"/>
     </CEffectDamage>
     <CEffectEnumArea id="Herrscher3rdAbil2Search">
-        <EditorCategories value="Race:Protoss"/>
-        <ImpactLocation Value="TargetUnit"/>
+        <ImpactLocation Value="TargetPoint"/>
         <IncludeArray Value="Target"/>
         <SearchFilters value="-;Player,Ally,Structure,Missile,Stasis,Dead,Hidden,Invulnerable"/>
         <AreaArray Radius="1" Effect="Palsy"/>
@@ -4469,7 +4463,6 @@
         <Death value="Disintegrate"/>
     </CEffectDamage>
     <CEffectCreateUnit id="Herrscher4thWeaponCU">
-        <EditorCategories value="Race:Zerg"/>
         <WhichLocation Value="CasterUnit"/>
         <CreateFlags index="DropOff" value="0"/>
         <CreateFlags index="OffsetByRadius" value="0"/>
@@ -4502,7 +4495,6 @@
         <Amount value="40"/>
     </CEffectDamage>
     <CEffectCreatePersistent id="Herrscher5thWeapon1CP">
-        <EditorCategories value="Race:Zerg"/>
         <WhichLocation Value="SourcePoint"/>
         <TimeScaleSource Value="Caster"/>
         <OffsetVectorStartLocation Value="CasterPoint"/>
@@ -4536,7 +4528,6 @@
     </CEffectCreatePersistent>
     <CEffectDamage id="Herrscher5thWeapon1Damage" parent="DU_WEAP_SPLASH">
         <ValidatorArray value="CliffLevelGE1"/>
-        <EditorCategories value="Race:Zerg"/>
         <Kind value="NoProc"/>
         <Amount value="18"/>
         <Death value="Freeze"/>
@@ -4544,7 +4535,6 @@
     </CEffectDamage>
     <CEffectEnumArea id="Herrscher5thWeapon1Search">
         <ValidatorArray value="CliffLevelGE1"/>
-        <EditorCategories value="Race:Zerg"/>
         <SearchFilters value="Ground;Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable"/>
         <AreaArray Radius="0.75" Effect="Herrscher5thWeapon1Damage"/>
         <SearchFlags index="CallForHelp" value="1"/>
@@ -4563,7 +4553,6 @@
     </CEffectDamage>
     <CEffectEnumArea id="LiberatorTargetMorphSearchArea"/>
     <CEffectDamage id="NukeDamage2">
-        <EditorCategories value="Race:Terran"/>
         <AINotifyFlags index="HurtFriend" value="1"/>
         <AINotifyFlags index="HurtEnemy" value="1"/>
         <AINotifyFlags index="MajorDanger" value="1"/>
@@ -4609,23 +4598,19 @@
         <AmmoUnit value="Nuke2"/>
     </CEffectLaunchMissile>
     <CEffectSet id="PurificationNovaTargettedSearchSet3">
-        <EditorCategories value="Race:Protoss"/>
         <EffectArray value="Herrscher4thWeaponSearch"/>
         <EffectArray value="Kill"/>
     </CEffectSet>
     <CEffectApplyBehavior id="Herrscher4thWeaponSpawnAB">
-        <EditorCategories value="Race:Protoss"/>
         <Behavior value="Herrscher4thWeaponTarget"/>
     </CEffectApplyBehavior>
     <CEffectCreateUnit id="RO_031Abil">
-        <EditorCategories value="Race:Terran"/>
         <WhichLocation Value="TargetPoint"/>
         <SpawnEffect value="RO_031AbilLaunch"/>
         <SpawnUnit value="RO_031AbilUnit"/>
         <SpawnRange value="1"/>
     </CEffectCreateUnit>
     <CEffectLaunchMissile id="RO_031AbilLM">
-        <EditorCategories value="Race:Terran"/>
         <LaunchLocation Value="CasterUnit"/>
         <FinishEffect value="KillTarget"/>
         <AmmoUnit value="RO_031AbilUnit"/>
@@ -4634,7 +4619,6 @@
         <DeathType value="Unknown"/>
     </CEffectLaunchMissile>
     <CEffectSet id="RO_031AbilLaunch">
-        <EditorCategories value="Race:Terran"/>
         <EffectArray value="RO_031AbilLM"/>
         <EffectArray value="MakePrecursor"/>
     </CEffectSet>
@@ -4669,7 +4653,6 @@
     </CEffectApplyBehavior>
     <CEffectApplyBehavior id="RODrop">
         <ValidatorArray index="0" removed="1"/>
-        <EditorCategories value="Race:Terran"/>
     </CEffectApplyBehavior>
     <CEffectDamage id="RODropDamage">
         <EditorCategories value=""/>
@@ -4679,7 +4662,6 @@
     </CEffectDamage>
     <CEffectApplyBehavior id="RODropEnd">
         <ValidatorArray index="0" removed="1"/>
-        <EditorCategories value="Race:Terran"/>
     </CEffectApplyBehavior>
     <CEffectCreatePersistent id="RODropEndPersistent">
         <EditorCategories value=""/>
@@ -4723,12 +4705,10 @@
         <ValidatorArray value="TargrtNotBaTi"/>
     </CEffectApplyForce>
     <CEffectLaunchMissile id="RO_031AttackLaunchMissile">
-        <EditorCategories value="Race:Terran"/>
         <ImpactEffect value="RO_031WeaponDamage"/>
         <AmmoUnit value="RO_030Weapon"/>
     </CEffectLaunchMissile>
     <CEffectDamage id="RO_031WeaponDamage" parent="DU_WEAP_SPLASH">
-        <EditorCategories value="Race:Terran"/>
         <Kind value="Ranged"/>
         <KindSplash value="Ranged"/>
         <Amount value="18"/>
@@ -4740,7 +4720,6 @@
         <SearchFlags index="SameCliff" value="0"/>
     </CEffectDamage>
     <CEffectCreatePersistent id="RO_031WeaponPersistent">
-        <EditorCategories value="Race:Terran"/>
         <WhichLocation Value="TargetUnit"/>
         <TimeScaleSource Value="Caster"/>
         <Flags index="Channeled" value="1"/>
@@ -4752,7 +4731,6 @@
         <PeriodicPeriodArray value="0"/>
     </CEffectCreatePersistent>
     <CEffectCreatePersistent id="RO_031AbilPersistent">
-        <EditorCategories value="Race:Terran"/>
         <WhichLocation Value="CasterPoint"/>
         <TimeScaleSource Value="Caster"/>
         <Flags index="Channeled" value="1"/>
@@ -4862,18 +4840,15 @@
     <CEffectModifyUnit id="Transfusion2">
         <ValidatorArray value="LifeNotFull"/>
         <ValidatorArray value="NotDisintegrating"/>
-        <EditorCategories value="Race:Zerg"/>
         <VitalArray index="Life">
             <Change value="150"/>
         </VitalArray>
     </CEffectModifyUnit>
     <CEffectApplyBehavior id="TransfusionAB2">
-        <EditorCategories value="Race:Zerg"/>
         <Behavior value="Transfusion2"/>
     </CEffectApplyBehavior>
     <CEffectModifyUnit id="TransfusionHealTick2">
         <ValidatorArray value="NotDisintegrating"/>
-        <EditorCategories value="Race:Zerg"/>
         <VitalArray index="Life">
             <Change value="1"/>
         </VitalArray>
@@ -4885,17 +4860,14 @@
         <ValidatorArray value="LifeNotFull"/>
         <ValidatorArray value="NotDisintegrating"/>
         <ValidatorArray value="TargetNot6thB"/>
-        <EditorCategories value="Race:Zerg"/>
         <EffectArray value="Transfusion2"/>
         <EffectArray value="TransfusionAB2"/>
     </CEffectSet>
     <CEffectSwitch id="ValkyrjaSnipeCase">
-        <EditorCategories value="Race:Terran"/>
         <CaseArray Validator="TargetHigher" Effect="ValkyrjaSnipeHigherCP"/>
         <CaseDefault value="ValkyrjaSnipeCP"/>
     </CEffectSwitch>
     <CEffectCreatePersistent id="ValkyrjaSnipeCP">
-        <EditorCategories value="Race:Terran"/>
         <ResponseFlags index="Acquire" value="1"/>
         <ResponseFlags index="Flee" value="1"/>
         <WhichLocation Value="TargetUnit"/>
@@ -4907,7 +4879,6 @@
         <PeriodicPeriodArray value="0.25"/>
     </CEffectCreatePersistent>
     <CEffectCreatePersistent id="BronyaC7Gun1PC">
-        <EditorCategories value="Race:Protoss"/>
         <WhichLocation Value="TargetUnit"/>
         <TimeScaleSource Value="Caster"/>
         <Flags index="Channeled" value="1"/>
@@ -4917,7 +4888,6 @@
         <PeriodicPeriodArray value="0.0625"/>
     </CEffectCreatePersistent>
     <CEffectDamage id="BronyaC7Gun1Damage" parent="DU_WEAP">
-        <EditorCategories value="Race:Protoss"/>
         <DamageModifierSource Value="Caster"/>
         <AttributeBonus index="Heroic" value="5"/>
         <Visibility value="Visible"/>
@@ -4941,7 +4911,6 @@
         <KindSplash value="Spell"/>
     </CEffectDamage>
     <CEffectDamage id="RO_040Damage" parent="DU_WEAP">
-        <EditorCategories value="Race:Terran"/>
         <AINotifyFlags index="HurtEnemy" value="1"/>
         <ImpactLocation Value="CasterUnit"/>
         <KindSplash value="Melee"/>
@@ -4954,7 +4923,6 @@
         <EditorCategories value=""/>
     </CEffectApplyBehavior>
     <CEffectLaunchMissile id="WeaponB15FireLaunchPoint">
-        <EditorCategories value="Race:Terran"/>
         <ImpactLocation Value="TargetPoint"/>
         <ImpactEffect value="WeaponB15FireImpactSet"/>
         <AmmoUnit value="B15FireMissile"/>
@@ -4966,7 +4934,6 @@
         <CaseDefault value="CannonCharge"/>
     </CEffectSwitch>
     <CEffectLaunchMissile id="WeaponB1LaunchPoint">
-        <EditorCategories value="Race:Terran"/>
         <ImpactLocation Value="TargetPoint"/>
         <ImpactEffect value="WeaponB1DamageAOE"/>
         <AmmoUnit value="B1Missile"/>
@@ -4978,13 +4945,11 @@
         <CaseDefault value="WeaponB1LaunchPoint"/>
     </CEffectSwitch>
     <CEffectLaunchMissile id="WeaponB23LaunchExPoint">
-        <EditorCategories value="Race:Terran"/>
         <ImpactLocation Value="TargetPoint"/>
         <ImpactEffect value="WeaponB23StrongImpactSet"/>
         <AmmoUnit value="B23Missile"/>
     </CEffectLaunchMissile>
     <CEffectLaunchMissile id="WeaponB23LaunchPoint">
-        <EditorCategories value="Race:Terran"/>
         <ImpactLocation Value="TargetPoint"/>
         <ImpactEffect value="WeaponB23DamageAOE"/>
         <AmmoUnit value="B23Missile"/>
@@ -5001,12 +4966,10 @@
         <CaseDefault value="WeaponCannonB34LaunchPoint"/>
     </CEffectSwitch>
     <CEffectLaunchMissile id="BronyaC7Attack2Launch">
-        <EditorCategories value="Race:Terran"/>
         <ImpactEffect value="BronyaC7Attack2Damage"/>
         <AmmoUnit value="BronyaC7_Drill2"/>
     </CEffectLaunchMissile>
     <CEffectCreatePersistent id="WeaponB6ChargePersistent">
-        <EditorCategories value="Race:Terran"/>
         <WhichLocation Value="TargetUnit"/>
         <TimeScaleSource Value="Caster"/>
         <Flags index="Channeled" value="1"/>
@@ -5021,7 +4984,6 @@
         <CaseDefault value="CannonCharge"/>
     </CEffectSwitch>
     <CEffectDamage id="WeaponB6DamageAOE" parent="DU_WEAP">
-        <EditorCategories value="Race:Terran"/>
         <AttributeBonus index="Armored" value="8"/>
         <Kind value="Ranged"/>
         <KindSplash value="Ranged"/>
@@ -5032,7 +4994,6 @@
         <SearchFilters value="-;Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable"/>
     </CEffectDamage>
     <CEffectDamage id="WeaponB6DamageAOE2" parent="DU_WEAP">
-        <EditorCategories value="Race:Terran"/>
         <Kind value="Ranged"/>
         <KindSplash value="Ranged"/>
         <Amount value="5"/>
@@ -5041,23 +5002,19 @@
         <SearchFilters value="Ground;Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable"/>
     </CEffectDamage>
     <CEffectLaunchMissile id="WeaponB6Launch">
-        <EditorCategories value="Race:Terran"/>
         <ImpactEffect value="WeaponB6ImpactPersistent"/>
         <AmmoUnit value="B1Missile"/>
     </CEffectLaunchMissile>
     <CEffectLaunchMissile id="WeaponB6Launch2">
-        <EditorCategories value="Race:Terran"/>
         <ImpactLocation Value="TargetPoint"/>
         <AmmoUnit value="B6Missile2"/>
     </CEffectLaunchMissile>
     <CEffectLaunchMissile id="WeaponB6LaunchPoint">
-        <EditorCategories value="Race:Terran"/>
         <ImpactEffect value="WeaponB6ImpactPersistent"/>
         <AmmoUnit value="B1Missile"/>
         <ImpactLocation Value="TargetPoint"/>
     </CEffectLaunchMissile>
     <CEffectCreatePersistent id="WeaponB6LaunchPersistent">
-        <EditorCategories value="Race:Terran"/>
         <WhichLocation Value="TargetUnit"/>
         <TimeScaleSource Value="Caster"/>
         <InitialEffect value="CannonStopCharge"/>
@@ -5109,7 +5066,6 @@
         <AreaArray Radius="4" Effect="RadiusReduce"/>
     </CEffectEnumArea>
     <CEffectCreatePersistent id="WeaponB28ChargePersistent">
-        <EditorCategories value="Race:Terran"/>
         <WhichLocation Value="TargetUnit"/>
         <TimeScaleSource Value="Caster"/>
         <Flags index="Channeled" value="1"/>
@@ -5124,7 +5080,6 @@
         <CaseDefault value="CannonCharge"/>
     </CEffectSwitch>
     <CEffectDamage id="WeaponB28Damage" parent="DU_WEAP">
-        <EditorCategories value="Race:Terran"/>
         <Kind value="Ranged"/>
         <KindSplash value="Ranged"/>
         <Amount value="100"/>
@@ -5159,12 +5114,10 @@
         <EffectArray value="WeaponB28BlackHolePersistent"/>
     </CEffectSet>
     <CEffectLaunchMissile id="WeaponB28Launch">
-        <EditorCategories value="Race:Terran"/>
         <ImpactEffect value="WeaponB28ImpactSet"/>
         <AmmoUnit value="B28Missile"/>
     </CEffectLaunchMissile>
     <CEffectCreatePersistent id="WeaponB28LaunchPersistent">
-        <EditorCategories value="Race:Terran"/>
         <WhichLocation Value="TargetUnit"/>
         <TimeScaleSource Value="Caster"/>
         <InitialEffect value="CannonStopCharge"/>
@@ -5184,7 +5137,6 @@
         <EditorCategories value=""/>
     </CEffectSet>
     <CEffectCreatePersistent id="WeaponB34ChargePersistent">
-        <EditorCategories value="Race:Terran"/>
         <WhichLocation Value="TargetUnit"/>
         <TimeScaleSource Value="Caster"/>
         <Flags index="Channeled" value="1"/>
@@ -5199,7 +5151,6 @@
         <CaseDefault value="CannonCharge"/>
     </CEffectSwitch>
     <CEffectCreatePersistent id="WeaponB34LaunchPersistent">
-        <EditorCategories value="Race:Terran"/>
         <WhichLocation Value="TargetUnit"/>
         <TimeScaleSource Value="Caster"/>
         <InitialEffect value="CannonStopCharge"/>
@@ -5216,7 +5167,6 @@
     </CEffectCreatePersistent>
     <CEffectCreatePersistent id="WeaponB26Persistent">
         <ValidatorArray value="CannonLaserNotInCD"/>
-        <EditorCategories value="Race:Terran"/>
         <WhichLocation Value="TargetUnit"/>
         <Flags index="Channeled" value="1"/>
         <Flags index="PersistUntilDestroyed" value="1"/>
@@ -5227,7 +5177,6 @@
     </CEffectCreatePersistent>
     <CEffectCreatePersistent id="WeaponB22Persistent">
         <ValidatorArray value="CannonLaserNotInCD"/>
-        <EditorCategories value="Race:Terran"/>
         <WhichLocation Value="TargetUnit"/>
         <Flags index="Channeled" value="1"/>
         <Flags index="PersistUntilDestroyed" value="1"/>
@@ -5274,14 +5223,12 @@
         <EffectArray value="B18CreatePersistent"/>
     </CEffectSet>
     <CEffectDamage id="B7Damage2" parent="DU_WEAP">
-        <EditorCategories value="Race:Terran"/>
         <DamageModifierSource Value="Caster"/>
         <Visibility value="Visible"/>
         <Kind value="Ranged"/>
         <Amount value="6"/>
     </CEffectDamage>
     <CEffectDamage id="B7Damage3" parent="DU_WEAP">
-        <EditorCategories value="Race:Terran"/>
         <DamageModifierSource Value="Caster"/>
         <Visibility value="Visible"/>
         <Kind value="Ranged"/>
@@ -5289,26 +5236,22 @@
     </CEffectDamage>
     <CEffectSwitch id="B7DamageSwitch">
         <ValidatorArray value="CannonLaserNotInCD"/>
-        <EditorCategories value="Race:Terran"/>
         <CaseArray Validator="CannonLaserLv3" Effect="B7Damage3"/>
         <CaseArray Validator="CannonLaserLv2" Effect="B7Damage2"/>
         <CaseDefault value="B7Damage1"/>
     </CEffectSwitch>
     <CEffectEnumArea id="WeaponB15FireDamageAOE2">
-        <EditorCategories value="Race:Terran"/>
         <IncludeArray Value="Target"/>
         <SearchFilters value="-;Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable"/>
         <AreaArray Radius="1" Effect="WeaponB15FireBurn"/>
     </CEffectEnumArea>
     <CEffectApplyBehavior id="WeaponB15FireBurn">
         <ValidatorArray index="0" removed="1"/>
-        <EditorCategories value="Race:Terran"/>
         <Behavior value="HonkaiBurn"/>
         <Flags index="UseDuration" value="1"/>
         <Duration value="6"/>
     </CEffectApplyBehavior>
     <CEffectDamage id="WeaponB15ThunderDamage" parent="DU_WEAP">
-        <EditorCategories value="Race:Terran"/>
         <Kind value="Spell"/>
         <Amount value="12"/>
         <Death value="Electrocute"/>
@@ -5319,7 +5262,6 @@
         <EffectArray value="CannonStopChargeStop"/>
     </CEffectSet>
     <CEffectDamage id="WeaponB15IceDamage" parent="DU_WEAP">
-        <EditorCategories value="Race:Terran"/>
         <Kind value="NoProc"/>
         <Amount value="4"/>
         <Death value="Freeze"/>
@@ -5332,7 +5274,6 @@
     </CEffectSet>
     <CEffectApplyBehavior id="WeaponB15ThunderFrag">
         <ValidatorArray index="0" removed="1"/>
-        <EditorCategories value="Race:Terran"/>
         <Chance value="0.15"/>
         <Behavior value="Fragile80"/>
         <Flags index="UseDuration" value="1"/>
@@ -5344,12 +5285,10 @@
         <EffectArray value="CannonStopChargeStop"/>
     </CEffectSet>
     <CEffectSet id="WeaponB15FireImpactSet">
-        <EditorCategories value="Race:Terran"/>
         <EffectArray value="WeaponB15FireDamageAOE"/>
         <EffectArray value="WeaponB15FireDamageAOE2"/>
     </CEffectSet>
     <CEffectCreatePersistent id="WeaponB15IcePersistent">
-        <EditorCategories value="Race:Terran"/>
         <WhichLocation Value="TargetUnit"/>
         <Flags index="Channeled" value="1"/>
         <ExpireDelay value="0.5"/>
@@ -5489,7 +5428,6 @@
         <EditorCategories value=""/>
     </CEffectSet>
     <CEffectTeleport id="Herrscher2ndBlinkTeleport">
-        <EditorCategories value="Race:Protoss"/>
         <WhichUnit Value="Caster"/>
         <ClearQueuedOrders value="0"/>
         <PlacementAround Value="CasterUnit"/>
@@ -5593,7 +5531,6 @@
         <EditorCategories value=""/>
     </CEffectSet>
     <CEffectCreatePersistent id="Herrscher2WeaponMarkPersistence">
-        <EditorCategories value="Race:Zerg"/>
         <WhichLocation Value="TargetUnitOrPoint"/>
         <OffsetVectorStartLocation Value="TargetUnitOrPoint"/>
         <InitialEffect value="Herrscher2WeaponDamage"/>
@@ -5640,7 +5577,6 @@
     </CEffectCreatePersistent>
     <CEffectDamage id="B18Damage" parent="DU_WEAP">
         <ValidatorArray value="noMarkers"/>
-        <EditorCategories value="Race:Terran"/>
         <AttributeBonus index="Light" value="6"/>
         <Kind value="Splash"/>
         <KindSplash value="Splash"/>
@@ -5648,7 +5584,6 @@
         <Death value="Fire"/>
     </CEffectDamage>
     <CEffectCreatePersistent id="B18CreatePersistent">
-        <EditorCategories value="Race:Terran"/>
         <WhichLocation Value="SourcePoint"/>
         <PeriodCount value="25"/>
         <PeriodicEffectArray value="B18Search"/>
@@ -5680,7 +5615,6 @@
         <PeriodicPeriodArray value="0"/>
     </CEffectCreatePersistent>
     <CEffectEnumArea id="B18Search">
-        <EditorCategories value="Race:Terran"/>
         <ExcludeArray Value="Target"/>
         <IncludeArray Effect="InfernalFlameThrowerCP" Value="Target"/>
         <SearchFilters value="Ground;Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable"/>
@@ -5688,7 +5622,6 @@
         <SearchFlags index="CallForHelp" value="1"/>
     </CEffectEnumArea>
     <CEffectDamage id="K17BombDamage">
-        <EditorCategories value="Race:Terran"/>
         <Kind value="Ranged"/>
         <KindSplash value="Ranged"/>
         <Amount value="35"/>
@@ -5696,13 +5629,11 @@
         <SearchFilters value="-;Player,Ally,Neutral,Missile,Stasis,Dead,Hidden,Invulnerable"/>
     </CEffectDamage>
     <CEffectEnumArea id="K17BombSearch">
-        <EditorCategories value="Race:Terran"/>
         <ImpactLocation Value="TargetPoint"/>
         <SearchFilters value="-;Player,Ally,Neutral,Structure,Missile,Stasis,Dead,Hidden,Invulnerable"/>
         <AreaArray Radius="2.5" Effect="Dizzy"/>
     </CEffectEnumArea>
     <CEffectCreatePersistent id="K17Persistent">
-        <EditorCategories value="Race:Terran"/>
         <TimeScaleSource Value="Caster"/>
         <OffsetVectorStartLocation Value="TargetPoint"/>
         <PeriodCount value="2"/>
@@ -5712,7 +5643,6 @@
         <PeriodicPeriodArray value="0.5625"/>
     </CEffectCreatePersistent>
     <CEffectCreatePersistent id="K17BombPersistent">
-        <EditorCategories value="Race:Terran"/>
         <OffsetVectorStartLocation Value="TargetPoint"/>
         <InitialEffect value="K17BombDamage"/>
         <PeriodCount value="36"/>
@@ -5862,7 +5792,6 @@
     </CEffectApplyBehavior>
     <CEffectCreatePersistent id="B7Persistent">
         <ValidatorArray value="CannonLaserNotInCD"/>
-        <EditorCategories value="Race:Terran"/>
         <WhichLocation Value="TargetUnit"/>
         <Flags index="Channeled" value="1"/>
         <Flags index="PersistUntilDestroyed" value="1"/>
@@ -5872,14 +5801,12 @@
         <PeriodicPeriodArray value="0.0625"/>
     </CEffectCreatePersistent>
     <CEffectDamage id="B7Damage1" parent="DU_WEAP">
-        <EditorCategories value="Race:Terran"/>
         <DamageModifierSource Value="Caster"/>
         <Visibility value="Visible"/>
         <Kind value="Ranged"/>
         <Amount value="4"/>
     </CEffectDamage>
     <CEffectDamage id="WeaponB15FireDamageAOE" parent="DU_WEAP">
-        <EditorCategories value="Race:Terran"/>
         <Kind value="Splash"/>
         <KindSplash value="Splash"/>
         <Amount value="20"/>
@@ -5889,12 +5816,10 @@
         <SearchFilters value="-;Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable"/>
     </CEffectDamage>
     <CEffectLaunchMissile id="WeaponB15FireLaunch">
-        <EditorCategories value="Race:Terran"/>
         <ImpactEffect value="WeaponB15FireImpactSet"/>
         <AmmoUnit value="B15FireMissile"/>
     </CEffectLaunchMissile>
     <CEffectCreatePersistent id="WeaponB15FireLaunchPersistent">
-        <EditorCategories value="Race:Terran"/>
         <WhichLocation Value="TargetUnit"/>
         <TimeScaleSource Value="Caster"/>
         <InitialEffect value="CannonStopCharge"/>
@@ -5921,7 +5846,6 @@
     </CEffectSet>
     <CEffectApplyBehavior id="WeaponB15IceSlow">
         <ValidatorArray index="0" removed="1"/>
-        <EditorCategories value="Race:Terran"/>
         <Behavior value="HonkaiSlow"/>
         <Flags index="UseDuration" value="1"/>
         <Duration value="3"/>
@@ -5933,7 +5857,6 @@
         <Duration value="0.25"/>
     </CEffectApplyBehavior>
     <CEffectCreatePersistent id="WeaponB23ChargePersistent">
-        <EditorCategories value="Race:Terran"/>
         <WhichLocation Value="TargetUnit"/>
         <TimeScaleSource Value="Caster"/>
         <Flags index="Channeled" value="1"/>
@@ -5949,29 +5872,24 @@
         <CaseDefault value="CannonCharge"/>
     </CEffectSwitch>
     <CEffectSet id="WeaponB23StrongImpactSet">
-        <EditorCategories value="Race:Terran"/>
         <EffectArray value="WeaponB23DamageAOE"/>
         <EffectArray value="WeaponB23BleedSearch"/>
     </CEffectSet>
     <CEffectApplyBehavior id="WeaponB23DamageBleed">
         <ValidatorArray index="0" removed="1"/>
-        <EditorCategories value="Race:Terran"/>
         <Behavior value="HonkaiBleed"/>
         <Flags index="UseDuration" value="1"/>
         <Duration value="7"/>
     </CEffectApplyBehavior>
     <CEffectEnumArea id="WeaponB23BleedSearch">
-        <EditorCategories value="Race:Terran"/>
         <SearchFilters value="-;Player,Ally,Structure,Missile,Stasis,Dead,Hidden,Invulnerable"/>
         <AreaArray Radius="1" Effect="WeaponB23DamageBleed"/>
     </CEffectEnumArea>
     <CEffectLaunchMissile id="WeaponB23LaunchEx">
-        <EditorCategories value="Race:Terran"/>
         <ImpactEffect value="WeaponB23StrongImpactSet"/>
         <AmmoUnit value="B23Missile"/>
     </CEffectLaunchMissile>
     <CEffectCreatePersistent id="WeaponB23LaunchPersistent2">
-        <EditorCategories value="Race:Terran"/>
         <WhichLocation Value="TargetUnit"/>
         <TimeScaleSource Value="Caster"/>
         <InitialEffect value="CannonStopCharge"/>
@@ -5989,7 +5907,6 @@
         <PeriodicPeriodArray value="1"/>
     </CEffectCreatePersistent>
     <CEffectCreatePersistent id="WeaponB5ChargePersistent">
-        <EditorCategories value="Race:Terran"/>
         <WhichLocation Value="TargetUnit"/>
         <TimeScaleSource Value="Caster"/>
         <Flags index="Channeled" value="1"/>
@@ -6004,7 +5921,6 @@
         <CaseDefault value="CannonCharge"/>
     </CEffectSwitch>
     <CEffectCreatePersistent id="WeaponB15ChargePersistent">
-        <EditorCategories value="Race:Terran"/>
         <WhichLocation Value="TargetUnit"/>
         <TimeScaleSource Value="Caster"/>
         <Flags index="Channeled" value="1"/>
@@ -6013,7 +5929,6 @@
         <PeriodicPeriodArray value="0.0625"/>
     </CEffectCreatePersistent>
     <CEffectCreatePersistent id="WeaponB25ChargePersistent">
-        <EditorCategories value="Race:Terran"/>
         <WhichLocation Value="TargetUnit"/>
         <TimeScaleSource Value="Caster"/>
         <Flags index="Channeled" value="1"/>
@@ -6028,7 +5943,6 @@
         <CaseDefault value="CannonCharge"/>
     </CEffectSwitch>
     <CEffectCreatePersistent id="WeaponB1LaunchPersistent">
-        <EditorCategories value="Race:Terran"/>
         <WhichLocation Value="TargetUnit"/>
         <TimeScaleSource Value="Caster"/>
         <InitialEffect value="CannonStopCharge"/>
@@ -6061,7 +5975,6 @@
         <BehaviorLink value="CannonChargeComplete"/>
     </CEffectRemoveBehavior>
     <CEffectDamage id="WeaponB23DamageAOE" parent="DU_WEAP">
-        <EditorCategories value="Race:Terran"/>
         <AttributeBonus index="Armored" value="15"/>
         <Kind value="Ranged"/>
         <KindSplash value="Ranged"/>
@@ -6072,12 +5985,10 @@
         <SearchFilters value="-;Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable"/>
     </CEffectDamage>
     <CEffectLaunchMissile id="WeaponB23Launch">
-        <EditorCategories value="Race:Terran"/>
         <ImpactEffect value="WeaponB23DamageAOE"/>
         <AmmoUnit value="B23Missile"/>
     </CEffectLaunchMissile>
     <CEffectCreatePersistent id="WeaponB23LaunchPersistent">
-        <EditorCategories value="Race:Terran"/>
         <WhichLocation Value="TargetUnit"/>
         <TimeScaleSource Value="Caster"/>
         <InitialEffect value="CannonStopCharge"/>
@@ -6104,14 +6015,12 @@
         <CaseDefault value="CannonCharge"/>
     </CEffectSwitch>
     <CEffectDamage id="WeaponB5Damage2" parent="DU_WEAP">
-        <EditorCategories value="Race:Terran"/>
         <Kind value="Ranged"/>
         <KindSplash value="Ranged"/>
         <Amount value="15"/>
         <Death value="Blast"/>
     </CEffectDamage>
     <CEffectCreatePersistent id="WeaponB15ThunderLaunchPersistent">
-        <EditorCategories value="Race:Terran"/>
         <WhichLocation Value="TargetUnit"/>
         <TimeScaleSource Value="Caster"/>
         <InitialEffect value="CannonStopCharge"/>
@@ -6123,7 +6032,6 @@
         <PeriodicPeriodArray value="1.5"/>
     </CEffectCreatePersistent>
     <CEffectDamage id="WeaponB5Damage3" parent="DU_WEAP">
-        <EditorCategories value="Race:Terran"/>
         <Kind value="Ranged"/>
         <KindSplash value="Ranged"/>
         <Amount value="15"/>
@@ -6135,19 +6043,16 @@
         <EffectArray value="WeaponB15ThunderFrag"/>
     </CEffectSet>
     <CEffectLaunchMissile id="WeaponB15ThunderLaunch">
-        <EditorCategories value="Race:Terran"/>
         <ImpactEffect value="WeaponB15ThunderImpact"/>
         <AmmoUnit value="B15ThunderMissile"/>
     </CEffectLaunchMissile>
     <CEffectDamage id="WeaponB25Damage" parent="DU_WEAP">
-        <EditorCategories value="Race:Terran"/>
         <Kind value="Ranged"/>
         <KindSplash value="Ranged"/>
         <Amount value="20"/>
         <Death value="Blast"/>
     </CEffectDamage>
     <CEffectCreatePersistent id="WeaponB25LaunchPersistent">
-        <EditorCategories value="Race:Terran"/>
         <WhichLocation Value="TargetUnit"/>
         <TimeScaleSource Value="Caster"/>
         <InitialEffect value="CannonStopCharge"/>
@@ -6159,7 +6064,6 @@
         <PeriodicPeriodArray value="1.5"/>
     </CEffectCreatePersistent>
     <CEffectLaunchMissile id="WeaponB25Launch">
-        <EditorCategories value="Race:Terran"/>
         <AmmoUnit value="B25Missile"/>
     </CEffectLaunchMissile>
     <CEffectModifyUnit id="WeaponB5RemoveCD">
@@ -6186,7 +6090,6 @@
         <PeriodicPeriodArray value="0"/>
     </CEffectCreatePersistent>
     <CEffectCreatePersistent id="WeaponB6ImpactPersistent">
-        <EditorCategories value="Race:Terran"/>
         <WhichLocation Value="TargetUnit"/>
         <TimeScaleSource Value="Caster"/>
         <OffsetVectorStartLocation Value="TargetPoint"/>
@@ -6204,41 +6107,34 @@
         <EffectArray value="CannonLaserAttackCD"/>
     </CEffectSet>
     <CEffectDamage id="WeaponB5Damage" parent="DU_WEAP">
-        <EditorCategories value="Race:Terran"/>
         <Kind value="Ranged"/>
         <KindSplash value="Ranged"/>
         <Amount value="15"/>
         <Death value="Blast"/>
     </CEffectDamage>
     <CEffectDamage id="WeaponB5DamageFire" parent="DU_WEAP">
-        <EditorCategories value="Race:Terran"/>
         <Kind value="Splash"/>
         <Amount value="5"/>
         <Death value="Fire"/>
     </CEffectDamage>
     <CEffectSet id="WeaponB5DamageSet3">
-        <EditorCategories value="Race:Terran"/>
         <EffectArray value="WeaponB5DamageIce"/>
         <EffectArray value="Frozen"/>
     </CEffectSet>
     <CEffectDamage id="WeaponB5DamageThunder2" parent="DU_WEAP">
-        <EditorCategories value="Race:Terran"/>
         <Kind value="Spell"/>
         <Amount value="5"/>
         <Death value="Electrocute"/>
     </CEffectDamage>
     <CEffectSet id="WeaponB5DamageSet1">
-        <EditorCategories value="Race:Terran"/>
         <EffectArray value="WeaponB5DamageFire"/>
         <EffectArray value="Dizzy"/>
     </CEffectSet>
     <CEffectSet id="WeaponB5DamageSet2">
-        <EditorCategories value="Race:Terran"/>
         <EffectArray value="WeaponB5DamageThunder2"/>
         <EffectArray value="Palsy"/>
     </CEffectSet>
     <CEffectDamage id="WeaponB5DamageIce" parent="DU_WEAP">
-        <EditorCategories value="Race:Terran"/>
         <Kind value="NoProc"/>
         <Amount value="5"/>
         <Death value="Freeze"/>
@@ -6259,12 +6155,10 @@
         <EffectArray value="WeaponB5ExtraSwitch"/>
     </CEffectSet>
     <CEffectLaunchMissile id="WeaponB5Launch">
-        <EditorCategories value="Race:Terran"/>
         <ImpactEffect value="WeaponB5Impact"/>
         <AmmoUnit value="B5Missile"/>
     </CEffectLaunchMissile>
     <CEffectCreatePersistent id="WeaponB5LaunchPersistent">
-        <EditorCategories value="Race:Terran"/>
         <WhichLocation Value="TargetUnit"/>
         <TimeScaleSource Value="Caster"/>
         <FinalEffect value="CannonStopChargeStop"/>
@@ -6392,42 +6286,36 @@
         <BehaviorLink value="WeaponUseB6"/>
     </CEffectRemoveBehavior>
     <CEffectCreatePersistent id="WeaponSwitchB1">
-        <EditorCategories value="Race:Terran"/>
         <InitialEffect value="WeaponSwitchCannonRemoveAll"/>
         <PeriodCount value="1"/>
         <PeriodicEffectArray value="WeaponUseB1"/>
         <PeriodicPeriodArray value="0"/>
     </CEffectCreatePersistent>
     <CEffectCreatePersistent id="WeaponSwitchB22">
-        <EditorCategories value="Race:Terran"/>
         <InitialEffect value="WeaponSwitchCannonRemoveAll"/>
         <PeriodCount value="1"/>
         <PeriodicEffectArray value="WeaponUseB22"/>
         <PeriodicPeriodArray value="0"/>
     </CEffectCreatePersistent>
     <CEffectCreatePersistent id="WeaponSwitchB25">
-        <EditorCategories value="Race:Terran"/>
         <InitialEffect value="WeaponSwitchCannonRemoveAll"/>
         <PeriodCount value="1"/>
         <PeriodicEffectArray value="WeaponUseB25"/>
         <PeriodicPeriodArray value="0"/>
     </CEffectCreatePersistent>
     <CEffectCreatePersistent id="WeaponSwitchB26">
-        <EditorCategories value="Race:Terran"/>
         <InitialEffect value="WeaponSwitchCannonRemoveAll"/>
         <PeriodCount value="1"/>
         <PeriodicEffectArray value="WeaponUseB26"/>
         <PeriodicPeriodArray value="0"/>
     </CEffectCreatePersistent>
     <CEffectCreatePersistent id="WeaponSwitchB34">
-        <EditorCategories value="Race:Terran"/>
         <InitialEffect value="WeaponSwitchCannonRemoveAll"/>
         <PeriodCount value="1"/>
         <PeriodicEffectArray value="WeaponUseB34"/>
         <PeriodicPeriodArray value="0"/>
     </CEffectCreatePersistent>
     <CEffectCreatePersistent id="WeaponSwitchB28">
-        <EditorCategories value="Race:Terran"/>
         <InitialEffect value="WeaponSwitchCannonRemoveAll"/>
         <PeriodCount value="1"/>
         <PeriodicEffectArray value="WeaponUseB28"/>
@@ -6448,28 +6336,24 @@
         <PeriodicPeriodArray value="0"/>
     </CEffectCreatePersistent>
     <CEffectCreatePersistent id="WeaponSwitchB7">
-        <EditorCategories value="Race:Terran"/>
         <InitialEffect value="WeaponSwitchCannonRemoveAll"/>
         <PeriodCount value="1"/>
         <PeriodicEffectArray value="WeaponUseB7"/>
         <PeriodicPeriodArray value="0"/>
     </CEffectCreatePersistent>
     <CEffectCreatePersistent id="WeaponSwitchB18">
-        <EditorCategories value="Race:Terran"/>
         <InitialEffect value="WeaponSwitchCannonRemoveAll"/>
         <PeriodCount value="1"/>
         <PeriodicEffectArray value="WeaponUseB18"/>
         <PeriodicPeriodArray value="0"/>
     </CEffectCreatePersistent>
     <CEffectCreatePersistent id="WeaponSwitchB15">
-        <EditorCategories value="Race:Terran"/>
         <InitialEffect value="WeaponSwitchCannonRemoveAll"/>
         <PeriodCount value="1"/>
         <PeriodicEffectArray value="WeaponUseB15"/>
         <PeriodicPeriodArray value="0"/>
     </CEffectCreatePersistent>
     <CEffectCreatePersistent id="WeaponSwitchB23">
-        <EditorCategories value="Race:Terran"/>
         <InitialEffect value="WeaponSwitchCannonRemoveAll"/>
         <PeriodCount value="1"/>
         <PeriodicEffectArray value="WeaponUseB23"/>
@@ -6499,7 +6383,6 @@
         <InitialOffset value="0,-20,0"/>
     </CEffectCreatePersistent>
     <CEffectDamage id="Herrscher2WeaponDamage">
-        <EditorCategories value="Race:Zerg"/>
         <ResponseFlags index="Acquire" value="1"/>
         <ResponseFlags index="Flee" value="1"/>
         <Kind value="Ranged"/>
@@ -6509,12 +6392,10 @@
         <SearchFlags index="OffsetByUnitRadius" value="1"/>
     </CEffectDamage>
     <CEffectLaunchMissile id="Herrscher2WeaponLaunchMissile">
-        <EditorCategories value="Race:Zerg"/>
         <ImpactEffect value="Herrscher2WeaponEffectSwitch"/>
         <AmmoUnit value="Herrscher2Weapon"/>
     </CEffectLaunchMissile>
     <CEffectDamage id="WeaponB1DamageAOE" parent="DU_WEAP">
-        <EditorCategories value="Race:Terran"/>
         <AttributeBonus index="Armored" value="7"/>
         <Kind value="Ranged"/>
         <KindSplash value="Ranged"/>
@@ -6525,7 +6406,6 @@
         <SearchFilters value="Ground;Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable"/>
     </CEffectDamage>
     <CEffectCreatePersistent id="WeaponB1ChargePersistent">
-        <EditorCategories value="Race:Terran"/>
         <WhichLocation Value="TargetUnit"/>
         <TimeScaleSource Value="Caster"/>
         <Flags index="Channeled" value="1"/>
@@ -6537,7 +6417,6 @@
         <Amount value="10"/>
     </CEffectDamage>
     <CEffectDamage id="Herrscher2ndUltimateAttack" parent="DU_WEAP">
-        <EditorCategories value="Race:Zerg"/>
         <Kind value="Ranged"/>
         <KindSplash value="Ranged"/>
         <Amount value="50"/>
@@ -6549,7 +6428,6 @@
         <SearchFlags index="SameCliff" value="0"/>
     </CEffectDamage>
     <CEffectLaunchMissile id="WeaponB1Launch">
-        <EditorCategories value="Race:Terran"/>
         <ImpactEffect value="WeaponB1DamageAOE"/>
         <AmmoUnit value="B1Missile"/>
         <Movers Link="PunisherGrenadesWeapon"/>
@@ -6684,7 +6562,6 @@
     </CEffectApplyBehavior>
     <CEffectDamage id="UL_040Damage" parent="DU_WEAP_MISSILE">
         <Name value="Effect/Name/AcidSalivaU"/>
-        <EditorCategories value="Race:Zerg"/>
         <Kind value="Melee"/>
         <Amount value="30"/>
         <Death value="Eviscerate"/>
@@ -6710,7 +6587,6 @@
     </CEffectApplyBehavior>
     <CEffectDamage id="UL_030Damage" parent="DU_WEAP_MISSILE">
         <Name value="Effect/Name/AcidSalivaU"/>
-        <EditorCategories value="Race:Zerg"/>
         <Kind value="Melee"/>
         <Amount value="24"/>
         <Death value="Eviscerate"/>
@@ -6742,7 +6618,6 @@
         <Duration value="1"/>
     </CEffectApplyBehavior>
     <CEffectEnumArea id="WeaponCannonB34DamageSearch">
-        <EditorCategories value="Race:Terran"/>
         <ImpactLocation Value="TargetPoint"/>
         <ExcludeArray Value="Target"/>
         <IncludeArray Effect="BronyaMotorAttack" Value="Target"/>
@@ -6790,7 +6665,6 @@
         <FacingLocation Value="SourceUnit"/>
     </CEffectModifyUnit>
     <CEffectCreateUnit id="HerrscherConstructCreateRO_030">
-        <EditorCategories value="Race:Protoss"/>
         <WhichLocation Value="TargetPoint"/>
         <CreateFlags index="DropOff" value="0"/>
         <CreateFlags index="ProvideFood" value="0"/>
@@ -6800,7 +6674,6 @@
         <SpawnUnit value="RO_030"/>
     </CEffectCreateUnit>
     <CEffectCreateUnit id="HerrscherConstructCreateRO_010">
-        <EditorCategories value="Race:Protoss"/>
         <WhichLocation Value="TargetPoint"/>
         <CreateFlags index="DropOff" value="0"/>
         <CreateFlags index="ProvideFood" value="0"/>
@@ -6810,7 +6683,6 @@
         <SpawnUnit value="RO_010"/>
     </CEffectCreateUnit>
     <CEffectCreatePersistent id="HerrscherConstructCreateRO_010Persistence">
-        <EditorCategories value="Race:Protoss"/>
         <WhichLocation Value="CasterPoint"/>
         <PeriodCount value="4"/>
         <PeriodicEffectArray value="HerrscherConstructCreateRO_010"/>
@@ -6821,7 +6693,6 @@
         <PeriodicPeriodArray value="0.3125"/>
     </CEffectCreatePersistent>
     <CEffectCreatePersistent id="HerrscherConstructCreateRO_036Persistence">
-        <EditorCategories value="Race:Protoss"/>
         <WhichLocation Value="CasterPoint"/>
         <PeriodCount value="5"/>
         <PeriodicEffectArray value="HerrscherConstructCreateRO_036"/>
@@ -6833,7 +6704,6 @@
         <PeriodicPeriodArray value="0.3125"/>
     </CEffectCreatePersistent>
     <CEffectCreatePersistent id="HerrscherConstructCreateRO_030Persistence">
-        <EditorCategories value="Race:Protoss"/>
         <WhichLocation Value="CasterPoint"/>
         <PeriodCount value="4"/>
         <PeriodicEffectArray value="HerrscherConstructCreateRO_030"/>
@@ -6844,7 +6714,6 @@
         <PeriodicPeriodArray value="0.3125"/>
     </CEffectCreatePersistent>
     <CEffectCreateUnit id="HerrscherConstructCreateRPC">
-        <EditorCategories value="Race:Protoss"/>
         <WhichLocation Value="SourceUnit"/>
         <CreateFlags index="ProvideFood" value="0"/>
         <CreateFlags index="TechComplete" value="0"/>
@@ -6869,12 +6738,10 @@
     </CEffectCreateUnit>
     <CEffectLaunchMissile id="DG_013WeaponLaunch">
         <ValidatorArray index="0" value="RoachLMTargetFilters"/>
-        <EditorCategories value="Race:Zerg"/>
         <ImpactEffect value="DG_013WeaponDamage"/>
         <AmmoUnit value="DG_013Missile"/>
     </CEffectLaunchMissile>
     <CEffectDamage id="DG_013WeaponDamage" parent="DU_WEAP_MISSILE">
-        <EditorCategories value="Race:Zerg"/>
         <Amount value="12"/>
         <Death value="Freeze"/>
         <Kind value="NoProc"/>
@@ -6930,7 +6797,6 @@
         <Flags index="NoZeroDamageInherit" value="1"/>
     </CEffectDamage>
     <CEffectCreateUnit id="HerrscherConstructCreateRO_036">
-        <EditorCategories value="Race:Protoss"/>
         <WhichLocation Value="TargetPoint"/>
         <CreateFlags index="DropOff" value="0"/>
         <CreateFlags index="ProvideFood" value="0"/>
@@ -6940,7 +6806,6 @@
         <SpawnUnit value="SiegeTank"/>
     </CEffectCreateUnit>
     <CEffectSet id="ConsrtuctApplyBehavior">
-        <EditorCategories value="Race:Protoss"/>
         <EffectArray value="HerrscherConstructBehavior"/>
         <EffectArray value="HerrscherConstructTimer"/>
         <EffectArray value="HerrscherConstructCommand"/>
@@ -6970,11 +6835,8 @@
         <PeriodicPeriodArray value="0.29"/>
         <WhichLocation Value="TargetUnit"/>
     </CEffectCreatePersistent>
-    <CEffectApplyBehavior id="HerrscherConstructBehavior">
-        <EditorCategories value="Race:Protoss"/>
-    </CEffectApplyBehavior>
+    <CEffectApplyBehavior id="HerrscherConstructBehavior"/>
     <CEffectApplyBehavior id="HerrscherConstructTimer">
-        <EditorCategories value="Race:Protoss"/>
         <Behavior value="HerrscherConstructTimedLife"/>
     </CEffectApplyBehavior>
     <CEffectEnumArea id="HerrscherKeyAttackSearch">
@@ -7012,7 +6874,6 @@
         <PeriodicPeriodArray value="0.0625"/>
     </CEffectCreatePersistent>
     <CEffectLaunchMissile id="RO_030Abli1LaunchMissile">
-        <EditorCategories value="Race:Terran"/>
         <ImpactLocation Value="TargetPoint"/>
         <ImpactOffset value="0,0,1"/>
         <ImpactEffect value="RO_030AbliDamage"/>
@@ -7020,12 +6881,10 @@
         <ImpactRange value="0.25"/>
     </CEffectLaunchMissile>
     <CEffectLaunchMissile id="RO_030AttackLaunchMissile">
-        <EditorCategories value="Race:Terran"/>
         <ImpactEffect value="RO_030WeaponDamage"/>
         <AmmoUnit value="RO_030Weapon"/>
     </CEffectLaunchMissile>
     <CEffectDamage id="RO_030WeaponDamage" parent="DU_WEAP_SPLASH">
-        <EditorCategories value="Race:Terran"/>
         <Kind value="Ranged"/>
         <KindSplash value="Ranged"/>
         <Amount value="12"/>
@@ -7037,7 +6896,6 @@
         <SearchFlags index="SameCliff" value="0"/>
     </CEffectDamage>
     <CEffectDamage id="RO_030AbliDamage" parent="DU_WEAP_SPLASH">
-        <EditorCategories value="Race:Terran"/>
         <Kind value="Ranged"/>
         <KindSplash value="Ranged"/>
         <Amount value="18"/>
@@ -7048,7 +6906,6 @@
         <SearchFlags index="SameCliff" value="0"/>
     </CEffectDamage>
     <CEffectCreatePersistent id="RO_030WeaponPersistent">
-        <EditorCategories value="Race:Terran"/>
         <WhichLocation Value="TargetUnit"/>
         <TimeScaleSource Value="Caster"/>
         <Flags index="Channeled" value="1"/>
@@ -7060,7 +6917,6 @@
         <PeriodicPeriodArray value="0"/>
     </CEffectCreatePersistent>
     <CEffectDamage id="KianaC4PistolRangedAir" parent="DU_WEAP">
-        <EditorCategories value="Race:Terran"/>
         <Kind value="Ranged"/>
         <Amount value="15">
             <AccumulatorArray value="TargetDistancefromCasterx1"/>
@@ -7101,12 +6957,10 @@
         <Abil value="KianaC4BranchEnd"/>
     </CEffectIssueOrder>
     <CEffectDamage id="KianaC4BranchRanged" parent="DU_WEAP">
-        <EditorCategories value="Race:Terran"/>
         <Kind value="Ranged"/>
         <Amount value="10"/>
     </CEffectDamage>
     <CEffectDamage id="KianaC4PistolRangedGround" parent="DU_WEAP">
-        <EditorCategories value="Race:Terran"/>
         <Kind value="Ranged"/>
         <Amount value="15">
             <AccumulatorArray value="TargetDistancefromCasterx1"/>
@@ -7135,20 +6989,17 @@
     </CEffectApplyBehavior>
     <CEffectCreatePersistent id="KianaC4QTE22">
         <ValidatorArray value="KianaC4QTE22TargetFilters"/>
-        <EditorCategories value="Race:Terran"/>
         <PeriodCount value="1"/>
         <PeriodicEffectArray value="KianaC4QTE2"/>
         <PeriodicOffsetArray value="20,0,20"/>
         <PeriodicPeriodArray value="0"/>
     </CEffectCreatePersistent>
     <CEffectDamage id="KianaC4QTERanged2" parent="DU_WEAP">
-        <EditorCategories value="Race:Terran"/>
         <Kind value="Ranged"/>
         <Amount value="12"/>
         <KindSplash value="Ranged"/>
     </CEffectDamage>
     <CEffectLaunchMissile id="KianaC4QTE">
-        <EditorCategories value="Race:Terran"/>
         <ImpactEffect value="KianaC4QTERanged2"/>
         <AmmoUnit value="KianaC4QTEMissile"/>
         <Movers Link="KianaC4QTEMissile"/>
@@ -7162,7 +7013,6 @@
         <PeriodicPeriodArray value="0.25"/>
     </CEffectCreatePersistent>
     <CEffectLaunchMissile id="KianaC4QTE2">
-        <EditorCategories value="Race:Terran"/>
         <AmmoUnit value="KianaC4QTEMissile"/>
         <Movers Link="KianaC4QTEMissile2"/>
         <ImpactLocation Value="TargetPoint"/>
@@ -7177,7 +7027,6 @@
         <EffectArray value="KianaC4QTETimeCrack2"/>
     </CEffectSet>
     <CEffectDamage id="HerrscherConstructKill">
-        <EditorCategories value="Race:Protoss"/>
         <ResponseFlags index="Acquire" value="1"/>
         <ResponseFlags index="Flee" value="1"/>
         <Flags index="Kill" value="1"/>
@@ -7306,28 +7155,24 @@
         <Flags index="Impact" value="0"/>
     </CEffectDamage>
     <CEffectCreatePersistent id="DeadgalScythePercistent">
-        <EditorCategories value="Race:Zerg"/>
         <PeriodCount value="1"/>
         <PeriodicEffectArray value="DeadgalScytheSearch"/>
         <PeriodicPeriodArray value="0.58"/>
         <Flags index="Channeled" value="1"/>
     </CEffectCreatePersistent>
     <CEffectCreatePersistent id="DeadgalScythePercistent2">
-        <EditorCategories value="Race:Zerg"/>
         <PeriodCount value="1"/>
         <PeriodicEffectArray value="DeadgalScytheSearch2"/>
         <PeriodicPeriodArray value="0.58"/>
         <Flags index="Channeled" value="1"/>
     </CEffectCreatePersistent>
     <CEffectCreatePersistent id="DeadgalScythePercistent22">
-        <EditorCategories value="Race:Zerg"/>
         <Flags index="Channeled" value="1"/>
         <PeriodCount value="1"/>
         <PeriodicEffectArray value="DeadgalScytheSearch23"/>
         <PeriodicPeriodArray value="0.58"/>
     </CEffectCreatePersistent>
     <CEffectEnumArea id="DeadgalScytheSearch2">
-        <EditorCategories value="Race:Zerg"/>
         <ImpactLocation Value="SourceUnit"/>
         <SearchFilters value="-;Self,Player,Ally,Air,Missile,Stasis,Dead,Hidden,Invulnerable"/>
         <AreaArray Arc="119.9707" Radius="0.5" Effect="DeadgalScytheSet"/>
@@ -7336,7 +7181,6 @@
         <SearchFlags index="SameCliff" value="1"/>
     </CEffectEnumArea>
     <CEffectEnumArea id="DeadgalScytheSearch22">
-        <EditorCategories value="Race:Zerg"/>
         <ImpactLocation Value="SourceUnit"/>
         <SearchFilters value="-;Self,Player,Ally,Air,Missile,Stasis,Dead,Hidden,Invulnerable"/>
         <AreaArray Arc="119.9597" Radius="0.8" Effect="DeadgalScytheSet2"/>
@@ -7345,7 +7189,6 @@
         <SearchFlags index="SameCliff" value="1"/>
     </CEffectEnumArea>
     <CEffectEnumArea id="DeadgalScytheSearch23">
-        <EditorCategories value="Race:Zerg"/>
         <ImpactLocation Value="SourceUnit"/>
         <SearchFilters value="-;Self,Player,Ally,Air,Missile,Stasis,Dead,Hidden,Invulnerable"/>
         <AreaArray Arc="119.9707" Radius="0.5" Effect="DeadgalScytheSet3"/>
@@ -7370,7 +7213,6 @@
         <EffectArray value="TargetBurn"/>
     </CEffectSet>
     <CEffectEnumArea id="DG_013SlowSearch">
-        <EditorCategories value="Race:Terran"/>
         <AINotifyFlags index="HurtFriend" value="1"/>
         <AINotifyFlags index="HurtEnemy" value="1"/>
         <SearchFilters value="-;Player,Ally,Air,Missile,Destructible,Stasis,Dead,Hidden,Invulnerable"/>
@@ -7445,13 +7287,11 @@
         <Duration value="0.8"/>
     </CEffectApplyBehavior>
     <CEffectApplyBehavior id="K23ApplyBurn">
-        <EditorCategories value="Race:Terran"/>
         <Behavior value="HonkaiBurn"/>
         <Flags index="UseDuration" value="1"/>
         <Duration value="15"/>
     </CEffectApplyBehavior>
     <CEffectApplyBehavior id="K23ApplySpeed">
-        <EditorCategories value="Race:Terran"/>
         <WhichUnit Value="Caster"/>
         <Behavior value="K23Move"/>
     </CEffectApplyBehavior>
@@ -7466,7 +7306,6 @@
         <AreaArray Radius="5" Effect="K23Behavior"/>
     </CEffectEnumArea>
     <CEffectDamage id="K23InitialDamage">
-        <EditorCategories value="Race:Terran"/>
         <AINotifyFlags index="HurtFriend" value="1"/>
         <AINotifyFlags index="HurtEnemy" value="1"/>
         <ResponseFlags index="Acquire" value="1"/>
@@ -7519,7 +7358,6 @@
         <DeathType value="Unknown"/>
     </CEffectLaunchMissile>
     <CEffectCreatePersistent id="DeathImpactBurn">
-        <EditorCategories value="Race:Terran"/>
         <WhichLocation Value="CasterPoint"/>
         <OffsetFacingFallback Value="CasterUnit"/>
         <PeriodCount value="32"/>
@@ -7527,7 +7365,6 @@
         <PeriodicPeriodArray value="0.25"/>
     </CEffectCreatePersistent>
     <CEffectEnumArea id="DeathImpactBrunSearch">
-        <EditorCategories value="Race:Terran"/>
         <AINotifyFlags index="HurtEnemy" value="1"/>
         <SearchFilters value="-;Player,Ally,Air,Missile,Destructible,Stasis,Dead,Hidden,Invulnerable"/>
         <AreaArray Radius="0.75" Effect="TargetBurn"/>
@@ -7543,7 +7380,6 @@
         <Amount value="20"/>
     </CEffectDamage>
     <CEffectEnumArea id="K5Search">
-        <EditorCategories value="Race:Terran"/>
         <AINotifyFlags index="HurtEnemy" value="1"/>
         <ImpactLocation Value="TargetPoint"/>
         <SearchFilters value="-;Player,Ally,Missile,Destructible,Stasis,Dead,Hidden,Invulnerable"/>
@@ -7552,7 +7388,6 @@
         <LaunchLocation Value="TargetPoint"/>
     </CEffectEnumArea>
     <CEffectCreatePersistent id="K5Persistent">
-        <EditorCategories value="Race:Terran"/>
         <TimeScaleSource Value="Caster"/>
         <OffsetVectorStartLocation Value="TargetPoint"/>
         <InitialEffect value="K5Unit"/>
@@ -7563,7 +7398,6 @@
         <PeriodicPeriodArray value="1"/>
     </CEffectCreatePersistent>
     <CEffectEnumArea id="K23CPSearchAll">
-        <EditorCategories value="Race:Terran"/>
         <AINotifyFlags index="HurtFriend" value="1"/>
         <AINotifyFlags index="HurtEnemy" value="1"/>
         <SearchFilters value="-;Missile,Destructible,Stasis,Dead,Hidden,Invulnerable"/>
@@ -7571,7 +7405,6 @@
         <SearchFlags index="CallForHelp" value="1"/>
     </CEffectEnumArea>
     <CEffectEnumArea id="K23CPSearchEnermy">
-        <EditorCategories value="Race:Terran"/>
         <AINotifyFlags index="HurtEnemy" value="1"/>
         <SearchFilters value="-;Self,Ally,Missile,Destructible,Stasis,Dead,Hidden,Invulnerable"/>
         <AreaArray Radius="6" Effect="K23ApplyEnermyBuff"/>
@@ -7591,7 +7424,6 @@
         <TargetLocationType value="Point"/>
     </CEffectSet>
     <CEffectApplyBehavior id="K23ApplyEnermyBuff">
-        <EditorCategories value="Race:Terran"/>
         <Behavior value="K23Damage2"/>
     </CEffectApplyBehavior>
     <CEffectSet id="K5Set">
@@ -7778,83 +7610,67 @@
         <CaseDefault value="KianaC2Attack1Damage"/>
     </CEffectSwitch>
     <CEffectApplyBehavior id="KianaC2Attack2ReadyApply">
-        <EditorCategories value="Race:Terran"/>
         <WhichUnit Value="Source"/>
         <Behavior value="KianaC2Attack2Ready"/>
     </CEffectApplyBehavior>
     <CEffectRemoveBehavior id="KianaC2Attack2ReadyRemove">
-        <EditorCategories value="Race:Terran"/>
         <BehaviorLink value="KianaC2Attack2Ready"/>
         <WhichUnit Value="Source"/>
     </CEffectRemoveBehavior>
     <CEffectApplyBehavior id="KianaC2Attack3ReadyApply">
-        <EditorCategories value="Race:Terran"/>
         <WhichUnit Value="Source"/>
         <Behavior value="KianaC2Attack3Ready"/>
     </CEffectApplyBehavior>
     <CEffectRemoveBehavior id="KianaC2Attack3ReadyRemove">
-        <EditorCategories value="Race:Terran"/>
         <BehaviorLink value="KianaC2Attack3Ready"/>
         <WhichUnit Value="Source"/>
     </CEffectRemoveBehavior>
     <CEffectApplyBehavior id="KianaC2Attack4ReadyApply">
-        <EditorCategories value="Race:Terran"/>
         <WhichUnit Value="Source"/>
         <Behavior value="KianaC2Attack4Ready"/>
     </CEffectApplyBehavior>
     <CEffectRemoveBehavior id="KianaC2Attack4ReadyRemove">
-        <EditorCategories value="Race:Terran"/>
         <BehaviorLink value="KianaC2Attack4Ready"/>
         <WhichUnit Value="Source"/>
     </CEffectRemoveBehavior>
     <CEffectApplyBehavior id="KianaC2Attack5ReadyApply">
-        <EditorCategories value="Race:Terran"/>
         <WhichUnit Value="Source"/>
         <Behavior value="KianaC2Attack5Ready"/>
     </CEffectApplyBehavior>
     <CEffectRemoveBehavior id="KianaC2Attack5ReadyRemove">
-        <EditorCategories value="Race:Terran"/>
         <BehaviorLink value="KianaC2Attack5Ready"/>
         <WhichUnit Value="Source"/>
     </CEffectRemoveBehavior>
     <CEffectApplyBehavior id="KianaC2Branch3ReadyApply">
-        <EditorCategories value="Race:Terran"/>
         <WhichUnit Value="Source"/>
         <Behavior value="KianaC2Branch3Ready"/>
     </CEffectApplyBehavior>
     <CEffectDamage id="KianaC2PistolRanged200" parent="DU_WEAP">
-        <EditorCategories value="Race:Terran"/>
         <Kind value="Ranged"/>
         <Amount value="20"/>
     </CEffectDamage>
     <CEffectSet id="KianaC2PistolRanged200Set">
-        <EditorCategories value="Race:Terran"/>
         <EffectArray value="KianaC2PistolRanged200"/>
         <EffectArray value="ThrowSet"/>
         <EffectArray value="Dizzy"/>
     </CEffectSet>
     <CEffectSet id="KianaC2PistolMelee250">
-        <EditorCategories value="Race:Terran"/>
         <EffectArray value="KianaC2PistolMelee22"/>
         <EffectArray value="ThrowSet"/>
     </CEffectSet>
     <CEffectApplyBehavior id="KianaC2UltimateApply">
-        <EditorCategories value="Race:Terran"/>
         <WhichUnit Value="Caster"/>
         <Behavior value="KianaC2Ultimate"/>
     </CEffectApplyBehavior>
     <CEffectRemoveBehavior id="KianaC2Branch3ReadyRemove">
-        <EditorCategories value="Race:Terran"/>
         <BehaviorLink value="KianaC2Branch3Ready"/>
         <WhichUnit Value="Source"/>
     </CEffectRemoveBehavior>
     <CEffectApplyBehavior id="KianaC2Branch4ReadyApply">
-        <EditorCategories value="Race:Terran"/>
         <WhichUnit Value="Source"/>
         <Behavior value="KianaC2Branch4Ready"/>
     </CEffectApplyBehavior>
     <CEffectRemoveBehavior id="KianaC2Branch4ReadyRemove">
-        <EditorCategories value="Race:Terran"/>
         <BehaviorLink value="KianaC2Branch4Ready"/>
     </CEffectRemoveBehavior>
     <CEffectCreatePersistent id="KianaC2Branch3Move">
@@ -7918,31 +7734,24 @@
         <PeriodicPeriodArray value="0.0625"/>
     </CEffectCreatePersistent>
     <CEffectApplyBehavior id="KianaC2Attack1Speed">
-        <EditorCategories value="Race:Terran"/>
         <WhichUnit Value="Caster"/>
     </CEffectApplyBehavior>
     <CEffectApplyBehavior id="KianaC2Branch3Speed">
-        <EditorCategories value="Race:Terran"/>
         <WhichUnit Value="Caster"/>
     </CEffectApplyBehavior>
     <CEffectApplyBehavior id="KianaC2Attack2Speed">
-        <EditorCategories value="Race:Terran"/>
         <WhichUnit Value="Caster"/>
     </CEffectApplyBehavior>
     <CEffectApplyBehavior id="KianaC2Branch4Speed">
-        <EditorCategories value="Race:Terran"/>
         <WhichUnit Value="Caster"/>
     </CEffectApplyBehavior>
     <CEffectApplyBehavior id="KianaC2Attack5Speed">
-        <EditorCategories value="Race:Terran"/>
         <WhichUnit Value="Caster"/>
     </CEffectApplyBehavior>
     <CEffectApplyBehavior id="KianaC2Attack4Speed">
-        <EditorCategories value="Race:Terran"/>
         <WhichUnit Value="Caster"/>
     </CEffectApplyBehavior>
     <CEffectApplyBehavior id="KianaC2Attack3Speed">
-        <EditorCategories value="Race:Terran"/>
         <WhichUnit Value="Caster"/>
     </CEffectApplyBehavior>
     <CEffectApplyBehavior id="KianaC2Attack2Ready">
@@ -7996,7 +7805,6 @@
         <WhichUnit Value="Source"/>
     </CEffectRemoveBehavior>
     <CEffectApplyBehavior id="KianaC2Attack4Ready">
-        <EditorCategories value="Race:Terran"/>
         <WhichUnit Value="Source"/>
         <Behavior value="KianaC2Attack4"/>
     </CEffectApplyBehavior>
@@ -8021,7 +7829,6 @@
         <Behavior value="KianaC2Branch4"/>
     </CEffectApplyBehavior>
     <CEffectCreatePersistent id="KianaC2Branch3">
-        <EditorCategories value="Race:Terran"/>
         <WhichLocation Value="TargetUnit"/>
         <TimeScaleSource Value="Caster"/>
         <InitialEffect value="KianaC2Branch3Move"/>
@@ -8036,7 +7843,6 @@
         <Flags index="Channeled" value="1"/>
     </CEffectCreatePersistent>
     <CEffectCreatePersistent id="KianaC2Branch4">
-        <EditorCategories value="Race:Terran"/>
         <TimeScaleSource Value="Caster"/>
         <Flags index="Channeled" value="1"/>
         <InitialEffect value="KianaC2Branch4Move"/>
@@ -8066,7 +7872,6 @@
         <EffectArray value="EvadeCoolDown"/>
     </CEffectSet>
     <CEffectCreatePersistent id="KianaC2EvadeMovingMove">
-        <EditorCategories value="Race:Terran"/>
         <WhichLocation Value="CasterPoint"/>
         <PeriodCount value="10"/>
         <PeriodicEffectArray value="EvadingMoveForce"/>
@@ -8106,11 +7911,9 @@
         <EffectArray value="KianaC2ApplyEvadeCD"/>
     </CEffectSet>
     <CEffectDamage id="KianaC2PistolMelee" parent="DU_WEAP">
-        <EditorCategories value="Race:Terran"/>
         <Amount value="10"/>
     </CEffectDamage>
     <CEffectCreatePersistent id="KianaC2Attack2">
-        <EditorCategories value="Race:Terran"/>
         <WhichLocation Value="TargetUnit"/>
         <TimeScaleSource Value="Caster"/>
         <InitialEffect value="KianaC2Attack2Move"/>
@@ -8127,7 +7930,6 @@
         <Flags index="Channeled" value="1"/>
     </CEffectCreatePersistent>
     <CEffectCreatePersistent id="KianaC2Attack3">
-        <EditorCategories value="Race:Terran"/>
         <WhichLocation Value="TargetUnit"/>
         <TimeScaleSource Value="Caster"/>
         <InitialEffect value="KianaC2Attack3Move"/>
@@ -8144,7 +7946,6 @@
         <Flags index="Channeled" value="1"/>
     </CEffectCreatePersistent>
     <CEffectCreatePersistent id="KianaC2Attack5">
-        <EditorCategories value="Race:Terran"/>
         <WhichLocation Value="TargetUnit"/>
         <TimeScaleSource Value="Caster"/>
         <InitialEffect value="KianaC2Attack5Move"/>
@@ -8159,7 +7960,6 @@
         <Flags index="Channeled" value="1"/>
     </CEffectCreatePersistent>
     <CEffectCreatePersistent id="KianaC2Attack4">
-        <EditorCategories value="Race:Terran"/>
         <WhichLocation Value="TargetUnit"/>
         <TimeScaleSource Value="Caster"/>
         <InitialEffect value="KianaC2Attack4Move"/>
@@ -8176,25 +7976,20 @@
         <Flags index="Channeled" value="1"/>
     </CEffectCreatePersistent>
     <CEffectDamage id="KianaC2PistolMelee2" parent="DU_WEAP">
-        <EditorCategories value="Race:Terran"/>
         <Amount value="15"/>
     </CEffectDamage>
     <CEffectDamage id="KianaC2PistolMelee22" parent="DU_WEAP">
-        <EditorCategories value="Race:Terran"/>
         <Amount value="25"/>
     </CEffectDamage>
     <CEffectDamage id="KianaC2PistolMelee222" parent="DU_WEAP">
-        <EditorCategories value="Race:Terran"/>
         <Amount value="5"/>
         <KindSplash value="Melee"/>
     </CEffectDamage>
     <CEffectDamage id="KianaC2PistolRanged" parent="DU_WEAP">
-        <EditorCategories value="Race:Terran"/>
         <Kind value="Ranged"/>
         <Amount value="10"/>
     </CEffectDamage>
     <CEffectDamage id="KianaC2PistolRanged2" parent="DU_WEAP">
-        <EditorCategories value="Race:Terran"/>
         <ImpactLocation Value="TargetPoint"/>
         <Kind value="Ranged"/>
         <KindSplash value="Ranged"/>
@@ -8212,7 +8007,6 @@
         <EffectArray value="KianaC2Branch4Remove"/>
     </CEffectSet>
     <CEffectCreatePersistent id="KianaC2EvadeIdleMove">
-        <EditorCategories value="Race:Terran"/>
         <WhichLocation Value="CasterPoint"/>
         <PeriodCount value="11"/>
         <PeriodicEffectArray value="VoidEffect"/>
@@ -8262,7 +8056,6 @@
         <HeightMap value="Ground"/>
     </CEffectCreatePersistent>
     <CEffectCreatePersistent id="K23CP">
-        <EditorCategories value="Race:Terran"/>
         <WhichLocation Value="CasterPoint"/>
         <TimeScaleSource Value="Caster"/>
         <OffsetFacingFallback Value="CasterUnit"/>
@@ -8283,7 +8076,6 @@
         <Flags index="Impact" value="0"/>
     </CEffectDamage>
     <CEffectDamage id="K23CPDamage">
-        <EditorCategories value="Race:Terran"/>
         <ResponseFlags index="Acquire" value="1"/>
         <ResponseFlags index="Flee" value="1"/>
         <Flags index="Notification" value="1"/>
@@ -8336,17 +8128,14 @@
     </CEffectApplyBehavior>
     <CEffectDamage id="PsiBlades2" parent="DU_WEAP">
         <ValidatorArray value="NotHidden"/>
-        <EditorCategories value="Race:Zerg"/>
         <Amount value="8"/>
         <Death value="Eviscerate"/>
     </CEffectDamage>
     <CEffectEnumArea id="DeadgalScytheSearch">
-        <EditorCategories value="Race:Zerg"/>
         <SearchFilters value="-;Self,Player,Ally,Air,Missile,Stasis,Dead,Hidden,Invulnerable"/>
         <AreaArray Arc="119.9816" Radius="0.5" Effect="PsiBlades2"/>
     </CEffectEnumArea>
     <CEffectDamage id="RailgunDamage">
-        <EditorCategories value="Race:Terran"/>
         <ResponseFlags index="Acquire" value="1"/>
         <ResponseFlags index="Flee" value="1"/>
         <ImpactLocation Value="TargetUnit"/>
@@ -8357,25 +8146,21 @@
         <SearchFlags index="CallForHelp" value="1"/>
     </CEffectDamage>
     <CEffectLaunchMissile id="RailgunLaunchMissile">
-        <EditorCategories value="Race:Protoss"/>
         <ImpactEffect value="RailgunDamage"/>
         <AmmoUnit value="RailgunMissile"/>
     </CEffectLaunchMissile>
     <CEffectDamage id="PsiBlades22" parent="DU_WEAP">
         <ValidatorArray value="NotHidden"/>
-        <EditorCategories value="Race:Zerg"/>
         <Amount value="10"/>
         <Death value="Eviscerate"/>
     </CEffectDamage>
     <CEffectDamage id="PsiBlades222" parent="DU_WEAP">
         <ValidatorArray value="NotHidden"/>
-        <EditorCategories value="Race:Zerg"/>
         <Amount value="15"/>
         <Death value="Eviscerate"/>
     </CEffectDamage>
     <CEffectDamage id="PsiBlades223" parent="DU_WEAP">
         <ValidatorArray value="NotHidden"/>
-        <EditorCategories value="Race:Zerg"/>
         <Kind value="Splash"/>
         <Amount value="8"/>
         <Death value="Eviscerate"/>
@@ -8394,7 +8179,6 @@
         <ValidatorArray value="NotAbducted"/>
         <ValidatorArray value="NoGravitonBeamInProgress"/>
         <ValidatorArray value="IsNotRecallingNexus"/>
-        <EditorCategories value="Race:Zerg"/>
         <Origin Value="SourceUnit"/>
         <CreateFlags index="Birth" value="0"/>
         <CreateFlags index="DropOff" value="0"/>
@@ -8552,7 +8336,6 @@
         <EditorCategories value=""/>
     </CEffectSet>
     <CEffectSet id="WeaponCannonB34DamageSet">
-        <EditorCategories value="Race:Terran"/>
         <EffectArray value="Weapon_Cannon_B34Damage"/>
         <EffectArray value="WeaponCannonB34DamageSearch"/>
     </CEffectSet>
@@ -8709,13 +8492,11 @@
     </CEffectCreatePersistent>
     <CEffectDamage id="BronyaConstructCannonAttackDamage" parent="DU_WEAP">
         <ValidatorArray value="NotHidden"/>
-        <EditorCategories value="Race:Protoss"/>
         <Amount value="16"/>
         <Death value="Freeze"/>
         <Kind value="NoProc"/>
     </CEffectDamage>
     <CEffectEnumArea id="BronyaConstructCannonAttackSearch">
-        <EditorCategories value="Race:Terran"/>
         <ImpactLocation Value="SourceUnit"/>
         <SearchFilters value="-;Player,Ally,Neutral,Missile,Stasis,Dead,Hidden,Invulnerable"/>
         <AreaArray Arc="0.0988" Radius="9" Effect="BronyaConstructCannonAttackDamage"/>
@@ -8728,7 +8509,6 @@
         <EffectArray value="BronyaMotorAttackSearch"/>
     </CEffectSet>
     <CEffectEnumArea id="BronyaMotorAttackSearch">
-        <EditorCategories value="Race:Terran"/>
         <ImpactLocation Value="SourceUnit"/>
         <ExcludeArray Value="Target"/>
         <IncludeArray Effect="BronyaMotorAttack" Value="Target"/>
@@ -8738,7 +8518,6 @@
         <SearchFlags index="ExtendByUnitRadius" value="1"/>
     </CEffectEnumArea>
     <CEffectCreatePersistent id="BronyaConstructCannonBeam">
-        <EditorCategories value="Race:Terran"/>
         <WhichLocation Value="TargetUnit"/>
         <TimeScaleSource Value="Caster"/>
         <Flags index="Channeled" value="1"/>
@@ -8756,7 +8535,6 @@
         <WhichUnit Value="Source"/>
     </CEffectApplyBehavior>
     <CEffectCreatePersistent id="BronyaC7Attack0">
-        <EditorCategories value="Race:Protoss"/>
         <WhichLocation Value="TargetUnit"/>
         <TimeScaleSource Value="Caster"/>
         <Flags index="Channeled" value="1"/>
@@ -8770,13 +8548,11 @@
     </CEffectCreatePersistent>
     <CEffectDamage id="Weapon_Cannon_B34Damage" parent="DU_WEAP">
         <ValidatorArray value="NotHidden"/>
-        <EditorCategories value="Race:Protoss"/>
         <Kind value="NoProc"/>
         <Amount value="35"/>
         <Death value="Freeze"/>
     </CEffectDamage>
     <CEffectCreatePersistent id="Weapon_Cannon_B34">
-        <EditorCategories value="Race:Protoss"/>
         <WhichLocation Value="TargetUnit"/>
         <TimeScaleSource Value="Caster"/>
         <Flags index="Channeled" value="1"/>
@@ -8789,7 +8565,6 @@
     </CEffectCreatePersistent>
     <CEffectDamage id="BronyaMotorAttackDamage" parent="DU_WEAP">
         <ValidatorArray value="NotHidden"/>
-        <EditorCategories value="Race:Protoss"/>
         <Amount value="16"/>
         <Death value="Freeze"/>
         <Kind value="NoProc"/>
@@ -8797,7 +8572,6 @@
     </CEffectDamage>
     <CEffectDamage id="WeaponCannonB34DamageSplash" parent="DU_WEAP">
         <ValidatorArray value="NotHidden"/>
-        <EditorCategories value="Race:Protoss"/>
         <Kind value="NoProc"/>
         <Amount value="20"/>
         <Death value="Freeze"/>
@@ -8833,12 +8607,10 @@
         <WhichUnit Value="Source"/>
     </CEffectRemoveBehavior>
     <CEffectApplyBehavior id="SeeleC1Attack2ReadyApply">
-        <EditorCategories value="Race:Terran"/>
         <WhichUnit Value="Source"/>
         <Behavior value="SeeleC1Attack2Ready"/>
     </CEffectApplyBehavior>
     <CEffectRemoveBehavior id="SeeleC1Attack2ReadyRemove">
-        <EditorCategories value="Race:Terran"/>
         <BehaviorLink value="SeeleC1Attack2Ready"/>
         <WhichUnit Value="Source"/>
     </CEffectRemoveBehavior>
@@ -8853,12 +8625,10 @@
         <WhichUnit Value="Source"/>
     </CEffectRemoveBehavior>
     <CEffectApplyBehavior id="SeeleC1Attack3ReadyApply">
-        <EditorCategories value="Race:Terran"/>
         <WhichUnit Value="Source"/>
         <Behavior value="SeeleC1Attack3Ready"/>
     </CEffectApplyBehavior>
     <CEffectRemoveBehavior id="SeeleC1Attack3ReadyRemove">
-        <EditorCategories value="Race:Terran"/>
         <BehaviorLink value="SeeleC1Attack3Ready"/>
         <WhichUnit Value="Source"/>
     </CEffectRemoveBehavior>
@@ -8873,12 +8643,10 @@
         <WhichUnit Value="Source"/>
     </CEffectRemoveBehavior>
     <CEffectApplyBehavior id="SeeleC1Attack4ReadyApply">
-        <EditorCategories value="Race:Terran"/>
         <WhichUnit Value="Source"/>
         <Behavior value="SeeleC1Attack4Ready"/>
     </CEffectApplyBehavior>
     <CEffectRemoveBehavior id="SeeleC1Attack4ReadyRemove">
-        <EditorCategories value="Race:Terran"/>
         <BehaviorLink value="SeeleC1Attack4Ready"/>
         <WhichUnit Value="Source"/>
     </CEffectRemoveBehavior>
@@ -8893,12 +8661,10 @@
         <WhichUnit Value="Source"/>
     </CEffectRemoveBehavior>
     <CEffectApplyBehavior id="SeeleC1Attack5ReadyApply">
-        <EditorCategories value="Race:Terran"/>
         <WhichUnit Value="Source"/>
         <Behavior value="SeeleC1Attack5Ready"/>
     </CEffectApplyBehavior>
     <CEffectRemoveBehavior id="SeeleC1Attack5ReadyRemove">
-        <EditorCategories value="Race:Terran"/>
         <BehaviorLink value="SeeleC1Attack5Ready"/>
         <WhichUnit Value="Source"/>
     </CEffectRemoveBehavior>
@@ -8928,7 +8694,6 @@
         <PeriodicPeriodArray value="0.0625"/>
     </CEffectCreatePersistent>
     <CEffectApplyBehavior id="SeeleC1Attack1Speed">
-        <EditorCategories value="Race:Terran"/>
         <WhichUnit Value="Caster"/>
     </CEffectApplyBehavior>
     <CEffectCreatePersistent id="SeeleC1Attack2Move">
@@ -8942,7 +8707,6 @@
         <PeriodicPeriodArray value="0.0625"/>
     </CEffectCreatePersistent>
     <CEffectApplyBehavior id="SeeleC1Attack2Speed">
-        <EditorCategories value="Race:Terran"/>
         <WhichUnit Value="Caster"/>
     </CEffectApplyBehavior>
     <CEffectCreatePersistent id="SeeleC1Attack3Move">
@@ -8956,7 +8720,6 @@
         <PeriodicPeriodArray value="0.0625"/>
     </CEffectCreatePersistent>
     <CEffectApplyBehavior id="SeeleC1Attack3Speed">
-        <EditorCategories value="Race:Terran"/>
         <WhichUnit Value="Caster"/>
     </CEffectApplyBehavior>
     <CEffectCreatePersistent id="SeeleC1Attack4Move">
@@ -8970,7 +8733,6 @@
         <PeriodicPeriodArray value="0.0625"/>
     </CEffectCreatePersistent>
     <CEffectApplyBehavior id="SeeleC1Attack4Speed">
-        <EditorCategories value="Race:Terran"/>
         <WhichUnit Value="Caster"/>
     </CEffectApplyBehavior>
     <CEffectCreatePersistent id="SeeleC1Attack5Move">
@@ -8984,7 +8746,6 @@
         <PeriodicPeriodArray value="0.0625"/>
     </CEffectCreatePersistent>
     <CEffectApplyBehavior id="SeeleC1Attack5Speed">
-        <EditorCategories value="Race:Terran"/>
         <WhichUnit Value="Caster"/>
     </CEffectApplyBehavior>
     <CEffectCreatePersistent id="SeeleC1Attack1">
@@ -9001,7 +8762,6 @@
         <Flags index="Channeled" value="1"/>
     </CEffectCreatePersistent>
     <CEffectCreatePersistent id="SeeleC1Attack2">
-        <EditorCategories value="Race:Terran"/>
         <WhichLocation Value="TargetUnit"/>
         <TimeScaleSource Value="Caster"/>
         <InitialEffect value="SeeleC1Attack2Move"/>
@@ -9020,7 +8780,6 @@
         <Flags index="Channeled" value="1"/>
     </CEffectCreatePersistent>
     <CEffectCreatePersistent id="SeeleC1Attack3">
-        <EditorCategories value="Race:Terran"/>
         <WhichLocation Value="TargetUnit"/>
         <TimeScaleSource Value="Caster"/>
         <InitialEffect value="SeeleC1Attack3Move"/>
@@ -9043,7 +8802,6 @@
         <Flags index="Channeled" value="1"/>
     </CEffectCreatePersistent>
     <CEffectCreatePersistent id="SeeleC1Attack4">
-        <EditorCategories value="Race:Terran"/>
         <WhichLocation Value="TargetUnit"/>
         <TimeScaleSource Value="Caster"/>
         <InitialEffect value="SeeleC1Attack4Move"/>
@@ -9062,7 +8820,6 @@
         <Flags index="Channeled" value="1"/>
     </CEffectCreatePersistent>
     <CEffectCreatePersistent id="SeeleC1Attack5">
-        <EditorCategories value="Race:Terran"/>
         <WhichLocation Value="TargetUnit"/>
         <TimeScaleSource Value="Caster"/>
         <InitialEffect value="SeeleC1Attack5Move"/>
@@ -9191,12 +8948,10 @@
         <WhichUnit Value="Source"/>
     </CEffectRemoveBehavior>
     <CEffectApplyBehavior id="MeiC2Attack2ReadyApply">
-        <EditorCategories value="Race:Terran"/>
         <WhichUnit Value="Source"/>
         <Behavior value="MeiC2Attack2Ready"/>
     </CEffectApplyBehavior>
     <CEffectRemoveBehavior id="MeiC2Attack2ReadyRemove">
-        <EditorCategories value="Race:Terran"/>
         <BehaviorLink value="MeiC2Attack2Ready"/>
         <WhichUnit Value="Source"/>
     </CEffectRemoveBehavior>
@@ -9211,12 +8966,10 @@
         <WhichUnit Value="Source"/>
     </CEffectRemoveBehavior>
     <CEffectApplyBehavior id="MeiC2Attack3ReadyApply">
-        <EditorCategories value="Race:Terran"/>
         <WhichUnit Value="Source"/>
         <Behavior value="MeiC2Attack3Ready"/>
     </CEffectApplyBehavior>
     <CEffectRemoveBehavior id="MeiC2Attack3ReadyRemove">
-        <EditorCategories value="Race:Terran"/>
         <BehaviorLink value="MeiC2Attack3Ready"/>
         <WhichUnit Value="Source"/>
     </CEffectRemoveBehavior>
@@ -9231,12 +8984,10 @@
         <WhichUnit Value="Source"/>
     </CEffectRemoveBehavior>
     <CEffectApplyBehavior id="MeiC2Attack4ReadyApply">
-        <EditorCategories value="Race:Terran"/>
         <WhichUnit Value="Source"/>
         <Behavior value="MeiC2Attack4Ready"/>
     </CEffectApplyBehavior>
     <CEffectRemoveBehavior id="MeiC2Attack4ReadyRemove">
-        <EditorCategories value="Race:Terran"/>
         <BehaviorLink value="MeiC2Attack4Ready"/>
         <WhichUnit Value="Source"/>
     </CEffectRemoveBehavior>
@@ -9251,12 +9002,10 @@
         <WhichUnit Value="Source"/>
     </CEffectRemoveBehavior>
     <CEffectApplyBehavior id="MeiC2Attack5ReadyApply">
-        <EditorCategories value="Race:Terran"/>
         <WhichUnit Value="Source"/>
         <Behavior value="MeiC2Attack5Ready"/>
     </CEffectApplyBehavior>
     <CEffectRemoveBehavior id="MeiC2Attack5ReadyRemove">
-        <EditorCategories value="Race:Terran"/>
         <BehaviorLink value="MeiC2Attack5Ready"/>
         <WhichUnit Value="Source"/>
     </CEffectRemoveBehavior>
@@ -9286,7 +9035,6 @@
         <PeriodicPeriodArray value="0.0625"/>
     </CEffectCreatePersistent>
     <CEffectApplyBehavior id="MeiC2Attack1Speed">
-        <EditorCategories value="Race:Terran"/>
         <WhichUnit Value="Caster"/>
     </CEffectApplyBehavior>
     <CEffectCreatePersistent id="MeiC2Attack2Move">
@@ -9300,7 +9048,6 @@
         <PeriodicPeriodArray value="0.0625"/>
     </CEffectCreatePersistent>
     <CEffectApplyBehavior id="MeiC2Attack2Speed">
-        <EditorCategories value="Race:Terran"/>
         <WhichUnit Value="Caster"/>
     </CEffectApplyBehavior>
     <CEffectCreatePersistent id="MeiC2Attack3Move">
@@ -9314,7 +9061,6 @@
         <PeriodicPeriodArray value="0.0625"/>
     </CEffectCreatePersistent>
     <CEffectApplyBehavior id="MeiC2Attack3Speed">
-        <EditorCategories value="Race:Terran"/>
         <WhichUnit Value="Caster"/>
     </CEffectApplyBehavior>
     <CEffectCreatePersistent id="MeiC2Attack4Move">
@@ -9328,7 +9074,6 @@
         <PeriodicPeriodArray value="0.0625"/>
     </CEffectCreatePersistent>
     <CEffectApplyBehavior id="MeiC2Attack4Speed">
-        <EditorCategories value="Race:Terran"/>
         <WhichUnit Value="Caster"/>
     </CEffectApplyBehavior>
     <CEffectCreatePersistent id="MeiC2Attack5Move">
@@ -9342,7 +9087,6 @@
         <PeriodicPeriodArray value="0.0625"/>
     </CEffectCreatePersistent>
     <CEffectApplyBehavior id="MeiC2Attack5Speed">
-        <EditorCategories value="Race:Terran"/>
         <WhichUnit Value="Caster"/>
     </CEffectApplyBehavior>
     <CEffectCreatePersistent id="MeiC2Attack1">
@@ -9357,7 +9101,6 @@
         <Flags index="Channeled" value="1"/>
     </CEffectCreatePersistent>
     <CEffectCreatePersistent id="MeiC2Attack2">
-        <EditorCategories value="Race:Terran"/>
         <WhichLocation Value="TargetUnit"/>
         <TimeScaleSource Value="Caster"/>
         <InitialEffect value="MeiC2Attack2Move"/>
@@ -9372,7 +9115,6 @@
         <Flags index="Channeled" value="1"/>
     </CEffectCreatePersistent>
     <CEffectCreatePersistent id="MeiC2Attack3">
-        <EditorCategories value="Race:Terran"/>
         <WhichLocation Value="TargetUnit"/>
         <TimeScaleSource Value="Caster"/>
         <InitialEffect value="MeiC2Attack3Ready"/>
@@ -9387,7 +9129,6 @@
         <Flags index="Channeled" value="1"/>
     </CEffectCreatePersistent>
     <CEffectCreatePersistent id="MeiC2Attack4">
-        <EditorCategories value="Race:Terran"/>
         <WhichLocation Value="TargetUnit"/>
         <TimeScaleSource Value="Caster"/>
         <InitialEffect value="MeiC2Attack4Ready"/>
@@ -9402,7 +9143,6 @@
         <Flags index="Channeled" value="1"/>
     </CEffectCreatePersistent>
     <CEffectCreatePersistent id="MeiC2Attack5">
-        <EditorCategories value="Race:Terran"/>
         <WhichLocation Value="TargetUnit"/>
         <TimeScaleSource Value="Caster"/>
         <InitialEffect value="MeiC2Attack5Move"/>
@@ -9488,11 +9228,9 @@
         <SearchFlags index="OffsetAreaByAngle" value="1"/>
     </CEffectDamage>
     <CEffectDamage id="MeiATTACK" parent="DU_WEAP">
-        <EditorCategories value="Race:Terran"/>
         <Amount value="20"/>
     </CEffectDamage>
     <CEffectDamage id="BronyaATTACK" parent="DU_WEAP">
-        <EditorCategories value="Race:Terran"/>
         <Amount value="20"/>
     </CEffectDamage>
     <CEffectApplyBehavior id="CoupleClear">
@@ -9593,12 +9331,10 @@
         <WhichUnit Value="Source"/>
     </CEffectRemoveBehavior>
     <CEffectApplyBehavior id="KianaC1RangeAttack2ReadyApply">
-        <EditorCategories value="Race:Terran"/>
         <WhichUnit Value="Source"/>
         <Behavior value="KianaC1RangeAttack2Ready"/>
     </CEffectApplyBehavior>
     <CEffectRemoveBehavior id="KianaC1RangeAttack2ReadyRemove">
-        <EditorCategories value="Race:Terran"/>
         <BehaviorLink value="KianaC1RangeAttack2Ready"/>
         <WhichUnit Value="Source"/>
     </CEffectRemoveBehavior>
@@ -9613,12 +9349,10 @@
         <WhichUnit Value="Source"/>
     </CEffectRemoveBehavior>
     <CEffectApplyBehavior id="KianaC1RangeAttack3ReadyApply">
-        <EditorCategories value="Race:Terran"/>
         <WhichUnit Value="Source"/>
         <Behavior value="KianaC1RangeAttack3Ready"/>
     </CEffectApplyBehavior>
     <CEffectRemoveBehavior id="KianaC1RangeAttack3ReadyRemove">
-        <EditorCategories value="Race:Terran"/>
         <BehaviorLink value="KianaC1RangeAttack3Ready"/>
         <WhichUnit Value="Source"/>
     </CEffectRemoveBehavior>
@@ -9633,12 +9367,10 @@
         <WhichUnit Value="Source"/>
     </CEffectRemoveBehavior>
     <CEffectApplyBehavior id="KianaC1RangeAttack4ReadyApply">
-        <EditorCategories value="Race:Terran"/>
         <WhichUnit Value="Source"/>
         <Behavior value="KianaC1RangeAttack4Ready"/>
     </CEffectApplyBehavior>
     <CEffectRemoveBehavior id="KianaC1RangeAttack4ReadyRemove">
-        <EditorCategories value="Race:Terran"/>
         <BehaviorLink value="KianaC1RangeAttack4Ready"/>
         <WhichUnit Value="Source"/>
     </CEffectRemoveBehavior>
@@ -9656,7 +9388,6 @@
         <Flags index="Channeled" value="1"/>
     </CEffectCreatePersistent>
     <CEffectCreatePersistent id="KianaC1RangeAttack2">
-        <EditorCategories value="Race:Terran"/>
         <WhichLocation Value="TargetUnit"/>
         <TimeScaleSource Value="Caster"/>
         <InitialEffect value="KianaC1RangeAttack2Ready"/>
@@ -9679,7 +9410,6 @@
         <Flags index="Channeled" value="1"/>
     </CEffectCreatePersistent>
     <CEffectCreatePersistent id="KianaC1RangeAttack3">
-        <EditorCategories value="Race:Terran"/>
         <WhichLocation Value="TargetUnit"/>
         <TimeScaleSource Value="Caster"/>
         <InitialEffect value="KianaC1RangeAttack3Ready"/>
@@ -9698,7 +9428,6 @@
         <Flags index="Channeled" value="1"/>
     </CEffectCreatePersistent>
     <CEffectCreatePersistent id="KianaC1RangeAttack4">
-        <EditorCategories value="Race:Terran"/>
         <WhichLocation Value="TargetUnit"/>
         <TimeScaleSource Value="Caster"/>
         <InitialEffect value="KianaC1RangeAttack4Ready"/>
@@ -9751,12 +9480,10 @@
         <WhichUnit Value="Source"/>
     </CEffectRemoveBehavior>
     <CEffectApplyBehavior id="KianaC1MeleeAttack2ReadyApply">
-        <EditorCategories value="Race:Terran"/>
         <WhichUnit Value="Source"/>
         <Behavior value="KianaC1MeleeAttack2Ready"/>
     </CEffectApplyBehavior>
     <CEffectRemoveBehavior id="KianaC1MeleeAttack2ReadyRemove">
-        <EditorCategories value="Race:Terran"/>
         <BehaviorLink value="KianaC1MeleeAttack2Ready"/>
         <WhichUnit Value="Source"/>
     </CEffectRemoveBehavior>
@@ -9771,12 +9498,10 @@
         <WhichUnit Value="Source"/>
     </CEffectRemoveBehavior>
     <CEffectApplyBehavior id="KianaC1MeleeAttack3ReadyApply">
-        <EditorCategories value="Race:Terran"/>
         <WhichUnit Value="Source"/>
         <Behavior value="KianaC1MeleeAttack3Ready"/>
     </CEffectApplyBehavior>
     <CEffectRemoveBehavior id="KianaC1MeleeAttack3ReadyRemove">
-        <EditorCategories value="Race:Terran"/>
         <BehaviorLink value="KianaC1MeleeAttack3Ready"/>
         <WhichUnit Value="Source"/>
     </CEffectRemoveBehavior>
@@ -9791,7 +9516,6 @@
         <PeriodicPeriodArray value="0.0625"/>
     </CEffectCreatePersistent>
     <CEffectApplyBehavior id="KianaC1MeleeAttack1Speed">
-        <EditorCategories value="Race:Terran"/>
         <WhichUnit Value="Caster"/>
     </CEffectApplyBehavior>
     <CEffectCreatePersistent id="KianaC1MeleeAttack2Move">
@@ -9805,7 +9529,6 @@
         <PeriodicPeriodArray value="0.0625"/>
     </CEffectCreatePersistent>
     <CEffectApplyBehavior id="KianaC1MeleeAttack2Speed">
-        <EditorCategories value="Race:Terran"/>
         <WhichUnit Value="Caster"/>
     </CEffectApplyBehavior>
     <CEffectCreatePersistent id="KianaC1MeleeAttack3Move">
@@ -9819,7 +9542,6 @@
         <PeriodicPeriodArray value="0.0625"/>
     </CEffectCreatePersistent>
     <CEffectApplyBehavior id="KianaC1MeleeAttack3Speed">
-        <EditorCategories value="Race:Terran"/>
         <WhichUnit Value="Caster"/>
     </CEffectApplyBehavior>
     <CEffectCreatePersistent id="KianaC1MeleeAttack1">
@@ -9837,7 +9559,6 @@
         <Flags index="Channeled" value="1"/>
     </CEffectCreatePersistent>
     <CEffectCreatePersistent id="KianaC1MeleeAttack2">
-        <EditorCategories value="Race:Terran"/>
         <WhichLocation Value="TargetUnit"/>
         <TimeScaleSource Value="Caster"/>
         <InitialEffect value="KianaC1MeleeAttack2Move"/>
@@ -9858,7 +9579,6 @@
         <Flags index="Channeled" value="1"/>
     </CEffectCreatePersistent>
     <CEffectCreatePersistent id="KianaC1MeleeAttack3">
-        <EditorCategories value="Race:Terran"/>
         <WhichLocation Value="TargetUnit"/>
         <TimeScaleSource Value="Caster"/>
         <InitialEffect value="KianaC1MeleeAttack3Move"/>

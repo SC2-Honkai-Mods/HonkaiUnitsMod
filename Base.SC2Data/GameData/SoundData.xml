@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
     <CSound id="RO_060_AttackLaunch" parent="Combat">
-        <EditorCategories value="Race:Terran"/>
         <AssetArray File="Assets\Sounds\Herc_Gun_Fire01.wav" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\Herc_Gun_Fire02.wav" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\Herc_Gun_Fire03.wav" FacialGroup=""/>
@@ -10,13 +9,11 @@
         <Volume value="-10.000000,-9.000000"/>
     </CSound>
     <CSound id="RO_060_DefenseMorphSound" parent="Spell">
-        <EditorCategories value="Race:Terran"/>
         <AssetArray File="Assets\Sounds\Liberator_SW_StartB01.wav" FacialGroup=""/>
         <DupeMuteCount value="4"/>
         <Volume value="-6.000000,-6.000000"/>
     </CSound>
     <CSound id="RO_060MorphSound" parent="Spell">
-        <EditorCategories value="Race:Terran"/>
         <AssetArray File="Assets\Sounds\Liberator_SW_EndB01.wav" FacialGroup=""/>
         <DupeMuteCount value="4"/>
         <Volume value="-8.000000,-8.000000"/>
@@ -41,14 +38,12 @@
         <Volume value="-1.000000,-1.000000"/>
     </CSound>
     <CSound id="Herrscher_Ability" parent="Voice">
-        <EditorCategories value="Race:Terran"/>
         <AssetArray File="Assets\Sounds\Herrscher\空之律者-审判的时刻到了。.mp3" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\Herrscher\空之律者-此刻正是，审判之时。.mp3" FacialGroup=""/>
         <Flags index="Download" value="0"/>
         <Volume value="-1.000000,-1.000000"/>
     </CSound>
     <CSound id="Herrscher_Help" parent="Alert">
-        <EditorCategories value="Race:Terran"/>
         <AssetArray File="Assets\Sounds\Herrscher\空之律者-我闻到了恐惧的气息。.mp3" FacialGroup=""/>
         <Mode value="3DWorld"/>
         <Volume value="-1.000000,-1.000000"/>
@@ -64,7 +59,6 @@
         <Volume value="-1.000000,-1.000000"/>
     </CSound>
     <CSound id="Herrscher_Ready" parent="Ready">
-        <EditorCategories value="Race:Terran"/>
         <AssetArray File="Assets\Sounds\Herrscher\空之律者-崩坏降临。.mp3" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\Herrscher\空之律者-我，就是崩坏的化身。.mp3" FacialGroup=""/>
         <Volume value="-1.000000,-1.000000"/>
@@ -84,7 +78,6 @@
         <Volume value="-1.000000,-1.000000"/>
     </CSound>
     <CSound id="Herrscher8thAbil1Sound" parent="Spell">
-        <EditorCategories value="Race:Protoss"/>
         <AssetArray File="Assets\Sounds\Uni\UI\Impact_SwtStrike_01.wav" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\Uni\UI\Impact_SwtStrike_02.wav" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\Uni\UI\Impact_SwtStrike_03.wav" FacialGroup=""/>
@@ -93,14 +86,12 @@
         <Volume value="-3.000000,-3.000000"/>
     </CSound>
     <CSound id="BronyaC7MotorSoundEnd" parent="Combat">
-        <EditorCategories value="Race:Protoss"/>
         <AssetArray File="Assets\Sounds\BronyaC7\BronyaC7_Mortor_End.wav"/>
         <DupeDestroyCount value="4"/>
         <Pitch value="-1.000000,-1.000000"/>
         <Volume value="2.000000,2.000000"/>
     </CSound>
     <CSound id="BronyaC7MotorSoundLoop" parent="Combat">
-        <EditorCategories value="Race:Protoss"/>
         <AssetArray File="Assets\Sounds\BronyaC7\BronyaC7_Mortor_Loop.wav"/>
         <DupeMuteCount value="4"/>
         <LoopCount value="-1"/>
@@ -114,25 +105,21 @@
         <Volume value="2.000000,2.000000"/>
     </CSound>
     <CSound id="BronyaC7MotorSoundStart" parent="Combat">
-        <EditorCategories value="Race:Protoss"/>
         <AssetArray File="Assets\Sounds\BronyaC7\BronyaC7_Mortor_Start.wav"/>
         <DupeDestroyCount value="4"/>
         <Pitch value="-1.000000,1.640000"/>
         <Volume value="2.000000,2.000000"/>
     </CSound>
     <CSound id="BronyaC7Morph" parent="Build">
-        <EditorCategories value="Race:Terran"/>
         <AssetArray File="Assets\Sounds\BronyaC7\Bronya_Transform.wav"/>
         <Volume value="-1.000000,-1.000000"/>
     </CSound>
     <CSound id="BronyaC7LaserAttackLaunch" parent="Combat">
-        <EditorCategories value="Race:Zerg"/>
         <AssetArray File="Assets\Sounds\BronyaC7\BronyaC7_Laser.wav" FacialGroup=""/>
         <DupeDestroyCount value="5"/>
         <Volume value="6.000000,6.000000"/>
     </CSound>
     <CSound id="FireWall" parent="Ambience_Object">
-        <EditorCategories value="Race:Neutral"/>
         <AssetArray File="Assets\Sounds\Terran\SharedEffects\Fires\Terran_FireLarge0.wav"/>
         <AssetArray File="Assets\Sounds\Terran\SharedEffects\Fires\Terran_FireLarge1.wav"/>
         <AssetArray File="Assets\Sounds\Terran\SharedEffects\Fires\Terran_FireLarge2.wav"/>
@@ -148,7 +135,6 @@
         <MixerPriority value="3"/>
     </CSound>
     <CSound id="KianaC1DragonShort" parent="Spell">
-        <EditorCategories value="Race:Terran"/>
         <AssetArray File="Assets\Sounds\Kiana\Dragon\DragonBreathShort1.wav" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\Kiana\Dragon\DragonBreathShort2.wav" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\Kiana\Dragon\DragonBreathShort3.wav" FacialGroup=""/>
@@ -174,7 +160,6 @@
         <Volume value="-8.570000,-8.570000"/>
     </CSound>
     <CSound id="SaBWLaunch" parent="Combat">
-        <EditorCategories value="Race:Neutral"/>
         <AssetArray File="Assets\Sounds\PurifierProtossTurret_Launch01_1ch.wav" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\PurifierProtossTurret_Launch02_1ch.wav" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\PurifierProtossTurret_Launch03_1ch.wav" FacialGroup=""/>
@@ -188,7 +173,6 @@
         <AssetArray File="Assets\Sounds\PurifierProtossTurret_Launch11_1ch.wav" FacialGroup=""/>
     </CSound>
     <CSound id="SaIntro" parent="Combat">
-        <EditorCategories value="Race:Neutral"/>
         <AssetArray File="Assets\Sounds\BOSS_470\Sa_Intro.wav" FacialGroup=""/>
     </CSound>
     <CSound id="SaZeroTime" parent="MUSIC">
@@ -210,18 +194,15 @@
         <Volume value="6.000000,6.000000"/>
     </CSound>
     <CSound id="TimeFractureIntro" parent="Spell">
-        <EditorCategories value="Race:Terran"/>
         <AssetArray File="Assets\Sounds\Effects\TimeFractureIntro.wav"/>
         <Pitch value="-1.500000,1.500000"/>
     </CSound>
     <CSound id="StarOfEdenWorldAbil1Sound" parent="Spell">
-        <EditorCategories value="Race:Terran"/>
         <AssetArray File="Assets\Sounds\BronyaC7\SratOfEdenWorld_Abil1.mp3"/>
         <Pitch value="-1.500000,1.500000"/>
         <Volume value="6.000000,6.000000"/>
     </CSound>
     <CSound id="KianaC1DragonLong" parent="Spell">
-        <EditorCategories value="Race:Terran"/>
         <AssetArray File="Assets\Sounds\Kiana\Dragon\DragonBreathLong1.wav" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\Kiana\Dragon\DragonBreathLong2.wav" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\Kiana\Dragon\DragonBreathLong3.wav" FacialGroup=""/>
@@ -230,7 +211,6 @@
         <Volume value="4.540000,4.540000"/>
     </CSound>
     <CSound id="TimeFractureOutro" parent="Spell">
-        <EditorCategories value="Race:Terran"/>
         <AssetArray File="Assets\Sounds\Effects\TimeFractureOutro.wav"/>
         <Pitch value="-1.500000,1.500000"/>
     </CSound>
@@ -244,7 +224,6 @@
         <Volume value="6.000000,6.000000"/>
     </CSound>
     <CSound id="UlyGeneral_Death" parent="Death">
-        <EditorCategories value="Race:Zerg"/>
         <AssetArray File="Assets\Sounds\Uly\UL_voice_14.wav" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\Uly\UL_voice_07.wav" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\Uly\UL_voice_01.wav" FacialGroup=""/>
@@ -262,7 +241,6 @@
         <Volume value="-35.529999,-35.529999"/>
     </CSound>
     <CSound id="UL_010_Attack" parent="Voice">
-        <EditorCategories value="Race:Zerg"/>
         <AssetArray File="Assets\Sounds\UL_010Sound\UL_010_Attack.mp3" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\UL_010Sound\UL_010_Attack2.mp3" FacialGroup=""/>
         <Flags index="Download" value="0"/>
@@ -271,7 +249,6 @@
         <Volume value="-1.000000,-1.000000"/>
     </CSound>
     <CSound id="UL_010_Help" parent="Voice">
-        <EditorCategories value="Race:Zerg"/>
         <AssetArray File="Assets\Sounds\UL_010Sound\UL_010_Help.mp3" FacialGroup=""/>
         <Flags index="Download" value="0"/>
         <DupeDestroyCount value="6"/>
@@ -279,20 +256,17 @@
         <Volume value="-1.000000,-1.000000"/>
     </CSound>
     <CSound id="UL_010_Pissed" parent="Pissed">
-        <EditorCategories value="Race:Zerg"/>
         <AssetArray File="Assets\Sounds\UL_010Sound\UL_010_Pissed.mp3" FacialGroup=""/>
         <Pitch value="-1.000000,1.000000"/>
         <Volume value="-1.000000,-1.000000"/>
     </CSound>
     <CSound id="UL_010_Ready" parent="Ready">
-        <EditorCategories value="Race:Zerg"/>
         <AssetArray File="Assets\Sounds\UL_010Sound\UL_010_Yes.mp3" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\UL_010Sound\UL_010_Yes2.mp3" FacialGroup=""/>
         <Pitch value="-1.000000,1.000000"/>
         <Volume value="-1.000000,-1.000000"/>
     </CSound>
     <CSound id="UL_010_What" parent="Voice">
-        <EditorCategories value="Race:Zerg"/>
         <AssetArray File="Assets\Sounds\UL_010Sound\UL_010_What.mp3" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\UL_010Sound\UL_010_What2.mp3" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\UL_010Sound\UL_010_What3.mp3" FacialGroup=""/>
@@ -300,14 +274,12 @@
         <Volume value="-1.000000,-1.000000"/>
     </CSound>
     <CSound id="UL_010_Yes" parent="Voice">
-        <EditorCategories value="Race:Zerg"/>
         <AssetArray File="Assets\Sounds\UL_010Sound\UL_010_Yes.mp3" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\UL_010Sound\UL_010_Yes2.mp3" FacialGroup=""/>
         <Pitch value="-1.000000,1.000000"/>
         <Volume value="-1.000000,-1.000000"/>
     </CSound>
     <CSound id="UlyGeneral_Attack" parent="Voice">
-        <EditorCategories value="Race:Zerg"/>
         <AssetArray File="Assets\Sounds\Uly\UL_voice_06.wav" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\Uly\UL_voice_16.wav" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\Uly\UL_voice_02.wav" FacialGroup=""/>
@@ -317,7 +289,6 @@
         <Volume value="6.000000,6.000000"/>
     </CSound>
     <CSound id="UlyGeneral_Help" parent="Voice">
-        <EditorCategories value="Race:Zerg"/>
         <AssetArray File="Assets\Sounds\Uly\UL_voice_17.wav" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\Uly\UL_voice_01.wav" FacialGroup=""/>
         <Flags index="Download" value="0"/>
@@ -326,7 +297,6 @@
         <Volume value="6.000000,6.000000"/>
     </CSound>
     <CSound id="UlyGeneral_Pissed" parent="Pissed">
-        <EditorCategories value="Race:Zerg"/>
         <AssetArray File="Assets\Sounds\Uly\UL_voice_01.wav" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\Uly\UL_voice_02.wav" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\Uly\UL_voice_03.wav" FacialGroup=""/>
@@ -349,13 +319,11 @@
         <Select value="Shuffle"/>
     </CSound>
     <CSound id="UlyGeneral_Ready" parent="Ready">
-        <EditorCategories value="Race:Zerg"/>
         <AssetArray File="Assets\Sounds\Uly\UL_voice_09.wav" FacialGroup=""/>
         <Pitch value="-1.000000,1.000000"/>
         <Volume value="6.000000,6.000000"/>
     </CSound>
     <CSound id="UlyGeneral_What" parent="Voice">
-        <EditorCategories value="Race:Zerg"/>
         <AssetArray File="Assets\Sounds\Uly\UL_voice_11.wav" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\Uly\UL_voice_07.wav" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\Uly\UL_voice_08.wav" FacialGroup=""/>
@@ -363,14 +331,12 @@
         <Volume value="6.000000,6.000000"/>
     </CSound>
     <CSound id="UlyGeneral_Yes" parent="Voice">
-        <EditorCategories value="Race:Zerg"/>
         <AssetArray File="Assets\Sounds\Uly\UL_voice_03.wav" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\Uly\UL_voice_04.wav" FacialGroup=""/>
         <Pitch value="-1.000000,1.000000"/>
         <Volume value="6.000000,6.000000"/>
     </CSound>
     <CSound id="IceFieldBiethLow" parent="Ambience_Object">
-        <EditorCategories value="Race:Neutral"/>
         <AssetArray File="Assets\Sounds\Doodad_IceBridge00_StandWork_00.wav" FacialGroup=""/>
         <Volume value="-26.789999,-26.789999"/>
     </CSound>
@@ -403,7 +369,6 @@
         <AssetArray index="5" removed="1"/>
     </CSound>
     <CSound id="Herrscher4thWaveLaunch" parent="Spell">
-        <EditorCategories value="Race:Terran"/>
         <AssetArray File="Assets\Sounds\Alarak_StructureOverCharge_02.wav" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\Alarak_StructureOverCharge_03.wav" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\Alarak_StructureOverCharge_04.wav" FacialGroup=""/>
@@ -566,7 +531,6 @@
         <Volume value="-5.000000,-3.000000"/>
     </CSound>
     <CSound id="BronyaC7MotorLoop" parent="Combat">
-        <EditorCategories value="Race:Terran"/>
         <DupeMuteCount value="4"/>
         <LoopCount value="-1"/>
         <OffsetFadeIn Volume="-96.000000"/>
@@ -579,7 +543,6 @@
         <Volume value="-3.000000,-3.000000"/>
     </CSound>
     <CSound id="BronyaC7MotorStart" parent="Combat">
-        <EditorCategories value="Race:Terran"/>
         <AssetArray File="Assets\Sounds\Terran\Hellion\Nova_Vulture_Mv_01.wav" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\Terran\Hellion\Nova_Vulture_Mv_02.wav" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\Terran\Hellion\Nova_Vulture_Mv_04.wav" FacialGroup=""/>
@@ -594,7 +557,6 @@
     </CSound>
     <CSound id="Thor_Help"/>
     <CSound id="TornadoSoundLoop" parent="Spell">
-        <EditorCategories value="Race:Terran"/>
         <AssetArray File="Assets\Sounds\Wind_ColdSteady_Lp_01.wav" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\Wind_ColdSteady_Lp_02.wav" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\Wind_ColdSteady_Lp_03.wav" FacialGroup=""/>
@@ -622,13 +584,11 @@
         <SustainFade index="1" Time="752"/>
     </CSound>
     <CSound id="RobotDrop" parent="Spell">
-        <EditorCategories value="Race:Terran"/>
         <AssetArray File="Assets\Sounds\RobotDrop.wav"/>
         <Pitch value="-1.500000,1.500000"/>
         <Volume value="6.000000,6.000000"/>
     </CSound>
     <CSound id="CannonChargeUp" parent="Spell">
-        <EditorCategories value="Race:Terran"/>
         <AssetArray File="Assets\Sounds\Weapons\CannonCharge.wav"/>
         <DupeDestroyCount value="8"/>
         <DupeMaximumMethod value="Replace"/>
@@ -636,7 +596,6 @@
         <Volume value="-0.920000,-0.920000"/>
     </CSound>
     <CSound id="BroodLord_AttackImpact2" parent="Combat">
-        <EditorCategories value="Race:Zerg"/>
         <AssetArray File="Assets\Sounds\Zerg\BroodLord\Broodlord_AttackImpact0.wav"/>
         <AssetArray File="Assets\Sounds\Zerg\BroodLord\Broodlord_AttackImpact1.wav"/>
         <AssetArray File="Assets\Sounds\Zerg\BroodLord\Broodlord_AttackImpact2.wav"/>
@@ -649,7 +608,6 @@
         <MixerPriority value="12"/>
     </CSound>
     <CSound id="RO_010AttackImpact" parent="Combat">
-        <EditorCategories value="Race:Terran"/>
         <AssetArray File="Assets\Sounds\RO_010\RO_010Attack.wav" FacialGroup=""/>
         <DupeMaximumMethod value="Replace"/>
         <DupeMuteCount value="2"/>
@@ -666,13 +624,11 @@
         <AssetArray index="6" removed="1"/>
     </CSound>
     <CSound id="Herrscher_Death" parent="Death">
-        <EditorCategories value="Race:Terran"/>
         <AssetArray File="Assets\Sounds\Herrscher\空之律者-啊...怎么...可能....mp3" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\Herrscher\空之律者-怎么会...我...输了？.mp3" FacialGroup=""/>
         <Volume value="-1.000000,-1.000000"/>
     </CSound>
     <CSound id="K23LaunchSound" parent="Spell">
-        <EditorCategories value="Race:Protoss"/>
         <AssetArray File="Assets\Sounds\Weapons\K23Skill.wav"/>
     </CSound>
     <CSound id="KianaAttack1" parent="Combat">
@@ -781,12 +737,10 @@
         <Volume value="-1.000000,-1.000000"/>
     </CSound>
     <CSound id="Kiana_Death" parent="Death">
-        <EditorCategories value="Race:Terran"/>
         <AssetArray File="Assets\Sounds\Kiana\琪亚娜-死亡.mp3" FacialGroup=""/>
         <Volume value="-1.000000,-1.000000"/>
     </CSound>
     <CSound id="Kiana_Help" parent="Alert">
-        <EditorCategories value="Race:Terran"/>
         <AssetArray File="Assets\Sounds\Kiana\琪亚娜-哼，惹到我可是很危险的！.mp3" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\Kiana\琪亚娜-挑衅我的朋友，你死定了！.mp3" Weight="33" FacialGroup=""/>
         <Mode value="3DWorld"/>
@@ -804,7 +758,6 @@
         <Volume value="-1.000000,-1.000000"/>
     </CSound>
     <CSound id="Kiana_Ready" parent="Ready">
-        <EditorCategories value="Race:Terran"/>
         <AssetArray File="Assets\Sounds\Kiana\琪亚娜-琪亚娜，出击！.mp3" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\Kiana\琪亚娜-哼，看本小姐大展拳脚！.mp3" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\Kiana\琪亚娜-这里可是我的主场哦~.mp3" FacialGroup=""/>
@@ -822,12 +775,10 @@
         <Volume value="-1.000000,-1.000000"/>
     </CSound>
     <CSound id="Kiana_Movement" parent="Movement">
-        <EditorCategories value="Race:Terran"/>
         <AssetArray File="Assets\Sounds\Kiana\KianaWalk1.wav" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\Kiana\KianaWalk2.wav" FacialGroup=""/>
     </CSound>
     <CSound id="Kiana_Dress" parent="Combat">
-        <EditorCategories value="Race:Terran"/>
         <AssetArray File="Assets\Sounds\Kiana\琪亚娜-舰长，你要我穿成这样去战斗？才...才没有担心会弄脏呢。.mp3" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\Kiana\琪亚娜-啊，新衣服！最喜欢舰长啦！.mp3" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\Kiana\琪亚娜-不知道这个颜色芽衣喜不喜欢呢？.mp3" FacialGroup=""/>
@@ -841,13 +792,11 @@
         <Volume value="-1.000000,-1.000000"/>
     </CSound>
     <CSound id="KianaC1_Death" parent="Death">
-        <EditorCategories value="Race:Terran"/>
         <AssetArray File="Assets\Sounds\Kiana\KianaC1\天穹游侠-呃...不会...让你得逞....wav" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\Kiana\KianaC1\天穹游侠-不，这不可能...我怎么会....wav" FacialGroup=""/>
         <Volume value="-1.000000,-1.000000"/>
     </CSound>
     <CSound id="KianaC1_Help" parent="Alert">
-        <EditorCategories value="Race:Terran"/>
         <AssetArray File="Assets\Sounds\Kiana\KianaC1\天穹游侠-你就是造成混乱的元凶吗？.wav" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\Kiana\KianaC1\天穹游侠-我会战斗到最后一刻！.wav" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\Kiana\KianaC1\天穹游侠-走开！.wav" FacialGroup=""/>
@@ -867,7 +816,6 @@
         <Volume value="-1.000000,-1.000000"/>
     </CSound>
     <CSound id="KianaC1_Ready" parent="Ready">
-        <EditorCategories value="Race:Terran"/>
         <AssetArray File="Assets\Sounds\Kiana\KianaC1\天穹游侠-现在是琪亚娜时间。.wav" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\Kiana\KianaC1\天穹游侠-舰长，我准备好了！.wav" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\Kiana\KianaC1\天穹游侠-即使命运无法改变，我也不会再逃避了。.wav" FacialGroup=""/>
@@ -892,12 +840,10 @@
         <Volume value="-1.000000,-1.000000"/>
     </CSound>
     <CSound id="Seele_Death" parent="Death">
-        <EditorCategories value="Race:Terran"/>
         <AssetArray File="Assets\Sounds\Seele\希儿_ 死亡.mp3" FacialGroup=""/>
         <Volume value="-1.000000,-1.000000"/>
     </CSound>
     <CSound id="Seele_Help" parent="Alert">
-        <EditorCategories value="Race:Terran"/>
         <AssetArray File="Assets\Sounds\Seele\希儿-好可怕，希儿要躲到玩具箱里去。【晃动语音】.mp3" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\Seele\希儿-不许你们再往前一步了！.mp3" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\Seele\希儿-不要！.mp3" FacialGroup=""/>
@@ -916,7 +862,6 @@
         <Volume value="-1.000000,-1.000000"/>
     </CSound>
     <CSound id="Seele_Ready" parent="Ready">
-        <EditorCategories value="Race:Terran"/>
         <AssetArray File="Assets\Sounds\Seele\希儿-舰长，你找到希儿了。.mp3" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\Seele\希儿-希儿，准备好了。.mp3" FacialGroup=""/>
         <Volume value="-1.000000,-1.000000"/>
@@ -933,7 +878,6 @@
         <Volume value="-1.000000,-1.000000"/>
     </CSound>
     <CSound id="Seele_Dress" parent="Combat">
-        <EditorCategories value="Race:Terran"/>
         <AssetArray File="Assets\Sounds\Seele\希儿-好漂亮的衣服，让希儿收下真的合适吗？.mp3" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\Seele\黑希儿-嗯，眼光不错，希儿会喜欢这身衣服的。.mp3" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\Seele\魇夜星渊-这身衣服你是想送给她的？还是我的呢？.mp3" FacialGroup=""/>
@@ -944,12 +888,10 @@
         <Volume value="-1.000000,-1.000000"/>
     </CSound>
     <CSound id="BlackSeele_Death" parent="Death">
-        <EditorCategories value="Race:Terran"/>
         <AssetArray File="Assets\Sounds\Seele\黑希儿_死亡.mp3" FacialGroup=""/>
         <Volume value="-1.000000,-1.000000"/>
     </CSound>
     <CSound id="BlackSeele_Help" parent="Alert">
-        <EditorCategories value="Race:Terran"/>
         <AssetArray File="Assets\Sounds\Seele\黑希儿-呵呵呵呵呵，找到你们了~.mp3" FacialGroup=""/>
         <Mode value="3DWorld"/>
         <Volume value="-1.000000,-1.000000"/>
@@ -979,12 +921,10 @@
         <Volume value="-1.000000,-1.000000"/>
     </CSound>
     <CSound id="MeiC2_Death" parent="Death">
-        <EditorCategories value="Race:Terran"/>
         <AssetArray File="Assets\Sounds\Mei\芽衣-诶...不...呃....mp3" FacialGroup=""/>
         <Volume value="-1.000000,-1.000000"/>
     </CSound>
     <CSound id="MeiC2_Help" parent="Alert">
-        <EditorCategories value="Race:Terran"/>
         <AssetArray File="Assets\Sounds\Mei\芽衣-绝不会让你们，再前进一步！.mp3" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\Mei\芽衣-这里可不能退让。.mp3" FacialGroup=""/>
         <Mode value="3DWorld"/>
@@ -1001,7 +941,6 @@
         <Volume value="-1.000000,-1.000000"/>
     </CSound>
     <CSound id="MeiC2_Ready" parent="Ready">
-        <EditorCategories value="Race:Terran"/>
         <AssetArray File="Assets\Sounds\Mei\芽衣-女武神芽衣，参上。.mp3" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\Mei\芽衣-这次要派我出场了吗？舰长。.mp3" FacialGroup=""/>
         <Volume value="-1.000000,-1.000000"/>
@@ -1024,13 +963,11 @@
         <Volume value="-1.000000,-1.000000"/>
     </CSound>
     <CSound id="BronyaC2_Death" parent="Death">
-        <EditorCategories value="Race:Terran"/>
         <AssetArray File="Assets\Sounds\Bronya\布洛妮娅-任务，失败了....mp3" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\Bronya\布洛妮娅-系统...静默....mp3" FacialGroup=""/>
         <Volume value="-1.000000,-1.000000"/>
     </CSound>
     <CSound id="BronyaC2_Help" parent="Alert">
-        <EditorCategories value="Race:Terran"/>
         <AssetArray File="Assets\Sounds\Bronya\布洛妮娅-发现不明物体，雷达检测全开。.mp3" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\Bronya\布洛妮娅-发现敌方单位。.mp3" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\Bronya\布洛妮娅-系统警告，战局危险指数升高。.mp3" FacialGroup=""/>
@@ -1049,7 +986,6 @@
         <Volume value="-1.000000,-1.000000"/>
     </CSound>
     <CSound id="BronyaC2_Ready" parent="Ready">
-        <EditorCategories value="Race:Terran"/>
         <AssetArray File="Assets\Sounds\Bronya\布洛妮娅-布洛妮娅。.mp3" FacialGroup=""/>
         <Volume value="-1.000000,-1.000000"/>
     </CSound>
@@ -1068,11 +1004,9 @@
         <Volume value="-1.000000,-1.000000"/>
     </CSound>
     <CSound id="Bronya_C7_Death" parent="Death">
-        <EditorCategories value="Race:Terran"/>
         <Volume value="-1.000000,-1.000000"/>
     </CSound>
     <CSound id="Bronya_C7_Help" parent="Alert">
-        <EditorCategories value="Race:Terran"/>
         <AssetArray File="Assets\Sounds\Bronya\理之律者-系统警告，敌方战力升高。.mp3" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\Bronya\理之律者-检测到战力指数上升，律者核心状态稳定。.mp3" FacialGroup=""/>
         <Mode value="3DWorld"/>
@@ -1087,7 +1021,6 @@
         <Volume value="-1.000000,-1.000000"/>
     </CSound>
     <CSound id="Bronya_C7_Ready" parent="Ready">
-        <EditorCategories value="Race:Terran"/>
         <AssetArray File="Assets\Sounds\Bronya\理之律者-布洛妮娅，抵达战场。.mp3" FacialGroup=""/>
         <Volume value="-1.000000,-1.000000"/>
     </CSound>

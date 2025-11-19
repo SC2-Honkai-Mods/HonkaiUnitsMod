@@ -19,43 +19,44 @@
     <CUpgrade id="AvatarNoBronya"/>
     <CUpgrade id="AvatarNoSeele"/>
     <CUpgrade id="B18">
-        <Flags index="UpgradeCheat" value="0"/>
-        <EditorCategories value="Race:Terran,UpgradeType:Talents"/>
+        <Flags index="TechTreeCheat" value="1"/>
+        <EditorCategories value="UpgradeType:Talents"/>
     </CUpgrade>
     <CUpgrade id="B22">
-        <Flags index="UpgradeCheat" value="0"/>
-        <EditorCategories value="Race:Terran,UpgradeType:Talents"/>
+        <Flags index="TechTreeCheat" value="1"/>
+        <EditorCategories value="UpgradeType:Talents"/>
     </CUpgrade>
     <CUpgrade id="B23">
-        <Flags index="UpgradeCheat" value="0"/>
-        <EditorCategories value="Race:Terran,UpgradeType:Talents"/>
+        <Flags index="TechTreeCheat" value="1"/>
+        <EditorCategories value="UpgradeType:Talents"/>
     </CUpgrade>
     <CUpgrade id="B25">
-        <Flags index="UpgradeCheat" value="0"/>
-        <EditorCategories value="Race:Terran,UpgradeType:Talents"/>
+        <Flags index="TechTreeCheat" value="1"/>
+        <EditorCategories value="UpgradeType:Talents"/>
     </CUpgrade>
     <CUpgrade id="B26">
-        <Flags index="UpgradeCheat" value="0"/>
-        <EditorCategories value="Race:Terran,UpgradeType:Talents"/>
+        <Flags index="TechTreeCheat" value="1"/>
+        <EditorCategories value="UpgradeType:Talents"/>
     </CUpgrade>
     <CUpgrade id="B6">
-        <Flags index="UpgradeCheat" value="0"/>
-        <EditorCategories value="Race:Terran,UpgradeType:Talents"/>
+        <Flags index="TechTreeCheat" value="1"/>
+        <EditorCategories value="UpgradeType:Talents"/>
     </CUpgrade>
     <CUpgrade id="B34">
-        <Flags index="UpgradeCheat" value="0"/>
-        <EditorCategories value="Race:Terran,UpgradeType:Talents"/>
+        <Flags index="TechTreeCheat" value="1"/>
+        <EditorCategories value="UpgradeType:Talents"/>
     </CUpgrade>
     <CUpgrade id="B7">
-        <Flags index="UpgradeCheat" value="0"/>
-        <EditorCategories value="Race:Terran,UpgradeType:Talents"/>
+        <Flags index="TechTreeCheat" value="1"/>
+        <EditorCategories value="UpgradeType:Talents"/>
     </CUpgrade>
     <CUpgrade id="B15">
-        <Flags index="UpgradeCheat" value="0"/>
-        <EditorCategories value="Race:Terran,UpgradeType:Talents"/>
+        <Flags index="TechTreeCheat" value="1"/>
+        <EditorCategories value="UpgradeType:Talents"/>
     </CUpgrade>
     <CUpgrade id="MHTUpgrade">
         <AffectedUnitArray value="MHT3"/>
+        <Flags index="TechTreeCheat" value="1"/>
     </CUpgrade>
     <CUpgrade id="Fighters">
         <InfoTooltipPriority value="1"/>
@@ -64,7 +65,7 @@
         <Race value="Terr"/>
         <ScoreAmount value="300"/>
         <ScoreResult value="BuildOrder"/>
-        <EditorCategories value="Race:Terran,UpgradeType:Talents"/>
+        <EditorCategories value="UpgradeType:Talents"/>
         <AffectedUnitArray value="Battlecruiser"/>
     </CUpgrade>
     <CUpgrade id="DG010Upgrade2">
@@ -73,6 +74,7 @@
         <EffectArray Operation="Multiply" Reference="Unit,DG_012,Speed" Value="1.500000"/>
         <EffectArray Operation="Multiply" Reference="Unit,DG_013,Speed" Value="1.500000"/>
         <EffectArray Operation="Multiply" Reference="Unit,RO_050,Speed" Value="1.500000"/>
+        <Flags index="TechTreeCheat" value="1"/>
     </CUpgrade>
     <CUpgrade id="DG010Upgrade4"/>
     <CUpgrade id="DG010Upgrade5"/>
@@ -82,6 +84,7 @@
     <CUpgrade id="DG010Upgrade6"/>
     <CUpgrade id="DG_011Upgrade">
         <EffectArray Operation="Set" Reference="Effect,DG_011Skill2EnableApply2,Count" Value="1"/>
+        <Flags index="TechTreeCheat" value="1"/>
     </CUpgrade>
     <CUpgrade id="BurnDamage">
         <EffectArray Reference="Effect,DamageFire,Amount" Value="1"/>
@@ -90,46 +93,57 @@
     <CUpgrade id="DivineKey11th">
         <EditorCategories value="UpgradeType:Talents"/>
         <AffectedUnitArray value="DivineKeys"/>
+        <Flags index="TechTreeCheat" value="1"/>
     </CUpgrade>
     <CUpgrade id="DivineKey12th">
         <EditorCategories value="UpgradeType:Talents"/>
         <AffectedUnitArray value="DivineKeys"/>
+        <Flags index="TechTreeCheat" value="1"/>
     </CUpgrade>
     <CUpgrade id="DivineKey2nd">
         <EditorCategories value="UpgradeType:Talents"/>
         <AffectedUnitArray value="DivineKeys"/>
+        <Flags index="TechTreeCheat" value="1"/>
     </CUpgrade>
     <CUpgrade id="DivineKey3rd">
         <EditorCategories value="UpgradeType:Talents"/>
         <AffectedUnitArray value="DivineKeys"/>
+        <Flags index="TechTreeCheat" value="1"/>
     </CUpgrade>
     <CUpgrade id="DivineKey4th">
         <EditorCategories value="UpgradeType:Talents"/>
         <AffectedUnitArray value="DivineKeys"/>
+        <Flags index="TechTreeCheat" value="1"/>
     </CUpgrade>
     <CUpgrade id="DivineKey5th">
         <EditorCategories value="UpgradeType:Talents"/>
         <AffectedUnitArray value="DivineKeys"/>
+        <Flags index="TechTreeCheat" value="1"/>
     </CUpgrade>
     <CUpgrade id="DivineKey6th">
         <EditorCategories value="UpgradeType:Talents"/>
         <AffectedUnitArray value="DivineKeys"/>
+        <Flags index="TechTreeCheat" value="1"/>
     </CUpgrade>
     <CUpgrade id="DivineKey7th">
         <EditorCategories value="UpgradeType:Talents"/>
         <AffectedUnitArray value="DivineKeys"/>
+        <Flags index="TechTreeCheat" value="1"/>
     </CUpgrade>
     <CUpgrade id="DivineKey8th">
         <EditorCategories value="UpgradeType:Talents"/>
         <AffectedUnitArray value="DivineKeys"/>
+        <Flags index="TechTreeCheat" value="1"/>
     </CUpgrade>
     <CUpgrade id="DivineKey9th">
         <EditorCategories value="UpgradeType:Talents"/>
         <AffectedUnitArray value="DivineKeys"/>
+        <Flags index="TechTreeCheat" value="1"/>
     </CUpgrade>
     <CUpgrade id="DivineKey10th">
         <EditorCategories value="UpgradeType:Talents"/>
         <AffectedUnitArray value="DivineKeys"/>
+        <Flags index="TechTreeCheat" value="1"/>
     </CUpgrade>
     <CUpgrade id="Herrscher11thDefeated">
         <EditorCategories value="UpgradeType:Talents"/>
@@ -227,8 +241,8 @@
         <EffectArray Reference="Unit,MissileTurret,LifeArmorLevel" Value="1"/>
         <EffectArray Reference="Unit,SensorTower,LifeArmorLevel" Value="1"/>
         <EffectArray Reference="Unit,Bunker,LifeArmorLevel" Value="1"/>
-        <EffectArray Reference="Unit,Factory,LifeArmorLevel" Value="1"/>
-        <EffectArray Reference="Unit,FactoryFlying,LifeArmorLevel" Value="1"/>
+        <EffectArray Operation="Set" Reference="Unit,AntiEntropyFactoryFlying,LifeArmorLevel" Value="0"/>
+        <EffectArray Operation="Set" Reference="Unit,AntiEntropyFactory,LifeArmorLevel" Value="0"/>
         <EffectArray Reference="Unit,Armory,LifeArmorLevel" Value="1"/>
         <EffectArray Reference="Unit,Starport,LifeArmorLevel" Value="1"/>
         <EffectArray Reference="Unit,StarportFlying,LifeArmorLevel" Value="1"/>
@@ -321,21 +335,28 @@
         <MaxLevel value="10"/>
     </CUpgrade>
     <CUpgrade id="RO_040Charge">
-        <Flags index="UpgradeCheat" value="0"/>
-        <EditorCategories value="Race:Terran,UpgradeType:Talents"/>
+        <Flags index="TechTreeCheat" value="1"/>
+        <EditorCategories value="UpgradeType:Talents"/>
     </CUpgrade>
-    <CUpgrade id="SeeleC1Unlock"/>
+    <CUpgrade id="SeeleC1Unlock">
+        <Flags index="TechTreeCheat" value="1"/>
+    </CUpgrade>
     <CUpgrade id="SeeleC1Upgrade1">
         <EffectArray Reference="Effect,SeeleC1GainShadowByAttack,Count" Value="4"/>
         <EffectArray Reference="Effect,SeeleC1GainShadowByKill,Count" Value="25"/>
         <MaxLevel value="3"/>
+        <Flags index="TechTreeCheat" value="1"/>
     </CUpgrade>
-    <CUpgrade id="SeeleC1Upgrade2"/>
+    <CUpgrade id="SeeleC1Upgrade2">
+        <Flags index="TechTreeCheat" value="1"/>
+    </CUpgrade>
     <CUpgrade id="SeeleC1Upgrade3">
         <MaxLevel value="3"/>
+        <Flags index="TechTreeCheat" value="1"/>
     </CUpgrade>
     <CUpgrade id="SeeleC1Upgrade4">
         <EffectArray Operation="Set" Reference="Behavior,SeeleC1Ultimate,DebugTrace" Value="0"/>
+        <Flags index="TechTreeCheat" value="1"/>
     </CUpgrade>
     <CUpgrade id="SeeleATTACK">
         <Race value="Terr"/>
@@ -444,6 +465,7 @@
     <CUpgrade id="DivineKey1st">
         <EditorCategories value="UpgradeType:Talents"/>
         <AffectedUnitArray value="DivineKeys"/>
+        <Flags index="TechTreeCheat" value="1"/>
     </CUpgrade>
     <CUpgrade id="PalsyDuration">
         <EffectArray Reference="Behavior,HonkaiPalsy,Duration" Value="0.500000"/>
@@ -464,10 +486,12 @@
         <MaxLevel value="10"/>
     </CUpgrade>
     <CUpgrade id="MicroFiltering">
-        <EffectArray index="0" Operation="Add"/>
-        <EffectArray index="1" Operation="Add" Reference="Abil,DroneHarvest,ResourceAmountBonus[Vespene]" Value="1"/>
+        <EffectArray index="0" Operation="Add" Value="2"/>
+        <EffectArray index="1" Operation="Add" Reference="Abil,DroneHarvest,ResourceAmountBonus[Vespene]" Value="2"/>
         <AffectedUnitArray value="SCV"/>
-        <MaxLevel value="6"/>
+        <MaxLevel value="4"/>
+        <Flags index="TechTreeCheat" value="1"/>
+        <Flags index="UpgradeCheat" value="1"/>
     </CUpgrade>
     <CUpgrade id="OrbitalStrike2">
         <Flags index="UpgradeCheat" value="0"/>
@@ -486,14 +510,14 @@
         <EffectArray Operation="Set" Reference="Abil,FactoryTrain,InfoArray[Train9].Effect" Value="RODrop"/>
         <EffectArray Operation="Set" Reference="Abil,FactoryTrain,InfoArray[Train9].Location" Value="Rally"/>
         <EffectArray Operation="Multiply" Reference="Abil,FactoryTrain,InfoArray[Train9].Time" Value="0.7"/>
-        <EditorCategories value="Race:Terran,UpgradeType:Talents"/>
+        <EditorCategories value="UpgradeType:Talents"/>
     </CUpgrade>
     <CUpgrade id="AdvancedMedic">
         <Flags index="UpgradeCheat" value="0"/>
         <Alert value="ResearchComplete"/>
         <EffectArray Operation="Multiply" Reference="Effect,MedivacHealModifyTargetLife,VitalArray[Life].Change" Value="1.5"/>
         <EffectArray Operation="Multiply" Reference="Effect,MedivacHealModifyCasterEnergy,VitalArray[Energy].Change" Value="0.975"/>
-        <EditorCategories value="Race:Terran,UpgradeType:Talents"/>
+        <EditorCategories value="UpgradeType:Talents"/>
     </CUpgrade>
     <CUpgrade id="ReduceFire">
         <MaxLevel value="10"/>
@@ -615,7 +639,7 @@
         <Flags index="TechTreeCheat" value="1"/>
     </CUpgrade>
     <CUpgrade id="ValkyrjaSnipe">
-        <EditorCategories value="Race:Terran,UpgradeType:Talents"/>
+        <EditorCategories value="UpgradeType:Talents"/>
     </CUpgrade>
     <CUpgrade id="ValkyrjaShield" parent="Research">
         <Flags index="TechTreeCheat" value="1"/>
@@ -628,7 +652,7 @@
         <EffectArray Reference="Unit,Valkyrja2,LifeStart" Value="80"/>
         <EffectArray Reference="Unit,Valkyrja3,LifeMax" Value="120"/>
         <EffectArray Reference="Unit,Valkyrja3,LifeStart" Value="120"/>
-        <EditorCategories value="Race:Terran,UpgradeType:Talents"/>
+        <EditorCategories value="UpgradeType:Talents"/>
         <AffectedUnitArray value="Valkyrja2"/>
         <AffectedUnitArray value="Marauder"/>
     </CUpgrade>
@@ -653,13 +677,20 @@
         <EffectArray Reference="Behavior,VBuff,Modification.VitalMaxFractionArray[Life]" Value="0.05"/>
         <MaxLevel value="10"/>
     </CUpgrade>
-    <CUpgrade id="KianaC2Unlock"/>
-    <CUpgrade id="KianaC4Unlock"/>
+    <CUpgrade id="KianaC2Unlock">
+        <Flags index="TechTreeCheat" value="1"/>
+    </CUpgrade>
+    <CUpgrade id="KianaC4Unlock">
+        <Flags index="TechTreeCheat" value="1"/>
+    </CUpgrade>
     <CUpgrade id="KianaC4Upgrade1">
         <EffectArray Reference="Behavior,KianaC4Branch,Duration" Value="0.800000"/>
         <MaxLevel value="3"/>
+        <Flags index="TechTreeCheat" value="1"/>
     </CUpgrade>
-    <CUpgrade id="KianaC4Upgrade2"/>
+    <CUpgrade id="KianaC4Upgrade2">
+        <Flags index="TechTreeCheat" value="1"/>
+    </CUpgrade>
     <CUpgrade id="KianaC4Upgrade3">
         <EffectArray Operation="Set" Reference="Effect,KianaC4EvadeTimeCrack,PeriodCount" Value="24"/>
         <EffectArray Operation="Set" Reference="Abil,KianaC4EvadeIdle,Cost[0].Charge.CountMax" Value="2"/>
@@ -677,8 +708,11 @@
         <EffectArray Operation="Set" Reference="Effect,KianaC4ApplyEvadeCD,Cost[1].CooldownTimeUse" Value="18.000000"/>
         <EffectArray Operation="Set" Reference="Effect,KianaC4ApplyEvadeCD,Cost[1].ChargeTimeUse" Value="18.000000"/>
         <EffectArray Operation="Set" Reference="Button,KianaC4Evade,AlertTooltip" Value="Button/Tooltip/KianaC4EvadeUpgraded"/>
+        <Flags index="TechTreeCheat" value="1"/>
     </CUpgrade>
-    <CUpgrade id="KianaC4Upgrade4"/>
+    <CUpgrade id="KianaC4Upgrade4">
+        <Flags index="TechTreeCheat" value="1"/>
+    </CUpgrade>
     <CUpgrade id="UlArmorUpgrade">
         <EffectArray Reference="Behavior,UlBuff,Modification.LifeArmorBonus" Value="1"/>
         <EffectArray Reference="Behavior,UlBuff,Modification.VitalMaxFractionArray[Life]" Value="0.05"/>
@@ -773,11 +807,15 @@
     </CUpgrade>
     <CUpgrade id="KianaC2Upgrade">
         <EffectArray Reference="Behavior,KianaC2Ultimate,Modification.ShieldArmorBonus" Value="5"/>
+        <Flags index="TechTreeCheat" value="1"/>
     </CUpgrade>
     <CUpgrade id="KianaC2Upgrade2">
         <EffectArray Reference="Behavior,KianaC2Ultimate,Modification.VitalMaxArray[Shields]" Value="100"/>
+        <Flags index="TechTreeCheat" value="1"/>
     </CUpgrade>
-    <CUpgrade id="KianaC2Upgrade3"/>
+    <CUpgrade id="KianaC2Upgrade3">
+        <Flags index="TechTreeCheat" value="1"/>
+    </CUpgrade>
     <CUpgrade id="KianaC2Upgrade4">
         <EffectArray Reference="Effect,KianaC2Attack1Damage,Amount" Value="2"/>
         <EffectArray Reference="Effect,KianaC2Attack1DamageU,Amount" Value="2"/>
@@ -788,12 +826,14 @@
         <EffectArray Reference="Effect,KianaC2Attack4DamageU,Amount" Value="2"/>
         <EffectArray Reference="Effect,KianaC2PistolRanged,Amount" Value="2"/>
         <MaxLevel value="5"/>
+        <Flags index="TechTreeCheat" value="1"/>
     </CUpgrade>
     <CUpgrade id="DG010Upgrade1">
         <EffectArray Operation="Set" Reference="Weapon,DeadgalScythe,Period" Value="1.600000"/>
         <EffectArray Operation="Set" Reference="Weapon,DeadgalScythe2,Period" Value="1.600000"/>
         <EffectArray Operation="Set" Reference="Weapon,DeadgalScythe3,Period" Value="1.600000"/>
         <EffectArray Operation="Set" Reference="Weapon,DG_013Weapon,Period" Value="2.800000"/>
+        <Flags index="TechTreeCheat" value="1"/>
     </CUpgrade>
     <CUpgrade id="ROAttackUpgrade">
         <EffectArray Reference="Behavior,RobotUnit,Modification.DamageDealtFraction[Melee]" Value="0.1"/>
@@ -824,6 +864,8 @@
         <AffectedUnitArray value="OrbitalCommand"/>
         <AffectedUnitArray value="OrbitalCommandFlying"/>
         <AffectedUnitArray value="PlanetaryFortress2"/>
+        <Flags index="TechTreeCheat" value="1"/>
+        <Flags index="UpgradeCheat" value="1"/>
     </CUpgrade>
     <CUpgrade id="VShieldUpgrade">
         <EffectArray Reference="Unit,Valkyrja2,ShieldArmorLevel" Value="1"/>
@@ -835,8 +877,8 @@
         <MaxLevel value="10"/>
     </CUpgrade>
     <CUpgrade id="B5">
-        <Flags index="UpgradeCheat" value="0"/>
-        <EditorCategories value="Race:Terran,UpgradeType:Talents"/>
+        <Flags index="TechTreeCheat" value="1"/>
+        <EditorCategories value="UpgradeType:Talents"/>
     </CUpgrade>
     <CUpgrade id="ValkyrjaDefence" parent="Research">
         <Flags index="TechTreeCheat" value="1"/>
@@ -846,7 +888,7 @@
         <ScoreAmount value="200"/>
         <ScoreResult value="BuildOrder"/>
         <EffectArray Operation="Set" Reference="Behavior,LoseHPOnCreep,Period" Value="1.000000"/>
-        <EditorCategories value="Race:Terran,UpgradeType:Talents"/>
+        <EditorCategories value="UpgradeType:Talents"/>
     </CUpgrade>
     <CUpgrade id="MeiHealth">
         <Race value="Terr"/>
@@ -880,16 +922,24 @@
         <EditorCategories value="UpgradeType:Talents"/>
         <MaxLevel value="16"/>
     </CUpgrade>
-    <CUpgrade id="MeiC2Unlock"/>
-    <CUpgrade id="MeiC2Upgrade1"/>
-    <CUpgrade id="MeiC2Upgrade2"/>
+    <CUpgrade id="MeiC2Unlock">
+        <Flags index="TechTreeCheat" value="1"/>
+    </CUpgrade>
+    <CUpgrade id="MeiC2Upgrade1">
+        <Flags index="TechTreeCheat" value="1"/>
+    </CUpgrade>
+    <CUpgrade id="MeiC2Upgrade2">
+        <Flags index="TechTreeCheat" value="1"/>
+    </CUpgrade>
     <CUpgrade id="MeiC2Upgrade3">
         <MaxLevel value="5"/>
         <EffectArray Reference="Effect,MeiC2WaveInit,Count" Value="5"/>
+        <Flags index="TechTreeCheat" value="1"/>
     </CUpgrade>
     <CUpgrade id="MeiC2Upgrade4">
         <EffectArray Reference="Abil,MeiC2Ult,Cost[0].Vital[Energy]" Value="20"/>
         <EffectArray Reference="Unit,MeiC2,EnergyMax" Value="50"/>
+        <Flags index="TechTreeCheat" value="1"/>
     </CUpgrade>
     <CUpgrade id="BronyaHealth">
         <Race value="Terr"/>
@@ -949,9 +999,15 @@
         <EditorCategories value="UpgradeType:Talents"/>
         <MaxLevel value="16"/>
     </CUpgrade>
-    <CUpgrade id="BronyaC2Unlock"/>
-    <CUpgrade id="BronyaC7Unlock"/>
-    <CUpgrade id="KianaC1Unlock"/>
+    <CUpgrade id="BronyaC2Unlock">
+        <Flags index="TechTreeCheat" value="1"/>
+    </CUpgrade>
+    <CUpgrade id="BronyaC7Unlock">
+        <Flags index="TechTreeCheat" value="1"/>
+    </CUpgrade>
+    <CUpgrade id="KianaC1Unlock">
+        <Flags index="TechTreeCheat" value="1"/>
+    </CUpgrade>
     <CUpgrade id="BronyaC2Upgrade1">
         <EffectArray Reference="Behavior,BronyaC2Shield,DamageResponse.ModifyLimit" Value="25"/>
         <MaxLevel value="4"/>

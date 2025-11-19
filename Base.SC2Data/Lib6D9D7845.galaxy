@@ -505,7 +505,6 @@ fixed lib6D9D7845_gf_E5A4B9E8A792C2B1180 (fixed lp_sorce, fixed lp_target) {
 bool lib6D9D7845_gf_E58581E8AEB8E8B083E8AF95 () {
     // Automatic Variable Declarations
     // Implementation
-    return true;
     return lib6D9D7845_gv_globalE8B083E8AF95E6A8A1E5BC8F;
 }
 
@@ -1236,9 +1235,8 @@ bool auto_lib6D9D7845_gf_SaUltimate_TriggerFunc (bool testConds, bool runActions
     SoundPlayForPlayer(SoundLink("SaUltimateBell", -1), c_maxPlayers, PlayerGroupAll(), 200.0, 0.16);
     SoundChannelSetVolume(PlayerGroupAll(), c_soundCategoryCombat, 50.0, 1.0);
     UIDisplayMessage(PlayerGroupAll(), c_messageAreaSubtitle, (StringExternal("Param/Value/lib_6D9D7845_85D5F76D") + FixedToText(lib6D9D7845_gv_saUltimateStage1Duration, c_fixedPrecisionAny) + StringExternal("Param/Value/lib_6D9D7845_54207569")));
-    UnitPauseAll(true);
-    libNtve_gf_PauseUnit(lib6D9D7845_gv_sa, false);
     UnitBehaviorAdd(lib6D9D7845_gv_sa, "SaUltimateCeaseCore", lib6D9D7845_gv_sa, 1);
+    lib6D9D7845_gf_SaPauseNewUnits(lp_sas);
     auto02979C66_g = UnitGroupCopy(lp_sas);
     auto02979C66_u = UnitGroupCount(auto02979C66_g, c_unitCountAll);
     for (;; auto02979C66_u -= 1) {
@@ -1254,7 +1252,6 @@ bool auto_lib6D9D7845_gf_SaUltimate_TriggerFunc (bool testConds, bool runActions
     for (;; autoD35A2BBA_u -= 1) {
         lv_afflication = UnitGroupUnitFromEnd(autoD35A2BBA_g, autoD35A2BBA_u);
         if (lv_afflication == null) { break; }
-        libNtve_gf_PauseUnit(lv_afflication, false);
         UnitBehaviorAdd(lv_afflication, "SaShield", lv_afflication, 200);
         lv_i = 0;
         for ( ; ( (auto442B7DA8_ai >= 0 && lv_i <= auto442B7DA8_ae) || (auto442B7DA8_ai < 0 && lv_i >= auto442B7DA8_ae) ) ; lv_i += auto442B7DA8_ai ) {
@@ -1436,6 +1433,50 @@ bool auto_lib6D9D7845_gf_SaUltimate_TriggerFunc (bool testConds, bool runActions
         lv_afflication = UnitGroupUnitFromEnd(auto70367FF0_g, auto70367FF0_u);
         if (lv_afflication == null) { break; }
         UnitBehaviorRemove(lv_afflication, "SaUltimatePrepare", 1);
+    }
+    return true;
+}
+
+trigger auto_lib6D9D7845_gf_SaPauseNewUnits_Trigger = null;
+unitgroup auto_lib6D9D7845_gf_SaPauseNewUnits_lp_sas;
+
+void lib6D9D7845_gf_SaPauseNewUnits (unitgroup lp_sas) {
+    auto_lib6D9D7845_gf_SaPauseNewUnits_lp_sas = lp_sas;
+
+    if (auto_lib6D9D7845_gf_SaPauseNewUnits_Trigger == null) {
+        auto_lib6D9D7845_gf_SaPauseNewUnits_Trigger = TriggerCreate("auto_lib6D9D7845_gf_SaPauseNewUnits_TriggerFunc");
+    }
+
+    TriggerExecute(auto_lib6D9D7845_gf_SaPauseNewUnits_Trigger, false, false);
+}
+
+bool auto_lib6D9D7845_gf_SaPauseNewUnits_TriggerFunc (bool testConds, bool runActions) {
+    unitgroup lp_sas = auto_lib6D9D7845_gf_SaPauseNewUnits_lp_sas;
+
+    // Variable Declarations
+    unit lv_u;
+
+    // Automatic Variable Declarations
+    int auto8CF22872_n;
+    int auto8CF22872_i;
+    unitgroup auto1957A88A_g;
+    int auto1957A88A_u;
+
+    // Variable Initialization
+
+    // Implementation
+    auto8CF22872_n = CeilingI((lib6D9D7845_gv_saUltimateStage1Duration / 0.25));
+    for (auto8CF22872_i = 1; auto8CF22872_i <= auto8CF22872_n; auto8CF22872_i += 1) {
+        UnitPauseAll(true);
+        libNtve_gf_PauseUnit(lib6D9D7845_gv_sa, false);
+        auto1957A88A_g = lp_sas;
+        auto1957A88A_u = UnitGroupCount(auto1957A88A_g, c_unitCountAll);
+        for (;; auto1957A88A_u -= 1) {
+            lv_u = UnitGroupUnitFromEnd(auto1957A88A_g, auto1957A88A_u);
+            if (lv_u == null) { break; }
+            libNtve_gf_PauseUnit(lv_u, false);
+        }
+        Wait(0.25, c_timeGame);
     }
     return true;
 }
@@ -2758,6 +2799,103 @@ bool lib6D9D7845_gt_E8AEA9E8A180_Func (bool testConds, bool runActions) {
 void lib6D9D7845_gt_E8AEA9E8A180_Init () {
     lib6D9D7845_gt_E8AEA9E8A180 = TriggerCreate("lib6D9D7845_gt_E8AEA9E8A180_Func");
     TriggerAddEventChatMessage(lib6D9D7845_gt_E8AEA9E8A180, c_playerAny, "-HP", false);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: ??????
+//--------------------------------------------------------------------------------------------------
+bool lib6D9D7845_gt_E694BBE998B2_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    string lv_e58D95E4BD8D;
+    int lv_e695B0E9878F;
+
+    // Automatic Variable Declarations
+    // Variable Initialization
+    lv_e695B0E9878F = 1;
+
+    // Conditions
+    if (testConds) {
+        if (!(lib6D9D7845_gf_E58581E8AEB8E8B083E8AF95())) {
+            return false;
+        }
+
+        if (!((StringWord(EventChatMessage(false), 1) == "-GF"))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    lv_e695B0E9878F = StringToInt(StringWord(EventChatMessage(false), 2));
+    libNtve_gf_SetUpgradeLevelForPlayer(1, "VAttackUpgrade", lv_e695B0E9878F);
+    libNtve_gf_SetUpgradeLevelForPlayer(1, "VArmorUpgrade", lv_e695B0E9878F);
+    libNtve_gf_SetUpgradeLevelForPlayer(1, "VShieldUpgrade", lv_e695B0E9878F);
+    libNtve_gf_SetUpgradeLevelForPlayer(1, "ROAttackUpgrade", lv_e695B0E9878F);
+    libNtve_gf_SetUpgradeLevelForPlayer(1, "ROArmorUpgrade", lv_e695B0E9878F);
+    libNtve_gf_SetUpgradeLevelForPlayer(1, "TurretAttackUpgrade", lv_e695B0E9878F);
+    libNtve_gf_SetUpgradeLevelForPlayer(1, "TurretArmorUpgrade", lv_e695B0E9878F);
+    libNtve_gf_SetUpgradeLevelForPlayer(1, "UlAttackUpgrade", lv_e695B0E9878F);
+    libNtve_gf_SetUpgradeLevelForPlayer(1, "UlArmorUpgrade", lv_e695B0E9878F);
+    libNtve_gf_SetUpgradeLevelForPlayer(1, "DeadgalAttackUpgrade", lv_e695B0E9878F);
+    libNtve_gf_SetUpgradeLevelForPlayer(1, "DeadgalArmorUpgrade", lv_e695B0E9878F);
+    if ((StringWord(EventChatMessage(false), 3) == "")) {
+    }
+    else {
+        lv_e695B0E9878F = StringToInt(StringWord(EventChatMessage(false), 3));
+        libNtve_gf_SetUpgradeLevelForPlayer(15, "VAttackUpgrade", lv_e695B0E9878F);
+        libNtve_gf_SetUpgradeLevelForPlayer(15, "VArmorUpgrade", lv_e695B0E9878F);
+        libNtve_gf_SetUpgradeLevelForPlayer(15, "VShieldUpgrade", lv_e695B0E9878F);
+        libNtve_gf_SetUpgradeLevelForPlayer(15, "ROAttackUpgrade", lv_e695B0E9878F);
+        libNtve_gf_SetUpgradeLevelForPlayer(15, "ROArmorUpgrade", lv_e695B0E9878F);
+        libNtve_gf_SetUpgradeLevelForPlayer(15, "TurretAttackUpgrade", lv_e695B0E9878F);
+        libNtve_gf_SetUpgradeLevelForPlayer(15, "TurretArmorUpgrade", lv_e695B0E9878F);
+        libNtve_gf_SetUpgradeLevelForPlayer(15, "UlAttackUpgrade", lv_e695B0E9878F);
+        libNtve_gf_SetUpgradeLevelForPlayer(15, "UlArmorUpgrade", lv_e695B0E9878F);
+        libNtve_gf_SetUpgradeLevelForPlayer(15, "DeadgalAttackUpgrade", lv_e695B0E9878F);
+        libNtve_gf_SetUpgradeLevelForPlayer(15, "DeadgalArmorUpgrade", lv_e695B0E9878F);
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib6D9D7845_gt_E694BBE998B2_Init () {
+    lib6D9D7845_gt_E694BBE998B2 = TriggerCreate("lib6D9D7845_gt_E694BBE998B2_Func");
+    TriggerAddEventChatMessage(lib6D9D7845_gt_E694BBE998B2, c_playerAny, "-GF", false);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: ????????????
+//--------------------------------------------------------------------------------------------------
+bool lib6D9D7845_gt_E7A791E68A80E4BD9CE5BC8A_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Conditions
+    if (testConds) {
+        if (!(lib6D9D7845_gf_E58581E8AEB8E8B083E8AF95())) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    GameCheatAllow(c_gameCheatTechTree, true);
+    GameCheatAllow(c_gameCheatFastBuild, true);
+    GameCheatAllow(c_gameCheatResearch, true);
+    GameCheatAllow(c_gameCheatMinerals, true);
+    GameCheatAllow(c_gameCheatVespene, true);
+    GameCheatAllow(c_gameCheatFood, true);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib6D9D7845_gt_E7A791E68A80E4BD9CE5BC8A_Init () {
+    lib6D9D7845_gt_E7A791E68A80E4BD9CE5BC8A = TriggerCreate("lib6D9D7845_gt_E7A791E68A80E4BD9CE5BC8A_Func");
+    TriggerAddEventChatMessage(lib6D9D7845_gt_E7A791E68A80E4BD9CE5BC8A, c_playerAny, "-T", true);
 }
 
 //--------------------------------------------------------------------------------------------------
@@ -5723,6 +5861,7 @@ bool lib6D9D7845_gt_E5B9BBE5A283_Func (bool testConds, bool runActions) {
     unit lv_self;
     playergroup lv_players;
     unitgroup[17] lv_playersUnits;
+    unitgroup[17] lv_playersTroops;
     unit[17] lv_playersSelecctors;
     unit[17] lv_playersTargets;
     int lv_p;
@@ -5757,6 +5896,9 @@ bool lib6D9D7845_gt_E5B9BBE5A283_Func (bool testConds, bool runActions) {
     playergroup auto9DD5456C_g;
     unitgroup auto8D6379BB_g;
     int auto8D6379BB_u;
+    playergroup auto8D3E698D_g;
+    unitgroup auto567194D7_g;
+    int auto567194D7_u;
     unitgroup auto3D180CDC_g;
     int auto3D180CDC_u;
 
@@ -5765,6 +5907,9 @@ bool lib6D9D7845_gt_E5B9BBE5A283_Func (bool testConds, bool runActions) {
     lv_players = PlayerGroupEmpty();
     for (init_i = 0; init_i <= 16; init_i += 1) {
         lv_playersUnits[init_i] = UnitGroupEmpty();
+    }
+    for (init_i = 0; init_i <= 16; init_i += 1) {
+        lv_playersTroops[init_i] = UnitGroupEmpty();
     }
     lv_pU_GPHolder = c_invalidDialogControlId;
     lv_pU_GPPanel = c_invalidDialogControlId;
@@ -5801,7 +5946,8 @@ bool lib6D9D7845_gt_E5B9BBE5A283_Func (bool testConds, bool runActions) {
         lv_p = PlayerGroupNextPlayer(auto155C37EF_g, lv_p);
         if (lv_p < 0) { break; }
         lv_playersUnits[lv_p] = UnitGroup(null, lv_p, RegionEntireMap(), UnitFilter(0, 0, (1 << c_targetFilterStructure) | (1 << c_targetFilterMissile), (1 << (c_targetFilterSummoned - 32))), 0);
-        UnitGroupIssueOrder(lv_playersUnits[lv_p], Order(AbilityCommand("stop", 0)), c_orderQueueReplace);
+        lv_playersTroops[lv_p] = UnitGroupFilter(null, lv_p, lv_playersUnits[lv_p], UnitFilter(0, 0, (1 << c_targetFilterStructure) | (1 << c_targetFilterWorker) | (1 << c_targetFilterMissile), (1 << (c_targetFilterSummoned - 32))), 0);
+        UnitGroupIssueOrder(lv_playersTroops[lv_p], Order(AbilityCommand("stop", 0)), c_orderQueueReplace);
     }
     Wait(0.125, c_timeGame);
     SoundChannelDSPInsert(lv_players, c_soundCategoryAlert, "Imaginary");
@@ -5869,7 +6015,7 @@ bool lib6D9D7845_gt_E5B9BBE5A283_Func (bool testConds, bool runActions) {
     while (true) {
         lv_p = PlayerGroupNextPlayer(auto77EB27D9_g, lv_p);
         if (lv_p < 0) { break; }
-        lv_validgroup = UnitGroupFilter(null, lv_p, lv_playersUnits[lv_p], UnitFilter(0, 0, (1 << c_targetFilterStructure) | (1 << c_targetFilterMissile), (1 << (c_targetFilterStasis - 32)) | (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32)) | (1 << (c_targetFilterSummoned - 32))), 0);
+        lv_validgroup = UnitGroupFilter(null, lv_p, lv_playersUnits[lv_p], UnitFilter(0, 0, (1 << c_targetFilterStructure) | (1 << c_targetFilterWorker) | (1 << c_targetFilterMissile), (1 << (c_targetFilterStasis - 32)) | (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32)) | (1 << (c_targetFilterSummoned - 32))), 0);
         lv_imax = 0;
         for (autoF36400C7_i = 1; autoF36400C7_i <= autoF36400C7_n; autoF36400C7_i += 1) {
             lv_u = UnitGroupRandomUnit(lv_validgroup, c_unitCountAlive);
@@ -5880,6 +6026,10 @@ bool lib6D9D7845_gt_E5B9BBE5A283_Func (bool testConds, bool runActions) {
             }
 
         }
+        if ((lv_playersTargets[lv_p] == null)) {
+            lv_playersTargets[lv_p] = UnitGroupRandomUnit(lv_playersUnits[lv_p], c_unitCountAlive);
+        }
+
         UnitBehaviorAddPlayer(lv_playersTargets[lv_p], "Herrscher8thAbil2", lv_p, 1);
     }
     while (true) {
@@ -5927,6 +6077,22 @@ bool lib6D9D7845_gt_E5B9BBE5A283_Func (bool testConds, bool runActions) {
                     UnitBehaviorRemove(lv_u, "Herrscher8thAbil2B", 1);
                 }
                 if ((UnitBehaviorCount(lv_playersTargets[lv_p], "Herrscher8thAbil2") == 0)) {
+                    auto8D3E698D_g = PlayerGroupAll();
+                    lv_p = -1;
+                    while (true) {
+                        lv_p = PlayerGroupNextPlayer(auto8D3E698D_g, lv_p);
+                        if (lv_p < 0) { break; }
+                        if ((PlayerRace(lv_p) == "Zerg")) {
+                            auto567194D7_g = UnitGroupFilter(null, lv_p, lv_playersUnits[lv_p], UnitFilter(0, 0, (1 << c_targetFilterStructure) | (1 << c_targetFilterMissile), (1 << (c_targetFilterStasis - 32)) | (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32)) | (1 << (c_targetFilterSummoned - 32))), 0);
+                            auto567194D7_u = UnitGroupCount(auto567194D7_g, c_unitCountAll);
+                            for (;; auto567194D7_u -= 1) {
+                                lv_u = UnitGroupUnitFromEnd(auto567194D7_g, auto567194D7_u);
+                                if (lv_u == null) { break; }
+                                UnitCreateEffectUnit(lv_self, "ForceDizzy10s", lv_u);
+                            }
+                        }
+
+                    }
                 }
                 else {
                     UnitBehaviorRemove(lv_playersTargets[lv_p], "Herrscher8thAbil2", 1);
@@ -8659,6 +8825,8 @@ void lib6D9D7845_InitTriggers () {
     lib6D9D7845_gt_E8B083E8AF95E58D87E7BAA7_Init();
     lib6D9D7845_gt_E5A29EE58AA0E88083E58FA4_Init();
     lib6D9D7845_gt_E8AEA9E8A180_Init();
+    lib6D9D7845_gt_E694BBE998B2_Init();
+    lib6D9D7845_gt_E7A791E68A80E4BD9CE5BC8A_Init();
     lib6D9D7845_gt_E58D95E4BD8DE58AA0E9809F_Init();
     lib6D9D7845_gt_E58D95E4BD8DE6B58BE8AF95E7949FE68890_Init();
     lib6D9D7845_gt_E58D95E4BD8DE6B58BE8AF95E7A7BBE999A4_Init();

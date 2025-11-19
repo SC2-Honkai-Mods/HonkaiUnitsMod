@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CValidatorLocationEnumArea id="AnyEnermyWithinCasterRange10">
+        <WhichLocation Value="CasterUnit"/>
+        <AreaArray Radius="10" Validator="TargetIsEnemy"/>
+    </CValidatorLocationEnumArea>
     <CValidatorUnitType id="CasterIsKianaC1">
         <WhichUnit Value="Caster"/>
         <Value value="KianaC1"/>

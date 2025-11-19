@@ -86,7 +86,7 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="BronyaC7Gun2ConstructTimedLife">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <DisplayDuration index="Self" value="1"/>
         <DisplayDuration index="Ally" value="1"/>
         <DisplayDuration index="Neutral" value="1"/>
@@ -278,7 +278,7 @@
     <CBehaviorBuff id="Herrscher7thWaveTarget">
         <InfoFlags index="Hidden" value="1"/>
         <InfoIcon value="Assets\Textures\btn-ability-protoss-arcshield.dds"/>
-        <EditorCategories value="AbilityorEffectType:Units,Race:Protoss"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="40"/>
         <Period value="0.0625"/>
         <PeriodicEffect value="Herrscher7thWaveSearch"/>
@@ -312,7 +312,7 @@
     <CBehaviorBuff id="Herrscher6thWeaponBehavior">
         <Alignment value="Negative"/>
         <InfoIcon value="Assets\Textures\btn-ability-zerg-acidspores.dds"/>
-        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="14"/>
         <Modification>
             <StateFlags index="SuppressLifeRegen" value="1"/>
@@ -342,7 +342,7 @@
     </CBehaviorAttribute>
     <CBehaviorBuff id="BronyaC7Gun1ConstructTimedLife">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <DisplayDuration index="Self" value="1"/>
         <DisplayDuration index="Ally" value="1"/>
         <DisplayDuration index="Neutral" value="1"/>
@@ -367,12 +367,12 @@
     <CBehaviorBuff id="HonkaiPalsyCD">
         <InfoFlags index="Hidden" value="1"/>
         <InfoIcon value="Assets\Textures\HonkaiStatusPalsy.tga"/>
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="4"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="HonkaiHyperjumpInitialDelaySuppressWeapon">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Modification>
             <ModifyFlags index="SuppressMoving" value="1"/>
             <ModifyFlags index="SuppressTurning" value="1"/>
@@ -382,7 +382,7 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="HonkaiHyperjumpTeleport">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="2"/>
         <ExpireEffect value="HonkaiHyperjumpTeleportInAB"/>
         <Modification>
@@ -398,7 +398,7 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="HonkaiHyperjumpTeleportIn">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="0.6"/>
         <Modification>
             <ModifyFlags index="SuppressMoving" value="1"/>
@@ -411,7 +411,7 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="HonkaiHyperjumpTeleportOut">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="0.6"/>
         <ExpireEffect value="HonkaiHyperjumpTeleportSet"/>
         <Modification>
@@ -426,7 +426,7 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="HokaiHyperjumpTeleportOutTargetSuppressCollision">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="0.0625"/>
         <ExpireEffect value="SuicideRemove"/>
         <Modification>
@@ -440,7 +440,7 @@
         </Modification>
     </CBehaviorBuff>
     <CBehaviorBuff id="IceFieldFate" parent="TimedLife">
-        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <DisplayDuration index="Self" value="0"/>
         <DisplayDuration index="Ally" value="0"/>
         <Duration value="12"/>
@@ -454,7 +454,7 @@
         <Alignment value="Positive"/>
         <InfoFlags index="Hidden" value="1"/>
         <InfoIcon value="Assets\Textures\btn-ability-protoss-arcshield.dds"/>
-        <EditorCategories value="AbilityorEffectType:Units,Race:Protoss"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="1.5"/>
         <Period value="0.1875"/>
         <PeriodicEffect value="Herrscher4thWaveSearch"/>
@@ -483,7 +483,7 @@
     <CBehaviorBuff id="Herrscher6thDeathCloud">
         <Alignment value="Negative"/>
         <InfoIcon value="Assets\Textures\btn-ability-zerg-darkswarm.dds"/>
-        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="1"/>
         <Period value="0.7"/>
         <PeriodicEffect value="Herrscher6thDeathCloudDamage"/>
@@ -783,7 +783,7 @@
         <Alignment value="Positive"/>
         <InfoFlags index="Hidden" value="1"/>
         <InfoIcon value="Assets\Textures\btn-ability-protoss-invulnerabilityshield.dds"/>
-        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <DamageResponse>
             <Exhausted value="BronyaC2ShieldRemoveSet"/>
             <ModifyFraction value="0"/>
@@ -815,7 +815,7 @@
         <Alignment value="Positive"/>
         <InfoFlags index="Hidden" value="1"/>
         <InfoIcon value="Assets\Textures\btn-ability-protoss-arcshield.dds"/>
-        <EditorCategories value="AbilityorEffectType:Units,Race:Protoss"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="14"/>
         <Period value="0.7"/>
         <PeriodicEffect value="Herrscher4thWeaponSearch"/>
@@ -1053,7 +1053,7 @@
     </CBehaviorBuff>
     <CBehaviorJump id="BronyaC7Jump">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <TriggerHeightDeltaMax value="12"/>
         <InitiateRangeUp value="6"/>
         <InitiateRangeDown value="6"/>
@@ -1072,6 +1072,7 @@
         <Modification>
             <BehaviorLinkDisableArray value="SaForward"/>
             <WeaponEnableArray value="SaBackwardWeapon"/>
+            <WeaponDisableArray value="SaForwardMelee"/>
             <WeaponDisableArray value="SaForwardWeapon"/>
             <TurretEnableArray value="SaBackward"/>
             <TurretDisableArray value="SaForward"/>
@@ -1153,7 +1154,7 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="SeeleC1Attack22">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <InitialEffect value="SeeleC1Attack2ReadyRemove"/>
         <Modification>
             <BehaviorLinkDisableArray value="SeeleC1Attack1"/>
@@ -1166,7 +1167,7 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="MeiC2EvadeBackwardSpeed">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="0.75"/>
         <Modification UnifiedMoveSpeedFactor="0.4">
             <ModifyFlags index="SuppressTurning" value="1"/>
@@ -1175,7 +1176,7 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="MeiC2EvadeForwardSpeed">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="0.63"/>
         <Modification UnifiedMoveSpeedFactor="0.4">
             <ModifyFlags index="SuppressTurning" value="1"/>
@@ -1184,13 +1185,13 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="SeeleC1UltChargeSpeed">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="0.5"/>
         <Modification UnifiedMoveSpeedFactor="0.75"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="SeeleC1EvadeForwardSpeed">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="0.63"/>
         <Modification UnifiedMoveSpeedFactor="-0.01">
             <ModifyFlags index="SuppressTurning" value="1"/>
@@ -1199,7 +1200,7 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="SeeleC1EvadeBackwardSpeed">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="0.76"/>
         <Modification UnifiedMoveSpeedFactor="-0.35">
             <ModifyFlags index="SuppressTurning" value="1"/>
@@ -1288,7 +1289,7 @@
     <CBehaviorBuff id="LoseHPOnCreep">
         <Alignment value="Negative"/>
         <InfoIcon value="Assets\Textures\HonkaiStatusBleeding.tga"/>
-        <EditorCategories value="AbilityorEffectType:Units,Race:Zerg"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <DisableValidatorArray value="TargetOnCreep"/>
         <DisableValidatorArray value="NotInMedivac"/>
         <Period value="0.25"/>
@@ -1308,7 +1309,7 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="RO_031AbilFate">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <DisplayDuration index="Self" value="1"/>
         <DisplayDuration index="Ally" value="1"/>
         <DisplayDuration index="Neutral" value="1"/>
@@ -1894,7 +1895,7 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="Transfusion2">
         <InfoIcon value="Assets\Textures\btn-ability-zerg-transfusion-color.dds"/>
-        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <RemoveValidatorArray value="TargetNot6thB"/>
         <Duration value="10"/>
         <Period value="0.0625"/>
@@ -1947,7 +1948,7 @@
     <CBehaviorBuff id="HerrscherConstructBehavior">
         <BehaviorFlags index="Permanent" value="1"/>
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Modification>
             <AttackTargetPriority value="20"/>
             <LifeArmorMultiplier value="0"/>
@@ -1971,7 +1972,7 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="HerrscherConstructTimedLife">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <DisplayDuration index="Self" value="1"/>
         <DisplayDuration index="Ally" value="1"/>
         <DisplayDuration index="Neutral" value="1"/>
@@ -1996,7 +1997,7 @@
     <CBehaviorBuff id="HonkaiBleed">
         <Alignment value="Negative"/>
         <InfoIcon value="Assets\Textures\HonkaiStatusBleeding.tga"/>
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <RemoveValidatorArray value="CanApplyDebuff"/>
         <TimeScaleSource Value="Global"/>
         <Period value="0.5"/>
@@ -2004,7 +2005,7 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="DG_011Skill1Speed">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Modification UnifiedMoveSpeedFactor="4"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="DG_013EffectB">
@@ -2017,7 +2018,7 @@
     <CBehaviorBuff id="HonkaiPalsy">
         <Alignment value="Negative"/>
         <InfoIcon value="Assets\Textures\HonkaiStatusPalsy.tga"/>
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Modification>
             <ModifyFlags index="DisableWeapons" value="1"/>
             <ModifyFlags index="SuppressMoving" value="1"/>
@@ -2036,7 +2037,7 @@
     <CBehaviorBuff id="HonkaiFrozen">
         <Alignment value="Negative"/>
         <InfoIcon value="Assets\Textures\HonkaiStatusFrozen.tga"/>
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Modification>
             <ModifyFlags index="DisableWeapons" value="1"/>
             <ModifyFlags index="SuppressMoving" value="1"/>
@@ -2055,7 +2056,7 @@
     <CBehaviorBuff id="HonkaiSlow">
         <Alignment value="Negative"/>
         <InfoIcon value="Assets\Textures\Buff_slow.tga"/>
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Modification MoveSpeedMultiplier="0.5"/>
         <BehaviorFlags index="EnabledWhileDead" value="1"/>
     </CBehaviorBuff>
@@ -2164,7 +2165,7 @@
     <CBehaviorBuff id="KianaC2Attack2Ready">
         <InfoFlags index="Hidden" value="1"/>
         <InfoIcon value="Assets\Textures\decalnumber2_diffuse.dds"/>
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <RemoveValidatorArray value="UnitNotMoving"/>
         <Duration value="1"/>
         <Modification>
@@ -2181,7 +2182,7 @@
     <CBehaviorBuff id="KianaC2Attack3Ready">
         <InfoFlags index="Hidden" value="1"/>
         <InfoIcon value="Assets\Textures\terrainsetnumber_03.dds"/>
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <RemoveValidatorArray value="UnitNotMoving"/>
         <Duration value="1"/>
         <InitialEffect value="KianaC2Attack2Remove"/>
@@ -2199,7 +2200,7 @@
     <CBehaviorBuff id="KianaC2Attack4Ready">
         <InfoFlags index="Hidden" value="1"/>
         <InfoIcon value="Assets\Textures\terrainsetnumber_04.dds"/>
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <RemoveValidatorArray value="UnitNotMoving"/>
         <Duration value="1"/>
         <InitialEffect value="KianaC2Attack3Remove"/>
@@ -2217,7 +2218,7 @@
     <CBehaviorBuff id="KianaC2Attack5Ready">
         <InfoFlags index="Hidden" value="1"/>
         <InfoIcon value="Assets\Textures\terrainsetnumber_05.dds"/>
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <RemoveValidatorArray value="UnitNotMoving"/>
         <Duration value="1"/>
         <InitialEffect value="KianaC2Attack4Remove"/>
@@ -2236,7 +2237,7 @@
     <CBehaviorBuff id="KianaC2Branch3Ready">
         <InfoFlags index="Hidden" value="1"/>
         <InfoIcon value="Assets\Textures\terrainsetnumber_05.dds"/>
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <RemoveValidatorArray value="UnitNotMoving"/>
         <Duration value="1"/>
         <InitialEffect value="KianaC2Attack2Remove"/>
@@ -2254,7 +2255,7 @@
     <CBehaviorBuff id="KianaC2Branch4Ready">
         <InfoFlags index="Hidden" value="1"/>
         <InfoIcon value="Assets\Textures\terrainsetnumber_05.dds"/>
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <RemoveValidatorArray value="UnitNotMoving"/>
         <Duration value="1"/>
         <InitialEffect value="KianaC2Branch3Remove"/>
@@ -2271,7 +2272,7 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="KianaC2BranchReady">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="1"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="KianaC2Evade">
@@ -2394,7 +2395,7 @@
     <CBehaviorBuff id="HonkaiDizzy">
         <Alignment value="Negative"/>
         <InfoIcon value="Assets\Textures\HonkaiStatusDizzy.tga"/>
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Modification>
             <ModifyFlags index="DisableAbils" value="1"/>
             <ModifyFlags index="DisableWeapons" value="1"/>
@@ -2412,7 +2413,7 @@
     <CBehaviorBuff id="K23Damage2">
         <Alignment value="Negative"/>
         <InfoIcon value="Assets\Textures\Pistol_K23.tga"/>
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="15"/>
         <Period value="1"/>
         <PeriodicEffect value="K23Dizzy"/>
@@ -2427,14 +2428,14 @@
     <CBehaviorBuff id="HonkaiBurn">
         <Alignment value="Negative"/>
         <InfoIcon value="Assets\Textures\HonkaiStatusBurning.tga"/>
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="10"/>
         <Period value="0.5"/>
         <PeriodicEffect value="DamageFire"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="K23Move">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <TimeScaleSource Value="Caster"/>
         <Duration value="0.8"/>
         <Modification MoveSpeedMultiplier="1.5">
@@ -2442,58 +2443,58 @@
         </Modification>
     </CBehaviorBuff>
     <CBehaviorBuff id="KianaC2Attack1Speed">
-        <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="0.46"/>
         <Modification UnifiedMoveSpeedFactor="0.6"/>
         <InfoFlags index="Hidden" value="1"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="KianaC2EvadeBackwardSpeed">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="0.76"/>
         <Modification UnifiedMoveSpeedFactor="-0.35">
             <ModifyFlags index="SuppressTurning" value="1"/>
         </Modification>
     </CBehaviorBuff>
     <CBehaviorBuff id="KianaC2Branch3Speed">
-        <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="0.25"/>
         <Modification UnifiedMoveSpeedFactor="0.26"/>
         <InfoFlags index="Hidden" value="1"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="KianaC2Attack2Speed">
-        <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="0.2"/>
         <Modification UnifiedMoveSpeedFactor="0.36"/>
         <InfoFlags index="Hidden" value="1"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="KianaC2Branch4Speed">
-        <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="0.6"/>
         <Modification UnifiedMoveSpeedFactor="-0.69"/>
         <InfoFlags index="Hidden" value="1"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="KianaC2Attack5Speed">
-        <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="0.32"/>
         <Modification UnifiedMoveSpeedFactor="0.3"/>
         <InfoFlags index="Hidden" value="1"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="KianaC2Attack4Speed">
-        <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="0.32"/>
         <Modification UnifiedMoveSpeedFactor="0.1"/>
         <InfoFlags index="Hidden" value="1"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="KianaC2Attack3Speed">
-        <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="0.32"/>
         <Modification UnifiedMoveSpeedFactor="-0.25"/>
         <InfoFlags index="Hidden" value="1"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="KianaC2Attack3">
         <InfoIcon value="Assets\Textures\terrainsetnumber_03.dds"/>
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <InitialEffect value="KianaC2Attack3ReadyRemove"/>
         <Modification>
             <BehaviorLinkDisableArray value="KianaC2Attack1"/>
@@ -2509,7 +2510,7 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="KianaC2Attack1">
         <InfoIcon value="Assets\Textures\terrainsetnumber_01.dds"/>
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Modification>
             <WeaponEnableArray value="KianaC2Attack1"/>
             <WeaponDisableArray value="KianaC2Attack2"/>
@@ -2523,7 +2524,7 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="KianaC2Attack2">
         <InfoIcon value="Assets\Textures\decalnumber2_diffuse.dds"/>
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Modification>
             <BehaviorLinkDisableArray value="KianaC2Attack1"/>
             <WeaponEnableArray value="KianaC2Attack2"/>
@@ -2539,7 +2540,7 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="KianaC2Attack4">
         <InfoIcon value="Assets\Textures\terrainsetnumber_04.dds"/>
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <InitialEffect value="KianaC2Attack4ReadyRemove"/>
         <Modification>
             <BehaviorLinkDisableArray value="KianaC2Attack1"/>
@@ -2555,7 +2556,7 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="KianaC2Attack5">
         <InfoIcon value="Assets\Textures\terrainsetnumber_05.dds"/>
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <InitialEffect value="KianaC2Attack5ReadyRemove"/>
         <Modification>
             <BehaviorLinkDisableArray value="KianaC2Attack1"/>
@@ -2572,7 +2573,7 @@
     <CBehaviorBuff id="KianaC2Branch3">
         <InfoFlags index="Hidden" value="1"/>
         <InfoIcon value="Assets\Textures\terrainsetnumber_05.dds"/>
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <InitialEffect value="KianaC2Branch3ReadyRemove"/>
         <Modification>
             <BehaviorLinkDisableArray value="KianaC2Attack1"/>
@@ -2588,7 +2589,7 @@
     <CBehaviorBuff id="KianaC2Branch4">
         <InfoFlags index="Hidden" value="1"/>
         <InfoIcon value="Assets\Textures\terrainsetnumber_05.dds"/>
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <InitialEffect value="KianaC2Branch4ReadyRemove"/>
         <Modification>
             <BehaviorLinkDisableArray value="KianaC2Attack1"/>
@@ -2603,7 +2604,7 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="KianaC2EvadeForwardSpeed">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="0.63"/>
         <Modification UnifiedMoveSpeedFactor="0.5">
             <ModifyFlags index="SuppressTurning" value="1"/>
@@ -2917,7 +2918,7 @@
         <DisableValidatorArray value="WidowMineAttackOnCooldown"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="SeeleC1Attack1">
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Modification>
             <WeaponEnableArray value="SeeleC1Attack1"/>
             <WeaponDisableArray value="SeeleC1Attack2"/>
@@ -2928,7 +2929,7 @@
         <InfoFlags index="Hidden" value="1"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="SeeleC1Attack2">
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Modification>
             <BehaviorLinkDisableArray value="SeeleC1Attack1"/>
             <WeaponEnableArray value="SeeleC1Attack2"/>
@@ -2941,7 +2942,7 @@
         <InitialEffect value="SeeleC1Attack2ReadyRemove"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="SeeleC1Attack3">
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <InitialEffect value="SeeleC1Attack3ReadyRemove"/>
         <Modification>
             <BehaviorLinkDisableArray value="SeeleC1Attack1"/>
@@ -2954,7 +2955,7 @@
         <InfoFlags index="Hidden" value="1"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="SeeleC1Attack4">
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <InitialEffect value="SeeleC1Attack4ReadyRemove"/>
         <Modification>
             <BehaviorLinkDisableArray value="SeeleC1Attack1"/>
@@ -2967,7 +2968,7 @@
         <InfoFlags index="Hidden" value="1"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="SeeleC1Attack5">
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <InitialEffect value="SeeleC1Attack5ReadyRemove"/>
         <Modification>
             <BehaviorLinkDisableArray value="SeeleC1Attack1"/>
@@ -2980,38 +2981,38 @@
         <InfoFlags index="Hidden" value="1"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="SeeleC1Attack1Speed">
-        <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="0.3125"/>
         <Modification UnifiedMoveSpeedFactor="0.93"/>
         <InfoFlags index="Hidden" value="1"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="SeeleC1Attack2Speed">
-        <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="0.2"/>
         <Modification UnifiedMoveSpeedFactor="0.58"/>
         <InfoFlags index="Hidden" value="1"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="SeeleC1Attack3Speed">
-        <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="1.025"/>
         <Modification UnifiedMoveSpeedFactor="0.52"/>
         <InfoFlags index="Hidden" value="1"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="SeeleC1Attack4Speed">
-        <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="0.25"/>
         <Modification UnifiedMoveSpeedFactor="1.81"/>
         <InfoFlags index="Hidden" value="1"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="SeeleC1Attack5Speed">
-        <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="0.8125"/>
         <Modification UnifiedMoveSpeedFactor="0.5"/>
         <InfoFlags index="Hidden" value="1"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="SeeleC1Attack2Ready">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <RemoveValidatorArray value="UnitNotMoving"/>
         <Duration value="1"/>
         <Modification>
@@ -3025,7 +3026,7 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="SeeleC1Attack3Ready">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <RemoveValidatorArray value="UnitNotMoving"/>
         <Duration value="1"/>
         <InitialEffect value="SeeleC1Attack2Remove"/>
@@ -3040,7 +3041,7 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="SeeleC1Attack4Ready">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <RemoveValidatorArray value="UnitNotMoving"/>
         <Duration value="1"/>
         <InitialEffect value="SeeleC1Attack3Remove"/>
@@ -3055,7 +3056,7 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="SeeleC1Attack5Ready">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <RemoveValidatorArray value="UnitNotMoving"/>
         <Duration value="1"/>
         <InitialEffect value="SeeleC1Attack4Remove"/>
@@ -3070,7 +3071,7 @@
         <Alignment value="Positive"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="MeiC2Attack1">
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Modification>
             <WeaponEnableArray value="MeiC2Attack1"/>
             <WeaponDisableArray value="MeiC2Attack2"/>
@@ -3081,7 +3082,7 @@
         <InfoFlags index="Hidden" value="1"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="MeiC2Attack2">
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Modification>
             <BehaviorLinkDisableArray value="MeiC2Attack1"/>
             <WeaponEnableArray value="MeiC2Attack2"/>
@@ -3094,7 +3095,7 @@
         <InitialEffect value="MeiC2Attack2ReadyRemove"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="MeiC2Attack3">
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <InitialEffect value="MeiC2Attack3ReadyRemove"/>
         <Modification>
             <BehaviorLinkDisableArray value="MeiC2Attack1"/>
@@ -3107,7 +3108,7 @@
         <InfoFlags index="Hidden" value="1"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="MeiC2Attack4">
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <InitialEffect value="MeiC2Attack4ReadyRemove"/>
         <Modification>
             <BehaviorLinkDisableArray value="MeiC2Attack1"/>
@@ -3120,7 +3121,7 @@
         <InfoFlags index="Hidden" value="1"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="MeiC2Attack5">
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <InitialEffect value="MeiC2Attack5ReadyRemove"/>
         <Modification>
             <BehaviorLinkDisableArray value="MeiC2Attack1"/>
@@ -3133,38 +3134,38 @@
         <InfoFlags index="Hidden" value="1"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="MeiC2Attack1Speed">
-        <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="0.1875"/>
         <Modification UnifiedMoveSpeedFactor="-0.4"/>
         <InfoFlags index="Hidden" value="1"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="MeiC2Attack2Speed">
-        <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="0.375"/>
         <Modification UnifiedMoveSpeedFactor="-0.4"/>
         <InfoFlags index="Hidden" value="1"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="MeiC2Attack3Speed">
-        <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="0.125"/>
         <Modification UnifiedMoveSpeedFactor="-0.4"/>
         <InfoFlags index="Hidden" value="1"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="MeiC2Attack4Speed">
-        <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="0.25"/>
         <Modification UnifiedMoveSpeedFactor="-0.4"/>
         <InfoFlags index="Hidden" value="1"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="MeiC2Attack5Speed">
-        <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="0.3125"/>
         <Modification UnifiedMoveSpeedFactor="-0.2"/>
         <InfoFlags index="Hidden" value="1"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="MeiC2Attack2Ready">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <RemoveValidatorArray value="UnitNotMoving"/>
         <Duration value="1"/>
         <Modification>
@@ -3178,7 +3179,7 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="MeiC2Attack3Ready">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <RemoveValidatorArray value="UnitNotMoving"/>
         <Duration value="1"/>
         <InitialEffect value="MeiC2Attack2Remove"/>
@@ -3193,7 +3194,7 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="MeiC2Attack4Ready">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <RemoveValidatorArray value="UnitNotMoving"/>
         <Duration value="1"/>
         <InitialEffect value="MeiC2Attack3Remove"/>
@@ -3208,7 +3209,7 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="MeiC2Attack5Ready">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <RemoveValidatorArray value="UnitNotMoving"/>
         <Duration value="1"/>
         <InitialEffect value="MeiC2Attack4Remove"/>
@@ -3235,7 +3236,7 @@
         <Modification RangedWeaponRange="2"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="KianaC1RangeAttack1">
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Modification>
             <WeaponEnableArray value="KianaC1RangeAttack1"/>
             <WeaponEnableArray value="KianaC1MeleeAttack1"/>
@@ -3248,7 +3249,7 @@
         <InfoFlags index="Hidden" value="1"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="KianaC1RangeAttack2">
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Modification>
             <BehaviorLinkDisableArray value="KianaC1RangeAttack1"/>
             <WeaponEnableArray value="KianaC1RangeAttack2"/>
@@ -3263,7 +3264,7 @@
         <InitialEffect value="KianaC1RangeAttack2ReadyRemove"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="KianaC1RangeAttack3">
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <InitialEffect value="KianaC1RangeAttack3ReadyRemove"/>
         <Modification>
             <BehaviorLinkDisableArray value="KianaC1RangeAttack1"/>
@@ -3278,7 +3279,7 @@
         <InfoFlags index="Hidden" value="1"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="KianaC1RangeAttack4">
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <InitialEffect value="KianaC1RangeAttack4ReadyRemove"/>
         <Modification>
             <BehaviorLinkDisableArray value="KianaC1RangeAttack1"/>
@@ -3293,7 +3294,7 @@
         <InfoFlags index="Hidden" value="1"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="KianaC1RangeAttack2Ready">
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <RemoveValidatorArray value="UnitNotMoving"/>
         <Duration value="1"/>
         <Modification>
@@ -3309,7 +3310,7 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="KianaC1RangeAttack3Ready">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <RemoveValidatorArray value="UnitNotMoving"/>
         <Duration value="1"/>
         <InitialEffect value="KianaC1RangeAttack2Remove"/>
@@ -3326,7 +3327,7 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="KianaC1RangeAttack4Ready">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <RemoveValidatorArray value="UnitNotMoving"/>
         <Duration value="1"/>
         <InitialEffect value="KianaC1RangeAttack3Remove"/>
@@ -3342,7 +3343,7 @@
         </Modification>
     </CBehaviorBuff>
     <CBehaviorBuff id="KianaC1MeleeAttack2">
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Modification>
             <BehaviorLinkDisableArray value="KianaC1MeleeAttack1"/>
             <WeaponEnableArray value="KianaC1MeleeAttack2"/>
@@ -3357,7 +3358,7 @@
         <InitialEffect value="KianaC1MeleeAttack2ReadyRemove"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="KianaC1MeleeAttack3">
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <InitialEffect value="KianaC1MeleeAttack3ReadyRemove"/>
         <Modification>
             <BehaviorLinkDisableArray value="KianaC1MeleeAttack1"/>
@@ -3372,26 +3373,26 @@
         <InfoFlags index="Hidden" value="1"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="KianaC1MeleeAttack1Speed">
-        <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="0.4375"/>
         <Modification UnifiedMoveSpeedFactor="0.13"/>
         <InfoFlags index="Hidden" value="1"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="KianaC1MeleeAttack2Speed">
-        <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="0.625"/>
         <Modification UnifiedMoveSpeedFactor="-0.18"/>
         <InfoFlags index="Hidden" value="1"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="KianaC1MeleeAttack3Speed">
-        <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="0.3125"/>
         <Modification UnifiedMoveSpeedFactor="0.23"/>
         <InfoFlags index="Hidden" value="1"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="KianaC1MeleeAttack2Ready">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <RemoveValidatorArray value="UnitNotMoving"/>
         <Duration value="1"/>
         <Modification>
@@ -3407,7 +3408,7 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="KianaC1MeleeAttack3Ready">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
         <RemoveValidatorArray value="UnitNotMoving"/>
         <Duration value="1"/>
         <InitialEffect value="KianaC1MeleeAttack2Remove"/>

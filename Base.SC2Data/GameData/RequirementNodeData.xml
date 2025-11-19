@@ -4,10 +4,30 @@
         <OperandArray value="CountUpgradeDivineKey7thCompleteOnly3249686718"/>
         <OperandArray value="Not431030283CountUnitWeaponK23CompleteOnly"/>
     </CRequirementAnd>
+    <CRequirementCountUnit id="CountUnitAlias_AntiEntropyFactoryCompleteOnly1207743462TechTreeCheat">
+        <Count Link="Alias_AntiEntropyFactory" State="CompleteOnly"/>
+    </CRequirementCountUnit>
+    <CRequirementCountUnit id="CountUnitAlias_AntiEntropyFactoryCompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <Count Link="Alias_AntiEntropyFactory" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountUnit>
+    <CRequirementCountUnit id="CountUnitImperialInstituteCompleteOnlyTechTreeCheat">
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <Count Link="ImperialInstitute" State="CompleteOnly"/>
+    </CRequirementCountUnit>
     <CRequirementCountUnit id="CountUnitWeaponK23CompleteOnly">
         <Flags index="TechTreeCheat" value="0"/>
         <Count Link="WeaponK23" State="CompleteOnly"/>
     </CRequirementCountUnit>
+    <CRequirementCountUpgrade id="CountUpgradeKianaC4Upgrade3CompleteOnlyTechTreeCheat">
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <Count Link="KianaC4Upgrade3" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeKianaC4Upgrade4CompleteOnlyTechTreeCheat">
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <Count Link="KianaC4Upgrade4" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeVArmorUpgradeQueuedOrBetter">
         <Flags index="TechTreeCheat" value="0"/>
         <Count Link="VArmorUpgrade" State="QueuedOrBetter"/>
@@ -15,6 +35,10 @@
     <CRequirementLT id="LTCountUpgradeHiSecAutoTrackingQueuedOrBetter2">
         <OperandArray index="0" value="CountUpgradeHiSecAutoTrackingQueuedOrBetter"/>
         <OperandArray index="1" value="2"/>
+    </CRequirementLT>
+    <CRequirementLT id="LTCountUpgradeMicroFilteringQueuedOrBetter4">
+        <OperandArray index="0" value="CountUpgradeMicroFilteringQueuedOrBetter"/>
+        <OperandArray index="1" value="4"/>
     </CRequirementLT>
     <CRequirementLT id="LTCountUpgradeNeosteelFrameQueuedOrBetter2">
         <OperandArray index="0" value="CountUpgradeNeosteelFrameQueuedOrBetter"/>
@@ -1301,10 +1325,6 @@
         <OperandArray index="0" value="CountUpgradeMeiC2Upgrade3QueuedOrBetter"/>
         <OperandArray index="1" value="5"/>
     </CRequirementLT>
-    <CRequirementLT id="LTCountUpgradeMicroFilteringQueuedOrBetter6">
-        <OperandArray index="0" value="CountUpgradeMicroFilteringQueuedOrBetter"/>
-        <OperandArray index="1" value="6"/>
-    </CRequirementLT>
     <CRequirementLT id="LTCountUpgradePalsyDurationQueuedOrBetter4">
         <OperandArray index="0" value="CountUpgradePalsyDurationQueuedOrBetter"/>
         <OperandArray index="1" value="4"/>
@@ -1567,6 +1587,10 @@
     <CRequirementNot id="NoAvatarChosen">
         <OperandArray index="0" value="AnyAvatarChosen"/>
     </CRequirementNot>
+    <CRequirementNot id="NotOrCountUnitAlias_BarracksCompleteOnlyAtUnitCountUnitAlias_FactoryCompleteOnlyAtUnitCountUnitAlias_StarportCompleteOnlyAtUnitCountUnitAlias_AntiEntropyFactoryCompleteOnlyAtUnit">
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <OperandArray index="0" value="OrCountUnitAlias_BarracksCompleteOnlyAtUnitCountUnitAlias_FactoryCompleteOnlyAtUnitCountUnitAlias_StarportCompleteOnlyAtUnitCountUnitAlias_AntiEntropyFactoryCompleteOnlyAtUnit"/>
+    </CRequirementNot>
     <CRequirementNot id="NotOrCountUpgradeAvatarKianaCompleteOnlyCountUpgradeAvatarMeiCompleteOnlyCountUpgradeAvatarBronyaCompleteOnlyCountUpgradeAvatarSeeleCompleteOnly">
         <OperandArray index="0" value="OrCountUpgradeAvatarKianaCompleteOnlyCountUpgradeAvatarMeiCompleteOnlyCountUpgradeAvatarBronyaCompleteOnlyCountUpgradeAvatarSeeleCompleteOnly"/>
     </CRequirementNot>
@@ -1591,6 +1615,13 @@
         <OperandArray value="CountUpgradeAvatarMeiCompleteOnly"/>
         <OperandArray value="CountUpgradeAvatarBronyaCompleteOnly"/>
         <OperandArray value="CountUpgradeAvatarSeeleCompleteOnly"/>
+    </CRequirementOr>
+    <CRequirementOr id="OrCountUnitAlias_BarracksCompleteOnlyAtUnitCountUnitAlias_FactoryCompleteOnlyAtUnitCountUnitAlias_StarportCompleteOnlyAtUnitCountUnitAlias_AntiEntropyFactoryCompleteOnlyAtUnit">
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <OperandArray value="CountUnitAlias_BarracksCompleteOnlyAtUnit"/>
+        <OperandArray value="CountUnitAlias_FactoryCompleteOnlyAtUnit"/>
+        <OperandArray value="CountUnitAlias_StarportCompleteOnlyAtUnit"/>
+        <OperandArray value="CountUnitAlias_AntiEntropyFactoryCompleteOnlyAtUnit"/>
     </CRequirementOr>
     <CRequirementOr id="OrCountUpgradeAvatarKianaCompleteOnlyCountUpgradeAvatarMeiCompleteOnlyCountUpgradeAvatarBronyaCompleteOnlyCountUpgradeAvatarSeeleCompleteOnly">
         <OperandArray value="CountUpgradeAvatarKianaCompleteOnly"/>
@@ -2019,17 +2050,9 @@
         <Flags index="TechTreeCheat" value="0"/>
         <Count Link="KianaC4Upgrade2" State="QueuedOrBetter"/>
     </CRequirementCountUpgrade>
-    <CRequirementCountUpgrade id="CountUpgradeKianaC4Upgrade3CompleteOnly">
-        <Flags index="TechTreeCheat" value="0"/>
-        <Count Link="KianaC4Upgrade3" State="CompleteOnly"/>
-    </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeKianaC4Upgrade3QueuedOrBetter">
         <Flags index="TechTreeCheat" value="0"/>
         <Count Link="KianaC4Upgrade3" State="QueuedOrBetter"/>
-    </CRequirementCountUpgrade>
-    <CRequirementCountUpgrade id="CountUpgradeKianaC4Upgrade4CompleteOnly">
-        <Flags index="TechTreeCheat" value="0"/>
-        <Count Link="KianaC4Upgrade4" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeKianaC4Upgrade4QueuedOrBetter">
         <Flags index="TechTreeCheat" value="0"/>

@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
     <CRequirement id="CanBuyK23">
-        <EditorCategories value="TechType:Unit,Race:Terran"/>
+        <EditorCategories value="TechType:Unit"/>
         <NodeArray index="Use" Link="AndCountUpgradeDivineKey7thCompleteOnly3249686718Not431030283CountUnitWeaponK23CompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="HaveArmory">
+        <NodeArray index="Use" Link="CountUnitImperialInstituteCompleteOnlyTechTreeCheat"/>
+    </CRequirement>
+    <CRequirement id="HaveFactory">
+        <NodeArray index="Use" Link="CountUnitAlias_AntiEntropyFactoryCompleteOnly1207743462TechTreeCheat"/>
     </CRequirement>
     <CRequirement id="LearnTerranDefenseRangeBonus">
         <NodeArray index="Show" Link="LTCountUpgradeHiSecAutoTrackingQueuedOrBetter2"/>
@@ -36,79 +42,79 @@
         <NodeArray index="Show" Link="NotCountBehaviorBronyaConstructCannonCompleteOnlyAtUnit"/>
     </CRequirement>
     <CRequirement id="BronyaRequirements">
-        <EditorCategories value="Race:Terran,TechType:Unit"/>
+        <EditorCategories value="TechType:Unit"/>
         <CanBeSuppressed index="Use" value="0"/>
         <NodeArray index="Use" Link="NECountUnitBronyaC1CompleteOnly0"/>
     </CRequirement>
     <CRequirement id="CanEquipB1">
-        <EditorCategories value="TechType:Unit,Race:Terran"/>
+        <EditorCategories value="TechType:Unit"/>
         <NodeArray index="Show" Link="NotCountBehaviorWeaponUseB1CompleteOnlyAtUnit"/>
     </CRequirement>
     <CRequirement id="CanChangeCannon">
-        <EditorCategories value="TechType:Unit,Race:Terran"/>
+        <EditorCategories value="TechType:Unit"/>
         <NodeArray index="Show" Link="CountBehaviorWeaponUseB1CompleteOnlyAtUnit"/>
     </CRequirement>
     <CRequirement id="CanEquipB22">
-        <EditorCategories value="TechType:Unit,Race:Terran"/>
+        <EditorCategories value="TechType:Unit"/>
         <NodeArray index="Use" Link="CountUpgradeB22CompleteOnly709598142"/>
         <NodeArray index="Show" Link="CountBehaviorWeaponUseB1CompleteOnlyAtUnit"/>
     </CRequirement>
     <CRequirement id="CanEquipB232">
-        <EditorCategories value="TechType:Unit,Race:Terran"/>
+        <EditorCategories value="TechType:Unit"/>
         <NodeArray index="Use" Link="CountUpgradeB23CompleteOnly3416406502"/>
         <NodeArray index="Show" Link="CountBehaviorWeaponUseB1CompleteOnlyAtUnit"/>
     </CRequirement>
     <CRequirement id="CanEquipB25">
-        <EditorCategories value="TechType:Unit,Race:Terran"/>
+        <EditorCategories value="TechType:Unit"/>
         <NodeArray index="Use" Link="CountUpgradeB25CompleteOnly709598142"/>
         <NodeArray index="Show" Link="CountBehaviorWeaponUseB1CompleteOnlyAtUnit"/>
     </CRequirement>
     <CRequirement id="CanEquipB26">
-        <EditorCategories value="TechType:Unit,Race:Terran"/>
+        <EditorCategories value="TechType:Unit"/>
         <NodeArray index="Use" Link="CountUpgradeB26CompleteOnly3416406502"/>
         <NodeArray index="Show" Link="CountBehaviorWeaponUseB1CompleteOnlyAtUnit"/>
     </CRequirement>
     <CRequirement id="CanEquipB34">
-        <EditorCategories value="TechType:Unit,Race:Terran"/>
+        <EditorCategories value="TechType:Unit"/>
         <NodeArray index="Use" Link="CountUpgradeVHerrscher1stCompleteOnly2613565233"/>
         <NodeArray index="Show" Link="CountBehaviorWeaponUseB1CompleteOnlyAtUnit"/>
     </CRequirement>
     <CRequirement id="CanEquipB28">
-        <EditorCategories value="TechType:Unit,Race:Terran"/>
+        <EditorCategories value="TechType:Unit"/>
         <NodeArray index="Use" Link="AndCountUpgradeDivineKey9thCompleteOnly1761932935Not723435156CountBehaviorWeaponUseB28CompleteOnly3451675864"/>
         <NodeArray index="Show" Link="CountBehaviorWeaponUseB1CompleteOnlyAtUnit"/>
     </CRequirement>
     <CRequirement id="CanEquipB6">
-        <EditorCategories value="TechType:Unit,Race:Terran"/>
+        <EditorCategories value="TechType:Unit"/>
         <NodeArray index="Use" Link="CountUpgradeB6CompleteOnly3077553746"/>
         <NodeArray index="Show" Link="CountBehaviorWeaponUseB1CompleteOnlyAtUnit"/>
     </CRequirement>
     <CRequirement id="CanEquipB7">
-        <EditorCategories value="TechType:Unit,Race:Terran"/>
+        <EditorCategories value="TechType:Unit"/>
         <NodeArray index="Use" Link="CountUpgradeB7CompleteOnly3077553746"/>
         <NodeArray index="Show" Link="CountBehaviorWeaponUseB1CompleteOnlyAtUnit"/>
     </CRequirement>
     <CRequirement id="CanEquipB18">
-        <EditorCategories value="TechType:Unit,Race:Terran"/>
+        <EditorCategories value="TechType:Unit"/>
         <NodeArray index="Use" Link="CountUpgradeB18CompleteOnly3077553746"/>
         <NodeArray index="Show" Link="CountBehaviorWeaponUseB1CompleteOnlyAtUnit"/>
     </CRequirement>
     <CRequirement id="CanEquipB15">
-        <EditorCategories value="TechType:Unit,Race:Terran"/>
+        <EditorCategories value="TechType:Unit"/>
         <NodeArray index="Use" Link="CountUpgradeB15CompleteOnly709598142"/>
         <NodeArray index="Show" Link="CountBehaviorWeaponUseB1CompleteOnlyAtUnit"/>
     </CRequirement>
     <CRequirement id="CanEquipB23">
-        <EditorCategories value="TechType:Unit,Race:Terran"/>
+        <EditorCategories value="TechType:Unit"/>
         <NodeArray index="Use" Link="CountUpgradeB23CompleteOnly3416406502"/>
         <NodeArray index="Show" Link="CountBehaviorWeaponUseB1CompleteOnlyAtUnit"/>
     </CRequirement>
     <CRequirement id="CanEquipK17">
-        <EditorCategories value="TechType:Unit,Race:Terran"/>
+        <EditorCategories value="TechType:Unit"/>
         <NodeArray index="Use" Link="NotCountBehaviorWeaponUseK17CompleteOnlyAtUnit628373971"/>
     </CRequirement>
     <CRequirement id="CanEquipB5">
-        <EditorCategories value="TechType:Unit,Race:Terran"/>
+        <EditorCategories value="TechType:Unit"/>
         <NodeArray index="Use" Link="CountUpgradeB5CompleteOnly3077553746"/>
         <NodeArray index="Show" Link="CountBehaviorWeaponUseB1CompleteOnlyAtUnit"/>
     </CRequirement>
@@ -140,7 +146,7 @@
         <NodeArray index="Use" Link="AndCountUpgradeFightersCompleteOnly316807905TechTreeCheatCountUnitHyperionInterceptorCompleteOnlyAtUnit3128815872"/>
     </CRequirement>
     <CRequirement id="HaveNukeInMHT">
-        <EditorCategories value="Race:Terran,TechType:Unit"/>
+        <EditorCategories value="TechType:Unit"/>
         <CanBeSuppressed index="Use" value="0"/>
         <NodeArray index="Use" Link="CountUnitNukeMHTCompleteOnlyAtUnit2146895046"/>
     </CRequirement>
@@ -265,12 +271,12 @@
         <NodeArray index="Use" Link="CountUpgradeFightersCompleteOnly316807905TechTreeCheat"/>
     </CRequirement>
     <CRequirement id="HaveFusionCore">
-        <EditorCategories value="Race:Terran,TechType:Unit"/>
+        <EditorCategories value="TechType:Unit"/>
         <CanBeSuppressed index="Use" value="0"/>
         <NodeArray index="Use" Link="CountUnitFusionCoreCompleteOnly"/>
     </CRequirement>
     <CRequirement id="HaveNukeInUnit">
-        <EditorCategories value="Race:Terran,TechType:Unit"/>
+        <EditorCategories value="TechType:Unit"/>
         <CanBeSuppressed index="Use" value="0"/>
         <NodeArray index="Use" Link="CountUnitNukeCompleteOnlyAtUnit1398243897"/>
     </CRequirement>
@@ -390,6 +396,12 @@
     <CRequirement id="NoSevenThundersOfRetribution">
         <NodeArray index="Use" Link="CountUpgradeDivineKey3rdCompleteOnly3918714543"/>
         <NodeArray index="Show" Link="NotCountBehaviorSevenThundersOfRetributionCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="ShowIfHaveFactAddOnParent">
+        <NodeArray index="Show" Link="CountUnitAlias_AntiEntropyFactoryCompleteOnlyAtUnit"/>
+    </CRequirement>
+    <CRequirement id="ShowIfHaveNoAddOnParent">
+        <NodeArray index="Show" Link="NotOrCountUnitAlias_BarracksCompleteOnlyAtUnitCountUnitAlias_FactoryCompleteOnlyAtUnitCountUnitAlias_StarportCompleteOnlyAtUnitCountUnitAlias_AntiEntropyFactoryCompleteOnlyAtUnit"/>
     </CRequirement>
     <CRequirement id="SiegeTankUpgeadeCanResearch">
         <NodeArray index="Show" Link="NotCountUpgradeSiegeTankUpgradeQueuedOrBetter"/>
@@ -614,7 +626,7 @@
         <NodeArray index="Show" Link="LTCountUpgradeReduceThunderQueuedOrBetter10"/>
     </CRequirement>
     <CRequirement id="SCVGatherCanUpgrade">
-        <NodeArray index="Show" Link="LTCountUpgradeMicroFilteringQueuedOrBetter6"/>
+        <NodeArray index="Show" Link="LTCountUpgradeMicroFilteringQueuedOrBetter4"/>
     </CRequirement>
     <CRequirement id="VShieldCanUpgrade">
         <NodeArray index="Show" Link="LTCountUpgradeVShieldUpgradeQueuedOrBetter10"/>
@@ -690,13 +702,13 @@
         <NodeArray index="Show" Link="NotCountUpgradeKianaC4Upgrade3QueuedOrBetter"/>
     </CRequirement>
     <CRequirement id="KianaC4HasUpgrade3Requirement">
-        <NodeArray index="Show" Link="CountUpgradeKianaC4Upgrade3CompleteOnly"/>
+        <NodeArray index="Show" Link="CountUpgradeKianaC4Upgrade3CompleteOnlyTechTreeCheat"/>
     </CRequirement>
     <CRequirement id="KianaC4Upgrade4Requirement">
         <NodeArray index="Show" Link="NotCountUpgradeKianaC4Upgrade4QueuedOrBetter"/>
     </CRequirement>
     <CRequirement id="KianaC4Upgrade4Researched">
-        <NodeArray index="Use" Link="CountUpgradeKianaC4Upgrade4CompleteOnly"/>
+        <NodeArray index="Use" Link="CountUpgradeKianaC4Upgrade4CompleteOnlyTechTreeCheat"/>
     </CRequirement>
     <CRequirement id="LearnTerranBuildingArmor">
         <NodeArray index="Use" Link="LTSumCountUpgradeTerranBuildingArmorQueuedOnlyCountUpgradeTerranBuildingArmorInProgressOnly1"/>
@@ -724,7 +736,7 @@
         <NodeArray index="Use" Link="AndOr152037771CountUnitFusionCoreCompleteOnlyTechTreeCheatNot3457755508CountUnitNukeQueuedOrBetterAtUnit"/>
     </CRequirement>
     <CRequirement id="TrainNukeMHT">
-        <EditorCategories value="Race:Terran,TechType:Ability"/>
+        <EditorCategories value="TechType:Ability"/>
         <NodeArray index="Use" Link="AndOr152037771CountUnitFusionCoreCompleteOnlyTechTreeCheatNot1513537511CountUnitNukeMHTQueuedOrBetterAtUnit"/>
     </CRequirement>
     <CRequirement id="UlArmorCanUpgrade">
@@ -744,7 +756,7 @@
         <NodeArray index="Show" Link="LTCountUpgradeUlAttackUpgradeQueuedOrBetter10"/>
     </CRequirement>
     <CRequirement id="HaveHighTower">
-        <EditorCategories value="Race:Terran,TechType:Unit"/>
+        <EditorCategories value="TechType:Unit"/>
         <CanBeSuppressed index="Use" value="0"/>
         <NodeArray index="Use" Link="CountUnitHighTowerCompleteOnlyTechTreeCheat"/>
     </CRequirement>
@@ -752,12 +764,11 @@
         <NodeArray index="Use" Link="AndOrCountBehaviorKianaC2Attack2CompleteOnlyAtUnit3179731307NotCountBehaviorKianaC2BranchReadyCompleteOnlyAtUnit"/>
     </CRequirement>
     <CRequirement id="UnitMoving">
-        <EditorCategories value="Race:Terran"/>
         <NodeArray index="Use" Link="NotCountBehaviorEvadeCoolDownCompleteOnlyAtUnit"/>
         <NodeArray index="Show" Link="CountBehaviorUnitMovingCompleteOnlyAtUnit"/>
     </CRequirement>
     <CRequirement id="KianaC2Requirements">
-        <EditorCategories value="Race:Terran,TechType:Unit"/>
+        <EditorCategories value="TechType:Unit"/>
         <NodeArray index="Use" Link="Eq1641998733CountUnitKianaC2QueuedOrBetter0"/>
     </CRequirement>
     <CRequirement id="KianaC2Upgrade1Requirement">
@@ -794,27 +805,27 @@
         <NodeArray index="Show" Link="CountUpgradeAvatarSeeleCompleteOnly"/>
     </CRequirement>
     <CRequirement id="UsingK23">
-        <EditorCategories value="TechType:Unit,Race:Terran"/>
+        <EditorCategories value="TechType:Unit"/>
         <NodeArray index="Show" Link="CountBehaviorWeaponUseK23CompleteOnlyAtUnit"/>
     </CRequirement>
     <CRequirement id="UsingK23Show">
-        <EditorCategories value="TechType:Unit,Race:Terran"/>
+        <EditorCategories value="TechType:Unit"/>
         <NodeArray index="Use" Link="CountBehaviorWeaponUseK23CompleteOnlyAtUnit"/>
     </CRequirement>
     <CRequirement id="UsingK5">
-        <EditorCategories value="TechType:Unit,Race:Terran"/>
+        <EditorCategories value="TechType:Unit"/>
         <NodeArray index="Show" Link="CountBehaviorWeaponUseK5CompleteOnlyAtUnit"/>
     </CRequirement>
     <CRequirement id="CanEquipK23">
-        <EditorCategories value="TechType:Unit,Race:Terran"/>
+        <EditorCategories value="TechType:Unit"/>
         <NodeArray index="Use" Link="AndCountUpgradeDivineKey7thCompleteOnly3249686718NotCountBehaviorWeaponUseK23CompleteOnlyAtUnit3368134584"/>
     </CRequirement>
     <CRequirement id="CanEquipK5">
-        <EditorCategories value="TechType:Unit,Race:Terran"/>
+        <EditorCategories value="TechType:Unit"/>
         <NodeArray index="Use" Link="NotCountBehaviorWeaponUseK5CompleteOnlyAtUnit3301302742"/>
     </CRequirement>
     <CRequirement id="UsingK17">
-        <EditorCategories value="TechType:Unit,Race:Terran"/>
+        <EditorCategories value="TechType:Unit"/>
         <NodeArray index="Show" Link="CountBehaviorWeaponUseK17CompleteOnlyAtUnit"/>
     </CRequirement>
     <CRequirement id="CannonB5CanResearch">
@@ -824,11 +835,9 @@
         <NodeArray index="Show" Link="NotCountUpgradeB6QueuedOrBetter"/>
     </CRequirement>
     <CRequirement id="ValkyrjaShieldCR">
-        <EditorCategories value="Race:Terran"/>
         <NodeArray index="Show" Link="NotCountUpgradeValkyrjaShieldQueuedOrBetter"/>
     </CRequirement>
     <CRequirement id="ValkyrjaDefenceCR">
-        <EditorCategories value="Race:Terran"/>
         <NodeArray index="Show" Link="NotCountUpgradeValkyrjaDefenceQueuedOrBetter"/>
     </CRequirement>
     <CRequirement id="DivineKey1stCanResearch">

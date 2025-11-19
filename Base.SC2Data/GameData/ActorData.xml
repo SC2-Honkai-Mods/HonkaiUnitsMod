@@ -257,6 +257,95 @@
         <SoundArray index="ClickError" value=""/>
         <SoundArray index="Highlight" value=""/>
     </CActorUnit>
+    <CActorAction id="SaForwardMelee1" parent="GenericAttack" effectAttack="SaForwardMeleeDamage1">
+        <LaunchAssets Model="" Sound="Zealot_AttackLaunch"/>
+        <ImpactMap index="None" Model="" Sound="BroodLord_AttackImpact" ModelReaction=""/>
+        <ImpactMap index="Shield" Sound="" ModelReaction=""/>
+        <ImpactPhysics>
+            <Name value="Attack00"/>
+            <MatchKeys value="Basic"/>
+            <AttackAnimProps value="00"/>
+            <Physics value="ZealotAttackDeathForce00"/>
+        </ImpactPhysics>
+    </CActorAction>
+    <CActorSound id="Destructible_RockDeath" parent="SoundOneShot"/>
+    <CActorUnit id="AntiEntropyFactory" parent="TerranBuildingFlyerEx" unitName="AntiEntropyFactory">
+        <On Terms="UnitDeathCustomize.AntiEntropyFactoryFlying" Send="DeathCustomize Flying"/>
+        <On Terms="Behavior.ColonyInfestation.On" Send="Create InfestedVisual"/>
+        <Model value="Factory"/>
+        <BuildModel value="Factory"/>
+        <DeathArray index="Normal" ModelLink="FactoryDeath"/>
+        <DeathArray index="UnderConstruction" ModelLink="TerranBuildingDeath" SoundLink="Factory_Explode"/>
+        <DeathCustoms index="5" ModelLink="FactoryFlyDeath" SoundLink="Factory_Explode" Name="Flying"/>
+        <PlacementModel value="FactoryPlacement"/>
+        <PortraitModel value="FactoryPortrait"/>
+        <BarOffset value="150"/>
+        <BarWidth value="160"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Terran-Factory.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\btn-building-terran-Factory.dds"/>
+        <NameOffset value="110"/>
+        <SoundArray index="Ready" value="Factory_Ready"/>
+        <SoundArray index="What" value="Factory_What"/>
+        <SoundArray index="Movement" value="Factory_Movement"/>
+        <UnitIcon value="Assets\Textures\btn-building-terran-Factory.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Terran-Factory.dds"/>
+        </Wireframe>
+    </CActorUnit>
+    <CActorModel id="AntiEntropyFactoryBuild" parent="TerranBuildingBuild">
+        <Model value="FactoryBuild"/>
+    </CActorModel>
+    <CActorSound id="FactoryLand">
+        <On Terms="AbilMorph.*.Start; MorphTo AntiEntropyFactory" Send="Create"/>
+    </CActorSound>
+    <CActorSplat id="FactorySplat">
+        <On Terms="AbilMorph.*.Finish; MorphTo AntiEntropyFactory" Send="Create"/>
+        <On Terms="AbilMorph.*.Start; MorphFrom AntiEntropyFactory" Send="Destroy"/>
+    </CActorSplat>
+    <CActorModel id="SaAbil1WarningFire" parent="ModelAnimationStyleOneShot" abil="Herrscher2ndUltimate">
+        <Flags index="SuppressSaveLoad" value="0"/>
+        <On index="0" Terms="ActorCreation" Send="AnimBracketStart BSD Birth Stand Death ContentPlayOnce 0.500000 AsTimeScale"/>
+        <On Terms="Effect.SaAbil1Fire.Start" Send="Create"/>
+        <HostSiteOps Ops="SOpTargetPoint SOpShadow"/>
+        <Model value="WarningSplatFire"/>
+        <Scale value="1.500000,1.500000,1.000000"/>
+    </CActorModel>
+    <CActorModel id="IceAttackModel" parent="ModelAnimationStyleOneShot">
+        <On index="0" Terms="ActorCreation" Send="AnimBracketStart BSD {} {} Death ContentPlayOnce,FullMatch"/>
+        <On Terms="ActorCreation" Send="Create Destructible_RockDeath"/>
+        <On Terms="Effect.SaAbil1IceSearch.Start" Send="Create"/>
+        <Model value="DestructibleIce"/>
+    </CActorModel>
+    <CActorModel id="SaAbil1WarningThunder" parent="ModelAnimationStyleOneShot" abil="Herrscher2ndUltimate">
+        <Flags index="SuppressSaveLoad" value="0"/>
+        <On index="0" Terms="ActorCreation" Send="AnimBracketStart BSD Birth Stand Death ContentPlayOnce 0.500000 AsTimeScale"/>
+        <On Terms="Effect.SaAbil1Thunder.Start" Send="Create"/>
+        <HostSiteOps Ops="SOpTargetPoint SOpShadow"/>
+        <Model value="WarningSplatThunder"/>
+        <Scale value="1.500000,1.500000,1.000000"/>
+    </CActorModel>
+    <CActorModel id="SaAbil1WarningIce" parent="ModelAnimationStyleOneShot" abil="Herrscher2ndUltimate">
+        <Flags index="SuppressSaveLoad" value="0"/>
+        <On index="0" Terms="ActorCreation" Send="AnimBracketStart BSD Birth Stand Death ContentPlayOnce 0.500000 AsTimeScale"/>
+        <On Terms="Effect.SaAbil1Ice.Start" Send="Create"/>
+        <HostSiteOps Ops="SOpTargetPoint SOpShadow"/>
+        <Model value="WarningSplatIce"/>
+        <Scale value="1.500000,1.500000,1.000000"/>
+    </CActorModel>
+    <CActorAction id="SaForwardMelee2" parent="GenericAttack" effectAttack="SaForwardMeleeDamage2">
+        <On Terms="ActorCreation" Send="SetTintColor {255,4,224 2.000000}"/>
+        <LaunchSiteOps Ops="SOpTargetPointStationary" HoldPosition="1" HoldRotation="1"/>
+        <LaunchAttachQuery Methods="AMFilterWeaponRight" Fallback="Weapon"/>
+        <LaunchAssets Model="KianaC1GroundEffect" Sound="PhysicsImpactRockMassive"/>
+        <ImpactPhysics>
+            <Name value="Attack00"/>
+            <MatchKeys value="Basic"/>
+            <AttackAnimProps value="00"/>
+            <Physics value="ZealotAttackDeathForce00"/>
+        </ImpactPhysics>
+    </CActorAction>
     <CActorModel id="StFreyaBuild" parent="TerranBuildingBuild">
         <Model value="EngineeringBayBuild"/>
     </CActorModel>
@@ -537,6 +626,9 @@
     </CActorUnit>
     <CActorSound id="RO_060Aim" parent="SoundOneShot">
         <On Terms="Effect.RO_060AttackCP.Start" Send="Create"/>
+    </CActorSound>
+    <CActorSound id="TerranBuildingLiftOff">
+        <On Terms="AbilMorph.*.Start; MorphTo AntiEntropyFactoryFlying" Send="Create"/>
     </CActorSound>
     <CActorUnit id="WeaponK5" parent="GenericUnitStandardNoAutoSoundLinks" unitName="WeaponK5">
         <On Terms="ActorCreation" Send="Create WeaponPistolAttachK5"/>
@@ -879,7 +971,7 @@
         <On Terms="ActorCreation" Send="SetTintColor {255,111,255 3.000000}"/>
     </CActorAction>
     <CActorModel id="SaBackwardWeaponSplat" parent="ModelAnimationStyleOneShot">
-        <On index="0" Terms="ActorCreation" Send="AnimBracketStart BSD Birth Stand Death ContentPlayOnce 1.333333 AsTimeScale"/>
+        <On index="0" Terms="ActorCreation" Send="AnimBracketStart BSD Birth Stand Death ContentPlayOnce 0.800000 AsTimeScale"/>
         <On Terms="Effect.SaBackwardWeaponCP.Start" Send="Create"/>
         <HostSiteOps Ops="SOpTargetPoint SOpShadow" HoldPosition="1"/>
         <Model value="WarningSplatNormal"/>
@@ -1001,7 +1093,7 @@
         <Host Subject="_Selectable"/>
         <HostSiteOps Ops="SOpShadow SOpUpDefault SOpRandomPointInCircle1Dot8th" HoldRotation="1"/>
         <Model value="BronyaC2Abil2Project"/>
-        <Scale value="8.000000"/>
+        <Scale value="5.000000"/>
     </CActorModel>
     <CActorUnit id="Herrscher8thAbil2Select" parent="GenericUnitStandard" unitName="Herrscher8thAbil2Selector">
         <Model value="Invisible2"/>
@@ -1030,7 +1122,6 @@
         <On Terms="Effect.Herrscher8thAbil1Search.Start" Send="Create"/>
     </CActorSound>
     <CActorSound id="Herrscher7thAbil2Sound" parent="SoundOneShot">
-        <On Terms="Effect.Herrscher7thAbil2CP2.Start" Send="Create"/>
         <Sound value="HellionTank_AttackLaunch"/>
     </CActorSound>
     <CActorModel id="Herrscher7thAbil2Warning" parent="ModelAnimationStyleOneShot" abil="Herrscher2ndUltimate">
@@ -1043,6 +1134,8 @@
     </CActorModel>
     <CActorModel id="Herrscher7thAbil2" parent="ModelAnimationStyleContinuous" abil="Herrscher2ndUltimate">
         <On Terms="Effect.Herrscher7thAbil2CP2.Start" Send="Create"/>
+        <On Terms="ActorCreation" Send="Create Herrscher7thAbil2Sound"/>
+        <On Terms="Effect.SaAbil1FireSearch.Start" Send="Create"/>
         <HostSiteOps Ops="SOpTargetPoint SOpShadow"/>
         <Model value="Herrscher7thFireColumn"/>
     </CActorModel>
@@ -1816,8 +1909,8 @@
         <AttachQuery Methods="Target 8"/>
     </CActorSiteOpAttach>
     <CActorSiteOpRandomPointInCircle id="SOpRandomPointInCircle1Dot8th">
-        <Radius value="11.000000"/>
-        <Mean value="7.000000"/>
+        <Radius value="6.000000"/>
+        <Mean value="4.000000"/>
     </CActorSiteOpRandomPointInCircle>
     <CActorLookAt id="SaForwardLookAt" parent="UnitTurret">
         <On Terms="TurretEnable.SaForward" Send="Create"/>
@@ -1906,6 +1999,9 @@
         <On Terms="Behavior.SaDeath.Off" Send="ClearTintColor 0.000000 Death"/>
         <On Terms="Behavior.SaBreakDown.On" Send="SetTintColor {255,128,255 2.000000} 0.500000 Bounce Break 151.000000"/>
         <On Terms="Behavior.SaBreakDown.Off" Send="ClearTintColor 0.000000 Break"/>
+        <On Terms="Abil.SaAbil1.SourcePrepStart" Send="AnimBracketStart Spell Spell,02,Start Spell,02,Stand Spell,02,End"/>
+        <On Terms="Abil.SaAbil1.SourceFinishStop" Send="AnimBracketClear Spell"/>
+        <On Terms="WeaponStart.SaForwardMelee.AttackStart" Send="AnimPlay Attack Spell,04"/>
         <AnimBlendTime value="-0.800000"/>
         <ModelFlags index="OutlineEmitter" value="1"/>
         <DeathArray index="Normal" SoundLink="Ghost_Explode"/>
@@ -1956,7 +2052,7 @@
         <Scale value="6.000000"/>
     </CActorSplat>
     <CActorModel id="SaForwardWeaponSplat" parent="ModelAnimationStyleOneShot">
-        <On index="0" Terms="ActorCreation" Send="AnimBracketStart BSD Birth Stand Death ContentPlayOnce 0.666670 AsTimeScale"/>
+        <On index="0" Terms="ActorCreation" Send="AnimBracketStart BSD Birth Stand Death ContentPlayOnce 0.500000 AsTimeScale"/>
         <On Terms="Effect.SaForwardWeaponCP.Start" Send="Create"/>
         <HostSiteOps Ops="SOpTargetPoint SOpShadow" HoldPosition="1"/>
         <Model value="WarningSplatNormal"/>
@@ -5640,12 +5736,11 @@
         <On Terms="ActorCreation" Send="SetScale 1.350000"/>
         <Model value="TechLabBuild2"/>
     </CActorModel>
-    <CActorModel id="Herrscher3rdAbil2Impact" parent="ModelAnimationStyleOneShot">
-        <On Terms="Effect.Herrscher3rdAbil2Search.Start; At Target" Send="Create"/>
-        <On Terms="ActorCreation" Send="SetTintColor {196,0,0 4.000000} 0.000000 OneShot Red"/>
+    <CActorModel id="LightningBoltModel" parent="ModelAnimationStyleOneShot">
+        <On index="0" Terms="ActorCreation" Send="AnimBracketStart BSD Birth Stand,02 Death ContentPlayOnce,FullMatch"/>
+        <On Terms="Effect.Herrscher3rdAbil2Search.Start" Send="Create"/>
         <On Terms="ActorCreation" Send="Create LightningBolt_Sound"/>
-        <On Terms="ActorCreation" Send="TimerSet 0.500000 R"/>
-        <On Terms="TimerExpired; TimerName R" Send="ClearTintColor 0.500000 Red"/>
+        <On Terms="Effect.SaAbil1ThunderSearch.Start" Send="Create"/>
         <Model value="LightningBoltH3"/>
     </CActorModel>
     <CActorRange id="Herrscher3rdAbil2Range" parent="RangeAbil" abil="Herrscher3rdAbil2">

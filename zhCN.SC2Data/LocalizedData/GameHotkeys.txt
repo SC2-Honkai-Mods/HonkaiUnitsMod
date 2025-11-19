@@ -1,5 +1,6 @@
 ﻿Button/Hotkey/ATTACK=Z
 Button/Hotkey/AdvancedMedic=C
+Button/Hotkey/AntiEntropyFactory=F
 Button/Hotkey/ArmorLevel=X
 Button/Hotkey/ArmorLevel2=C
 Button/Hotkey/Attack=A
@@ -206,6 +207,7 @@ Button/Hotkey/ResearchSuperC=S
 Button/Hotkey/ResearchVHerrscher1st=D
 Button/Hotkey/ResearchVHerrscher1st2=D
 Button/Hotkey/ReviveKiana=R
+Button/Hotkey/SaAbil1=E
 Button/Hotkey/SaUltimate=
 Button/Hotkey/SeeleC1Upgrade1=Q
 Button/Hotkey/SeeleC1Upgrade2=W
