@@ -14,6 +14,7 @@ bool lib6D9D7845_gv_globalE8B083E8AF95E6A8A1E5BC8F;
 bool lib6D9D7845_gv_globalE88BB1E99B84E5A48DE6B4BB;
 bool lib6D9D7845_gv_globalE79086E4B98BE5BE8BE88085E68A80E883BDE5898AE5BCB1;
 bool lib6D9D7845_gv_globalE5BCB9E587BAE59CB0E59BBEE68F90E7A4BA;
+bool lib6D9D7845_gv_globalE590AFE794A8E4BCA4E5AEB3E7BB93E7AE97E7B3BBE7BB9F;
 string lib6D9D7845_gv_e697A0E6A087E9A298E79A84E58F98E9878F001;
 string lib6D9D7845_gv_defaultLight;
 fixed[11] lib6D9D7845_gv_damagein10seconds;
@@ -56,6 +57,7 @@ int lib6D9D7845_gv_e793A6E696AFE58D95E6ACA1E98787E99B86E695B0;
 
 // Function Declarations
 void lib6D9D7845_gf_AIThinkRO_010 (int lp_player, unit lp_caster, unitgroup lp_scanGroup);
+void lib6D9D7845_gf_AIThinkUL_020 (int lp_player, unit lp_caster, unitgroup lp_scanGroup);
 void lib6D9D7845_gf_AIThinkUL_030 (int lp_player, unit lp_caster, unitgroup lp_scanGroup);
 void lib6D9D7845_gf_AIThinkCharge (unit lp_caster, unitgroup lp_scanGroup, string lp_skill, string lp_cD);
 void lib6D9D7845_gf_AIThinkSaAfflication (int lp_player, unit lp_caster, unitgroup lp_scanGroup);
@@ -211,7 +213,7 @@ trigger lib6D9D7845_gt_E7B2BEE7A59EE5B9B2E689B0;
 trigger lib6D9D7845_gt_E5B9BBE5A283;
 trigger lib6D9D7845_gt_E5B9BBE5A283E98089E68BA9;
 trigger lib6D9D7845_gt_E9BB91E6B49E;
-trigger lib6D9D7845_gt_E997AAE981BFE68A80E883BDE79BAEE6A087E8BDACE7A7BB;
+trigger lib6D9D7845_gt_EvadeTargetLost;
 trigger lib6D9D7845_gt_E997AAE78EB0E8A1A5E4B881;
 trigger lib6D9D7845_gt_E5A5B3E6ADA6E7A59EE58585E883BD;
 trigger lib6D9D7845_gt_E997AAE981BFE99FB3E69588E9A286E59F9FE8A385C2B7E799BDE7BB83;

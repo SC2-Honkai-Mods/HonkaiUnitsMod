@@ -26,7 +26,7 @@
 <Behavior id="SaShield"/>
 <Behavior id="SaBreakDown"/>
 <Behavior id="SaBackward"/>
-<Behavior id="SaUltimateNoCommand"/>
+<Behavior id="NoSelection"/>
 <Behavior id="SaUltimatePrepare"/>
 <Behavior id="SaUltimateCast"/>
 <Behavior id="SaUltimateCeaseCore"/>
@@ -49,11 +49,11 @@
 <Effect id="KianaC4QTE"/>
 <Effect id="RemoveTarget"/>
 <Effect id="WeaponB25EffectTriggerFinal"/>
+<Effect id="ThrowSet"/>
 <Effect id="Frozen"/>
 <Effect id="Flying"/>
 <Effect id="Palsy"/>
 <Effect id="TargetBurn"/>
-<Effect id="ThrowSet"/>
 <Effect id="ForceDizzy10s"/>
 <Effect id="Herrscher8thAbil2AddCharge"/>
 <Effect id="SaUltimateBackwardStart"/>

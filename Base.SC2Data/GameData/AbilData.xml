@@ -2,6 +2,32 @@
 <Catalog>
     <CAbilMorphPlacement id="AntiEntropyFactoryLand" parent="TerranBuildingLand" unit="AntiEntropyFactory"/>
     <CAbilMorph id="AntiEntropyFactoryLiftOff" parent="TerranBuildingLiftOff" unit="AntiEntropyFactoryFlying"/>
+    <CAbilMorph id="UL_020Land">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="UL_020LandAttack">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+        <Flags index="IgnoreFacing" value="1"/>
+        <Flags index="Transient" value="1"/>
+        <Flags index="WaitUntilStopped" value="0"/>
+        <InfoArray Unit="UL_020"/>
+    </CAbilMorph>
+    <CAbilMorph id="UL_020LiftOff">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="UL_020LiftOff" Requirements="UseFighterMode">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+        <Flags index="IgnoreFacing" value="1"/>
+        <InfoArray Unit="UL_020Fly" RandomDelayMax="0.125">
+            <SectionArray index="Actor">
+                <DurationArray index="Duration" value="1"/>
+            </SectionArray>
+            <SectionArray index="Mover">
+                <DurationArray index="Duration" value="1"/>
+            </SectionArray>
+        </InfoArray>
+        <AutoCastCountMax value="4294967295"/>
+    </CAbilMorph>
     <CAbilEffectInstant id="SaAbil1">
         <EditorCategories value="AbilityorEffectType:Units"/>
         <Effect index="0" value="SaAbil1CP"/>
@@ -2528,6 +2554,23 @@
         <Alert value="AddOnComplete"/>
         <Activity value="UI/Upgrading"/>
     </CAbilMorph>
+    <CAbilEffectTarget id="UL_020LandAttack">
+        <Alignment value="Negative"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="UL_020LandAttackCU"/>
+        <Flags index="AutoCast" value="1"/>
+        <Flags index="AutoCastOn" value="1"/>
+        <Flags index="BestUnit" value="0"/>
+        <Range value="5"/>
+        <Arc value="360"/>
+        <CursorEffect value="UL_020LandAttackSearch"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="UL_020LandAttack">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+        <AutoCastFilters value="Ground,Visible;Player,Ally,Neutral,Air,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <AutoCastRange value="10"/>
+        <AutoCastValidatorArray value="NoEnermyFlyingWithin10"/>
+    </CAbilEffectTarget>
     <CAbilEffectTarget id="ValkyrjaSnipe">
         <Alignment value="Negative"/>
         <EditorCategories value="AbilityorEffectType:Units"/>
