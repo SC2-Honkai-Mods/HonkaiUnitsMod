@@ -257,6 +257,267 @@
         <SoundArray index="ClickError" value=""/>
         <SoundArray index="Highlight" value=""/>
     </CActorUnit>
+    <CActorAction id="UL_020FlyAttack" parent="GenericAttack" effectAttack="UL_020AttackDamageAir">
+        <ImpactMap index="None" Sound="Broodling_AttackImpact"/>
+        <ShieldFlashType value="Header"/>
+    </CActorAction>
+    <CActorAction id="UL_020LandAttack" parent="GenericAttack" effectAttack="UL_020LandAttackDamage">
+        <LaunchAssets Model=""/>
+        <ImpactMap index="None" Model="" Sound="BroodLord_AttackImpact" ModelReaction=""/>
+        <ImpactMap index="Shield" Sound="" ModelReaction=""/>
+        <ImpactPhysics>
+            <Name value="Attack00"/>
+            <MatchKeys value="Basic"/>
+            <AttackAnimProps value="00"/>
+            <Physics value="ZealotAttackDeathForce00"/>
+        </ImpactPhysics>
+    </CActorAction>
+    <CActorUnit id="UL_020" parent="CActorUnitWithIcon" unitName="UL_020">
+        <Aliases value="_UnitSmall"/>
+        <Macros value="BroodlingAnimSlateCleaner"/>
+        <Macros value="TerrainSquibAnimations"/>
+        <Macros value="PhysicsDeathsSwarmGround"/>
+        <On Terms="UnitBirth.UL_020" Send="$Birth 0 0.000000"/>
+        <On Terms="AbilMorph.*.Finish; MorphTo UL_020" Send="Create"/>
+        <On Terms="AbilMorph.*.Finish; MorphFrom UL_020" Send="Destroy"/>
+        <On Terms="Effect.UL_020LandAttackLM.Stop" Send="AnimClear Spell"/>
+        <HostSiteOps Ops="SOpMoveUpByDot2"/>
+        <DeathArray index="Normal" ModelLink="UL_020Death" SoundLink="Broodling_Explode"/>
+        <DeathArray index="Disintegrate" SoundLink="Broodling_DeathFXAcid"/>
+        <DeathArray index="Fire" SoundLink="Broodling_DeathFXFire"/>
+        <DeathCustomData Name="RagdollBasic" SyncPassChance="65"/>
+        <DeathActorModel value="UnitDeathModelWithDeathMotionGround"/>
+        <PortraitModel value="UL_020Portrait"/>
+        <TerrainSquibs>
+            <MovementDistance value="0.250000,0.250000"/>
+            <IdlePeriod value="0.200000,0.400000"/>
+            <RangeUp value="1.000000"/>
+            <RangeDown value="1.000000"/>
+            <AttachQuery Methods="AMFilterCenter"/>
+            <Visuals TerrainPhysicsMaterial="Water" ActorModel="TerrainSquibHarnessContinuous" ModelLink="WaterRippleTiny"/>
+        </TerrainSquibs>
+        <BarOffset value="25"/>
+        <BarWidth value="40"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-zerg-groundcarapace-level0.dds"/>
+        <SoundArray index="Ready" value="Broodling_Ready"/>
+        <SoundArray index="What" value="Broodling_What"/>
+        <SoundArray index="Yes" value="Broodling_Yes"/>
+        <SoundArray index="Attack" value="Broodling_Attack"/>
+        <SoundArray index="Pissed" value="Broodling_Pissed"/>
+        <WalkAnimTimeScalingAsFlyer value="1"/>
+    </CActorUnit>
+    <CActorUnit id="UL_020Fly" parent="CActorUnitWithIcon" unitName="UL_020Fly">
+        <Aliases value="_UnitSmall"/>
+        <Macros value="BroodlingAnimSlateCleaner"/>
+        <Macros value="TerrainSquibAnimations"/>
+        <Macros value="PhysicsDeathsSwarmGround"/>
+        <On Terms="AbilMorph.*.Finish; MorphTo UL_020Fly" Send="Create"/>
+        <On Terms="AbilMorph.*.Finish; MorphFrom UL_020Fly" Send="Destroy"/>
+        <On Terms="Effect.UL_020LandAttackLM.Launch" Send="$Spell 0 -1.000000 -1.000000 1.000000 AsTimeScale 0.000000 255"/>
+        <HostSiteOps Ops="SOpMoveUpByDot2"/>
+        <Model value="UL_020"/>
+        <BuildModel value="UL_020"/>
+        <DeathArray index="Normal" ModelLink="UL_020Death" SoundLink="Broodling_Explode"/>
+        <DeathArray index="Disintegrate" SoundLink="Broodling_DeathFXAcid"/>
+        <DeathArray index="Fire" SoundLink="Broodling_DeathFXFire"/>
+        <DeathCustoms>
+            <ActorModel value=""/>
+            <ActorModelLow value=""/>
+            <AnimProps value=""/>
+            <ModelLink value="ZergSmallUnitDeathLow"/>
+            <SoundLink value=""/>
+            <VoiceLink value=""/>
+            <Name value="AntiGravGeneric"/>
+            <PhysicsMatchKeysOrdered value=""/>
+            <InheritsFrom value=""/>
+            <IsAbstract value="0"/>
+        </DeathCustoms>
+        <DeathCustoms>
+            <ActorModel value=""/>
+            <ActorModelLow value=""/>
+            <AnimProps value=""/>
+            <ModelLink value="ProtossSmallUnitDeathLow"/>
+            <SoundLink value=""/>
+            <VoiceLink value=""/>
+            <Name value="AntiGravProtoss"/>
+            <PhysicsMatchKeysOrdered value=""/>
+            <InheritsFrom value=""/>
+            <IsAbstract value="0"/>
+        </DeathCustoms>
+        <DeathCustoms>
+            <ActorModel value=""/>
+            <ActorModelLow value=""/>
+            <AnimProps value=""/>
+            <ModelLink value="TerranSmallUnitDeathLow"/>
+            <SoundLink value=""/>
+            <VoiceLink value=""/>
+            <Name value="AntiGravTerran"/>
+            <PhysicsMatchKeysOrdered value=""/>
+            <InheritsFrom value=""/>
+            <IsAbstract value="0"/>
+        </DeathCustoms>
+        <DeathCustoms>
+            <ActorModel value=""/>
+            <ActorModelLow value=""/>
+            <AnimProps value=""/>
+            <ModelLink value="ZergSmallUnitDeathLow"/>
+            <SoundLink value=""/>
+            <VoiceLink value=""/>
+            <Name value="AntiGravZerg"/>
+            <PhysicsMatchKeysOrdered value=""/>
+            <InheritsFrom value=""/>
+            <IsAbstract value="0"/>
+        </DeathCustoms>
+        <DeathCustoms>
+            <ActorModel value=""/>
+            <ActorModelLow value=""/>
+            <AnimProps value=""/>
+            <ModelLink value="Invisible"/>
+            <SoundLink value=""/>
+            <VoiceLink value=""/>
+            <Name value="Vortex"/>
+            <PhysicsMatchKeysOrdered value=""/>
+            <InheritsFrom value=""/>
+            <IsAbstract value="0"/>
+        </DeathCustoms>
+        <DeathCustomData Name="RagdollBasic" SyncPassChance="65"/>
+        <DeathActorModel value="UnitDeathModelWithDeathMotionGround"/>
+        <PlacementModel value="UL_020"/>
+        <PortraitModel value="UL_020Portrait"/>
+        <TerrainSquibs>
+            <MovementDistance value="0.250000,0.250000"/>
+            <IdlePeriod value="0.200000,0.400000"/>
+            <RangeUp value="1.000000"/>
+            <RangeDown value="1.000000"/>
+            <AttachQuery Methods="AMFilterCenter"/>
+            <Visuals TerrainPhysicsMaterial="Water" ActorModel="TerrainSquibHarnessContinuous" ModelLink="WaterRippleTiny"/>
+        </TerrainSquibs>
+        <WalkAnimTimeScalingAsFlyer value="1"/>
+        <BarOffset value="25"/>
+        <BarWidth value="40"/>
+        <GroupIcon>
+            <Image index="0" value="Assets\Textures\Wireframe-UL_020.tga"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\Wireframe-UL_020.tga"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-zerg-groundcarapace-level0.dds"/>
+        <SoundArray index="Ready" value="Broodling_Ready"/>
+        <SoundArray index="What" value="Broodling_What"/>
+        <SoundArray index="Yes" value="Broodling_Yes"/>
+        <SoundArray index="Attack" value="Broodling_Attack"/>
+        <SoundArray index="Pissed" value="Broodling_Pissed"/>
+        <StatusColors index="Life">
+            <ColorArray index="2" value="255,208,34,0"/>
+            <ColorArray index="3" value="255,208,34,0"/>
+            <ColorArray index="4" value="255,208,34,0"/>
+            <ColorArray index="5" value="255,229,221,1"/>
+        </StatusColors>
+        <UnitIcon value="Assets\Textures\Wireframe-UL_020.tga"/>
+        <Wireframe>
+            <Image index="0" value="Assets\Textures\Wireframe-UL_020.tga"/>
+        </Wireframe>
+    </CActorUnit>
+    <CActorAction id="UL_020Attack" parent="GenericAttack" effectAttack="UL_020AttackDamage">
+        <ImpactMap index="None" Sound="Broodling_AttackImpact"/>
+        <ShieldFlashType value="Header"/>
+    </CActorAction>
+    <CActorUnit id="UL_080" parent="CActorUnitWithIcon" unitName="UL_080">
+        <Aliases value="_UnitLarge"/>
+        <Macros value="PhysicsDeathsSwarmAir"/>
+        <On Terms="AbilMorph.*.Finish; MorphTo UL_080" Send="Create"/>
+        <On Terms="AbilMorph.*.Start; MorphFrom UL_080" Send="Destroy"/>
+        <On Terms="Abil.MorphToBroodLord.Start" Send="AnimPlay Morph Stand,Morph,Start"/>
+        <On Terms="Abil.Corruption.SourceChannelStart" Send="$Spell"/>
+        <On Terms="Effect.InfestedVentSpawnCorruptorCreateCorruptor.Create" Send="$Birth 0 -1.000000 -1.000000 0.500000 AsDuration"/>
+        <On Terms="UnitHeightUpdate.*.Land" Send="Create Corruptor_Land"/>
+        <On Terms="Effect.CorruptorGroundAttackLaunchMissile.Start" Send="AnimPlay Attack Attack"/>
+        <HostSiteOps Ops="SOpBankerCorruptor"/>
+        <ModelFlags index="OutlineEmitter" value="0"/>
+        <Baselines index="Stand" BlendIn="1.000000" BlendOut="1.000000"/>
+        <Baselines index="Walk" BlendIn="1.000000" BlendOut="1.000000"/>
+        <DeathArray index="Normal" ModelLink="" SoundLink="" VoiceLink="Corruptor_Death"/>
+        <DeathCustoms>
+            <ActorModel value=""/>
+            <ActorModelLow value=""/>
+            <AnimProps value=""/>
+            <ModelLink value="ZergSmallUnitDeathLow"/>
+            <SoundLink value=""/>
+            <VoiceLink value=""/>
+            <Name value="AntiGravGeneric"/>
+            <PhysicsMatchKeysOrdered value=""/>
+            <InheritsFrom value=""/>
+            <IsAbstract value="0"/>
+        </DeathCustoms>
+        <DeathCustoms>
+            <ActorModel value=""/>
+            <ActorModelLow value=""/>
+            <AnimProps value=""/>
+            <ModelLink value="ProtossSmallUnitDeathLow"/>
+            <SoundLink value=""/>
+            <VoiceLink value=""/>
+            <Name value="AntiGravProtoss"/>
+            <PhysicsMatchKeysOrdered value=""/>
+            <InheritsFrom value=""/>
+            <IsAbstract value="0"/>
+        </DeathCustoms>
+        <DeathCustoms>
+            <ActorModel value=""/>
+            <ActorModelLow value=""/>
+            <AnimProps value=""/>
+            <ModelLink value="TerranSmallUnitDeathLow"/>
+            <SoundLink value=""/>
+            <VoiceLink value=""/>
+            <Name value="AntiGravTerran"/>
+            <PhysicsMatchKeysOrdered value=""/>
+            <InheritsFrom value=""/>
+            <IsAbstract value="0"/>
+        </DeathCustoms>
+        <DeathCustoms>
+            <ActorModel value=""/>
+            <ActorModelLow value=""/>
+            <AnimProps value=""/>
+            <ModelLink value="ZergSmallUnitDeathLow"/>
+            <SoundLink value=""/>
+            <VoiceLink value=""/>
+            <Name value="AntiGravZerg"/>
+            <PhysicsMatchKeysOrdered value=""/>
+            <InheritsFrom value=""/>
+            <IsAbstract value="0"/>
+        </DeathCustoms>
+        <DeathCustoms>
+            <ActorModel value=""/>
+            <ActorModelLow value=""/>
+            <AnimProps value=""/>
+            <ModelLink value="Invisible"/>
+            <SoundLink value=""/>
+            <VoiceLink value=""/>
+            <Name value="Vortex"/>
+            <PhysicsMatchKeysOrdered value=""/>
+            <InheritsFrom value=""/>
+            <IsAbstract value="0"/>
+        </DeathCustoms>
+        <DeathActorModel value="UnitDeathModelWithDeathMotionFlier"/>
+        <PhysicsMatchKeysOrdered value="BasicAir,Basic"/>
+        <PortraitModel value="UL_080Portrait"/>
+        <BarOffset value="55"/>
+        <BarWidth value="78"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-zerg-flyercarapace-level0.dds"/>
+        <SoundArray index="Ready" value="Corruptor_Ready"/>
+        <SoundArray index="What" value="Corruptor_What"/>
+        <SoundArray index="Yes" value="Corruptor_Yes"/>
+        <SoundArray index="Attack" value="Corruptor_Attack"/>
+        <SoundArray index="Pissed" value="Corruptor_Pissed"/>
+        <UnitFlags index="StandAnimBirthVariation" value="0"/>
+    </CActorUnit>
+    <CActorAction id="UL_080Attack" parent="GenericAttack" effectImpact="UL_080AttackDamage" effectLaunch="UL_080AttackLM">
+        <LaunchAssets Model="CorruptorAttackLaunch" Sound="Corruptor_AttackLaunch"/>
+        <ImpactMap index="None" Model="CorruptorAttackImpact" Sound="Corruptor_AttackImpact"/>
+        <ImpactPhysics Name="ParasiteSporeImpact" MatchKeys="Basic" Physics="CorruptorAttackDeathForce"/>
+    </CActorAction>
+    <CActorMissile id="UL_080AttackMissile" parent="GenericAttackMissile" unitName="UL_080Weapon"/>
+    <CActorSound id="UL_080Death" parent="SoundOneShot">
+        <On Terms="UnitDeath.UL_080; PassChance 25.000000" Send="Create"/>
+        <Sound value="Corruptor_Death"/>
+    </CActorSound>
     <CActorAction id="SaForwardMelee1" parent="GenericAttack" effectAttack="SaForwardMeleeDamage1">
         <LaunchAssets Model="" Sound="Zealot_AttackLaunch"/>
         <ImpactMap index="None" Model="" Sound="BroodLord_AttackImpact" ModelReaction=""/>
@@ -7018,7 +7279,7 @@
         <Host Subject="_Selectable"/>
         <Sound value="Queen_Transfusion"/>
     </CActorSound>
-    <CActorUnit id="UL_030" parent="GenericUnitBase" unitName="UL_030">
+    <CActorUnit id="UL_030" parent="CActorUnitWithIcon" unitName="UL_030">
         <Aliases value="_UnitMedium"/>
         <Macros value="ZergBurrowMobileAnimMacro"/>
         <Macros value="ZergMediumBurrowEffects"/>
@@ -7031,18 +7292,77 @@
         <Remove Terms="Upgrade.Burrow.Add" Send="ModelSwap RoachUpgrade"/>
         <Remove Terms="Upgrade.Burrow.Add; ValidateUnit IsBuried" Send="AnimGroupApply Burrow Burrow Unburrow ClosingFull,Instant"/>
         <Remove Terms="ActorCreation; ValidateUnit HasBurrowUpgrade" Send="ModelSwap RoachUpgrade"/>
-        <On Terms="WeaponStart.*.AttackStart" Send="AnimPlay Attack Attack 0 -1.000000 -1.000000 1.000000 AsTimeScale"/>
-        <On Terms="WeaponStop.*.AttackStop" Send="AnimClear Attack"/>
-        <On Terms="Abil.UL_030Abli.SourcePrepStart" Send="$Spell,Start 0 -1.000000 -1.000000 1.000000 AsTimeScale"/>
-        <On Terms="Abil.UL_030Abli.SourceFinishStop" Send="AnimClear Spell"/>
-        <On Terms="Behavior.RO_010Abli1Brhavior2.On" Send="AnimPlay Walk Spell,Walk PlayForever,DontResetOnUnhide -1.000000 -1.000000 3.600000 AsTimeScale 0.000000 128"/>
+        <On index="64" Terms="WeaponStart.*.AttackStart" Send="AnimPlay Attack Attack 0 -1.000000 -1.000000 1.000000 AsTimeScale"/>
+        <On index="65" Terms="WeaponStop.*.AttackStop" Send="AnimClear Attack"/>
+        <On index="66" Terms="Abil.UL_030Abli.SourcePrepStart" Send="$Spell,Start 0 -1.000000 -1.000000 1.000000 AsTimeScale"/>
+        <On index="67" Terms="Abil.UL_030Abli.SourceFinishStop" Send="AnimClear Spell"/>
+        <On index="68" Terms="Behavior.RO_010Abli1Brhavior2.On" Send="AnimPlay Walk Spell,Walk PlayForever,DontResetOnUnhide -1.000000 -1.000000 3.600000 AsTimeScale 0.000000 128"/>
         <On Terms="Behavior.RO_010Abli1Brhavior2.Off" Send="AnimClear Walk"/>
         <On Terms="Effect.RO_010Abli1End2.Start" Send="$Spell,End"/>
         <On Terms="Effect.RO_010Abli1End2.Stop" Send="AnimClear Spell"/>
-        <ModelFlags index="OutlineEmitter" value="1"/>
         <DeathArray index="Normal" ModelLink="UL_030Death" SoundLink="Roach_Explode"/>
         <DeathArray index="Disintegrate" SoundLink="Uni_DeathFXAcid"/>
         <DeathArray index="Fire" SoundLink="Uni_DeathFXFire"/>
+        <DeathCustoms>
+            <ActorModel value=""/>
+            <ActorModelLow value=""/>
+            <AnimProps value=""/>
+            <ModelLink value="ZergSmallUnitDeathLow"/>
+            <SoundLink value=""/>
+            <VoiceLink value=""/>
+            <Name value="AntiGravGeneric"/>
+            <PhysicsMatchKeysOrdered value=""/>
+            <InheritsFrom value=""/>
+            <IsAbstract value="0"/>
+        </DeathCustoms>
+        <DeathCustoms>
+            <ActorModel value=""/>
+            <ActorModelLow value=""/>
+            <AnimProps value=""/>
+            <ModelLink value="ProtossSmallUnitDeathLow"/>
+            <SoundLink value=""/>
+            <VoiceLink value=""/>
+            <Name value="AntiGravProtoss"/>
+            <PhysicsMatchKeysOrdered value=""/>
+            <InheritsFrom value=""/>
+            <IsAbstract value="0"/>
+        </DeathCustoms>
+        <DeathCustoms>
+            <ActorModel value=""/>
+            <ActorModelLow value=""/>
+            <AnimProps value=""/>
+            <ModelLink value="TerranSmallUnitDeathLow"/>
+            <SoundLink value=""/>
+            <VoiceLink value=""/>
+            <Name value="AntiGravTerran"/>
+            <PhysicsMatchKeysOrdered value=""/>
+            <InheritsFrom value=""/>
+            <IsAbstract value="0"/>
+        </DeathCustoms>
+        <DeathCustoms>
+            <ActorModel value=""/>
+            <ActorModelLow value=""/>
+            <AnimProps value=""/>
+            <ModelLink value="ZergSmallUnitDeathLow"/>
+            <SoundLink value=""/>
+            <VoiceLink value=""/>
+            <Name value="AntiGravZerg"/>
+            <PhysicsMatchKeysOrdered value=""/>
+            <InheritsFrom value=""/>
+            <IsAbstract value="0"/>
+        </DeathCustoms>
+        <DeathCustoms>
+            <ActorModel value=""/>
+            <ActorModelLow value=""/>
+            <AnimProps value=""/>
+            <ModelLink value="Invisible"/>
+            <SoundLink value=""/>
+            <VoiceLink value=""/>
+            <Name value="Vortex"/>
+            <PhysicsMatchKeysOrdered value=""/>
+            <InheritsFrom value=""/>
+            <IsAbstract value="0"/>
+        </DeathCustoms>
         <DeathActorModel value="UnitDeathModelWithDeathMotionGround"/>
         <PortraitModel value="UL_030Portrait"/>
         <TerrainSquibs>
@@ -7056,15 +7376,7 @@
         </TerrainSquibs>
         <WalkAnimMoveSpeed value="1.9101"/>
         <BarOffset value="55"/>
-        <GroupIcon>
-            <Image value="Assets\Textures\Wireframe-UL_030.tga"/>
-        </GroupIcon>
-        <HeroIcon value="Assets\Textures\Wireframe-UL_030.tga"/>
         <LifeArmorIcon value="Assets\Textures\btn-upgrade-zerg-groundcarapace-level0.dds"/>
-        <UnitIcon value="Assets\Textures\Wireframe-UL_030.tga"/>
-        <Wireframe>
-            <Image value="Assets\Textures\Wireframe-UL_030.tga"/>
-        </Wireframe>
         <SoundArray index="Birth" value="UlyGeneral_Attack"/>
         <SoundArray index="Ready" value="UlyGeneral_Ready"/>
         <SoundArray index="Help" value="UlyGeneral_Help"/>
@@ -7459,7 +7771,7 @@
             <Image value="Assets\Textures\btn-unit-HighTower.tga"/>
         </Wireframe>
     </CActorUnit>
-    <CActorUnit id="UL_040" parent="GenericUnitBase" unitName="UL_040">
+    <CActorUnit id="UL_040" parent="CActorUnitWithIcon" unitName="UL_040">
         <Aliases value="_UnitMedium"/>
         <Macros value="ZergBurrowMobileAnimMacro"/>
         <Macros value="ZergMediumBurrowEffects"/>
@@ -7472,21 +7784,77 @@
         <Remove Terms="Upgrade.Burrow.Add" Send="ModelSwap RoachUpgrade"/>
         <Remove Terms="Upgrade.Burrow.Add; ValidateUnit IsBuried" Send="AnimGroupApply Burrow Burrow Unburrow ClosingFull,Instant"/>
         <Remove Terms="ActorCreation; ValidateUnit HasBurrowUpgrade" Send="ModelSwap RoachUpgrade"/>
-        <On Terms="WeaponStart.*.AttackStart" Send="AnimPlay Attack Attack 0 -1.000000 -1.000000 1.000000 AsTimeScale"/>
-        <On Terms="WeaponStop.*.AttackStop" Send="AnimClear Attack"/>
-        <ModelFlags index="OutlineEmitter" value="1"/>
+        <On index="64" Terms="WeaponStart.*.AttackStart" Send="AnimPlay Attack Attack 0 -1.000000 -1.000000 1.000000 AsTimeScale"/>
+        <On index="65" Terms="WeaponStop.*.AttackStop" Send="AnimClear Attack"/>
+        <On index="66" removed="1"/>
+        <On index="67" removed="1"/>
+        <On index="68" removed="1"/>
+        <Scale value="0.800000"/>
         <DeathArray index="Normal" ModelLink="UL_040Death" SoundLink="Roach_Explode" VoiceLink="UlyGeneral_Death"/>
         <DeathArray index="Disintegrate" SoundLink="Uni_DeathFXAcid"/>
         <DeathArray index="Fire" SoundLink="Uni_DeathFXFire"/>
+        <DeathCustoms>
+            <ActorModel value=""/>
+            <ActorModelLow value=""/>
+            <AnimProps value=""/>
+            <ModelLink value="ZergSmallUnitDeathLow"/>
+            <SoundLink value=""/>
+            <VoiceLink value=""/>
+            <Name value="AntiGravGeneric"/>
+            <PhysicsMatchKeysOrdered value=""/>
+            <InheritsFrom value=""/>
+            <IsAbstract value="0"/>
+        </DeathCustoms>
+        <DeathCustoms>
+            <ActorModel value=""/>
+            <ActorModelLow value=""/>
+            <AnimProps value=""/>
+            <ModelLink value="ProtossSmallUnitDeathLow"/>
+            <SoundLink value=""/>
+            <VoiceLink value=""/>
+            <Name value="AntiGravProtoss"/>
+            <PhysicsMatchKeysOrdered value=""/>
+            <InheritsFrom value=""/>
+            <IsAbstract value="0"/>
+        </DeathCustoms>
+        <DeathCustoms>
+            <ActorModel value=""/>
+            <ActorModelLow value=""/>
+            <AnimProps value=""/>
+            <ModelLink value="TerranSmallUnitDeathLow"/>
+            <SoundLink value=""/>
+            <VoiceLink value=""/>
+            <Name value="AntiGravTerran"/>
+            <PhysicsMatchKeysOrdered value=""/>
+            <InheritsFrom value=""/>
+            <IsAbstract value="0"/>
+        </DeathCustoms>
+        <DeathCustoms>
+            <ActorModel value=""/>
+            <ActorModelLow value=""/>
+            <AnimProps value=""/>
+            <ModelLink value="ZergSmallUnitDeathLow"/>
+            <SoundLink value=""/>
+            <VoiceLink value=""/>
+            <Name value="AntiGravZerg"/>
+            <PhysicsMatchKeysOrdered value=""/>
+            <InheritsFrom value=""/>
+            <IsAbstract value="0"/>
+        </DeathCustoms>
+        <DeathCustoms>
+            <ActorModel value=""/>
+            <ActorModelLow value=""/>
+            <AnimProps value=""/>
+            <ModelLink value="Invisible"/>
+            <SoundLink value=""/>
+            <VoiceLink value=""/>
+            <Name value="Vortex"/>
+            <PhysicsMatchKeysOrdered value=""/>
+            <InheritsFrom value=""/>
+            <IsAbstract value="0"/>
+        </DeathCustoms>
         <DeathActorModel value="UnitDeathModelWithDeathMotionGround"/>
         <PortraitModel value="UL_040Portrait"/>
-        <SoundArray index="Birth" value="UlyGeneral_Attack"/>
-        <SoundArray index="Ready" value="UlyGeneral_Ready"/>
-        <SoundArray index="Help" value="UlyGeneral_Help"/>
-        <SoundArray index="What" value="UlyGeneral_What"/>
-        <SoundArray index="Yes" value="UlyGeneral_Yes"/>
-        <SoundArray index="Attack" value="UlyGeneral_Attack"/>
-        <SoundArray index="Pissed" value="UlyGeneral_Pissed"/>
         <TerrainSquibs>
             <GroupName value="RippleStandard"/>
             <MovementDistance value="0.150000,0.150000"/>
@@ -7497,18 +7865,16 @@
             <Visuals TerrainPhysicsMaterial="Water" ActorModel="TerrainSquibHarnessContinuous" ModelLink="WaterRippleLarge"/>
         </TerrainSquibs>
         <WalkAnimMoveSpeed value="1.2187"/>
-        <BarOffset value="55"/>
-        <GroupIcon>
-            <Image value="Assets\Textures\Wireframe-UL_040.tga"/>
-        </GroupIcon>
-        <HeroIcon value="Assets\Textures\Wireframe-UL_040.tga"/>
-        <LifeArmorIcon value="Assets\Textures\btn-upgrade-zerg-groundcarapace-level0.dds"/>
-        <UnitIcon value="Assets\Textures\Wireframe-UL_040.tga"/>
-        <Wireframe>
-            <Image value="Assets\Textures\Wireframe-UL_040.tga"/>
-        </Wireframe>
         <WalkAnimTimeScalingAsFlyer value="1"/>
-        <Scale value="0.800000"/>
+        <BarOffset value="55"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-zerg-groundcarapace-level0.dds"/>
+        <SoundArray index="Birth" value="UlyGeneral_Attack"/>
+        <SoundArray index="Ready" value="UlyGeneral_Ready"/>
+        <SoundArray index="Help" value="UlyGeneral_Help"/>
+        <SoundArray index="What" value="UlyGeneral_What"/>
+        <SoundArray index="Yes" value="UlyGeneral_Yes"/>
+        <SoundArray index="Attack" value="UlyGeneral_Attack"/>
+        <SoundArray index="Pissed" value="UlyGeneral_Pissed"/>
     </CActorUnit>
     <CActorUnit id="SiegeTank">
         <Macros value="HerrscherCostructBasicMaterialRemoval"/>
@@ -7817,7 +8183,7 @@
         <SoundArray index="Pissed" value="UlyGeneral_Pissed"/>
     </CActorUnit>
     <CActorUnit id="Broodling">
-        <DeathArray index="Normal" ModelLink="BroodlingDeathMod"/>
+        <DeathArray index="Normal" ModelLink="UL_020Death"/>
         <DeathArray index="Disintegrate" ModelLink=""/>
         <DeathArray index="Fire" ModelLink=""/>
         <StatusColors index="Life">
@@ -8083,27 +8449,6 @@
         <Wireframe>
             <Image index="0" value="Assets\Textures\Wireframe-Q_UL_010.tga"/>
         </Wireframe>
-    </CActorUnit>
-    <CActorUnit id="Corruptor">
-        <Model value="UL_080"/>
-        <BuildModel value="UL_080"/>
-        <PlacementModel value="UL_080"/>
-        <DeathArray index="Normal" ModelLink="UL_080Death"/>
-        <GroupIcon>
-            <Image index="0" value="Assets\Textures\Wireframe-UL_080.tga"/>
-        </GroupIcon>
-        <HeroIcon value="Assets\Textures\Wireframe-UL_080.tga"/>
-        <UnitIcon value="Assets\Textures\Wireframe-UL_080.tga"/>
-        <Wireframe>
-            <Image index="0" value="Assets\Textures\Wireframe-UL_080.tga"/>
-        </Wireframe>
-        <DeathCustoms index="5" removed="1"/>
-        <DeathCustoms index="6" removed="1"/>
-        <DeathCustoms index="7" removed="1"/>
-        <DeathCustoms index="8" removed="1"/>
-        <DeathCustoms index="9" removed="1"/>
-        <DeathCustoms index="10" removed="1"/>
-        <DeathCustoms index="11" removed="1"/>
     </CActorUnit>
     <CActorLookAt id="CycloneLockOnTurretLookAt">
         <Types>
