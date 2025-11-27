@@ -659,6 +659,172 @@
         <HotkeyCategory value=""/>
         <AIEvaluateAlias value="AntiEntropyFactoryFlying"/>
     </CUnit>
+    <CUnit id="UL_020" parent="CUnitArmy">
+        <Race value="Zerg"/>
+        <FlagArray index="PreventDestroy" value="0"/>
+        <FlagArray index="NoScore" value="1"/>
+        <FlagArray index="AILifetime" value="1"/>
+        <FlagArray index="AcquireRally" value="0"/>
+        <PlaneArray index="Ground" value="1"/>
+        <Collide index="Ground" value="1"/>
+        <Collide index="ForceField" value="1"/>
+        <Collide index="Small" value="1"/>
+        <Attributes index="Armored" value="1"/>
+        <Attributes index="Biological" value="1"/>
+        <LifeStart value="50"/>
+        <LifeMax value="50"/>
+        <LifeRegenRate value="0.2734"/>
+        <LifeArmorName value="Unit/LifeArmorName/UlyssArmor"/>
+        <Speed value="4"/>
+        <Sight value="7"/>
+        <Food value="-1"/>
+        <CostResource index="Minerals" value="100"/>
+        <CostResource index="Vespene" value="25"/>
+        <AbilArray Link="UL_020LiftOff"/>
+        <BehaviorArray Link="HonkaiAttributeUl"/>
+        <BehaviorArray Link="UlBuff"/>
+        <WeaponArray Link="UL_020Weapon"/>
+        <CardLayouts index="0">
+            <LayoutButtons index="1" Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
+            <LayoutButtons index="2" Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="2"/>
+            <LayoutButtons index="3" Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+            <LayoutButtons index="4" Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
+            <LayoutButtons index="5" Face="UL_020LiftOff" Type="AbilCmd" AbilCmd="UL_020LiftOff,Execute" Row="2" Column="0"/>
+        </CardLayouts>
+        <Radius value="0.375"/>
+        <SeparationRadius value="0.375"/>
+        <InnerRadius value="0.375"/>
+        <SubgroupPriority value="14"/>
+        <MinimapRadius value="0.375"/>
+        <TacticalAIRange value="10"/>
+        <TacticalAIThink value="lib6D9D7845_gf_AIThinkUL_020"/>
+        <TacticalAIFilters value="Visible;Player,Ally,Neutral,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <HotkeyAlias value="Broodling"/>
+        <GlossaryCategory value="Unit/Category/ZergUnits"/>
+        <GlossaryPriority value="200"/>
+        <Fidget TurnAngle="90" TurningRate="90">
+            <ChanceArray index="Idle" value="100"/>
+            <ChanceArray index="Turn" value="0"/>
+        </Fidget>
+        <TauntDuration index="Cheer" value="0"/>
+        <TauntDuration index="Dance" value="0"/>
+    </CUnit>
+    <CUnit id="UL_020Fly" parent="CUnitArmy">
+        <Name value="Unit/Name/UL_020"/>
+        <Race value="Zerg"/>
+        <FlagArray index="PreventDestroy" value="0"/>
+        <FlagArray index="NoScore" value="1"/>
+        <FlagArray index="AILifetime" value="1"/>
+        <FlagArray index="AcquireRally" value="0"/>
+        <PlaneArray index="Air" value="1"/>
+        <Collide index="Flying" value="1"/>
+        <Attributes index="Armored" value="1"/>
+        <Attributes index="Biological" value="1"/>
+        <LifeStart value="50"/>
+        <LifeMax value="50"/>
+        <LifeRegenRate value="0.2734"/>
+        <LifeArmorName value="Unit/LifeArmorName/UlyssArmor"/>
+        <Mover value="Fly"/>
+        <Speed value="4"/>
+        <Acceleration value="3"/>
+        <Sight value="7"/>
+        <Height value="3.75"/>
+        <VisionHeight value="4"/>
+        <Food value="-1"/>
+        <CostResource index="Minerals" value="100"/>
+        <CostResource index="Vespene" value="25"/>
+        <AbilArray Link="UL_020Land"/>
+        <AbilArray Link="UL_020LandAttack"/>
+        <BehaviorArray Link="HonkaiAttributeUl"/>
+        <BehaviorArray Link="UlBuff"/>
+        <WeaponArray Link="UL_020WeaponFly"/>
+        <CardLayouts index="0">
+            <LayoutButtons index="1" Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
+            <LayoutButtons index="2" Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="2"/>
+            <LayoutButtons index="3" Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+            <LayoutButtons index="4" Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
+            <LayoutButtons index="5" Face="UL_020LandAttack" Type="AbilCmd" AbilCmd="UL_020LandAttack,Execute" Row="2" Column="0"/>
+        </CardLayouts>
+        <Radius value="0.375"/>
+        <SeparationRadius value="0.375"/>
+        <InnerRadius value="0.375"/>
+        <SubgroupPriority value="14"/>
+        <MinimapRadius value="0.375"/>
+        <HotkeyAlias value="Broodling"/>
+        <GlossaryCategory value="Unit/Category/ZergUnits"/>
+        <GlossaryPriority value="200"/>
+        <Fidget TurnAngle="90" TurningRate="90">
+            <ChanceArray index="Idle" value="100"/>
+            <ChanceArray index="Turn" value="0"/>
+        </Fidget>
+        <TauntDuration index="Cheer" value="0"/>
+        <TauntDuration index="Dance" value="0"/>
+    </CUnit>
+    <CUnit id="UL_080Weapon" parent="MISSILE">
+        <Race value="Zerg"/>
+        <Mover value="MissileDefault"/>
+        <EditorCategories value="ObjectType:Projectile,ObjectFamily:Melee"/>
+    </CUnit>
+    <CUnit id="UL_080">
+        <DeathTime value="30"/>
+        <DeathRevealRadius value="3"/>
+        <Race value="Zerg"/>
+        <Mob value="Multiplayer"/>
+        <FlagArray index="PreventDestroy" value="1"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <FlagArray index="ArmySelect" value="1"/>
+        <PlaneArray index="Air" value="1"/>
+        <Collide index="Flying" value="1"/>
+        <Attributes index="Armored" value="1"/>
+        <Attributes index="Biological" value="1"/>
+        <LifeStart value="200"/>
+        <LifeMax value="200"/>
+        <LifeArmor value="2"/>
+        <LifeRegenRate value="0.2734"/>
+        <LifeArmorName value="Unit/LifeArmorName/UlyssArmor"/>
+        <Mover value="Fly"/>
+        <Speed value="2.9531"/>
+        <Acceleration value="2.625"/>
+        <StationaryTurningRate value="999.8437"/>
+        <TurningRate value="999.8437"/>
+        <Sight value="10"/>
+        <Height value="3.75"/>
+        <VisionHeight value="4"/>
+        <Food value="-2"/>
+        <CostCategory value="Army"/>
+        <CostResource index="Minerals" value="150"/>
+        <CostResource index="Vespene" value="100"/>
+        <AttackTargetPriority value="20"/>
+        <DamageDealtXP value="1"/>
+        <DamageTakenXP value="1"/>
+        <KillXP value="70"/>
+        <AbilArray Link="stop"/>
+        <AbilArray Link="attack"/>
+        <AbilArray Link="move"/>
+        <BehaviorArray Link="HonkaiAttributeUl"/>
+        <BehaviorArray Link="UlBuff"/>
+        <WeaponArray Link="UL_080Weapon"/>
+        <CardLayouts>
+            <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
+            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
+            <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="2"/>
+            <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
+        </CardLayouts>
+        <Radius value="0.625"/>
+        <SeparationRadius value="0.625"/>
+        <ScoreMake value="250"/>
+        <ScoreKill value="250"/>
+        <ScoreResult value="BuildOrder"/>
+        <SubgroupPriority value="17"/>
+        <MinimapRadius value="0.625"/>
+        <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
+        <AIEvalFactor value="0.7"/>
+        <Mass value="0.6"/>
+        <GlossaryCategory value="Unit/Category/HonkaiUnits"/>
+        <GlossaryPriority value="140"/>
+        <HotkeyCategory value="Unit/Category/ZergUnits"/>
+    </CUnit>
     <CUnit id="RO_060Missile" parent="MISSILE_INVULNERABLE">
         <Race value="Terr"/>
         <EditorCategories value="ObjectType:Projectile,ObjectFamily:Melee"/>
@@ -2126,6 +2292,7 @@
         <BehaviorArray index="1" Link="HonkaiAttributeUl"/>
         <BehaviorArray Link="UlBuff"/>
         <DeathTime value="30"/>
+        <LifeArmorName value="Unit/LifeArmorName/UlyssArmor"/>
     </CUnit>
     <CUnit id="Barracks">
         <CardLayouts index="0">
@@ -2471,7 +2638,7 @@
         <LifeMax value="300"/>
         <LifeArmor value="2"/>
         <LifeRegenRate value="0.2734"/>
-        <LifeArmorName value="Unit/LifeArmorName/ZergGroundArmor"/>
+        <LifeArmorName value="Unit/LifeArmorName/UlyssArmor"/>
         <ShieldRegenDelay value="0"/>
         <Speed value="1.9101"/>
         <SpeedMultiplierCreep value="1.5"/>
@@ -2529,7 +2696,7 @@
         <LifeMax value="400"/>
         <LifeArmor value="3"/>
         <LifeRegenRate value="0.2734"/>
-        <LifeArmorName value="Unit/LifeArmorName/ZergGroundArmor"/>
+        <LifeArmorName value="Unit/LifeArmorName/UlyssArmor"/>
         <ShieldRegenDelay value="0"/>
         <Speed value="1.2187"/>
         <SpeedMultiplierCreep value="3"/>
@@ -2589,7 +2756,7 @@
         <LifeMax value="200"/>
         <LifeArmor value="1"/>
         <LifeRegenRate value="0.2734"/>
-        <LifeArmorName value="Unit/LifeArmorName/ZergAirArmor"/>
+        <LifeArmorName value="Unit/LifeArmorName/UlyssArmor"/>
         <EnergyStart value="100"/>
         <EnergyMax value="200"/>
         <EnergyRegenRate value="0.5625"/>
@@ -3590,6 +3757,7 @@
         <GlossaryWeakArray index="2" removed="1"/>
         <DeathTime value="30"/>
         <FlagArray index="AcquireRally" value="1"/>
+        <LifeArmorName value="Unit/LifeArmorName/UlyssArmor"/>
     </CUnit>
     <CUnit id="BroodLord">
         <BehaviorArray Link="HonkaiAttributeUl"/>
@@ -3609,23 +3777,6 @@
         <GlossaryCategory value="Unit/Category/HonkaiUnits"/>
         <DeathTime value="30"/>
         <Attributes index="Summoned" value="1"/>
-    </CUnit>
-    <CUnit id="Corruptor">
-        <BehaviorArray Link="HonkaiAttributeUl"/>
-        <BehaviorArray Link="UlBuff"/>
-        <GlossaryCategory value="Unit/Category/HonkaiUnits"/>
-        <GlossaryStrongArray index="0" removed="1"/>
-        <GlossaryStrongArray index="1" removed="1"/>
-        <GlossaryStrongArray index="2" removed="1"/>
-        <GlossaryWeakArray index="0" removed="1"/>
-        <GlossaryWeakArray index="1" removed="1"/>
-        <GlossaryWeakArray index="2" removed="1"/>
-        <DeathTime value="30"/>
-        <AbilArray index="0" Link="MorphToBroodLord"/>
-        <AbilArray index="1" Link="stop"/>
-        <AbilArray index="2" Link="attack"/>
-        <AbilArray index="3" Link="move"/>
-        <AbilArray index="4" removed="1"/>
     </CUnit>
     <CUnit id="CreepTumor">
         <CostResource index="Minerals" value="25"/>

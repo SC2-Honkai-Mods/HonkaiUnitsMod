@@ -4,6 +4,10 @@
         <WhichLocation Value="CasterUnit"/>
         <AreaArray Radius="10" Validator="TargetIsEnemy"/>
     </CValidatorLocationEnumArea>
+    <CValidatorUnitFilters id="CasterIsAlive">
+        <WhichUnit Value="Caster"/>
+        <Filters value="-;Dead"/>
+    </CValidatorUnitFilters>
     <CValidatorUnitType id="CasterIsKianaC1">
         <WhichUnit Value="Caster"/>
         <Value value="KianaC1"/>
@@ -95,6 +99,38 @@
         <CombineArray value="NotHiddenSelf"/>
         <CombineArray value="CasterInBunker"/>
     </CValidatorCombine>
+    <CValidatorLocationEnumArea id="EnermyFlyingWithin10ThreatenUL_020">
+        <WhichLocation Value="CasterUnit"/>
+        <AreaArray Radius="10" Validator="ThreatensUL_020"/>
+        <LaunchLocation Value="CasterUnit"/>
+        <SearchFilters value="Air;Player,Ally,Neutral,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+    </CValidatorLocationEnumArea>
+    <CValidatorLocationEnumArea id="NoEnermyFlyingWithin10">
+        <WhichLocation Value="CasterUnit"/>
+        <AreaArray Radius="10"/>
+        <Compare value="Eq"/>
+        <LaunchLocation Value="CasterUnit"/>
+        <SearchFilters value="Air;Player,Ally,Neutral,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+    </CValidatorLocationEnumArea>
+    <CValidatorLocationEnumArea id="EnermyGroundWithin10">
+        <WhichLocation Value="CasterUnit"/>
+        <AreaArray Radius="10"/>
+        <LaunchLocation Value="CasterUnit"/>
+        <SearchFilters value="Ground;Player,Ally,Neutral,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+    </CValidatorLocationEnumArea>
+    <CValidatorLocationEnumArea id="EnermyFlyingWithin10">
+        <WhichLocation Value="CasterUnit"/>
+        <AreaArray Radius="10"/>
+        <LaunchLocation Value="CasterUnit"/>
+        <SearchFilters value="Air;Player,Ally,Neutral,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+    </CValidatorLocationEnumArea>
+    <CValidatorLocationEnumArea id="NoEnermyGroundWithin10">
+        <WhichLocation Value="CasterUnit"/>
+        <AreaArray Radius="10"/>
+        <Compare value="Eq"/>
+        <LaunchLocation Value="CasterUnit"/>
+        <SearchFilters value="Ground;Player,Ally,Neutral,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+    </CValidatorLocationEnumArea>
     <CValidatorLocationEnumArea id="GroundEnermyWithinRange02">
         <WhichLocation Value="CasterUnit"/>
         <AreaArray Radius="0.2" Validator="TargetIsEnemyGroound"/>
@@ -218,6 +254,7 @@
         <Type value="And"/>
         <CombineArray value="SaNotBreakdown"/>
         <CombineArray value="TargetIsUnit"/>
+        <CombineArray value="CasterIsAlive"/>
     </CValidatorCombine>
     <CValidatorLocationEnumArea id="SaSearchNoFrontThreaten">
         <WhichLocation Value="CasterUnit"/>
@@ -247,6 +284,9 @@
         <LaunchLocation Value="CasterUnit"/>
         <SearchFilters value="Visible;Player,Ally,Neutral,Missile,Stasis,Dead,Hidden"/>
     </CValidatorLocationEnumArea>
+    <CValidatorUnitCompareAttackPriority id="ThreatensUL_020" parent="ThreatensUnit" unitLink="Baneling">
+        <AttackerAlternateType value="UL_020"/>
+    </CValidatorUnitCompareAttackPriority>
     <CValidatorCombine id="ThreatensSaAndBackward">
         <Type value="And"/>
         <CombineArray value="ThreatensSa"/>
@@ -404,6 +444,10 @@
     <CValidatorUnitCompareAttackPriority id="ThreatensSa" parent="ThreatensUnit" unitLink="Baneling">
         <AttackerAlternateType value="SaAfflication"/>
     </CValidatorUnitCompareAttackPriority>
+    <CValidatorCombine id="UL_020AutoLiftOff">
+        <CombineArray value="EnermyFlyingWithin10ThreatenUL_020"/>
+        <CombineArray value="NoEnermyGroundWithin10"/>
+    </CValidatorCombine>
     <CValidatorLocationPlacement id="UL_040CanPlace">
         <ResultFailed value="Error"/>
         <WhichLocation Value="TargetUnitOrPoint"/>

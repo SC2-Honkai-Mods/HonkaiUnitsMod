@@ -29,6 +29,103 @@
     <CEffectSet id="DropWeaponDummy">
         <EditorCategories value=""/>
     </CEffectSet>
+    <CEffectApplyBehavior id="NoCommandCaster">
+        <EditorCategories value=""/>
+        <Behavior value="NoCommand"/>
+    </CEffectApplyBehavior>
+    <CEffectRemoveBehavior id="NoCommandRemoveCaster">
+        <EditorCategories value=""/>
+        <WhichUnit Value="Caster"/>
+        <BehaviorLink value="NoCommand"/>
+    </CEffectRemoveBehavior>
+    <CEffectDamage id="UL_020AttackDamage" parent="DU_WEAP">
+        <Flags index="Impact" value="0"/>
+        <Amount value="6"/>
+        <ImpactLocation Value="SourcePoint"/>
+        <KindSplash value="Melee"/>
+        <AreaArray Arc="119.9926" Radius="0.875" Fraction="1"/>
+        <IncludeArray Value="Target"/>
+        <SearchFilters value="Ground,Visible;Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <SearchFlags index="ExtendByUnitRadius" value="1"/>
+    </CEffectDamage>
+    <CEffectDamage id="UL_020LandAttackDamage" parent="DU_WEAP">
+        <Flags index="Impact" value="0"/>
+        <Amount value="20"/>
+    </CEffectDamage>
+    <CEffectDamage id="UL_020AttackDamageAir" parent="DU_WEAP">
+        <ImpactLocation Value="SourcePoint"/>
+        <Flags index="Impact" value="0"/>
+        <KindSplash value="Melee"/>
+        <Amount value="6"/>
+        <AreaArray Arc="119.9926" Radius="0.875" Fraction="1"/>
+        <IncludeArray Value="Target"/>
+        <SearchFilters value="Air,Visible;Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <SearchFlags index="ExtendByUnitRadius" value="1"/>
+    </CEffectDamage>
+    <CEffectCreateUnit id="UL_020LandAttackCU">
+        <EditorCategories value=""/>
+        <WhichLocation Value="TargetPoint"/>
+        <CreateFlags index="Birth" value="0"/>
+        <CreateFlags index="PlacementIgnoreBlockers" value="1"/>
+        <CreateFlags index="Precursor" value="1"/>
+        <CreateFlags index="ProvideFood" value="0"/>
+        <CreateFlags index="TechComplete" value="0"/>
+        <CreateFlags index="UseFood" value="0"/>
+        <SpawnEffect value="UL_020LandAttackLM"/>
+        <SpawnUnit value="UL_020"/>
+        <SpawnRange value="3"/>
+    </CEffectCreateUnit>
+    <CEffectIssueOrder id="UL_020LandAttackIO">
+        <EditorCategories value=""/>
+        <WhichUnit Value="Source"/>
+        <Abil value="UL_020Land"/>
+        <Player Value="Source"/>
+    </CEffectIssueOrder>
+    <CEffectSet id="UL_020LandAttackLaunchSet">
+        <EditorCategories value=""/>
+        <EffectArray value="NoCommandCaster"/>
+        <EffectArray value="UL_020LandAttackIO"/>
+    </CEffectSet>
+    <CEffectLaunchMissile id="UL_020LandAttackLM">
+        <ValidatorArray index="0" removed="1"/>
+        <EditorCategories value=""/>
+        <LaunchEffect value="UL_020LandAttackLaunchSet"/>
+        <ImpactEffect value="UL_020LandAttackSearch"/>
+        <FinishEffect value="UL_020LandAttackEndSet"/>
+        <Movers Link="UL_020Launch"/>
+        <DeathType value="Unknown"/>
+    </CEffectLaunchMissile>
+    <CEffectSet id="UL_020LandAttackEndSet">
+        <EditorCategories value=""/>
+        <EffectArray value="NoCommandRemoveCaster"/>
+        <EffectArray value="KillRemove"/>
+    </CEffectSet>
+    <CEffectEnumArea id="UL_020LandAttackSearch">
+        <EditorCategories value=""/>
+        <LaunchLocation Value="CasterUnit"/>
+        <ImpactLocation Value="CasterPoint"/>
+        <SearchFilters value="Ground;Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <AreaArray Arc="180" Radius="0.875" Effect="UL_020LandAttackImpactSet"/>
+    </CEffectEnumArea>
+    <CEffectSet id="UL_020LandAttackImpactSet">
+        <EditorCategories value=""/>
+        <EffectArray value="ThrowSet"/>
+        <EffectArray value="UL_020LandAttackDamage"/>
+    </CEffectSet>
+    <CEffectDamage id="UL_080AttackDamage" parent="DU_WEAP_MISSILE">
+        <EditorCategories value="Race:Zerg"/>
+        <AttributeBonus index="Massive" value="6"/>
+        <Visibility value="Visible"/>
+        <Flags index="Impact" value="0"/>
+        <Amount value="10"/>
+        <Death value="Disintegrate"/>
+    </CEffectDamage>
+    <CEffectLaunchMissile id="UL_080AttackLM">
+        <ValidatorArray index="0" value="ParasiteSporeInfestMissileTargetFilters"/>
+        <EditorCategories value="Race:Zerg"/>
+        <ImpactEffect value="UL_080AttackDamage"/>
+        <AmmoUnit value="UL_080Weapon"/>
+    </CEffectLaunchMissile>
     <CEffectApplyBehavior id="RO_060BarrageCD">
         <EditorCategories value=""/>
     </CEffectApplyBehavior>
@@ -248,11 +345,11 @@
         <AmmoUnit value="LokiHurricaneMissileRight"/>
         <Movers Link="SwarmMissileMissile"/>
     </CEffectLaunchMissile>
-    <CEffectModifyUnit id="AddCasterLife50">
+    <CEffectModifyUnit id="AddCasterLife1500">
         <EditorCategories value=""/>
         <ImpactUnit Value="Caster"/>
         <VitalArray index="Life">
-            <ChangeFraction value="0.5"/>
+            <Change value="1500"/>
         </VitalArray>
     </CEffectModifyUnit>
     <CEffectApplyBehavior id="ForceDizzy10s">
@@ -6413,9 +6510,6 @@
         <PeriodicEffectArray value="WeaponB1ChargeSwitch"/>
         <PeriodicPeriodArray value="0.0625"/>
     </CEffectCreatePersistent>
-    <CEffectDamage id="ParasiteSporeDamage">
-        <Amount value="10"/>
-    </CEffectDamage>
     <CEffectDamage id="Herrscher2ndUltimateAttack" parent="DU_WEAP">
         <Kind value="Ranged"/>
         <KindSplash value="Ranged"/>

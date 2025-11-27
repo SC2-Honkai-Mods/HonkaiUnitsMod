@@ -15,6 +15,13 @@
         <EditorCategories value="AbilityorEffectType:Units"/>
         <MaxStackCount value="3"/>
     </CBehaviorBuff>
+    <CBehaviorBuff id="NoCommand">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Modification>
+            <StateFlags index="Uncommandable" value="1"/>
+        </Modification>
+    </CBehaviorBuff>
     <CBehaviorBuff id="RO_060Barrage">
         <EditorCategories value="AbilityorEffectType:Units"/>
         <Period value="0.3125"/>
@@ -983,7 +990,7 @@
         <DisplayDuration index="Enemy" value="1"/>
         <Period value="55"/>
         <PeriodCount value="1"/>
-        <PeriodicEffect value="AddCasterLife50"/>
+        <PeriodicEffect value="AddCasterLife1500"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="Protect50">
         <EditorCategories value="AbilityorEffectType:Units"/>
@@ -1118,7 +1125,7 @@
             <HeightTime index="Stop" value="3.5"/>
         </Modification>
     </CBehaviorBuff>
-    <CBehaviorBuff id="SaUltimateNoCommand">
+    <CBehaviorBuff id="NoSelection">
         <InfoFlags index="Hidden" value="1"/>
         <EditorCategories value="AbilityorEffectType:Units"/>
         <Modification>

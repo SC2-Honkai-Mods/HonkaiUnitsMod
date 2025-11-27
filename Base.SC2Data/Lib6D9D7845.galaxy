@@ -27,6 +27,7 @@ void lib6D9D7845_InitVariables () {
     lib6D9D7845_gv_globalE88BB1E99B84E5A48DE6B4BB = true;
     lib6D9D7845_gv_globalE79086E4B98BE5BE8BE88085E68A80E883BDE5898AE5BCB1 = true;
     lib6D9D7845_gv_globalE5BCB9E587BAE59CB0E59BBEE68F90E7A4BA = true;
+    lib6D9D7845_gv_globalE590AFE794A8E4BCA4E5AEB3E7BB93E7AE97E7B3BBE7BB9F = true;
     lib6D9D7845_gv_defaultLight = "HonkaiDefault";
     lib6D9D7845_gv_dPSDialog = c_invalidDialogId;
     lib6D9D7845_gv_dPSDialogItem = c_invalidDialogControlId;
@@ -60,21 +61,42 @@ void lib6D9D7845_InitVariables () {
 
 // Functions
 void lib6D9D7845_gf_AIThinkRO_010 (int lp_player, unit lp_caster, unitgroup lp_scanGroup) {
-    // Variable Declarations
-    unitgroup lv_enermies;
-    unit lv_closest;
-    point lv_point;
-    point lv_closestpoint;
-    fixed lv_i;
-    bool lv_passable;
-
     // Automatic Variable Declarations
-    // Variable Initialization
-    lv_enermies = lp_scanGroup;
-    lv_point = UnitGetPosition(lp_caster);
-
     // Implementation
     lib6D9D7845_gf_AIThinkCharge(lp_caster, lp_scanGroup, "RO_010Abli1", "Abil/RO_010Abli1");
+}
+
+void lib6D9D7845_gf_AIThinkUL_020 (int lp_player, unit lp_caster, unitgroup lp_scanGroup) {
+    // Variable Declarations
+    unit lv_u;
+    bool lv_haveGroundTarget;
+
+    // Automatic Variable Declarations
+    unitgroup autoD015CD74_g;
+    int autoD015CD74_u;
+
+    // Variable Initialization
+
+    // Implementation
+    autoD015CD74_g = lp_scanGroup;
+    autoD015CD74_u = UnitGroupCount(autoD015CD74_g, c_unitCountAll);
+    for (;; autoD015CD74_u -= 1) {
+        lv_u = UnitGroupUnitFromEnd(autoD015CD74_g, autoD015CD74_u);
+        if (lv_u == null) { break; }
+        if ((UnitFilterMatch(lv_u, lp_player, UnitFilter((1 << c_targetFilterAir), 0, (1 << c_targetFilterPlayer) | (1 << c_targetFilterAlly) | (1 << c_targetFilterNeutral) | (1 << c_targetFilterMissile), (1 << (c_targetFilterStasis - 32)) | (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32)) | (1 << (c_targetFilterInvulnerable - 32)))) == true) && (UnitCanAttackTarget(lv_u, lp_caster) == true)) {
+            libNtve_gf_AICast(lp_caster, Order(AbilityCommand("UL_020LiftOff", 0)));
+            return ;
+        }
+
+        if ((UnitFilterMatch(lv_u, lp_player, UnitFilter((1 << c_targetFilterGround), 0, (1 << c_targetFilterPlayer) | (1 << c_targetFilterAlly) | (1 << c_targetFilterNeutral) | (1 << c_targetFilterMissile), (1 << (c_targetFilterStasis - 32)) | (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32)) | (1 << (c_targetFilterInvulnerable - 32)))) == true)) {
+            lv_haveGroundTarget = true;
+        }
+
+    }
+    if ((lv_haveGroundTarget == false)) {
+        libNtve_gf_AICast(lp_caster, Order(AbilityCommand("UL_020LiftOff", 0)));
+    }
+
 }
 
 void lib6D9D7845_gf_AIThinkUL_030 (int lp_player, unit lp_caster, unitgroup lp_scanGroup) {
@@ -505,6 +527,7 @@ fixed lib6D9D7845_gf_E5A4B9E8A792C2B1180 (fixed lp_sorce, fixed lp_target) {
 bool lib6D9D7845_gf_E58581E8AEB8E8B083E8AF95 () {
     // Automatic Variable Declarations
     // Implementation
+    return true;
     return lib6D9D7845_gv_globalE8B083E8AF95E6A8A1E5BC8F;
 }
 
@@ -1358,7 +1381,7 @@ bool auto_lib6D9D7845_gf_SaUltimate_TriggerFunc (bool testConds, bool runActions
     for (;; auto7F1B537D_u -= 1) {
         auto7F1B537D_var = UnitGroupUnitFromEnd(auto7F1B537D_g, auto7F1B537D_u);
         if (auto7F1B537D_var == null) { break; }
-        UnitBehaviorAdd(auto7F1B537D_var, "SaUltimateNoCommand", lib6D9D7845_gv_sa, 1);
+        UnitBehaviorAdd(auto7F1B537D_var, "NoSelection", lib6D9D7845_gv_sa, 1);
     }
     auto4E89AAE1_g = lp_sas;
     auto4E89AAE1_u = UnitGroupCount(auto4E89AAE1_g, c_unitCountAll);
@@ -1419,7 +1442,7 @@ bool auto_lib6D9D7845_gf_SaUltimate_TriggerFunc (bool testConds, bool runActions
     for (;; auto3619BC68_u -= 1) {
         auto3619BC68_var = UnitGroupUnitFromEnd(auto3619BC68_g, auto3619BC68_u);
         if (auto3619BC68_var == null) { break; }
-        UnitBehaviorRemove(auto3619BC68_var, "SaUltimateNoCommand", 1);
+        UnitBehaviorRemove(auto3619BC68_var, "NoSelection", 1);
     }
     UnitBehaviorRemove(lib6D9D7845_gv_sa, "SaUltimateCeaseCore", 1);
     lib6D9D7845_gv_saUltimateCD = lib6D9D7845_gv_saUltimateCDValue;
@@ -2581,11 +2604,11 @@ bool lib6D9D7845_gt_DebugEffect_Func (bool testConds, bool runActions) {
     }
 
     TriggerDebugOutput(1, StringToText((EventPlayerEffectUsed())), true);
-    TriggerDebugOutput(1, (StringExternal("Param/Value/lib_6D9D7845_43833243") + UnitGetName(EventPlayerEffectUsedUnit(c_effectUnitSource))), true);
-    TriggerDebugOutput(1, (StringExternal("Param/Value/lib_6D9D7845_2CA07C08") + UnitGetName(EventPlayerEffectUsedUnit(c_effectUnitCaster))), true);
-    TriggerDebugOutput(1, (StringExternal("Param/Value/lib_6D9D7845_AC83FEED") + UnitGetName(EventPlayerEffectUsedUnit(c_effectUnitOrigin))), true);
-    TriggerDebugOutput(1, (StringExternal("Param/Value/lib_6D9D7845_4AA36070") + UnitGetName(EventPlayerEffectUsedUnit(c_effectUnitOuter))), true);
-    TriggerDebugOutput(1, (StringExternal("Param/Value/lib_6D9D7845_FF52F463") + UnitGetName(EventPlayerEffectUsedUnit(c_effectUnitTarget))), true);
+    TriggerDebugOutput(1, (StringExternal("Param/Value/lib_6D9D7845_636F3933") + UnitGetName(EventPlayerEffectUsedUnit(c_effectUnitSource)) + StringToText((UnitGetType(EventPlayerEffectUsedUnit(c_effectUnitSource))))), true);
+    TriggerDebugOutput(1, (StringExternal("Param/Value/lib_6D9D7845_64A791DA") + UnitGetName(EventPlayerEffectUsedUnit(c_effectUnitCaster)) + StringToText((UnitGetType(EventPlayerEffectUsedUnit(c_effectUnitCaster))))), true);
+    TriggerDebugOutput(1, (StringExternal("Param/Value/lib_6D9D7845_37613C10") + UnitGetName(EventPlayerEffectUsedUnit(c_effectUnitOrigin)) + StringToText((UnitGetType(EventPlayerEffectUsedUnit(c_effectUnitOrigin))))), true);
+    TriggerDebugOutput(1, (StringExternal("Param/Value/lib_6D9D7845_D86723C3") + UnitGetName(EventPlayerEffectUsedUnit(c_effectUnitOuter)) + StringToText((UnitGetType(EventPlayerEffectUsedUnit(c_effectUnitOuter))))), true);
+    TriggerDebugOutput(1, (StringExternal("Param/Value/lib_6D9D7845_C80EA67B") + UnitGetName(EventPlayerEffectUsedUnit(c_effectUnitTarget)) + StringToText((UnitGetType(EventPlayerEffectUsedUnit(c_effectUnitTarget))))), true);
     PlayerCreateEffectPoint(1, "DEBUGPOINT", EventPlayerEffectUsedPoint(c_effectLocationTargetPoint));
     return false;
     return true;
@@ -2889,6 +2912,7 @@ bool lib6D9D7845_gt_E7A791E68A80E4BD9CE5BC8A_Func (bool testConds, bool runActio
     GameCheatAllow(c_gameCheatMinerals, true);
     GameCheatAllow(c_gameCheatVespene, true);
     GameCheatAllow(c_gameCheatFood, true);
+    TechTreeRequirementsEnable(1, true);
     return true;
 }
 
@@ -3059,6 +3083,9 @@ bool lib6D9D7845_gt_E58D95E4BD8DE6B58BE8AF95E7949FE68890_Func (bool testConds, b
     else if (auto773EE29B_val == "HPR") {
         lv_e58D95E4BD8D = "HonkaiHyperion";
     }
+    else if (auto773EE29B_val == "UL_020") {
+        lv_e58D95E4BD8D = "UL_020";
+    }
     else if (auto773EE29B_val == "UL_030") {
         lv_e58D95E4BD8D = "UL_030";
     }
@@ -3066,7 +3093,7 @@ bool lib6D9D7845_gt_E58D95E4BD8DE6B58BE8AF95E7949FE68890_Func (bool testConds, b
         lv_e58D95E4BD8D = "UL_040";
     }
     else if (auto773EE29B_val == "UL_080") {
-        lv_e58D95E4BD8D = "Corruptor";
+        lv_e58D95E4BD8D = "UL_080";
     }
     else if (auto773EE29B_val == "UL_100") {
         lv_e58D95E4BD8D = "UL_100";
@@ -6207,9 +6234,9 @@ void lib6D9D7845_gt_E9BB91E6B49E_Init () {
 }
 
 //--------------------------------------------------------------------------------------------------
-// Trigger: ????????????????????????
+// Trigger: Evade Target Lost
 //--------------------------------------------------------------------------------------------------
-bool lib6D9D7845_gt_E997AAE981BFE68A80E883BDE79BAEE6A087E8BDACE7A7BB_Func (bool testConds, bool runActions) {
+bool lib6D9D7845_gt_EvadeTargetLost_Func (bool testConds, bool runActions) {
     // Variable Declarations
     unit lv_e9878DE5AE9AE59091E58D95E4BD8D;
 
@@ -6244,9 +6271,9 @@ bool lib6D9D7845_gt_E997AAE981BFE68A80E883BDE79BAEE6A087E8BDACE7A7BB_Func (bool 
 }
 
 //--------------------------------------------------------------------------------------------------
-void lib6D9D7845_gt_E997AAE981BFE68A80E883BDE79BAEE6A087E8BDACE7A7BB_Init () {
-    lib6D9D7845_gt_E997AAE981BFE68A80E883BDE79BAEE6A087E8BDACE7A7BB = TriggerCreate("lib6D9D7845_gt_E997AAE981BFE68A80E883BDE79BAEE6A087E8BDACE7A7BB_Func");
-    TriggerAddEventUnitCreated(lib6D9D7845_gt_E997AAE981BFE68A80E883BDE79BAEE6A087E8BDACE7A7BB, null, null, null);
+void lib6D9D7845_gt_EvadeTargetLost_Init () {
+    lib6D9D7845_gt_EvadeTargetLost = TriggerCreate("lib6D9D7845_gt_EvadeTargetLost_Func");
+    TriggerAddEventUnitCreated(lib6D9D7845_gt_EvadeTargetLost, null, null, null);
 }
 
 //--------------------------------------------------------------------------------------------------
@@ -8189,6 +8216,10 @@ bool lib6D9D7845_gt_E6B7BBE58AA0E4BCA4E5AEB3E7BB93E7AE97E599A8_Func (bool testCo
     // Automatic Variable Declarations
     // Conditions
     if (testConds) {
+        if (!((lib6D9D7845_gv_globalE590AFE794A8E4BCA4E5AEB3E7BB93E7AE97E7B3BBE7BB9F == true))) {
+            return false;
+        }
+
         if (!((UnitFilterMatch(EventUnitCreatedUnit(), 0, UnitFilter(0, 0, (1 << c_targetFilterUser1), 0)) == true))) {
             return false;
         }
@@ -8225,6 +8256,13 @@ bool lib6D9D7845_gt_E6B7BBE58AA0E4BCA4E5AEB3E7BB93E7AE97E599A82_Func (bool testC
 
     // Variable Initialization
 
+    // Conditions
+    if (testConds) {
+        if (!((lib6D9D7845_gv_globalE590AFE794A8E4BCA4E5AEB3E7BB93E7AE97E7B3BBE7BB9F == true))) {
+            return false;
+        }
+    }
+
     // Actions
     if (!runActions) {
         return true;
@@ -8245,7 +8283,7 @@ bool lib6D9D7845_gt_E6B7BBE58AA0E4BCA4E5AEB3E7BB93E7AE97E599A82_Func (bool testC
 //--------------------------------------------------------------------------------------------------
 void lib6D9D7845_gt_E6B7BBE58AA0E4BCA4E5AEB3E7BB93E7AE97E599A82_Init () {
     lib6D9D7845_gt_E6B7BBE58AA0E4BCA4E5AEB3E7BB93E7AE97E599A82 = TriggerCreate("lib6D9D7845_gt_E6B7BBE58AA0E4BCA4E5AEB3E7BB93E7AE97E599A82_Func");
-    TriggerAddEventMapInit(lib6D9D7845_gt_E6B7BBE58AA0E4BCA4E5AEB3E7BB93E7AE97E599A82);
+    TriggerAddEventTimeElapsed(lib6D9D7845_gt_E6B7BBE58AA0E4BCA4E5AEB3E7BB93E7AE97E599A82, 0.0625, c_timeGame);
 }
 
 //--------------------------------------------------------------------------------------------------
@@ -8620,7 +8658,7 @@ bool lib6D9D7845_gt_E8BDACE58F98E4B8BAE6ADBBE5A3AB_Func (bool testConds, bool ru
 
     // Conditions
     if (testConds) {
-        if (!(((UnitGetType(EventUnit()) == "SCV") || (UnitGetType(EventUnit()) == "Marine") || (UnitGetType(EventUnit()) == "Marauder") || (UnitGetType(EventUnit()) == "Marine")))) {
+        if (!(((UnitGetType(EventUnit()) == "SCV") || (UnitGetType(EventUnit()) == "Valkyrja2") || (UnitGetType(EventUnit()) == "Valkyrja3")))) {
             return false;
         }
 
@@ -8634,14 +8672,7 @@ bool lib6D9D7845_gt_E8BDACE58F98E4B8BAE6ADBBE5A3AB_Func (bool testConds, bool ru
         return true;
     }
 
-    UnitGroupAddUnitGroup(lv_e88F8CE6AFAFE6BA90, UnitGroup("CreepTumor", c_playerAny, RegionEntireMap(), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0));
-    UnitGroupAddUnitGroup(lv_e88F8CE6AFAFE6BA90, UnitGroup("CreepTumorBurrowed", c_playerAny, RegionEntireMap(), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0));
-    UnitGroupAddUnitGroup(lv_e88F8CE6AFAFE6BA90, UnitGroup("Hatchery", c_playerAny, RegionEntireMap(), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0));
-    UnitGroupAddUnitGroup(lv_e88F8CE6AFAFE6BA90, UnitGroup("HonkaiHatchery", c_playerAny, RegionEntireMap(), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0));
-    UnitGroupAddUnitGroup(lv_e88F8CE6AFAFE6BA90, UnitGroup("Lair", c_playerAny, RegionEntireMap(), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0));
-    UnitGroupAddUnitGroup(lv_e88F8CE6AFAFE6BA90, UnitGroup("Hive", c_playerAny, RegionEntireMap(), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0));
-    UnitGroupAddUnitGroup(lv_e88F8CE6AFAFE6BA90, UnitGroup("NydusCanal", c_playerAny, RegionEntireMap(), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0));
-    lv_e88F8CE6AFAFE78EA9E5AEB6 = UnitGetOwner(UnitGroupClosestToPoint(lv_e88F8CE6AFAFE6BA90, lv_e4BD8DE7BDAE));
+    lv_e88F8CE6AFAFE78EA9E5AEB6 = 15;
     Wait(3.5, c_timeGame);
     if ((UnitGetType(EventUnit()) == "SCV")) {
         UnitCreate(1, "DG_010", 0, lv_e88F8CE6AFAFE78EA9E5AEB6, lv_e4BD8DE7BDAE, lv_e8A792E5BAA6);
@@ -8904,7 +8935,7 @@ void lib6D9D7845_InitTriggers () {
     lib6D9D7845_gt_E5B9BBE5A283_Init();
     lib6D9D7845_gt_E5B9BBE5A283E98089E68BA9_Init();
     lib6D9D7845_gt_E9BB91E6B49E_Init();
-    lib6D9D7845_gt_E997AAE981BFE68A80E883BDE79BAEE6A087E8BDACE7A7BB_Init();
+    lib6D9D7845_gt_EvadeTargetLost_Init();
     lib6D9D7845_gt_E997AAE78EB0E8A1A5E4B881_Init();
     lib6D9D7845_gt_E5A5B3E6ADA6E7A59EE58585E883BD_Init();
     lib6D9D7845_gt_E997AAE981BFE99FB3E69588E9A286E59F9FE8A385C2B7E799BDE7BB83_Init();
