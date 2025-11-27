@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CMoverMissile id="UL_020Launch">
+        <MotionPhases>
+            <Driver value="Guidance"/>
+            <Acceleration value="20"/>
+            <MaxSpeed value="40"/>
+            <YawPitchRoll value="MAX"/>
+        </MotionPhases>
+        <Flags index="RestoreHeight" value="1"/>
+        <Flags index="IgnoreNoFlyZones" value="1"/>
+        <RestoreHeightDuration value="0"/>
+    </CMoverMissile>
     <CMoverMissile id="RO_060Missile">
         <MotionPhases>
             <Driver value="Guidance"/>

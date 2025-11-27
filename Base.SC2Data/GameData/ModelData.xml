@@ -153,6 +153,21 @@
         <SquibTypeDefault value="Flesh"/>
         <UnitGlossaryCamera value="Star2CameraMid04"/>
     </CModel>
+    <CModel id="UL_020" parent="BroodlingBase">
+        <Model value="Assets\Models\UL_020\UL_020.m3"/>
+    </CModel>
+    <CModel id="UL_020Portrait" parent="BroodlingPortraitBase">
+        <Model value="Assets\Models\UL_020_portrait\UL_020_portrait.m3"/>
+        <Image value="Assets\Textures\SymbiotePortrait_Static.dds"/>
+    </CModel>
+    <CModel id="UL_080Portrait" parent="Portrait" Race="Zerg">
+        <Model value="Assets\Models\UL_080_portrait\UL_080_portrait.m3"/>
+        <Lighting value="CorruptorPortrait"/>
+    </CModel>
+    <CModel id="UL_080Weapon" parent="MissileFX">
+        <Model value="Assets\Models\UL_080_bullet\UL_080_bullet.m3"/>
+        <EditorCategories value="Race:Zerg"/>
+    </CModel>
     <CModel id="RO_060Missile" parent="MissileFX">
         <Model value="Assets\Effects\Terran\PlasmaBurst_Missile\PlasmaBurst_Missile.m3"/>
     </CModel>
@@ -1497,7 +1512,7 @@
     <CModel id="Broodling">
         <Model value="Assets\Models\UL_020\UL_020.m3"/>
     </CModel>
-    <CModel id="BroodlingDeathMod" parent="BroodlingDeathBase">
+    <CModel id="UL_020Death" parent="BroodlingDeathBase">
         <Model value="Assets\Models\UL_020_death\UL_020_death.m3"/>
     </CModel>
     <CModel id="BroodlingEscort">
@@ -2024,9 +2039,6 @@
     </CModel>
     <CModel id="HonkaiDizzyImpactModel" parent="PersistentSpellFX">
         <Model value="Assets\Models\Honkai_Dizzy\Honkai_Dizzy.m3"/>
-    </CModel>
-    <CModel id="ParasiteSporeWeapon">
-        <Model value="Assets\Models\UL_080_bullet\UL_080_bullet.m3"/>
     </CModel>
     <CModel id="HighTowerDeath" parent="EngineeringBayDeathBase">
         <Model value="Assets\Models\Powerup_death\Powerup_death.m3"/>

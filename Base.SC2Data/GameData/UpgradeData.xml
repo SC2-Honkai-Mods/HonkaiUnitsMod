@@ -726,7 +726,7 @@
         <EffectArray Reference="Unit,BanelingBurrowed,LifeArmorLevel" Value="1"/>
         <EffectArray Reference="Unit,Zergling,LifeArmorLevel" Value="1"/>
         <EffectArray Reference="Unit,ZerglingBurrowed,LifeArmorLevel" Value="1"/>
-        <EffectArray Reference="Unit,Corruptor,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,UL_080,LifeArmorLevel" Value="1"/>
         <EffectArray Reference="Unit,UL_100,LifeArmorLevel" Value="1"/>
         <EffectArray Reference="Unit,UL_040,LifeArmorLevel" Value="1"/>
         <EffectArray Reference="Unit,LurkerMPBurrowed,LifeArmorLevel" Value="1"/>
@@ -797,11 +797,10 @@
         <EffectArray Reference="Weapon,UL_030Weapon,Level" Value="1"/>
         <EffectArray Reference="Weapon,UL_040Weapon,Level" Value="1"/>
         <EffectArray Reference="Weapon,AcidSaliva,Level" Value="1"/>
-        <EffectArray Reference="Weapon,ParasiteSpore,Level" Value="1"/>
+        <EffectArray Reference="Weapon,UL_080Weapon,Level" Value="1"/>
         <EffectArray Reference="Weapon,LurkerMP,Level" Value="1"/>
         <EffectArray Reference="Weapon,NeedleSpines,Level" Value="1"/>
         <EffectArray Reference="Weapon,SplitBomb,Level" Value="1"/>
-        <EffectArray Reference="Weapon,RavagerWeapon,Level" Value="1"/>
         <EffectArray Reference="Weapon,KaiserBlades,Level" Value="1"/>
         <MaxLevel value="10"/>
     </CUpgrade>
