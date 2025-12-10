@@ -257,6 +257,142 @@
         <SoundArray index="ClickError" value=""/>
         <SoundArray index="Highlight" value=""/>
     </CActorUnit>
+    <CActorUnit id="MeiC5" parent="CActorUnitWithIcon" unitName="MeiC5">
+        <Aliases value="_UnitSmall"/>
+        <Macros value="UnloadDropAnim"/>
+        <Macros value="PhysicsDeathsSwarmGround"/>
+        <Macros value="TerrainSquibAnimationsComplete"/>
+        <Macros value="PhysicsDeathsVoidGround"/>
+        <Macros value="KatanaWeaponSkills"/>
+        <Macros value="DizzyAnim"/>
+        <Macros value="ThrowAnimation2"/>
+        <On index="65" Terms="Abil.attack.ReadyStop" Send="AnimGroupRemove Ready"/>
+        <On index="66" Terms="UnitMovementUpdate.*.Walk" Send="AnimClear Attack"/>
+        <On index="67" Terms="WeaponStart.MeiC2Attack1.AttackStart" Send="AnimPlay Attack Attack,01 0 -1.000000 -1.000000 1.000000 AsTimeScale 0.000000 5"/>
+        <On index="68" Terms="WeaponStart.MeiC2Attack2.AttackStart" Send="AnimPlay Attack Attack,02 0 -1.000000 -1.000000 1.000000 AsTimeScale 0.000000 5"/>
+        <On Terms="WeaponStart.MeiC2Attack3.AttackStart" Send="AnimPlay Attack Attack,03 0 -1.000000 -1.000000 1.000000 AsTimeScale 0.000000 5"/>
+        <On Terms="WeaponStart.MeiC2Attack4.AttackStart" Send="AnimPlay Attack Attack,04 0 -1.000000 -1.000000 1.000000 AsTimeScale 0.000000 5"/>
+        <On Terms="WeaponStart.MeiC2Attack5.AttackStart" Send="AnimPlay Attack Attack,05 0 -1.000000 -1.000000 1.000000 AsTimeScale 0.000000 5"/>
+        <On Terms="Abil.MeiC2EvadeMoving.SourceCastStart" Send="AnimBracketStop Walk Instant"/>
+        <On Terms="Abil.MeiC2EvadeMoving.SourceCastStart" Send="AnimPlay Attack Blink,02 0 -1.000000 -1.000000 1.000000 AsTimeScale 0.000000 60"/>
+        <On Terms="Abil.MeiC2EvadeIdle.SourceCastStart" Send="AnimPlay Attack Blink,01 0 -1.000000 -1.000000 1.000000 AsTimeScale 0.000000 60"/>
+        <On Terms="AbilMorph.*.Finish; MorphFrom MeiC2" Send="Destroy"/>
+        <On Terms="AbilMorph.*.Finish; MorphTo MeiC2" Send="Create"/>
+        <On Terms="ActorCreation" Send="ModelSwap MeiC2 255 PredecessorDestroyImmediate,PreventAllDynamicTextureTransfers"/>
+        <On Terms="WeaponStart.*.AttackStart" Send="AnimBracketClear Walk Instant"/>
+        <On Terms="Abil.MeiC2Branch.SourceCastStart" Send="AnimPlay Attack Attack,06 0 -1.000000 -1.000000 1.000000 AsTimeScale 0.000000 100"/>
+        <On Terms="AnimDone; AnimName Attack" Send="AnimBracketStart StandReady {} Stand,Ready Stand,Ready,End"/>
+        <On Terms="AnimPlay; AnimName Attack" Send="AnimBracketClear StandReady Instant"/>
+        <On Terms="AnimDone; AnimName Attack" Send="TimerSet 6.000000,1.000000 StandReadyEnd"/>
+        <On Terms="AnimPlay; AnimName Attack" Send="TimerKill StandReadyEnd"/>
+        <On Terms="TimerExpired; TimerName StandReadyEnd" Send="AnimBracketClear StandReady"/>
+        <On Terms="Abil.MeiC2Ult.SourcePrepStart" Send="AnimPlay Attack Spell FullMatch -1.000000 -1.000000 1.000000 AsTimeScale 0.000000 90"/>
+        <On Terms="Abil.MeiC2Ult.SourceFinishStop" Send="AnimClear Attack"/>
+        <On Terms="Effect.MeiC2Branch2.Start" Send="AnimSetTime Attack 0.250000 Scaled"/>
+        <EventDataSound Name="MeiAttackLight" Sound="MeiAttackLight"/>
+        <EventDataSound Name="MeiAttackHeavy" Sound="MeiAttackHeavy"/>
+        <EventDataSound Name="MeiHit" Sound="MeiHit"/>
+        <DeathArray index="Normal" SoundLink="Marine_DeathFXBloodSpray" VoiceLink="Mei_Death"/>
+        <DeathArray index="Disintegrate" SoundLink="Uni_DeathFXAcid"/>
+        <DeathArray index="Eat" AnimProps="Stand" SoundLink="Marine_DeathFXEat"/>
+        <DeathArray index="Eviscerate" SoundLink="Marine_DeathFXEviscerate"/>
+        <DeathArray index="Fire" SoundLink="Marine_DeathFXFire"/>
+        <DeathArray index="Silentkill" SoundLink="Uni_DeathFXSilentKill"/>
+        <DeathArray index="Squish" SoundLink="Marine_DeathFXBloodSpray"/>
+        <DeathCustoms>
+            <ActorModel value=""/>
+            <ActorModelLow value=""/>
+            <AnimProps value=""/>
+            <ModelLink value="ZergSmallUnitDeathLow"/>
+            <SoundLink value=""/>
+            <VoiceLink value=""/>
+            <Name value="AntiGravGeneric"/>
+            <PhysicsMatchKeysOrdered value=""/>
+            <InheritsFrom value=""/>
+            <IsAbstract value="0"/>
+        </DeathCustoms>
+        <DeathCustoms>
+            <ActorModel value=""/>
+            <ActorModelLow value=""/>
+            <AnimProps value=""/>
+            <ModelLink value="ProtossSmallUnitDeathLow"/>
+            <SoundLink value=""/>
+            <VoiceLink value=""/>
+            <Name value="AntiGravProtoss"/>
+            <PhysicsMatchKeysOrdered value=""/>
+            <InheritsFrom value=""/>
+            <IsAbstract value="0"/>
+        </DeathCustoms>
+        <DeathCustoms>
+            <ActorModel value=""/>
+            <ActorModelLow value=""/>
+            <AnimProps value=""/>
+            <ModelLink value="TerranSmallUnitDeathLow"/>
+            <SoundLink value=""/>
+            <VoiceLink value=""/>
+            <Name value="AntiGravTerran"/>
+            <PhysicsMatchKeysOrdered value=""/>
+            <InheritsFrom value=""/>
+            <IsAbstract value="0"/>
+        </DeathCustoms>
+        <DeathCustoms>
+            <ActorModel value=""/>
+            <ActorModelLow value=""/>
+            <AnimProps value=""/>
+            <ModelLink value="ZergSmallUnitDeathLow"/>
+            <SoundLink value=""/>
+            <VoiceLink value=""/>
+            <Name value="AntiGravZerg"/>
+            <PhysicsMatchKeysOrdered value=""/>
+            <InheritsFrom value=""/>
+            <IsAbstract value="0"/>
+        </DeathCustoms>
+        <DeathCustoms>
+            <ActorModel value=""/>
+            <ActorModelLow value=""/>
+            <AnimProps value=""/>
+            <ModelLink value="Invisible"/>
+            <SoundLink value=""/>
+            <VoiceLink value=""/>
+            <Name value="Vortex"/>
+            <PhysicsMatchKeysOrdered value=""/>
+            <InheritsFrom value=""/>
+            <IsAbstract value="0"/>
+        </DeathCustoms>
+        <DeathActorModel value="UnitDeathModelWithDeathMotionGround"/>
+        <PortraitActor value="SeeleC1Portrait"/>
+        <PortraitModel value="MeiC5Portrait"/>
+        <StandAnimTurnTime value="4"/>
+        <TerrainSquibs>
+            <MovementDistance value="0.150000,0.150000"/>
+            <IdlePeriod value="0.100000,0.250000"/>
+            <RangeUp value="0.600000"/>
+            <RangeDown value="0.600000"/>
+            <AttachQuery Methods="AMFilterCenter"/>
+            <Visuals TerrainPhysicsMaterial="Water" ActorModel="TerrainSquibHarnessContinuous" ModelLink="WaterRippleSmall"/>
+        </TerrainSquibs>
+        <WalkAnimMoveSpeed value="5"/>
+        <BarOffset value="65"/>
+        <BarWidth value="36"/>
+        <GlossaryAnim value="Spell"/>
+        <GroupIcon>
+            <Image index="0" value="Assets\Textures\Wireframe-MeiC2.tga"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\Wireframe-MeiC2.tga"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel0.dds"/>
+        <StatusBarFlags index="Shields" value="0"/>
+        <StatusBarFlags index="Life" value="0"/>
+        <StatusBarFlags index="Energy" value="0"/>
+        <StatusBarFlags index="Cargo" value="0"/>
+        <StatusBarFlags index="Magazine" value="0"/>
+        <StatusBarFlags index="Workers" value="0"/>
+        <StatusBarFlags index="Custom" value="0"/>
+        <StatusBarOn index="Custom" value="1"/>
+        <UnitIcon value="Assets\Textures\Wireframe-MeiC2.tga"/>
+        <Wireframe>
+            <Image index="0" value="Assets\Textures\Wireframe-MeiC2.tga"/>
+        </Wireframe>
+    </CActorUnit>
     <CActorAction id="UL_020FlyAttack" parent="GenericAttack" effectAttack="UL_020AttackDamageAir">
         <ImpactMap index="None" Sound="Broodling_AttackImpact"/>
         <ShieldFlashType value="Header"/>
@@ -9291,6 +9427,19 @@
         <On Terms="Behavior.MeiC2Blade.Off" Send="Destroy"/>
         <HostSiteOps Ops="SOpAttachWeapon"/>
     </CActorModel>
+    <CActorUnit id="WeaponM13" parent="GenericUnitStandardNoAutoSoundLinks" unitName="WeaponM13">
+        <On Terms="ActorCreation" Send="Create WeaponKatanaAttachM13"/>
+        <Model value="KatanaDisplayModel"/>
+        <BuildModel value="KatanaDisplayModel"/>
+        <PlacementModel value="KatanaDisplayModel"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Katana_M13.tga"/>
+        </GroupIcon>
+        <UnitIcon value="Assets\Textures\Katana_M13.tga"/>
+        <Wireframe>
+            <Image value="Assets\Textures\Katana_M13.tga"/>
+        </Wireframe>
+    </CActorUnit>
     <CActorEventMacro id="WeaponPistolAttach" unitName="">
         <On Terms="Signal.*.Hide" Send="SetVisibility"/>
         <On Terms="Signal.*.Show" Send="SetVisibility 1"/>
@@ -9352,6 +9501,12 @@
     <CActorModel id="WeaponPistolAttachK23" parent="ModelAddition" unitName="">
         <HostSiteOps Ops="SOpAttachTarget"/>
         <Model value="WeaponK23"/>
+        <Scale value="2.500000"/>
+        <ModelFlags index="AllowHitTest" value="0"/>
+    </CActorModel>
+    <CActorModel id="WeaponKatanaAttachM13" parent="ModelAddition" unitName="">
+        <HostSiteOps Ops="SOpAttachTarget"/>
+        <Model value="WeaponM13"/>
         <Scale value="2.500000"/>
         <ModelFlags index="AllowHitTest" value="0"/>
     </CActorModel>
@@ -9729,7 +9884,7 @@
         <Scale value="1.500000,1.500000,1.000000"/>
     </CActorSplat>
     <CActorRange id="HonkaiNukeRange" parent="RangeAbil">
-        <Range value="50.000000"/>
+        <Range value="60.000000"/>
         <Icon value="Assets\Textures\RadarIcon2.dds"/>
         <IconArcLength value="3.250000"/>
         <RangeFlags index="Minimap" value="1"/>

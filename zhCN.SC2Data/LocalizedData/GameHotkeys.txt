@@ -266,6 +266,7 @@ Button/Hotkey/TrainKianaC1=E
 Button/Hotkey/TrainKianaC2=Q
 Button/Hotkey/TrainKianaC4=W
 Button/Hotkey/TrainMeiC2=Q
+Button/Hotkey/TrainMeiC5=Q
 Button/Hotkey/TrainSeeleC1=Q
 Button/Hotkey/Transfusion2=T
 Button/Hotkey/TurretArmorUpgrade=W

@@ -11,4 +11,15 @@
         <ModelHeight value="1"/>
         <ModelWidth value="5"/>
     </CItemContainer>
+    <CItemContainer id="WeaponKatanaSlot">
+        <ModelHeight value="1"/>
+        <ModelWidth value="5"/>
+        <Slots>
+            <EmptyFace value="WeaponKatanaSlot"/>
+            <Equip value="1"/>
+            <Row value="1"/>
+            <Column value="1"/>
+            <Classes value="Dagger"/>
+        </Slots>
+    </CItemContainer>
 </Catalog>

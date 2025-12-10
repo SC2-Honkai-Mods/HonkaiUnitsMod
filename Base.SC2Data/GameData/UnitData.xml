@@ -408,11 +408,27 @@
             <Name value="Text/Weapon/ATTACK"/>
             <Weapon value="KianaATTACK"/>
         </EquipmentArray>
-        <ReviveInfoBase>
-            <Charge Link="CUnitKiana/Revive"/>
-            <Cooldown Link="CUnitKiana/Revive"/>
-        </ReviveInfoBase>
         <LeaderAlias value="KianaC2"/>
+    </CUnit>
+    <CUnit default="1" id="CUnitMei" parent="CUnitValkyrja">
+        <Speed value="4.1015"/>
+        <AbilArray Link="MorphToMeiC2"/>
+        <AbilArray Link="MorphToMeiC5"/>
+        <AbilArray Link="KatanaInventory"/>
+        <AbilArray Link="BuyWeaponKatana"/>
+        <BehaviorArray Link="Couple"/>
+        <BehaviorArray Link="CoupleMei"/>
+        <CardLayouts index="7" CardId="Avat">
+            <LayoutButtons Face="TrainMeiC2" Type="AbilCmd" AbilCmd="MorphToMeiC2,Execute" Row="0" Column="0"/>
+            <LayoutButtons Face="TrainMeiC4" Type="AbilCmd" AbilCmd="MorphToMeiC4,Execute" Row="0" Column="1"/>
+        </CardLayouts>
+        <LeaderAlias value="MeiC2"/>
+        <EquipmentArray>
+            <Effect value="MeiATTACK"/>
+            <Icon value="Assets\Textures\Pistol_K1.tga"/>
+            <Name value="Text/Weapon/ATTACK"/>
+            <Weapon value="MeiATTACK"/>
+        </EquipmentArray>
     </CUnit>
     <CUnit default="1" id="CUnitBronya" parent="CUnitValkyrja">
         <AbilArray Link="MorphToBronyaC2"/>
@@ -658,6 +674,54 @@
         <GlossaryAlias value="Factory"/>
         <HotkeyCategory value=""/>
         <AIEvaluateAlias value="AntiEntropyFactoryFlying"/>
+    </CUnit>
+    <CUnit id="MeiC5" parent="CUnitMei">
+        <UserTag value="HonkaiText/MeiC5"/>
+        <EnergyStart value="50"/>
+        <EnergyMax value="100"/>
+        <AbilArray Link="MeiC2EvadeIdle"/>
+        <AbilArray Link="MeiC2EvadeMoving"/>
+        <AbilArray Link="MeiC2Branch"/>
+        <AbilArray Link="MeiC2Ult"/>
+        <BehaviorArray Link="HonkaiAttributeUl"/>
+        <BehaviorArray Link="MeiC5Attack1"/>
+        <WeaponArray Link="MeiC5Attack1"/>
+        <WeaponArray Link="MeiC5Attack2"/>
+        <WeaponArray Link="MeiC5Attack3"/>
+        <WeaponArray Link="MeiC5Attack4"/>
+        <WeaponArray Link="MeiC5Attack5"/>
+        <CardLayouts index="0">
+            <LayoutButtons Face="MeiC2Branch" Type="AbilCmd" AbilCmd="MeiC2Branch,Execute" Row="1" Column="1"/>
+            <LayoutButtons Face="MeiC2Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="1" Column="0"/>
+            <LayoutButtons Face="MeiC2Evade" Type="AbilCmd" AbilCmd="MeiC2EvadeMoving,Execute" Row="1" Column="2"/>
+            <LayoutButtons Face="MeiC2Evade" Type="AbilCmd" AbilCmd="MeiC2EvadeIdle,Execute" Row="1" Column="2"/>
+            <LayoutButtons Face="SeeleC1Ultimate" Type="AbilCmd" AbilCmd="SeeleC1Ultimate,Execute" Row="1" Column="3"/>
+            <LayoutButtons Face="MeiC2Ult" Type="AbilCmd" AbilCmd="MeiC2Ult,Execute" Row="1" Column="4"/>
+        </CardLayouts>
+        <CardLayouts index="4" CardId="Equi">
+            <LayoutButtons>
+                <Face value="ChangeAvatar"/>
+                <Type value="Submenu"/>
+                <AbilCmd value="KIANAC4TEST,255"/>
+                <Requirements value="KianaCanChangeAvatar"/>
+                <SubmenuCardId value="Avat"/>
+                <SubmenuIsSticky value="1"/>
+                <Row value="2"/>
+                <Column value="0"/>
+            </LayoutButtons>
+            <LayoutButtons>
+                <Face value="ChangeWeapon"/>
+                <Type value="Submenu"/>
+                <Requirements value="KianaCanChangeAvatar"/>
+                <SubmenuCardId value="Weap"/>
+                <Row value="0"/>
+                <Column value="0"/>
+            </LayoutButtons>
+        </CardLayouts>
+        <CardLayouts index="7" CardId="Avat">
+            <LayoutButtons index="1" Face="TrainMeiC5" Type="AbilCmd" AbilCmd="MorphToMeiC5,Execute" Row="0" Column="0"/>
+            <LayoutButtons index="2" removed="1"/>
+        </CardLayouts>
     </CUnit>
     <CUnit id="UL_020" parent="CUnitArmy">
         <Race value="Zerg"/>
@@ -1400,7 +1464,6 @@
         <GlossaryPriority value="20"/>
     </CUnit>
     <CUnit id="Herrscher8thAbil2Selector">
-        <Race value="Zerg2"/>
         <Mob value="Multiplayer"/>
         <FlagArray index="Turnable" value="0"/>
         <FlagArray index="Movable" value="0"/>
@@ -1423,7 +1486,7 @@
         </CardLayouts>
         <SeparationRadius value="0"/>
         <SubgroupPriority value="17"/>
-        <MinimapRadius value="0.375"/>
+        <MinimapRadius value="0"/>
         <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
         <KillDisplay value="Never"/>
         <Fidget>
@@ -3144,18 +3207,15 @@
             <Weapon value="SeeleATTACK"/>
         </EquipmentArray>
     </CUnit>
-    <CUnit id="MeiC2" parent="CUnitValkyrja">
+    <CUnit id="MeiC2" parent="CUnitMei">
         <UserTag value="HonkaiText/MeiC2"/>
         <EnergyStart value="50"/>
         <EnergyMax value="100"/>
-        <Speed value="4.1015"/>
         <AbilArray Link="MeiC2EvadeIdle"/>
         <AbilArray Link="MeiC2EvadeMoving"/>
         <AbilArray Link="MeiC2Branch"/>
         <AbilArray Link="MeiC2Ult"/>
         <BehaviorArray Link="HonkaiAttributeBio"/>
-        <BehaviorArray Link="Couple"/>
-        <BehaviorArray Link="CoupleMei"/>
         <BehaviorArray Link="MeiC2Attack1"/>
         <WeaponArray Link="MeiC2Attack1"/>
         <WeaponArray Link="MeiC2Attack2"/>
@@ -3190,12 +3250,10 @@
                 <Column value="0"/>
             </LayoutButtons>
         </CardLayouts>
-        <EquipmentArray>
-            <Effect value="MeiATTACK"/>
-            <Icon value="Assets\Textures\Pistol_K1.tga"/>
-            <Name value="Text/Weapon/ATTACK"/>
-            <Weapon value="MeiATTACK"/>
-        </EquipmentArray>
+        <CardLayouts index="7" CardId="Avat">
+            <LayoutButtons index="1" Face="TrainMeiC5" Type="AbilCmd" AbilCmd="MorphToMeiC5,Execute" Row="0" Column="0"/>
+            <LayoutButtons index="2" removed="1"/>
+        </CardLayouts>
     </CUnit>
     <CUnit id="SplitBomb2" parent="MISSILE">
         <Race value="Zerg"/>
@@ -5276,7 +5334,7 @@
         <DeathRevealRadius value="4"/>
         <DeathRevealType value="Vision"/>
         <Sight value="4"/>
-        <Food value="-3"/>
+        <Food value="-1"/>
     </CUnit>
     <CUnit id="Nuke2">
         <Race value="Terr"/>
@@ -6427,10 +6485,6 @@
             <LayoutButtons index="2" Face="TrainKianaC1" Type="AbilCmd" AbilCmd="MorphToKianaC1,Execute" Row="0" Column="2"/>
             <LayoutButtons index="3" removed="1"/>
         </CardLayouts>
-        <ReviveInfoBase>
-            <Charge Link="KianaC2/Revive"/>
-            <Cooldown Link="KianaC2/Revive"/>
-        </ReviveInfoBase>
         <EquipmentArray index="0">
             <Effect value="KianaATTACK"/>
             <Icon value="Assets\Textures\Pistol_K1.tga"/>
@@ -6923,6 +6977,16 @@
         <GlossaryCategory value="Unit/Category/TerranUnits"/>
         <GlossaryPriority value="160"/>
     </CUnit>
+    <CUnit id="WeaponM13" parent="ITEM">
+        <FlagArray index="Untooltipable" value="0"/>
+        <FogVisibility value="Snapshot"/>
+        <Collide index="Structure" value="1"/>
+        <Sight value="0"/>
+        <Radius value="0.25"/>
+        <InnerRadius value="0.25"/>
+        <MinimapRadius value="0.375"/>
+        <EditorCategories value="ObjectType:Item,ObjectFamily:Melee"/>
+    </CUnit>
     <CUnit id="WolfStatue">
         <FlagArray index="CreateVisible" value="0"/>
         <FlagArray index="Destructible" value="0"/>
@@ -6963,10 +7027,6 @@
             <LayoutButtons index="2" Face="TrainKianaC1" Type="AbilCmd" AbilCmd="MorphToKianaC1,Execute" Row="0" Column="2"/>
             <LayoutButtons index="3" removed="1"/>
         </CardLayouts>
-        <ReviveInfoBase>
-            <Charge Link="KianaC4/Revive"/>
-            <Cooldown Link="KianaC4/Revive"/>
-        </ReviveInfoBase>
         <EquipmentArray index="0">
             <Effect value="KianaATTACK"/>
             <Icon value="Assets\Textures\Pistol_K1.tga"/>

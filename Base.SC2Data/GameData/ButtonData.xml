@@ -6,6 +6,16 @@
         <AlertIcon value="Assets\Textures\btn-building-terran-factory.dds"/>
         <EditorCategories value="Race:Terran"/>
     </CButton>
+    <CButton id="MeiC5Attack">
+        <Icon value="Assets\Textures\Skill_Mei_CK_001.tga"/>
+        <AlertIcon value="Assets\Textures\Skill_Mei_CK_001.tga"/>
+        <Hotkey value="Button/Hotkey/Attack"/>
+        <SimpleDisplayText value="SimpleDisplay/Attack"/>
+    </CButton>
+    <CButton id="TrainMeiC5">
+        <Icon value="Assets\Textures\AvatarMeiC2.tga"/>
+        <AlertIcon value="Assets\Textures\AvatarMeiC2.tga"/>
+    </CButton>
     <CButton id="UL_020LandAttack">
         <Icon value="Assets\Textures\Wireframe-UL_020.tga"/>
         <AlertIcon value="Assets\Textures\Wireframe-UL_020.tga"/>
@@ -20,6 +30,10 @@
     <CButton id="SaAbil1">
         <Icon value="Assets\Textures\btn-ability-spearofadun-solarbombardment.dds"/>
         <AlertIcon value="Assets\Textures\btn-tips-walloffire.dds"/>
+    </CButton>
+    <CButton id="WeaponKatanaSlot">
+        <Icon value="Assets\Textures\Weapon_Katana_M1_13_1.tga"/>
+        <AlertIcon value="Assets\Textures\Weapon_Katana_M1_13_1.tga"/>
     </CButton>
     <CButton id="WeaponPistolTrade">
         <Icon value="Assets\Textures\DoublePistolType.tga"/>
@@ -398,7 +412,7 @@
         <Icon value="Assets\Textures\Skill_Mei_CK_001.tga"/>
         <AlertIcon value="Assets\Textures\Skill_Mei_CK_001.tga"/>
         <Hotkey value="Button/Hotkey/Attack"/>
-        <SimpleDisplayText value="SimpleDisplay/MeiC2Attack"/>
+        <SimpleDisplayText value="SimpleDisplay/Attack"/>
     </CButton>
     <CButton id="SeeleC1Evade">
         <Icon value="Assets\Textures\Skill_Seele_QT_003.tga"/>

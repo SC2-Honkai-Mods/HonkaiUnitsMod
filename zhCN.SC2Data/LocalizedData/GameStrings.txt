@@ -18,6 +18,7 @@ Abil/Name/BronyaC7Gun2=构造浮游炮II型
 Abil/Name/BronyaC7MorphToMotor=骑乘模式
 Abil/Name/BronyaMorphToAvatar=普通模式
 Abil/Name/BuildHerrscherCore=折跃神之键阁
+Abil/Name/BuyWeaponKatana=购买太刀武器
 Abil/Name/BuyWeaponPistol=购买双枪武器
 Abil/Name/CannonResearch=重炮武器研发
 Abil/Name/ChooseAvatar=选择角色
@@ -78,6 +79,7 @@ Abil/Name/IceTabletFactoryMorph3=石碑(重工厂)
 Abil/Name/IceTabletMorph2=石碑(已分离)
 Abil/Name/IceTabletMorph3=极寒石碑(已分离)
 Abil/Name/IceTabletUpgrade2=建筑变型(极寒石碑)
+Abil/Name/KatanaInventory=太刀槽位
 Abil/Name/KianaC1Ultimate=虚界冲击
 Abil/Name/KianaC2Branch=白练 使用分支
 Abil/Name/KianaC2EvadeIdle=白练 时空闪避 静止
@@ -116,6 +118,8 @@ Abil/Name/MorphToBronyaC2=MorphToBronyaC2
 Abil/Name/MorphToKianaC1=切换为空之律者
 Abil/Name/MorphToKianaC2=切换为领域装·白练
 Abil/Name/MorphToKianaC4=切换为白骑士·月光
+Abil/Name/MorphToMeiC2=切换为脉冲装·绯红
+Abil/Name/MorphToMeiC5=切换为雷之律者
 Abil/Name/MorphtoRO_060=Morph to RO_060
 Abil/Name/MorphtoRO_060_Defense=Morph to RO_060 Defense
 Abil/Name/NanoRepair2=纳米修复
@@ -362,6 +366,7 @@ Behavior/Name/VortexWarpableHeight=Vortex Warpable Height
 Behavior/Name/WeaponUseK17=能量跃迁者
 Behavior/Name/WeaponUseK23=天火圣裁
 Behavior/Name/WeaponUseK5=索尔之锤
+Behavior/Name/WeaponUseM13=虚无之刃
 Behavior/Tooltip/BaTi=不会被击飞或控制
 Behavior/Tooltip/BronyaC2Weakness=虚弱，造成的全伤害降低20%
 Behavior/Tooltip/BronyaC7Buff=受到的伤害提高<d ref="$BehaviorStackCount:BronyaC7Buff$*2.5"/>%<n/>
@@ -454,6 +459,7 @@ Behavior/Tooltip/Untimed=不会被时空减速
 Behavior/Tooltip/WeaponUseK17=在友方时空断裂中攻击速度提高80%，暴击率提高25%
 Behavior/Tooltip/WeaponUseK23=大范围内的敌人每秒有50%的概率被点燃；对被点燃的敌人造成的全伤提高40%
 Behavior/Tooltip/WeaponUseK5=暴击率提高15%
+Behavior/Tooltip/WeaponUseM13=暴击率提高15%
 Button/Name/ATTACK=升级女武神装甲攻击力
 Button/Name/AdvancedMedic=高级医疗系统
 Button/Name/AntiEntropyFactory=建造逆熵重工
@@ -625,6 +631,7 @@ Button/Name/MeiC2Upgrade1=晚樱
 Button/Name/MeiC2Upgrade2=二重旋风刃
 Button/Name/MeiC2Upgrade3=樱之魄
 Button/Name/MeiC2Upgrade4=魄之刃
+Button/Name/MeiC5Attack=胧刀 建御雷
 Button/Name/MercCompound=建造米高扬中央设计制造局
 Button/Name/MicroFiltering2=高效切割
 Button/Name/MobilizeSkill1=紧急动员
@@ -764,6 +771,7 @@ Button/Name/TrainKianaC1=部署空之律者
 Button/Name/TrainKianaC2=部署领域装·白练
 Button/Name/TrainKianaC4=部署白骑士·月光
 Button/Name/TrainMeiC2=部署脉冲装·绯红
+Button/Name/TrainMeiC5=部署雷之律者
 Button/Name/TrainSeeleC1=部署幻海梦蝶
 Button/Name/Transfusion=哺液
 Button/Name/Transfusion2=创生
@@ -807,6 +815,7 @@ Button/Name/WeaponB7=重装小兔19C
 Button/Name/WeaponK17=能量跃迁者
 Button/Name/WeaponK23=天火圣裁
 Button/Name/WeaponK5=索尔之锤
+Button/Name/WeaponKatanaSlot=太刀武器槽位
 Button/Name/WeaponPistolSlot=双枪武器槽位
 Button/Name/WeaponPistolTrade=购买双枪武器
 Button/Name/WeaponSevenThundersOfRetribution=涤罪七雷
@@ -1016,6 +1025,8 @@ Button/Tooltip/MeiC2Upgrade2=使分支攻击可以连续发动2次
 Button/Tooltip/MeiC2Upgrade3=提高必杀技斩击次数，对单个敌人最高提高<d ref="Upgrade,MeiC2Upgrade3,EffectArray[0].Value*50"/>%物理伤害，可升级5次
 Button/Tooltip/MeiC2Upgrade4=能量上限提高<d ref="Upgrade,MeiC2Upgrade4,EffectArray[1].Value"/>，天照额外消耗<d ref="Upgrade,MeiC2Upgrade4,EffectArray[0].Value"/>点能量，释放后进入女武神状态，强化所有攻击，持续<d ref="Behavior,MeiC2Blade,Duration"/>秒。
 Button/Tooltip/MeiC2Wave=释放一道大范围冲击波，将遇到的一切单位击退。<n/><c val="FFFF00">半径越小的单位被击退距离越远</c>
+Button/Tooltip/MeiC5=在世界蛇的帮助下，芽衣掌控了雷之律者能力后的形态，可以召唤俱利伽罗发动多种方式的攻击。<n/><n/><c val="#ColorAttackInfo">特点:雷电元素伤害、麻痹、浮空。<n/>可对地，骑乘俱利伽罗后可对地、对空</c>
+Button/Tooltip/MeiC5Attack=快速五连斩<n/>第一击~第三击：100%攻击力物理伤害+100%攻击力雷电元素伤害<n/>第四击：共250%攻击力雷电元素伤害<n/>第五击：共300%攻击力雷电元素伤害
 Button/Tooltip/MercCompound=可以研发多种重炮武器
 Button/Tooltip/MicroFiltering=后勤人员高能瓦斯采集量+1，可升级6次
 Button/Tooltip/MicroFiltering2=工蜂采集量+1，可升级5次
@@ -1025,10 +1036,10 @@ Button/Tooltip/MobilizeSkill2=立即在目标位置空投100人口机甲部队�
 Button/Tooltip/MorphToRO_060=变回炮台形态。在这个模式下多维机甲可以自由移动，但只能造成单体伤害。
 Button/Tooltip/MorphToRO_060_Defense=部署为堡垒形态。在此模式下多维机甲可以释放大量弹幕，造成大范围伤害。在此模式下多维机甲无法移动。
 Button/Tooltip/NanoRepair2=治疗一个友方机械单位。<n/><n/><c val="f078ff">每消耗1点能量恢复32点生命值。</c>
-Button/Tooltip/NukeArm=在发射井中部署崩坏能裂变弹。<n/>崩坏能裂变弹由发射井直接发生，可对大范围内的目标造成最多<d ref="Effect,NukeDamage2,Amount"/> (+<d ref="Effect,NukeDamage2,AttributeBonus[9]"/>对英雄单位) 点火焰元素伤害。<n/><c val="FFFF00">伤害不分敌我</c>
-Button/Tooltip/NukeArmMHT=在发射仓中部署一枚战术核弹。<n/>发射命中后可对大范围内的目标造成最多<d ref="Effect,NukeDamageMHT,Amount"/>点火焰元素伤害。<n/><c val="FFFF00">伤害不分敌我</c>
-Button/Tooltip/NukeCalldown2=向目标发射一颗威力巨大的崩坏能裂变弹，可对大范围内的目标造成最多<d ref="Effect,NukeDamage2,Amount"/> (+<d ref="Effect,NukeDamage2,AttributeBonus[9]"/>对英雄单位) 点火焰元素伤害。<n/><c val="FFFF00">伤害不分敌我</c>
-Button/Tooltip/NukeCalldownMHT=向目标发射一颗在战术核弹头，可对大范围内的目标造成最多<d ref="Effect,NukeDamageMHT,Amount"/>点火焰元素伤害。期间处于防御状态，受到的伤害减少50%<n/><c val="FFFF00">伤害不分敌我</c>
+Button/Tooltip/NukeArm=在发射井中部署崩坏能裂变弹。<n/>崩坏能裂变弹由发射井直接发生，可对大范围内的目标造成<d ref="Effect,NukeDamage2,Amount * Effect,NukeDamage2,AreaArray[4].Fraction"/>~ <d ref="Effect,NukeDamage2,Amount"/>点<c val="FF0000">火焰元素伤害</c>。<n/><c val="FFFF00">伤害不分敌我，且主要集中在中心区域</c>
+Button/Tooltip/NukeArmMHT=在发射仓中部署一枚战术核弹。<n/>发射命中后可对大范围内的目标造成<d ref="Effect,NukeDamageMHT,Amount * Effect,NukeDamageMHT,AreaArray[3].Fraction"/>~ <d ref="Effect,NukeDamageMHT,Amount"/>点<c val="FF0000">火焰元素伤害</c>。<n/><c val="FFFF00">伤害不分敌我，且主要集中在中心区域</c>
+Button/Tooltip/NukeCalldown2=向目标发射一颗威力巨大的崩坏能裂变弹，可对大范围内的目标造成<d ref="Effect,NukeDamage2,Amount * Effect,NukeDamage2,AreaArray[4].Fraction"/>~ <d ref="Effect,NukeDamage2,Amount"/>点<c val="FF0000">火焰元素伤害</c>。<n/><c val="FFFF00">伤害不分敌我，且主要集中在中心区域</c>
+Button/Tooltip/NukeCalldownMHT=向目标发射一颗在战术核弹头，可对大范围内的目标造成<d ref="Effect,NukeDamageMHT,Amount * Effect,NukeDamageMHT,AreaArray[3].Fraction"/>~ <d ref="Effect,NukeDamageMHT,Amount"/>点<c val="FF0000">火焰元素伤害</c>。<n/><c val="FFFF00">伤害不分敌我，且主要集中在中心区域</c>
 Button/Tooltip/PalsyDuration=使己方造成的麻痹状态时间延长0.5秒，可升级4次。
 Button/Tooltip/PlanetaryFortress2=坚固的防御要塞。<n/>用于接收采集到的资源。<n/><n/><c val="ffff8a">可以对地。</c>
 Button/Tooltip/PsiStorm2=召唤一股持续<d time="4"/>的灵能风暴，对目标区域内的所有单位造成最多80点伤害。
@@ -1175,6 +1186,7 @@ Button/Tooltip/TrainKianaC1=琪亚娜掌控了空之律者能力后的形态，�
 Button/Tooltip/TrainKianaC2=第三代女武神装甲，设计理念为「泛用性全领域作战装甲」。<n/><n/><c val="#ColorAttackInfo">能力:物理伤害、眩晕、爆发、时空。</c>
 Button/Tooltip/TrainKianaC4=试做型第四代女武神弑神装甲。装甲内高速流动的伽马粒子不断从背部的连接处扩散出来----其形态，犹如一对神圣的双翼。<n/><n/><c val="#ColorAttackInfo">能力:物理伤害、时空、高频伤害。</c>
 Button/Tooltip/TrainMeiC2=第三代女武神装甲，设计理念为「白刃战特化突击装甲」。<n/><n/><c val="#ColorAttackInfo">能力:物理伤害、击飞。</c>
+Button/Tooltip/TrainMeiC5=第三代女武神装甲，设计理念为「白刃战特化突击装甲」。<n/><n/><c val="#ColorAttackInfo">能力:物理伤害、击飞。</c>
 Button/Tooltip/TrainSeeleC1=试做型第四代女武神弑神装甲。<n/><n/><c val="#ColorAttackInfo">能力:物理伤害、时空、高频伤害。</c>
 Button/Tooltip/Transfusion=立即治疗生物单位<d ref="Effect,Transfusion,VitalArray[Life].Change"/>点生命值，并在<d ref="Behavior,Transfusion,Duration"/>秒内持续恢复额外<d ref="Behavior,Transfusion,Duration/Behavior,Transfusion,Period*Effect,TransfusionHealTick,VitalArray[Life].Change"  precision="3"/>点生命值。
 Button/Tooltip/Transfusion2=立即治疗生物单位<d ref="Effect,Transfusion2,VitalArray[Life].Change"/>点生命值，并在<d ref="Behavior,Transfusion2,Duration"/>秒内持续恢复额外<d ref="Behavior,Transfusion2,Duration/Behavior,Transfusion2,Period*Effect,TransfusionHealTick2,VitalArray[Life].Change"  precision="3"/>点生命值。
@@ -1221,6 +1233,7 @@ Button/Tooltip/WeaponB7=米高扬中央设计制造局设计的速射激光武�
 Button/Tooltip/WeaponK17=通过在希儿身上进行的实验所得到的数据，逆熵对量子技术的研究获得了长足的进步，并基于量子技术开发了这把武器。
 Button/Tooltip/WeaponK23=由旧文明第七律者核心制成的神之键，拥有最强大的破坏力。
 Button/Tooltip/WeaponK5=天命“诸神座”系列武器，内部储存了大量崩坏能粒子，在激发时可以具现出强力的能量块。
+Button/Tooltip/WeaponM13=米高扬设计局设计的太刀，刀的形状仿佛两条蛇互相咬住对方的尾巴，构成了代表无限的符号
 Button/Tooltip/WeaponPistolTrade=购买高级双枪武器
 Button/Tooltip/WidowMineBurrow=埋下毒蛛机甲并使其进入准备状态。激活时无法移动。
 Button/Tooltip/WidowMineUnburrow=使毒蛛机甲出地并使其武器进入非激活状态，并可以移动。
@@ -1597,6 +1610,8 @@ DocInfo/PatchNote359=·娑在必杀技期间新生成的单位也会被暂停
 DocInfo/PatchNote360=·重制了突进级崩坏兽
 DocInfo/PatchNote361=·修复了娑在激光攻击过程中死亡后伤害继续的bug
 DocInfo/PatchNote362=·娑 -「惑障」复活时由恢复50%最大生命值改为复活1500点固定生命值
+DocInfo/PatchNote363=·大幅提高了崩坏能裂变弹和战术核打击的最高伤害，但是仅限于核心区域
+DocInfo/PatchNote364=·将崩坏能裂变弹的人口占用降低到1
 Effect/Name/AcidSalivaU=UL_030 Damage
 Effect/Name/AddCasterLife1500=Add Caster Life 1500
 Effect/Name/AddDizzyCD=Add Dizzy CD
@@ -1611,6 +1626,7 @@ Effect/Name/ArrowLaunchMissile2=Arrow
 Effect/Name/ArrowLaunchMissile22=Arrow
 Effect/Name/AttackingMoveForce=目标外层吸引力
 Effect/Name/AttractToCaster=向施法者的吸引力
+Effect/Name/AvatarAttackMove=Kiana C2 Attack 1 Move
 Effect/Name/B15Fire=B15 Fire
 Effect/Name/B15FireRemove=B15 Fire Remove
 Effect/Name/B15Ice=B15 Ice
@@ -2039,7 +2055,6 @@ Effect/Name/KianaC1UltimateTimeLockSearch=KianaC1UltimateTimeLockSearch
 Effect/Name/KianaC1UltimateTimeLockSet=KianaC1UltimateTimeLockSet
 Effect/Name/KianaC2ApplyEvade=Kiana C2 应用闪避无敌帧
 Effect/Name/KianaC2ApplyEvadeCD=Kiana C2 Apply Evade CD
-Effect/Name/KianaC2Attack1=Kiana C2 Attack 1
 Effect/Name/KianaC2Attack12=Kiana C2 Attack 窄范围近战 50%并浮空
 Effect/Name/KianaC2Attack123=Kiana C2 Attack 长窄范围近战 50%并浮空
 Effect/Name/KianaC2Attack12Set=Kiana C2 Attack 近战50%并浮空 集合
@@ -2744,6 +2759,7 @@ HonkaiText/KianaC1=领域装·白练
 HonkaiText/KianaC2=领域装·白练
 HonkaiText/KianaC4=领域装·白练
 HonkaiText/MeiC2=脉冲装·绯红
+HonkaiText/MeiC5=脉冲装·绯红
 HonkaiText/SeeleC1=幻海梦蝶
 Kinetic/Name/TransleLeft=平移向左
 LoadingScreen/HonkaiModHelp00=Mod中的许多单位都不同于星际原版单位，但也有一些单位仅仅是改变了外观。
@@ -2942,6 +2958,7 @@ RequirementNode/Tooltip/Or152037771CountUnitFusionCoreCompleteOnlyTechTreeCheat=
 RequirementNode/Tooltip/Or1565659668CountBehaviorKianaC2BranchReadyCompleteOnlyAtUnit3957291497CountBehaviorKianaC2BranchReadyEvadeCompleteOnlyAtUnit880504611=正在打出普通攻击第二段或触发闪避技能
 RequirementNode/Tooltip/StigmataValidCount=圣痕数量未达到上限
 RequirementNode/Tooltip/Sum2900348999CountBehaviorLightningRodFactoryCompleteOnlyAtUnit1653467348CountBehaviorLightningRodFactory2CompleteOnlyAtUnit1236727148CountBehaviorIceTabletFactoryCompleteOnlyAtUnitCountBehaviorIceTab4120943232=需要附属蓄电塔、石碑或科技实验室
+SimpleDisplay/Attack=<s val="@@@SimpleCommandRow">按%hotkey键</c>然后</s> <IMG path="Assets\Textures\tutorialmouseleftbuttondown.dds" alignment="absolutemiddle"/> <s val="@@@SimpleCommandRow">地面自动攻击</s>
 SimpleDisplay/SeeleC1Upgrade2=
 Text/Rank/Herrscher=<c val="FFFF00">崩坏使徒</c>
 Text/Rank/KianaC1=空之律者
@@ -3056,6 +3073,7 @@ Unit/Name/MHT3=MHT-3 和平使者
 Unit/Name/MeiBuilding=剑道训练室
 Unit/Name/MeiC2=雷电芽衣
 Unit/Name/MeiC2Wave=冲击波 - MeiC2
+Unit/Name/MeiC5=雷电芽衣
 Unit/Name/MercCompound=米高扬设计制造局
 Unit/Name/Nuke2=崩坏能裂变弹
 Unit/Name/Nuke4=战术核弹 头
@@ -3127,6 +3145,7 @@ Unit/Name/VoidArchives=虚空万藏
 Unit/Name/WeaponK17=能量跃迁者
 Unit/Name/WeaponK23=天火圣裁
 Unit/Name/WeaponK5=索尔之锤
+Unit/Name/WeaponM13=虚无之刃
 Unit/Name/Zergling=咬咬怪
 Upgrade/Name/AdvancedMedic=高级医疗系统
 Upgrade/Name/B15=苍玄之书
@@ -3235,6 +3254,10 @@ Weapon/Name/BronyaC7Cannon=真理之钥
 Weapon/Name/BronyaC7Gun=浮游炮
 Weapon/Name/BronyaC7Gun2=浮游炮
 Weapon/Name/Bronya_C7_Motor=摩托冲撞
+Weapon/Name/CWeaponAvatarAttack=模板 - 角色攻击武器
+Weapon/Name/CWeaponAvatarMeleeAttack=模板 - 角色近战武器
+Weapon/Name/CWeaponAvatarMeleeAttack2=模板 - 角色近战武器
+Weapon/Name/CWeaponAvatarRangeAttack=模板 - 角色远程武器
 Weapon/Name/Cannon_B1=SU-22榴弹炮
 Weapon/Name/Cannon_B15=苍玄之书
 Weapon/Name/Cannon_B18=地狱火III型
@@ -3262,15 +3285,11 @@ Weapon/Name/Herrscher5thWeapon1=冰刺丛生
 Weapon/Name/Herrscher5thWeapon2=寒流
 Weapon/Name/Herrscher6thWeapon=无序化解构
 Weapon/Name/Herrscher7thWeapon=爆燃
-Weapon/Name/Herrscher8thWeapon=律者武器
+Weapon/Name/Herrscher8thWeapon=渡尘
 Weapon/Name/HerrscherWeapon=律者武器
 Weapon/Name/HonkaiHyperionWeaponSwitch=Honkai Hyperion Weapon Switch
 Weapon/Name/HyperionInterceptorBeam=战斗机机炮
-Weapon/Name/KianaC2Attack1=Kiana C2 Attack 1
-Weapon/Name/KianaC2Attack2=Kiana C2 Attack 2
-Weapon/Name/KianaC2Attack3=Kiana C2 Attack 3
-Weapon/Name/KianaC2Attack4=Kiana C2 Attack 4
-Weapon/Name/KianaC2Attack5=Kiana C2 Attack 5
+Weapon/Name/KianaC2Attack1=KianaC2Attack1(未命名)
 Weapon/Name/KianaC2Branch3=Kiana C2 Branch 3
 Weapon/Name/KianaC2Branch4=Kiana C2 Branch 4
 Weapon/Name/KianaC4Weapon=双枪
@@ -3320,13 +3339,6 @@ Weapon/Tip/Herrscher5thWeapon1=冻结一条直线上的地表，产生若干冰�
 Weapon/Tip/Herrscher5thWeapon2=
 Weapon/Tip/Herrscher6thWeapon=无视护甲，无视加成，穿透护盾<n/>被命中的单位<d ref="Behavior,Herrscher6thWeaponBehavior,Duration" precision="1"/>秒内无法恢复生命值
 Weapon/Tip/Herrscher7thWeapon=
-Weapon/Tip/KianaC2Attack1=双枪
-Weapon/Tip/KianaC2Attack2=双枪
-Weapon/Tip/KianaC2Attack3=双枪
-Weapon/Tip/KianaC2Attack4=双枪
-Weapon/Tip/KianaC2Attack5=双枪
-Weapon/Tip/KianaC2Branch3=双枪
-Weapon/Tip/KianaC2Branch4=双枪
 Weapon/Tip/PistolK23=<c val="FF8000">天火圣裁</c>
 Weapon/Tip/PistolK5_13=<c val="FF8000">索尔之锤</c>
 Weapon/Tip/UnknownWeapon=蓄力炮<n/>每20秒获得一次充能，可立即释放一次炮击，并使命中的敌人流血7秒<n/>对有护盾的敌人物理伤害提高30%
