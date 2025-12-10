@@ -9,6 +9,177 @@
     <CWeaponStrafe default="1">
         <Options index="NeverMiss" value="0"/>
     </CWeaponStrafe>
+    <CWeaponLegacy default="1" id="CWeaponAvatarMeleeAttack">
+        <Options index="Hidden" value="1"/>
+        <Options index="Melee" value="1"/>
+        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <MinScanRange value="10"/>
+        <DamagePoint value="0"/>
+        <Backswing value="0"/>
+        <LegacyOptions index="CanRetargetWhileChanneling" value="1"/>
+        <AllowedMovement value="Moving"/>
+        <RandomDelayMin value="0"/>
+        <RandomDelayMax value="0"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy default="1" id="AvatarATTACK">
+        <Name value="Weapon/Name/ATTACK"/>
+        <Tip value="Weapon/Tip/ATTACK"/>
+        <DisplayName value="Weapon/Name/ATTACK"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="0"/>
+        <Period value="0"/>
+        <Effect value="VoidEffect"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy default="1" id="CWeaponAvatarRangeAttack">
+        <Options index="Hidden" value="1"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <MinScanRange value="10"/>
+        <Range value="7"/>
+        <DamagePoint value="0"/>
+        <Backswing value="0"/>
+        <LegacyOptions index="CanRetargetWhileChanneling" value="1"/>
+        <AllowedMovement value="Slowing"/>
+        <RandomDelayMin value="0"/>
+        <RandomDelayMax value="0"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="KianaC1MeleeAttack1" parent="CWeaponAvatarMeleeAttack">
+        <Range value="3"/>
+        <Period value="0.75"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="KianaC1MeleeAttack2" parent="CWeaponAvatarMeleeAttack">
+        <Range value="3"/>
+        <Period value="0.875"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="KianaC1MeleeAttack3" parent="CWeaponAvatarMeleeAttack">
+        <Range value="3"/>
+        <Period value="2"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="KianaC2Attack1" parent="CWeaponAvatarMeleeAttack">
+        <AcquireTargetSorts>
+            <SortArray value="TSThreatenKianaC2"/>
+            <SortArray value="TSPriorityDesc"/>
+            <SortArray value="GroundTarget"/>
+        </AcquireTargetSorts>
+        <Range value="3.6"/>
+        <Period value="0.6875"/>
+        <Backswing value="0.625"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="KianaC2Attack4" parent="CWeaponAvatarMeleeAttack">
+        <AcquireTargetSorts>
+            <SortArray value="TSThreatenKianaC2"/>
+            <SortArray value="TSPriorityDesc"/>
+            <SortArray value="GroundTarget"/>
+        </AcquireTargetSorts>
+        <Range value="1.8"/>
+        <Period value="0.625"/>
+        <Backswing value="0.5625"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="KianaC2Attack5" parent="CWeaponAvatarMeleeAttack">
+        <AcquireTargetSorts>
+            <SortArray value="TSThreatenKianaC2"/>
+            <SortArray value="TSPriorityDesc"/>
+            <SortArray value="GroundTarget"/>
+        </AcquireTargetSorts>
+        <Range value="2.1"/>
+        <Period value="0.9375"/>
+        <Backswing value="0.875"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="KianaC2Branch3" parent="CWeaponAvatarMeleeAttack">
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <AcquireTargetSorts>
+            <SortArray value="TSThreatenKianaC2"/>
+            <SortArray value="TSPriorityDesc"/>
+            <SortArray value="GroundTarget"/>
+        </AcquireTargetSorts>
+        <Range value="1.6"/>
+        <Period value="0.4375"/>
+        <Backswing value="0.375"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="KianaC2Branch4" parent="CWeaponAvatarMeleeAttack">
+        <Options index="Melee" value="0"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <AcquireTargetSorts>
+            <SortArray value="TSThreatenKianaC2"/>
+            <SortArray value="TSPriorityDesc"/>
+            <SortArray value="GroundTarget"/>
+        </AcquireTargetSorts>
+        <Period value="1.9375"/>
+        <Backswing value="1.875"/>
+        <LegacyOptions index="Uninterruptible" value="1"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="MeiC2Attack1" parent="CWeaponAvatarMeleeAttack">
+        <Range value="2"/>
+        <Period value="0.1875"/>
+        <Backswing value="0.1875"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="MeiC2Attack2" parent="CWeaponAvatarMeleeAttack">
+        <Range value="3"/>
+        <Period value="0.625"/>
+        <Backswing value="0.5"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="MeiC2Attack3" parent="CWeaponAvatarMeleeAttack">
+        <Range value="6"/>
+        <Period value="0.5625"/>
+        <Backswing value="0.5"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="MeiC2Attack4" parent="CWeaponAvatarMeleeAttack">
+        <Range value="1.8"/>
+        <Period value="0.5625"/>
+        <Backswing value="0.5"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="MeiC2Attack5" parent="CWeaponAvatarMeleeAttack">
+        <Range value="2.1"/>
+        <Period value="1.125"/>
+        <Backswing value="1.0625"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="MeiC5Attack1" parent="CWeaponAvatarMeleeAttack">
+        <Range value="3.6"/>
+        <Period value="0.6875"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="MeiC5Attack2" parent="CWeaponAvatarMeleeAttack">
+        <Range value="6"/>
+        <Period value="0.5"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="MeiC5Attack3" parent="CWeaponAvatarMeleeAttack">
+        <Range value="6"/>
+        <Period value="0.5"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="MeiC5Attack4" parent="CWeaponAvatarMeleeAttack">
+        <Range value="1.8"/>
+        <Period value="0.625"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="MeiC5Attack5" parent="CWeaponAvatarMeleeAttack">
+        <Range value="2.1"/>
+        <Period value="0.9375"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="SeeleC1Attack1" parent="CWeaponAvatarMeleeAttack">
+        <Range value="3"/>
+        <Period value="0.6875"/>
+        <Backswing value="0.6875"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="SeeleC1Attack2" parent="CWeaponAvatarMeleeAttack">
+        <Range value="3"/>
+        <Period value="0.9375"/>
+        <Backswing value="0.9375"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="SeeleC1Attack3" parent="CWeaponAvatarMeleeAttack">
+        <Range value="3"/>
+        <Period value="1.5"/>
+        <Backswing value="1.5"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="SeeleC1Attack4" parent="CWeaponAvatarMeleeAttack">
+        <Range value="3"/>
+        <Period value="1.125"/>
+        <Backswing value="1.125"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="SeeleC1Attack5" parent="CWeaponAvatarMeleeAttack">
+        <Range value="3"/>
+        <Period value="2.125"/>
+        <Backswing value="2.0625"/>
+    </CWeaponLegacy>
     <CWeaponLegacy id="UL_020Weapon">
         <EditorCategories value="Race:Zerg"/>
         <Options index="Melee" value="1"/>
@@ -402,17 +573,8 @@
         <LegacyOptions index="NoDeceleration" value="1"/>
         <AllowedMovement value="Moving"/>
     </CWeaponLegacy>
-    <CWeaponLegacy id="SeeleATTACK">
-        <EditorCategories value=""/>
-        <Tip value="Weapon/Tip/ATTACK"/>
-        <Options index="Melee" value="1"/>
+    <CWeaponLegacy id="SeeleATTACK" parent="AvatarATTACK">
         <Icon value="Assets\Textures\Pistol_K1.tga"/>
-        <Range value="0"/>
-        <Period value="0"/>
-        <Effect value="VoidEffect"/>
-        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
-        <Name value="Weapon/Name/ATTACK"/>
-        <DisplayName value="Weapon/Name/ATTACK"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="NeedleSpines2">
         <Icon value="Assets\Textures\btn-upgrade-zerg-missileattacks-level0.dds"/>
@@ -653,16 +815,8 @@
         <DamagePoint value="0.25"/>
         <Effect value="B18Set"/>
     </CWeaponLegacy>
-    <CWeaponLegacy id="KianaATTACK">
-        <Name value="Weapon/Name/ATTACK"/>
-        <EditorCategories value=""/>
-        <Tip value="Weapon/Tip/ATTACK"/>
-        <Options index="Melee" value="1"/>
+    <CWeaponLegacy id="KianaATTACK" parent="AvatarATTACK">
         <Icon value="Assets\Textures\Weapon_Pistol_K1_01_1.tga"/>
-        <DisplayName value="Weapon/Name/ATTACK"/>
-        <Range value="0"/>
-        <Period value="0"/>
-        <Effect value="VoidEffect"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="RO_030Weapon">
         <Icon value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel0.dds"/>
@@ -675,137 +829,6 @@
         <Period value="4"/>
         <Effect value="RO_030WeaponPersistent"/>
         <LegacyOptions index="KeepChanneling" value="1"/>
-    </CWeaponLegacy>
-    <CWeaponLegacy id="KianaC2Attack1">
-        <Options index="Hidden" value="1"/>
-        <Options index="Melee" value="1"/>
-        <Options index="DisplayCooldown" value="1"/>
-        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
-        <AcquireTargetSorts>
-            <SortArray value="TSThreatenKianaC2"/>
-            <SortArray value="TSPriorityDesc"/>
-            <SortArray value="GroundTarget"/>
-        </AcquireTargetSorts>
-        <MinScanRange value="7"/>
-        <Range value="3.6"/>
-        <Period value="0.6875"/>
-        <DamagePoint value="0"/>
-        <Backswing value="0.625"/>
-        <LegacyOptions index="CanRetargetWhileChanneling" value="1"/>
-        <AllowedMovement value="Moving"/>
-        <RandomDelayMin value="0"/>
-        <RandomDelayMax value="0"/>
-    </CWeaponLegacy>
-    <CWeaponLegacy id="KianaC2Attack2">
-        <Options index="Hidden" value="1"/>
-        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
-        <AcquireTargetSorts>
-            <SortArray value="TSThreatenKianaC2"/>
-            <SortArray value="TSPriorityDesc"/>
-            <SortArray value="GroundTarget"/>
-        </AcquireTargetSorts>
-        <MinScanRange value="7"/>
-        <Range value="6"/>
-        <Period value="0.5"/>
-        <DamagePoint value="0"/>
-        <Backswing value="0.4375"/>
-        <LegacyOptions index="CanRetargetWhileChanneling" value="1"/>
-        <AllowedMovement value="Slowing"/>
-        <RandomDelayMin value="0"/>
-        <RandomDelayMax value="0"/>
-    </CWeaponLegacy>
-    <CWeaponLegacy id="KianaC2Attack3">
-        <Options index="Hidden" value="1"/>
-        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
-        <AcquireTargetSorts>
-            <SortArray value="TSThreatenKianaC2"/>
-            <SortArray value="TSPriorityDesc"/>
-            <SortArray value="GroundTarget"/>
-        </AcquireTargetSorts>
-        <MinScanRange value="7"/>
-        <Range value="6"/>
-        <Period value="0.5"/>
-        <DamagePoint value="0"/>
-        <Backswing value="0.4375"/>
-        <LegacyOptions index="CanRetargetWhileChanneling" value="1"/>
-        <AllowedMovement value="Slowing"/>
-        <RandomDelayMin value="0"/>
-        <RandomDelayMax value="0"/>
-    </CWeaponLegacy>
-    <CWeaponLegacy id="KianaC2Attack4">
-        <Options index="Hidden" value="1"/>
-        <Options index="Melee" value="1"/>
-        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
-        <AcquireTargetSorts>
-            <SortArray value="TSThreatenKianaC2"/>
-            <SortArray value="TSPriorityDesc"/>
-            <SortArray value="GroundTarget"/>
-        </AcquireTargetSorts>
-        <MinScanRange value="7"/>
-        <Range value="1.8"/>
-        <Period value="0.625"/>
-        <DamagePoint value="0"/>
-        <Backswing value="0.5625"/>
-        <LegacyOptions index="CanRetargetWhileChanneling" value="1"/>
-        <AllowedMovement value="Slowing"/>
-        <RandomDelayMin value="0"/>
-        <RandomDelayMax value="0"/>
-    </CWeaponLegacy>
-    <CWeaponLegacy id="KianaC2Attack5">
-        <Options index="Hidden" value="1"/>
-        <Options index="Melee" value="1"/>
-        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
-        <AcquireTargetSorts>
-            <SortArray value="TSThreatenKianaC2"/>
-            <SortArray value="TSPriorityDesc"/>
-            <SortArray value="GroundTarget"/>
-        </AcquireTargetSorts>
-        <MinScanRange value="8"/>
-        <Range value="2.1"/>
-        <Period value="0.9375"/>
-        <DamagePoint value="0"/>
-        <Backswing value="0.875"/>
-        <LegacyOptions index="CanRetargetWhileChanneling" value="1"/>
-        <AllowedMovement value="Slowing"/>
-        <RandomDelayMin value="0"/>
-        <RandomDelayMax value="0"/>
-    </CWeaponLegacy>
-    <CWeaponLegacy id="KianaC2Branch3">
-        <Options index="Hidden" value="1"/>
-        <Options index="Melee" value="1"/>
-        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
-        <AcquireTargetSorts>
-            <SortArray value="TSThreatenKianaC2"/>
-            <SortArray value="TSPriorityDesc"/>
-            <SortArray value="GroundTarget"/>
-        </AcquireTargetSorts>
-        <MinScanRange value="7"/>
-        <Range value="1.6"/>
-        <Period value="0.4375"/>
-        <DamagePoint value="0"/>
-        <Backswing value="0.375"/>
-        <LegacyOptions index="CanRetargetWhileChanneling" value="1"/>
-        <AllowedMovement value="Slowing"/>
-        <RandomDelayMin value="0"/>
-        <RandomDelayMax value="0"/>
-    </CWeaponLegacy>
-    <CWeaponLegacy id="KianaC2Branch4">
-        <Options index="Hidden" value="1"/>
-        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
-        <AcquireTargetSorts>
-            <SortArray value="TSThreatenKianaC2"/>
-            <SortArray value="TSPriorityDesc"/>
-            <SortArray value="GroundTarget"/>
-        </AcquireTargetSorts>
-        <MinScanRange value="7"/>
-        <Period value="1.9375"/>
-        <DamagePoint value="0"/>
-        <Backswing value="1.875"/>
-        <LegacyOptions index="CanRetargetWhileChanneling" value="1"/>
-        <LegacyOptions index="Uninterruptible" value="1"/>
-        <AllowedMovement value="Slowing"/>
-        <RandomDelayMin value="0"/>
-        <RandomDelayMax value="0"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="DeadgalScythe">
         <Options index="Melee" value="1"/>
@@ -1043,266 +1066,40 @@
         <RandomDelayMax value="0"/>
         <Arc value="45"/>
     </CWeaponLegacy>
-    <CWeaponLegacy id="SeeleC1Attack1">
-        <Options index="Hidden" value="1"/>
-        <Options index="Melee" value="1"/>
-        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
-        <MinScanRange value="7"/>
-        <Range value="3"/>
-        <Period value="0.6875"/>
-        <DamagePoint value="0"/>
-        <Backswing value="0.6875"/>
-        <LegacyOptions index="CanRetargetWhileChanneling" value="1"/>
-        <LegacyOptions index="Uninterruptible" value="1"/>
-        <AllowedMovement value="Slowing"/>
-        <RandomDelayMin value="0"/>
-        <RandomDelayMax value="0"/>
-        <Arc value="45"/>
-    </CWeaponLegacy>
-    <CWeaponLegacy id="SeeleC1Attack2">
-        <Options index="Hidden" value="1"/>
-        <Options index="Melee" value="1"/>
-        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
-        <MinScanRange value="7"/>
-        <Range value="3"/>
-        <Period value="0.9375"/>
-        <DamagePoint value="0"/>
-        <Backswing value="0.9375"/>
-        <LegacyOptions index="CanRetargetWhileChanneling" value="1"/>
-        <LegacyOptions index="Uninterruptible" value="1"/>
-        <AllowedMovement value="Slowing"/>
-        <RandomDelayMin value="0"/>
-        <RandomDelayMax value="0"/>
-        <Arc value="45"/>
-    </CWeaponLegacy>
-    <CWeaponLegacy id="SeeleC1Attack3">
-        <Options index="Hidden" value="1"/>
-        <Options index="Melee" value="1"/>
-        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
-        <MinScanRange value="7"/>
-        <Range value="3"/>
-        <Period value="1.5"/>
-        <DamagePoint value="0"/>
-        <Backswing value="1.5"/>
-        <LegacyOptions index="CanRetargetWhileChanneling" value="1"/>
-        <LegacyOptions index="Uninterruptible" value="1"/>
-        <AllowedMovement value="Slowing"/>
-        <RandomDelayMin value="0"/>
-        <RandomDelayMax value="0"/>
-        <Arc value="45"/>
-    </CWeaponLegacy>
-    <CWeaponLegacy id="SeeleC1Attack4">
-        <Options index="Hidden" value="1"/>
-        <Options index="Melee" value="1"/>
-        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
-        <MinScanRange value="7"/>
-        <Range value="3"/>
-        <Period value="1.125"/>
-        <DamagePoint value="0"/>
-        <Backswing value="1.125"/>
-        <LegacyOptions index="CanRetargetWhileChanneling" value="1"/>
-        <LegacyOptions index="Uninterruptible" value="1"/>
-        <AllowedMovement value="Slowing"/>
-        <RandomDelayMin value="0"/>
-        <RandomDelayMax value="0"/>
-        <Arc value="45"/>
-    </CWeaponLegacy>
-    <CWeaponLegacy id="SeeleC1Attack5">
-        <Options index="Hidden" value="1"/>
-        <Options index="Melee" value="1"/>
-        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
-        <MinScanRange value="8"/>
-        <Range value="3"/>
-        <Period value="2.125"/>
-        <DamagePoint value="0"/>
-        <Backswing value="2.0625"/>
-        <LegacyOptions index="CanRetargetWhileChanneling" value="1"/>
-        <LegacyOptions index="Uninterruptible" value="1"/>
-        <AllowedMovement value="Slowing"/>
-        <RandomDelayMin value="0"/>
-        <RandomDelayMax value="0"/>
-        <Arc value="45"/>
-    </CWeaponLegacy>
-    <CWeaponLegacy id="MeiC2Attack1">
-        <Options index="Hidden" value="1"/>
-        <Options index="Melee" value="1"/>
-        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
-        <MinScanRange value="7"/>
-        <Range value="2"/>
-        <Period value="0.1875"/>
-        <DamagePoint value="0"/>
-        <Backswing value="0.1875"/>
-        <LegacyOptions index="CanRetargetWhileChanneling" value="1"/>
-        <AllowedMovement value="Moving"/>
-        <RandomDelayMin value="0"/>
-        <RandomDelayMax value="0"/>
-    </CWeaponLegacy>
-    <CWeaponLegacy id="MeiC2Attack2">
-        <Options index="Hidden" value="1"/>
-        <Options index="Melee" value="1"/>
-        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
-        <MinScanRange value="7"/>
-        <Range value="3"/>
-        <Period value="0.625"/>
-        <DamagePoint value="0"/>
-        <LegacyOptions index="CanRetargetWhileChanneling" value="1"/>
-        <AllowedMovement value="Slowing"/>
-        <RandomDelayMin value="0"/>
-        <RandomDelayMax value="0"/>
-    </CWeaponLegacy>
-    <CWeaponLegacy id="MeiC2Attack3">
-        <Options index="Hidden" value="1"/>
-        <Options index="Melee" value="1"/>
-        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
-        <MinScanRange value="7"/>
-        <Range value="6"/>
-        <Period value="0.5625"/>
-        <DamagePoint value="0"/>
-        <LegacyOptions index="CanRetargetWhileChanneling" value="1"/>
-        <AllowedMovement value="Slowing"/>
-        <RandomDelayMin value="0"/>
-        <RandomDelayMax value="0"/>
-    </CWeaponLegacy>
-    <CWeaponLegacy id="MeiC2Attack4">
-        <Options index="Hidden" value="1"/>
-        <Options index="Melee" value="1"/>
-        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
-        <MinScanRange value="7"/>
-        <Range value="1.8"/>
-        <Period value="0.5625"/>
-        <DamagePoint value="0"/>
-        <LegacyOptions index="CanRetargetWhileChanneling" value="1"/>
-        <AllowedMovement value="Slowing"/>
-        <RandomDelayMin value="0"/>
-        <RandomDelayMax value="0"/>
-    </CWeaponLegacy>
-    <CWeaponLegacy id="MeiC2Attack5">
-        <Options index="Hidden" value="1"/>
-        <Options index="Melee" value="1"/>
-        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
-        <MinScanRange value="8"/>
-        <Range value="2.1"/>
-        <Period value="1.125"/>
-        <DamagePoint value="0"/>
-        <Backswing value="1.0625"/>
-        <LegacyOptions index="CanRetargetWhileChanneling" value="1"/>
-        <AllowedMovement value="Slowing"/>
-        <RandomDelayMin value="0"/>
-        <RandomDelayMax value="0"/>
-    </CWeaponLegacy>
-    <CWeaponLegacy id="MeiATTACK">
-        <Name value="Weapon/Name/ATTACK"/>
-        <EditorCategories value=""/>
-        <Tip value="Weapon/Tip/ATTACK"/>
-        <Options index="Melee" value="1"/>
+    <CWeaponLegacy id="MeiATTACK" parent="AvatarATTACK">
         <Icon value="Assets\Textures\Weapon_Katana_M1_13_1.tga"/>
-        <DisplayName value="Weapon/Name/ATTACK"/>
-        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
-        <Range value="0"/>
-        <Period value="0"/>
-        <Effect value="VoidEffect"/>
     </CWeaponLegacy>
-    <CWeaponLegacy id="BronyaATTACK">
-        <Name value="Weapon/Name/ATTACK"/>
-        <EditorCategories value=""/>
-        <Tip value="Weapon/Tip/ATTACK"/>
+    <CWeaponLegacy id="BronyaATTACK" parent="AvatarATTACK">
         <Icon value="Assets\Textures\Weapon_Cannon_B1_38_3.tga"/>
-        <DisplayName value="Weapon/Name/ATTACK"/>
-        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
-        <Range value="0"/>
-        <Period value="0"/>
-        <Effect value="VoidEffect"/>
     </CWeaponLegacy>
-    <CWeaponLegacy id="KianaC1RangeAttack1">
-        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
-        <MinScanRange value="7"/>
-        <Range value="7"/>
+    <CWeaponLegacy id="KianaC1RangeAttack1" parent="CWeaponAvatarRangeAttack">
         <Period value="0.75"/>
-        <DamagePoint value="0"/>
-        <Backswing value="0"/>
-        <LegacyOptions index="CanRetargetWhileChanneling" value="1"/>
-        <AllowedMovement value="Moving"/>
-        <RandomDelayMin value="0"/>
-        <RandomDelayMax value="0"/>
-        <Options index="Hidden" value="1"/>
     </CWeaponLegacy>
-    <CWeaponLegacy id="KianaC1RangeAttack2">
-        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
-        <MinScanRange value="7"/>
-        <Range value="7"/>
+    <CWeaponLegacy id="KianaC1RangeAttack2" parent="CWeaponAvatarRangeAttack">
         <Period value="0.8125"/>
-        <DamagePoint value="0"/>
-        <Backswing value="0"/>
-        <LegacyOptions index="CanRetargetWhileChanneling" value="1"/>
-        <AllowedMovement value="Slowing"/>
-        <RandomDelayMin value="0"/>
-        <RandomDelayMax value="0"/>
-        <Options index="Hidden" value="1"/>
     </CWeaponLegacy>
-    <CWeaponLegacy id="KianaC1RangeAttack3">
-        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
-        <MinScanRange value="7"/>
-        <Range value="7"/>
+    <CWeaponLegacy id="KianaC1RangeAttack3" parent="CWeaponAvatarRangeAttack">
         <Period value="0.8125"/>
-        <DamagePoint value="0"/>
-        <Backswing value="0"/>
-        <LegacyOptions index="CanRetargetWhileChanneling" value="1"/>
-        <AllowedMovement value="Slowing"/>
-        <RandomDelayMin value="0"/>
-        <RandomDelayMax value="0"/>
-        <Options index="Hidden" value="1"/>
     </CWeaponLegacy>
-    <CWeaponLegacy id="KianaC1RangeAttack4">
-        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
-        <MinScanRange value="7"/>
-        <Range value="7"/>
+    <CWeaponLegacy id="KianaC1RangeAttack4" parent="CWeaponAvatarRangeAttack">
         <Period value="1.5"/>
-        <DamagePoint value="0"/>
-        <Backswing value="0"/>
-        <LegacyOptions index="CanRetargetWhileChanneling" value="1"/>
-        <AllowedMovement value="Slowing"/>
-        <RandomDelayMin value="0"/>
-        <RandomDelayMax value="0"/>
-        <Options index="Hidden" value="1"/>
     </CWeaponLegacy>
-    <CWeaponLegacy id="KianaC1MeleeAttack1">
-        <Options index="Hidden" value="1"/>
-        <Options index="Melee" value="1"/>
-        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
-        <MinScanRange value="7"/>
-        <Range value="3"/>
-        <Period value="0.75"/>
-        <DamagePoint value="0"/>
-        <Backswing value="0"/>
-        <LegacyOptions index="CanRetargetWhileChanneling" value="1"/>
-        <AllowedMovement value="Moving"/>
-        <RandomDelayMin value="0"/>
-        <RandomDelayMax value="0"/>
+    <CWeaponLegacy id="KianaC2Attack2" parent="CWeaponAvatarRangeAttack">
+        <AcquireTargetSorts>
+            <SortArray value="TSThreatenKianaC2"/>
+            <SortArray value="TSPriorityDesc"/>
+            <SortArray value="GroundTarget"/>
+        </AcquireTargetSorts>
+        <Period value="0.5"/>
+        <Backswing value="0.4375"/>
     </CWeaponLegacy>
-    <CWeaponLegacy id="KianaC1MeleeAttack2">
-        <Options index="Hidden" value="1"/>
-        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
-        <MinScanRange value="7"/>
-        <Range value="3"/>
-        <Period value="0.875"/>
-        <DamagePoint value="0"/>
-        <Backswing value="0"/>
-        <LegacyOptions index="CanRetargetWhileChanneling" value="1"/>
-        <AllowedMovement value="Slowing"/>
-        <RandomDelayMin value="0"/>
-        <RandomDelayMax value="0"/>
-    </CWeaponLegacy>
-    <CWeaponLegacy id="KianaC1MeleeAttack3">
-        <Options index="Hidden" value="1"/>
-        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
-        <MinScanRange value="7"/>
-        <Range value="3"/>
-        <Period value="2"/>
-        <DamagePoint value="0"/>
-        <Backswing value="0"/>
-        <LegacyOptions index="CanRetargetWhileChanneling" value="1"/>
-        <AllowedMovement value="Slowing"/>
-        <RandomDelayMin value="0"/>
-        <RandomDelayMax value="0"/>
+    <CWeaponLegacy id="KianaC2Attack3" parent="CWeaponAvatarRangeAttack">
+        <AcquireTargetSorts>
+            <SortArray value="TSThreatenKianaC2"/>
+            <SortArray value="TSPriorityDesc"/>
+            <SortArray value="GroundTarget"/>
+        </AcquireTargetSorts>
+        <Period value="0.5"/>
+        <Backswing value="0.4375"/>
     </CWeaponLegacy>
 </Catalog>

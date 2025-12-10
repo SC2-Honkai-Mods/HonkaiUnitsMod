@@ -3116,6 +3116,9 @@ bool lib6D9D7845_gt_E58D95E4BD8DE6B58BE8AF95E7949FE68890_Func (bool testConds, b
     else if (auto773EE29B_val == "MC2") {
         lv_e58D95E4BD8D = "MeiC2";
     }
+    else if (auto773EE29B_val == "MC5") {
+        lv_e58D95E4BD8D = "MeiC5";
+    }
     else if (auto773EE29B_val == "BC2") {
         lv_e58D95E4BD8D = "BronyaC2";
     }
@@ -5889,9 +5892,10 @@ bool lib6D9D7845_gt_E5B9BBE5A283_Func (bool testConds, bool runActions) {
     playergroup lv_players;
     unitgroup[17] lv_playersUnits;
     unitgroup[17] lv_playersTroops;
-    unit[17] lv_playersSelecctors;
+    unit[17] lv_playersSelectors;
     unit[17] lv_playersTargets;
     int lv_p;
+    int lv_p2;
     unit lv_u;
     int lv_pU_GPHolder;
     int lv_pU_GPPanel;
@@ -5928,6 +5932,7 @@ bool lib6D9D7845_gt_E5B9BBE5A283_Func (bool testConds, bool runActions) {
     int auto567194D7_u;
     unitgroup auto3D180CDC_g;
     int auto3D180CDC_u;
+    playergroup autoD0191002_g;
 
     // Variable Initialization
     lv_self = EventPlayerEffectUsedUnit(c_effectUnitCaster);
@@ -6020,8 +6025,8 @@ bool lib6D9D7845_gt_E5B9BBE5A283_Func (bool testConds, bool runActions) {
         lv_p = PlayerGroupNextPlayer(auto4AD103FA_g, lv_p);
         if (lv_p < 0) { break; }
         libNtve_gf_CreateUnitsWithDefaultFacing(1, "Herrscher8thAbil2Selector", 0, lv_p, UnitGetPosition(lv_self));
-        lv_playersSelecctors[lv_p] = UnitLastCreated();
-        libNtve_gf_SetDialogItemUnitGroup(lv_dialogCammandPanel, libNtve_gf_ConvertUnitToUnitGroup(lv_playersSelecctors[lv_p]), PlayerGroupSingle(lv_p));
+        lv_playersSelectors[lv_p] = UnitLastCreated();
+        libNtve_gf_SetDialogItemUnitGroup(lv_dialogCammandPanel, libNtve_gf_ConvertUnitToUnitGroup(lv_playersSelectors[lv_p]), PlayerGroupSingle(lv_p));
     }
     DialogCreate(500, 400, c_anchorCenter, 0, 0, true);
     lv_screenDialog = DialogLastCreated();
@@ -6045,6 +6050,10 @@ bool lib6D9D7845_gt_E5B9BBE5A283_Func (bool testConds, bool runActions) {
         lv_validgroup = UnitGroupFilter(null, lv_p, lv_playersUnits[lv_p], UnitFilter(0, 0, (1 << c_targetFilterStructure) | (1 << c_targetFilterWorker) | (1 << c_targetFilterMissile), (1 << (c_targetFilterStasis - 32)) | (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32)) | (1 << (c_targetFilterSummoned - 32))), 0);
         lv_imax = 0;
         for (autoF36400C7_i = 1; autoF36400C7_i <= autoF36400C7_n; autoF36400C7_i += 1) {
+            if ((libNtve_gf_UnitGroupIsDead(lv_validgroup) == true)) {
+                break;
+            }
+
             lv_u = UnitGroupRandomUnit(lv_validgroup, c_unitCountAlive);
             lv_i = UnitGroupCount(UnitGroupFilterRegion(lv_playersUnits[lv_p], RegionCircle(UnitGetPosition(lv_u), 9.0), 0), c_unitCountAlive);
             if ((lv_i > lv_imax)) {
@@ -6087,7 +6096,7 @@ bool lib6D9D7845_gt_E5B9BBE5A283_Func (bool testConds, bool runActions) {
         while (true) {
             lv_p = PlayerGroupNextPlayer(auto9DD5456C_g, lv_p);
             if (lv_p < 0) { break; }
-            if ((lv_playersSelecctors[lv_p] != null) && (UnitBehaviorCount(lv_playersSelecctors[lv_p], "Herrscher8thAbil2Selected") == 1)) {
+            if ((lv_playersSelectors[lv_p] != null) && (UnitBehaviorCount(lv_playersSelectors[lv_p], "Herrscher8thAbil2Selected") == 1)) {
                 SoundChannelDSPRemove(PlayerGroupSingle(lv_p), c_soundCategoryAlert, "Imaginary");
                 SoundChannelDSPRemove(PlayerGroupSingle(lv_p), c_soundCategoryVoice, "Imaginary");
                 SoundChannelDSPRemove(PlayerGroupSingle(lv_p), c_soundCategoryAlert, "Imaginary2");
@@ -6095,7 +6104,7 @@ bool lib6D9D7845_gt_E5B9BBE5A283_Func (bool testConds, bool runActions) {
                 SoundtrackStopCurrent(PlayerGroupSingle(lv_p), c_soundtrackCategoryMusic, true);
                 SoundPlayForPlayer(SoundLink("TimeFractureOutro", -1), c_maxPlayers, PlayerGroupSingle(lv_p), 150.0, 0.0);
                 DialogControlFadeTransparency(lv_screenPortrait, PlayerGroupSingle(lv_p), 2.0, 100.0);
-                lv_playersSelecctors[lv_p] = null;
+                lv_playersSelectors[lv_p] = null;
                 auto8D6379BB_g = lv_playersUnits[lv_p];
                 auto8D6379BB_u = UnitGroupCount(auto8D6379BB_g, c_unitCountAll);
                 for (;; auto8D6379BB_u -= 1) {
@@ -6105,12 +6114,12 @@ bool lib6D9D7845_gt_E5B9BBE5A283_Func (bool testConds, bool runActions) {
                 }
                 if ((UnitBehaviorCount(lv_playersTargets[lv_p], "Herrscher8thAbil2") == 0)) {
                     auto8D3E698D_g = PlayerGroupAll();
-                    lv_p = -1;
+                    lv_p2 = -1;
                     while (true) {
-                        lv_p = PlayerGroupNextPlayer(auto8D3E698D_g, lv_p);
-                        if (lv_p < 0) { break; }
-                        if ((PlayerRace(lv_p) == "Zerg")) {
-                            auto567194D7_g = UnitGroupFilter(null, lv_p, lv_playersUnits[lv_p], UnitFilter(0, 0, (1 << c_targetFilterStructure) | (1 << c_targetFilterMissile), (1 << (c_targetFilterStasis - 32)) | (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32)) | (1 << (c_targetFilterSummoned - 32))), 0);
+                        lv_p2 = PlayerGroupNextPlayer(auto8D3E698D_g, lv_p2);
+                        if (lv_p2 < 0) { break; }
+                        if ((PlayerRace(lv_p2) != "Terr")) {
+                            auto567194D7_g = UnitGroup(null, lv_p2, RegionEntireMap(), UnitFilter(0, 0, (1 << c_targetFilterStructure) | (1 << c_targetFilterMissile), (1 << (c_targetFilterStasis - 32)) | (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32)) | (1 << (c_targetFilterSummoned - 32))), 0);
                             auto567194D7_u = UnitGroupCount(auto567194D7_g, c_unitCountAll);
                             for (;; auto567194D7_u -= 1) {
                                 lv_u = UnitGroupUnitFromEnd(auto567194D7_g, auto567194D7_u);
@@ -6133,7 +6142,7 @@ bool lib6D9D7845_gt_E5B9BBE5A283_Func (bool testConds, bool runActions) {
                 }
             }
 
-            if ((lv_playersSelecctors[lv_p] != null)) {
+            if ((lv_p >= 0) && (lv_playersSelectors[lv_p] != null)) {
                 lv_flag = true;
             }
 
@@ -6145,9 +6154,23 @@ bool lib6D9D7845_gt_E5B9BBE5A283_Func (bool testConds, bool runActions) {
         Wait(0.125, c_timeGame);
     }
     DialogDestroy(lv_dialog);
+    autoD0191002_g = lv_players;
+    lv_p = -1;
+    while (true) {
+        lv_p = PlayerGroupNextPlayer(autoD0191002_g, lv_p);
+        if (lv_p < 0) { break; }
+        if ((lv_playersSelectors[lv_p] != null)) {
+            UnitRemove(lv_playersSelectors[lv_p]);
+        }
+
+    }
     UnitCreateEffectUnit(lv_self, "Herrscher8thAbil2AddCharge", lv_self);
     Wait(5.0, c_timeGame);
     DialogDestroy(lv_screenDialog);
+    SoundChannelDSPRemove(PlayerGroupAll(), c_soundCategoryAlert, "Imaginary");
+    SoundChannelDSPRemove(PlayerGroupAll(), c_soundCategoryVoice, "Imaginary");
+    SoundChannelDSPRemove(PlayerGroupAll(), c_soundCategoryAlert, "Imaginary2");
+    SoundChannelDSPRemove(PlayerGroupAll(), c_soundCategoryVoice, "Imaginary2");
     return true;
 }
 

@@ -12,24 +12,139 @@
     <CBehaviorBuff default="1" id="StigmataTemplateB">
         <BehaviorFlags index="EnabledWhileDead" value="1"/>
         <InfoIcon value="Assets\Textures\##id##P.tga"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <MaxStackCount value="3"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff default="1" id="CBehaviorAttack1">
+        <InfoIcon value="Assets\Textures\terrainsetnumber_01.dds"/>
+        <Modification>
+            <WeaponEnableArray value="##unit##Attack1"/>
+            <WeaponDisableArray value="##unit##Attack2"/>
+            <WeaponDisableArray value="##unit##Attack3"/>
+            <WeaponDisableArray value="##unit##Attack4"/>
+            <WeaponDisableArray value="##unit##Attack5"/>
+        </Modification>
+        <InfoFlags index="Hidden" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff default="1" id="CBehaviorAttack2">
+        <InfoIcon value="Assets\Textures\terrainsetnumber_02.dds"/>
+        <Modification>
+            <BehaviorLinkDisableArray value="##unit##Attack1"/>
+            <WeaponEnableArray value="##unit##Attack2"/>
+            <WeaponDisableArray value="##unit##Attack1"/>
+            <WeaponDisableArray value="##unit##Attack3"/>
+            <WeaponDisableArray value="##unit##Attack4"/>
+            <WeaponDisableArray value="##unit##Attack5"/>
+        </Modification>
+        <InfoFlags index="Hidden" value="1"/>
+        <InitialEffect value="##unit##Attack2ReadyRemove"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff default="1" id="CBehaviorAttack3">
+        <InfoIcon value="Assets\Textures\terrainsetnumber_03.dds"/>
+        <InitialEffect value="##unit##Attack3ReadyRemove"/>
+        <Modification>
+            <BehaviorLinkDisableArray value="##unit##Attack1"/>
+            <WeaponEnableArray value="##unit##Attack3"/>
+            <WeaponDisableArray value="##unit##Attack1"/>
+            <WeaponDisableArray value="##unit##Attack2"/>
+            <WeaponDisableArray value="##unit##Attack4"/>
+            <WeaponDisableArray value="##unit##Attack5"/>
+        </Modification>
+        <InfoFlags index="Hidden" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff default="1" id="CBehaviorAttack4">
+        <InfoIcon value="Assets\Textures\terrainsetnumber_04.dds"/>
+        <InitialEffect value="##unit##Attack4ReadyRemove"/>
+        <Modification>
+            <BehaviorLinkDisableArray value="##unit##Attack1"/>
+            <WeaponEnableArray value="##unit##Attack4"/>
+            <WeaponDisableArray value="##unit##Attack1"/>
+            <WeaponDisableArray value="##unit##Attack2"/>
+            <WeaponDisableArray value="##unit##Attack3"/>
+            <WeaponDisableArray value="##unit##Attack5"/>
+        </Modification>
+        <InfoFlags index="Hidden" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff default="1" id="CBehaviorAttack5">
+        <InfoIcon value="Assets\Textures\terrainsetnumber_05.dds"/>
+        <InitialEffect value="##unit##Attack5ReadyRemove"/>
+        <Modification>
+            <BehaviorLinkDisableArray value="##unit##Attack1"/>
+            <WeaponEnableArray value="##unit##Attack5"/>
+            <WeaponDisableArray value="##unit##Attack1"/>
+            <WeaponDisableArray value="##unit##Attack2"/>
+            <WeaponDisableArray value="##unit##Attack3"/>
+            <WeaponDisableArray value="##unit##Attack4"/>
+        </Modification>
+        <InfoFlags index="Hidden" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff default="1" id="CBehaviorAttack2Ready">
+        <InfoFlags index="Hidden" value="1"/>
+        <RemoveValidatorArray value="UnitNotMoving"/>
+        <Duration value="1"/>
+        <Modification>
+            <BehaviorLinkDisableArray value="##unit##Attack1"/>
+            <WeaponEnableArray value="##unit##Attack2"/>
+            <WeaponDisableArray value="##unit##Attack1"/>
+            <WeaponDisableArray value="##unit##Attack3"/>
+            <WeaponDisableArray value="##unit##Attack4"/>
+            <WeaponDisableArray value="##unit##Attack5"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff default="1" id="CBehaviorAttack3Ready">
+        <InfoFlags index="Hidden" value="1"/>
+        <RemoveValidatorArray value="UnitNotMoving"/>
+        <Duration value="1"/>
+        <InitialEffect value="##unit##Attack2Remove"/>
+        <Modification>
+            <BehaviorLinkDisableArray value="##unit##Attack1"/>
+            <WeaponEnableArray value="##unit##Attack3"/>
+            <WeaponDisableArray value="##unit##Attack1"/>
+            <WeaponDisableArray value="##unit##Attack2"/>
+            <WeaponDisableArray value="##unit##Attack4"/>
+            <WeaponDisableArray value="##unit##Attack5"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff default="1" id="CBehaviorAttack4Ready">
+        <InfoFlags index="Hidden" value="1"/>
+        <RemoveValidatorArray value="UnitNotMoving"/>
+        <Duration value="1"/>
+        <InitialEffect value="##unit##Attack3Remove"/>
+        <Modification>
+            <BehaviorLinkDisableArray value="##unit##Attack1"/>
+            <WeaponEnableArray value="##unit##Attack4"/>
+            <WeaponDisableArray value="##unit##Attack1"/>
+            <WeaponDisableArray value="##unit##Attack2"/>
+            <WeaponDisableArray value="##unit##Attack3"/>
+            <WeaponDisableArray value="##unit##Attack5"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff default="1" id="CBehaviorAttack5Ready">
+        <InfoFlags index="Hidden" value="1"/>
+        <RemoveValidatorArray value="UnitNotMoving"/>
+        <Duration value="1"/>
+        <InitialEffect value="##unit##Attack4Remove"/>
+        <Modification>
+            <BehaviorLinkDisableArray value="##unit##Attack1"/>
+            <WeaponEnableArray value="##unit##Attack5"/>
+            <WeaponDisableArray value="##unit##Attack1"/>
+            <WeaponDisableArray value="##unit##Attack2"/>
+            <WeaponDisableArray value="##unit##Attack3"/>
+            <WeaponDisableArray value="##unit##Attack4"/>
+        </Modification>
+        <Alignment value="Positive"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="NoCommand">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Modification>
             <StateFlags index="Uncommandable" value="1"/>
         </Modification>
     </CBehaviorBuff>
     <CBehaviorBuff id="RO_060Barrage">
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Period value="0.3125"/>
         <PeriodicEffect value="RO_060BarrageSearch"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="2SecondsTimedLife">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="2"/>
         <ExpireEffect value="RemoveTarget"/>
         <Modification>
@@ -38,7 +153,6 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="5SecondsTimedLife">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="5"/>
         <ExpireEffect value="RemoveTarget"/>
         <Modification>
@@ -48,7 +162,6 @@
     <CBehaviorBuff id="AddonConstructPause">
         <BehaviorFlags index="Permanent" value="1"/>
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Requirements value="ShowIfHaveNoAddOnParent"/>
         <Modification>
             <AbilLinkDisableArray value="LightningRodUpgrade"/>
@@ -56,12 +169,10 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="BaTiRO010">
         <InfoIcon value="Assets\Textures\Buff_BaTi.tga"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <DisableValidatorArray value="LifeLTHalf"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="BeamTargetCD2">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <MaxStackCount value="65535"/>
         <MaxStackCountPerCaster value="1"/>
         <TimeScaleSource Value="Caster"/>
@@ -69,14 +180,12 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="BronyaC2Abil2">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="10"/>
         <Period value="0.0625"/>
         <PeriodicEffect value="BronyaC2Abil2PeriodicSearch"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="BronyaC2Weakness">
         <InfoIcon value="Assets\Textures\HonkaiStatusWeak.tga"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="0.125"/>
         <Modification>
             <DamageTotalMultiplier index="Spell" value="-0.2"/>
@@ -88,12 +197,10 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="BronyaC7Gun1AttackCD">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="0.25"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="BronyaC7Gun2ConstructTimedLife">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <DisplayDuration index="Self" value="1"/>
         <DisplayDuration index="Ally" value="1"/>
         <DisplayDuration index="Neutral" value="1"/>
@@ -117,15 +224,12 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="BronyaC7Motor">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="BronyaC7Weapon">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <MaxStackCount value="2"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="CannotLoad">
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Requirements value="SiegeTankUpgeadeNotResearched"/>
         <Modification>
             <StateFlags index="SuppressPassenger" value="1"/>
@@ -134,7 +238,6 @@
     <CBehaviorBuff id="CosmicJuggernautUltimate">
         <Alignment value="Positive"/>
         <InfoIcon value="Assets\Textures\btn-ability-zeratul-observer-sensorarray.dds"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <DisplayDuration index="Self" value="1"/>
         <DisplayDuration index="Ally" value="1"/>
         <DisplayDuration index="Neutral" value="1"/>
@@ -144,12 +247,10 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="CosmicJuggernautEmpty">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="0.5"/>
     </CBehaviorBuff>
     <CBehaviorAttribute id="Couple">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Modification>
             <DamageTotalMultiplier index="Spell" value="0.04"/>
             <DamageTotalMultiplier index="Melee" value="0.04"/>
@@ -163,30 +264,25 @@
     </CBehaviorAttribute>
     <CBehaviorBuff id="CoupleSeele">
         <InfoIcon value="Assets\Textures\Avatar_Bronya.tga"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Period value="0.5"/>
         <PeriodicEffect value="CoupleBronyaSet"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="CoupleMei">
         <InfoIcon value="Assets\Textures\Avatar_Kiana.tga"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Period value="0.5"/>
         <PeriodicEffect value="CoupleKianaSet"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="CoupleBronya">
         <InfoIcon value="Assets\Textures\Avatar_Seele.tga"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Period value="0.5"/>
         <PeriodicEffect value="CoupleSeeleSet"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="DizzyCD">
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="4"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="Fragile50">
         <Alignment value="Negative"/>
         <InfoIcon value="Assets\Textures\HonkaiStatusFrailty.tga"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="10"/>
         <Modification LifeArmorMultiplier="0.5" ShieldArmorMultiplier="0.5">
             <BehaviorLinkDisableArray value="Fragile80"/>
@@ -195,12 +291,10 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="CosmicJuggernautExit">
         <InfoIcon value="Assets\Textures\btn-ability-terran-unloadall.dds"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <InfoFlags index="Hidden" value="1"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="CosmicJuggernautEntrance">
         <InfoIcon value="Assets\Textures\btn-ability-terran-load.dds"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Period value="0.125"/>
         <PeriodicEffect value="GK2BlinkSearch"/>
         <InfoFlags index="Hidden" value="1"/>
@@ -208,7 +302,6 @@
     <CBehaviorBuff id="BronyaC7Buff">
         <BehaviorFlags index="EnabledWhileDead" value="1"/>
         <InfoIcon value="Assets\Textures\btn-ability-zeratul-warpprism-transferlink.dds"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <MaxStackCount value="64"/>
         <MaxStackCountPerCaster value="4"/>
         <Duration value="10"/>
@@ -222,10 +315,8 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="Herrscher8thAbil2B">
         <BehaviorFlags index="EnabledWhileDead" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Modification>
             <AbilClassDisableArray index="CAbil" value="1"/>
-            <AbilClassDisableArray index="CAbilProgress" value="1"/>
             <AbilClassDisableArray index="CAbilEffect" value="1"/>
             <AbilClassDisableArray index="CAbilQueueable" value="1"/>
             <AbilClassDisableArray index="CAbilRedirect" value="1"/>
@@ -236,56 +327,43 @@
             <AbilClassDisableArray index="CAbilBattery" value="1"/>
             <AbilClassDisableArray index="CAbilBeacon" value="1"/>
             <AbilClassDisableArray index="CAbilBehavior" value="1"/>
-            <AbilClassDisableArray index="CAbilBuild" value="1"/>
             <AbilClassDisableArray index="CAbilBuildable" value="1"/>
             <AbilClassDisableArray index="CAbilEffectInstant" value="1"/>
             <AbilClassDisableArray index="CAbilEffectTarget" value="1"/>
-            <AbilClassDisableArray index="CAbilHarvest" value="1"/>
             <AbilClassDisableArray index="CAbilInteract" value="1"/>
-            <AbilClassDisableArray index="CAbilInventory" value="1"/>
             <AbilClassDisableArray index="CAbilLearn" value="1"/>
             <AbilClassDisableArray index="CAbilMerge" value="1"/>
             <AbilClassDisableArray index="CAbilMergeable" value="1"/>
             <AbilClassDisableArray index="CAbilMorphPlacement" value="1"/>
             <AbilClassDisableArray index="CAbilPawn" value="1"/>
-            <AbilClassDisableArray index="CAbilQueue" value="1"/>
-            <AbilClassDisableArray index="CAbilRally" value="1"/>
             <AbilClassDisableArray index="CAbilRedirectInstant" value="1"/>
             <AbilClassDisableArray index="CAbilRedirectTarget" value="1"/>
             <AbilClassDisableArray index="CAbilResearch" value="1"/>
-            <AbilClassDisableArray index="CAbilRevive" value="1"/>
             <AbilClassDisableArray index="CAbilSpecialize" value="1"/>
             <AbilClassDisableArray index="CAbilTrain" value="1"/>
             <AbilClassDisableArray index="CAbilTransport" value="1"/>
-            <AbilClassDisableArray index="CAbilWarpable" value="1"/>
             <AbilClassDisableArray index="CAbilWarpTrain" value="1"/>
         </Modification>
         <InfoFlags index="Hidden" value="1"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="Herrscher8thAbil2">
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Modification>
             <StateFlags index="CannotDie" value="1"/>
         </Modification>
         <InfoFlags index="Hidden" value="1"/>
     </CBehaviorBuff>
-    <CBehaviorBuff id="Herrscher8thAbil2Selected">
-        <EditorCategories value="AbilityorEffectType:Units"/>
-    </CBehaviorBuff>
+    <CBehaviorBuff id="Herrscher8thAbil2Selected"/>
     <CBehaviorBuff id="Herrscher8thShield">
         <BehaviorFlags index="EnabledWhileDead" value="1"/>
         <InfoIcon value="Assets\Textures\btn-ability-zeratul-darktemplar-backtotheshadows.dds"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="Herrscher7thShield">
         <BehaviorFlags index="EnabledWhileDead" value="1"/>
         <InfoIcon value="Assets\Textures\btn-upgrade-stetmann-zerglinghardenedshield.dds"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="Herrscher7thWaveTarget">
         <InfoFlags index="Hidden" value="1"/>
         <InfoIcon value="Assets\Textures\btn-ability-protoss-arcshield.dds"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="40"/>
         <Period value="0.0625"/>
         <PeriodicEffect value="Herrscher7thWaveSearch"/>
@@ -300,7 +378,6 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="Herrscher6thUndead">
         <InfoIcon value="Assets\Textures\btn-upgrade-artanis-scarabsplashradius.dds"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <RemoveValidatorArray value="HPgt0"/>
         <FinalEffect value="Herrscher6thUndeadAB"/>
         <Modification>
@@ -309,7 +386,6 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="Herrscher9thDeathSkill">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <RemoveValidatorArray value="HPgt0"/>
         <FinalEffect value="Herrscher9thFinalSet"/>
         <Modification>
@@ -319,14 +395,12 @@
     <CBehaviorBuff id="Herrscher6thWeaponBehavior">
         <Alignment value="Negative"/>
         <InfoIcon value="Assets\Textures\btn-ability-zerg-acidspores.dds"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="14"/>
         <Modification>
             <StateFlags index="SuppressLifeRegen" value="1"/>
         </Modification>
     </CBehaviorBuff>
     <CBehaviorBuff id="Herrscher7thAbil1AirUnit">
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Period value="0.0625"/>
         <PeriodicEffect value="Herrscher7thAbil1AirUnitSet"/>
     </CBehaviorBuff>
@@ -349,7 +423,6 @@
     </CBehaviorAttribute>
     <CBehaviorBuff id="BronyaC7Gun1ConstructTimedLife">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <DisplayDuration index="Self" value="1"/>
         <DisplayDuration index="Ally" value="1"/>
         <DisplayDuration index="Neutral" value="1"/>
@@ -374,12 +447,10 @@
     <CBehaviorBuff id="HonkaiPalsyCD">
         <InfoFlags index="Hidden" value="1"/>
         <InfoIcon value="Assets\Textures\HonkaiStatusPalsy.tga"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="4"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="HonkaiHyperjumpInitialDelaySuppressWeapon">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Modification>
             <ModifyFlags index="SuppressMoving" value="1"/>
             <ModifyFlags index="SuppressTurning" value="1"/>
@@ -389,7 +460,6 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="HonkaiHyperjumpTeleport">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="2"/>
         <ExpireEffect value="HonkaiHyperjumpTeleportInAB"/>
         <Modification>
@@ -405,7 +475,6 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="HonkaiHyperjumpTeleportIn">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="0.6"/>
         <Modification>
             <ModifyFlags index="SuppressMoving" value="1"/>
@@ -418,7 +487,6 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="HonkaiHyperjumpTeleportOut">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="0.6"/>
         <ExpireEffect value="HonkaiHyperjumpTeleportSet"/>
         <Modification>
@@ -433,7 +501,6 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="HokaiHyperjumpTeleportOutTargetSuppressCollision">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="0.0625"/>
         <ExpireEffect value="SuicideRemove"/>
         <Modification>
@@ -447,21 +514,18 @@
         </Modification>
     </CBehaviorBuff>
     <CBehaviorBuff id="IceFieldFate" parent="TimedLife">
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <DisplayDuration index="Self" value="0"/>
         <DisplayDuration index="Ally" value="0"/>
         <Duration value="12"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="Herrscher4thShield">
         <InfoIcon value="Assets\Textures\btn-ability-mengsk-ghost-staticempblast.dds"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <BehaviorFlags index="EnabledWhileDead" value="1"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="Herrscher4thWaveTarget">
         <Alignment value="Positive"/>
         <InfoFlags index="Hidden" value="1"/>
         <InfoIcon value="Assets\Textures\btn-ability-protoss-arcshield.dds"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="1.5"/>
         <Period value="0.1875"/>
         <PeriodicEffect value="Herrscher4thWaveSearch"/>
@@ -476,7 +540,6 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="Herrscher5thIceField">
         <InfoIcon value="Assets\Textures\btn-ability-protoss-forcefield-color.dds"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <RemoveValidatorArray value="IceFieldRemove"/>
         <TimeScaleSource Value="Global"/>
         <Modification TimeScale="0.01" MoveSpeedMultiplier="0.01" AccelerationMultiplier="0.01">
@@ -490,36 +553,30 @@
     <CBehaviorBuff id="Herrscher6thDeathCloud">
         <Alignment value="Negative"/>
         <InfoIcon value="Assets\Textures\btn-ability-zerg-darkswarm.dds"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="1"/>
         <Period value="0.7"/>
         <PeriodicEffect value="Herrscher6thDeathCloudDamage"/>
         <Modification RangedWeaponRange="-3"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="B15Fire">
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <FinalEffect value="B15Thunder"/>
         <InfoFlags index="Hidden" value="1"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="B15Thunder">
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <FinalEffect value="B15Ice"/>
         <InfoFlags index="Hidden" value="1"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="B15Ice">
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <FinalEffect value="B15Fire"/>
         <InfoFlags index="Hidden" value="1"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="B23StrongAttackCD">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="20"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="B25Missile">
         <BehaviorFlags index="Permanent" value="1"/>
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <TimeScaleSource Value="Caster"/>
         <Duration value="0.8125"/>
         <PeriodicEffect value="WeaponB25EffectTrigger"/>
@@ -527,7 +584,6 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="B6Missile2TimedLife">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <TimeScaleSource Value="Caster"/>
         <DurationRandomMin value="2.5"/>
         <DurationRandomMax value="1.5"/>
@@ -538,7 +594,6 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="B7Buff">
         <InfoIcon value="Assets\Textures\Buff_DamageUp.tga"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <TimeScaleSource Value="Caster"/>
         <Duration value="3"/>
         <Modification>
@@ -547,11 +602,9 @@
         </Modification>
     </CBehaviorBuff>
     <CBehaviorBuff id="BaTi">
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <InfoIcon value="Assets\Textures\Buff_BaTi.tga"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="CannonCharge">
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <MaxStackCount value="65535"/>
         <TimeScaleSource Value="Caster"/>
         <Duration value="0.125"/>
@@ -560,23 +613,19 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="CannonLaserAttackCD01875">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="0.1875"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="CannonLaserAttackReset">
         <InfoFlags index="AlwaysUseGameText" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="0.625"/>
         <ExpireEffect value="CannonLaserChargeReset"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="CannonChargeComplete">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="CannonLaserCDAdd">
         <Alignment value="Negative"/>
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <DisplayDuration index="Self" value="1"/>
         <DisplayDuration index="Ally" value="1"/>
         <DisplayDuration index="Enemy" value="1"/>
@@ -587,17 +636,14 @@
     <CBehaviorBuff id="CannonLaserHeatReduce">
         <BehaviorFlags index="Permanent" value="1"/>
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Period value="0.25"/>
         <PeriodicEffect value="CannonLaserCDReduce"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="CannonLaserLv1">
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <MaxStackCount value="12"/>
         <InfoIcon value="Assets\Textures\terrainsetnumber_01.dds"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="CannonLaserLv2">
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <MaxStackCount value="12"/>
         <Modification>
             <BehaviorLinkDisableArray value="CannonLaserLv1"/>
@@ -605,7 +651,6 @@
         <InfoIcon value="Assets\Textures\terrainsetnumber_02.dds"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="CannonLaserLv3">
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <DisplayDuration index="Ally" value="1"/>
         <Modification>
             <BehaviorLinkDisableArray value="CannonLaserLv1"/>
@@ -616,7 +661,6 @@
     <CBehaviorBuff id="CannonLaserCD">
         <Alignment value="Negative"/>
         <InfoIcon value="Assets\Textures\btn-ability-dehaka-explosiveshot.dds"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <DisplayDuration index="Self" value="1"/>
         <DisplayDuration index="Ally" value="1"/>
         <DisplayDuration index="Enemy" value="1"/>
@@ -629,7 +673,6 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="DG_011Skill2Enable">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <RemoveValidatorArray value="DG_011SkillCanUse"/>
         <Duration value="0.3"/>
         <Modification>
@@ -637,11 +680,9 @@
         </Modification>
     </CBehaviorBuff>
     <CBehaviorBuff id="DG_011Skill2Count">
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <MaxStackCount value="65535"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="DG_013MissileB">
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Period value="0.125"/>
         <PeriodicEffect value="DG_013EffectUnit"/>
         <FinalEffect value="Suicide"/>
@@ -649,7 +690,6 @@
     <CBehaviorBuff id="DamageCalculate">
         <BehaviorFlags index="Permanent" value="1"/>
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <DamageResponse ModifyFraction="0" ModifyMinimumDamage="1" Priority="-127">
             <Kind index="Spell" value="0"/>
             <Kind index="Splash" value="0"/>
@@ -659,7 +699,6 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="DamageCalculate2">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <DamageResponse ModifyFraction="0" ModifyMinimumDamage="1" Priority="-127">
             <Kind index="Spell" value="0"/>
             <Kind index="Melee" value="0"/>
@@ -671,7 +710,6 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="DamageCalculate22">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <DamageResponse ModifyFraction="0" ModifyMinimumDamage="1" Priority="-127">
             <Kind index="Melee" value="0"/>
             <Kind index="Ranged" value="0"/>
@@ -683,7 +721,6 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="DamageCalculate222">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <DamageResponse ModifyFraction="0" ModifyMinimumDamage="1" Priority="-127">
             <Kind index="Spell" value="0"/>
             <Kind index="Melee" value="0"/>
@@ -697,59 +734,48 @@
         <BehaviorFlags index="Permanent" value="1"/>
         <BehaviorFlags index="EnabledWhileDead" value="1"/>
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="EvadeCoolDown">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="1"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="Herrscher2AbsorbMissile">
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Period value="0.0625"/>
         <PeriodicEffect value="Herrscher2RemovalSearch"/>
         <InfoFlags index="Hidden" value="1"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="Herrscher2ReboundMissile">
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Period value="0.0625"/>
         <PeriodicEffect value="Herrscher2ReboundTrigger"/>
         <InfoFlags index="Hidden" value="1"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="Herrscher2WeaponMark">
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <MaxStackCount value="4"/>
         <Duration value="10"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="Herrscher2ndBlinkMark">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="0.125"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="Herrscher2ndBlinkCanUse">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Period value="0.125"/>
         <PeriodicEffect value="Herrscher2ndBlinkAutoCast"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="Herrscher2ndShield">
         <InfoIcon value="Assets\Textures\btn-ability-protoss-hardenedshields-color.dds"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <BehaviorFlags index="EnabledWhileDead" value="1"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="Herrscher3rdBehaviorEffectCaster">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <MaxStackCount value="64"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="Herrscher3rdBehaviorEffectTargetMark">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <MaxStackCount value="64"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="Herrscher3rdBehaviorEffectTarget">
         <InfoIcon value="Assets\Textures\btn-number-1.dds"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="0.0625"/>
         <Period value="0.0625"/>
         <PeriodicEffect value="Herrscher3rdBehaviorEffectSwitch"/>
@@ -757,7 +783,6 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="Herrscher3rdBehaviorEffectTarget2">
         <InfoIcon value="Assets\Textures\btn-number-2.dds"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <RemoveValidatorArray value="NotHerrscher3rdBehaviorEffectTarget"/>
         <Duration value="0.0625"/>
         <Period value="0.0625"/>
@@ -766,7 +791,6 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="Herrscher3rdBehaviorEffectTarget3">
         <InfoIcon value="Assets\Textures\btn-number-3.dds"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <RemoveValidatorArray value="NotHerrscher3rdBehaviorEffectTarget"/>
         <RemoveValidatorArray value="NotHerrscher3rdBehaviorEffectTarget2"/>
         <Duration value="0.0625"/>
@@ -774,23 +798,19 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="Herrscher3rdShield">
         <InfoIcon value="Assets\Textures\btn-ability-mengsk-marauder-selfabsorbshield.dds"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <BehaviorFlags index="EnabledWhileDead" value="1"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="IcyUnit">
         <BehaviorFlags index="Permanent" value="1"/>
         <BehaviorFlags index="EnabledWhileDead" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="FireUnit">
         <BehaviorFlags index="Permanent" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="BronyaC2Shield">
         <Alignment value="Positive"/>
         <InfoFlags index="Hidden" value="1"/>
         <InfoIcon value="Assets\Textures\btn-ability-protoss-invulnerabilityshield.dds"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <DamageResponse>
             <Exhausted value="BronyaC2ShieldRemoveSet"/>
             <ModifyFraction value="0"/>
@@ -814,7 +834,6 @@
     </CBehaviorAttackModifier>
     <CBehaviorBuff id="K17AttackSpeed">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <DisableValidatorArray value="SelfAtTimeCrackFriendly"/>
         <Modification AttackSpeedMultiplier="1.8"/>
     </CBehaviorBuff>
@@ -822,7 +841,6 @@
         <Alignment value="Positive"/>
         <InfoFlags index="Hidden" value="1"/>
         <InfoIcon value="Assets\Textures\btn-ability-protoss-arcshield.dds"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="14"/>
         <Period value="0.7"/>
         <PeriodicEffect value="Herrscher4thWeaponSearch"/>
@@ -838,54 +856,45 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="CoupleKiana">
         <InfoIcon value="Assets\Textures\Avatar_Mei.tga"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Period value="0.5"/>
         <PeriodicEffect value="CoupleMeiSet"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="KianaC1Buff">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="20"/>
         <InitialEffect value="BatiStart"/>
         <FinalEffect value="BaTiEnd"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="KianaC2UltimateOff">
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <RemoveValidatorArray value="KianaC2Ultimate"/>
         <InfoFlags index="Hidden" value="1"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="BronyaLookForBuilding">
         <BehaviorFlags index="Permanent" value="1"/>
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <DisableValidatorArray value="BronyaBuildingAround"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="Kite">
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Modification>
             <StateFlags index="IsKiting" value="1"/>
         </Modification>
     </CBehaviorBuff>
     <CBehaviorBuff id="MHTDefence">
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Modification>
             <ModifyFlags index="DisableWeapons" value="1"/>
         </Modification>
     </CBehaviorBuff>
     <CBehaviorBuff id="MedivacCargo2">
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Modification>
             <BehaviorLinkDisableArray value="LoseHPOnCreep"/>
         </Modification>
     </CBehaviorBuff>
     <CBehaviorBuff id="MeiC2Blade">
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="15"/>
         <InfoIcon value="Assets\Textures\Skill_Mei_CK_004.tga"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="MeiC2Buff">
         <InfoIcon value="Assets\Textures\Skill_Mei_CK_001.tga"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="20"/>
         <Modification>
             <DamageDealtFraction index="Melee" value="0.4"/>
@@ -893,7 +902,6 @@
         </Modification>
     </CBehaviorBuff>
     <CBehaviorBuff id="MeiC2Wave">
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <RemoveValidatorArray value="MeiC2WaveEnd"/>
         <Duration value="5"/>
         <Period value="0.0625"/>
@@ -902,14 +910,10 @@
         <FinalEffect value="Suicide"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="MeiC2WaveDamage">
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <MaxStackCount value="48"/>
     </CBehaviorBuff>
-    <CBehaviorBuff id="MeiC2WaveMark">
-        <EditorCategories value="AbilityorEffectType:Units"/>
-    </CBehaviorBuff>
+    <CBehaviorBuff id="MeiC2WaveMark"/>
     <CBehaviorBuff id="NoClipAndNoWeapon">
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Modification>
             <ModifyFlags index="DisableWeapons" value="1"/>
             <StateFlags index="SuppressCollision" value="1"/>
@@ -918,31 +922,25 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="NoDeath">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Modification>
             <StateFlags index="CannotDie" value="1"/>
         </Modification>
     </CBehaviorBuff>
     <CBehaviorBuff id="NoDeathSa">
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <RemoveValidatorArray value="HPgt0"/>
         <FinalEffect value="SaDeath"/>
         <Modification>
             <StateFlags index="CannotDie" value="1"/>
         </Modification>
     </CBehaviorBuff>
-    <CBehaviorBuff id="Protect90Ex">
-        <EditorCategories value="AbilityorEffectType:Units"/>
-    </CBehaviorBuff>
+    <CBehaviorBuff id="Protect90Ex"/>
     <CBehaviorBuff id="TurretBuff">
         <Alignment value="Positive"/>
         <BehaviorFlags index="Permanent" value="1"/>
         <BehaviorFlags index="EnabledWhileDead" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <InfoFlags index="Hidden" value="1"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="SaShield">
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <DisplayDuration index="Self" value="1"/>
         <DisplayDuration index="Ally" value="1"/>
         <DisplayDuration index="Neutral" value="1"/>
@@ -951,7 +949,6 @@
         <Duration value="10000"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="SaBreakDown">
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="25"/>
         <Modification>
             <ModifyFlags index="DisableAbils" value="1"/>
@@ -965,7 +962,6 @@
         <InfoFlags index="Hidden" value="1"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="SaStopWeapon">
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Modification>
             <WeaponDisableArray value="SaBackwardWeapon"/>
             <WeaponDisableArray value="SaForwardWeapon"/>
@@ -973,7 +969,6 @@
         <Duration value="0.5"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="SaDeath">
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="60"/>
         <ExpireEffect value="NoDeathSa"/>
         <Modification>
@@ -992,12 +987,9 @@
         <PeriodCount value="1"/>
         <PeriodicEffect value="AddCasterLife1500"/>
     </CBehaviorBuff>
-    <CBehaviorBuff id="Protect50">
-        <EditorCategories value="AbilityorEffectType:Units"/>
-    </CBehaviorBuff>
+    <CBehaviorBuff id="Protect50"/>
     <CBehaviorBuff id="RO_040Attack">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <DisplayDuration index="Ally" value="1"/>
         <Duration value="1.625"/>
         <InitialEffect value="BatiStart"/>
@@ -1012,7 +1004,6 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="RO_042Attack">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <DisplayDuration index="Ally" value="1"/>
         <Duration value="1.625"/>
         <Period value="0.0625"/>
@@ -1029,7 +1020,6 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="RO_040ChargePreapre">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <DisplayDuration index="Ally" value="1"/>
         <Duration value="1.625"/>
         <InitialEffect value="BatiStart"/>
@@ -1044,7 +1034,6 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="RO_040Charge">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <DisplayDuration index="Ally" value="1"/>
         <Duration value="1"/>
         <Period value="0.0625"/>
@@ -1060,7 +1049,6 @@
     </CBehaviorBuff>
     <CBehaviorJump id="BronyaC7Jump">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <TriggerHeightDeltaMax value="12"/>
         <InitiateRangeUp value="6"/>
         <InitiateRangeDown value="6"/>
@@ -1075,7 +1063,6 @@
         <LandCheckRadius value="8"/>
     </CBehaviorJump>
     <CBehaviorBuff id="SaBackward">
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Modification>
             <BehaviorLinkDisableArray value="SaForward"/>
             <WeaponEnableArray value="SaBackwardWeapon"/>
@@ -1089,7 +1076,6 @@
         <InfoFlags index="Hidden" value="1"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="SaForward">
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Modification>
             <TurretEnableArray value="SaForward"/>
             <TurretDisableArray value="SaBackward"/>
@@ -1097,7 +1083,6 @@
         <InfoFlags index="Hidden" value="1"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="SaIntro">
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="3.5"/>
         <Modification>
             <ModifyFlags index="DisableAbils" value="1"/>
@@ -1107,7 +1092,6 @@
         </Modification>
     </CBehaviorBuff>
     <CBehaviorBuff id="SaMorph">
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="7.75"/>
         <Modification>
             <ModifyFlags index="DisableAbils" value="1"/>
@@ -1119,7 +1103,6 @@
         </Modification>
     </CBehaviorBuff>
     <CBehaviorBuff id="SaIntroHeight">
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="0.0625"/>
         <Modification Height="8">
             <HeightTime index="Stop" value="3.5"/>
@@ -1127,14 +1110,12 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="NoSelection">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Modification>
             <StateFlags index="Unselectable" value="1"/>
         </Modification>
     </CBehaviorBuff>
     <CBehaviorBuff id="SaUltimatePrepare">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Modification>
             <ModifyFlags index="DisableAbils" value="1"/>
             <ModifyFlags index="DisableWeapons" value="1"/>
@@ -1142,11 +1123,9 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="SaUltimateCast">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="SaUltimateCeaseCore">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Modification>
             <ModifyFlags index="DisableAbils" value="1"/>
             <ModifyFlags index="DisableWeapons" value="1"/>
@@ -1155,13 +1134,11 @@
         </Modification>
     </CBehaviorBuff>
     <CBehaviorBuff id="SaUltimateRotation">
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="20"/>
         <FinalEffect value="KillTarget"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="SeeleC1Attack22">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <InitialEffect value="SeeleC1Attack2ReadyRemove"/>
         <Modification>
             <BehaviorLinkDisableArray value="SeeleC1Attack1"/>
@@ -1174,7 +1151,6 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="MeiC2EvadeBackwardSpeed">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="0.75"/>
         <Modification UnifiedMoveSpeedFactor="0.4">
             <ModifyFlags index="SuppressTurning" value="1"/>
@@ -1183,7 +1159,6 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="MeiC2EvadeForwardSpeed">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="0.63"/>
         <Modification UnifiedMoveSpeedFactor="0.4">
             <ModifyFlags index="SuppressTurning" value="1"/>
@@ -1192,13 +1167,11 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="SeeleC1UltChargeSpeed">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="0.5"/>
         <Modification UnifiedMoveSpeedFactor="0.75"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="SeeleC1EvadeForwardSpeed">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="0.63"/>
         <Modification UnifiedMoveSpeedFactor="-0.01">
             <ModifyFlags index="SuppressTurning" value="1"/>
@@ -1207,7 +1180,6 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="SeeleC1EvadeBackwardSpeed">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="0.76"/>
         <Modification UnifiedMoveSpeedFactor="-0.35">
             <ModifyFlags index="SuppressTurning" value="1"/>
@@ -1228,7 +1200,6 @@
     </CBehaviorAttribute>
     <CBehaviorBuff id="SeeleC1UltChargeOpen">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="2"/>
         <Modification>
             <WeaponEnableArray value="SeeleC1UltCharge"/>
@@ -1236,7 +1207,6 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="SeeleC1UltCharge">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Modification>
             <WeaponEnableArray value="SeeleC1UltCharge"/>
         </Modification>
@@ -1244,7 +1214,6 @@
     <CBehaviorBuff id="SeeleC1Ultimate">
         <Alignment value="Positive"/>
         <InfoIcon value="Assets\Textures\HonkaiStatusOutbreak.tga"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <RemoveValidatorArray value="SeeleC1GE0"/>
         <Period value="0.5"/>
         <PeriodicEffect value="SeeleC1ConsumeShadow30"/>
@@ -1266,48 +1235,37 @@
     <CBehaviorBuff id="KianaLookForBuilding">
         <BehaviorFlags index="Permanent" value="1"/>
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <DisableValidatorArray value="KianaBuildingAround"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="LightningRodFactory2">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="IceTabletFactory">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="IceTabletFactory2">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="FurnaceFactory">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="FurnaceFactory2">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="LightningRodFactory3">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="LoseHPOnCreep">
         <Alignment value="Negative"/>
         <InfoIcon value="Assets\Textures\HonkaiStatusBleeding.tga"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <DisableValidatorArray value="TargetOnCreep"/>
         <DisableValidatorArray value="NotInMedivac"/>
         <Period value="0.25"/>
         <PeriodicEffect value="DamageBleedOnCreep"/>
     </CBehaviorBuff>
-    <CBehaviorBuff id="MedivacCargo">
-        <EditorCategories value="AbilityorEffectType:Units"/>
-    </CBehaviorBuff>
+    <CBehaviorBuff id="MedivacCargo"/>
     <CBehaviorBuff id="MedivacHPBoost">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="10"/>
         <Modification>
             <VitalMaxArray index="Life" value="1.5"/>
@@ -1316,7 +1274,6 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="RO_031AbilFate">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <DisplayDuration index="Self" value="1"/>
         <DisplayDuration index="Ally" value="1"/>
         <DisplayDuration index="Neutral" value="1"/>
@@ -1332,10 +1289,8 @@
             <Cooldown Location="Unit" TimeStart="5" TimeUse="12"/>
         </Cost>
         <InfoIcon value="Assets\Textures\KianaC2_Behavior.tga"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="KianaC2Evade2">
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="0.4"/>
         <DamageResponse>
             <Handled value="KianaC4EvadeTimeCrack"/>
@@ -1348,7 +1303,6 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="KianaC4Behavior2">
         <InfoIcon value="Assets\Textures\KianaC4Attack.tga"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Modification>
             <BehaviorLinkDisableArray value="KianaC4Behavior22"/>
             <WeaponDisableArray value="KianaC4Weapon"/>
@@ -1357,7 +1311,6 @@
     <CBehaviorBuff id="KianaC4Behavior22">
         <InfoFlags index="Hidden" value="1"/>
         <InfoIcon value="Assets\Textures\KianaC4Attack.tga"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Modification>
             <WeaponDisableArray value="KianaC4Weapon2_1"/>
             <WeaponDisableArray value="KianaC4Weapon2_22"/>
@@ -1365,23 +1318,19 @@
         </Modification>
     </CBehaviorBuff>
     <CBehaviorBuff id="KianaC4BranchRef">
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="0.8"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="KianaC4EvadeSpecial">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="0.4"/>
         <ExpireEffect value="KianaC4EvadeTimeCrackSpecial"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="KianaC4TimeRef">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="0.4"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="KinacC4EvadeShadowBehavior">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="0.4"/>
         <Period value="0.0625"/>
         <ExpireEffect value="Suicide"/>
@@ -1391,41 +1340,33 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="LightningRodFactory">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="Lightninged">
         <InfoIcon value="Assets\Textures\ui_tipicon_campaign_zerus03-zurvanlightning.dds"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="Lightninged2">
         <InfoIcon value="Assets\Textures\ui_tipicon_campaign_zerus03-zurvanlightning.dds"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="Lightninged3">
         <InfoIcon value="Assets\Textures\ui_tipicon_campaign_zerus03-zurvanlightning.dds"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="LightningedDamage">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <RemoveValidatorArray value="TargetIsNotMachine2"/>
         <Duration value="0.1875"/>
         <Period value="0.25"/>
         <PeriodicEffect value="LightningedDamageDamage"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="MissileRebound">
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="5"/>
         <FinalEffect value="Suicide"/>
         <KillCredit Value="Caster"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="Herrscher2ndUltimateUnit">
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <KillCredit Value="Caster"/>
         <InfoFlags index="Hidden" value="1"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="RODrop">
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <TimeScaleSource Value="Caster"/>
         <Duration value="2"/>
         <FinalEffect value="RODropEnd"/>
@@ -1441,7 +1382,6 @@
         </Modification>
     </CBehaviorBuff>
     <CBehaviorBuff id="RODropEnd">
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <TimeScaleSource Value="Caster"/>
         <Duration value="1"/>
         <InitialEffect value="RODropEndPersistent"/>
@@ -1453,7 +1393,6 @@
         </Modification>
     </CBehaviorBuff>
     <CBehaviorBuff id="RO_010Abli1Brhavior">
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="3"/>
         <Period value="0.0625"/>
         <PeriodicEffect value="RO_010Abli1BrhaviorSet"/>
@@ -1468,7 +1407,6 @@
         <InitialEffect value="RO_010Abli1BrhaviorTag"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="RO_010Abli1Brhavior2">
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="4"/>
         <Period value="0.0625"/>
         <InitialEffect value="RO_010Abli1BrhaviorTag2"/>
@@ -1483,7 +1421,6 @@
         </Modification>
     </CBehaviorBuff>
     <CBehaviorBuff id="RO_010Abli1BrhaviorTag">
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Modification>
             <ModifyFlags index="DisableWeapons" value="1"/>
             <ModifyFlags index="SuppressTurning" value="1"/>
@@ -1493,7 +1430,6 @@
         </Modification>
     </CBehaviorBuff>
     <CBehaviorBuff id="RO_010Abli1BrhaviorTag2">
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Modification>
             <ModifyFlags index="DisableWeapons" value="1"/>
             <ModifyFlags index="SuppressTurning" value="1"/>
@@ -1503,29 +1439,24 @@
         </Modification>
     </CBehaviorBuff>
     <CBehaviorBuff id="RO_030FindTarget">
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="0.375"/>
         <ExpireEffect value="RO_030FindTarget2"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="RO_030FindTarget2">
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="10"/>
         <Period value="0.0625"/>
         <PeriodicEffect value="RO_030Abli1FindTarget"/>
         <FinalEffect value="Suicide"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="RO_031AbilUnitMoveToTarget">
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Period value="0.0625"/>
         <PeriodicEffect value="RO_031AbilFindTarget"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="RO_031AbilUnitExplode">
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Period value="0.0625"/>
         <PeriodicEffect value="RO_031AbilExplodeSet"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="RO_032IceMissile">
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <DisplayDuration index="Ally" value="1"/>
         <DisplayDuration index="Neutral" value="1"/>
         <DisplayDuration index="Enemy" value="1"/>
@@ -1533,7 +1464,6 @@
         <ExpireEffect value="RO_032MissileExplode"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="RO_030MissileLife">
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <DisplayDuration index="Ally" value="1"/>
         <DisplayDuration index="Neutral" value="1"/>
         <DisplayDuration index="Enemy" value="1"/>
@@ -1541,7 +1471,6 @@
         <FinalEffect value="SuicideRecycle"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="RO_033FireMissile">
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <DisplayDuration index="Ally" value="1"/>
         <DisplayDuration index="Neutral" value="1"/>
         <DisplayDuration index="Enemy" value="1"/>
@@ -1549,7 +1478,6 @@
         <ExpireEffect value="RO_033MissileExplode"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="RO_050BreakDown">
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <DisplayDuration index="Ally" value="1"/>
         <DisplayDuration index="Neutral" value="1"/>
         <DisplayDuration index="Enemy" value="1"/>
@@ -1566,12 +1494,10 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="RO_050CD">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="10"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="RO_050Normal">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Period value="0.125"/>
         <PeriodicEffect value="RO_050BreakDown"/>
         <Modification>
@@ -1580,7 +1506,6 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="RO_050BreakDownEnd">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="3.5"/>
         <FinalEffect value="RO_050CD"/>
         <Modification>
@@ -1590,11 +1515,9 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="RadiusReduce">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Modification RadiusMultiplier="0.25"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="SevenThundersOfRetribution">
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Modification ShieldArmorBonus="5">
             <StateFlags index="UnitAttrOnHeroic" value="1"/>
             <LifeArmorBonus value="5"/>
@@ -1611,7 +1534,6 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="SevenThundersOfRetributionEffect">
         <InfoIcon value="Assets\Textures\btn-ability-terran-electricfield.dds"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="30"/>
         <Period value="0.5"/>
         <PeriodicEffect value="SevenThundersOfRetributionAbilityEffectDamageSet"/>
@@ -1622,12 +1544,10 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="BronyaC7Tracker">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <TimeScaleSource Value="Global"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="DeathSkill">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <TimeScaleSource Value="Global"/>
         <FinalEffect value="DelayedSuicide"/>
         <Modification>
@@ -1648,18 +1568,14 @@
             <StateFlags index="CannotDie" value="1"/>
         </Modification>
     </CBehaviorBuff>
-    <CBehaviorBuff id="Sizex2">
-        <EditorCategories value="AbilityorEffectType:Units"/>
-    </CBehaviorBuff>
+    <CBehaviorBuff id="Sizex2"/>
     <CBehaviorBuff id="SpecialKill">
         <BehaviorFlags index="EnabledWhileDead" value="1"/>
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="1"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="SpeedOver10">
         <InfoIcon value="Assets\Textures\btn-ability-terran-liftoff.dds"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="0.125"/>
     </CBehaviorBuff>
     <CBehaviorAttackModifier id="StigmataCG1" parent="StigmataTemplateAM">
@@ -1671,7 +1587,6 @@
     </CBehaviorAttackModifier>
     <CBehaviorBuff id="StigmataIceBuff">
         <InfoIcon value="Assets\Textures\HonkaiStatusFrozen.tga"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="5"/>
         <Modification>
             <DamageTakenFraction index="NoProc" value="0.3"/>
@@ -1679,7 +1594,6 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="StigmataBuff">
         <InfoIcon value="Assets\Textures\HonkaiStatusWeak.tga"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="5"/>
         <Modification>
             <UnifiedDamageTakenFraction index="Spell" value="0.2"/>
@@ -1694,7 +1608,6 @@
         </DamageResponse>
     </CBehaviorBuff>
     <CBehaviorBuff id="StigmataThunderBuff">
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="5"/>
         <InfoIcon value="Assets\Textures\HonkaiStatusPalsy.tga"/>
         <Modification>
@@ -1739,7 +1652,6 @@
     </CBehaviorAttackModifier>
     <CBehaviorBuff id="StigmataCG3">
         <InfoIcon value="Assets\Textures\StigmataCG3P.tga"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <MaxStackCount value="3"/>
         <Modification>
             <VitalRegenArray index="Life" value="4"/>
@@ -1840,7 +1752,6 @@
     </CBehaviorAttackModifier>
     <CBehaviorBuff id="StigmataFireBuff">
         <InfoIcon value="Assets\Textures\HonkaiStatusBurning.tga"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="5"/>
         <Modification>
             <DamageTakenFraction index="Splash" value="0.3"/>
@@ -1848,7 +1759,6 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="StigmataPhyBuff">
         <InfoIcon value="Assets\Textures\HonkaiStatusBleeding.tga"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="5"/>
         <Modification>
             <DamageTakenFraction index="Melee" value="0.25"/>
@@ -1861,31 +1771,26 @@
     <CBehaviorBuff id="TimeCrackSelf">
         <InfoFlags index="Hidden" value="1"/>
         <InfoIcon value="Assets\Textures\HonkaiStatusTime.tga"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="0.3125"/>
         <TimeScaleSource Value="Global"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="TimeCrackFriendly">
         <InfoFlags index="Hidden" value="1"/>
         <InfoIcon value="Assets\Textures\HonkaiStatusTime.tga"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="0.3125"/>
         <TimeScaleSource Value="Global"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="Boost">
         <InfoIcon value="Assets\Textures\HonkaiStatusTime.tga"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Modification TimeScale="10"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="TimeLock">
         <InfoIcon value="Assets\Textures\HonkaiStatusTime.tga"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Modification TimeScale="0.1"/>
         <TimeScaleSource Value="Global"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="TornadoTimedLife">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <DisplayDuration index="Ally" value="1"/>
         <DisplayDuration index="Neutral" value="1"/>
         <DisplayDuration index="Enemy" value="1"/>
@@ -1902,7 +1807,6 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="Transfusion2">
         <InfoIcon value="Assets\Textures\btn-ability-zerg-transfusion-color.dds"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <RemoveValidatorArray value="TargetNot6thB"/>
         <Duration value="10"/>
         <Period value="0.0625"/>
@@ -1910,20 +1814,17 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="UL_040">
         <InfoIcon value="Assets\Textures\btn-techupgrade-terran-combatshield.dds"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <DisableValidatorArray value="NotFlying"/>
         <DisableValidatorArray value="CasterNotDizzy"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="UL_040Remove">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Modification>
             <BehaviorLinkDisableArray value="UL_040"/>
         </Modification>
     </CBehaviorBuff>
     <CBehaviorBuff id="UlBuff">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <BehaviorFlags index="Permanent" value="1"/>
         <BehaviorFlags index="EnabledWhileDead" value="1"/>
     </CBehaviorBuff>
@@ -1939,13 +1840,11 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="Herrscher1stBehavior">
         <InfoIcon value="Assets\Textures\Herrscher1st_pattern.dds"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Period value="0.5"/>
         <PeriodicEffect value="Herrscher1stAddBehavior"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="Herrscher1stBehavior2">
         <InfoIcon value="Assets\Textures\Herrscher1st_pattern.dds"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="2"/>
         <Modification MoveSpeedMultiplier="1.4" AttackSpeedMultiplier="1.2">
             <VitalRegenArray index="Life" value="2"/>
@@ -1955,7 +1854,6 @@
     <CBehaviorBuff id="HerrscherConstructBehavior">
         <BehaviorFlags index="Permanent" value="1"/>
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Modification>
             <AttackTargetPriority value="20"/>
             <LifeArmorMultiplier value="0"/>
@@ -1979,7 +1877,6 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="HerrscherConstructTimedLife">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <DisplayDuration index="Self" value="1"/>
         <DisplayDuration index="Ally" value="1"/>
         <DisplayDuration index="Neutral" value="1"/>
@@ -2004,7 +1901,6 @@
     <CBehaviorBuff id="HonkaiBleed">
         <Alignment value="Negative"/>
         <InfoIcon value="Assets\Textures\HonkaiStatusBleeding.tga"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <RemoveValidatorArray value="CanApplyDebuff"/>
         <TimeScaleSource Value="Global"/>
         <Period value="0.5"/>
@@ -2012,11 +1908,9 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="DG_011Skill1Speed">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Modification UnifiedMoveSpeedFactor="4"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="DG_013EffectB">
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="4"/>
         <FinalEffect value="Suicide"/>
         <Period value="0.125"/>
@@ -2025,7 +1919,6 @@
     <CBehaviorBuff id="HonkaiPalsy">
         <Alignment value="Negative"/>
         <InfoIcon value="Assets\Textures\HonkaiStatusPalsy.tga"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Modification>
             <ModifyFlags index="DisableWeapons" value="1"/>
             <ModifyFlags index="SuppressMoving" value="1"/>
@@ -2044,7 +1937,6 @@
     <CBehaviorBuff id="HonkaiFrozen">
         <Alignment value="Negative"/>
         <InfoIcon value="Assets\Textures\HonkaiStatusFrozen.tga"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Modification>
             <ModifyFlags index="DisableWeapons" value="1"/>
             <ModifyFlags index="SuppressMoving" value="1"/>
@@ -2063,7 +1955,6 @@
     <CBehaviorBuff id="HonkaiSlow">
         <Alignment value="Negative"/>
         <InfoIcon value="Assets\Textures\Buff_slow.tga"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Modification MoveSpeedMultiplier="0.5"/>
         <BehaviorFlags index="EnabledWhileDead" value="1"/>
     </CBehaviorBuff>
@@ -2084,7 +1975,6 @@
         <DamageDealtFraction index="NoProc" value="1.5"/>
     </CBehaviorAttackModifier>
     <CBehaviorBuff id="KianaC4Branch">
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <RemoveValidatorArray value="NotFlying"/>
         <RemoveValidatorArray value="NotFlyEnd"/>
         <RemoveValidatorArray value="NotThrowStandup"/>
@@ -2137,7 +2027,6 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="RobotUnit">
         <Alignment value="Positive"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Modification>
             <BehaviorLinkDisableArray value="HonkaiDizzy"/>
             <BehaviorLinkDisableArray value="HonkaiBleed"/>
@@ -2155,96 +2044,45 @@
         <Contents value="1000000"/>
     </CBehaviorResource>
     <CBehaviorBuff id="K5B">
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="1.5"/>
         <FinalEffect value="Suicide"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="Fragile80">
         <Alignment value="Negative"/>
         <InfoIcon value="Assets\Textures\HonkaiStatusFrailty.tga"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="10"/>
         <Modification LifeArmorMultiplier="0.2" ShieldArmorMultiplier="0.2">
             <BehaviorLinkDisableArray value="Fragile50"/>
         </Modification>
         <BehaviorFlags index="EnabledWhileDead" value="1"/>
     </CBehaviorBuff>
-    <CBehaviorBuff id="KianaC2Attack2Ready">
-        <InfoFlags index="Hidden" value="1"/>
-        <InfoIcon value="Assets\Textures\decalnumber2_diffuse.dds"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
-        <RemoveValidatorArray value="UnitNotMoving"/>
-        <Duration value="1"/>
+    <CBehaviorBuff id="KianaC2Attack2Ready" parent="CBehaviorAttack2Ready" unit="KianaC2">
         <Modification>
-            <BehaviorLinkDisableArray value="KianaC2Attack1"/>
-            <WeaponEnableArray value="KianaC2Attack2"/>
-            <WeaponDisableArray value="KianaC2Attack1"/>
-            <WeaponDisableArray value="KianaC2Attack3"/>
-            <WeaponDisableArray value="KianaC2Attack4"/>
-            <WeaponDisableArray value="KianaC2Attack5"/>
             <WeaponDisableArray value="KianaC2Branch3"/>
             <WeaponDisableArray value="KianaC2Branch4"/>
         </Modification>
     </CBehaviorBuff>
-    <CBehaviorBuff id="KianaC2Attack3Ready">
-        <InfoFlags index="Hidden" value="1"/>
-        <InfoIcon value="Assets\Textures\terrainsetnumber_03.dds"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
-        <RemoveValidatorArray value="UnitNotMoving"/>
-        <Duration value="1"/>
-        <InitialEffect value="KianaC2Attack2Remove"/>
+    <CBehaviorBuff id="KianaC2Attack3Ready" parent="CBehaviorAttack3Ready" unit="KianaC2">
         <Modification>
-            <BehaviorLinkDisableArray value="KianaC2Attack1"/>
-            <WeaponEnableArray value="KianaC2Attack3"/>
-            <WeaponDisableArray value="KianaC2Attack1"/>
-            <WeaponDisableArray value="KianaC2Attack2"/>
-            <WeaponDisableArray value="KianaC2Attack4"/>
-            <WeaponDisableArray value="KianaC2Attack5"/>
             <WeaponDisableArray value="KianaC2Branch3"/>
             <WeaponDisableArray value="KianaC2Branch4"/>
         </Modification>
     </CBehaviorBuff>
-    <CBehaviorBuff id="KianaC2Attack4Ready">
-        <InfoFlags index="Hidden" value="1"/>
-        <InfoIcon value="Assets\Textures\terrainsetnumber_04.dds"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
-        <RemoveValidatorArray value="UnitNotMoving"/>
-        <Duration value="1"/>
-        <InitialEffect value="KianaC2Attack3Remove"/>
+    <CBehaviorBuff id="KianaC2Attack4Ready" parent="CBehaviorAttack4Ready" unit="KianaC2">
         <Modification>
-            <BehaviorLinkDisableArray value="KianaC2Attack1"/>
-            <WeaponEnableArray value="KianaC2Attack4"/>
-            <WeaponDisableArray value="KianaC2Attack1"/>
-            <WeaponDisableArray value="KianaC2Attack2"/>
-            <WeaponDisableArray value="KianaC2Attack3"/>
-            <WeaponDisableArray value="KianaC2Attack5"/>
             <WeaponDisableArray value="KianaC2Branch3"/>
             <WeaponDisableArray value="KianaC2Branch4"/>
         </Modification>
     </CBehaviorBuff>
-    <CBehaviorBuff id="KianaC2Attack5Ready">
-        <InfoFlags index="Hidden" value="1"/>
-        <InfoIcon value="Assets\Textures\terrainsetnumber_05.dds"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
-        <RemoveValidatorArray value="UnitNotMoving"/>
-        <Duration value="1"/>
-        <InitialEffect value="KianaC2Attack4Remove"/>
+    <CBehaviorBuff id="KianaC2Attack5Ready" parent="CBehaviorAttack5Ready" unit="KianaC2">
         <Modification>
-            <BehaviorLinkDisableArray value="KianaC2Attack1"/>
-            <WeaponEnableArray value="KianaC2Attack5"/>
-            <WeaponDisableArray value="KianaC2Attack1"/>
-            <WeaponDisableArray value="KianaC2Attack2"/>
-            <WeaponDisableArray value="KianaC2Attack3"/>
-            <WeaponDisableArray value="KianaC2Attack4"/>
             <WeaponDisableArray value="KianaC2Branch3"/>
             <WeaponDisableArray value="KianaC2Branch4"/>
         </Modification>
-        <Alignment value="Positive"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="KianaC2Branch3Ready">
         <InfoFlags index="Hidden" value="1"/>
         <InfoIcon value="Assets\Textures\terrainsetnumber_05.dds"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <RemoveValidatorArray value="UnitNotMoving"/>
         <Duration value="1"/>
         <InitialEffect value="KianaC2Attack2Remove"/>
@@ -2262,7 +2100,6 @@
     <CBehaviorBuff id="KianaC2Branch4Ready">
         <InfoFlags index="Hidden" value="1"/>
         <InfoIcon value="Assets\Textures\terrainsetnumber_05.dds"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <RemoveValidatorArray value="UnitNotMoving"/>
         <Duration value="1"/>
         <InitialEffect value="KianaC2Branch3Remove"/>
@@ -2279,12 +2116,10 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="KianaC2BranchReady">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="1"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="KianaC2Evade">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="0.4"/>
         <DamageResponse>
             <ModifyFraction value="0"/>
@@ -2319,7 +2154,6 @@
         <InfoIcon value="Assets\Textures\AvatarQT.tga"/>
     </CBehaviorAttackModifier>
     <CBehaviorBuff id="KianaC2Ultimate">
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <RemoveValidatorArray value="CasterIsAlive"/>
         <RemoveValidatorArray value="hasEnergy"/>
         <Period value="0.2"/>
@@ -2370,7 +2204,6 @@
         <InfoArray index="1" removed="1"/>
     </CBehaviorSpawn>
     <CBehaviorBuff id="Throw">
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="2"/>
         <FinalEffect value="ThrowStandup"/>
         <Modification>
@@ -2388,7 +2221,6 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="KinacC2EvadeShadowBehavior">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="0.4"/>
         <Period value="0.0625"/>
         <ExpireEffect value="Suicide"/>
@@ -2402,7 +2234,6 @@
     <CBehaviorBuff id="HonkaiDizzy">
         <Alignment value="Negative"/>
         <InfoIcon value="Assets\Textures\HonkaiStatusDizzy.tga"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Modification>
             <ModifyFlags index="DisableAbils" value="1"/>
             <ModifyFlags index="DisableWeapons" value="1"/>
@@ -2420,7 +2251,6 @@
     <CBehaviorBuff id="K23Damage2">
         <Alignment value="Negative"/>
         <InfoIcon value="Assets\Textures\Pistol_K23.tga"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="15"/>
         <Period value="1"/>
         <PeriodicEffect value="K23Dizzy"/>
@@ -2435,14 +2265,12 @@
     <CBehaviorBuff id="HonkaiBurn">
         <Alignment value="Negative"/>
         <InfoIcon value="Assets\Textures\HonkaiStatusBurning.tga"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="10"/>
         <Period value="0.5"/>
         <PeriodicEffect value="DamageFire"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="K23Move">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <TimeScaleSource Value="Caster"/>
         <Duration value="0.8"/>
         <Modification MoveSpeedMultiplier="1.5">
@@ -2450,137 +2278,80 @@
         </Modification>
     </CBehaviorBuff>
     <CBehaviorBuff id="KianaC2Attack1Speed">
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="0.46"/>
         <Modification UnifiedMoveSpeedFactor="0.6"/>
         <InfoFlags index="Hidden" value="1"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="KianaC2EvadeBackwardSpeed">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="0.76"/>
         <Modification UnifiedMoveSpeedFactor="-0.35">
             <ModifyFlags index="SuppressTurning" value="1"/>
         </Modification>
     </CBehaviorBuff>
     <CBehaviorBuff id="KianaC2Branch3Speed">
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="0.25"/>
         <Modification UnifiedMoveSpeedFactor="0.26"/>
         <InfoFlags index="Hidden" value="1"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="KianaC2Attack2Speed">
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="0.2"/>
         <Modification UnifiedMoveSpeedFactor="0.36"/>
         <InfoFlags index="Hidden" value="1"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="KianaC2Branch4Speed">
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="0.6"/>
         <Modification UnifiedMoveSpeedFactor="-0.69"/>
         <InfoFlags index="Hidden" value="1"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="KianaC2Attack5Speed">
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="0.32"/>
         <Modification UnifiedMoveSpeedFactor="0.3"/>
         <InfoFlags index="Hidden" value="1"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="KianaC2Attack4Speed">
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="0.32"/>
         <Modification UnifiedMoveSpeedFactor="0.1"/>
         <InfoFlags index="Hidden" value="1"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="KianaC2Attack3Speed">
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="0.32"/>
         <Modification UnifiedMoveSpeedFactor="-0.25"/>
         <InfoFlags index="Hidden" value="1"/>
     </CBehaviorBuff>
-    <CBehaviorBuff id="KianaC2Attack3">
-        <InfoIcon value="Assets\Textures\terrainsetnumber_03.dds"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
-        <InitialEffect value="KianaC2Attack3ReadyRemove"/>
+    <CBehaviorBuff id="KianaC2Attack1" parent="CBehaviorAttack1" unit="KianaC2">
         <Modification>
-            <BehaviorLinkDisableArray value="KianaC2Attack1"/>
-            <WeaponEnableArray value="KianaC2Attack3"/>
-            <WeaponDisableArray value="KianaC2Attack1"/>
-            <WeaponDisableArray value="KianaC2Attack2"/>
-            <WeaponDisableArray value="KianaC2Attack4"/>
-            <WeaponDisableArray value="KianaC2Attack5"/>
             <WeaponDisableArray value="KianaC2Branch3"/>
             <WeaponDisableArray value="KianaC2Branch4"/>
         </Modification>
-        <InfoFlags index="Hidden" value="1"/>
     </CBehaviorBuff>
-    <CBehaviorBuff id="KianaC2Attack1">
-        <InfoIcon value="Assets\Textures\terrainsetnumber_01.dds"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
+    <CBehaviorBuff id="KianaC2Attack2" parent="CBehaviorAttack2" unit="KianaC2">
         <Modification>
-            <WeaponEnableArray value="KianaC2Attack1"/>
-            <WeaponDisableArray value="KianaC2Attack2"/>
-            <WeaponDisableArray value="KianaC2Attack3"/>
-            <WeaponDisableArray value="KianaC2Attack4"/>
-            <WeaponDisableArray value="KianaC2Attack5"/>
             <WeaponDisableArray value="KianaC2Branch3"/>
             <WeaponDisableArray value="KianaC2Branch4"/>
         </Modification>
-        <InfoFlags index="Hidden" value="1"/>
     </CBehaviorBuff>
-    <CBehaviorBuff id="KianaC2Attack2">
-        <InfoIcon value="Assets\Textures\decalnumber2_diffuse.dds"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
+    <CBehaviorBuff id="KianaC2Attack3" parent="CBehaviorAttack3" unit="KianaC2">
         <Modification>
-            <BehaviorLinkDisableArray value="KianaC2Attack1"/>
-            <WeaponEnableArray value="KianaC2Attack2"/>
-            <WeaponDisableArray value="KianaC2Attack1"/>
-            <WeaponDisableArray value="KianaC2Attack3"/>
-            <WeaponDisableArray value="KianaC2Attack4"/>
-            <WeaponDisableArray value="KianaC2Attack5"/>
             <WeaponDisableArray value="KianaC2Branch3"/>
             <WeaponDisableArray value="KianaC2Branch4"/>
         </Modification>
-        <InfoFlags index="Hidden" value="1"/>
-        <InitialEffect value="KianaC2Attack2ReadyRemove"/>
     </CBehaviorBuff>
-    <CBehaviorBuff id="KianaC2Attack4">
-        <InfoIcon value="Assets\Textures\terrainsetnumber_04.dds"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
-        <InitialEffect value="KianaC2Attack4ReadyRemove"/>
+    <CBehaviorBuff id="KianaC2Attack4" parent="CBehaviorAttack4" unit="KianaC2">
         <Modification>
-            <BehaviorLinkDisableArray value="KianaC2Attack1"/>
-            <WeaponEnableArray value="KianaC2Attack4"/>
-            <WeaponDisableArray value="KianaC2Attack1"/>
-            <WeaponDisableArray value="KianaC2Attack2"/>
-            <WeaponDisableArray value="KianaC2Attack3"/>
-            <WeaponDisableArray value="KianaC2Attack5"/>
             <WeaponDisableArray value="KianaC2Branch3"/>
             <WeaponDisableArray value="KianaC2Branch4"/>
         </Modification>
-        <InfoFlags index="Hidden" value="1"/>
     </CBehaviorBuff>
-    <CBehaviorBuff id="KianaC2Attack5">
-        <InfoIcon value="Assets\Textures\terrainsetnumber_05.dds"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
-        <InitialEffect value="KianaC2Attack5ReadyRemove"/>
+    <CBehaviorBuff id="KianaC2Attack5" parent="CBehaviorAttack5" unit="KianaC2">
         <Modification>
-            <BehaviorLinkDisableArray value="KianaC2Attack1"/>
-            <WeaponEnableArray value="KianaC2Attack5"/>
-            <WeaponDisableArray value="KianaC2Attack1"/>
-            <WeaponDisableArray value="KianaC2Attack2"/>
-            <WeaponDisableArray value="KianaC2Attack3"/>
-            <WeaponDisableArray value="KianaC2Attack4"/>
             <WeaponDisableArray value="KianaC2Branch3"/>
             <WeaponDisableArray value="KianaC2Branch4"/>
         </Modification>
-        <InfoFlags index="Hidden" value="1"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="KianaC2Branch3">
         <InfoFlags index="Hidden" value="1"/>
         <InfoIcon value="Assets\Textures\terrainsetnumber_05.dds"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <InitialEffect value="KianaC2Branch3ReadyRemove"/>
         <Modification>
             <BehaviorLinkDisableArray value="KianaC2Attack1"/>
@@ -2596,7 +2367,6 @@
     <CBehaviorBuff id="KianaC2Branch4">
         <InfoFlags index="Hidden" value="1"/>
         <InfoIcon value="Assets\Textures\terrainsetnumber_05.dds"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <InitialEffect value="KianaC2Branch4ReadyRemove"/>
         <Modification>
             <BehaviorLinkDisableArray value="KianaC2Attack1"/>
@@ -2611,7 +2381,6 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="KianaC2EvadeForwardSpeed">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="0.63"/>
         <Modification UnifiedMoveSpeedFactor="0.5">
             <ModifyFlags index="SuppressTurning" value="1"/>
@@ -2619,14 +2388,12 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="NoUnfire2s">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="2"/>
         <Modification>
             <BehaviorLinkDisableArray value="GhostHoldFireB"/>
         </Modification>
     </CBehaviorBuff>
     <CBehaviorBuff id="SkillInvincible">
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="5"/>
         <InfoFlags index="Hidden" value="1"/>
         <BehaviorFlags index="EnabledWhileDead" value="1"/>
@@ -2636,7 +2403,6 @@
         </Modification>
     </CBehaviorBuff>
     <CBehaviorBuff id="Flying">
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Modification>
             <ModifyFlags index="DisableAbils" value="1"/>
             <ModifyFlags index="SuppressMoving" value="1"/>
@@ -2653,7 +2419,6 @@
         </DamageResponse>
     </CBehaviorBuff>
     <CBehaviorBuff id="ThrowStandup">
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <RemoveValidatorArray value="NotFlying"/>
         <Duration value="1.5"/>
         <Modification>
@@ -2665,7 +2430,6 @@
         </Modification>
     </CBehaviorBuff>
     <CBehaviorBuff id="FlyEnd">
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <RemoveValidatorArray value="NotThrowStandup"/>
         <RemoveValidatorArray value="NotThrow"/>
         <Duration value="0.833"/>
@@ -2681,7 +2445,6 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="DeadgalBirth">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="0.9"/>
         <Modification>
             <ModifyFlags index="DisableAbils" value="1"/>
@@ -2693,33 +2456,28 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="TimeCrackUnit">
         <InfoIcon value="Assets\Textures\HonkaiStatusTime.tga"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="0.3125"/>
         <Modification TimeScale="0.3332"/>
         <TimeScaleSource Value="Global"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="TimeCrackMissle">
         <InfoIcon value="Assets\Textures\HonkaiStatusTime.tga"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="0.3125"/>
         <Modification TimeScale="0.02"/>
         <TimeScaleSource Value="Global"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="UnfireCountDown">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <DisableValidatorArray value="Unfire"/>
         <Duration value="5"/>
         <ExpireEffect value="Unfire"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="UnitMoving">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <DisableValidatorArray value="UnitMovingOrSpeedG0"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="Unfire">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <RemoveValidatorArray value="Unfire"/>
         <Modification>
             <BehaviorLinkDisableArray value="UnfireCountDown"/>
@@ -2727,21 +2485,17 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="UnitMoveForward">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Period value="0.0625"/>
         <PeriodicEffect value="MoveFowardForce"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="UnitThrowII">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="FrozenCD">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="4"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="Untimed">
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Modification>
             <BehaviorLinkDisableArray value="TimeCrackUnit"/>
             <BehaviorLinkDisableArray value="TimeCrackMissle"/>
@@ -2753,17 +2507,14 @@
     <CBehaviorBuff id="VBuff">
         <BehaviorFlags index="Permanent" value="1"/>
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="VortexWarpable">
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="1"/>
         <Modification>
             <ModifyFlags index="Warpable" value="1"/>
         </Modification>
     </CBehaviorBuff>
     <CBehaviorBuff id="VortexWarpableHeight">
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="0.25"/>
         <Modification Height="0.01" MoveSpeedMultiplier="0.4">
             <ModifyFlags index="DisableWeapons" value="1"/>
@@ -2775,21 +2526,17 @@
     <CBehaviorBuff id="WeaponUseB22">
         <InfoFlags index="Hidden" value="1"/>
         <InfoIcon value="Assets\Textures\Weapon_Cannon_B7_48_5.tga"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="WeaponUseB25">
         <InfoFlags index="Hidden" value="1"/>
         <InfoIcon value="Assets\Textures\Weapon_Cannon_B7_48_5.tga"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="WeaponUseB26">
         <InfoFlags index="Hidden" value="1"/>
         <InfoIcon value="Assets\Textures\Weapon_Cannon_B7_48_5.tga"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="StarOfEdenWorld">
         <InfoIcon value="Assets\Textures\Weapon_Cannon_B7_48_5.tga"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Modification ShieldArmorBonus="5">
             <LifeArmorBonus value="5"/>
             <VitalMaxArray index="Shields" value="600"/>
@@ -2802,7 +2549,6 @@
     <CBehaviorBuff id="WeaponUseB34">
         <InfoFlags index="Hidden" value="1"/>
         <InfoIcon value="Assets\Textures\Weapon_Cannon_B7_48_5.tga"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Modification ShieldArmorBonus="2">
             <VitalMaxArray index="Shields" value="30"/>
         </Modification>
@@ -2810,7 +2556,6 @@
     <CBehaviorBuff id="WeaponUseB28">
         <InfoFlags index="Hidden" value="1"/>
         <InfoIcon value="Assets\Textures\Weapon_Cannon_B7_48_5.tga"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Modification ShieldArmorBonus="5">
             <StateFlags index="UnitAttrOnHeroic" value="1"/>
             <LifeArmorBonus value="5"/>
@@ -2825,7 +2570,6 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="WeaponUseB5">
         <InfoIcon value="Assets\Textures\Weapon_Cannon_B5_47_5.tga"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <InfoFlags index="Hidden" value="1"/>
     </CBehaviorBuff>
     <CBehaviorAttackModifier id="WeaponUseB18">
@@ -2844,7 +2588,6 @@
     </CBehaviorAttackModifier>
     <CBehaviorBuff id="WeaponUseB15">
         <InfoIcon value="Assets\Textures\Weapon_Cannon_B7_48_5.tga"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <InitialEffect value="B15Fire"/>
         <FinalEffect value="B15RemoveAll"/>
         <InfoFlags index="Hidden" value="1"/>
@@ -2863,7 +2606,6 @@
     <CBehaviorBuff id="WeaponUseB1">
         <InfoFlags index="Hidden" value="1"/>
         <InfoIcon value="Assets\Textures\Weapon_Cannon_B5_47_5.tga"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
     </CBehaviorBuff>
     <CBehaviorAttackModifier id="WeaponUseB6">
         <BehaviorFlags index="Permanent" value="0"/>
@@ -2874,7 +2616,6 @@
     </CBehaviorAttackModifier>
     <CBehaviorBuff id="WeaponUseK23">
         <InfoIcon value="Assets\Textures\Pistol_K23.tga"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Period value="1"/>
         <PeriodicEffect value="K23BehaviorSearch"/>
         <BehaviorFlags index="EnabledWhileDead" value="1"/>
@@ -2888,348 +2629,108 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="WeaponUseK5">
         <InfoIcon value="Assets\Textures\Pistol_K5.tga"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <BehaviorFlags index="EnabledWhileDead" value="1"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="BronyaConstructCannon">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Period value="0.25"/>
         <PeriodicEffect value="BronyaConstructCannonSearchTarget"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="BronyaConstructCannonBehavior">
         <BehaviorFlags index="Permanent" value="1"/>
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="0.33"/>
         <FinalEffect value="BronyaConstructCannonAttack"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="BronyaConstructCannonBehavior2">
         <BehaviorFlags index="Permanent" value="1"/>
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="0.467"/>
         <FinalEffect value="Suicide"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="WeaponUseK17">
         <InfoIcon value="Assets\Textures\Pistol_K17.tga"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <BehaviorFlags index="EnabledWhileDead" value="1"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="WeaponUseB7">
         <InfoIcon value="Assets\Textures\Weapon_Cannon_B7_48_5.tga"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <InfoFlags index="Hidden" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="WeaponUseM13">
+        <BehaviorFlags index="EnabledWhileDead" value="1"/>
+        <InfoIcon value="Assets\Textures\Pistol_K5.tga"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="WidowMineBurrowedCloakingBehavior">
         <DisableValidatorArray value="WidowMineAttackOnCooldown"/>
     </CBehaviorBuff>
-    <CBehaviorBuff id="SeeleC1Attack1">
-        <EditorCategories value="AbilityorEffectType:Units"/>
-        <Modification>
-            <WeaponEnableArray value="SeeleC1Attack1"/>
-            <WeaponDisableArray value="SeeleC1Attack2"/>
-            <WeaponDisableArray value="SeeleC1Attack3"/>
-            <WeaponDisableArray value="SeeleC1Attack4"/>
-            <WeaponDisableArray value="SeeleC1Attack5"/>
-        </Modification>
-        <InfoFlags index="Hidden" value="1"/>
-    </CBehaviorBuff>
-    <CBehaviorBuff id="SeeleC1Attack2">
-        <EditorCategories value="AbilityorEffectType:Units"/>
-        <Modification>
-            <BehaviorLinkDisableArray value="SeeleC1Attack1"/>
-            <WeaponEnableArray value="SeeleC1Attack2"/>
-            <WeaponDisableArray value="SeeleC1Attack1"/>
-            <WeaponDisableArray value="SeeleC1Attack3"/>
-            <WeaponDisableArray value="SeeleC1Attack4"/>
-            <WeaponDisableArray value="SeeleC1Attack5"/>
-        </Modification>
-        <InfoFlags index="Hidden" value="1"/>
-        <InitialEffect value="SeeleC1Attack2ReadyRemove"/>
-    </CBehaviorBuff>
-    <CBehaviorBuff id="SeeleC1Attack3">
-        <EditorCategories value="AbilityorEffectType:Units"/>
-        <InitialEffect value="SeeleC1Attack3ReadyRemove"/>
-        <Modification>
-            <BehaviorLinkDisableArray value="SeeleC1Attack1"/>
-            <WeaponEnableArray value="SeeleC1Attack3"/>
-            <WeaponDisableArray value="SeeleC1Attack1"/>
-            <WeaponDisableArray value="SeeleC1Attack2"/>
-            <WeaponDisableArray value="SeeleC1Attack4"/>
-            <WeaponDisableArray value="SeeleC1Attack5"/>
-        </Modification>
-        <InfoFlags index="Hidden" value="1"/>
-    </CBehaviorBuff>
-    <CBehaviorBuff id="SeeleC1Attack4">
-        <EditorCategories value="AbilityorEffectType:Units"/>
-        <InitialEffect value="SeeleC1Attack4ReadyRemove"/>
-        <Modification>
-            <BehaviorLinkDisableArray value="SeeleC1Attack1"/>
-            <WeaponEnableArray value="SeeleC1Attack4"/>
-            <WeaponDisableArray value="SeeleC1Attack1"/>
-            <WeaponDisableArray value="SeeleC1Attack2"/>
-            <WeaponDisableArray value="SeeleC1Attack3"/>
-            <WeaponDisableArray value="SeeleC1Attack5"/>
-        </Modification>
-        <InfoFlags index="Hidden" value="1"/>
-    </CBehaviorBuff>
-    <CBehaviorBuff id="SeeleC1Attack5">
-        <EditorCategories value="AbilityorEffectType:Units"/>
-        <InitialEffect value="SeeleC1Attack5ReadyRemove"/>
-        <Modification>
-            <BehaviorLinkDisableArray value="SeeleC1Attack1"/>
-            <WeaponEnableArray value="SeeleC1Attack5"/>
-            <WeaponDisableArray value="SeeleC1Attack1"/>
-            <WeaponDisableArray value="SeeleC1Attack2"/>
-            <WeaponDisableArray value="SeeleC1Attack3"/>
-            <WeaponDisableArray value="SeeleC1Attack4"/>
-        </Modification>
-        <InfoFlags index="Hidden" value="1"/>
-    </CBehaviorBuff>
+    <CBehaviorBuff id="SeeleC1Attack1" parent="CBehaviorAttack1" unit="SeeleC1"/>
+    <CBehaviorBuff id="SeeleC1Attack2" parent="CBehaviorAttack2" unit="SeeleC1"/>
+    <CBehaviorBuff id="SeeleC1Attack3" parent="CBehaviorAttack3" unit="SeeleC1"/>
+    <CBehaviorBuff id="SeeleC1Attack4" parent="CBehaviorAttack4" unit="SeeleC1"/>
+    <CBehaviorBuff id="SeeleC1Attack5" parent="CBehaviorAttack5" unit="SeeleC1"/>
     <CBehaviorBuff id="SeeleC1Attack1Speed">
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="0.3125"/>
         <Modification UnifiedMoveSpeedFactor="0.93"/>
         <InfoFlags index="Hidden" value="1"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="SeeleC1Attack2Speed">
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="0.2"/>
         <Modification UnifiedMoveSpeedFactor="0.58"/>
         <InfoFlags index="Hidden" value="1"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="SeeleC1Attack3Speed">
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="1.025"/>
         <Modification UnifiedMoveSpeedFactor="0.52"/>
         <InfoFlags index="Hidden" value="1"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="SeeleC1Attack4Speed">
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="0.25"/>
         <Modification UnifiedMoveSpeedFactor="1.81"/>
         <InfoFlags index="Hidden" value="1"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="SeeleC1Attack5Speed">
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="0.8125"/>
         <Modification UnifiedMoveSpeedFactor="0.5"/>
         <InfoFlags index="Hidden" value="1"/>
     </CBehaviorBuff>
-    <CBehaviorBuff id="SeeleC1Attack2Ready">
-        <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
-        <RemoveValidatorArray value="UnitNotMoving"/>
-        <Duration value="1"/>
-        <Modification>
-            <BehaviorLinkDisableArray value="SeeleC1Attack1"/>
-            <WeaponEnableArray value="SeeleC1Attack2"/>
-            <WeaponDisableArray value="SeeleC1Attack1"/>
-            <WeaponDisableArray value="SeeleC1Attack3"/>
-            <WeaponDisableArray value="SeeleC1Attack4"/>
-            <WeaponDisableArray value="SeeleC1Attack5"/>
-        </Modification>
-    </CBehaviorBuff>
-    <CBehaviorBuff id="SeeleC1Attack3Ready">
-        <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
-        <RemoveValidatorArray value="UnitNotMoving"/>
-        <Duration value="1"/>
-        <InitialEffect value="SeeleC1Attack2Remove"/>
-        <Modification>
-            <BehaviorLinkDisableArray value="SeeleC1Attack1"/>
-            <WeaponEnableArray value="SeeleC1Attack3"/>
-            <WeaponDisableArray value="SeeleC1Attack1"/>
-            <WeaponDisableArray value="SeeleC1Attack2"/>
-            <WeaponDisableArray value="SeeleC1Attack4"/>
-            <WeaponDisableArray value="SeeleC1Attack5"/>
-        </Modification>
-    </CBehaviorBuff>
-    <CBehaviorBuff id="SeeleC1Attack4Ready">
-        <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
-        <RemoveValidatorArray value="UnitNotMoving"/>
-        <Duration value="1"/>
-        <InitialEffect value="SeeleC1Attack3Remove"/>
-        <Modification>
-            <BehaviorLinkDisableArray value="SeeleC1Attack1"/>
-            <WeaponEnableArray value="SeeleC1Attack4"/>
-            <WeaponDisableArray value="SeeleC1Attack1"/>
-            <WeaponDisableArray value="SeeleC1Attack2"/>
-            <WeaponDisableArray value="SeeleC1Attack3"/>
-            <WeaponDisableArray value="SeeleC1Attack5"/>
-        </Modification>
-    </CBehaviorBuff>
-    <CBehaviorBuff id="SeeleC1Attack5Ready">
-        <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
-        <RemoveValidatorArray value="UnitNotMoving"/>
-        <Duration value="1"/>
-        <InitialEffect value="SeeleC1Attack4Remove"/>
-        <Modification>
-            <BehaviorLinkDisableArray value="SeeleC1Attack1"/>
-            <WeaponEnableArray value="SeeleC1Attack5"/>
-            <WeaponDisableArray value="SeeleC1Attack1"/>
-            <WeaponDisableArray value="SeeleC1Attack2"/>
-            <WeaponDisableArray value="SeeleC1Attack3"/>
-            <WeaponDisableArray value="SeeleC1Attack4"/>
-        </Modification>
-        <Alignment value="Positive"/>
-    </CBehaviorBuff>
-    <CBehaviorBuff id="MeiC2Attack1">
-        <EditorCategories value="AbilityorEffectType:Units"/>
-        <Modification>
-            <WeaponEnableArray value="MeiC2Attack1"/>
-            <WeaponDisableArray value="MeiC2Attack2"/>
-            <WeaponDisableArray value="MeiC2Attack3"/>
-            <WeaponDisableArray value="MeiC2Attack4"/>
-            <WeaponDisableArray value="MeiC2Attack5"/>
-        </Modification>
-        <InfoFlags index="Hidden" value="1"/>
-    </CBehaviorBuff>
-    <CBehaviorBuff id="MeiC2Attack2">
-        <EditorCategories value="AbilityorEffectType:Units"/>
-        <Modification>
-            <BehaviorLinkDisableArray value="MeiC2Attack1"/>
-            <WeaponEnableArray value="MeiC2Attack2"/>
-            <WeaponDisableArray value="MeiC2Attack1"/>
-            <WeaponDisableArray value="MeiC2Attack3"/>
-            <WeaponDisableArray value="MeiC2Attack4"/>
-            <WeaponDisableArray value="MeiC2Attack5"/>
-        </Modification>
-        <InfoFlags index="Hidden" value="1"/>
-        <InitialEffect value="MeiC2Attack2ReadyRemove"/>
-    </CBehaviorBuff>
-    <CBehaviorBuff id="MeiC2Attack3">
-        <EditorCategories value="AbilityorEffectType:Units"/>
-        <InitialEffect value="MeiC2Attack3ReadyRemove"/>
-        <Modification>
-            <BehaviorLinkDisableArray value="MeiC2Attack1"/>
-            <WeaponEnableArray value="MeiC2Attack3"/>
-            <WeaponDisableArray value="MeiC2Attack1"/>
-            <WeaponDisableArray value="MeiC2Attack2"/>
-            <WeaponDisableArray value="MeiC2Attack4"/>
-            <WeaponDisableArray value="MeiC2Attack5"/>
-        </Modification>
-        <InfoFlags index="Hidden" value="1"/>
-    </CBehaviorBuff>
-    <CBehaviorBuff id="MeiC2Attack4">
-        <EditorCategories value="AbilityorEffectType:Units"/>
-        <InitialEffect value="MeiC2Attack4ReadyRemove"/>
-        <Modification>
-            <BehaviorLinkDisableArray value="MeiC2Attack1"/>
-            <WeaponEnableArray value="MeiC2Attack4"/>
-            <WeaponDisableArray value="MeiC2Attack1"/>
-            <WeaponDisableArray value="MeiC2Attack2"/>
-            <WeaponDisableArray value="MeiC2Attack3"/>
-            <WeaponDisableArray value="MeiC2Attack5"/>
-        </Modification>
-        <InfoFlags index="Hidden" value="1"/>
-    </CBehaviorBuff>
-    <CBehaviorBuff id="MeiC2Attack5">
-        <EditorCategories value="AbilityorEffectType:Units"/>
-        <InitialEffect value="MeiC2Attack5ReadyRemove"/>
-        <Modification>
-            <BehaviorLinkDisableArray value="MeiC2Attack1"/>
-            <WeaponEnableArray value="MeiC2Attack5"/>
-            <WeaponDisableArray value="MeiC2Attack1"/>
-            <WeaponDisableArray value="MeiC2Attack2"/>
-            <WeaponDisableArray value="MeiC2Attack3"/>
-            <WeaponDisableArray value="MeiC2Attack4"/>
-        </Modification>
-        <InfoFlags index="Hidden" value="1"/>
-    </CBehaviorBuff>
+    <CBehaviorBuff id="SeeleC1Attack2Ready" parent="CBehaviorAttack2Ready" unit="SeeleC1"/>
+    <CBehaviorBuff id="SeeleC1Attack3Ready" parent="CBehaviorAttack3Ready" unit="SeeleC1"/>
+    <CBehaviorBuff id="SeeleC1Attack4Ready" parent="CBehaviorAttack4Ready" unit="SeeleC1"/>
+    <CBehaviorBuff id="SeeleC1Attack5Ready" parent="CBehaviorAttack5Ready" unit="SeeleC1"/>
+    <CBehaviorBuff id="MeiC2Attack1" parent="CBehaviorAttack1" unit="MeiC2"/>
+    <CBehaviorBuff id="MeiC2Attack2" parent="CBehaviorAttack2" unit="MeiC2"/>
+    <CBehaviorBuff id="MeiC2Attack3" parent="CBehaviorAttack3" unit="MeiC2"/>
+    <CBehaviorBuff id="MeiC2Attack4" parent="CBehaviorAttack4" unit="MeiC2"/>
+    <CBehaviorBuff id="MeiC2Attack5" parent="CBehaviorAttack5" unit="MeiC2"/>
     <CBehaviorBuff id="MeiC2Attack1Speed">
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="0.1875"/>
         <Modification UnifiedMoveSpeedFactor="-0.4"/>
         <InfoFlags index="Hidden" value="1"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="MeiC2Attack2Speed">
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="0.375"/>
         <Modification UnifiedMoveSpeedFactor="-0.4"/>
         <InfoFlags index="Hidden" value="1"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="MeiC2Attack3Speed">
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="0.125"/>
         <Modification UnifiedMoveSpeedFactor="-0.4"/>
         <InfoFlags index="Hidden" value="1"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="MeiC2Attack4Speed">
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="0.25"/>
         <Modification UnifiedMoveSpeedFactor="-0.4"/>
         <InfoFlags index="Hidden" value="1"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="MeiC2Attack5Speed">
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="0.3125"/>
         <Modification UnifiedMoveSpeedFactor="-0.2"/>
         <InfoFlags index="Hidden" value="1"/>
     </CBehaviorBuff>
-    <CBehaviorBuff id="MeiC2Attack2Ready">
-        <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
-        <RemoveValidatorArray value="UnitNotMoving"/>
-        <Duration value="1"/>
-        <Modification>
-            <BehaviorLinkDisableArray value="MeiC2Attack1"/>
-            <WeaponEnableArray value="MeiC2Attack2"/>
-            <WeaponDisableArray value="MeiC2Attack1"/>
-            <WeaponDisableArray value="MeiC2Attack3"/>
-            <WeaponDisableArray value="MeiC2Attack4"/>
-            <WeaponDisableArray value="MeiC2Attack5"/>
-        </Modification>
-    </CBehaviorBuff>
-    <CBehaviorBuff id="MeiC2Attack3Ready">
-        <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
-        <RemoveValidatorArray value="UnitNotMoving"/>
-        <Duration value="1"/>
-        <InitialEffect value="MeiC2Attack2Remove"/>
-        <Modification>
-            <BehaviorLinkDisableArray value="MeiC2Attack1"/>
-            <WeaponEnableArray value="MeiC2Attack3"/>
-            <WeaponDisableArray value="MeiC2Attack1"/>
-            <WeaponDisableArray value="MeiC2Attack2"/>
-            <WeaponDisableArray value="MeiC2Attack4"/>
-            <WeaponDisableArray value="MeiC2Attack5"/>
-        </Modification>
-    </CBehaviorBuff>
-    <CBehaviorBuff id="MeiC2Attack4Ready">
-        <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
-        <RemoveValidatorArray value="UnitNotMoving"/>
-        <Duration value="1"/>
-        <InitialEffect value="MeiC2Attack3Remove"/>
-        <Modification>
-            <BehaviorLinkDisableArray value="MeiC2Attack1"/>
-            <WeaponEnableArray value="MeiC2Attack4"/>
-            <WeaponDisableArray value="MeiC2Attack1"/>
-            <WeaponDisableArray value="MeiC2Attack2"/>
-            <WeaponDisableArray value="MeiC2Attack3"/>
-            <WeaponDisableArray value="MeiC2Attack5"/>
-        </Modification>
-    </CBehaviorBuff>
-    <CBehaviorBuff id="MeiC2Attack5Ready">
-        <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
-        <RemoveValidatorArray value="UnitNotMoving"/>
-        <Duration value="1"/>
-        <InitialEffect value="MeiC2Attack4Remove"/>
-        <Modification>
-            <BehaviorLinkDisableArray value="MeiC2Attack1"/>
-            <WeaponEnableArray value="MeiC2Attack5"/>
-            <WeaponDisableArray value="MeiC2Attack1"/>
-            <WeaponDisableArray value="MeiC2Attack2"/>
-            <WeaponDisableArray value="MeiC2Attack3"/>
-            <WeaponDisableArray value="MeiC2Attack4"/>
-        </Modification>
-        <Alignment value="Positive"/>
-    </CBehaviorBuff>
+    <CBehaviorBuff id="MeiC2Attack2Ready" parent="CBehaviorAttack2Ready" unit="MeiC2"/>
+    <CBehaviorBuff id="MeiC2Attack3Ready" parent="CBehaviorAttack3Ready" unit="MeiC2"/>
+    <CBehaviorBuff id="MeiC2Attack4Ready" parent="CBehaviorAttack4Ready" unit="MeiC2"/>
+    <CBehaviorBuff id="MeiC2Attack5Ready" parent="CBehaviorAttack5Ready" unit="MeiC2"/>
     <CBehaviorBuff id="StigmataCG2" parent="StigmataTemplateB">
         <BehaviorFlags index="EnabledWhileDead" value="0"/>
         <Modification>
@@ -3243,7 +2744,6 @@
         <Modification RangedWeaponRange="2"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="KianaC1RangeAttack1">
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Modification>
             <WeaponEnableArray value="KianaC1RangeAttack1"/>
             <WeaponEnableArray value="KianaC1MeleeAttack1"/>
@@ -3256,7 +2756,6 @@
         <InfoFlags index="Hidden" value="1"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="KianaC1RangeAttack2">
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Modification>
             <BehaviorLinkDisableArray value="KianaC1RangeAttack1"/>
             <WeaponEnableArray value="KianaC1RangeAttack2"/>
@@ -3271,7 +2770,6 @@
         <InitialEffect value="KianaC1RangeAttack2ReadyRemove"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="KianaC1RangeAttack3">
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <InitialEffect value="KianaC1RangeAttack3ReadyRemove"/>
         <Modification>
             <BehaviorLinkDisableArray value="KianaC1RangeAttack1"/>
@@ -3286,7 +2784,6 @@
         <InfoFlags index="Hidden" value="1"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="KianaC1RangeAttack4">
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <InitialEffect value="KianaC1RangeAttack4ReadyRemove"/>
         <Modification>
             <BehaviorLinkDisableArray value="KianaC1RangeAttack1"/>
@@ -3301,7 +2798,6 @@
         <InfoFlags index="Hidden" value="1"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="KianaC1RangeAttack2Ready">
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <RemoveValidatorArray value="UnitNotMoving"/>
         <Duration value="1"/>
         <Modification>
@@ -3317,7 +2813,6 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="KianaC1RangeAttack3Ready">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <RemoveValidatorArray value="UnitNotMoving"/>
         <Duration value="1"/>
         <InitialEffect value="KianaC1RangeAttack2Remove"/>
@@ -3334,7 +2829,6 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="KianaC1RangeAttack4Ready">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <RemoveValidatorArray value="UnitNotMoving"/>
         <Duration value="1"/>
         <InitialEffect value="KianaC1RangeAttack3Remove"/>
@@ -3350,7 +2844,6 @@
         </Modification>
     </CBehaviorBuff>
     <CBehaviorBuff id="KianaC1MeleeAttack2">
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Modification>
             <BehaviorLinkDisableArray value="KianaC1MeleeAttack1"/>
             <WeaponEnableArray value="KianaC1MeleeAttack2"/>
@@ -3365,7 +2858,6 @@
         <InitialEffect value="KianaC1MeleeAttack2ReadyRemove"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="KianaC1MeleeAttack3">
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <InitialEffect value="KianaC1MeleeAttack3ReadyRemove"/>
         <Modification>
             <BehaviorLinkDisableArray value="KianaC1MeleeAttack1"/>
@@ -3380,26 +2872,22 @@
         <InfoFlags index="Hidden" value="1"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="KianaC1MeleeAttack1Speed">
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="0.4375"/>
         <Modification UnifiedMoveSpeedFactor="0.13"/>
         <InfoFlags index="Hidden" value="1"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="KianaC1MeleeAttack2Speed">
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="0.625"/>
         <Modification UnifiedMoveSpeedFactor="-0.18"/>
         <InfoFlags index="Hidden" value="1"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="KianaC1MeleeAttack3Speed">
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="0.3125"/>
         <Modification UnifiedMoveSpeedFactor="0.23"/>
         <InfoFlags index="Hidden" value="1"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="KianaC1MeleeAttack2Ready">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <RemoveValidatorArray value="UnitNotMoving"/>
         <Duration value="1"/>
         <Modification>
@@ -3415,7 +2903,6 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="KianaC1MeleeAttack3Ready">
         <InfoFlags index="Hidden" value="1"/>
-        <EditorCategories value="AbilityorEffectType:Units"/>
         <RemoveValidatorArray value="UnitNotMoving"/>
         <Duration value="1"/>
         <InitialEffect value="KianaC1MeleeAttack2Remove"/>
@@ -3430,4 +2917,38 @@
             <WeaponDisableArray value="KianaC1RangeAttack4"/>
         </Modification>
     </CBehaviorBuff>
+    <CBehaviorBuff id="MeiC5Attack1" parent="CBehaviorAttack1" unit="MeiC5"/>
+    <CBehaviorBuff id="MeiC5Attack2" parent="CBehaviorAttack2" unit="MeiC5"/>
+    <CBehaviorBuff id="MeiC5Attack3" parent="CBehaviorAttack3" unit="MeiC5"/>
+    <CBehaviorBuff id="MeiC5Attack4" parent="CBehaviorAttack4" unit="MeiC5"/>
+    <CBehaviorBuff id="MeiC5Attack5" parent="CBehaviorAttack5" unit="MeiC5"/>
+    <CBehaviorBuff id="MeiC5Attack1Speed">
+        <InfoFlags index="Hidden" value="1"/>
+        <Duration value="0.46"/>
+        <Modification UnifiedMoveSpeedFactor="0.6"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="MeiC5Attack2Speed">
+        <Duration value="0.2"/>
+        <Modification UnifiedMoveSpeedFactor="0.36"/>
+        <InfoFlags index="Hidden" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="MeiC5Attack3Speed">
+        <Duration value="0.32"/>
+        <Modification UnifiedMoveSpeedFactor="-0.25"/>
+        <InfoFlags index="Hidden" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="MeiC5Attack4Speed">
+        <Duration value="0.32"/>
+        <Modification UnifiedMoveSpeedFactor="0.1"/>
+        <InfoFlags index="Hidden" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="MeiC5Attack5Speed">
+        <Duration value="0.32"/>
+        <Modification UnifiedMoveSpeedFactor="0.3"/>
+        <InfoFlags index="Hidden" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="MeiC5Attack2Ready" parent="CBehaviorAttack2Ready" unit="MeiC5"/>
+    <CBehaviorBuff id="MeiC5Attack3Ready" parent="CBehaviorAttack3Ready" unit="MeiC5"/>
+    <CBehaviorBuff id="MeiC5Attack4Ready" parent="CBehaviorAttack4Ready" unit="MeiC5"/>
+    <CBehaviorBuff id="MeiC5Attack5Ready" parent="CBehaviorAttack5Ready" unit="MeiC5"/>
 </Catalog>

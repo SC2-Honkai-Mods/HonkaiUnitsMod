@@ -2,6 +2,51 @@
 <Catalog>
     <CAbilMorphPlacement id="AntiEntropyFactoryLand" parent="TerranBuildingLand" unit="AntiEntropyFactory"/>
     <CAbilMorph id="AntiEntropyFactoryLiftOff" parent="TerranBuildingLiftOff" unit="AntiEntropyFactoryFlying"/>
+    <CAbilTrain id="BuyWeaponKatana">
+        <Alignment value="Positive"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Flags index="Transient" value="1"/>
+        <InfoArray index="Train1">
+            <Button DefaultButtonFace="WeaponK5"/>
+            <Unit value="WeaponK5"/>
+        </InfoArray>
+        <InfoArray index="Train2" Effect="WeaponSwitchK17">
+            <Button DefaultButtonFace="WeaponK17"/>
+            <Unit value="WeaponK17"/>
+        </InfoArray>
+        <InfoArray index="Train3" Effect="WeaponSwitchK23">
+            <Button DefaultButtonFace="WeaponK23" Requirements="CanBuyK23"/>
+            <Unit value="WeaponK23"/>
+        </InfoArray>
+    </CAbilTrain>
+    <CAbilMorph id="MorphToMeiC2">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="TrainMeiC2" Requirements="KianaC2CanMorph"/>
+        <Flags index="IgnoreFacing" value="1"/>
+        <InfoArray Unit="MeiC2">
+            <SectionArray index="Abils">
+                <EffectArray index="Start" value="DropWeaponDummy"/>
+            </SectionArray>
+        </InfoArray>
+    </CAbilMorph>
+    <CAbilMorph id="MorphToMeiC5">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="TrainMeiC5" Requirements="KianaC2CanMorph"/>
+        <Flags index="IgnoreFacing" value="1"/>
+        <InfoArray Unit="MeiC2">
+            <SectionArray index="Abils">
+                <EffectArray index="Start" value="DropWeaponDummy"/>
+            </SectionArray>
+        </InfoArray>
+    </CAbilMorph>
+    <CAbilInventory id="KatanaInventory">
+        <Flags index="CanUseItem" value="0"/>
+        <TargetFilters value="Item;-"/>
+        <MaxDropRange value="5"/>
+        <InfoArray Alignment="Left" Container="WeaponKatanaSlot" EmptyFace="WeaponPistolSlot">
+            <Classes value="Dagger"/>
+        </InfoArray>
+    </CAbilInventory>
     <CAbilMorph id="UL_020Land">
         <EditorCategories value="AbilityorEffectType:Units"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="UL_020LandAttack">
@@ -2610,7 +2655,7 @@
         <Alignment value="Negative"/>
         <EditorCategories value="AbilityorEffectType:Units"/>
         <Effect index="0" value="NukeLaunchCP"/>
-        <Range value="50"/>
+        <Range value="60"/>
         <Arc value="360"/>
         <FinishTime value="2.5"/>
         <CancelableArray index="Channel" value="1"/>

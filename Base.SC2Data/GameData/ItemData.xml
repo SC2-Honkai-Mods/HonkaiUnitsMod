@@ -17,4 +17,10 @@
         <EquipBehaviorArray value="K23AM"/>
         <Container value="WeaponPistolSlot"/>
     </CItem>
+    <CItem id="WeaponM13">
+        <Face value="WeaponK5"/>
+        <Class value="Gun"/>
+        <Container value="WeaponPistolSlot"/>
+        <EquipBehaviorArray value="WeaponUseM13"/>
+    </CItem>
 </Catalog>
