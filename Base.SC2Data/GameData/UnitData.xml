@@ -675,6 +675,45 @@
         <HotkeyCategory value=""/>
         <AIEvaluateAlias value="AntiEntropyFactoryFlying"/>
     </CUnit>
+    <CUnit id="NukeSilo" parent="CUnitBuildingTerr">
+        <Name value="Unit/Name/NukeSilo"/>
+        <Collide index="Locust" value="0"/>
+        <Collide index="Phased" value="0"/>
+        <LifeStart value="1250"/>
+        <LifeMax value="1250"/>
+        <CostResource index="Minerals" value="150"/>
+        <CostResource index="Vespene" value="50"/>
+        <RepairTime value="40"/>
+        <AbilArray Link="BuildInProgress"/>
+        <AbilArray Link="que1"/>
+        <AbilArray Link="ArmSiloWithNuke"/>
+        <AbilArray Link="HonkaiNukeFire"/>
+        <AbilArray Link="LaunchDivineKey4th"/>
+        <BehaviorArray index="1" Link="ReactorQueue"/>
+        <BehaviorArray index="2" Link="FireSuppressionSystem"/>
+        <BehaviorArray Link="TurretBuff"/>
+        <CardLayouts>
+            <LayoutButtons Face="Cancel" Type="AbilCmd" AbilCmd="que1,CancelLast" Row="2" Column="4"/>
+            <LayoutButtons Face="CancelBuilding" Type="AbilCmd" AbilCmd="BuildInProgress,Cancel" Row="2" Column="4"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="BuildInProgress,Halt" Row="0" Column="3"/>
+            <LayoutButtons Face="NukeArm" Type="AbilCmd" AbilCmd="ArmSiloWithNuke,Ammo1" Row="2" Column="0"/>
+            <LayoutButtons Face="NukeCalldown2" Type="AbilCmd" AbilCmd="HonkaiNukeFire,Execute" Row="0" Column="0"/>
+            <LayoutButtons Face="SelectBuilder" Type="SelectBuilder" Row="1" Column="3"/>
+            <LayoutButtons Face="LaunchDivineKey4th" Type="AbilCmd" AbilCmd="LaunchDivineKey4th,Execute" Row="0" Column="1"/>
+        </CardLayouts>
+        <Radius value="1.5"/>
+        <SeparationRadius value="1.5"/>
+        <Footprint value="Footprint3x3Contour"/>
+        <PlacementFootprint value="Footprint3x3"/>
+        <ScoreMake value="200"/>
+        <ScoreKill value="200"/>
+        <SubgroupPriority value="3"/>
+        <MinimapRadius value="1.5"/>
+        <TechAliasArray value="Alias_ShadowOps"/>
+        <GlossaryPriority value="318"/>
+        <AIEvaluateAlias value="NukeSilo"/>
+        <TechTreeUnlockedUnitArray value="Ghost"/>
+    </CUnit>
     <CUnit id="MeiC5" parent="CUnitMei">
         <UserTag value="HonkaiText/MeiC5"/>
         <EnergyStart value="50"/>
@@ -3880,20 +3919,6 @@
         <SubgroupPriority value="2"/>
         <MinimapRadius value="1"/>
         <EditorCategories value="ObjectType:Structure,ObjectFamily:Melee"/>
-    </CUnit>
-    <CUnit id="GhostAcademy">
-        <DeathTime value="30"/>
-        <AbilArray index="1" Link="que1"/>
-        <AbilArray index="3" Link="HonkaiNukeFire"/>
-        <AbilArray Link="LaunchDivineKey4th"/>
-        <BehaviorArray Link="FireSuppressionSystem"/>
-        <BehaviorArray Link="TurretBuff"/>
-        <CardLayouts index="0">
-            <LayoutButtons index="0" AbilCmd="que1,CancelLast"/>
-            <LayoutButtons index="3" Row="0"/>
-            <LayoutButtons index="5" Face="NukeCalldown2" AbilCmd="HonkaiNukeFire,Execute" Row="1"/>
-            <LayoutButtons Face="LaunchDivineKey4th" Type="AbilCmd" AbilCmd="LaunchDivineKey4th,Execute" Row="1" Column="1"/>
-        </CardLayouts>
     </CUnit>
     <CUnit id="Herrscher4thWeaponUnit">
         <DeathRevealRadius value="3"/>

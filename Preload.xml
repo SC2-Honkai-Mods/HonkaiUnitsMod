@@ -116,8 +116,18 @@
 <Sound id="BronyaC7MotorStart"/>
 <Sound id="KianaC2AttackVoiceEvade"/>
 <Soundtrack id="MusicHerrscher8thAbil2"/>
+<Unit id="CommandCenter"/>
+<Unit id="SupplyDepot"/>
+<Unit id="Barracks"/>
+<Unit id="Bunker"/>
+<Unit id="Starport"/>
+<Unit id="MercCompound"/>
+<Unit id="FusionCore"/>
 <Unit id="SiegeTankSieged"/>
 <Unit id="SiegeTank"/>
+<Unit id="PlanetaryFortress"/>
+<Unit id="OrbitalCommand"/>
+<Unit id="AntiEntropyFactory"/>
 <Unit id="Helios"/>
 <Unit id="RO_010"/>
 <Unit id="RO_031"/>
@@ -127,6 +137,8 @@
 <Unit id="BronyaC7"/>
 <Unit id="DG_010"/>
 <Unit id="DG_011"/>
+<Unit id="NukeSilo"/>
+<Unit id="ImperialInstitute"/>
 <Unit id="CosmicJuggernaut"/>
 <Unit id="BronyaC7CannonTarget"/>
 <Unit id="RO_060Barrage"/>

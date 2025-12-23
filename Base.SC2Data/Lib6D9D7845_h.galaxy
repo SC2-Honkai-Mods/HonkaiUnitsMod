@@ -120,6 +120,7 @@ int lib6D9D7845_gf_ExtraDivineKeys (int lp_player);
 
 // Trigger Declarations
 trigger lib6D9D7845_gt_E69BB4E696B0E4BABAE58FA3;
+trigger lib6D9D7845_gt_SetLight;
 trigger lib6D9D7845_gt_CreateDPSUnit;
 trigger lib6D9D7845_gt_DPSStats;
 trigger lib6D9D7845_gt_Debug;

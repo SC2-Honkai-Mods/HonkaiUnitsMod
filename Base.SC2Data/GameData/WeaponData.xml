@@ -137,11 +137,11 @@
     </CWeaponLegacy>
     <CWeaponLegacy id="MeiC5Attack1" parent="CWeaponAvatarMeleeAttack">
         <Range value="3.6"/>
-        <Period value="0.6875"/>
+        <Period value="0.4375"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="MeiC5Attack2" parent="CWeaponAvatarMeleeAttack">
         <Range value="6"/>
-        <Period value="0.5"/>
+        <Period value="0.5625"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="MeiC5Attack3" parent="CWeaponAvatarMeleeAttack">
         <Range value="6"/>
@@ -149,11 +149,11 @@
     </CWeaponLegacy>
     <CWeaponLegacy id="MeiC5Attack4" parent="CWeaponAvatarMeleeAttack">
         <Range value="1.8"/>
-        <Period value="0.625"/>
+        <Period value="1.0625"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="MeiC5Attack5" parent="CWeaponAvatarMeleeAttack">
         <Range value="2.1"/>
-        <Period value="0.9375"/>
+        <Period value="1.25"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="SeeleC1Attack1" parent="CWeaponAvatarMeleeAttack">
         <Range value="3"/>

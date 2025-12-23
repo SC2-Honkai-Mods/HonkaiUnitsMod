@@ -8638,6 +8638,7 @@ Trigger/Name/lib_6D9D7845_E42ACA84=单位测试 自定义 粘贴
 Trigger/Name/lib_6D9D7845_E72BB59B=女武神能爆 末段
 Trigger/Name/lib_6D9D7845_E889AF8E=构造目标
 Trigger/Name/lib_6D9D7845_EB8A9721=歼星者19C 炮弹索敌
+Trigger/Name/lib_6D9D7845_EBB4A97C=Set Light
 Trigger/Name/lib_6D9D7845_EC2F7B9E=伤害数字显示-冰
 Trigger/Name/lib_6D9D7845_EC37E5FE=闪现补丁
 Trigger/Name/lib_6D9D7845_ED72598D=苍玄之书攻击

@@ -36,6 +36,11 @@
         <PeriodicPeriodArray value="0.0625"/>
     </CEffectCreatePersistent>
     <CEffectSet id="DropWeaponDummy"/>
+    <CEffectSet id="MeiC5Attack1DamageSet">
+        <DebugTrace value="1"/>
+        <EffectArray value="MeiC5Attack1Damage"/>
+        <EffectArray value="MeiC5Attack1DamageT"/>
+    </CEffectSet>
     <CEffectApplyBehavior id="NoCommandCaster">
         <Behavior value="NoCommand"/>
     </CEffectApplyBehavior>
@@ -7379,6 +7384,7 @@
         <ValidatorArray value="NotHidden"/>
         <Amount value="8"/>
         <Death value="Eviscerate"/>
+        <IncludeArray Value="Target"/>
     </CEffectDamage>
     <CEffectEnumArea id="DeadgalScytheSearch">
         <SearchFilters value="-;Self,Player,Ally,Air,Missile,Stasis,Dead,Hidden,Invulnerable"/>
@@ -7402,6 +7408,7 @@
         <ValidatorArray value="NotHidden"/>
         <Amount value="10"/>
         <Death value="Eviscerate"/>
+        <IncludeArray Value="Target"/>
     </CEffectDamage>
     <CEffectDamage id="PsiBlades222" parent="DU_WEAP">
         <ValidatorArray value="NotHidden"/>
@@ -7414,6 +7421,7 @@
         <Amount value="8"/>
         <Death value="Eviscerate"/>
         <KindSplash value="Splash"/>
+        <IncludeArray Value="Target"/>
     </CEffectDamage>
     <CEffectCreateUnit id="ReaperKD8Knockback2">
         <ValidatorArray value="NotMassive"/>
@@ -8750,6 +8758,7 @@
     <CEffectCreatePersistent id="MeiC5Attack1Move" parent="AvatarAttackMove">
         <InitialEffect value="MeiC5Attack1Speed"/>
         <PeriodCount value="7"/>
+        <Name value="Effect/Name/MeiC5Attack1Move"/>
     </CEffectCreatePersistent>
     <CEffectApplyBehavior id="MeiC5Attack1Speed">
         <WhichUnit Value="Caster"/>
@@ -8757,24 +8766,28 @@
     <CEffectCreatePersistent id="MeiC5Attack2Move" parent="AvatarAttackMove">
         <InitialEffect value="MeiC5Attack2Speed"/>
         <PeriodCount value="3"/>
+        <Name value="Effect/Name/MeiC5Attack2Move"/>
     </CEffectCreatePersistent>
     <CEffectApplyBehavior id="MeiC5Attack2Speed">
         <WhichUnit Value="Caster"/>
     </CEffectApplyBehavior>
     <CEffectCreatePersistent id="MeiC5Attack3Move" parent="AvatarAttackMove">
         <InitialEffect value="MeiC5Attack3Speed"/>
+        <Name value="Effect/Name/MeiC5Attack3Move"/>
     </CEffectCreatePersistent>
     <CEffectApplyBehavior id="MeiC5Attack3Speed">
         <WhichUnit Value="Caster"/>
     </CEffectApplyBehavior>
     <CEffectCreatePersistent id="MeiC5Attack4Move" parent="AvatarAttackMove">
         <InitialEffect value="MeiC5Attack4Speed"/>
+        <Name value="Effect/Name/MeiC5Attack4Move"/>
     </CEffectCreatePersistent>
     <CEffectApplyBehavior id="MeiC5Attack4Speed">
         <WhichUnit Value="Caster"/>
     </CEffectApplyBehavior>
     <CEffectCreatePersistent id="MeiC5Attack5Move" parent="AvatarAttackMove">
         <InitialEffect value="MeiC5Attack5Speed"/>
+        <Name value="Effect/Name/MeiC5Attack5Move"/>
     </CEffectCreatePersistent>
     <CEffectApplyBehavior id="MeiC5Attack5Speed">
         <WhichUnit Value="Caster"/>
@@ -8785,23 +8798,21 @@
         <InitialEffect value="MeiC5Attack1Move"/>
         <FinalEffect value="MeiC5Attack2ReadyApply"/>
         <PeriodCount value="2"/>
-        <PeriodicEffectArray value="MeiC5Attack1Case"/>
+        <PeriodicEffectArray value="MeiC5Attack1DamageSet"/>
         <PeriodicEffectArray value="VoidEffect"/>
-        <PeriodicPeriodArray value="0.4375"/>
-        <PeriodicPeriodArray value="0.125"/>
+        <PeriodicPeriodArray value="0.1875"/>
+        <PeriodicPeriodArray value="0.0625"/>
     </CEffectCreatePersistent>
     <CEffectCreatePersistent id="MeiC5Attack2">
         <WhichLocation Value="TargetUnit"/>
         <TimeScaleSource Value="Caster"/>
         <InitialEffect value="MeiC5Attack2Move"/>
-        <PeriodCount value="4"/>
+        <PeriodCount value="3"/>
         <PeriodicEffectArray value="MeiC5Attack2Ready"/>
-        <PeriodicEffectArray value="MeiC5PistolRanged"/>
-        <PeriodicEffectArray value="MeiC5Attack2Case"/>
+        <PeriodicEffectArray value="MeiC5Attack1DamageSet"/>
         <PeriodicEffectArray value="VoidEffect"/>
         <PeriodicPeriodArray value="0"/>
-        <PeriodicPeriodArray value="0.1875"/>
-        <PeriodicPeriodArray value="0"/>
+        <PeriodicPeriodArray value="0.25"/>
         <PeriodicPeriodArray value="0.1875"/>
         <FinalEffect value="MeiC5Attack2EndSet"/>
     </CEffectCreatePersistent>
@@ -8809,30 +8820,34 @@
         <WhichLocation Value="TargetUnit"/>
         <TimeScaleSource Value="Caster"/>
         <InitialEffect value="MeiC5Attack3Move"/>
-        <PeriodCount value="4"/>
+        <PeriodCount value="3"/>
         <PeriodicEffectArray value="MeiC5Attack3Ready"/>
-        <PeriodicEffectArray value="MeiC5PistolRanged"/>
-        <PeriodicEffectArray value="MeiC5Attack3Case"/>
+        <PeriodicEffectArray value="MeiC5Attack1DamageSet"/>
         <PeriodicEffectArray value="VoidEffect"/>
         <PeriodicPeriodArray value="0"/>
-        <PeriodicPeriodArray value="0.25"/>
+        <PeriodicPeriodArray value="0.375"/>
         <PeriodicPeriodArray value="0"/>
-        <PeriodicPeriodArray value="0.125"/>
         <FinalEffect value="MeiC5Attack3EndSet"/>
     </CEffectCreatePersistent>
     <CEffectCreatePersistent id="MeiC5Attack4">
         <WhichLocation Value="TargetUnit"/>
         <TimeScaleSource Value="Caster"/>
         <InitialEffect value="MeiC5Attack4Move"/>
-        <PeriodCount value="4"/>
+        <PeriodCount value="7"/>
         <PeriodicEffectArray value="MeiC5Attack4Ready"/>
-        <PeriodicEffectArray value="MeiC5Attack4Case"/>
-        <PeriodicEffectArray value="MeiC5Attack4Case"/>
+        <PeriodicEffectArray value="MeiC5Attack2Damage"/>
+        <PeriodicEffectArray value="MeiC5Attack2Damage"/>
+        <PeriodicEffectArray value="MeiC5Attack2Damage"/>
+        <PeriodicEffectArray value="MeiC5Attack2Damage"/>
+        <PeriodicEffectArray value="MeiC5Attack2Damage"/>
         <PeriodicEffectArray value="VoidEffect"/>
         <PeriodicPeriodArray value="0"/>
-        <PeriodicPeriodArray value="0.1875"/>
-        <PeriodicPeriodArray value="0.1875"/>
-        <PeriodicPeriodArray value="0.125"/>
+        <PeriodicPeriodArray value="0.375"/>
+        <PeriodicPeriodArray value="0.0625"/>
+        <PeriodicPeriodArray value="0.0625"/>
+        <PeriodicPeriodArray value="0.0625"/>
+        <PeriodicPeriodArray value="0.0625"/>
+        <PeriodicPeriodArray value="0.3125"/>
         <FinalEffect value="MeiC5Attack4EndSet"/>
     </CEffectCreatePersistent>
     <CEffectCreatePersistent id="MeiC5Attack5">
@@ -8841,125 +8856,50 @@
         <InitialEffect value="MeiC5Attack5Move"/>
         <PeriodCount value="3"/>
         <PeriodicEffectArray value="MeiC5Attack5Ready"/>
-        <PeriodicEffectArray value="MeiC5Attack5Case"/>
+        <PeriodicEffectArray value="MeiC5Attack3Damage"/>
         <PeriodicEffectArray value="VoidEffect"/>
         <PeriodicPeriodArray value="0"/>
-        <PeriodicPeriodArray value="0.25"/>
+        <PeriodicPeriodArray value="0.375"/>
         <PeriodicPeriodArray value="0.5625"/>
         <FinalEffect value="MeiC5Attack5Remove"/>
     </CEffectCreatePersistent>
-    <CEffectSwitch id="MeiC5Attack1Case">
-        <CaseArray Validator="MeiC5Ultimate" Effect="MeiC5Attack1DamageU"/>
-        <CaseDefault value="MeiC5Attack1Damage"/>
-    </CEffectSwitch>
-    <CEffectSwitch id="MeiC5Attack2Case">
-        <CaseArray Validator="MeiC5Ultimate" Effect="MeiC5Attack2DamageU"/>
-        <CaseDefault value="MeiC5Attack2Damage"/>
-    </CEffectSwitch>
-    <CEffectSwitch id="MeiC5Attack3Case">
-        <CaseArray Validator="MeiC5Ultimate" Effect="MeiC5Attack3DamageU"/>
-        <CaseDefault value="MeiC5Attack2Damage"/>
-    </CEffectSwitch>
-    <CEffectSwitch id="MeiC5Attack4Case">
-        <CaseArray Validator="MeiC5Ultimate" Effect="MeiC5Attack4DamageU"/>
-        <CaseDefault value="MeiC5Attack4Damage"/>
-    </CEffectSwitch>
-    <CEffectSwitch id="MeiC5Attack5Case">
-        <CaseArray Validator="MeiC5Ultimate" Effect="MeiC5Attack1U2"/>
-        <CaseDefault value="MeiC5Attack5Damage"/>
-    </CEffectSwitch>
     <CEffectDamage id="MeiC5Attack1Damage">
         <ImpactLocation Value="SourcePoint"/>
         <Kind value="Melee"/>
         <KindSplash value="Melee"/>
         <Amount value="10"/>
-        <AreaArray>
-            <Arc value="0"/>
-            <RectangleWidth value="0.35"/>
-            <RectangleHeight value="1.2"/>
-            <Fraction value="1"/>
-        </AreaArray>
+        <AreaArray Arc="90" Radius="1.5" Fraction="1"/>
         <AreaRelativeOffset value="0,-0.7"/>
         <SearchFilters value="Ground;Self,Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <SearchFlags index="ExtendByUnitRadius" value="1"/>
         <SearchFlags index="OffsetAreaByAngle" value="1"/>
+        <DebugTrace value="1"/>
     </CEffectDamage>
-    <CEffectDamage id="MeiC5Attack1DamageU">
+    <CEffectDamage id="MeiC5Attack1DamageT">
         <ImpactLocation Value="SourcePoint"/>
-        <Kind value="Melee"/>
-        <KindSplash value="Melee"/>
         <Amount value="10"/>
-        <AreaArray>
-            <Arc value="0"/>
-            <RectangleWidth value="1"/>
-            <RectangleHeight value="3.5"/>
-            <Fraction value="1"/>
-        </AreaArray>
-        <AreaRelativeOffset value="0,-1.75"/>
+        <AreaArray Arc="90" Radius="1.5" Fraction="1"/>
+        <AreaRelativeOffset value="0,-0.7"/>
         <SearchFilters value="Ground;Self,Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <SearchFlags index="ExtendByUnitRadius" value="1"/>
         <SearchFlags index="OffsetAreaByAngle" value="1"/>
+        <DebugTrace value="1"/>
     </CEffectDamage>
     <CEffectDamage id="MeiC5Attack2Damage">
         <ImpactLocation Value="SourcePoint"/>
-        <Kind value="Melee"/>
-        <KindSplash value="Melee"/>
-        <Amount value="10"/>
-        <AreaArray Arc="90" Radius="1" Fraction="1"/>
+        <Amount value="5"/>
+        <AreaArray Arc="119.9816" Radius="2" Fraction="1"/>
         <SearchFilters value="Ground;Self,Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable"/>
         <SearchFlags index="OffsetAreaByAngle" value="1"/>
+        <DebugTrace value="1"/>
     </CEffectDamage>
-    <CEffectDamage id="MeiC5Attack2DamageU">
+    <CEffectDamage id="MeiC5Attack3Damage">
         <ImpactLocation Value="SourcePoint"/>
-        <Kind value="Melee"/>
-        <KindSplash value="Melee"/>
-        <Amount value="10"/>
-        <AreaArray>
-            <Arc value="180"/>
-            <Radius value="4"/>
-            <FacingAdjustment value="339.994"/>
-            <Fraction value="1"/>
-        </AreaArray>
+        <Amount value="30"/>
+        <AreaArray Arc="180" Radius="3" Fraction="1"/>
         <SearchFilters value="Ground;Self,Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <SearchFlags index="ExtendByUnitRadius" value="1"/>
         <SearchFlags index="OffsetAreaByAngle" value="1"/>
-    </CEffectDamage>
-    <CEffectDamage id="MeiC5Attack3DamageU">
-        <ImpactLocation Value="SourcePoint"/>
-        <Kind value="Melee"/>
-        <KindSplash value="Melee"/>
-        <Amount value="10"/>
-        <AreaArray>
-            <Arc value="90"/>
-            <Radius value="4"/>
-            <FacingAdjustment value="344.9926"/>
-            <Fraction value="1"/>
-        </AreaArray>
-        <SearchFilters value="Ground;Self,Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable"/>
-        <SearchFlags index="OffsetAreaByAngle" value="1"/>
-    </CEffectDamage>
-    <CEffectDamage id="MeiC5Attack4Damage">
-        <ImpactLocation Value="SourcePoint"/>
-        <Kind value="Melee"/>
-        <KindSplash value="Melee"/>
-        <Amount value="10"/>
-        <AreaArray Arc="159.994" Radius="1.2" Fraction="1"/>
-        <SearchFilters value="Ground;Self,Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable"/>
-        <SearchFlags index="OffsetAreaByAngle" value="1"/>
-    </CEffectDamage>
-    <CEffectDamage id="MeiC5Attack4DamageU">
-        <ImpactLocation Value="SourcePoint"/>
-        <Kind value="Melee"/>
-        <KindSplash value="Melee"/>
-        <Amount value="10"/>
-        <AreaArray Radius="4" Fraction="1"/>
-        <SearchFilters value="Ground;Self,Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable"/>
-        <SearchFlags index="OffsetAreaByAngle" value="1"/>
-    </CEffectDamage>
-    <CEffectDamage id="MeiC5Attack5Damage">
-        <ImpactLocation Value="SourcePoint"/>
-        <Kind value="Melee"/>
-        <KindSplash value="Melee"/>
-        <Amount value="10"/>
-        <AreaArray Arc="180" Radius="1.2" Fraction="1"/>
-        <SearchFilters value="Ground;Self,Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable"/>
-        <SearchFlags index="OffsetAreaByAngle" value="1"/>
+        <DebugTrace value="1"/>
     </CEffectDamage>
 </Catalog>

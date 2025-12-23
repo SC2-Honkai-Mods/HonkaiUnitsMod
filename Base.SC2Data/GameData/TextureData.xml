@@ -27,4 +27,32 @@
     <CTexture id="RO_041" parent="UnitTextureDiffuse"/>
     <CTexture id="RO_042" parent="UnitTextureDiffuse"/>
     <CTexture id="RO_047" parent="UnitTextureDiffuse"/>
+    <CTexture id="ReactorDiffuseCoverFactory">
+        <File value="Assets\Textures\Reactor_Diffuse_Cover_Factory.dds"/>
+        <Slot value="main.diffuse"/>
+    </CTexture>
+    <CTexture id="ReactorDiffuseCoverStarport">
+        <File value="Assets\Textures\Reactor_Diffuse_Cover_Starport.dds"/>
+        <Slot value="main.diffuse"/>
+    </CTexture>
+    <CTexture id="ReactorDiffuseCover">
+        <File value="Assets\Textures\Reactor_Diffuse_Cover.dds"/>
+        <Slot value="main.diffuse"/>
+    </CTexture>
+    <CTexture id="TechLabDiffuseCoverFactory">
+        <File value="Assets\Textures\Techlab_Diffuse_Cover_Factory.dds"/>
+        <Slot value="main.diffuse"/>
+    </CTexture>
+    <CTexture id="TechLabDiffuseCoverStarport">
+        <File value="Assets\Textures\Techlab_Diffuse_Cover_Starport.dds"/>
+        <Slot value="main.diffuse"/>
+    </CTexture>
+    <CTexture id="TechLabDiffuseCover">
+        <File value="Assets\Textures\Techlab_Diffuse_Cover.dds"/>
+        <Slot value="main.diffuse"/>
+    </CTexture>
+    <CTexture id="UL_010" parent="UnitTextureDiffuse"/>
+    <CTexture id="UL_011" parent="UnitTextureDiffuse"/>
+    <CTexture id="UL_012" parent="UnitTextureDiffuse"/>
+    <CTexture id="UL_013" parent="UnitTextureDiffuse"/>
 </Catalog>

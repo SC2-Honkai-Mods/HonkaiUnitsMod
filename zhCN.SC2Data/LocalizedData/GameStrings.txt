@@ -924,7 +924,6 @@ Button/Tooltip/FrozenDuration=使己方造成的冻结状态时间延长0.5秒�
 Button/Tooltip/Furnace=解锁泰坦机甲、御雷机甲的烈焰分支单位，并可研究火焰减伤。
 Button/Tooltip/Furnace2=使熔炉升级为烈火熔炉，可以解锁终极烈焰分支机甲、升级点燃伤害。
 Button/Tooltip/FusionCore=天命组织的科学研究所。<n/>可以研发部分武器，并为运输机、多维机甲、休伯利安号提供升级方案。<n/><n/><c val="ffff8a">开启：</c><n/>- 可在星港中建造休伯利安号
-Button/Tooltip/GhostAcademy=能够制造崩坏能裂变弹发射井，该弹头需要长时间部署，并能发射至<d ref="Abil,HonkaiNukeFire,Range[0]"/>码内有视野的地方。爆炸后会对大范围区域造成毁灭性打击。
 Button/Tooltip/Heal=治疗一个友方生物单位。<n/><n/><c val="f078ff">每1点能量恢复<d ref="-Effect,MedivacHealModifyTargetLife,VitalArray[0].Change/Effect,MedivacHealModifyCasterEnergy,VitalArray[2].Change"/>点生命值。</c><n/>
 Button/Tooltip/Helios=空中运输单位。可治疗附近的生物单位。
 Button/Tooltip/Herrscher10th=第十律者，可以将自己所捕获的猎物的力量为自己所用。
@@ -1040,6 +1039,7 @@ Button/Tooltip/NukeArm=在发射井中部署崩坏能裂变弹。<n/>崩坏能�
 Button/Tooltip/NukeArmMHT=在发射仓中部署一枚战术核弹。<n/>发射命中后可对大范围内的目标造成<d ref="Effect,NukeDamageMHT,Amount * Effect,NukeDamageMHT,AreaArray[3].Fraction"/>~ <d ref="Effect,NukeDamageMHT,Amount"/>点<c val="FF0000">火焰元素伤害</c>。<n/><c val="FFFF00">伤害不分敌我，且主要集中在中心区域</c>
 Button/Tooltip/NukeCalldown2=向目标发射一颗威力巨大的崩坏能裂变弹，可对大范围内的目标造成<d ref="Effect,NukeDamage2,Amount * Effect,NukeDamage2,AreaArray[4].Fraction"/>~ <d ref="Effect,NukeDamage2,Amount"/>点<c val="FF0000">火焰元素伤害</c>。<n/><c val="FFFF00">伤害不分敌我，且主要集中在中心区域</c>
 Button/Tooltip/NukeCalldownMHT=向目标发射一颗在战术核弹头，可对大范围内的目标造成<d ref="Effect,NukeDamageMHT,Amount * Effect,NukeDamageMHT,AreaArray[3].Fraction"/>~ <d ref="Effect,NukeDamageMHT,Amount"/>点<c val="FF0000">火焰元素伤害</c>。<n/><c val="FFFF00">伤害不分敌我，且主要集中在中心区域</c>
+Button/Tooltip/NukeSilo=能够制造崩坏能裂变弹发射井，该弹头需要长时间部署，并能发射至<d ref="Abil,HonkaiNukeFire,Range[0]"/>码内有视野的地方。爆炸后会对大范围区域造成毁灭性打击。
 Button/Tooltip/PalsyDuration=使己方造成的麻痹状态时间延长0.5秒，可升级4次。
 Button/Tooltip/PlanetaryFortress2=坚固的防御要塞。<n/>用于接收采集到的资源。<n/><n/><c val="ffff8a">可以对地。</c>
 Button/Tooltip/PsiStorm2=召唤一股持续<d time="4"/>的灵能风暴，对目标区域内的所有单位造成最多80点伤害。
@@ -1115,6 +1115,7 @@ Button/Tooltip/ResearchVHerrscher1st=适用于布洛妮娅的女武神装甲，�
 Button/Tooltip/ResearchVHerrscher1st2=适用于布洛妮娅的女武神装甲，使用浮游炮远距离攻击，并可在普通模式和骑乘模式之间切换。同时解锁重炮武器<c val="FFFF00">真理之钥</c>。<n/><n/><c val="FFFF00">律者核心改装只能研究一个分支</c>。
 Button/Tooltip/ReviveKiana=琪亚娜·卡斯兰娜音生命值过低从战场上撤离后，可在此重新部署。
 Button/Tooltip/Roach=突击单位。潜地后能快速恢复生命值。可以变异为熔岩帝王。<n/><n/><c val="ffff8a">可以对地。</c>
+Button/Tooltip/SCV2=基础工作单位。用于采集资源、建造人类建筑和修理。<n/><n/><c val="#ColorAttackInfo">可以对地。</c>
 Button/Tooltip/SaAbil1=短暂延迟后，在单位周围不断随机召唤火焰柱、雷击和冰封，分别造成<d ref="Effect,SaAbil1FireDamage,Amount"/>点对应的元素伤害伤害，并附加点燃、麻痹和冻结。
 Button/Tooltip/SaCore=将本体扎根于海中的庞然巨物，为了应对异常情况，排除不稳定因素所创造的自动歼灭机制。
 Button/Tooltip/SaUltimate=
@@ -1611,7 +1612,17 @@ DocInfo/PatchNote360=·重制了突进级崩坏兽
 DocInfo/PatchNote361=·修复了娑在激光攻击过程中死亡后伤害继续的bug
 DocInfo/PatchNote362=·娑 -「惑障」复活时由恢复50%最大生命值改为复活1500点固定生命值
 DocInfo/PatchNote363=·大幅提高了崩坏能裂变弹和战术核打击的最高伤害，但是仅限于核心区域
-DocInfo/PatchNote364=·将崩坏能裂变弹的人口占用降低到1
+DocInfo/PatchNote364=·崩坏能裂变弹的人口占用由3降低到1
+DocInfo/PatchNote365=·崩坏能裂变弹的射程由50提高到60
+DocInfo/PatchNote366=·修复了幻境技能的多个bug
+DocInfo/PatchNote367=·修复了崩坏能裂变弹发射井不能发射第四神之键的bug
+DocInfo/PatchNote368=·修复了理之律者浮游炮引发卡顿的bug
+DocInfo/PatchNote369=·将所有人类建筑模型重制为了三渲二风格
+DocInfo/PatchNote370=·为人类建筑增加了放置模型
+DocInfo/PatchNote371=·建造圣芙蕾雅学园需要前置建筑补给站
+DocInfo/PatchNote372=·简化了圣芙蕾雅学园的模型
+DocInfo/PatchNote373=·修复了RPC-6626动画的不连贯问题
+DocInfo/PatchNote374=·修复了MHT和平使者发射核弹时的模型异常
 Effect/Name/AcidSalivaU=UL_030 Damage
 Effect/Name/AddCasterLife1500=Add Caster Life 1500
 Effect/Name/AddDizzyCD=Add Dizzy CD
@@ -3021,8 +3032,6 @@ Unit/Name/Furnace=熔炉
 Unit/Name/Furnace2=烈火熔炉
 Unit/Name/FusionCore=圣1504研究所
 Unit/Name/Ghost=不灭之刃
-Unit/Name/GhostAcademy=崩坏能裂变弹发射井
-Unit/Name/GunTower3=导弹塔
 Unit/Name/Helios=“赫利俄斯”医疗运输舰
 Unit/Name/Hellion=重装小兔摩托
 Unit/Name/HellionTank=重装小兔机甲
@@ -3078,6 +3087,7 @@ Unit/Name/MercCompound=米高扬设计制造局
 Unit/Name/Nuke2=崩坏能裂变弹
 Unit/Name/Nuke4=战术核弹 头
 Unit/Name/NukeMHT=战术核弹 头
+Unit/Name/NukeSilo=崩坏能裂变弹发射井
 Unit/Name/PlanetaryFortress2=总部要塞
 Unit/Name/PunisherGrenadesLMWeapon=马尔科夫C型
 Unit/Name/RO_010=泰坦机甲
@@ -3106,7 +3116,7 @@ Unit/Name/RO_060Barrage=RO_060 Barrage
 Unit/Name/RO_060Missile=RO_060 Missile
 Unit/Name/RO_060_Defense=多维机甲
 Unit/Name/RPC6626=RPC-6626
-Unit/Name/Railgun=电磁炮台
+Unit/Name/Railgun=导弹塔
 Unit/Name/RailgunMissile=电磁炮弹
 Unit/Name/Ravager=熔岩帝王
 Unit/Name/RavagerBurrowed=熔岩帝王

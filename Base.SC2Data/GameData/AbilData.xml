@@ -1145,6 +1145,7 @@
     </CAbilEffectInstant>
     <CAbilEffectInstant id="LaunchDivineKey4th">
         <Effect index="0" value="DivineKey4thLaunchSet"/>
+        <Flags index="BestUnit" value="1"/>
         <Flags index="Transient" value="1"/>
         <Cost>
             <Resource index="Minerals" value="200"/>
@@ -3399,14 +3400,16 @@
         <InfoArray index="Train4" Time="140"/>
     </CAbilTrain>
     <CAbilBuild id="TerranBuild">
-        <InfoArray index="Build5" Unit="StFreya"/>
+        <InfoArray index="Build5" Unit="StFreya">
+            <Button Requirements="HaveSupplyDepot"/>
+        </InfoArray>
         <InfoArray index="Build6">
             <Button State="Available" Requirements="HaveHighTower"/>
         </InfoArray>
         <InfoArray index="Build9">
             <Button Requirements="HaveHighTower"/>
         </InfoArray>
-        <InfoArray index="Build10">
+        <InfoArray index="Build10" Unit="NukeSilo">
             <Button Requirements="HaveFusionCore"/>
         </InfoArray>
         <InfoArray index="Build11" Unit="AntiEntropyFactory">

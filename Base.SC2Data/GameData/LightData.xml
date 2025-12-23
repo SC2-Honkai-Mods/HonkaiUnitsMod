@@ -26,7 +26,7 @@
         <EditorCategories value="LightGroup:Tilesets"/>
     </CLight>
     <CLight id="HonkaiDefault" parent="default">
-        <ToDInfoArray index="0" Id="HonkaiDefault" AmbientColor="0.447059,0.345098,0.247059" Colorize="1">
+        <ToDInfoArray index="0" Id="HonkaiDefault" AmbientColor="0.768628,0.670588,0.584314" Colorize="1">
             <Param index="HDRExposure" value="1.500000"/>
             <Param index="HDRWhitePoint" value="1.850000"/>
             <Param index="TerrainSpecularExp" value="11.210000"/>
@@ -39,13 +39,13 @@
             <Param index="ColorizationLightness" value="0.136000"/>
             <Param index="ColorizationBlend" value="0.300000"/>
             <DirectionalLight index="Key">
-                <Color value="0.921569,0.745098,0.639216"/>
+                <Color value="0.984314,0.960784,0.909804"/>
                 <ColorMultiplier value="1.200000"/>
                 <SpecColorMultiplier value="1.250000"/>
-                <Direction value="0.566719,-0.240558,-0.788011"/>
+                <Direction value="0.568136,0.336664,-0.750919"/>
             </DirectionalLight>
-            <DirectionalLight index="Fill" Color="0.101961,0.156863,0.317647" ColorMultiplier="2.000000" Direction="-0.959825,0.159931,0.230559"/>
-            <DirectionalLight index="Back" Color="0.474510,0.156863,0.019608" ColorMultiplier="1.000000" Direction="-0.476542,-0.861832,-0.173648"/>
+            <DirectionalLight index="Fill" Color="0.101961,0.156863,0.313726" ColorMultiplier="2.000000" Direction="-0.980219,0.185214,0.069756"/>
+            <DirectionalLight index="Back" Color="0.474510,0.156863,0.019608" ColorMultiplier="1.000000" Direction="-0.850974,-0.471897,-0.230559"/>
         </ToDInfoArray>
         <EditorCategories value="LightGroup:Tilesets"/>
     </CLight>

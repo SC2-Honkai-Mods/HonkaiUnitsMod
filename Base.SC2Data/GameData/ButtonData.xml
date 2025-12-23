@@ -7,8 +7,8 @@
         <EditorCategories value="Race:Terran"/>
     </CButton>
     <CButton id="MeiC5Attack">
-        <Icon value="Assets\Textures\Skill_Mei_CK_001.tga"/>
-        <AlertIcon value="Assets\Textures\Skill_Mei_CK_001.tga"/>
+        <Icon value="Assets\Textures\Skill_Mei_AC_001.tga"/>
+        <AlertIcon value="Assets\Textures\Skill_Mei_AC_001.tga"/>
         <Hotkey value="Button/Hotkey/Attack"/>
         <SimpleDisplayText value="SimpleDisplay/Attack"/>
     </CButton>

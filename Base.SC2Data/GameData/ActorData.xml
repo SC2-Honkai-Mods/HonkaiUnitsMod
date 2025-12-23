@@ -209,13 +209,13 @@
         <AnimBlendTime value="-0.800000"/>
         <ModelFlags index="OutlineEmitter" value="1"/>
         <BuildModel value="HerrscherModel"/>
-        <DeathArray index="Normal" ModelLink="Herrscher1stDeath" SoundLink="Ghost_Explode" VoiceLink="Herrscher8thDeathVoice"/>
+        <DeathArray index="Normal" ModelLink="HerrscherDeath" SoundLink="Ghost_Explode" VoiceLink="Herrscher8thDeathVoice"/>
         <DeathArray index="Disintegrate" SoundLink="Uni_DeathFXAcid"/>
         <DeathArray index="Eviscerate" SoundLink="Uni_DeathFXEviscerate"/>
         <DeathArray index="Fire" SoundLink="Uni_DeathFXFire"/>
         <DeathActorModel value="UnitDeathModelWithDeathMotionGround"/>
         <PlacementModel value="HerrscherModel"/>
-        <PortraitModel value="Herrscher1stPortrait"/>
+        <PortraitModel value="HerrscherPortrait"/>
         <WalkAnimMoveSpeed value="2.25"/>
         <WalkAnimTimeScalingAsFlyer value="1"/>
         <BarOffset value="80"/>
@@ -257,6 +257,98 @@
         <SoundArray index="ClickError" value=""/>
         <SoundArray index="Highlight" value=""/>
     </CActorUnit>
+    <CActorUnit id="BarracksReactor">
+        <On Terms="ActorCreation" Send="TextureSelectById ReactorDiffuseCover"/>
+        <Model value="Reactor"/>
+        <BuildModel value="Reactor"/>
+        <DeathActorModel value="ReactorDeath"/>
+        <Macros value="ReactorTexture"/>
+    </CActorUnit>
+    <CActorUnit id="BarracksTechLab">
+        <On Terms="ActorCreation" Send="TextureSelectById TechLabDiffuseCover"/>
+        <Macros value="TechLabTexture"/>
+        <BuildModel value="TechLab"/>
+        <DeathActorModel value="TechLabDeath"/>
+    </CActorUnit>
+    <CActorUnit id="FactoryReactor">
+        <On Terms="ActorCreation" Send="TextureSelectById ReactorDiffuseCoverFactory"/>
+        <Macros value="ReactorTexture"/>
+        <Model value="Reactor"/>
+        <BuildModel value="Reactor"/>
+        <DeathActorModel value="ReactorDeathFactory"/>
+    </CActorUnit>
+    <CActorUnit id="FactoryTechLab">
+        <On Terms="ActorCreation" Send="TextureSelectById TechLabDiffuseCoverFactory"/>
+        <Macros value="TechLabTexture"/>
+        <BuildModel value="TechLab"/>
+        <DeathActorModel value="TechLabDeathFactory"/>
+    </CActorUnit>
+    <CActorUnit id="Reactor">
+        <On Terms="ActorCreation" Send="TextureSelectById ReactorDiffuseCover"/>
+        <DeathActorModel value="ReactorDeath"/>
+        <Macros value="ReactorTexture"/>
+    </CActorUnit>
+    <CActorEventMacro id="ReactorTexture">
+        <EditorCategories value=""/>
+        <On Terms="AbilMorph.*.Finish; MorphTo BarracksReactor" Send="TextureSelectById ReactorDiffuseCover"/>
+        <On Terms="AbilMorph.*.Finish; MorphTo FactoryReactor" Send="TextureSelectById ReactorDiffuseCoverFactory"/>
+        <On Terms="AbilMorph.*.Finish; MorphTo StarportReactor" Send="TextureSelectById ReactorDiffuseCoverStarport"/>
+    </CActorEventMacro>
+    <!--                                                                                         -->
+    <!-- Handle Morph To Tech Reactor .......................................................... -->
+    <!--                                                                                         -->
+    <CActorUnit id="TechLab">
+        <On Terms="ActorCreation" Send="TextureSelectById TechLabDiffuseCover"/>
+        <DeathActorModel value="TechLabDeath"/>
+    </CActorUnit>
+    <CActorEventMacro id="TechlabTexture">
+        <EditorCategories value=""/>
+        <On Terms="AbilMorph.*.Finish; MorphTo BarracksTechLab" Send="TextureSelectById TechLabDiffuseCover"/>
+        <On Terms="AbilMorph.*.Finish; MorphTo FactoryTechLab" Send="TextureSelectById TechLabDiffuseCoverFactory"/>
+        <On Terms="AbilMorph.*.Finish; MorphTo StarportTechLab" Send="TextureSelectById TechLabDiffuseCoverStarport"/>
+    </CActorEventMacro>
+    <CActorModelMaterial id="SCVCover" parent="GlazeParent">
+        <Inherits index="BaseModelScale" value="1"/>
+        <Inherits index="CloakEffect" value="1"/>
+        <Inherits index="Scale" value="1"/>
+        <Inherits index="TeamColor" value="1"/>
+        <Inherits index="TimeScale" value="1"/>
+        <Inherits index="WarpGroup" value="1"/>
+        <AcceptedTransfers index="AnimProps" value="1"/>
+        <AcceptedTransfers index="Position" value="0"/>
+        <AcceptedTransfers index="Rotation" value="0"/>
+        <AcceptedTransfers index="Textures" value="1"/>
+        <On Terms="UnitBirth.SCV" Send="Create"/>
+        <On Terms="ActorCreation" Send="ModelMaterialApplyTo ::Main"/>
+    </CActorModelMaterial>
+    <CActorModel id="NukeSiloBuild" parent="TerranBuildingBuild">
+        <Model value="GhostAcademyBuild"/>
+    </CActorModel>
+    <CActorUnit id="NukeSilo" parent="TerranBuildingEx" unitName="NukeSilo">
+        <Aliases value="_UnitHuge"/>
+        <Macros value="QueueAnim"/>
+        <Model value="GhostAcademy"/>
+        <BuildModel value="GhostAcademy"/>
+        <DeathArray index="Normal" ModelLink="GhostAcademyDeath"/>
+        <DeathArray index="UnderConstruction" ModelLink="TerranBuildingDeath" SoundLink="GhostAcademy_Explode"/>
+        <PlacementModel value="GhostAcademyPlacement"/>
+        <PortraitModel value="GhostAcademyPortrait"/>
+        <BarOffset value="125"/>
+        <BarWidth value="155"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Terran-GhostAcademy.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\btn-building-terran-ghostacademy.dds"/>
+        <NameOffset value="100"/>
+        <SoundArray index="Ready" value="GhostAcademy_Ready"/>
+        <SoundArray index="What" value="GhostAcademy_What"/>
+        <UnitFlags index="ShowBlobShadow" value="0"/>
+        <UnitFlags index="StandAnimBirthVariation" value="0"/>
+        <UnitIcon value="Assets\Textures\btn-building-terran-ghostacademy.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Terran-GhostAcademy.dds"/>
+        </Wireframe>
+    </CActorUnit>
     <CActorUnit id="MeiC5" parent="CActorUnitWithIcon" unitName="MeiC5">
         <Aliases value="_UnitSmall"/>
         <Macros value="UnloadDropAnim"/>
@@ -268,17 +360,17 @@
         <Macros value="ThrowAnimation2"/>
         <On index="65" Terms="Abil.attack.ReadyStop" Send="AnimGroupRemove Ready"/>
         <On index="66" Terms="UnitMovementUpdate.*.Walk" Send="AnimClear Attack"/>
-        <On index="67" Terms="WeaponStart.MeiC2Attack1.AttackStart" Send="AnimPlay Attack Attack,01 0 -1.000000 -1.000000 1.000000 AsTimeScale 0.000000 5"/>
-        <On index="68" Terms="WeaponStart.MeiC2Attack2.AttackStart" Send="AnimPlay Attack Attack,02 0 -1.000000 -1.000000 1.000000 AsTimeScale 0.000000 5"/>
-        <On Terms="WeaponStart.MeiC2Attack3.AttackStart" Send="AnimPlay Attack Attack,03 0 -1.000000 -1.000000 1.000000 AsTimeScale 0.000000 5"/>
-        <On Terms="WeaponStart.MeiC2Attack4.AttackStart" Send="AnimPlay Attack Attack,04 0 -1.000000 -1.000000 1.000000 AsTimeScale 0.000000 5"/>
-        <On Terms="WeaponStart.MeiC2Attack5.AttackStart" Send="AnimPlay Attack Attack,05 0 -1.000000 -1.000000 1.000000 AsTimeScale 0.000000 5"/>
+        <On index="67" Terms="WeaponStart.MeiC5Attack1.AttackStart" Send="AnimPlay Attack Attack,01 0 -1.000000 -1.000000 1.000000 AsTimeScale 0.000000 5"/>
+        <On index="68" Terms="WeaponStart.MeiC5Attack2.AttackStart" Send="AnimPlay Attack Attack,02 0 -1.000000 -1.000000 1.000000 AsTimeScale 0.000000 5"/>
+        <On Terms="WeaponStart.MeiC5Attack3.AttackStart" Send="AnimPlay Attack Attack,03 0 -1.000000 -1.000000 1.000000 AsTimeScale 0.000000 5"/>
+        <On Terms="WeaponStart.MeiC5Attack4.AttackStart" Send="AnimPlay Attack Attack,04 0 -1.000000 -1.000000 1.000000 AsTimeScale 0.000000 5"/>
+        <On Terms="WeaponStart.MeiC5Attack5.AttackStart" Send="AnimPlay Attack Attack,05 0 -1.000000 -1.000000 1.000000 AsTimeScale 0.000000 5"/>
         <On Terms="Abil.MeiC2EvadeMoving.SourceCastStart" Send="AnimBracketStop Walk Instant"/>
         <On Terms="Abil.MeiC2EvadeMoving.SourceCastStart" Send="AnimPlay Attack Blink,02 0 -1.000000 -1.000000 1.000000 AsTimeScale 0.000000 60"/>
         <On Terms="Abil.MeiC2EvadeIdle.SourceCastStart" Send="AnimPlay Attack Blink,01 0 -1.000000 -1.000000 1.000000 AsTimeScale 0.000000 60"/>
-        <On Terms="AbilMorph.*.Finish; MorphFrom MeiC2" Send="Destroy"/>
-        <On Terms="AbilMorph.*.Finish; MorphTo MeiC2" Send="Create"/>
-        <On Terms="ActorCreation" Send="ModelSwap MeiC2 255 PredecessorDestroyImmediate,PreventAllDynamicTextureTransfers"/>
+        <On Terms="AbilMorph.*.Finish; MorphFrom MeiC5" Send="Destroy"/>
+        <On Terms="AbilMorph.*.Finish; MorphTo MeiC5" Send="Create"/>
+        <On Terms="ActorCreation" Send="ModelSwap MeiC5 255 PredecessorDestroyImmediate,PreventAllDynamicTextureTransfers"/>
         <On Terms="WeaponStart.*.AttackStart" Send="AnimBracketClear Walk Instant"/>
         <On Terms="Abil.MeiC2Branch.SourceCastStart" Send="AnimPlay Attack Attack,06 0 -1.000000 -1.000000 1.000000 AsTimeScale 0.000000 100"/>
         <On Terms="AnimDone; AnimName Attack" Send="AnimBracketStart StandReady {} Stand,Ready Stand,Ready,End"/>
@@ -392,6 +484,25 @@
         <Wireframe>
             <Image index="0" value="Assets\Textures\Wireframe-MeiC2.tga"/>
         </Wireframe>
+    </CActorUnit>
+    <CActorSiteOpBankerUnit id="SOpBankerRPC">
+        <RollMax value="20.000000"/>
+        <RollInActivationAngle value="20.000000"/>
+        <RollInArc value="120.000000"/>
+        <RollOutDuration value="4.000000,1.000000"/>
+    </CActorSiteOpBankerUnit>
+    <CActorUnit id="StarportReactor">
+        <On Terms="ActorCreation" Send="TextureSelectById ReactorDiffuseCoverStarport"/>
+        <Model value="Reactor"/>
+        <BuildModel value="Reactor"/>
+        <DeathActorModel value="ReactorDeathStarport"/>
+        <Macros value="ReactorTexture"/>
+    </CActorUnit>
+    <CActorUnit id="StarportTechLab">
+        <On Terms="ActorCreation" Send="TextureSelectById TechLabDiffuseCoverStarport"/>
+        <Macros value="TechLabTexture"/>
+        <BuildModel value="TechLab"/>
+        <DeathActorModel value="TechLabDeathStarport"/>
     </CActorUnit>
     <CActorAction id="UL_020FlyAttack" parent="GenericAttack" effectAttack="UL_020AttackDamageAir">
         <ImpactMap index="None" Sound="Broodling_AttackImpact"/>
@@ -1073,8 +1184,6 @@
         <CreepHeightClass value="Medium"/>
         <DeathArray index="Normal" VoiceLink="EngineeringBayDeathVoice"/>
         <DeathArray index="UnderConstruction" ModelLink="TerranBuildingDeath" SoundLink="EngineeringBay_Explode"/>
-        <PlacementModel value="StFreya"/>
-        <PlacementActorModel value="PlacementModelAlpha"/>
         <PortraitModel value="EngineeringBayPortrait"/>
         <BarOffset value="165"/>
         <BarWidth value="200"/>
@@ -1979,15 +2088,12 @@
         <On Terms="Behavior.HonkaiHyperjumpTeleportIn.Off" Target="RPCTacticalJump_Placement" Send="AnimBracketStop BSD Instant"/>
         <On Terms="Behavior.HonkaiHyperjumpTeleportOut.On" Send="Create RPCHyperjumpLaunch"/>
         <On Terms="Behavior.HonkaiHyperjumpTeleportIn.On" Send="Create RPCHyperjumpImpact"/>
-        <HostSiteOps Ops="SOpBankerBanshee"/>
-        <Model value="RPC66262"/>
+        <HostSiteOps Ops="SOpBankerRPC"/>
         <ModelFlags index="OutlineEmitter" value="1"/>
         <Baselines index="Walk" BlendIn="0.750000" BlendOut="1.000000"/>
-        <BuildModel value="RPC66262"/>
         <DeathArray index="Normal" ModelLink="RPC6626Death" SoundLink="Banshee_Explode"/>
         <DeathActorModel value="UnitDeathModelWithDeathMotionFlier"/>
         <PhysicsMatchKeysOrdered value="BasicAir,Basic"/>
-        <PlacementModel value="RPC66262"/>
         <PortraitModel value="BansheePortrait"/>
         <TerrainSquibs>
             <MovementDistance value="0.150000,0.150000"/>
@@ -2215,8 +2321,7 @@
         <BuildModel value="PowerupBronya"/>
         <DeathArray index="Normal" ModelLink="PowerupBronyaDeath"/>
         <DeathArray index="UnderConstruction" ModelLink="TerranLargeBuildingDeath" SoundLink="Armory_Explode"/>
-        <PlacementModel value="PowerupBronya"/>
-        <PlacementActorModel value="PlacementModelAlpha"/>
+        <PlacementModel value="PowerupBronyaPlacement"/>
         <PortraitModel value="ArmoryPortrait"/>
         <BarOffset value="115"/>
         <BarWidth value="135"/>
@@ -2725,7 +2830,6 @@
         <On Terms="WeaponStart.DG_020Shoot.AttackStart; WeaponTargetElevation LT 20.000000" Send="AnimPlay Attack Attached,01"/>
         <On Terms="WeaponStart.DG_020Melee.AttackStart" Send="AnimPlay Attack Melee"/>
         <On Terms="WeaponStop.*.AttackStop" Send="AnimClear Attack"/>
-        <PortraitActor value="PortraitActor"/>
         <WalkAnimMoveSpeed value="1.5"/>
     </CActorUnit>
     <CActorUnit id="DG_021" parent="DG_xxx" unitName="DG_021" source="DG_020">
@@ -3192,7 +3296,7 @@
         <BuildModel value="PowerupMei"/>
         <DeathArray index="Normal" ModelLink="PowerupMeiDeath"/>
         <DeathArray index="UnderConstruction" ModelLink="TerranLargeBuildingDeath" SoundLink="Armory_Explode"/>
-        <PlacementModel value="PowerupMei"/>
+        <PlacementModel value="PowerupMeiPlacement"/>
         <PortraitModel value="ArmoryPortrait"/>
         <BarOffset value="115"/>
         <BarWidth value="135"/>
@@ -3207,7 +3311,6 @@
         <Wireframe>
             <Image value="Assets\Textures\Wireframe-PowerupMei.tga"/>
         </Wireframe>
-        <PlacementActorModel value="PlacementModelAlpha"/>
     </CActorUnit>
     <CActorSound id="MeiC2BurstSound" parent="SoundOneShot">
         <On Terms="Abil.MeiC2Ult.SourcePrepStart" Send="Create"/>
@@ -3465,8 +3568,7 @@
         <BuildModel value="Blktek"/>
         <DeathArray index="Normal" ModelLink="BlktekDeath"/>
         <DeathArray index="UnderConstruction" ModelLink="TerranLargeBuildingDeath" SoundLink="Armory_Explode"/>
-        <PlacementModel value="Blktek"/>
-        <PlacementActorModel value="PlacementModelAlpha"/>
+        <PlacementModel value="BlktekPlacement"/>
         <PortraitModel value="ArmoryPortrait"/>
         <BarOffset value="115"/>
         <BarWidth value="135"/>
@@ -3485,22 +3587,6 @@
     <CActorModel id="KianaBuildingBuild" parent="TerranBuildingBuild">
         <Model value="BarracksBuild"/>
         <Scale value="0.800000"/>
-    </CActorModel>
-    <CActorModel id="PlacementModelAlpha">
-        <Aliases value="_Main"/>
-        <Aliases value="_Unit"/>
-        <Aliases value="_Selectable"/>
-        <Filter index="Neutral" value="1"/>
-        <Filter index="Enemy" value="1"/>
-        <FogVisibility value="Visible"/>
-        <On Terms="ActorCreation; ModelIsLowQuality" Send="SetOpacity 0.300000"/>
-        <On Terms="ActorCreation" Send="AnimGroupApply Placement"/>
-        <On Terms="ActorCreation" Send="$Stand PlayForever"/>
-        <On Terms="ActorOrphan" Send="Destroy"/>
-        <On Terms="Signal.*.HidePlacement" Send="SetVisibility"/>
-        <On Terms="Signal.*.ShowPlacement" Send="SetVisibility 1"/>
-        <On Terms="ActorCreation" Send="SetOpacity 0.500000"/>
-        <HostSiteOps Ops="SOpTipabilityFloorScope"/>
     </CActorModel>
     <CActorModel id="SeeleBlinkRed" parent="ModelAnimationStyleOneShot" unitName="">
         <Host Subject="_Selectable"/>
@@ -3558,11 +3644,10 @@
         <Wireframe>
             <Image value="Assets\Textures\btn-unit-Powerup.tga"/>
         </Wireframe>
-        <PlacementModel value="Powerup"/>
+        <PlacementModel value="PowerupPlacement"/>
         <Model value="Powerup"/>
         <BuildModel value="Powerup"/>
         <Macros value="QueueAnim"/>
-        <PlacementActorModel value="PlacementModelAlpha"/>
     </CActorUnit>
     <CActorModel id="DG_020ArrowEnd" parent="ModelAddition">
         <Inherits index="BaseModelScale" value="0"/>
@@ -3849,6 +3934,16 @@
     <CActorModel id="DG_020Death" parent="DeathModelWithSource" unitName="DG_020"/>
     <CActorModel id="DG_021Death" parent="DeathModelWithSource" unitName="DG_021"/>
     <CActorModel id="DG_023Death" parent="DeathModelWithSource" unitName="DG_023"/>
+    <CActorModel id="UL_010Death" parent="DeathModelWithSource" unitName="UL_010"/>
+    <CActorModel id="UL_011Death" parent="DeathModelWithSource" unitName="UL_011"/>
+    <CActorModel id="UL_012Death" parent="DeathModelWithSource" unitName="UL_012"/>
+    <CActorModel id="UL_013Death" parent="DeathModelWithSource" unitName="UL_013"/>
+    <CActorModel id="ReactorDeath" parent="DeathModelWithSource" unitName="ReactorDiffuseCover"/>
+    <CActorModel id="ReactorDeathFactory" parent="DeathModelWithSource" unitName="ReactorDiffuseCoverFactory"/>
+    <CActorModel id="ReactorDeathStarport" parent="DeathModelWithSource" unitName="ReactorDiffuseCoverStarport"/>
+    <CActorModel id="TechLabDeath" parent="DeathModelWithSource" unitName="TechLabDiffuseCover"/>
+    <CActorModel id="TechLabDeathFactory" parent="DeathModelWithSource" unitName="TechlLabDiffuseCoverFactory"/>
+    <CActorModel id="TechLabDeathStarport" parent="DeathModelWithSource" unitName="TechLabDiffuseCoverStarport"/>
     <CActorEventMacro id="ScytheWeaponSkills">
         <EditorCategories value=""/>
         <On Terms="ActorCreation" Send="Create WeaponScytheAttachSeele"/>
@@ -4022,11 +4117,17 @@
         <StatusBarFlags index="Custom" value="0"/>
         <StatusBarOn index="Custom" value="1"/>
     </CActorUnit>
+    <CActorPortrait id="PortraitDG_010" parent="CActorPortraitWithSource" unitName="DG_010"/>
     <CActorPortrait id="PortraitDG_011" parent="CActorPortraitWithSource" unitName="DG_011"/>
     <CActorPortrait id="PortraitDG_012" parent="CActorPortraitWithSource" unitName="DG_012"/>
     <CActorPortrait id="PortraitDG_013" parent="CActorPortraitWithSource" unitName="DG_013"/>
+    <CActorPortrait id="PortraitDG_020" parent="CActorPortraitWithSource" unitName="DG_020"/>
     <CActorPortrait id="PortraitDG_021" parent="CActorPortraitWithSource" unitName="DG_021"/>
     <CActorPortrait id="PortraitDG_023" parent="CActorPortraitWithSource" unitName="DG_023"/>
+    <CActorPortrait id="PortraitUL_010" parent="CActorPortraitWithSource" unitName="UL_010"/>
+    <CActorPortrait id="PortraitUL_011" parent="CActorPortraitWithSource" unitName="UL_011"/>
+    <CActorPortrait id="PortraitUL_012" parent="CActorPortraitWithSource" unitName="UL_012"/>
+    <CActorPortrait id="PortraitUL_013" parent="CActorPortraitWithSource" unitName="UL_013"/>
     <CActorAction id="SeeleC1ChargeAttack" parent="SeeleAttack" effectAttack="SeeleC1ChargeAttack">
         <LaunchSiteOps Ops="SOpShadow SOpMoveUpBy1 SOpRotationRandomFull"/>
     </CActorAction>
@@ -4226,7 +4327,6 @@
         <Inherits index="Scale" value="1"/>
         <Inherits index="Visibility" value="1"/>
         <Host Subject="_Selectable"/>
-        <HostSiteOps Ops="SOpAttachCenter"/>
         <Model value="RPCHyperjumpPlacement"/>
         <ModelFlags index="AutomateGlobalLoops" value="1"/>
     </CActorModel>
@@ -4300,7 +4400,7 @@
         <On Terms="AbilMorph.*.Cancel; MorphTo FurnaceFactory2" Send="AnimClear Cover02"/>
         <Model value="Furnace2"/>
         <BuildModel value="Furnace2"/>
-        <PlacementModel value="Furnace2"/>
+        <PlacementModel value="FurnacePlacement"/>
         <GroupIcon>
             <Image index="0" value="Assets\Textures\Wireframe-Furnace.tga"/>
         </GroupIcon>
@@ -4320,7 +4420,7 @@
         <On Terms="AbilMorph.*.Finish; MorphTo FurnaceFactory2; MorphFrom FurnaceFactory" Send="StatusSet Created 1"/>
         <Model value="Furnace2"/>
         <BuildModel value="Furnace2"/>
-        <PlacementModel value="Furnace2"/>
+        <PlacementModel value="FurnacePlacement"/>
         <GroupIcon>
             <Image index="0" value="Assets\Textures\Wireframe-Furnace.tga"/>
         </GroupIcon>
@@ -4345,12 +4445,6 @@
         <Model value="VoidArchivesGodKey"/>
         <Scale value="0.500000"/>
     </CActorModel>
-    <CActorModel id="DivineKeysAttachBronyaC7" parent="ModelAddition">
-        <EditorCategories value=""/>
-        <HostSiteOps Ops="SOpAttachTarget1"/>
-        <Model value="WeaponCannonB34GodKey"/>
-        <Scale value="0.750000"/>
-    </CActorModel>
     <CActorModel id="DivineKeysBirth" parent="ProtossBuildingBuild">
         <EventDataSound Actor="UnitSound"/>
         <EventDataSound Name="BuildingWarpIn" Actor="UnitSound" Sound="Protoss_BuildingWarpIn"/>
@@ -4368,7 +4462,7 @@
     <CActorUnit id="Furnace_1" parent="TechLabBase" unitName="Furnace">
         <Model value="Furnace2"/>
         <BuildModel value="Furnace2"/>
-        <PlacementModel value="Furnace2"/>
+        <PlacementModel value="FurnacePlacement"/>
         <AddonIndicator value="Actor/AddonIndicator/Furnace_1"/>
         <GroupIcon>
             <Image index="0" value="Assets\Textures\Wireframe-Furnace.tga"/>
@@ -4388,7 +4482,7 @@
     </CActorModel>
     <CActorUnit id="Furnace2" parent="TechLabBase" unitName="Furnace2">
         <Model value="Furnace2"/>
-        <PlacementModel value="Furnace2"/>
+        <PlacementModel value="FurnacePlacement"/>
         <AddonIndicator value="Actor/AddonIndicator/Furnace2"/>
         <GroupIcon>
             <Image index="0" value="Assets\Textures\Wireframe-Furnace.tga"/>
@@ -4436,7 +4530,6 @@
         <Inherits index="Visibility" value="1"/>
         <EditorCategories value=""/>
         <Host Subject="_Selectable"/>
-        <HostSiteOps Ops="SOpAttachCenter" HoldPosition="1"/>
         <ModelFlags index="AutomateGlobalLoops" value="1"/>
     </CActorModel>
     <CActorModel id="HyperjumpLaunch"/>
@@ -4447,7 +4540,6 @@
         <Inherits index="Visibility" value="1"/>
         <EditorCategories value=""/>
         <Host Subject="_Selectable"/>
-        <HostSiteOps Ops="SOpAttachCenter" HoldPosition="1"/>
         <ModelFlags index="AutomateGlobalLoops" value="1"/>
     </CActorModel>
     <CActorUnit id="Interceptor">
@@ -4561,7 +4653,7 @@
         <On index="66" removed="1"/>
         <On index="67" removed="1"/>
         <On index="68" removed="1"/>
-        <Model value="WeaponVoid"/>
+        <Model value="Invisible"/>
         <Scale value="1.400000"/>
         <ModelFlags index="AutomateGlobalLoops" value="0"/>
         <ModelFlags index="NeedsVolumeMonitoring" value="0"/>
@@ -5038,7 +5130,6 @@
         <Macros value="GlobalLoopMacro"/>
         <On Terms="UnitConstruction.DivineKeys.Start" Send="Create DivineKeysBirth"/>
         <On Terms="Upgrade.DivineKey1st.Add" Send="Create DivineKeysAttachVoidArchives"/>
-        <On Terms="Upgrade.VHerrscher1st.Add" Send="Create DivineKeysAttachBronyaC7"/>
         <On Terms="Upgrade.DivineKey2nd.Add" Send="Create DivineKeysAttachCosmicJuggernaut"/>
         <On Terms="Upgrade.DivineKey3rd.Add" Send="Create DivineKeysAttachSevenThundersOfRetributionives"/>
         <On Terms="ActorCreation; ValidatePlayer DivineKeysG1" Send="Create DivineKeysAttachVoidArchives"/>
@@ -5048,7 +5139,6 @@
         <DeathArray index="Normal" SoundLink="CyberneticsCore_Explode"/>
         <DeathArray index="UnderConstruction" ModelLink="CyberneticsCoreDeathUnderConstruction" SoundLink="CyberneticsCore_Explode"/>
         <DeathActorModel value="CyberneticsCoreDeath"/>
-        <PlacementModel value="DivineKeys"/>
         <PortraitModel value="CommandCenterPortrait"/>
         <BarOffset value="140"/>
         <BarWidth value="135"/>
@@ -5186,7 +5276,7 @@
         <On index="66" removed="1"/>
         <On index="67" removed="1"/>
         <On index="68" removed="1"/>
-        <Model value="WeaponVoid"/>
+        <Model value="Invisible"/>
         <Scale value="1.400000"/>
         <ModelFlags index="AutomateGlobalLoops" value="0"/>
         <ModelFlags index="NeedsVolumeMonitoring" value="0"/>
@@ -5411,7 +5501,7 @@
         <On Terms="AbilMorph.*.Finish; MorphTo LightningRodFactory2; MorphFrom LightningRodFactory" Send="StatusSet Created 1"/>
         <Model value="LightningRod"/>
         <BuildModel value="LightningRod"/>
-        <PlacementModel value="LightningRod"/>
+        <PlacementModel value="LightningRodPlacement"/>
         <GroupIcon>
             <Image index="0" value="Assets\Textures\Wireframe-LightningRod.tga"/>
         </GroupIcon>
@@ -5441,7 +5531,7 @@
         <On Terms="AbilMorph.*.Cancel; MorphTo IceTabletFactory2" Send="AnimClear Cover02"/>
         <Model value="IceTablet"/>
         <BuildModel value="IceTablet"/>
-        <PlacementModel value="IceTablet"/>
+        <PlacementModel value="IceTabletPlacement"/>
         <GroupIcon>
             <Image index="0" value="Assets\Textures\Wireframe-IceTablet.tga"/>
         </GroupIcon>
@@ -5461,7 +5551,7 @@
         <On Terms="AbilMorph.*.Finish; MorphTo IceTabletFactory2; MorphFrom IceTabletFactory" Send="StatusSet Created 1"/>
         <Model value="IceTablet"/>
         <BuildModel value="IceTablet"/>
-        <PlacementModel value="IceTablet"/>
+        <PlacementModel value="IceTabletPlacement"/>
         <GroupIcon>
             <Image index="0" value="Assets\Textures\Wireframe-IceTablet.tga"/>
         </GroupIcon>
@@ -5473,27 +5563,57 @@
         <DeathArray index="Normal" ModelLink="IceTabletDeath"/>
         <DeathCustoms index="5" ModelLink="IceTabletDeath" Name="Detached"/>
     </CActorUnit>
-    <CActorUnit id="LightningRod2" parent="TechLabBase" unitName="LightningRod2">
+    <CActorUnit id="LightningRod2" parent="TerranBuildingEx" unitName="LightningRod2">
+        <Aliases value="_UnitLarge"/>
+        <Macros value="TerranAttachmentAnims"/>
+        <Macros value="QueueAnimAddon"/>
+        <On Terms="UnitDeathCustomize; ValidateUnit TechLabIsDetached" Send="DeathCustomize Detached"/>
         <Model value="LightningRod"/>
+        <CreepHeightClass value="Small"/>
         <BuildModel value="LightningRod"/>
-        <PlacementModel value="LightningRod"/>
+        <DeathArray index="Normal" ModelLink="LightningRodDeath" SoundLink="TechLab_Explode"/>
+        <DeathArray index="UnderConstruction" ModelLink="TerranBuildingDeath" SoundLink="TechLab_Explode"/>
+        <DeathCustoms ModelLink="LightningRodDeath" Name="Detached"/>
+        <PlacementModel value="LightningRodPlacement"/>
+        <PortraitModel value="ReactorPortrait"/>
         <AddonIndicator value="Actor/AddonIndicator/LightningRod2"/>
+        <BarOffset value="80"/>
+        <BarWidth value="75"/>
+        <GlossaryAnim value="Stand,Attached"/>
         <GroupIcon>
-            <Image index="0" value="Assets\Textures\Wireframe-LightningRod.tga"/>
+            <Image value="Assets\Textures\Wireframe-LightningRod.tga"/>
         </GroupIcon>
+        <GroupSoundArray index="What" value="TechLabGroupWhat"/>
+        <GroupSoundArray index="Yes" value="TechLabGroupYes"/>
+        <GroupSoundArray index="Attack" value="TechLabGroupAttack"/>
+        <GroupSoundArray index="Board" value="TechLabGroupBoard"/>
         <HeroIcon value="Assets\Textures\Wireframe-LightningRod.tga"/>
-        <HighlightTooltip value="Unit/Name/LightningRod2"/>
+        <SoundArray index="Birth" value="TechLab_Birth"/>
+        <SoundArray index="Ready" value="TechLab_Ready"/>
+        <SoundArray index="Help" value="TechLabHelp"/>
+        <SoundArray index="What" value="TechLab_What"/>
+        <SoundArray index="Yes" value="TechLabYes"/>
+        <SoundArray index="Attack" value="TechLabAttack"/>
+        <SoundArray index="Pissed" value="TechLabPissed"/>
+        <SoundArray index="Movement" value="TechLabMovement"/>
+        <SoundArray index="Turning" value="TechLabTurning"/>
+        <SoundArray index="Board" value="TechLabBoard"/>
+        <SoundArray index="Click" value="TechLabClick"/>
+        <SoundArray index="ClickError" value="TechLabClickError"/>
+        <SoundArray index="Highlight" value="TechLabHighlight"/>
+        <UnitFlags index="ShowBlobShadow" value="0"/>
         <UnitIcon value="Assets\Textures\Wireframe-LightningRod.tga"/>
         <Wireframe>
-            <Image index="0" value="Assets\Textures\Wireframe-LightningRod.tga"/>
+            <Image value="Assets\Textures\Wireframe-LightningRod.tga"/>
         </Wireframe>
-        <DeathArray index="Normal" ModelLink="LightningRodDeath"/>
-        <DeathCustoms index="5" ModelLink="LightningRodDeath" Name="Detached"/>
     </CActorUnit>
-    <CActorUnit id="IceTablet" parent="TechLabBase" unitName="IceTablet">
-        <On index="69" Send="Create BuildingTerrainFlatten"/>
+    <CActorUnit id="IceTablet" parent="TerranBuildingEx" unitName="IceTablet">
+        <Aliases value="_UnitLarge"/>
+        <Macros value="TerranAttachmentAnims"/>
+        <Macros value="QueueAnimAddon"/>
+        <On index="69" Terms="UnitConstruction.IceTablet.Start" Send="Create BuildingTerrainFlatten"/>
         <On index="70" Terms="UnitConstruction.IceTablet.Cancel" Target="_BuildingTerrainFlatten" Send="Destroy"/>
-        <On index="71" Terms="UnitConstruction.IceTablet.Finish"/>
+        <On index="71" Terms="UnitConstruction.IceTablet.Finish" Target="_BuildingTerrainFlatten" Send="Destroy"/>
         <On index="72" Terms="UnitConstruction.IceTablet.Start" Target="" Send="QueryRadius 1.750000 BuildingCrushQueryResponse"/>
         <On index="73" Terms="UnitBirth.IceTablet.Normal" Send="Create BuildingTerrainFlatten"/>
         <On index="74" Terms="UnitBirth.IceTablet.Suppressed" Send="Create BuildingTerrainFlattenInstant"/>
@@ -5502,38 +5622,85 @@
         <On index="77" Terms="UnitDeathCustomize; CreepEngulfs" Target="" Send="CreepEngulfmentStopTransition"/>
         <On index="78" Terms="ActorCreation; CreepIntersects" Send="CreepEngulfmentStartTransition"/>
         <On index="79" Terms="UnitDeathCustomize; ValidateUnit TechLabIsDetached" Send="DeathCustomize Detached"/>
-        <On index="80" removed="1"/>
-        <Model value="IceTablet"/>
-        <PlacementModel value="IceTablet"/>
+        <CreepHeightClass value="Small"/>
+        <DeathArray index="Normal" SoundLink="TechLab_Explode"/>
+        <DeathArray index="UnderConstruction" ModelLink="TerranBuildingDeath" SoundLink="TechLab_Explode"/>
+        <DeathCustoms ModelLink="IceTabletDeath" Name="Detached"/>
+        <PortraitModel value="ReactorPortrait"/>
         <AddonIndicator value="Actor/AddonIndicator/IceTablet"/>
+        <BarOffset value="80"/>
+        <BarWidth value="75"/>
+        <GlossaryAnim value="Stand,Attached"/>
         <GroupIcon>
-            <Image index="0" value="Assets\Textures\Wireframe-IceTablet.tga"/>
+            <Image value="Assets\Textures\Wireframe-IceTablet.tga"/>
         </GroupIcon>
+        <GroupSoundArray index="What" value="TechLabGroupWhat"/>
+        <GroupSoundArray index="Yes" value="TechLabGroupYes"/>
+        <GroupSoundArray index="Attack" value="TechLabGroupAttack"/>
+        <GroupSoundArray index="Board" value="TechLabGroupBoard"/>
         <HeroIcon value="Assets\Textures\Wireframe-IceTablet.tga"/>
-        <HighlightTooltip value="Unit/Name/IceTablet"/>
+        <SoundArray index="Birth" value="TechLab_Birth"/>
+        <SoundArray index="Ready" value="TechLab_Ready"/>
+        <SoundArray index="Help" value="TechLabHelp"/>
+        <SoundArray index="What" value="TechLab_What"/>
+        <SoundArray index="Yes" value="TechLabYes"/>
+        <SoundArray index="Attack" value="TechLabAttack"/>
+        <SoundArray index="Pissed" value="TechLabPissed"/>
+        <SoundArray index="Movement" value="TechLabMovement"/>
+        <SoundArray index="Turning" value="TechLabTurning"/>
+        <SoundArray index="Board" value="TechLabBoard"/>
+        <SoundArray index="Click" value="TechLabClick"/>
+        <SoundArray index="ClickError" value="TechLabClickError"/>
+        <SoundArray index="Highlight" value="TechLabHighlight"/>
+        <UnitFlags index="ShowBlobShadow" value="0"/>
         <UnitIcon value="Assets\Textures\Wireframe-IceTablet.tga"/>
         <Wireframe>
-            <Image index="0" value="Assets\Textures\Wireframe-IceTablet.tga"/>
+            <Image value="Assets\Textures\Wireframe-IceTablet.tga"/>
         </Wireframe>
-        <DeathArray index="Normal" ModelLink="IceTabletDeath"/>
-        <DeathCustoms index="5" ModelLink="IceTabletDeath" Name="Detached"/>
     </CActorUnit>
-    <CActorUnit id="IceTablet2" parent="TechLabBase" unitName="IceTablet2">
+    <CActorUnit id="IceTablet2" parent="TerranBuildingEx" unitName="IceTablet2">
+        <Aliases value="_UnitLarge"/>
+        <Macros value="TerranAttachmentAnims"/>
+        <Macros value="QueueAnimAddon"/>
+        <On Terms="UnitDeathCustomize; ValidateUnit TechLabIsDetached" Send="DeathCustomize Detached"/>
         <Model value="IceTablet"/>
+        <CreepHeightClass value="Small"/>
         <BuildModel value="IceTablet"/>
-        <PlacementModel value="IceTablet"/>
+        <DeathArray index="Normal" ModelLink="IceTabletDeath" SoundLink="TechLab_Explode"/>
+        <DeathArray index="UnderConstruction" ModelLink="TerranBuildingDeath" SoundLink="TechLab_Explode"/>
+        <DeathCustoms ModelLink="IceTabletDeath" Name="Detached"/>
+        <PlacementModel value="IceTabletPlacement"/>
+        <PortraitModel value="ReactorPortrait"/>
         <AddonIndicator value="Actor/AddonIndicator/IceTablet2"/>
+        <BarOffset value="80"/>
+        <BarWidth value="75"/>
+        <GlossaryAnim value="Stand,Attached"/>
         <GroupIcon>
-            <Image index="0" value="Assets\Textures\Wireframe-IceTablet.tga"/>
+            <Image value="Assets\Textures\Wireframe-IceTablet.tga"/>
         </GroupIcon>
+        <GroupSoundArray index="What" value="TechLabGroupWhat"/>
+        <GroupSoundArray index="Yes" value="TechLabGroupYes"/>
+        <GroupSoundArray index="Attack" value="TechLabGroupAttack"/>
+        <GroupSoundArray index="Board" value="TechLabGroupBoard"/>
         <HeroIcon value="Assets\Textures\Wireframe-IceTablet.tga"/>
-        <HighlightTooltip value="Unit/Name/IceTablet2"/>
+        <SoundArray index="Birth" value="TechLab_Birth"/>
+        <SoundArray index="Ready" value="TechLab_Ready"/>
+        <SoundArray index="Help" value="TechLabHelp"/>
+        <SoundArray index="What" value="TechLab_What"/>
+        <SoundArray index="Yes" value="TechLabYes"/>
+        <SoundArray index="Attack" value="TechLabAttack"/>
+        <SoundArray index="Pissed" value="TechLabPissed"/>
+        <SoundArray index="Movement" value="TechLabMovement"/>
+        <SoundArray index="Turning" value="TechLabTurning"/>
+        <SoundArray index="Board" value="TechLabBoard"/>
+        <SoundArray index="Click" value="TechLabClick"/>
+        <SoundArray index="ClickError" value="TechLabClickError"/>
+        <SoundArray index="Highlight" value="TechLabHighlight"/>
+        <UnitFlags index="ShowBlobShadow" value="0"/>
         <UnitIcon value="Assets\Textures\Wireframe-IceTablet.tga"/>
         <Wireframe>
-            <Image index="0" value="Assets\Textures\Wireframe-IceTablet.tga"/>
+            <Image value="Assets\Textures\Wireframe-IceTablet.tga"/>
         </Wireframe>
-        <DeathArray index="Normal" ModelLink="IceTabletDeath"/>
-        <DeathCustoms index="5" ModelLink="IceTabletDeath" Name="Detached"/>
     </CActorUnit>
     <CActorAction id="RO_050Abil" parent="GenericAttack" effectImpact="RO_050AbilDamage" effectLaunch="RO_050AbilLM">
         <LaunchSiteOps Ops="SOpAttachHarnessStationary"/>
@@ -5918,13 +6085,16 @@
         <HeroIcon value="Assets\Textures\vortexwarp2.dds"/>
     </CActorUnit>
     <CActorUnit id="FactoryLightningRod" parent="ReactorBase" unitName="LightningRodFactory">
+        <Macros value="QueueAnimAddon"/>
         <On index="69" Send="Create LightningRodBuild"/>
         <On Terms="AbilMorph.*.Start; MorphTo LightningRodFactory2" Send="AnimPlay Cover02 Morph,Work PlayForever -1.000000 -1.000000 1.000000 AsTimeScale"/>
         <On Terms="AbilMorph.*.Finish; MorphFrom LightningRodFactory; MorphTo LightningRodFactory2" Send="Destroy"/>
         <On Terms="AbilMorph.*.Cancel; MorphTo LightningRodFactory2" Send="AnimClear Cover02"/>
         <Model value="LightningRod"/>
         <BuildModel value="LightningRod"/>
-        <PlacementModel value="LightningRod"/>
+        <DeathArray index="Normal" ModelLink="LightningRodDeath"/>
+        <DeathCustoms index="5" ModelLink="LightningRodDeath" Name="Detached"/>
+        <PlacementModel value="LightningRodPlacement"/>
         <GroupIcon>
             <Image index="0" value="Assets\Textures\Wireframe-LightningRod.tga"/>
         </GroupIcon>
@@ -5933,9 +6103,6 @@
         <Wireframe>
             <Image index="0" value="Assets\Textures\Wireframe-LightningRod.tga"/>
         </Wireframe>
-        <Macros value="QueueAnimAddon"/>
-        <DeathArray index="Normal" ModelLink="LightningRodDeath"/>
-        <DeathCustoms index="5" ModelLink="LightningRodDeath" Name="Detached"/>
     </CActorUnit>
     <!-- Fire Suppression Bots ................................................................. -->
     <CActorModel id="FireSuppressionBots">
@@ -7327,21 +7494,46 @@
         <HostImpact Subject="_Unit" Scope="Target"/>
         <HostImpactSiteOps Ops="SOpAttachCenter"/>
     </CActorBeamSimple>
-    <CActorUnit id="LightningRod" parent="TechLabBase" unitName="LightningRod">
-        <Model value="LightningRod"/>
+    <CActorUnit id="LightningRod" parent="TerranBuildingEx" unitName="LightningRod">
+        <Aliases value="_UnitLarge"/>
+        <Macros value="TerranAttachmentAnims"/>
+        <Macros value="QueueAnimAddon"/>
+        <On Terms="UnitDeathCustomize; ValidateUnit TechLabIsDetached" Send="DeathCustomize Detached"/>
+        <CreepHeightClass value="Small"/>
+        <DeathArray index="Normal" SoundLink="TechLab_Explode"/>
+        <DeathArray index="UnderConstruction" ModelLink="TerranBuildingDeath" SoundLink="TechLab_Explode"/>
+        <DeathCustoms ModelLink="LightningRodDeath" Name="Detached"/>
+        <PortraitModel value="ReactorPortrait"/>
         <AddonIndicator value="Actor/AddonIndicator/LightningRod"/>
-        <HighlightTooltip value="Unit/Name/LightningRod"/>
-        <PlacementModel value="LightningRod"/>
+        <BarOffset value="80"/>
+        <BarWidth value="75"/>
+        <GlossaryAnim value="Stand,Attached"/>
         <GroupIcon>
-            <Image index="0" value="Assets\Textures\Wireframe-LightningRod.tga"/>
+            <Image value="Assets\Textures\Wireframe-LightningRod.tga"/>
         </GroupIcon>
+        <GroupSoundArray index="What" value="TechLabGroupWhat"/>
+        <GroupSoundArray index="Yes" value="TechLabGroupYes"/>
+        <GroupSoundArray index="Attack" value="TechLabGroupAttack"/>
+        <GroupSoundArray index="Board" value="TechLabGroupBoard"/>
         <HeroIcon value="Assets\Textures\Wireframe-LightningRod.tga"/>
+        <SoundArray index="Birth" value="TechLab_Birth"/>
+        <SoundArray index="Ready" value="TechLab_Ready"/>
+        <SoundArray index="Help" value="TechLabHelp"/>
+        <SoundArray index="What" value="TechLab_What"/>
+        <SoundArray index="Yes" value="TechLabYes"/>
+        <SoundArray index="Attack" value="TechLabAttack"/>
+        <SoundArray index="Pissed" value="TechLabPissed"/>
+        <SoundArray index="Movement" value="TechLabMovement"/>
+        <SoundArray index="Turning" value="TechLabTurning"/>
+        <SoundArray index="Board" value="TechLabBoard"/>
+        <SoundArray index="Click" value="TechLabClick"/>
+        <SoundArray index="ClickError" value="TechLabClickError"/>
+        <SoundArray index="Highlight" value="TechLabHighlight"/>
+        <UnitFlags index="ShowBlobShadow" value="0"/>
         <UnitIcon value="Assets\Textures\Wireframe-LightningRod.tga"/>
         <Wireframe>
-            <Image index="0" value="Assets\Textures\Wireframe-LightningRod.tga"/>
+            <Image value="Assets\Textures\Wireframe-LightningRod.tga"/>
         </Wireframe>
-        <DeathArray index="Normal" ModelLink="LightningRodDeath"/>
-        <DeathCustoms index="5" ModelLink="LightningRodDeath" Name="Detached"/>
     </CActorUnit>
     <CActorSound id="Spell_AmorphousArmorcloud_Impact2" parent="SoundOneShot">
         <On Terms="Effect.Herrscher6thDeathCloudCP.Start" Send="Create"/>
@@ -7891,7 +8083,6 @@
         <CreepHeightClass value="Medium"/>
         <BuildModel value="HighTowerBuild"/>
         <DeathArray index="UnderConstruction" ModelLink="TerranBuildingDeath" SoundLink="EngineeringBay_Explode"/>
-        <PlacementModel value="HighTower"/>
         <PortraitModel value="EngineeringBayPortrait"/>
         <BarOffset value="110"/>
         <BarWidth value="135"/>
@@ -8052,7 +8243,7 @@
     </CActorUnit>
     <CActorUnit id="Target" parent="GenericUnitStandard" unitName="Target">
         <EditorCategories value=""/>
-        <Model value="WeaponVoid"/>
+        <Model value="Invisible"/>
         <HighlightTooltip value="Unit/Name/Bogus"/>
     </CActorUnit>
     <CActorAction id="KianaC4QTEAction2" parent="GenericAttack" effectImpact="VoidEffect" effectLaunch="KianaC4QTE2">
@@ -8206,7 +8397,7 @@
         <Wireframe>
             <Image index="0" value="Assets\Textures\btn-unit-GunTower2.tga"/>
         </Wireframe>
-        <PlacementModel value="MissileTurret"/>
+        <PlacementActorModel value="PlacementModel"/>
     </CActorUnit>
     <CActorTurret id="MissileTurret2">
         <On Terms="TurretEnable.MissileTurret" Send="Create"/>
@@ -8249,42 +8440,23 @@
             <Image index="0" value="Assets\Textures\Wireframe-Hyperion.tga"/>
         </Wireframe>
     </CActorUnit>
-    <CActorUnit id="SwarmMissile" parent="TerranBuildingEx" unitName="MissileTurret">
+    <CActorUnit id="SwarmMissile" parent="TerranBuildingEx" unitName="SwarmMissile">
         <Aliases value="_UnitHuge"/>
-        <On index="0" Terms="UnitBirth.SwarmMissile"/>
-        <On index="1" Terms="UnitBirth.SwarmMissile"/>
-        <On index="2" Terms="UnitRevive.SwarmMissile"/>
-        <On index="3" Terms="UnitRevive.SwarmMissile"/>
-        <On index="4" Terms="UnitConstruction.SwarmMissile.Start"/>
-        <On index="5" Terms="UnitConstruction.SwarmMissile.Finish"/>
         <On index="69" Terms="UnitConstruction.SwarmMissile.Start" Send="Create MissileTurretBuild"/>
-        <On index="70" Terms="UnitConstruction.SwarmMissile.Start" Send="Create BuildingTerrainFlatten"/>
-        <On index="71" Terms="UnitConstruction.SwarmMissile.Cancel" Target="_BuildingTerrainFlatten" Send="Destroy"/>
-        <On index="72" Terms="UnitConstruction.SwarmMissile.Finish" Target="_BuildingTerrainFlatten" Send="Destroy"/>
-        <On index="73" Terms="UnitConstruction.SwarmMissile.Start" Send="QueryRadius 1.750000 BuildingCrushQueryResponse"/>
-        <On index="74" Terms="UnitBirth.SwarmMissile.Normal" Send="Create BuildingTerrainFlatten"/>
-        <On index="75" Terms="UnitBirth.SwarmMissile.Suppressed" Send="Create BuildingTerrainFlattenInstant"/>
-        <On index="76" Terms="UnitBirth.SwarmMissile.EditorPlaced" Send="Create BuildingTerrainFlattenEditor"/>
-        <On index="77" Terms="UnitDeath.SwarmMissile" Target="_BuildingTerrainFlatten" Send="Destroy"/>
-        <Model value="SwarmMissile"/>
         <CreepHeightClass value="Small"/>
-        <BuildModel value="SwarmMissile"/>
-        <DeathArray index="Normal" ModelLink="SwarmMissileDeath"/>
         <DeathArray index="UnderConstruction" ModelLink="TerranBuildingDeath" SoundLink="MissileTurret_Explode"/>
-        <PlacementModel value="SwarmMissile"/>
         <PlacementSound value="Terran_BuildingPlacementSmall"/>
-        <PlacementActorModel value="MissileTurretSkinnablePlacementModel2"/>
         <BarOffset value="90"/>
         <GroupIcon>
             <Image value="Assets\Textures\btn-unit-GunTower1.tga"/>
         </GroupIcon>
         <HeroIcon value="Assets\Textures\btn-unit-GunTower1.tga"/>
-        <HighlightTooltip value="Unit/Name/SwarmMissile"/>
         <UnitFlags index="ShowBlobShadow" value="0"/>
         <UnitIcon value="Assets\Textures\btn-unit-GunTower1.tga"/>
         <Wireframe>
             <Image value="Assets\Textures\btn-unit-GunTower1.tga"/>
         </Wireframe>
+        <PortraitModel value="MissileTurretPortrait"/>
     </CActorUnit>
     <!--                                                                                         -->
     <!-- Brood Lord ............................................................................ -->
@@ -8343,42 +8515,26 @@
     <CActorModel id="GunTurret1Build" parent="TerranBuildingBuildSmall">
         <Model value="MissileTurretBuild"/>
     </CActorModel>
-    <CActorUnit id="GunTower3" parent="TerranBuildingEx" unitName="MissileTurret">
+    <CActorUnit id="Railgun" parent="TerranBuildingEx" unitName="Railgun">
         <Aliases value="_UnitHuge"/>
-        <On index="0" Terms="UnitBirth.Railgun"/>
-        <On index="1" Terms="UnitBirth.Railgun"/>
-        <On index="2" Terms="UnitRevive.Railgun"/>
-        <On index="3" Terms="UnitRevive.Railgun"/>
-        <On index="4" Terms="UnitConstruction.Railgun.Start"/>
-        <On index="5" Terms="UnitConstruction.Railgun.Finish"/>
-        <On index="69" Terms="UnitConstruction.Railgun.Start" Send="Create MissileTurretBuild"/>
-        <On index="70" Terms="UnitConstruction.Railgun.Start" Send="Create BuildingTerrainFlatten"/>
-        <On index="71" Terms="UnitConstruction.Railgun.Cancel" Target="_BuildingTerrainFlatten" Send="Destroy"/>
-        <On index="72" Terms="UnitConstruction.Railgun.Finish" Target="_BuildingTerrainFlatten" Send="Destroy"/>
-        <On index="73" Terms="UnitConstruction.Railgun.Start" Send="QueryRadius 1.750000 BuildingCrushQueryResponse"/>
-        <On index="74" Terms="UnitBirth.Railgun.Normal" Send="Create BuildingTerrainFlatten"/>
-        <On index="75" Terms="UnitBirth.Railgun.Suppressed" Send="Create BuildingTerrainFlattenInstant"/>
-        <On index="76" Terms="UnitBirth.Railgun.EditorPlaced" Send="Create BuildingTerrainFlattenEditor"/>
-        <On index="77" Terms="UnitDeath.Railgun" Target="_BuildingTerrainFlatten" Send="Destroy"/>
-        <Model value="Railgun"/>
         <CreepHeightClass value="Small"/>
-        <BuildModel value="Railgun"/>
-        <DeathArray index="Normal" ModelLink="RailgunDeath"/>
         <DeathArray index="UnderConstruction" ModelLink="TerranBuildingDeath" SoundLink="MissileTurret_Explode"/>
         <PlacementSound value="Terran_BuildingPlacementSmall"/>
         <PlacementActorModel value="MissileTurretSkinnablePlacementModel3"/>
+        <PortraitModel value="MissileTurretPortrait"/>
         <BarOffset value="90"/>
         <GroupIcon>
             <Image value="Assets\Textures\btn-unit-GunTower3.tga"/>
         </GroupIcon>
         <HeroIcon value="Assets\Textures\btn-unit-GunTower3.tga"/>
-        <HighlightTooltip value="Unit/Name/GunTower3"/>
+        <SoundArray index="Ready" value="MissileTurret_Ready"/>
+        <SoundArray index="What" value="MissileTurret_What"/>
         <UnitFlags index="ShowBlobShadow" value="0"/>
         <UnitIcon value="Assets\Textures\btn-unit-GunTower3.tga"/>
         <Wireframe>
             <Image value="Assets\Textures\btn-unit-GunTower3.tga"/>
         </Wireframe>
-        <PlacementModel value="Railgun"/>
+        <On index="69" Terms="UnitConstruction.Railgun.Start" Send="Create MissileTurretBuild"/>
     </CActorUnit>
     <CActorTurret id="MissileTurret22">
         <On Terms="TurretEnable.MissileTurret2" Send="Create"/>
@@ -8562,30 +8718,6 @@
             <Image index="0" value="Assets\Textures\Wireframe-DG_080.tga"/>
         </Wireframe>
     </CActorUnit>
-    <CActorUnit id="ChangelingZergling">
-        <Model value="ZerglingMod"/>
-        <PortraitModel value="ZerglingPortraitMod"/>
-        <GroupIcon>
-            <Image index="0" value="Assets\Textures\Wireframe-Q_UL_010.tga"/>
-        </GroupIcon>
-        <HeroIcon value="Assets\Textures\btn-unit-Q_UL_010.tga"/>
-        <UnitIcon value="Assets\Textures\btn-unit-Q_UL_010.tga"/>
-        <Wireframe>
-            <Image index="0" value="Assets\Textures\Wireframe-Q_UL_010.tga"/>
-        </Wireframe>
-    </CActorUnit>
-    <CActorUnit id="ChangelingZerglingWings">
-        <Model value="ZerglingMod"/>
-        <PortraitModel value="ZerglingPortraitMod"/>
-        <GroupIcon>
-            <Image index="0" value="Assets\Textures\Wireframe-Q_UL_010.tga"/>
-        </GroupIcon>
-        <HeroIcon value="Assets\Textures\btn-unit-Q_UL_010.tga"/>
-        <UnitIcon value="Assets\Textures\btn-unit-Q_UL_010.tga"/>
-        <Wireframe>
-            <Image index="0" value="Assets\Textures\Wireframe-Q_UL_010.tga"/>
-        </Wireframe>
-    </CActorUnit>
     <CActorLookAt id="CycloneLockOnTurretLookAt">
         <Types>
             <Start Group="Turret_Left"/>
@@ -8603,7 +8735,7 @@
     </CActorLookAt>
     <CActorUnit id="EvadeShadow" parent="GenericUnitStandard" unitName="EvadeShadow">
         <EditorCategories value=""/>
-        <Model value="WeaponVoid"/>
+        <Model value="Invisible"/>
         <HighlightTooltip value="Unit/Name/Bogus"/>
     </CActorUnit>
     <CActorUnit id="Hellion">
@@ -8817,12 +8949,12 @@
         <Scale value="1.250000"/>
     </CActorModel>
     <CActorUnit id="Hydralisk">
-        <Model value="HydraliskMod"/>
-        <BuildModel value="HydraliskMod"/>
-        <PlacementModel value="HydraliskMod"/>
+        <Model value="UL_010"/>
+        <BuildModel value="UL_010"/>
+        <PlacementModel value="UL_010"/>
         <WalkAnimMoveSpeed value="4"/>
-        <DeathArray index="Normal" ModelLink="HydraliskDeathMod"/>
-        <PortraitModel value="HydraliskPortraitMod"/>
+        <DeathArray index="Normal" ModelLink="UL_010Death"/>
+        <PortraitModel value="UL_010Portrait"/>
         <GroupIcon>
             <Image index="0" value="Assets\Textures\Wireframe-UL_013.tga"/>
         </GroupIcon>
@@ -8848,6 +8980,9 @@
         <SoundArray index="Yes" value="UL_010_Yes"/>
         <SoundArray index="Attack" value="UL_010_Attack"/>
         <SoundArray index="Pissed" value="UL_010_Pissed"/>
+        <On Terms="ActorCreation" Send="TextureSelectById UL_013"/>
+        <DeathActorModel value="UL_013Death"/>
+        <PortraitActor value="UL_013Death"/>
     </CActorUnit>
     <CActorUnit id="LurkerMP">
         <Model value="LurkerMod"/>
@@ -9097,13 +9232,13 @@
         <SoundArray index="Pissed" value="UlyGeneral_Pissed"/>
     </CActorUnit>
     <CActorUnit id="Roach">
-        <Model value="RoachMod"/>
-        <BuildModel value="RoachMod"/>
-        <DeathArray index="Normal" ModelLink="RoachDeathMod"/>
+        <Model value="UL_010"/>
+        <BuildModel value="UL_010"/>
+        <DeathArray index="Normal" ModelLink="UL_010Death"/>
         <DeathArray index="Disintegrate" ModelLink=""/>
         <DeathArray index="Fire" ModelLink=""/>
-        <PlacementModel value="RoachMod"/>
-        <PortraitModel value="RoachPortraitMod"/>
+        <PlacementModel value="UL_010"/>
+        <PortraitModel value="UL_010Portrait"/>
         <SoundArray index="Ready" value="UL_010_Ready"/>
         <SoundArray index="Help" value="UL_010_Help"/>
         <SoundArray index="What" value="UL_010_What"/>
@@ -9128,6 +9263,20 @@
         <DeathCustoms index="12" removed="1"/>
         <DeathCustoms index="13" removed="1"/>
         <DeathCustoms index="14" removed="1"/>
+        <On index="74" Terms="AbilMorph.*.Start; AbilKey BurrowDown" Send="Create BurrowDownMedium"/>
+        <On index="75" Terms="AbilMorph.*.Start; AbilKey BurrowDown" Send="AnimClear Fidget"/>
+        <On index="76" Terms="AbilMorph.*.Cancel; MorphFrom Roach; MorphTo RoachBurrowed" Send="AnimClear Burrow"/>
+        <On index="77" Terms="AbilMorph.*.Finish; MorphTo Roach; MorphFrom RoachBurrowed" Send="AnimBracketStop Burrow"/>
+        <On index="78" Terms="UnitMovementUpdate.*.Walk; AnimPlaying Birth" Send="AnimClear Birth"/>
+        <On index="79" Terms="UnitBirth.Roach" Send="TerrainSquibActivateGroup RippleStandard"/>
+        <On index="80" Send="TerrainSquibActivateGroup RippleStandard"/>
+        <On index="81" Terms="AbilMorph.*.Finish; MorphTo RoachBurrowed; MorphFrom Roach" Send="TerrainSquibDeactivate"/>
+        <On index="82" Terms="UnitHeightUpdate.*.Land" Send="Create Roach_Land"/>
+        <On index="83" Terms="ActorCreation" Send="TextureSelectById UL_012"/>
+        <On index="84" removed="1"/>
+        <On index="85" removed="1"/>
+        <DeathActorModel value="UL_012Death"/>
+        <PortraitActor value="PortraitUL_012"/>
     </CActorUnit>
     <CActorUnit id="SiegeModeMorphModel">
         <Model value="SiegeTankSiegedMorphMod"/>
@@ -9444,7 +9593,7 @@
         <On Terms="Signal.*.Hide" Send="SetVisibility"/>
         <On Terms="Signal.*.Show" Send="SetVisibility 1"/>
         <On Terms="UnitDeath" Send="Destroy"/>
-        <On Terms="Behavior.WeaponUseK5.On" Send="ModelSwap WeaponK5_13 255 PredecessorDestroyImmediate,PreventAllDynamicTextureTransfers"/>
+        <On Terms="Behavior.WeaponUseK5.On" Send="ModelSwap WeaponK5 255 PredecessorDestroyImmediate,PreventAllDynamicTextureTransfers"/>
         <On Terms="Behavior.WeaponUseK5.Off" Send="ModelSwap WeaponK2 255 PredecessorDestroyImmediate,PreventAllDynamicTextureTransfers"/>
         <On Terms="Behavior.WeaponUseK23.On" Send="ModelSwap WeaponK23 255 PredecessorDestroyImmediate,PreventAllDynamicTextureTransfers"/>
         <On Terms="Behavior.WeaponUseK23.Off" Send="ModelSwap WeaponK2 255 PredecessorDestroyImmediate,PreventAllDynamicTextureTransfers"/>
@@ -9488,7 +9637,7 @@
     </CActorModel>
     <CActorModel id="WeaponPistolAttachK5" parent="ModelAddition" unitName="">
         <HostSiteOps Ops="SOpAttachTarget"/>
-        <Model value="WeaponK5_13"/>
+        <Model value="WeaponK5"/>
         <Scale value="2.500000"/>
         <ModelFlags index="AllowHitTest" value="0"/>
     </CActorModel>
@@ -9535,7 +9684,7 @@
         <On Terms="Signal.*.BlurEnd" Send="AnimSetCompletion Cover"/>
     </CActorModel>
     <CActorModel id="WeaponPistolAttachKianaLeft" parent="ModelAddition" unitName="">
-        <On Terms="Behavior.K23Move.On" Send="ModelSwap WeaponVoid"/>
+        <On Terms="Behavior.K23Move.On" Send="ModelSwap Invisible"/>
         <On Terms="Behavior.K23End.Off" Send="ModelSwap WeaponK23"/>
         <HostSiteOps Ops="SOpAttachTarget3"/>
         <Model value="WeaponK2"/>
@@ -9548,7 +9697,7 @@
         <On Terms="UnitDeath" Send="Destroy"/>
         <On Terms="Behavior.WeaponUseK23.On" Send="ModelSwap WeaponK23 255 PreventAllDynamicTextureTransfers"/>
         <On Terms="Behavior.WeaponUseK23.Off" Send="ModelSwap WeaponK36 255 PreventAllDynamicTextureTransfers"/>
-        <On Terms="Behavior.K23Move.On" Send="ModelSwap WeaponVoid"/>
+        <On Terms="Behavior.K23Move.On" Send="ModelSwap Invisible"/>
         <On Terms="Behavior.K23Move.Off" Send="ModelSwap WeaponK23 255 PreventAllDynamicTextureTransfers"/>
         <HostSiteOps Ops="SOpAttachTarget3"/>
         <Model value="WeaponK36"/>
@@ -9591,61 +9740,6 @@
         <HostSiteOps Ops="SOpAttachWeapon"/>
         <Model value="WeaponR11"/>
     </CActorModel>
-    <CActorUnit id="Zergling">
-        <Model value="ZerglingMod"/>
-        <BuildModel value="ZerglingMod"/>
-        <PlacementModel value="ZerglingMod"/>
-        <PortraitModel value="ZerglingPortraitMod"/>
-        <GroupIcon>
-            <Image index="0" value="Assets\Textures\Wireframe-Q_UL_010.tga"/>
-        </GroupIcon>
-        <HeroIcon value="Assets\Textures\btn-unit-Q_UL_010.tga"/>
-        <UnitIcon value="Assets\Textures\btn-unit-Q_UL_010.tga"/>
-        <Wireframe>
-            <Image index="0" value="Assets\Textures\Wireframe-Q_UL_010.tga"/>
-        </Wireframe>
-        <On index="88" removed="1"/>
-        <DeathCustoms index="5" removed="1"/>
-        <DeathCustoms index="6" removed="1"/>
-        <DeathCustoms index="7" removed="1"/>
-        <DeathCustoms index="8" removed="1"/>
-        <DeathCustoms index="9" removed="1"/>
-        <DeathCustoms index="10" removed="1"/>
-        <DeathCustoms index="11" removed="1"/>
-        <DeathCustoms index="12" removed="1"/>
-        <DeathCustoms index="13" removed="1"/>
-        <DeathCustoms index="14" removed="1"/>
-        <DeathCustoms index="15" removed="1"/>
-        <DeathCustoms index="16" removed="1"/>
-        <DeathCustoms index="17" removed="1"/>
-        <DeathCustoms index="18" removed="1"/>
-        <DeathCustoms index="19" removed="1"/>
-        <DeathCustoms index="20" removed="1"/>
-        <!--On Terms="ActorCreation; PlayerHasReward ZerglingSkin" Send="StatusSet CE 1"/>
-        <On Terms="StatusSet.*.CE; IsStatus CE 1" Send="ModelSwap ZerglingXPR"/>
-        <On Terms="Upgrade.zerglingmovementspeed.Add; IsStatus CE 1" Send="ModelSwap ZerglingUpgradeXPR"/>
-        <On Terms="UpgradeFinalized.zerglingmovementspeed.Add; IsStatus CE 1" Send="SetWireframe 0 Assets\Textures\Wireframe-Zerg-ZerglingEx1A.dds"/>
-        <On Terms="UpgradeFinalized.zerglingmovementspeed.Add; IsStatus CE 1" Send="SetGroupIcon 0 Assets\Textures\Wireframe-Zerg-ZerglingEx1A.dds"/>
-        <On Terms="ActorCreation; ValidateUnit ZerglingUpgraded; IsStatus CE 1" Send="ModelSwap ZerglingUpgradeXPR"/>
-        <On Terms="ActorCreation; ValidateUnit ZerglingUpgraded; IsStatus CE 1" Send="SetWireframe 0 Assets\Textures\Wireframe-Zerg-ZerglingEx1A.dds"/>
-        <On Terms="ActorCreation; ValidateUnit ZerglingUpgraded; IsStatus CE 1" Send="SetGroupIcon 0 Assets\Textures\Wireframe-Zerg-ZerglingEx1A.dds"/>
-        <On Terms="UnitDeathCustomize; IsStatus CE 1" Send="DeathCustomize Variation10"/>
-        <On Terms="UnitDeathCustomize; ValidateUnit DeathByAcid; IsStatus CE 1" Send="DeathCustomize Variation11"/>
-        <On Terms="UnitDeathCustomize; ValidateUnit DeathByFire; IsStatus CE 1" Send="DeathCustomize Variation12"/>
-        <On Terms="UnitDeathCustomize; ValidateUnit DeathByEviscerate; IsStatus CE 1" Send="DeathCustomize Variation13"/>
-        <On Terms="UnitDeathCustomize; ValidateUnit ZerglingUpgraded; IsStatus CE 1" Send="DeathCustomize Variation15"/>
-        <On Terms="UnitDeathCustomize; ValidateUnit ZerglingUpgradedDeathByAcid; IsStatus CE 1" Send="DeathCustomize Variation16"/>
-        <On Terms="UnitDeathCustomize; ValidateUnit ZerglingUpgradedDeathByFire; IsStatus CE 1" Send="DeathCustomize Variation17"/>
-        <On Terms="UnitDeathCustomize; ValidateUnit ZerglingUpgradedDeathByEviscerate; IsStatus CE 1" Send="DeathCustomize Variation18"/>
-        <DeathCustoms ModelLink="ZerglingXPRDeath" Name="Variation10"/>
-        <DeathCustoms ModelLink="ZerglingXPRDeathAcid" Name="Variation11"/>
-        <DeathCustoms ModelLink="ZerglingXPRDeathFire" Name="Variation12"/>
-        <DeathCustoms ModelLink="ZerglingXPRDeathEviscerate" Name="Variation13"/>
-        <DeathCustoms ModelLink="ZerglingUpgradeXPRDeath" Name="Variation15"/>
-        <DeathCustoms ModelLink="ZerglingUpgradeXPRDeathAcid" Name="Variation16"/>
-        <DeathCustoms ModelLink="ZerglingUpgradeXPRDeathFire" Name="Variation17"/>
-        <DeathCustoms ModelLink="ZerglingUpgradeXPRDeathEviscerate" Name="Variation18"/-->
-    </CActorUnit>
     <CActorUnit id="StarOfEdenWorld" parent="GenericUnitStandard" unitName="StarOfEdenWorld">
         <Macros value="PhysicsDeathsSwarmGround"/>
         <Macros value="PhysicsDeathsVoidGround"/>
@@ -9888,9 +9982,9 @@
         <Icon value="Assets\Textures\RadarIcon2.dds"/>
         <IconArcLength value="3.250000"/>
         <RangeFlags index="Minimap" value="1"/>
-        <On index="1" Terms="SelectionLocalUpdate.GhostAcademy.Start" Send="Create"/>
-        <On index="2" Terms="SelectionLocalUpdate.GhostAcademy.Stop" Send="Destroy"/>
-        <On index="3" Terms="UnitBirth.GhostAcademy.EditorPlaced" Send="Create"/>
+        <On index="1" Terms="SelectionLocalUpdate.NukeSilo.Start" Send="Create"/>
+        <On index="2" Terms="SelectionLocalUpdate.NukeSilo.Stop" Send="Destroy"/>
+        <On index="3" Terms="UnitBirth.NukeSilo.EditorPlaced" Send="Create"/>
         <On index="4" removed="1"/>
         <Abil Link="HonkaiNukeFire"/>
     </CActorRange>
@@ -9945,6 +10039,15 @@
         <LaunchAssets Model="SeeleBlur"/>
     </CActorAction>
     <CActorAction id="MeiC2Branch" parent="MeiAttack" effectAttack="MeiC2BranchDamage">
+        <LaunchAssets Model="SeeleBlur"/>
+    </CActorAction>
+    <CActorAction id="MeiC5Attack1" parent="MeiAttack" effectAttack="MeiC2Attack1Damage">
+        <LaunchAssets Model="SeeleBlur"/>
+    </CActorAction>
+    <CActorAction id="MeiC5Attack2" parent="MeiAttack" effectAttack="MeiC2Attack2Damage">
+        <LaunchAssets Model="SeeleBlur"/>
+    </CActorAction>
+    <CActorAction id="MeiC5Attack3" parent="MeiAttack" effectAttack="MeiC2Attack3Damage">
         <LaunchAssets Model="SeeleBlur"/>
     </CActorAction>
 </Catalog>

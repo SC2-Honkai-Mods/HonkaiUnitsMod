@@ -8,9 +8,10 @@
     </Icon>
     <Dependencies>
         <Value>bnet:自由之翼 (战役)/0.0/999,file:Campaigns/Liberty.SC2Campaign</Value>
+        <Value>bnet:虫群之心(Mod)/0.0/999,file:Mods/Swarm.SC2Mod</Value>
         <Value>bnet:崩坏3资源包 Honkai Impact 3rd Assets/0.0/209547,file:Mods\HonkaiAssetsEdit.SC2Mod</Value>
         <Value>bnet:崩坏3资源包2 Honkai Impact 3rd Assets 2/0.0/243799,file:Mods\HonkaiAssetsEdit2.SC2Mod</Value>
-        <Value>bnet:虫群之心(Mod)/0.0/999,file:Mods/Swarm.SC2Mod</Value>
+        <Value>bnet:风格化原版单位包/0.0/181400,file:Mods\OriginalUnitsCoverEdit.SC2Mod</Value>
     </Dependencies>
     <PatchNote>
         <Version>
@@ -107,6 +108,9 @@
             <Value>2.45</Value>
             <Value>2.46</Value>
             <Value>2.47</Value>
+            <Value>2.48</Value>
+            <Value>2.49</Value>
+            <Value>2.50</Value>
         </Version>
         <Date>
             <Value>2/3/2022</Value>
@@ -201,7 +205,10 @@
             <Value>11/19/2025</Value>
             <Value>11/27/2025</Value>
             <Value>11/27/2025</Value>
-            <Value>11/29/2025</Value>
+            <Value>11/27/2025</Value>
+            <Value>11/27/2025</Value>
+            <Value>12/10/2025</Value>
+            <Value>12/23/2025</Value>
         </Date>
         <Notes>
             <Value>1,2,3,4,5,6</Value>
@@ -296,7 +303,10 @@
             <Value>358,359</Value>
             <Value>360,361</Value>
             <Value>362</Value>
-            <Value>363,364</Value>
+            <Value>363,364,365</Value>
+            <Value>366</Value>
+            <Value>367,368</Value>
+            <Value>369,370,371,372,373,374</Value>
         </Notes>
     </PatchNote>
     <Preload>

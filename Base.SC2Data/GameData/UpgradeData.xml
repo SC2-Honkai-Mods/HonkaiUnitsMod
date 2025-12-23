@@ -237,7 +237,7 @@
         <EffectArray Reference="Unit,BarracksTechLab,LifeArmorLevel" Value="1"/>
         <EffectArray Reference="Unit,FactoryTechLab,LifeArmorLevel" Value="1"/>
         <EffectArray Reference="Unit,StarportTechLab,LifeArmorLevel" Value="1"/>
-        <EffectArray Reference="Unit,GhostAcademy,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,NukeSilo,LifeArmorLevel" Value="1"/>
         <EffectArray Reference="Unit,MissileTurret,LifeArmorLevel" Value="1"/>
         <EffectArray Reference="Unit,SensorTower,LifeArmorLevel" Value="1"/>
         <EffectArray Reference="Unit,Bunker,LifeArmorLevel" Value="1"/>

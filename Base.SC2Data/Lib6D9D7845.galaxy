@@ -2291,6 +2291,26 @@ void lib6D9D7845_gt_E69BB4E696B0E4BABAE58FA3_Init () {
 }
 
 //--------------------------------------------------------------------------------------------------
+// Trigger: Set Light
+//--------------------------------------------------------------------------------------------------
+bool lib6D9D7845_gt_SetLight_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    GameSetLighting(lib6D9D7845_gv_defaultLight, 0.0);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib6D9D7845_gt_SetLight_Init () {
+    lib6D9D7845_gt_SetLight = TriggerCreate("lib6D9D7845_gt_SetLight_Func");
+    TriggerAddEventMapInit(lib6D9D7845_gt_SetLight);
+}
+
+//--------------------------------------------------------------------------------------------------
 // Trigger: Create DPS Unit
 //--------------------------------------------------------------------------------------------------
 bool lib6D9D7845_gt_CreateDPSUnit_Func (bool testConds, bool runActions) {
@@ -2502,6 +2522,7 @@ bool lib6D9D7845_gt_Debug4_Func (bool testConds, bool runActions) {
         return true;
     }
 
+    libNtve_gf_SetUpgradeLevelForPlayer(1, "HonkaiTacticalJump", 1);
     libNtve_gf_SetUpgradeLevelForPlayer(1, "HerrscherPhase", 1);
     libNtve_gf_SetUpgradeLevelForPlayer(1, "DivineKey7th", 1);
     libNtve_gf_SetUpgradeLevelForPlayer(1, "DivineKey9th", 1);
@@ -2576,7 +2597,18 @@ bool lib6D9D7845_gt_Debug6_Func (bool testConds, bool runActions) {
         return true;
     }
 
-    libNtve_gf_SetUpgradeLevelForPlayer(1, "HerrscherPhase", 1);
+    libNtve_gf_CreateUnitsWithDefaultFacing(1, "CommandCenter", 0, 1, CameraGetTarget(1));
+    libNtve_gf_CreateUnitsWithDefaultFacing(1, "OrbitalCommand", 0, 1, CameraGetTarget(1));
+    libNtve_gf_CreateUnitsWithDefaultFacing(1, "PlanetaryFortress", 0, 1, CameraGetTarget(1));
+    libNtve_gf_CreateUnitsWithDefaultFacing(1, "SupplyDepot", 0, 1, CameraGetTarget(1));
+    libNtve_gf_CreateUnitsWithDefaultFacing(1, "Bunker", 0, 1, CameraGetTarget(1));
+    libNtve_gf_CreateUnitsWithDefaultFacing(1, "Barracks", 0, 1, CameraGetTarget(1));
+    libNtve_gf_CreateUnitsWithDefaultFacing(1, "AntiEntropyFactory", 0, 1, CameraGetTarget(1));
+    libNtve_gf_CreateUnitsWithDefaultFacing(1, "Starport", 0, 1, CameraGetTarget(1));
+    libNtve_gf_CreateUnitsWithDefaultFacing(1, "NukeSilo", 0, 1, CameraGetTarget(1));
+    libNtve_gf_CreateUnitsWithDefaultFacing(1, "ImperialInstitute", 0, 1, CameraGetTarget(1));
+    libNtve_gf_CreateUnitsWithDefaultFacing(1, "FusionCore", 0, 1, CameraGetTarget(1));
+    libNtve_gf_CreateUnitsWithDefaultFacing(1, "MercCompound", 0, 1, CameraGetTarget(1));
     return true;
 }
 
@@ -6654,6 +6686,10 @@ bool lib6D9D7845_gt_E6B5AEE6B8B8E782AEIIE59E8B_Func (bool testConds, bool runAct
         else if (true) {
             lv_pitch = lv_targetpitch;
         }
+        if ((lv_yaw < 20.0)) {
+            lv_yaw = 20.0;
+        }
+
         lv_targetpoint = lib6D9D7845_gf_E5B084E7BABFE59CA8E59CB0E5BDA2E4B88AE79A84E68A95E5BDB1E782B9(lv_point, lv_pointz, lv_pitch, lv_yaw, 0.5);
         UnitSetPosition(UnitLastCreated(), lv_targetpoint, true);
         Wait(0.0625, c_timeGame);
@@ -8865,6 +8901,7 @@ void lib6D9D7845_gt_ExtraDivineKeys_Init () {
 
 void lib6D9D7845_InitTriggers () {
     lib6D9D7845_gt_E69BB4E696B0E4BABAE58FA3_Init();
+    lib6D9D7845_gt_SetLight_Init();
     lib6D9D7845_gt_CreateDPSUnit_Init();
     lib6D9D7845_gt_DPSStats_Init();
     lib6D9D7845_gt_Debug_Init();
