@@ -681,7 +681,7 @@
         <ModelFlags index="OutlineEmitter" value="0"/>
         <Baselines index="Stand" BlendIn="1.000000" BlendOut="1.000000"/>
         <Baselines index="Walk" BlendIn="1.000000" BlendOut="1.000000"/>
-        <DeathArray index="Normal" ModelLink="" SoundLink="" VoiceLink="Corruptor_Death"/>
+        <DeathArray index="Normal" ModelLink="UL_080Death" SoundLink="" VoiceLink="Corruptor_Death"/>
         <DeathCustoms>
             <ActorModel value=""/>
             <ActorModelLow value=""/>

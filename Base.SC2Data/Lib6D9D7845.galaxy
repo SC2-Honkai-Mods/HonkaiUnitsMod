@@ -6521,6 +6521,7 @@ bool lib6D9D7845_gt_BronyaC7Mover_Func (bool testConds, bool runActions) {
         }
 
         if ((UnitIsAlive(lv_caster) == false)) {
+            Wait(0.0625, c_timeGame);
             continue;
         }
 
