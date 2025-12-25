@@ -14,7 +14,7 @@
 ## 开发
 在使用GitHub下载本项目并进行发布前，请务必删除 .git 目录、.github 目录以及 .gitattributes 文件。
 
-该Mod仅包含数据和触发器，所有模型、声音和图标资源位于[HonkaiAssetsMod](https://github.com/SC2-Honkai-Mods/HonkaiAssetsMod)和[HonkaiAssetsMod2](https://github.com/SC2-Honkai-Mods/HonkaiAssetsMod2)。
+该Mod仅包含数据和触发器，所有模型、声音和图标资源位于[崩坏3资源包](https://github.com/SC2-Honkai-Mods/HonkaiAssetsMod)、[崩坏3资源包2](https://github.com/SC2-Honkai-Mods/HonkaiAssetsMod2)和[风格化原版单位包](https://github.com/SC2-Honkai-Mods/OriginalUnitsCoverEdit)。
 
 ## 版权声明
 本项目遵守暴雪的创作条款。模型资源版权归**米哈游所有**，Mod和地图版权归**暴雪娱乐所有**。
