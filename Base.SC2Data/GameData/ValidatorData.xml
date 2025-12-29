@@ -105,6 +105,9 @@
         <LaunchLocation Value="CasterUnit"/>
         <SearchFilters value="Air;Player,Ally,Neutral,Missile,Stasis,Dead,Hidden,Invulnerable"/>
     </CValidatorLocationEnumArea>
+    <CValidatorUnitType id="IsMercCompound">
+        <Value value="Mikoyan"/>
+    </CValidatorUnitType>
     <CValidatorLocationEnumArea id="NoEnermyFlyingWithin10">
         <WhichLocation Value="CasterUnit"/>
         <AreaArray Radius="10"/>

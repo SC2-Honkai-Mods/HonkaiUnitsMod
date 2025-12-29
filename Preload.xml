@@ -121,7 +121,6 @@
 <Unit id="Barracks"/>
 <Unit id="Bunker"/>
 <Unit id="Starport"/>
-<Unit id="MercCompound"/>
 <Unit id="FusionCore"/>
 <Unit id="SiegeTankSieged"/>
 <Unit id="SiegeTank"/>
@@ -139,6 +138,7 @@
 <Unit id="DG_011"/>
 <Unit id="NukeSilo"/>
 <Unit id="ImperialInstitute"/>
+<Unit id="Mikoyan"/>
 <Unit id="CosmicJuggernaut"/>
 <Unit id="BronyaC7CannonTarget"/>
 <Unit id="RO_060Barrage"/>

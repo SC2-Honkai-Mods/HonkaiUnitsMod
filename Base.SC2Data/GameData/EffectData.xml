@@ -139,7 +139,7 @@
         <ImpactLocation Value="TargetUnit"/>
         <Visibility value="Visible"/>
         <Kind value="Ranged"/>
-        <Amount value="120"/>
+        <Amount value="150"/>
     </CEffectDamage>
     <CEffectLaunchMissile id="RO_060AttackLM">
         <ImpactEffect value="RO_060AttackDamage"/>

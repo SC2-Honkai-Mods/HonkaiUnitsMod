@@ -14,8 +14,8 @@ void lib6D9D7845_InitLibraries () {
 bool lib6D9D7845_InitVariables_completed = false;
 
 void lib6D9D7845_InitVariables () {
-    int init_i;
-    int init_j;
+    int init_i1;
+    int init_j1;
 
     if (lib6D9D7845_InitVariables_completed) {
         return;
@@ -23,40 +23,41 @@ void lib6D9D7845_InitVariables () {
 
     lib6D9D7845_InitVariables_completed = true;
 
-    lib6D9D7845_gv_globalE8B083E8AF95E6A8A1E5BC8F = (GameAttributeGameValue("3") == "0002");
-    lib6D9D7845_gv_globalE88BB1E99B84E5A48DE6B4BB = true;
-    lib6D9D7845_gv_globalE79086E4B98BE5BE8BE88085E68A80E883BDE5898AE5BCB1 = true;
-    lib6D9D7845_gv_globalE5BCB9E587BAE59CB0E59BBEE68F90E7A4BA = true;
-    lib6D9D7845_gv_globalE590AFE794A8E4BCA4E5AEB3E7BB93E7AE97E7B3BBE7BB9F = true;
-    lib6D9D7845_gv_defaultLight = "HonkaiDefault";
-    lib6D9D7845_gv_dPSDialog = c_invalidDialogId;
-    lib6D9D7845_gv_dPSDialogItem = c_invalidDialogControlId;
-    for (init_i = 0; init_i <= 16; init_i += 1) {
-        for (init_j = 0; init_j <= 7; init_j += 1) {
-            lib6D9D7845_gv_e794A8E688B7E887AAE58AA8E9858DE8A385[init_i][init_j] = -1;
+    lib6D9D7845_gv_e38090E585A8E5B180E6A087E69797E38091.lv_flagE8B083E8AF95E6A8A1E5BC8F = (GameAttributeGameValue("3") == "0002");
+    lib6D9D7845_gv_e38090E585A8E5B180E6A087E69797E38091.lv_flagE88BB1E99B84E5A48DE6B4BB = true;
+    lib6D9D7845_gv_e38090E585A8E5B180E6A087E69797E38091.lv_flagE79086E4B98BE5BE8BE88085E68A80E883BDE5898AE5BCB1 = true;
+    lib6D9D7845_gv_e38090E585A8E5B180E6A087E69797E38091.lv_flagE5BCB9E587BAE59CB0E59BBEE68F90E7A4BA = true;
+    lib6D9D7845_gv_e38090E585A8E5B180E6A087E69797E38091.lv_flagE590AFE794A8E4BCA4E5AEB3E7BB93E7AE97E7B3BBE7BB9F = true;
+    lib6D9D7845_gv_e38090E585A8E5B180E6A087E69797E38091.lv_lightE9BB98E8AEA4E58589E785A7 = "HonkaiDefault";
+    lib6D9D7845_gv_e38090E585A8E5B180E6A087E69797E38091.lv_floatE5B19EE680A7E9A1BAE5858BE588B6 = lib6D9D7845_gf_Getrestraint();
+    lib6D9D7845_gv_e38090E585A8E5B180E6A087E69797E38091.lv_floatE5B19EE680A7E98086E5858BE588B6 = lib6D9D7845_gf_Getrestraintinversed();
+    lib6D9D7845_gv_e38090DebugE38091.lv_dPSDialog = c_invalidDialogId;
+    lib6D9D7845_gv_e38090DebugE38091.lv_dPSDialogItem = c_invalidDialogControlId;
+    for (init_i1 = 0; init_i1 <= 16; init_i1 += 1) {
+        for (init_j1 = 0; init_j1 <= 7; init_j1 += 1) {
+            lib6D9D7845_gv_e38090UnitE38091.lv_e794A8E688B7E887AAE58AA8E9858DE8A385[init_i1][init_j1] = -1;
         }
     }
-    lib6D9D7845_gv_e7ACACE59B9BE7A59EE4B98BE994AEE591BDE4BBA4E99DA2E69DBF = c_invalidDialogControlId;
-    lib6D9D7845_gv_e7ACACE59B9BE7A59EE4B98BE994AEE5AFB9E8AF9DE6A186 = c_invalidDialogId;
-    lib6D9D7845_gv_e58D95E4BD8DE78AB6E68081UIE5AEBDE5BAA6 = 320;
-    lib6D9D7845_gv_e58D95E4BD8DE78AB6E68081UIE9AB98E5BAA6 = 128;
-    lib6D9D7845_gv_e5B8AEE58AA9E7958CE99DA2 = c_invalidDialogId;
-    lib6D9D7845_gv_e5B8AEE58AA9E7958CE99DA2E585B3E997ADE68C89E992AE = c_invalidDialogControlId;
-    lib6D9D7845_gv_e5B8AEE58AA9E7958CE99DA2E585B3E997ADE68C89E992AEE6A186 = c_invalidDialogId;
-    lib6D9D7845_gv_e5B8AEE58AA9E7958CE99DA22 = c_invalidDialogId;
-    lib6D9D7845_gv_e5B8AEE58AA9E7958CE99DA2E585B3E997ADE68C89E992AE2 = c_invalidDialogControlId;
-    for (init_i = 0; init_i <= 16; init_i += 1) {
-        for (init_j = 0; init_j <= 5; init_j += 1) {
-            lib6D9D7845_gv_e68A97E680A7E6A087E7ADBE[init_i][init_j] = c_invalidDialogControlId;
+    lib6D9D7845_gv_e38090UnitE38091.lv__4thCommandPanel = c_invalidDialogControlId;
+    lib6D9D7845_gv_e38090UnitE38091.lv__4thDialog = c_invalidDialogId;
+    lib6D9D7845_gv_e38090UnitE38091.lv_saUltimateCDValue = 45.0;
+    lib6D9D7845_gv_e38090UnitE38091.lv_saUltimateStage1Duration = 20.0;
+    lib6D9D7845_gv_e38090UIE38091.lv_e5B8AEE58AA9E7958CE99DA2 = c_invalidDialogId;
+    lib6D9D7845_gv_e38090UIE38091.lv_e5B8AEE58AA9E7958CE99DA2E585B3E997ADE68C89E992AE = c_invalidDialogControlId;
+    lib6D9D7845_gv_e38090UIE38091.lv_e5B8AEE58AA9E7958CE99DA2E585B3E997ADE68C89E992AEE6A186 = c_invalidDialogId;
+    lib6D9D7845_gv_e38090UIE38091.lv_e5B8AEE58AA9E7958CE99DA22 = c_invalidDialogId;
+    lib6D9D7845_gv_e38090UIE38091.lv_e5B8AEE58AA9E7958CE99DA2E585B3E997ADE68C89E992AE2 = c_invalidDialogControlId;
+    for (init_i1 = 0; init_i1 <= 16; init_i1 += 1) {
+        for (init_j1 = 0; init_j1 <= 5; init_j1 += 1) {
+            lib6D9D7845_gv_e38090UIE38091.lv_e68A97E680A7E6A087E7ADBE[init_i1][init_j1] = c_invalidDialogControlId;
         }
     }
-    lib6D9D7845_gv_e68A97E680A7E99DA2E69DBF = c_invalidDialogId;
-    for (init_i = 0; init_i <= 15; init_i += 1) {
-        lib6D9D7845_gv_e4BCA4E5AEB3E695B0E5AD97E9808FE6988EE5BAA6[init_i] = 100.0;
+    lib6D9D7845_gv_e38090UIE38091.lv_e68A97E680A7E99DA2E69DBF = c_invalidDialogId;
+    lib6D9D7845_gv_e38090UIE38091.lv_e58D95E4BD8DE78AB6E68081UIE5AEBDE5BAA6 = 320;
+    lib6D9D7845_gv_e38090UIE38091.lv_e58D95E4BD8DE78AB6E68081UIE9AB98E5BAA6 = 128;
+    for (init_i1 = 0; init_i1 <= 15; init_i1 += 1) {
+        lib6D9D7845_gv_e38090UIE38091.lv_e4BCA4E5AEB3E695B0E5AD97E9808FE6988EE5BAA6[init_i1] = 100.0;
     }
-    lib6D9D7845_gv_e5B19EE680A7E9A1BAE5858BE588B6 = lib6D9D7845_gf_Getrestraint();
-    lib6D9D7845_gv_e5B19EE680A7E98086E5858BE588B6 = lib6D9D7845_gf_Getrestraintinversed();
-    lib6D9D7845_gv_e793A6E696AFE58D95E6ACA1E98787E99B86E695B0 = 4;
 }
 
 // Functions
@@ -159,11 +160,6 @@ void lib6D9D7845_gf_AIThinkSaAfflication (int lp_player, unit lp_caster, unitgro
     // Automatic Variable Declarations
     // Implementation
     lib6D9D7845_gf_AISaCommon(-1, lp_player, lp_caster, lp_scanGroup);
-}
-
-void lib6D9D7845_gf_AIChanelSaAfflication (int lp_player, unit lp_caster, unitgroup lp_scanGroup) {
-    // Automatic Variable Declarations
-    // Implementation
 }
 
 void lib6D9D7845_gf_AISaCommon (int lp_channel, int lp_player, unit lp_caster, unitgroup lp_scanGroup) {
@@ -528,7 +524,7 @@ bool lib6D9D7845_gf_E58581E8AEB8E8B083E8AF95 () {
     // Automatic Variable Declarations
     // Implementation
     return true;
-    return lib6D9D7845_gv_globalE8B083E8AF95E6A8A1E5BC8F;
+    return lib6D9D7845_gv_e38090E585A8E5B180E6A087E69797E38091.lv_flagE8B083E8AF95E6A8A1E5BC8F;
 }
 
 bool lib6D9D7845_gf_E79BAEE6A087E58D95E4BD8DE99C80E8A681E9858DE8A385 (unit lp_e79BAEE6A087, int lp_e59CA3E797951, int lp_e59CA3E797952, int lp_e59CA3E797953, int lp_e6ADA6E599A8) {
@@ -554,7 +550,7 @@ bool lib6D9D7845_gf_E79BAEE6A087E58D95E4BD8DE99C80E8A681E9858DE8A385 (unit lp_e7
 
     // Implementation
     lib6D9D7845_gf_E88EB7E58F96E79BAEE6A087E8A385E5A487(lp_e79BAEE6A087);
-    if ((lib6D9D7845_gv_e8A385E5A487E7BC93E5AD98[3] != lp_e6ADA6E599A8)) {
+    if ((lib6D9D7845_gv_e38090UnitE38091.lv_e8A385E5A487E7BC93E5AD98[3] != lp_e6ADA6E599A8)) {
         return false;
     }
 
@@ -570,7 +566,7 @@ bool lib6D9D7845_gf_E79BAEE6A087E58D95E4BD8DE99C80E8A681E9858DE8A385 (unit lp_e7
         lv_j = 0;
         for ( ; ( (autoE23A4C22_ai >= 0 && lv_j <= autoE23A4C22_ae) || (autoE23A4C22_ai < 0 && lv_j >= autoE23A4C22_ae) ) ; lv_j += autoE23A4C22_ai ) {
             lv_e5B7B2E6BBA1E8B6B3 = false;
-            if ((lv_e58DA0E794A8[lv_j] == false) && (lib6D9D7845_gv_e8A385E5A487E7BC93E5AD98[lv_j] == lv_e79BAEE6A087E59CA3E79795[lv_i])) {
+            if ((lv_e58DA0E794A8[lv_j] == false) && (lib6D9D7845_gv_e38090UnitE38091.lv_e8A385E5A487E7BC93E5AD98[lv_j] == lv_e79BAEE6A087E59CA3E79795[lv_i])) {
                 lv_e58DA0E794A8[lv_j] = true;
                 lv_e5B7B2E6BBA1E8B6B3 = true;
                 break;
@@ -617,8 +613,8 @@ void lib6D9D7845_gf_E9858DE8A385E588B0E79BAEE6A087E8A686E79B96 (unit lp_e79BAEE6
 
     // Implementation
     lib6D9D7845_gf_E88EB7E58F96E79BAEE6A087E8A385E5A487(lp_e79BAEE6A087);
-    if ((lp_e6ADA6E599A8 != -1) && (UnitGetType(lp_e79BAEE6A087) == "Valkyrja3") && (lib6D9D7845_gv_e8A385E5A487E7BC93E5AD98[3] != lp_e6ADA6E599A8)) {
-        if ((lib6D9D7845_gv_e8A385E5A487E7BC93E5AD98[3] != 1)) {
+    if ((lp_e6ADA6E599A8 != -1) && (UnitGetType(lp_e79BAEE6A087) == "Valkyrja3") && (lib6D9D7845_gv_e38090UnitE38091.lv_e8A385E5A487E7BC93E5AD98[3] != lp_e6ADA6E599A8)) {
+        if ((lib6D9D7845_gv_e38090UnitE38091.lv_e8A385E5A487E7BC93E5AD98[3] != 1)) {
             UnitIssueOrder(lp_e79BAEE6A087, Order(AbilityCommand("WeaponSwitchB1", 0)), c_orderQueueAddToFront);
         }
 
@@ -640,7 +636,7 @@ void lib6D9D7845_gf_E9858DE8A385E588B0E79BAEE6A087E8A686E79B96 (unit lp_e79BAEE6
         lv_j = 0;
         for ( ; ( (auto7319AA58_ai >= 0 && lv_j <= auto7319AA58_ae) || (auto7319AA58_ai < 0 && lv_j >= auto7319AA58_ae) ) ; lv_j += auto7319AA58_ai ) {
             lv_e5B7B2E6BBA1E8B6B3 = false;
-            if ((lv_e58DA0E794A8[lv_j] == false) && (lib6D9D7845_gv_e8A385E5A487E7BC93E5AD98[lv_j] == lv_e79BAEE6A087E59CA3E79795[lv_i])) {
+            if ((lv_e58DA0E794A8[lv_j] == false) && (lib6D9D7845_gv_e38090UnitE38091.lv_e8A385E5A487E7BC93E5AD98[lv_j] == lv_e79BAEE6A087E59CA3E79795[lv_i])) {
                 lv_e58DA0E794A8[lv_j] = true;
                 lv_e5B7B2E6BBA1E8B6B3 = true;
                 break;
@@ -655,8 +651,8 @@ void lib6D9D7845_gf_E9858DE8A385E588B0E79BAEE6A087E8A686E79B96 (unit lp_e79BAEE6
     }
     lv_j = 0;
     for ( ; ( (auto002A3994_ai >= 0 && lv_j <= auto002A3994_ae) || (auto002A3994_ai < 0 && lv_j >= auto002A3994_ae) ) ; lv_j += auto002A3994_ai ) {
-        if ((lv_e58DA0E794A8[lv_j] == false) && (lib6D9D7845_gv_e8A385E5A487E7BC93E5AD98[lv_j] != -1)) {
-            UnitBehaviorRemove(lp_e79BAEE6A087, lib6D9D7845_gf_E59CA3E79795E8A18CE4B8BA(lib6D9D7845_gv_e8A385E5A487E7BC93E5AD98[lv_j]), 1);
+        if ((lv_e58DA0E794A8[lv_j] == false) && (lib6D9D7845_gv_e38090UnitE38091.lv_e8A385E5A487E7BC93E5AD98[lv_j] != -1)) {
+            UnitBehaviorRemove(lp_e79BAEE6A087, lib6D9D7845_gf_E59CA3E79795E8A18CE4B8BA(lib6D9D7845_gv_e38090UnitE38091.lv_e8A385E5A487E7BC93E5AD98[lv_j]), 1);
             UnitCreateEffectUnit(lp_e79BAEE6A087, "StigmataDestroy", lp_e79BAEE6A087);
         }
 
@@ -698,7 +694,7 @@ void lib6D9D7845_gf_E9858DE8A385E588B0E79BAEE6A087E6B7BBE58AA0 (unit lp_e79BAEE6
 
     // Implementation
     lib6D9D7845_gf_E88EB7E58F96E79BAEE6A087E8A385E5A487(lp_e79BAEE6A087);
-    if ((lib6D9D7845_gv_e8A385E5A487E7BC93E5AD98[3] == 1) && (lp_e6ADA6E599A8 != -1) && (lp_e6ADA6E599A8 != 1)) {
+    if ((lib6D9D7845_gv_e38090UnitE38091.lv_e8A385E5A487E7BC93E5AD98[3] == 1) && (lp_e6ADA6E599A8 != -1) && (lp_e6ADA6E599A8 != 1)) {
         UnitIssueOrder(lp_e79BAEE6A087, Order(AbilityCommand((("WeaponSwitchB" + IntToString(lp_e6ADA6E599A8))), 0)), c_orderQueueAddToFront);
     }
 
@@ -718,7 +714,7 @@ void lib6D9D7845_gf_E9858DE8A385E588B0E79BAEE6A087E6B7BBE58AA0 (unit lp_e79BAEE6
         lv_j = 0;
         for ( ; ( (autoB12F0DC9_ai >= 0 && lv_j <= autoB12F0DC9_ae) || (autoB12F0DC9_ai < 0 && lv_j >= autoB12F0DC9_ae) ) ; lv_j += autoB12F0DC9_ai ) {
             lv_e5B7B2E6BBA1E8B6B3 = false;
-            if ((lv_e58DA0E794A8[lv_j] == false) && (lib6D9D7845_gv_e8A385E5A487E7BC93E5AD98[lv_j] == lv_e79BAEE6A087E59CA3E79795[lv_i])) {
+            if ((lv_e58DA0E794A8[lv_j] == false) && (lib6D9D7845_gv_e38090UnitE38091.lv_e8A385E5A487E7BC93E5AD98[lv_j] == lv_e79BAEE6A087E59CA3E79795[lv_i])) {
                 lv_e58DA0E794A8[lv_j] = true;
                 lv_e5B7B2E6BBA1E8B6B3 = true;
                 break;
@@ -754,7 +750,7 @@ void lib6D9D7845_gf_E88EB7E58F96E79BAEE6A087E8A385E5A487 (unit lp_e79BAEE6A087) 
     // Implementation
     lv_i = 0;
     for ( ; ( (auto079A1A2E_ai >= 0 && lv_i <= auto079A1A2E_ae) || (auto079A1A2E_ai < 0 && lv_i >= auto079A1A2E_ae) ) ; lv_i += auto079A1A2E_ai ) {
-        lib6D9D7845_gv_e8A385E5A487E7BC93E5AD98[lv_i] = -1;
+        lib6D9D7845_gv_e38090UnitE38091.lv_e8A385E5A487E7BC93E5AD98[lv_i] = -1;
     }
     lv_i = 0;
     auto7736ECF1_u = lp_e79BAEE6A087;
@@ -787,7 +783,7 @@ void lib6D9D7845_gf_E88EB7E58F96E79BAEE6A087E8A385E5A487 (unit lp_e79BAEE6A087) 
             }
             autoAF0615B2_n = UnitBehaviorCount(lp_e79BAEE6A087, lv_b);
             for (autoAF0615B2_i = 1; autoAF0615B2_i <= autoAF0615B2_n; autoAF0615B2_i += 1) {
-                lib6D9D7845_gv_e8A385E5A487E7BC93E5AD98[lv_i] = lv_n;
+                lib6D9D7845_gv_e38090UnitE38091.lv_e8A385E5A487E7BC93E5AD98[lv_i] = lv_n;
                 lv_i += 1;
                 if ((lv_i >= 3)) {
                     break;
@@ -801,7 +797,7 @@ void lib6D9D7845_gf_E88EB7E58F96E79BAEE6A087E8A385E5A487 (unit lp_e79BAEE6A087) 
         }
         else {
             if ((StringLength(lv_s) >= 11) && (StringSub(lv_s, 1, 10) == "WeaponUseB")) {
-                lib6D9D7845_gv_e8A385E5A487E7BC93E5AD98[3] = StringToInt(StringSub(lv_s, 11, StringLength(lv_s)));
+                lib6D9D7845_gv_e38090UnitE38091.lv_e8A385E5A487E7BC93E5AD98[3] = StringToInt(StringSub(lv_s, 11, StringLength(lv_s)));
             }
 
         }
@@ -876,7 +872,7 @@ bool lib6D9D7845_gf_E5A48DE6B4BBE68C87E5AE9AE7B1BBE59E8BE79A84E58D95E4BD8D (stri
 
 void lib6D9D7845_gf_E7A7BBE999A4E9878DE782AEE7B1BBE6ADA6E599A8 (unit lp_e58D95E4BD8D) {
     // Variable Declarations
-    int lv_e5BA8FE58FB7;
+    int lv_index;
 
     // Automatic Variable Declarations
     int autoF45391F9_ae;
@@ -886,9 +882,9 @@ void lib6D9D7845_gf_E7A7BBE999A4E9878DE782AEE7B1BBE6ADA6E599A8 (unit lp_e58D95E4
 
     // Implementation
     autoF45391F9_ae = (lib6D9D7845_gv_e9878DE782AEE6ADA6E599A8E7B1BBE588ABE695B0 - 1);
-    lv_e5BA8FE58FB7 = 0;
-    for ( ; ( (autoF45391F9_ai >= 0 && lv_e5BA8FE58FB7 <= autoF45391F9_ae) || (autoF45391F9_ai < 0 && lv_e5BA8FE58FB7 >= autoF45391F9_ae) ) ; lv_e5BA8FE58FB7 += autoF45391F9_ai ) {
-        UnitWeaponRemove(lp_e58D95E4BD8D, lib6D9D7845_gv_e68980E69C89E9878DE782AEE6ADA6E599A8[lv_e5BA8FE58FB7]);
+    lv_index = 0;
+    for ( ; ( (autoF45391F9_ai >= 0 && lv_index <= autoF45391F9_ae) || (autoF45391F9_ai < 0 && lv_index >= autoF45391F9_ae) ) ; lv_index += autoF45391F9_ai ) {
+        UnitWeaponRemove(lp_e58D95E4BD8D, lib6D9D7845_gv_e38090UnitE38091.lv_e68980E69C89E9878DE782AEE6ADA6E599A8[lv_index]);
     }
 }
 
@@ -1093,12 +1089,12 @@ bool auto_lib6D9D7845_gf_Sa_TriggerFunc (bool testConds, bool runActions) {
     lv_sas = UnitGroupEmpty();
 
     // Implementation
-    if ((lib6D9D7845_gv_sa != null)) {
+    if ((lib6D9D7845_gv_e38090UnitE38091.lv_sa != null)) {
         return true;
     }
 
     UnitCreate(1, "SaCore", c_unitCreateIgnorePlacement | c_unitCreateIgnoreBirth, 15, lp_spawnPoint, lp_spawnDir);
-    lib6D9D7845_gv_sa = UnitLastCreated();
+    lib6D9D7845_gv_e38090UnitE38091.lv_sa = UnitLastCreated();
     UnitCreate(1, "SaAfflication", c_unitCreateIgnorePlacement | c_unitCreateIgnoreBirth, 15, PointWithOffsetPolar(lp_spawnPoint, lv_radius, lv_dir), lv_dir);
     lv_unitForward = UnitLastCreated();
     UnitCreate(1, "SaAfflication", c_unitCreateIgnorePlacement | c_unitCreateIgnoreBirth, 15, PointWithOffsetPolar(lp_spawnPoint, lv_radius, (lv_dir + 120.0)), (lv_dir + 120.0));
@@ -1110,34 +1106,35 @@ bool auto_lib6D9D7845_gf_Sa_TriggerFunc (bool testConds, bool runActions) {
     UnitGroupAdd(lv_sas, lv_unitRight);
     SoundtrackPause(PlayerGroupAll(), c_soundtrackCategoryMusic, true, true);
     SoundPlayForPlayer(SoundLink("SaZeroTime", -1), c_maxPlayers, PlayerGroupAll(), 100.0, 0.0);
-    lib6D9D7845_gv_zeroTime = SoundLastPlayed();
+    lib6D9D7845_gv_e38090UnitE38091.lv_zeroTime = SoundLastPlayed();
     SoundPlayForPlayer(SoundLink("SaZeroTimeRemix", -1), c_maxPlayers, PlayerGroupAll(), 0.0, 0.0);
-    lib6D9D7845_gv_zeroTimeRemix = SoundLastPlayed();
+    lib6D9D7845_gv_e38090UnitE38091.lv_zeroTimeRemix = SoundLastPlayed();
     SoundPlayForPlayer(SoundLink("SaZeroTimeRemix2", -1), c_maxPlayers, PlayerGroupAll(), 0.0, 0.0);
-    lib6D9D7845_gv_zeroTimeRemix2 = SoundLastPlayed();
-    lib6D9D7845_gv_saUltimateCD = -1.0;
+    lib6D9D7845_gv_e38090UnitE38091.lv_zeroTimeRemix = SoundLastPlayed();
+    lib6D9D7845_gv_e38090UnitE38091.lv_saUltimateCD = -1.0;
+    lib6D9D7845_gv_e38090UnitE38091.lv_saInUltimate = false;
     while (true) {
-        if ((lib6D9D7845_gv_sa == null)) {
+        if ((lib6D9D7845_gv_e38090UnitE38091.lv_sa == null)) {
             break;
         }
 
-        if ((UnitIsAlive(lib6D9D7845_gv_sa) == false)) {
-            lib6D9D7845_gv_sa = null;
+        if ((UnitIsAlive(lib6D9D7845_gv_e38090UnitE38091.lv_sa) == false)) {
+            lib6D9D7845_gv_e38090UnitE38091.lv_sa = null;
             break;
         }
 
         if (((lv_unitForward == null) || (UnitIsAlive(lv_unitForward) == false) || (lv_unitLeft == null) || (UnitIsAlive(lv_unitLeft) == false) || (lv_unitRight == null) || (UnitIsAlive(lv_unitRight) == false))) {
-            UnitBehaviorRemove(lib6D9D7845_gv_sa, "NoDeath", 1);
-            UnitBehaviorRemove(lib6D9D7845_gv_sa, "SaDeath", 1);
-            UnitKill(lib6D9D7845_gv_sa);
-            lib6D9D7845_gv_sa = null;
+            UnitBehaviorRemove(lib6D9D7845_gv_e38090UnitE38091.lv_sa, "NoDeath", 1);
+            UnitBehaviorRemove(lib6D9D7845_gv_e38090UnitE38091.lv_sa, "SaDeath", 1);
+            UnitKill(lib6D9D7845_gv_e38090UnitE38091.lv_sa);
+            lib6D9D7845_gv_e38090UnitE38091.lv_sa = null;
             break;
         }
 
         if ((UnitBehaviorCount(lv_unitForward, "SaDeath") == 1) && (UnitBehaviorCount(lv_unitLeft, "SaDeath") == 1) && (UnitBehaviorCount(lv_unitRight, "SaDeath") == 1)) {
-            UnitBehaviorRemove(lib6D9D7845_gv_sa, "NoDeath", 1);
-            UnitKill(lib6D9D7845_gv_sa);
-            lib6D9D7845_gv_sa = null;
+            UnitBehaviorRemove(lib6D9D7845_gv_e38090UnitE38091.lv_sa, "NoDeath", 1);
+            UnitKill(lib6D9D7845_gv_e38090UnitE38091.lv_sa);
+            lib6D9D7845_gv_e38090UnitE38091.lv_sa = null;
             UnitBehaviorRemove(lv_unitForward, "SaDeath", 1);
             UnitKill(lv_unitForward);
             UnitBehaviorRemove(lv_unitLeft, "SaDeath", 1);
@@ -1147,40 +1144,40 @@ bool auto_lib6D9D7845_gf_Sa_TriggerFunc (bool testConds, bool runActions) {
             break;
         }
 
-        lv_center = UnitGetPosition(lib6D9D7845_gv_sa);
-        lv_dir = UnitGetFacing(lib6D9D7845_gv_sa);
+        lv_center = UnitGetPosition(lib6D9D7845_gv_e38090UnitE38091.lv_sa);
+        lv_dir = UnitGetFacing(lib6D9D7845_gv_e38090UnitE38091.lv_sa);
         UnitSetPosition(lv_unitForward, PointWithOffsetPolar(lv_center, lv_radius, lv_dir), true);
         UnitSetFacing(lv_unitForward, lv_dir, 0.0625);
         UnitSetPosition(lv_unitLeft, PointWithOffsetPolar(lv_center, lv_radius, (lv_dir + 120.0)), true);
         UnitSetFacing(lv_unitLeft, (lv_dir + 120.0), 0.0625);
         UnitSetPosition(lv_unitRight, PointWithOffsetPolar(lv_center, lv_radius, (lv_dir - 120.0)), true);
         UnitSetFacing(lv_unitRight, (lv_dir - 120.0), 0.0625);
-        if ((lib6D9D7845_gv_saUltimateCD == -1.0) && (((UnitGetPropertyFixed(lv_unitLeft, c_unitPropLifePercent, c_unitPropCurrent) + UnitGetPropertyFixed(lv_unitRight, c_unitPropLifePercent, c_unitPropCurrent)) + UnitGetPropertyFixed(lv_unitForward, c_unitPropLifePercent, c_unitPropCurrent)) <= 275.0)) {
-            lib6D9D7845_gv_saUltimateCD = 0.0;
-            lib6D9D7845_gv_saUltimateCD = 10.0;
+        if ((lib6D9D7845_gv_e38090UnitE38091.lv_saUltimateCD == -1.0) && (((UnitGetPropertyFixed(lv_unitLeft, c_unitPropLifePercent, c_unitPropCurrent) + UnitGetPropertyFixed(lv_unitRight, c_unitPropLifePercent, c_unitPropCurrent)) + UnitGetPropertyFixed(lv_unitForward, c_unitPropLifePercent, c_unitPropCurrent)) <= 299.0) && ((UnitBehaviorCount(lv_unitLeft, "SaDeath") == 0) || (UnitBehaviorCount(lv_unitRight, "SaDeath") == 0) || (UnitBehaviorCount(lv_unitForward, "SaDeath") == 0))) {
+            lib6D9D7845_gv_e38090UnitE38091.lv_saUltimateCD = 10.0;
         }
 
-        if (((lib6D9D7845_gv_saUltimateCD >= -0.125) && (lib6D9D7845_gv_saUltimateCD <= 0.0))) {
-            lib6D9D7845_gv_saUltimateCD = -256.0;
-            UnitBehaviorAdd(lv_unitLeft, "SaUltimatePrepare", lib6D9D7845_gv_sa, 1);
-            UnitBehaviorAdd(lv_unitRight, "SaUltimatePrepare", lib6D9D7845_gv_sa, 1);
-            UnitBehaviorAdd(lv_unitForward, "SaUltimatePrepare", lib6D9D7845_gv_sa, 1);
+        if (((lib6D9D7845_gv_e38090UnitE38091.lv_saUltimateCD >= -0.125) && (lib6D9D7845_gv_e38090UnitE38091.lv_saUltimateCD <= 0.0))) {
+            lib6D9D7845_gv_e38090UnitE38091.lv_saUltimateCD = -256.0;
+            UnitBehaviorAdd(lv_unitLeft, "SaUltimatePrepare", lib6D9D7845_gv_e38090UnitE38091.lv_sa, 1);
+            UnitBehaviorAdd(lv_unitRight, "SaUltimatePrepare", lib6D9D7845_gv_e38090UnitE38091.lv_sa, 1);
+            UnitBehaviorAdd(lv_unitForward, "SaUltimatePrepare", lib6D9D7845_gv_e38090UnitE38091.lv_sa, 1);
         }
 
-        if ((lib6D9D7845_gv_saUltimateCD == -256.0) && (UnitOrderCount(lv_unitLeft) == 0) && (UnitOrderCount(lv_unitRight) == 0) && (UnitOrderCount(lv_unitForward) == 0)) {
+        if ((lib6D9D7845_gv_e38090UnitE38091.lv_saUltimateCD == -256.0) && (UnitOrderCount(lv_unitLeft) == 0) && (UnitOrderCount(lv_unitRight) == 0) && (UnitOrderCount(lv_unitForward) == 0)) {
+            lib6D9D7845_gv_e38090UnitE38091.lv_saUltimateCD = -512.0;
             lib6D9D7845_gf_SaUltimate(lv_sas);
         }
 
-        if ((lib6D9D7845_gv_saUltimateCD > 0.0)) {
-            lib6D9D7845_gv_saUltimateCD -= 0.0625;
+        if ((lib6D9D7845_gv_e38090UnitE38091.lv_saUltimateCD > 0.0)) {
+            lib6D9D7845_gv_e38090UnitE38091.lv_saUltimateCD -= 0.0625;
         }
 
         Wait(0.0625, c_timeGame);
     }
     SoundtrackPause(PlayerGroupAll(), c_soundtrackCategoryMusic, false, true);
-    SoundStop(lib6D9D7845_gv_zeroTime, true);
-    SoundStop(lib6D9D7845_gv_zeroTimeRemix, true);
-    SoundStop(lib6D9D7845_gv_zeroTimeRemix2, true);
+    SoundStop(lib6D9D7845_gv_e38090UnitE38091.lv_zeroTime, true);
+    SoundStop(lib6D9D7845_gv_e38090UnitE38091.lv_zeroTimeRemix, true);
+    SoundStop(lib6D9D7845_gv_e38090UnitE38091.lv_zeroTimeRemix2, true);
     return true;
 }
 
@@ -1254,11 +1251,15 @@ bool auto_lib6D9D7845_gf_SaUltimate_TriggerFunc (bool testConds, bool runActions
     lv_affectUnits = UnitGroupEmpty();
 
     // Implementation
-    lib6D9D7845_gv_saUltimateCD = -512.0;
+    if ((lib6D9D7845_gv_e38090UnitE38091.lv_saInUltimate == true)) {
+        return true;
+    }
+
+    lib6D9D7845_gv_e38090UnitE38091.lv_saInUltimate = true;
     SoundPlayForPlayer(SoundLink("SaUltimateBell", -1), c_maxPlayers, PlayerGroupAll(), 200.0, 0.16);
     SoundChannelSetVolume(PlayerGroupAll(), c_soundCategoryCombat, 50.0, 1.0);
-    UIDisplayMessage(PlayerGroupAll(), c_messageAreaSubtitle, (StringExternal("Param/Value/lib_6D9D7845_85D5F76D") + FixedToText(lib6D9D7845_gv_saUltimateStage1Duration, c_fixedPrecisionAny) + StringExternal("Param/Value/lib_6D9D7845_54207569")));
-    UnitBehaviorAdd(lib6D9D7845_gv_sa, "SaUltimateCeaseCore", lib6D9D7845_gv_sa, 1);
+    UIDisplayMessage(PlayerGroupAll(), c_messageAreaSubtitle, (StringExternal("Param/Value/lib_6D9D7845_85D5F76D") + FixedToText(lib6D9D7845_gv_e38090UnitE38091.lv_saUltimateStage1Duration, c_fixedPrecisionAny) + StringExternal("Param/Value/lib_6D9D7845_54207569")));
+    UnitBehaviorAdd(lib6D9D7845_gv_e38090UnitE38091.lv_sa, "SaUltimateCeaseCore", lib6D9D7845_gv_e38090UnitE38091.lv_sa, 1);
     lib6D9D7845_gf_SaPauseNewUnits(lp_sas);
     auto02979C66_g = UnitGroupCopy(lp_sas);
     auto02979C66_u = UnitGroupCount(auto02979C66_g, c_unitCountAll);
@@ -1291,6 +1292,7 @@ bool auto_lib6D9D7845_gf_SaUltimate_TriggerFunc (bool testConds, bool runActions
             }
 
             if ((UnitCanAttackTarget(lv_targetUnit, lv_afflication) == true)) {
+                lib6D9D7845_gf_SaUltimate(UnitGroupEmpty());
                 if ((UnitFilterMatch(lv_targetUnit, 0, UnitFilter((1 << c_targetFilterHeroic), 0, 0, 0)) == true)) {
                     lv_n = 6;
                 }
@@ -1364,11 +1366,11 @@ bool auto_lib6D9D7845_gf_SaUltimate_TriggerFunc (bool testConds, bool runActions
         lv_j += 1;
     }
     GameSetLighting("HonkaiBlack", 1.0);
-    lib6D9D7845_gf_SoundFadeOut(lib6D9D7845_gv_zeroTime, 32);
-    lib6D9D7845_gf_SoundFadeIn(lib6D9D7845_gv_zeroTimeRemix, 32);
-    autoAB306E77_n = CeilingI((lib6D9D7845_gv_saUltimateStage1Duration / 0.0625));
+    lib6D9D7845_gf_SoundFadeOut(lib6D9D7845_gv_e38090UnitE38091.lv_zeroTime, 32);
+    lib6D9D7845_gf_SoundFadeIn(lib6D9D7845_gv_e38090UnitE38091.lv_zeroTimeRemix, 32);
+    autoAB306E77_n = CeilingI((lib6D9D7845_gv_e38090UnitE38091.lv_saUltimateStage1Duration / 0.0625));
     for (autoAB306E77_i = 1; autoAB306E77_i <= autoAB306E77_n; autoAB306E77_i += 1) {
-        if (((lib6D9D7845_gv_sa == null))) {
+        if (((lib6D9D7845_gv_e38090UnitE38091.lv_sa == null))) {
             break;
         }
 
@@ -1381,7 +1383,7 @@ bool auto_lib6D9D7845_gf_SaUltimate_TriggerFunc (bool testConds, bool runActions
     for (;; auto7F1B537D_u -= 1) {
         auto7F1B537D_var = UnitGroupUnitFromEnd(auto7F1B537D_g, auto7F1B537D_u);
         if (auto7F1B537D_var == null) { break; }
-        UnitBehaviorAdd(auto7F1B537D_var, "NoSelection", lib6D9D7845_gv_sa, 1);
+        UnitBehaviorAdd(auto7F1B537D_var, "NoSelection", lib6D9D7845_gv_e38090UnitE38091.lv_sa, 1);
     }
     auto4E89AAE1_g = lp_sas;
     auto4E89AAE1_u = UnitGroupCount(auto4E89AAE1_g, c_unitCountAll);
@@ -1399,8 +1401,8 @@ bool auto_lib6D9D7845_gf_SaUltimate_TriggerFunc (bool testConds, bool runActions
     }
     SoundPlayForPlayer(SoundLink("SaUltimateBell", -1), c_maxPlayers, PlayerGroupAll(), 200.0, 0.16);
     GameSetLighting("HonkaiBlue", 1.0);
-    lib6D9D7845_gf_SoundFadeOut(lib6D9D7845_gv_zeroTimeRemix, 32);
-    lib6D9D7845_gf_SoundFadeIn(lib6D9D7845_gv_zeroTimeRemix2, 32);
+    lib6D9D7845_gf_SoundFadeOut(lib6D9D7845_gv_e38090UnitE38091.lv_zeroTimeRemix, 32);
+    lib6D9D7845_gf_SoundFadeIn(lib6D9D7845_gv_e38090UnitE38091.lv_zeroTimeRemix2, 32);
     lv_j = 0;
     auto49D94F01_g = lp_sas;
     auto49D94F01_u = UnitGroupCount(auto49D94F01_g, c_unitCountAll);
@@ -1419,7 +1421,7 @@ bool auto_lib6D9D7845_gf_SaUltimate_TriggerFunc (bool testConds, bool runActions
         lv_j += 1;
     }
     while (true) {
-        if ((lib6D9D7845_gv_sa == null)) {
+        if ((lib6D9D7845_gv_e38090UnitE38091.lv_sa == null)) {
             break;
         }
 
@@ -1444,11 +1446,11 @@ bool auto_lib6D9D7845_gf_SaUltimate_TriggerFunc (bool testConds, bool runActions
         if (auto3619BC68_var == null) { break; }
         UnitBehaviorRemove(auto3619BC68_var, "NoSelection", 1);
     }
-    UnitBehaviorRemove(lib6D9D7845_gv_sa, "SaUltimateCeaseCore", 1);
-    lib6D9D7845_gv_saUltimateCD = lib6D9D7845_gv_saUltimateCDValue;
-    GameSetLighting(lib6D9D7845_gv_defaultLight, 1.0);
-    lib6D9D7845_gf_SoundFadeOut(lib6D9D7845_gv_zeroTimeRemix2, 32);
-    lib6D9D7845_gf_SoundFadeIn(lib6D9D7845_gv_zeroTime, 32);
+    UnitBehaviorRemove(lib6D9D7845_gv_e38090UnitE38091.lv_sa, "SaUltimateCeaseCore", 1);
+    lib6D9D7845_gv_e38090UnitE38091.lv_saUltimateCD = lib6D9D7845_gv_e38090UnitE38091.lv_saUltimateCDValue;
+    GameSetLighting(lib6D9D7845_gv_e38090E585A8E5B180E6A087E69797E38091.lv_lightE9BB98E8AEA4E58589E785A7, 1.0);
+    lib6D9D7845_gf_SoundFadeOut(lib6D9D7845_gv_e38090UnitE38091.lv_zeroTimeRemix2, 32);
+    lib6D9D7845_gf_SoundFadeIn(lib6D9D7845_gv_e38090UnitE38091.lv_zeroTime, 32);
     SoundChannelSetVolume(PlayerGroupAll(), c_soundCategoryCombat, 100.0, 1.0);
     auto70367FF0_g = lp_sas;
     auto70367FF0_u = UnitGroupCount(auto70367FF0_g, c_unitCountAll);
@@ -1457,6 +1459,7 @@ bool auto_lib6D9D7845_gf_SaUltimate_TriggerFunc (bool testConds, bool runActions
         if (lv_afflication == null) { break; }
         UnitBehaviorRemove(lv_afflication, "SaUltimatePrepare", 1);
     }
+    lib6D9D7845_gv_e38090UnitE38091.lv_saInUltimate = false;
     return true;
 }
 
@@ -1488,10 +1491,10 @@ bool auto_lib6D9D7845_gf_SaPauseNewUnits_TriggerFunc (bool testConds, bool runAc
     // Variable Initialization
 
     // Implementation
-    auto8CF22872_n = CeilingI((lib6D9D7845_gv_saUltimateStage1Duration / 0.25));
+    auto8CF22872_n = CeilingI((lib6D9D7845_gv_e38090UnitE38091.lv_saUltimateStage1Duration / 0.25));
     for (auto8CF22872_i = 1; auto8CF22872_i <= auto8CF22872_n; auto8CF22872_i += 1) {
         UnitPauseAll(true);
-        libNtve_gf_PauseUnit(lib6D9D7845_gv_sa, false);
+        libNtve_gf_PauseUnit(lib6D9D7845_gv_e38090UnitE38091.lv_sa, false);
         auto1957A88A_g = lp_sas;
         auto1957A88A_u = UnitGroupCount(auto1957A88A_g, c_unitCountAll);
         for (;; auto1957A88A_u -= 1) {
@@ -1737,7 +1740,7 @@ void lib6D9D7845_gf_E9809AE794A8E78AB6E68081E8B79FE8B8AA (unit lp_unit) {
     lv_portrait = c_invalidPortraitId;
 
     // Implementation
-    DialogCreate(lib6D9D7845_gv_e58D95E4BD8DE78AB6E68081UIE5AEBDE5BAA6, lib6D9D7845_gv_e58D95E4BD8DE78AB6E68081UIE9AB98E5BAA6, c_anchorCenter, 0, 0, true);
+    DialogCreate(lib6D9D7845_gv_e38090UIE38091.lv_e58D95E4BD8DE78AB6E68081UIE5AEBDE5BAA6, lib6D9D7845_gv_e38090UIE38091.lv_e58D95E4BD8DE78AB6E68081UIE9AB98E5BAA6, c_anchorCenter, 0, 0, true);
     if ((UnitFilterMatch(lp_unit, 0, UnitFilter((1 << c_targetFilterCanHaveEnergy), 0, 0, 0)) == true)) {
         lv_portrait = lib6D9D7845_gf_E5889DE5A78BE58C96E5A4B4E5838F(DialogLastCreated(), lp_unit, "HonkaiUnitStatus");
     }
@@ -1763,7 +1766,7 @@ void lib6D9D7845_gf_E5B9BBE6B5B7E6A2A6E89DB6E78AB6E68081E8B79FE8B8AA (unit lp_un
     lv_portrait = c_invalidPortraitId;
 
     // Implementation
-    DialogCreate(lib6D9D7845_gv_e58D95E4BD8DE78AB6E68081UIE5AEBDE5BAA6, lib6D9D7845_gv_e58D95E4BD8DE78AB6E68081UIE9AB98E5BAA6, c_anchorCenter, 0, 0, true);
+    DialogCreate(lib6D9D7845_gv_e38090UIE38091.lv_e58D95E4BD8DE78AB6E68081UIE5AEBDE5BAA6, lib6D9D7845_gv_e38090UIE38091.lv_e58D95E4BD8DE78AB6E68081UIE9AB98E5BAA6, c_anchorCenter, 0, 0, true);
     lv_portrait = lib6D9D7845_gf_E5889DE5A78BE58C96E5A4B4E5838F(DialogLastCreated(), lp_unit, "HonkaiUnitStatusSeeleC1");
     lv_actor = ActorFromPortrait(lv_portrait);
     lib6D9D7845_gf_E5889DE5A78BE58C96E59FBAE7A180E78AB6E68081(lv_actor);
@@ -2116,31 +2119,31 @@ fixed lib6D9D7845_gf_E4BCA4E5AEB3E7BB93E7AE97E5B19EE680A7 (unit lp_e4BCA4E5AEB3E
     // Implementation
     if ((UnitBehaviorEnabled(lp_e79BAEE6A087E58D95E4BD8D, "HonkaiAttributeQT") == true)) {
         if ((UnitBehaviorEnabled(lp_e4BCA4E5AEB3E6BA90E58D95E4BD8D, "HonkaiAttributeQT") == true)) {
-            lv_e5B19EE680A7E5858BE588B6E9878F = lib6D9D7845_gv_e5B19EE680A7E9A1BAE5858BE588B6;
+            lv_e5B19EE680A7E5858BE588B6E9878F = lib6D9D7845_gv_e38090E585A8E5B180E6A087E69797E38091.lv_floatE5B19EE680A7E9A1BAE5858BE588B6;
         }
     }
     else if ((UnitBehaviorEnabled(lp_e79BAEE6A087E58D95E4BD8D, "HonkaiAttributeBio") == true)) {
         if ((UnitBehaviorEnabled(lp_e4BCA4E5AEB3E6BA90E58D95E4BD8D, "HonkaiAttributeMech") == true)) {
-            lv_e5B19EE680A7E5858BE588B6E9878F = lib6D9D7845_gv_e5B19EE680A7E9A1BAE5858BE588B6;
+            lv_e5B19EE680A7E5858BE588B6E9878F = lib6D9D7845_gv_e38090E585A8E5B180E6A087E69797E38091.lv_floatE5B19EE680A7E9A1BAE5858BE588B6;
         }
         else if ((UnitBehaviorEnabled(lp_e4BCA4E5AEB3E6BA90E58D95E4BD8D, "HonkaiAttributeUl") == true)) {
-            lv_e5B19EE680A7E5858BE588B6E9878F = lib6D9D7845_gv_e5B19EE680A7E98086E5858BE588B6;
+            lv_e5B19EE680A7E5858BE588B6E9878F = lib6D9D7845_gv_e38090E585A8E5B180E6A087E69797E38091.lv_floatE5B19EE680A7E98086E5858BE588B6;
         }
     }
     else if ((UnitBehaviorEnabled(lp_e79BAEE6A087E58D95E4BD8D, "HonkaiAttributeMech") == true)) {
         if ((UnitBehaviorEnabled(lp_e4BCA4E5AEB3E6BA90E58D95E4BD8D, "HonkaiAttributeUl") == true)) {
-            lv_e5B19EE680A7E5858BE588B6E9878F = lib6D9D7845_gv_e5B19EE680A7E9A1BAE5858BE588B6;
+            lv_e5B19EE680A7E5858BE588B6E9878F = lib6D9D7845_gv_e38090E585A8E5B180E6A087E69797E38091.lv_floatE5B19EE680A7E9A1BAE5858BE588B6;
         }
         else if ((UnitBehaviorEnabled(lp_e4BCA4E5AEB3E6BA90E58D95E4BD8D, "HonkaiAttributeBio") == true)) {
-            lv_e5B19EE680A7E5858BE588B6E9878F = lib6D9D7845_gv_e5B19EE680A7E98086E5858BE588B6;
+            lv_e5B19EE680A7E5858BE588B6E9878F = lib6D9D7845_gv_e38090E585A8E5B180E6A087E69797E38091.lv_floatE5B19EE680A7E98086E5858BE588B6;
         }
     }
     else if ((UnitBehaviorEnabled(lp_e79BAEE6A087E58D95E4BD8D, "HonkaiAttributeUl") == true)) {
         if ((UnitBehaviorEnabled(lp_e4BCA4E5AEB3E6BA90E58D95E4BD8D, "HonkaiAttributeBio") == true)) {
-            lv_e5B19EE680A7E5858BE588B6E9878F = lib6D9D7845_gv_e5B19EE680A7E9A1BAE5858BE588B6;
+            lv_e5B19EE680A7E5858BE588B6E9878F = lib6D9D7845_gv_e38090E585A8E5B180E6A087E69797E38091.lv_floatE5B19EE680A7E9A1BAE5858BE588B6;
         }
         else if ((UnitBehaviorEnabled(lp_e4BCA4E5AEB3E6BA90E58D95E4BD8D, "HonkaiAttributeMech") == true)) {
-            lv_e5B19EE680A7E5858BE588B6E9878F = lib6D9D7845_gv_e5B19EE680A7E98086E5858BE588B6;
+            lv_e5B19EE680A7E5858BE588B6E9878F = lib6D9D7845_gv_e38090E585A8E5B180E6A087E69797E38091.lv_floatE5B19EE680A7E98086E5858BE588B6;
         }
     }
     return lv_e5B19EE680A7E5858BE588B6E9878F;
@@ -2291,23 +2294,23 @@ void lib6D9D7845_gt_E69BB4E696B0E4BABAE58FA3_Init () {
 }
 
 //--------------------------------------------------------------------------------------------------
-// Trigger: Set Light
+// Trigger: Set Default Light
 //--------------------------------------------------------------------------------------------------
-bool lib6D9D7845_gt_SetLight_Func (bool testConds, bool runActions) {
+bool lib6D9D7845_gt_SetDefaultLight_Func (bool testConds, bool runActions) {
     // Automatic Variable Declarations
     // Actions
     if (!runActions) {
         return true;
     }
 
-    GameSetLighting(lib6D9D7845_gv_defaultLight, 0.0);
+    GameSetLighting(lib6D9D7845_gv_e38090E585A8E5B180E6A087E69797E38091.lv_lightE9BB98E8AEA4E58589E785A7, 0.0);
     return true;
 }
 
 //--------------------------------------------------------------------------------------------------
-void lib6D9D7845_gt_SetLight_Init () {
-    lib6D9D7845_gt_SetLight = TriggerCreate("lib6D9D7845_gt_SetLight_Func");
-    TriggerAddEventMapInit(lib6D9D7845_gt_SetLight);
+void lib6D9D7845_gt_SetDefaultLight_Init () {
+    lib6D9D7845_gt_SetDefaultLight = TriggerCreate("lib6D9D7845_gt_SetDefaultLight_Func");
+    TriggerAddEventMapInit(lib6D9D7845_gt_SetDefaultLight);
 }
 
 //--------------------------------------------------------------------------------------------------
@@ -2327,18 +2330,18 @@ bool lib6D9D7845_gt_CreateDPSUnit_Func (bool testConds, bool runActions) {
         return true;
     }
 
-    if ((lib6D9D7845_gv_dPSUnit != null)) {
-        UnitRemove(lib6D9D7845_gv_dPSUnit);
-        lib6D9D7845_gv_dPSUnit = null;
-        DialogDestroy(lib6D9D7845_gv_dPSDialog);
+    if ((lib6D9D7845_gv_e38090DebugE38091.lv_dPSUnit != null)) {
+        UnitRemove(lib6D9D7845_gv_e38090DebugE38091.lv_dPSUnit);
+        lib6D9D7845_gv_e38090DebugE38091.lv_dPSUnit = null;
+        DialogDestroy(lib6D9D7845_gv_e38090DebugE38091.lv_dPSDialog);
     }
     else {
         libNtve_gf_CreateUnitsWithDefaultFacing(1, "DPSTest", 0, 15, CameraGetTarget(EventPlayer()));
-        lib6D9D7845_gv_dPSUnit = UnitLastCreated();
+        lib6D9D7845_gv_e38090DebugE38091.lv_dPSUnit = UnitLastCreated();
         DialogCreate(400, 160, c_anchorTopLeft, 0, 0, true);
-        lib6D9D7845_gv_dPSDialog = DialogLastCreated();
+        lib6D9D7845_gv_e38090DebugE38091.lv_dPSDialog = DialogLastCreated();
         libNtve_gf_CreateDialogItemLabel(DialogLastCreated(), 400, 160, c_anchorTopLeft, 50, 50, StringToText(""), ColorWithAlpha(0,0,0,0), false, 2.0);
-        lib6D9D7845_gv_dPSDialogItem = DialogControlLastCreated();
+        lib6D9D7845_gv_e38090DebugE38091.lv_dPSDialogItem = DialogControlLastCreated();
         libNtve_gf_SetDialogItemStyle(DialogControlLastCreated(), "TimeLabel", PlayerGroupAll());
         DialogSetVisible(DialogLastCreated(), PlayerGroupAll(), true);
     }
@@ -2356,10 +2359,10 @@ void lib6D9D7845_gt_CreateDPSUnit_Init () {
 //--------------------------------------------------------------------------------------------------
 bool lib6D9D7845_gt_DPSStats_Func (bool testConds, bool runActions) {
     // Variable Declarations
-    fixed lv_e4BCA4E5AEB3E580BC;
+    fixed lv_damage;
     fixed lv__10E7A792E4BCA4E5AEB3;
     fixed lv__30E7A792E4BCA4E5AEB3;
-    int lv_e7B4A2E5BC95;
+    int lv_index;
 
     // Automatic Variable Declarations
     const int auto359CC15A_ae = 9;
@@ -2375,7 +2378,7 @@ bool lib6D9D7845_gt_DPSStats_Func (bool testConds, bool runActions) {
             return false;
         }
 
-        if (!((lib6D9D7845_gv_dPSUnit != null))) {
+        if (!((lib6D9D7845_gv_e38090DebugE38091.lv_dPSUnit != null))) {
             return false;
         }
     }
@@ -2385,24 +2388,24 @@ bool lib6D9D7845_gt_DPSStats_Func (bool testConds, bool runActions) {
         return true;
     }
 
-    lv_e4BCA4E5AEB3E580BC += (UnitTypeGetProperty(UnitGetType(lib6D9D7845_gv_dPSUnit), c_unitPropLifeMax) - UnitGetPropertyFixed(lib6D9D7845_gv_dPSUnit, c_unitPropLife, c_unitPropCurrent));
-    lv_e4BCA4E5AEB3E580BC += (UnitTypeGetProperty(UnitGetType(lib6D9D7845_gv_dPSUnit), c_unitPropShieldsMax) - UnitGetPropertyFixed(lib6D9D7845_gv_dPSUnit, c_unitPropShields, c_unitPropCurrent));
-    UnitSetPropertyFixed(lib6D9D7845_gv_dPSUnit, c_unitPropLife, UnitTypeGetProperty(UnitGetType(lib6D9D7845_gv_dPSUnit), c_unitPropLifeMax));
-    UnitSetPropertyFixed(lib6D9D7845_gv_dPSUnit, c_unitPropShields, UnitTypeGetProperty(UnitGetType(lib6D9D7845_gv_dPSUnit), c_unitPropShieldsMax));
-    lib6D9D7845_gv_damagein10seconds[ModI(lib6D9D7845_gv_damageIndex, 10)] = lv_e4BCA4E5AEB3E580BC;
-    lib6D9D7845_gv_damagein30seconds[ModI(lib6D9D7845_gv_damageIndex, 30)] = lv_e4BCA4E5AEB3E580BC;
-    lib6D9D7845_gv_damageIndex += 1;
-    lv_e7B4A2E5BC95 = 0;
-    for ( ; ( (auto359CC15A_ai >= 0 && lv_e7B4A2E5BC95 <= auto359CC15A_ae) || (auto359CC15A_ai < 0 && lv_e7B4A2E5BC95 >= auto359CC15A_ae) ) ; lv_e7B4A2E5BC95 += auto359CC15A_ai ) {
-        lv__10E7A792E4BCA4E5AEB3 += lib6D9D7845_gv_damagein10seconds[lv_e7B4A2E5BC95];
+    lv_damage += (UnitTypeGetProperty(UnitGetType(lib6D9D7845_gv_e38090DebugE38091.lv_dPSUnit), c_unitPropLifeMax) - UnitGetPropertyFixed(lib6D9D7845_gv_e38090DebugE38091.lv_dPSUnit, c_unitPropLife, c_unitPropCurrent));
+    lv_damage += (UnitTypeGetProperty(UnitGetType(lib6D9D7845_gv_e38090DebugE38091.lv_dPSUnit), c_unitPropShieldsMax) - UnitGetPropertyFixed(lib6D9D7845_gv_e38090DebugE38091.lv_dPSUnit, c_unitPropShields, c_unitPropCurrent));
+    UnitSetPropertyFixed(lib6D9D7845_gv_e38090DebugE38091.lv_dPSUnit, c_unitPropLife, UnitTypeGetProperty(UnitGetType(lib6D9D7845_gv_e38090DebugE38091.lv_dPSUnit), c_unitPropLifeMax));
+    UnitSetPropertyFixed(lib6D9D7845_gv_e38090DebugE38091.lv_dPSUnit, c_unitPropShields, UnitTypeGetProperty(UnitGetType(lib6D9D7845_gv_e38090DebugE38091.lv_dPSUnit), c_unitPropShieldsMax));
+    lib6D9D7845_gv_e38090DebugE38091.lv_damagein10seconds[ModI(lib6D9D7845_gv_e38090DebugE38091.lv_damageIndex, 10)] = lv_damage;
+    lib6D9D7845_gv_e38090DebugE38091.lv_damagein30seconds[ModI(lib6D9D7845_gv_e38090DebugE38091.lv_damageIndex, 30)] = lv_damage;
+    lib6D9D7845_gv_e38090DebugE38091.lv_damageIndex += 1;
+    lv_index = 0;
+    for ( ; ( (auto359CC15A_ai >= 0 && lv_index <= auto359CC15A_ae) || (auto359CC15A_ai < 0 && lv_index >= auto359CC15A_ae) ) ; lv_index += auto359CC15A_ai ) {
+        lv__10E7A792E4BCA4E5AEB3 += lib6D9D7845_gv_e38090DebugE38091.lv_damagein10seconds[lv_index];
     }
-    lv_e7B4A2E5BC95 = 0;
-    for ( ; ( (auto66161954_ai >= 0 && lv_e7B4A2E5BC95 <= auto66161954_ae) || (auto66161954_ai < 0 && lv_e7B4A2E5BC95 >= auto66161954_ae) ) ; lv_e7B4A2E5BC95 += auto66161954_ai ) {
-        lv__30E7A792E4BCA4E5AEB3 += lib6D9D7845_gv_damagein30seconds[lv_e7B4A2E5BC95];
+    lv_index = 0;
+    for ( ; ( (auto66161954_ai >= 0 && lv_index <= auto66161954_ae) || (auto66161954_ai < 0 && lv_index >= auto66161954_ae) ) ; lv_index += auto66161954_ai ) {
+        lv__10E7A792E4BCA4E5AEB3 += lib6D9D7845_gv_e38090DebugE38091.lv_damagein30seconds[lv_index];
     }
     lv__10E7A792E4BCA4E5AEB3 /= 10.0;
     lv__30E7A792E4BCA4E5AEB3 /= 30.0;
-    libNtve_gf_SetDialogItemText(lib6D9D7845_gv_dPSDialogItem, (StringExternal("Param/Value/lib_6D9D7845_5CD99C93") + FixedToText(lv__10E7A792E4BCA4E5AEB3, 2) + StringExternal("Param/Value/lib_6D9D7845_8CA6498A") + StringExternal("Param/Value/lib_6D9D7845_513313B5") + FixedToText(lv__30E7A792E4BCA4E5AEB3, 2)), PlayerGroupAll());
+    libNtve_gf_SetDialogItemText(lib6D9D7845_gv_e38090DebugE38091.lv_dPSDialogItem, (StringExternal("Param/Value/lib_6D9D7845_5CD99C93") + FixedToText(lv__10E7A792E4BCA4E5AEB3, 2) + StringExternal("Param/Value/lib_6D9D7845_8CA6498A") + StringExternal("Param/Value/lib_6D9D7845_513313B5") + FixedToText(lv__30E7A792E4BCA4E5AEB3, 2)), PlayerGroupAll());
     return true;
 }
 
@@ -2468,7 +2471,7 @@ bool lib6D9D7845_gt_Debug2_Func (bool testConds, bool runActions) {
         return true;
     }
 
-    UnitInventoryContainerOpen(PlayerGroupAll(), lv_u, 1, true);
+    TriggerDebugSetTypeFile(1, "TriggerDebug.txt");
     return true;
 }
 
@@ -2608,7 +2611,7 @@ bool lib6D9D7845_gt_Debug6_Func (bool testConds, bool runActions) {
     libNtve_gf_CreateUnitsWithDefaultFacing(1, "NukeSilo", 0, 1, CameraGetTarget(1));
     libNtve_gf_CreateUnitsWithDefaultFacing(1, "ImperialInstitute", 0, 1, CameraGetTarget(1));
     libNtve_gf_CreateUnitsWithDefaultFacing(1, "FusionCore", 0, 1, CameraGetTarget(1));
-    libNtve_gf_CreateUnitsWithDefaultFacing(1, "MercCompound", 0, 1, CameraGetTarget(1));
+    libNtve_gf_CreateUnitsWithDefaultFacing(1, "Mikoyan", 0, 1, CameraGetTarget(1));
     return true;
 }
 
@@ -2944,7 +2947,10 @@ bool lib6D9D7845_gt_E7A791E68A80E4BD9CE5BC8A_Func (bool testConds, bool runActio
     GameCheatAllow(c_gameCheatMinerals, true);
     GameCheatAllow(c_gameCheatVespene, true);
     GameCheatAllow(c_gameCheatFood, true);
-    TechTreeRequirementsEnable(1, true);
+    ConsoleCommand("FastBuild", true, true);
+    ConsoleCommand("Food", true, true);
+    ConsoleCommand("Free", true, true);
+    ConsoleCommand("TechTree", true, true);
     return true;
 }
 
@@ -3564,8 +3570,8 @@ bool lib6D9D7845_gt_E58D95E4BD8DE6B58BE8AF95E887AAE5AE9AE4B989_Func (bool testCo
         lv_e7B1BBE59E8B = UnitTypeFromString(StringReplaceWord(EventChatMessage(false), ">", "", c_stringReplaceAll, c_stringNoCase));
     }
     if ((lv_e7B1BBE59E8B != null)) {
-        lib6D9D7845_gv_e887AAE5AE9AE4B989E58D95E4BD8DE7B1BBE59E8B[EventPlayer()] = lv_e7B1BBE59E8B;
-        TriggerDebugOutput(1, (StringExternal("Param/Value/lib_6D9D7845_5C21EF07") + UnitTypeGetName(lib6D9D7845_gv_e887AAE5AE9AE4B989E58D95E4BD8DE7B1BBE59E8B[EventPlayer()])), true);
+        lib6D9D7845_gv_e38090DebugE38091.lv_unitE887AAE5AE9AE4B989E58D95E4BD8DE7B1BBE59E8B[EventPlayer()] = lv_e7B1BBE59E8B;
+        TriggerDebugOutput(1, (StringExternal("Param/Value/lib_6D9D7845_5C21EF07") + UnitTypeGetName(lib6D9D7845_gv_e38090DebugE38091.lv_unitE887AAE5AE9AE4B989E58D95E4BD8DE7B1BBE59E8B[EventPlayer()])), true);
     }
 
     return true;
@@ -3602,8 +3608,8 @@ bool lib6D9D7845_gt_E58D95E4BD8DE6B58BE8AF95E887AAE5AE9AE4B989E5A48DE588B6_Func 
     if ((UnitGroupCount(UnitGroupSelected(EventPlayer()), c_unitCountAlive) > 0)) {
         lv_e7B1BBE59E8B = UnitGetType(UnitGroupUnit(UnitGroupSelected(EventPlayer()), 1));
         if ((lv_e7B1BBE59E8B != null)) {
-            lib6D9D7845_gv_e887AAE5AE9AE4B989E58D95E4BD8DE7B1BBE59E8B[EventPlayer()] = lv_e7B1BBE59E8B;
-            TriggerDebugOutput(1, (StringExternal("Param/Value/lib_6D9D7845_F0143A1C") + UnitTypeGetName(lib6D9D7845_gv_e887AAE5AE9AE4B989E58D95E4BD8DE7B1BBE59E8B[EventPlayer()])), true);
+            lib6D9D7845_gv_e38090DebugE38091.lv_unitE887AAE5AE9AE4B989E58D95E4BD8DE7B1BBE59E8B[EventPlayer()] = lv_e7B1BBE59E8B;
+            TriggerDebugOutput(1, (StringExternal("Param/Value/lib_6D9D7845_F0143A1C") + UnitTypeGetName(lib6D9D7845_gv_e38090DebugE38091.lv_unitE887AAE5AE9AE4B989E58D95E4BD8DE7B1BBE59E8B[EventPlayer()])), true);
         }
 
     }
@@ -3641,10 +3647,10 @@ bool lib6D9D7845_gt_E58D95E4BD8DE6B58BE8AF95E887AAE5AE9AE4B9892_Func (bool testC
 
     lv_e695B0E9878F = StringToInt(StringReplaceWord(EventChatMessage(false), "<", "", c_stringReplaceAll, c_stringNoCase));
     if ((lv_e695B0E9878F > 0)) {
-        libNtve_gf_CreateUnitsWithDefaultFacing(lv_e695B0E9878F, lib6D9D7845_gv_e887AAE5AE9AE4B989E58D95E4BD8DE7B1BBE59E8B[EventPlayer()], 0, EventPlayer(), CameraGetTarget(EventPlayer()));
+        libNtve_gf_CreateUnitsWithDefaultFacing(lv_e695B0E9878F, lib6D9D7845_gv_e38090DebugE38091.lv_unitE887AAE5AE9AE4B989E58D95E4BD8DE7B1BBE59E8B[EventPlayer()], 0, EventPlayer(), CameraGetTarget(EventPlayer()));
     }
     else {
-        libNtve_gf_CreateUnitsWithDefaultFacing(AbsI(lv_e695B0E9878F), lib6D9D7845_gv_e887AAE5AE9AE4B989E58D95E4BD8DE7B1BBE59E8B[EventPlayer()], 0, 15, CameraGetTarget(EventPlayer()));
+        libNtve_gf_CreateUnitsWithDefaultFacing(AbsI(lv_e695B0E9878F), lib6D9D7845_gv_e38090DebugE38091.lv_unitE887AAE5AE9AE4B989E58D95E4BD8DE7B1BBE59E8B[EventPlayer()], 0, 15, CameraGetTarget(EventPlayer()));
     }
     libNtve_gf_SetAlliance(15, EventPlayer(), libNtve_ge_AllianceSetting_Enemy);
     PlayerSetAlliance(15, c_allianceIdVision, EventPlayer(), true);
@@ -3676,7 +3682,7 @@ bool lib6D9D7845_gt_E58D95E4BD8DE6B58BE8AF95E887AAE5AE9AE4B989E7B298E8B4B4_Func 
         return true;
     }
 
-    libNtve_gf_CreateUnitsWithDefaultFacing(1, lib6D9D7845_gv_e887AAE5AE9AE4B989E58D95E4BD8DE7B1BBE59E8B[EventPlayer()], 0, EventPlayer(), CameraGetTarget(EventPlayer()));
+    libNtve_gf_CreateUnitsWithDefaultFacing(1, lib6D9D7845_gv_e38090DebugE38091.lv_unitE887AAE5AE9AE4B989E58D95E4BD8DE7B1BBE59E8B[EventPlayer()], 0, EventPlayer(), CameraGetTarget(EventPlayer()));
     return true;
 }
 
@@ -3741,13 +3747,13 @@ bool lib6D9D7845_gt_E69A82E5819C_Func (bool testConds, bool runActions) {
         return true;
     }
 
-    if ((lib6D9D7845_gv_e5B7B2E69A82E5819C == false)) {
+    if ((lib6D9D7845_gv_e38090DebugE38091.lv_boolE5B7B2E69A82E5819C == false)) {
         UnitPauseAll(true);
     }
     else {
         UnitPauseAll(false);
     }
-    lib6D9D7845_gv_e5B7B2E69A82E5819C = !(lib6D9D7845_gv_e5B7B2E69A82E5819C);
+    lib6D9D7845_gv_e38090DebugE38091.lv_boolE5B7B2E69A82E5819C = !(lib6D9D7845_gv_e38090DebugE38091.lv_boolE5B7B2E69A82E5819C);
     return true;
 }
 
@@ -4094,7 +4100,7 @@ bool lib6D9D7845_gt_E887AAE58AA8E9858DE8A385E5A48DE588B6_Func (bool testConds, b
     }
 
     lib6D9D7845_gf_E88EB7E58F96E79BAEE6A087E8A385E5A487(EventUnit());
-    lib6D9D7845_gf_E9858DE8A385E588B0E79BAEE6A087E8A686E79B96(EventUnitTargetUnit(), lib6D9D7845_gv_e8A385E5A487E7BC93E5AD98[0], lib6D9D7845_gv_e8A385E5A487E7BC93E5AD98[1], lib6D9D7845_gv_e8A385E5A487E7BC93E5AD98[2], lib6D9D7845_gv_e8A385E5A487E7BC93E5AD98[3]);
+    lib6D9D7845_gf_E9858DE8A385E588B0E79BAEE6A087E8A686E79B96(EventUnitTargetUnit(), lib6D9D7845_gv_e38090UnitE38091.lv_e8A385E5A487E7BC93E5AD98[0], lib6D9D7845_gv_e38090UnitE38091.lv_e8A385E5A487E7BC93E5AD98[1], lib6D9D7845_gv_e38090UnitE38091.lv_e8A385E5A487E7BC93E5AD98[2], lib6D9D7845_gv_e38090UnitE38091.lv_e8A385E5A487E7BC93E5AD98[3]);
     return true;
 }
 
@@ -4129,7 +4135,7 @@ bool lib6D9D7845_gt_E887AAE58AA8E9858DE8A385E8A686E79B96_Func (bool testConds, b
     lib6D9D7845_gf_E88EB7E58F96E79BAEE6A087E8A385E5A487(EventUnit());
     lv_i = 0;
     for ( ; ( (auto821C211B_ai >= 0 && lv_i <= auto821C211B_ae) || (auto821C211B_ai < 0 && lv_i >= auto821C211B_ae) ) ; lv_i += auto821C211B_ai ) {
-        lv_buffer[lv_i] = lib6D9D7845_gv_e8A385E5A487E7BC93E5AD98[lv_i];
+        lv_buffer[lv_i] = lib6D9D7845_gv_e38090UnitE38091.lv_e8A385E5A487E7BC93E5AD98[lv_i];
     }
     autoC42FF7AE_g = UnitGroup(UnitGetType(EventUnit()), UnitGetOwner(EventUnit()), RegionEntireMap(), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32))), 0);
     autoC42FF7AE_u = UnitGroupCount(autoC42FF7AE_g, c_unitCountAll);
@@ -4172,7 +4178,7 @@ bool lib6D9D7845_gt_E887AAE58AA8E9858DE8A385E8A1A5E58585_Func (bool testConds, b
     lib6D9D7845_gf_E88EB7E58F96E79BAEE6A087E8A385E5A487(EventUnit());
     lv_i = 0;
     for ( ; ( (autoC7F5C3A8_ai >= 0 && lv_i <= autoC7F5C3A8_ae) || (autoC7F5C3A8_ai < 0 && lv_i >= autoC7F5C3A8_ae) ) ; lv_i += autoC7F5C3A8_ai ) {
-        lv_buffer[lv_i] = lib6D9D7845_gv_e8A385E5A487E7BC93E5AD98[lv_i];
+        lv_buffer[lv_i] = lib6D9D7845_gv_e38090UnitE38091.lv_e8A385E5A487E7BC93E5AD98[lv_i];
     }
     auto9FD8384C_g = UnitGroup(UnitGetType(EventUnit()), UnitGetOwner(EventUnit()), RegionEntireMap(), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32))), 0);
     auto9FD8384C_u = UnitGroupCount(auto9FD8384C_g, c_unitCountAll);
@@ -4215,7 +4221,7 @@ bool lib6D9D7845_gt_E887AAE58AA8E9858DE8A385E696B0E58D95E4BD8D_Func (bool testCo
         lib6D9D7845_gf_E88EB7E58F96E79BAEE6A087E8A385E5A487(EventUnit());
         lv_i = 0;
         for ( ; ( (auto7810D0CA_ai >= 0 && lv_i <= auto7810D0CA_ae) || (auto7810D0CA_ai < 0 && lv_i >= auto7810D0CA_ae) ) ; lv_i += auto7810D0CA_ai ) {
-            lib6D9D7845_gv_e794A8E688B7E887AAE58AA8E9858DE8A385[UnitGetOwner(EventUnit())][lv_i] = lib6D9D7845_gv_e8A385E5A487E7BC93E5AD98[lv_i];
+            lib6D9D7845_gv_e38090UnitE38091.lv_e794A8E688B7E887AAE58AA8E9858DE8A385[UnitGetOwner(EventUnit())][lv_i] = lib6D9D7845_gv_e38090UnitE38091.lv_e8A385E5A487E7BC93E5AD98[lv_i];
         }
         UIDisplayMessage(PlayerGroupAll(), c_messageAreaSubtitle, StringExternal("Param/Value/lib_6D9D7845_7C035B6B"));
     }
@@ -4224,7 +4230,7 @@ bool lib6D9D7845_gt_E887AAE58AA8E9858DE8A385E696B0E58D95E4BD8D_Func (bool testCo
         lib6D9D7845_gf_E88EB7E58F96E79BAEE6A087E8A385E5A487(EventUnit());
         lv_i = 0;
         for ( ; ( (autoD053E66B_ai >= 0 && lv_i <= autoD053E66B_ae) || (autoD053E66B_ai < 0 && lv_i >= autoD053E66B_ae) ) ; lv_i += autoD053E66B_ai ) {
-            lib6D9D7845_gv_e794A8E688B7E887AAE58AA8E9858DE8A385[UnitGetOwner(EventUnit())][(lv_i + 3)] = lib6D9D7845_gv_e8A385E5A487E7BC93E5AD98[lv_i];
+            lib6D9D7845_gv_e38090UnitE38091.lv_e794A8E688B7E887AAE58AA8E9858DE8A385[UnitGetOwner(EventUnit())][(lv_i + 3)] = lib6D9D7845_gv_e38090UnitE38091.lv_e8A385E5A487E7BC93E5AD98[lv_i];
         }
         UIDisplayMessage(PlayerGroupAll(), c_messageAreaSubtitle, StringExternal("Param/Value/lib_6D9D7845_DDFD93D2"));
     }
@@ -4262,7 +4268,7 @@ bool lib6D9D7845_gt_E887AAE58AA8E9858DE8A385E58F96E6B688_Func (bool testConds, b
     if ((UnitGetType(EventUnit()) == "Valkyrja2")) {
         lv_i = 0;
         for ( ; ( (autoD4D8ADE6_ai >= 0 && lv_i <= autoD4D8ADE6_ae) || (autoD4D8ADE6_ai < 0 && lv_i >= autoD4D8ADE6_ae) ) ; lv_i += autoD4D8ADE6_ai ) {
-            lib6D9D7845_gv_e794A8E688B7E887AAE58AA8E9858DE8A385[UnitGetOwner(EventUnit())][lv_i] = -1;
+            lib6D9D7845_gv_e38090UnitE38091.lv_e794A8E688B7E887AAE58AA8E9858DE8A385[UnitGetOwner(EventUnit())][lv_i] = -1;
         }
         UIDisplayMessage(PlayerGroupAll(), c_messageAreaSubtitle, StringExternal("Param/Value/lib_6D9D7845_B6857393"));
     }
@@ -4270,7 +4276,7 @@ bool lib6D9D7845_gt_E887AAE58AA8E9858DE8A385E58F96E6B688_Func (bool testConds, b
     if ((UnitGetType(EventUnit()) == "Valkyrja3")) {
         lv_i = 3;
         for ( ; ( (autoDAC5E228_ai >= 0 && lv_i <= autoDAC5E228_ae) || (autoDAC5E228_ai < 0 && lv_i >= autoDAC5E228_ae) ) ; lv_i += autoDAC5E228_ai ) {
-            lib6D9D7845_gv_e794A8E688B7E887AAE58AA8E9858DE8A385[UnitGetOwner(EventUnit())][lv_i] = -1;
+            lib6D9D7845_gv_e38090UnitE38091.lv_e794A8E688B7E887AAE58AA8E9858DE8A385[UnitGetOwner(EventUnit())][lv_i] = -1;
         }
         UIDisplayMessage(PlayerGroupAll(), c_messageAreaSubtitle, StringExternal("Param/Value/lib_6D9D7845_D08246B5"));
     }
@@ -4301,18 +4307,18 @@ bool lib6D9D7845_gt_E887AAE58AA8E9858DE8A385E696B0E8AEADE7BB83E8A7A6E58F91_Func 
     }
 
     if ((UnitGetType(EventUnitCreatedUnit()) == "Valkyrja2")) {
-        lib6D9D7845_gf_E9858DE8A385E588B0E79BAEE6A087E8A686E79B96(EventUnitCreatedUnit(), lib6D9D7845_gv_e794A8E688B7E887AAE58AA8E9858DE8A385[lv_p][0], lib6D9D7845_gv_e794A8E688B7E887AAE58AA8E9858DE8A385[lv_p][1], lib6D9D7845_gv_e794A8E688B7E887AAE58AA8E9858DE8A385[lv_p][2], -1);
-        while (lib6D9D7845_gf_E79BAEE6A087E58D95E4BD8DE99C80E8A681E9858DE8A385(EventUnitCreatedUnit(), lib6D9D7845_gv_e794A8E688B7E887AAE58AA8E9858DE8A385[lv_p][0], lib6D9D7845_gv_e794A8E688B7E887AAE58AA8E9858DE8A385[lv_p][1], lib6D9D7845_gv_e794A8E688B7E887AAE58AA8E9858DE8A385[lv_p][2], -1)) {
+        lib6D9D7845_gf_E9858DE8A385E588B0E79BAEE6A087E8A686E79B96(EventUnitCreatedUnit(), lib6D9D7845_gv_e38090UnitE38091.lv_e794A8E688B7E887AAE58AA8E9858DE8A385[lv_p][0], lib6D9D7845_gv_e38090UnitE38091.lv_e794A8E688B7E887AAE58AA8E9858DE8A385[lv_p][1], lib6D9D7845_gv_e38090UnitE38091.lv_e794A8E688B7E887AAE58AA8E9858DE8A385[lv_p][2], -1);
+        while (lib6D9D7845_gf_E79BAEE6A087E58D95E4BD8DE99C80E8A681E9858DE8A385(EventUnitCreatedUnit(), lib6D9D7845_gv_e38090UnitE38091.lv_e794A8E688B7E887AAE58AA8E9858DE8A385[lv_p][0], lib6D9D7845_gv_e38090UnitE38091.lv_e794A8E688B7E887AAE58AA8E9858DE8A385[lv_p][1], lib6D9D7845_gv_e38090UnitE38091.lv_e794A8E688B7E887AAE58AA8E9858DE8A385[lv_p][2], -1)) {
             Wait(1.0, c_timeGame);
-            lib6D9D7845_gf_E9858DE8A385E588B0E79BAEE6A087E8A686E79B96(EventUnitCreatedUnit(), lib6D9D7845_gv_e794A8E688B7E887AAE58AA8E9858DE8A385[lv_p][0], lib6D9D7845_gv_e794A8E688B7E887AAE58AA8E9858DE8A385[lv_p][1], lib6D9D7845_gv_e794A8E688B7E887AAE58AA8E9858DE8A385[lv_p][2], -1);
+            lib6D9D7845_gf_E9858DE8A385E588B0E79BAEE6A087E8A686E79B96(EventUnitCreatedUnit(), lib6D9D7845_gv_e38090UnitE38091.lv_e794A8E688B7E887AAE58AA8E9858DE8A385[lv_p][0], lib6D9D7845_gv_e38090UnitE38091.lv_e794A8E688B7E887AAE58AA8E9858DE8A385[lv_p][1], lib6D9D7845_gv_e38090UnitE38091.lv_e794A8E688B7E887AAE58AA8E9858DE8A385[lv_p][2], -1);
         }
     }
 
     if ((UnitGetType(EventUnitCreatedUnit()) == "Valkyrja3")) {
-        lib6D9D7845_gf_E9858DE8A385E588B0E79BAEE6A087E8A686E79B96(EventUnitCreatedUnit(), lib6D9D7845_gv_e794A8E688B7E887AAE58AA8E9858DE8A385[lv_p][3], lib6D9D7845_gv_e794A8E688B7E887AAE58AA8E9858DE8A385[lv_p][4], lib6D9D7845_gv_e794A8E688B7E887AAE58AA8E9858DE8A385[lv_p][5], lib6D9D7845_gv_e794A8E688B7E887AAE58AA8E9858DE8A385[lv_p][6]);
-        while (lib6D9D7845_gf_E79BAEE6A087E58D95E4BD8DE99C80E8A681E9858DE8A385(EventUnitCreatedUnit(), lib6D9D7845_gv_e794A8E688B7E887AAE58AA8E9858DE8A385[lv_p][3], lib6D9D7845_gv_e794A8E688B7E887AAE58AA8E9858DE8A385[lv_p][4], lib6D9D7845_gv_e794A8E688B7E887AAE58AA8E9858DE8A385[lv_p][5], lib6D9D7845_gv_e794A8E688B7E887AAE58AA8E9858DE8A385[lv_p][6])) {
+        lib6D9D7845_gf_E9858DE8A385E588B0E79BAEE6A087E8A686E79B96(EventUnitCreatedUnit(), lib6D9D7845_gv_e38090UnitE38091.lv_e794A8E688B7E887AAE58AA8E9858DE8A385[lv_p][3], lib6D9D7845_gv_e38090UnitE38091.lv_e794A8E688B7E887AAE58AA8E9858DE8A385[lv_p][4], lib6D9D7845_gv_e38090UnitE38091.lv_e794A8E688B7E887AAE58AA8E9858DE8A385[lv_p][5], lib6D9D7845_gv_e38090UnitE38091.lv_e794A8E688B7E887AAE58AA8E9858DE8A385[lv_p][6]);
+        while (lib6D9D7845_gf_E79BAEE6A087E58D95E4BD8DE99C80E8A681E9858DE8A385(EventUnitCreatedUnit(), lib6D9D7845_gv_e38090UnitE38091.lv_e794A8E688B7E887AAE58AA8E9858DE8A385[lv_p][3], lib6D9D7845_gv_e38090UnitE38091.lv_e794A8E688B7E887AAE58AA8E9858DE8A385[lv_p][4], lib6D9D7845_gv_e38090UnitE38091.lv_e794A8E688B7E887AAE58AA8E9858DE8A385[lv_p][5], lib6D9D7845_gv_e38090UnitE38091.lv_e794A8E688B7E887AAE58AA8E9858DE8A385[lv_p][6])) {
             Wait(1.0, c_timeGame);
-            lib6D9D7845_gf_E9858DE8A385E588B0E79BAEE6A087E8A686E79B96(EventUnitCreatedUnit(), lib6D9D7845_gv_e794A8E688B7E887AAE58AA8E9858DE8A385[lv_p][3], lib6D9D7845_gv_e794A8E688B7E887AAE58AA8E9858DE8A385[lv_p][4], lib6D9D7845_gv_e794A8E688B7E887AAE58AA8E9858DE8A385[lv_p][5], lib6D9D7845_gv_e794A8E688B7E887AAE58AA8E9858DE8A385[lv_p][6]);
+            lib6D9D7845_gf_E9858DE8A385E588B0E79BAEE6A087E8A686E79B96(EventUnitCreatedUnit(), lib6D9D7845_gv_e38090UnitE38091.lv_e794A8E688B7E887AAE58AA8E9858DE8A385[lv_p][3], lib6D9D7845_gv_e38090UnitE38091.lv_e794A8E688B7E887AAE58AA8E9858DE8A385[lv_p][4], lib6D9D7845_gv_e38090UnitE38091.lv_e794A8E688B7E887AAE58AA8E9858DE8A385[lv_p][5], lib6D9D7845_gv_e38090UnitE38091.lv_e794A8E688B7E887AAE58AA8E9858DE8A385[lv_p][6]);
         }
     }
 
@@ -4342,7 +4348,7 @@ bool lib6D9D7845_gt_E88BB1E99B84E58D95E4BD8DE5A48DE6B4BB_Func (bool testConds, b
 
     // Conditions
     if (testConds) {
-        if (!((lib6D9D7845_gv_globalE88BB1E99B84E5A48DE6B4BB == true))) {
+        if (!((lib6D9D7845_gv_e38090E585A8E5B180E6A087E69797E38091.lv_flagE88BB1E99B84E5A48DE6B4BB == true))) {
             return false;
         }
 
@@ -4411,9 +4417,9 @@ bool lib6D9D7845_gt_E7ACACE59B9BE7A59EE4B98BE994AE_Func (bool testConds, bool ru
     }
 
     VisRevealerCreate(lv_p, RegionEntireMap());
-    lib6D9D7845_gv_e7ACACE59B9BE7A59EE4B98BE994AE[lv_p] = EventUnitCreatedUnit();
-    libNtve_gf_SetDialogItemUnitGroup(lib6D9D7845_gv_e7ACACE59B9BE7A59EE4B98BE994AEE591BDE4BBA4E99DA2E69DBF, libNtve_gf_ConvertUnitToUnitGroup(lib6D9D7845_gv_e7ACACE59B9BE7A59EE4B98BE994AE[lv_p]), PlayerGroupSingle(lv_p));
-    DialogSetVisible(lib6D9D7845_gv_e7ACACE59B9BE7A59EE4B98BE994AEE5AFB9E8AF9DE6A186, PlayerGroupSingle(lv_p), true);
+    lib6D9D7845_gv_e38090UnitE38091.lv__4thunit[lv_p] = EventUnitCreatedUnit();
+    libNtve_gf_SetDialogItemUnitGroup(lib6D9D7845_gv_e38090UnitE38091.lv__4thCommandPanel, libNtve_gf_ConvertUnitToUnitGroup(lib6D9D7845_gv_e38090UnitE38091.lv__4thunit[lv_p]), PlayerGroupSingle(lv_p));
+    DialogSetVisible(lib6D9D7845_gv_e38090UnitE38091.lv__4thDialog, PlayerGroupSingle(lv_p), true);
     return true;
 }
 
@@ -4444,8 +4450,8 @@ bool lib6D9D7845_gt_E7ACACE59B9BE7A59EE4B98BE994AEE99DA2E69DBFE5889DE5A78BE58C96
     }
 
     DialogCreate(120, 120, c_anchorTop, -240, 0, true);
-    lib6D9D7845_gv_e7ACACE59B9BE7A59EE4B98BE994AEE5AFB9E8AF9DE6A186 = DialogLastCreated();
-    DialogControlCreate(lib6D9D7845_gv_e7ACACE59B9BE7A59EE4B98BE994AEE5AFB9E8AF9DE6A186, c_triggerControlTypePanel);
+    lib6D9D7845_gv_e38090UnitE38091.lv__4thDialog = DialogLastCreated();
+    DialogControlCreate(lib6D9D7845_gv_e38090UnitE38091.lv__4thDialog, c_triggerControlTypePanel);
     DialogControlSetFullDialog(DialogControlLastCreated(), PlayerGroupAll(), true);
     lv_pU_GPHolder = DialogControlLastCreated();
     DialogControlCreateInPanelFromTemplate(lv_pU_GPHolder, c_triggerControlTypePanel, "GodKeysUI/SoAPanelTemplate");
@@ -4456,7 +4462,7 @@ bool lib6D9D7845_gt_E7ACACE59B9BE7A59EE4B98BE994AEE99DA2E69DBFE5889DE5A78BE58C96
     DialogControlHookup(lv_pU_GPPanel, c_triggerControlTypePanel, "SoAButtonHolder");
     lv_lastFrame = DialogControlLastCreated();
     DialogControlCreateInPanelFromTemplate(lv_lastFrame, c_triggerControlTypeCommandPanel, "GodKeysUI/SoACommandPanelTemplate");
-    lib6D9D7845_gv_e7ACACE59B9BE7A59EE4B98BE994AEE591BDE4BBA4E99DA2E69DBF = DialogControlLastCreated();
+    lib6D9D7845_gv_e38090UnitE38091.lv__4thCommandPanel = DialogControlLastCreated();
     return true;
 }
 
@@ -5068,18 +5074,18 @@ bool lib6D9D7845_gt_E9878DE782AEE6ADA6E599A8E99B86E59088_Func (bool testConds, b
         return true;
     }
 
-    lib6D9D7845_gv_e68980E69C89E9878DE782AEE6ADA6E599A8[0] = "Cannon_B1";
-    lib6D9D7845_gv_e68980E69C89E9878DE782AEE6ADA6E599A8[1] = "Cannon_B5";
-    lib6D9D7845_gv_e68980E69C89E9878DE782AEE6ADA6E599A8[2] = "Cannon_B7";
-    lib6D9D7845_gv_e68980E69C89E9878DE782AEE6ADA6E599A8[3] = "Cannon_B18";
-    lib6D9D7845_gv_e68980E69C89E9878DE782AEE6ADA6E599A8[4] = "Cannon_B15";
-    lib6D9D7845_gv_e68980E69C89E9878DE782AEE6ADA6E599A8[5] = "Cannon_B22";
-    lib6D9D7845_gv_e68980E69C89E9878DE782AEE6ADA6E599A8[6] = "UnknownWeapon";
-    lib6D9D7845_gv_e68980E69C89E9878DE782AEE6ADA6E599A8[7] = "Cannon_B25";
-    lib6D9D7845_gv_e68980E69C89E9878DE782AEE6ADA6E599A8[8] = "Cannon_B26";
-    lib6D9D7845_gv_e68980E69C89E9878DE782AEE6ADA6E599A8[9] = "Cannon_B28";
-    lib6D9D7845_gv_e68980E69C89E9878DE782AEE6ADA6E599A8[10] = "Cannon_B34";
-    lib6D9D7845_gv_e68980E69C89E9878DE782AEE6ADA6E599A8[11] = "Cannon_B6";
+    lib6D9D7845_gv_e38090UnitE38091.lv_e68980E69C89E9878DE782AEE6ADA6E599A8[0] = "Cannon_B1";
+    lib6D9D7845_gv_e38090UnitE38091.lv_e68980E69C89E9878DE782AEE6ADA6E599A8[1] = "Cannon_B5";
+    lib6D9D7845_gv_e38090UnitE38091.lv_e68980E69C89E9878DE782AEE6ADA6E599A8[2] = "Cannon_B7";
+    lib6D9D7845_gv_e38090UnitE38091.lv_e68980E69C89E9878DE782AEE6ADA6E599A8[3] = "Cannon_B18";
+    lib6D9D7845_gv_e38090UnitE38091.lv_e68980E69C89E9878DE782AEE6ADA6E599A8[4] = "Cannon_B15";
+    lib6D9D7845_gv_e38090UnitE38091.lv_e68980E69C89E9878DE782AEE6ADA6E599A8[5] = "Cannon_B22";
+    lib6D9D7845_gv_e38090UnitE38091.lv_e68980E69C89E9878DE782AEE6ADA6E599A8[6] = "UnknownWeapon";
+    lib6D9D7845_gv_e38090UnitE38091.lv_e68980E69C89E9878DE782AEE6ADA6E599A8[7] = "Cannon_B25";
+    lib6D9D7845_gv_e38090UnitE38091.lv_e68980E69C89E9878DE782AEE6ADA6E599A8[8] = "Cannon_B26";
+    lib6D9D7845_gv_e38090UnitE38091.lv_e68980E69C89E9878DE782AEE6ADA6E599A8[9] = "Cannon_B28";
+    lib6D9D7845_gv_e38090UnitE38091.lv_e68980E69C89E9878DE782AEE6ADA6E599A8[10] = "Cannon_B34";
+    lib6D9D7845_gv_e38090UnitE38091.lv_e68980E69C89E9878DE782AEE6ADA6E599A8[11] = "Cannon_B6";
     return true;
 }
 
@@ -5315,7 +5321,7 @@ bool lib6D9D7845_gt_E68A80E883BDE5898AE5BCB1_Func (bool testConds, bool runActio
     // Automatic Variable Declarations
     // Conditions
     if (testConds) {
-        if (!((lib6D9D7845_gv_globalE79086E4B98BE5BE8BE88085E68A80E883BDE5898AE5BCB1 == true))) {
+        if (!((lib6D9D7845_gv_e38090E585A8E5B180E6A087E69797E38091.lv_flagE79086E4B98BE5BE8BE88085E68A80E883BDE5898AE5BCB1 == true))) {
             return false;
         }
 
@@ -5459,7 +5465,7 @@ bool lib6D9D7845_gt_E79BB8E4BD8DE7A9BFE6A2ADE5AFBBE689BEE6BD9CE59CA8E79BAEE6A087
         return true;
     }
 
-    UnitGroupRemove(lv_e6BD9CE59CA8E58D95E4BD8D, lib6D9D7845_gv_e8999AE697A0E79BAEE6A087);
+    UnitGroupRemove(lv_e6BD9CE59CA8E58D95E4BD8D, lib6D9D7845_gv_e38090E585A8E5B180E6A087E69797E38091.lv_e8999AE697A0E79BAEE6A087);
     autoCF441ACC_g = lv_e6BD9CE59CA8E58D95E4BD8D;
     autoCF441ACC_u = UnitGroupCount(autoCF441ACC_g, c_unitCountAll);
     for (;; autoCF441ACC_u -= 1) {
@@ -6460,7 +6466,7 @@ bool lib6D9D7845_gt_E58589E7BFBCE5B195E5BC80E79BAEE6A087E6909CE7B4A2_Func (bool 
         }
 
         if ((lv_e5BD93E5898DE79BAEE6A087 == null)) {
-            UnitCreateEffectUnit(EventUnit(), "KianaC4QTE2", lib6D9D7845_gv_e8999AE697A0E79BAEE6A087);
+            UnitCreateEffectUnit(EventUnit(), "KianaC4QTE2", lib6D9D7845_gv_e38090E585A8E5B180E6A087E69797E38091.lv_e8999AE697A0E79BAEE6A087);
         }
         else {
             UnitCreateEffectUnit(EventUnit(), "KianaC4QTE", lv_e5BD93E5898DE79BAEE6A087);
@@ -7183,15 +7189,18 @@ bool lib6D9D7845_gt_E5BE8BE88085E5889DE5A78BE58C96_Func (bool testConds, bool ru
     }
     AIStart(14, true, 200);
     AIGlobalSuicide(14);
-    lib6D9D7845_gv_e5BE8BE88085E7A78DE7B1BB[0] = "Herrscher1st";
-    lib6D9D7845_gv_e5BE8BE88085E7A78DE7B1BB[1] = "Herrscher2nd";
-    lib6D9D7845_gv_e5BE8BE88085E7A78DE7B1BB[2] = "Herrscher3rd";
-    lib6D9D7845_gv_e5BE8BE88085E7A78DE7B1BB[3] = "Herrscher4th";
-    lib6D9D7845_gv_e5BE8BE88085E7A78DE7B1BB[4] = "Herrscher5th";
-    lib6D9D7845_gv_e5BE8BE88085E7A78DE7B1BB[5] = "Herrscher6th";
-    lib6D9D7845_gv_e5BE8BE88085E7A78DE7B1BB[6] = "Herrscher7th";
-    lib6D9D7845_gv_e5BE8BE88085E7A78DE7B1BB[7] = "Herrscher8th";
-    lib6D9D7845_gv_e5BE8BE88085E7A78DE7B1BB[8] = "Herrscher9th";
+    lib6D9D7845_gv_e38090UnitE38091.lv_e5BE8BE88085E7A78DE7B1BB[0] = "Herrscher1st";
+    lib6D9D7845_gv_e38090UnitE38091.lv_e5BE8BE88085E7A78DE7B1BB[1] = "Herrscher2nd";
+    lib6D9D7845_gv_e38090UnitE38091.lv_e5BE8BE88085E7A78DE7B1BB[2] = "Herrscher3rd";
+    lib6D9D7845_gv_e38090UnitE38091.lv_e5BE8BE88085E7A78DE7B1BB[3] = "Herrscher4th";
+    lib6D9D7845_gv_e38090UnitE38091.lv_e5BE8BE88085E7A78DE7B1BB[4] = "Herrscher5th";
+    lib6D9D7845_gv_e38090UnitE38091.lv_e5BE8BE88085E7A78DE7B1BB[5] = "Herrscher6th";
+    lib6D9D7845_gv_e38090UnitE38091.lv_e5BE8BE88085E7A78DE7B1BB[6] = "Herrscher7th";
+    lib6D9D7845_gv_e38090UnitE38091.lv_e5BE8BE88085E7A78DE7B1BB[7] = "Herrscher8th";
+    lib6D9D7845_gv_e38090UnitE38091.lv_e5BE8BE88085E7A78DE7B1BB[8] = "Herrscher9th";
+    lib6D9D7845_gv_e38090UnitE38091.lv_e5BE8BE88085E7A78DE7B1BB[0] = "Herrscher10th";
+    lib6D9D7845_gv_e38090UnitE38091.lv_e5BE8BE88085E7A78DE7B1BB[0] = "Herrscher11th";
+    lib6D9D7845_gv_e38090UnitE38091.lv_e5BE8BE88085E7A78DE7B1BB[0] = "Herrscher12th";
     return true;
 }
 
@@ -7211,7 +7220,7 @@ bool lib6D9D7845_gt_E5BE8BE88085E7949FE68890_Func (bool testConds, bool runActio
 
     // Conditions
     if (testConds) {
-        if (!((lib6D9D7845_gv_e5BE8BE88085E998B6E6AEB5 < lib6D9D7845_gv_e5BE8BE88085E7A78DE7B1BBE695B0))) {
+        if (!((lib6D9D7845_gv_e38090UnitE38091.lv_e5BE8BE88085E998B6E6AEB5 == lib6D9D7845_gv_e5BE8BE88085E7A78DE7B1BBE695B0))) {
             return false;
         }
     }
@@ -7221,10 +7230,10 @@ bool lib6D9D7845_gt_E5BE8BE88085E7949FE68890_Func (bool testConds, bool runActio
         return true;
     }
 
-    libNtve_gf_CreateUnitsWithDefaultFacing(1, lib6D9D7845_gv_e5BE8BE88085E7A78DE7B1BB[lib6D9D7845_gv_e5BE8BE88085E998B6E6AEB5], 0, 14, EventPlayerEffectUsedPoint(c_effectLocationCasterUnit));
-    UIDisplayMessage(PlayerGroupAll(), c_messageAreaChat, (UnitTypeGetName(lib6D9D7845_gv_e5BE8BE88085E7A78DE7B1BB[lib6D9D7845_gv_e5BE8BE88085E998B6E6AEB5]) + StringExternal("Param/Value/lib_6D9D7845_2FE720B2")));
-    UnitSetAttributePoint(UnitLastCreated(), "HerrscherBuff", false, lib6D9D7845_gv_e5BE8BE88085E998B6E6AEB5);
-    lib6D9D7845_gv_e5BE8BE88085E998B6E6AEB5 += 1;
+    libNtve_gf_CreateUnitsWithDefaultFacing(1, lib6D9D7845_gv_e38090UnitE38091.lv_e5BE8BE88085E7A78DE7B1BB[lib6D9D7845_gv_e38090UnitE38091.lv_e5BE8BE88085E998B6E6AEB5], 0, 14, EventPlayerEffectUsedPoint(c_effectLocationCasterUnit));
+    UIDisplayMessage(PlayerGroupAll(), c_messageAreaChat, (UnitTypeGetName(lib6D9D7845_gv_e38090UnitE38091.lv_e5BE8BE88085E7A78DE7B1BB[lib6D9D7845_gv_e38090UnitE38091.lv_e5BE8BE88085E998B6E6AEB5]) + StringExternal("Param/Value/lib_6D9D7845_2FE720B2")));
+    UnitSetAttributePoint(UnitLastCreated(), "HerrscherBuff", false, lib6D9D7845_gv_e38090UnitE38091.lv_e5BE8BE88085E998B6E6AEB5);
+    lib6D9D7845_gv_e38090UnitE38091.lv_e5BE8BE88085E998B6E6AEB5 += 1;
     MinimapPing(PlayerGroupAll(), UnitGetPosition(UnitLastCreated()), 5.0, Color(100.00, 0.00, 0.00));
     auto2DE0B3C0_g = PlayerGroupAll();
     auto2DE0B3C0_var = -1;
@@ -7253,7 +7262,7 @@ bool lib6D9D7845_gt_E5BCB9E587BAE59CB0E59BBEE68F90E7A4BA_Func (bool testConds, b
         return true;
     }
 
-    if ((lib6D9D7845_gv_globalE5BCB9E587BAE59CB0E59BBEE68F90E7A4BA == true)) {
+    if ((lib6D9D7845_gv_e38090E585A8E5B180E6A087E69797E38091.lv_flagE5BCB9E587BAE59CB0E59BBEE68F90E7A4BA == true)) {
         UIDisplayMessage(PlayerGroupAll(), c_messageAreaSubtitle, StringExternal("Param/Value/lib_6D9D7845_CA7C4A94"));
     }
 
@@ -7393,38 +7402,38 @@ bool lib6D9D7845_gt_E5B8AEE58AA9E5889DE5A78BE58C96_Func (bool testConds, bool ru
     }
 
     DialogCreate(1280, 720, c_anchorTop, 0, 64, true);
-    lib6D9D7845_gv_e5B8AEE58AA9E7958CE99DA2 = DialogLastCreated();
-    DialogControlCreate(lib6D9D7845_gv_e5B8AEE58AA9E7958CE99DA2, c_triggerControlTypeLabel);
+    lib6D9D7845_gv_e38090UIE38091.lv_e5B8AEE58AA9E7958CE99DA2 = DialogLastCreated();
+    DialogControlCreate(lib6D9D7845_gv_e38090UIE38091.lv_e5B8AEE58AA9E7958CE99DA2, c_triggerControlTypeLabel);
     DialogControlSetSize(DialogControlLastCreated(), PlayerGroupAll(), 500, 620);
     DialogControlSetPosition(DialogControlLastCreated(), PlayerGroupAll(), c_anchorTopLeft, 100, 50);
     libNtve_gf_SetDialogItemText(DialogControlLastCreated(), StringExternal("Param/Value/lib_6D9D7845_B42B3CEE"), PlayerGroupAll());
     libNtve_gf_SetDialogItemStyle(DialogControlLastCreated(), "Cantina_Text", PlayerGroupAll());
-    DialogControlCreate(lib6D9D7845_gv_e5B8AEE58AA9E7958CE99DA2, c_triggerControlTypeLabel);
+    DialogControlCreate(lib6D9D7845_gv_e38090UIE38091.lv_e5B8AEE58AA9E7958CE99DA2, c_triggerControlTypeLabel);
     DialogControlSetSize(DialogControlLastCreated(), PlayerGroupAll(), 500, 620);
     DialogControlSetPosition(DialogControlLastCreated(), PlayerGroupAll(), c_anchorTopLeft, 680, 50);
     libNtve_gf_SetDialogItemText(DialogControlLastCreated(), StringExternal("Param/Value/lib_6D9D7845_FFDCEE7E"), PlayerGroupAll());
     libNtve_gf_SetDialogItemStyle(DialogControlLastCreated(), "Cantina_Text", PlayerGroupAll());
     DialogCreate(48, 48, c_anchorRight, 0, 0, true);
-    lib6D9D7845_gv_e5B8AEE58AA9E7958CE99DA2E585B3E997ADE68C89E992AEE6A186 = DialogLastCreated();
-    libNtve_gf_CreateDialogItemButton(lib6D9D7845_gv_e5B8AEE58AA9E7958CE99DA2E585B3E997ADE68C89E992AEE6A186, 48, 48, c_anchorTopLeft, 0, 0, StringExternal("Param/Value/lib_6D9D7845_BDA27B41"), StringExternal("Param/Value/lib_6D9D7845_3A331C88"), "");
+    lib6D9D7845_gv_e38090UIE38091.lv_e5B8AEE58AA9E7958CE99DA2E585B3E997ADE68C89E992AEE6A186 = DialogLastCreated();
+    libNtve_gf_CreateDialogItemButton(lib6D9D7845_gv_e38090UIE38091.lv_e5B8AEE58AA9E7958CE99DA2E585B3E997ADE68C89E992AEE6A186, 48, 48, c_anchorTopLeft, 0, 0, StringExternal("Param/Value/lib_6D9D7845_BDA27B41"), StringExternal("Param/Value/lib_6D9D7845_3A331C88"), "");
     DialogControlSetSize(DialogControlLastCreated(), PlayerGroupAll(), 48, 48);
     DialogControlSetPosition(DialogControlLastCreated(), PlayerGroupAll(), c_anchorTopRight, 0, 0);
-    lib6D9D7845_gv_e5B8AEE58AA9E7958CE99DA2E585B3E997ADE68C89E992AE = DialogControlLastCreated();
-    DialogSetVisible(lib6D9D7845_gv_e5B8AEE58AA9E7958CE99DA2E585B3E997ADE68C89E992AEE6A186, PlayerGroupAll(), true);
+    lib6D9D7845_gv_e38090UIE38091.lv_e5B8AEE58AA9E7958CE99DA2E585B3E997ADE68C89E992AE = DialogControlLastCreated();
+    DialogSetVisible(lib6D9D7845_gv_e38090UIE38091.lv_e5B8AEE58AA9E7958CE99DA2E585B3E997ADE68C89E992AEE6A186, PlayerGroupAll(), true);
     DialogCreate(1280, 720, c_anchorTop, 0, 64, true);
-    lib6D9D7845_gv_e5B8AEE58AA9E7958CE99DA22 = DialogLastCreated();
-    DialogControlCreate(lib6D9D7845_gv_e5B8AEE58AA9E7958CE99DA22, c_triggerControlTypeLabel);
+    lib6D9D7845_gv_e38090UIE38091.lv_e5B8AEE58AA9E7958CE99DA22 = DialogLastCreated();
+    DialogControlCreate(lib6D9D7845_gv_e38090UIE38091.lv_e5B8AEE58AA9E7958CE99DA22, c_triggerControlTypeLabel);
     DialogControlSetSize(DialogControlLastCreated(), PlayerGroupAll(), 500, 620);
     DialogControlSetPosition(DialogControlLastCreated(), PlayerGroupAll(), c_anchorTopLeft, 100, 50);
     libNtve_gf_SetDialogItemText(DialogControlLastCreated(), StringExternal("Param/Value/lib_6D9D7845_AD5ACB2E"), PlayerGroupAll());
-    DialogControlCreate(lib6D9D7845_gv_e5B8AEE58AA9E7958CE99DA22, c_triggerControlTypeLabel);
+    DialogControlCreate(lib6D9D7845_gv_e38090UIE38091.lv_e5B8AEE58AA9E7958CE99DA22, c_triggerControlTypeLabel);
     DialogControlSetSize(DialogControlLastCreated(), PlayerGroupAll(), 500, 620);
     DialogControlSetPosition(DialogControlLastCreated(), PlayerGroupAll(), c_anchorTopLeft, 680, 50);
     libNtve_gf_SetDialogItemText(DialogControlLastCreated(), StringExternal("Param/Value/lib_6D9D7845_88735CC1"), PlayerGroupAll());
-    DialogControlCreate(lib6D9D7845_gv_e5B8AEE58AA9E7958CE99DA22, c_triggerControlTypeButton);
+    DialogControlCreate(lib6D9D7845_gv_e38090UIE38091.lv_e5B8AEE58AA9E7958CE99DA22, c_triggerControlTypeButton);
     DialogControlSetSize(DialogControlLastCreated(), PlayerGroupAll(), 64, 64);
     DialogControlSetPosition(DialogControlLastCreated(), PlayerGroupAll(), c_anchorTopRight, 0, 0);
-    lib6D9D7845_gv_e5B8AEE58AA9E7958CE99DA2E585B3E997ADE68C89E992AE2 = DialogControlLastCreated();
+    lib6D9D7845_gv_e38090UIE38091.lv_e5B8AEE58AA9E7958CE99DA2E585B3E997ADE68C89E992AE2 = DialogControlLastCreated();
     UIDisplayMessage(PlayerGroupAll(), c_messageAreaSubtitle, StringExternal("Param/Value/lib_6D9D7845_7ECEABCD"));
     return true;
 }
@@ -7442,7 +7451,7 @@ bool lib6D9D7845_gt_E5B8AEE58AA9E585B3E997AD_Func (bool testConds, bool runActio
     // Automatic Variable Declarations
     // Conditions
     if (testConds) {
-        if (!((EventDialogControl() == lib6D9D7845_gv_e5B8AEE58AA9E7958CE99DA2E585B3E997ADE68C89E992AE))) {
+        if (!((EventDialogControl() == lib6D9D7845_gv_e38090UIE38091.lv_e5B8AEE58AA9E7958CE99DA2E585B3E997ADE68C89E992AE))) {
             return false;
         }
     }
@@ -7452,11 +7461,11 @@ bool lib6D9D7845_gt_E5B8AEE58AA9E585B3E997AD_Func (bool testConds, bool runActio
         return true;
     }
 
-    if ((DialogIsVisible(lib6D9D7845_gv_e5B8AEE58AA9E7958CE99DA2, EventPlayer()) == true)) {
-        DialogSetVisible(lib6D9D7845_gv_e5B8AEE58AA9E7958CE99DA2, PlayerGroupSingle(EventPlayer()), false);
+    if ((DialogIsVisible(lib6D9D7845_gv_e38090UIE38091.lv_e5B8AEE58AA9E7958CE99DA2, EventPlayer()) == true)) {
+        DialogSetVisible(lib6D9D7845_gv_e38090UIE38091.lv_e5B8AEE58AA9E7958CE99DA2, PlayerGroupSingle(EventPlayer()), false);
     }
     else {
-        DialogSetVisible(lib6D9D7845_gv_e5B8AEE58AA9E7958CE99DA2, PlayerGroupSingle(EventPlayer()), true);
+        DialogSetVisible(lib6D9D7845_gv_e38090UIE38091.lv_e5B8AEE58AA9E7958CE99DA2, PlayerGroupSingle(EventPlayer()), true);
     }
     return true;
 }
@@ -7477,11 +7486,11 @@ bool lib6D9D7845_gt_E5B8AEE58AA9E68C89E992AEE7AA97E58FA3E585B3E997AD_Func (bool 
         return true;
     }
 
-    if ((DialogIsVisible(lib6D9D7845_gv_e5B8AEE58AA9E7958CE99DA2E585B3E997ADE68C89E992AEE6A186, EventPlayer()) == true)) {
-        DialogSetVisible(lib6D9D7845_gv_e5B8AEE58AA9E7958CE99DA2E585B3E997ADE68C89E992AEE6A186, PlayerGroupSingle(EventPlayer()), false);
+    if ((DialogIsVisible(lib6D9D7845_gv_e38090UIE38091.lv_e5B8AEE58AA9E7958CE99DA2E585B3E997ADE68C89E992AEE6A186, EventPlayer()) == true)) {
+        DialogSetVisible(lib6D9D7845_gv_e38090UIE38091.lv_e5B8AEE58AA9E7958CE99DA2E585B3E997ADE68C89E992AEE6A186, PlayerGroupSingle(EventPlayer()), false);
     }
     else {
-        DialogSetVisible(lib6D9D7845_gv_e5B8AEE58AA9E7958CE99DA2E585B3E997ADE68C89E992AEE6A186, PlayerGroupSingle(EventPlayer()), true);
+        DialogSetVisible(lib6D9D7845_gv_e38090UIE38091.lv_e5B8AEE58AA9E7958CE99DA2E585B3E997ADE68C89E992AEE6A186, PlayerGroupSingle(EventPlayer()), true);
     }
     return true;
 }
@@ -7509,7 +7518,7 @@ bool lib6D9D7845_gt_E5B8AEE58AA92_Func (bool testConds, bool runActions) {
         return true;
     }
 
-    DialogSetVisible(lib6D9D7845_gv_e5B8AEE58AA9E7958CE99DA22, PlayerGroupSingle(EventPlayer()), true);
+    DialogSetVisible(lib6D9D7845_gv_e38090UIE38091.lv_e5B8AEE58AA9E7958CE99DA22, PlayerGroupSingle(EventPlayer()), true);
     return true;
 }
 
@@ -7526,7 +7535,7 @@ bool lib6D9D7845_gt_E5B8AEE58AA9E585B3E997AD2_Func (bool testConds, bool runActi
     // Automatic Variable Declarations
     // Conditions
     if (testConds) {
-        if (!((EventDialogControl() == lib6D9D7845_gv_e5B8AEE58AA9E7958CE99DA2E585B3E997ADE68C89E992AE2))) {
+        if (!((EventDialogControl() == lib6D9D7845_gv_e38090UIE38091.lv_e5B8AEE58AA9E7958CE99DA2E585B3E997ADE68C89E992AE2))) {
             return false;
         }
     }
@@ -7536,7 +7545,7 @@ bool lib6D9D7845_gt_E5B8AEE58AA9E585B3E997AD2_Func (bool testConds, bool runActi
         return true;
     }
 
-    DialogSetVisible(lib6D9D7845_gv_e5B8AEE58AA9E7958CE99DA22, PlayerGroupSingle(EventPlayer()), false);
+    DialogSetVisible(lib6D9D7845_gv_e38090UIE38091.lv_e5B8AEE58AA9E7958CE99DA22, PlayerGroupSingle(EventPlayer()), false);
     return true;
 }
 
@@ -7578,17 +7587,17 @@ bool lib6D9D7845_gt_E68A97E680A7E99DA2E69DBFE5889DE5A78BE58C96_Func (bool testCo
 
     }
     DialogCreate(1280, lv_e9AB98E5BAA6, c_anchorTopLeft, 80, 80, true);
-    lib6D9D7845_gv_e68A97E680A7E99DA2E69DBF = DialogLastCreated();
+    lib6D9D7845_gv_e38090UIE38091.lv_e68A97E680A7E99DA2E69DBF = DialogLastCreated();
     lv_e9AB98E5BAA6 = 25;
-    libNtve_gf_CreateDialogItemLabel(lib6D9D7845_gv_e68A97E680A7E99DA2E69DBF, 360, 40, c_anchorTopLeft, 30, lv_e9AB98E5BAA6, StringExternal("Param/Value/lib_6D9D7845_6E5B8491"), Color(100,100,100), false, 2.0);
+    libNtve_gf_CreateDialogItemLabel(lib6D9D7845_gv_e38090UIE38091.lv_e68A97E680A7E99DA2E69DBF, 360, 40, c_anchorTopLeft, 30, lv_e9AB98E5BAA6, StringExternal("Param/Value/lib_6D9D7845_6E5B8491"), Color(100,100,100), false, 2.0);
     libNtve_gf_SetDialogItemStyle(DialogControlLastCreated(), "ObjectiveDisplay", PlayerGroupAll());
-    libNtve_gf_CreateDialogItemLabel(lib6D9D7845_gv_e68A97E680A7E99DA2E69DBF, 200, 40, c_anchorTopLeft, 400, lv_e9AB98E5BAA6, StringExternal("Param/Value/lib_6D9D7845_FFAB6942"), Color(150*100/255,150*100/255,30*100/255), false, 2.0);
+    libNtve_gf_CreateDialogItemLabel(lib6D9D7845_gv_e38090UIE38091.lv_e68A97E680A7E99DA2E69DBF, 200, 40, c_anchorTopLeft, 400, lv_e9AB98E5BAA6, StringExternal("Param/Value/lib_6D9D7845_FFAB6942"), Color(150*100/255,150*100/255,30*100/255), false, 2.0);
     libNtve_gf_SetDialogItemStyle(DialogControlLastCreated(), "ObjectiveDisplay", PlayerGroupAll());
-    libNtve_gf_CreateDialogItemLabel(lib6D9D7845_gv_e68A97E680A7E99DA2E69DBF, 200, 40, c_anchorTopLeft, 600, lv_e9AB98E5BAA6, StringExternal("Param/Value/lib_6D9D7845_DFAA2A41"), Color(100.00, 0.00, 0.00), false, 2.0);
+    libNtve_gf_CreateDialogItemLabel(lib6D9D7845_gv_e38090UIE38091.lv_e68A97E680A7E99DA2E69DBF, 200, 40, c_anchorTopLeft, 600, lv_e9AB98E5BAA6, StringExternal("Param/Value/lib_6D9D7845_DFAA2A41"), Color(100.00, 0.00, 0.00), false, 2.0);
     libNtve_gf_SetDialogItemStyle(DialogControlLastCreated(), "ObjectiveDisplay", PlayerGroupAll());
-    libNtve_gf_CreateDialogItemLabel(lib6D9D7845_gv_e68A97E680A7E99DA2E69DBF, 200, 40, c_anchorTopLeft, 800, lv_e9AB98E5BAA6, StringExternal("Param/Value/lib_6D9D7845_F472ED08"), Color(0,66*100/255,100), false, 2.0);
+    libNtve_gf_CreateDialogItemLabel(lib6D9D7845_gv_e38090UIE38091.lv_e68A97E680A7E99DA2E69DBF, 200, 40, c_anchorTopLeft, 800, lv_e9AB98E5BAA6, StringExternal("Param/Value/lib_6D9D7845_F472ED08"), Color(0,66*100/255,100), false, 2.0);
     libNtve_gf_SetDialogItemStyle(DialogControlLastCreated(), "ObjectiveDisplay", PlayerGroupAll());
-    libNtve_gf_CreateDialogItemLabel(lib6D9D7845_gv_e68A97E680A7E99DA2E69DBF, 200, 40, c_anchorTopLeft, 1000, lv_e9AB98E5BAA6, StringExternal("Param/Value/lib_6D9D7845_274FB3B4"), Color(100,100,100), false, 2.0);
+    libNtve_gf_CreateDialogItemLabel(lib6D9D7845_gv_e38090UIE38091.lv_e68A97E680A7E99DA2E69DBF, 200, 40, c_anchorTopLeft, 1000, lv_e9AB98E5BAA6, StringExternal("Param/Value/lib_6D9D7845_274FB3B4"), Color(100,100,100), false, 2.0);
     libNtve_gf_SetDialogItemStyle(DialogControlLastCreated(), "ObjectiveDisplay", PlayerGroupAll());
     autoE18F7A46_g = PlayerGroupAll();
     autoE18F7A46_var = -1;
@@ -7597,25 +7606,25 @@ bool lib6D9D7845_gt_E68A97E680A7E99DA2E69DBFE5889DE5A78BE58C96_Func (bool testCo
         if (autoE18F7A46_var < 0) { break; }
         if ((PlayerStatus(autoE18F7A46_var) != c_playerStatusUnused)) {
             lv_e9AB98E5BAA6 += 40;
-            libNtve_gf_CreateDialogItemLabel(lib6D9D7845_gv_e68A97E680A7E99DA2E69DBF, 360, 40, c_anchorTopLeft, 30, lv_e9AB98E5BAA6, PlayerName(autoE18F7A46_var), libNtve_gf_ConvertPlayerColorToColor(PlayerGetColorIndex(autoE18F7A46_var, false)), false, 2.0);
+            libNtve_gf_CreateDialogItemLabel(lib6D9D7845_gv_e38090UIE38091.lv_e68A97E680A7E99DA2E69DBF, 360, 40, c_anchorTopLeft, 30, lv_e9AB98E5BAA6, PlayerName(autoE18F7A46_var), libNtve_gf_ConvertPlayerColorToColor(PlayerGetColorIndex(autoE18F7A46_var, false)), false, 2.0);
             libNtve_gf_SetDialogItemStyle(DialogControlLastCreated(), "ObjectiveDisplay", PlayerGroupAll());
-            lib6D9D7845_gv_e68A97E680A7E6A087E7ADBE[autoE18F7A46_var][0] = DialogControlLastCreated();
-            libNtve_gf_CreateDialogItemLabel(lib6D9D7845_gv_e68A97E680A7E99DA2E69DBF, 200, 40, c_anchorTopLeft, 400, lv_e9AB98E5BAA6, StringExternal("Param/Value/lib_6D9D7845_5A332C43"), Color(150*100/255,150*100/255,30*100/255), false, 2.0);
+            lib6D9D7845_gv_e38090UIE38091.lv_e68A97E680A7E6A087E7ADBE[autoE18F7A46_var][0] = DialogControlLastCreated();
+            libNtve_gf_CreateDialogItemLabel(lib6D9D7845_gv_e38090UIE38091.lv_e68A97E680A7E99DA2E69DBF, 200, 40, c_anchorTopLeft, 400, lv_e9AB98E5BAA6, StringExternal("Param/Value/lib_6D9D7845_5A332C43"), Color(150*100/255,150*100/255,30*100/255), false, 2.0);
             libNtve_gf_SetDialogItemStyle(DialogControlLastCreated(), "ObjectiveDisplay", PlayerGroupAll());
-            lib6D9D7845_gv_e68A97E680A7E6A087E7ADBE[autoE18F7A46_var][1] = DialogControlLastCreated();
-            libNtve_gf_CreateDialogItemLabel(lib6D9D7845_gv_e68A97E680A7E99DA2E69DBF, 200, 40, c_anchorTopLeft, 600, lv_e9AB98E5BAA6, StringExternal("Param/Value/lib_6D9D7845_BEE0B958"), Color(100.00, 0.00, 0.00), false, 2.0);
+            lib6D9D7845_gv_e38090UIE38091.lv_e68A97E680A7E6A087E7ADBE[autoE18F7A46_var][1] = DialogControlLastCreated();
+            libNtve_gf_CreateDialogItemLabel(lib6D9D7845_gv_e38090UIE38091.lv_e68A97E680A7E99DA2E69DBF, 200, 40, c_anchorTopLeft, 600, lv_e9AB98E5BAA6, StringExternal("Param/Value/lib_6D9D7845_BEE0B958"), Color(100.00, 0.00, 0.00), false, 2.0);
             libNtve_gf_SetDialogItemStyle(DialogControlLastCreated(), "ObjectiveDisplay", PlayerGroupAll());
-            lib6D9D7845_gv_e68A97E680A7E6A087E7ADBE[autoE18F7A46_var][2] = DialogControlLastCreated();
-            libNtve_gf_CreateDialogItemLabel(lib6D9D7845_gv_e68A97E680A7E99DA2E69DBF, 200, 40, c_anchorTopLeft, 800, lv_e9AB98E5BAA6, StringExternal("Param/Value/lib_6D9D7845_94E456A7"), Color(0,66*100/255,100), false, 2.0);
+            lib6D9D7845_gv_e38090UIE38091.lv_e68A97E680A7E6A087E7ADBE[autoE18F7A46_var][2] = DialogControlLastCreated();
+            libNtve_gf_CreateDialogItemLabel(lib6D9D7845_gv_e38090UIE38091.lv_e68A97E680A7E99DA2E69DBF, 200, 40, c_anchorTopLeft, 800, lv_e9AB98E5BAA6, StringExternal("Param/Value/lib_6D9D7845_94E456A7"), Color(0,66*100/255,100), false, 2.0);
             libNtve_gf_SetDialogItemStyle(DialogControlLastCreated(), "ObjectiveDisplay", PlayerGroupAll());
-            lib6D9D7845_gv_e68A97E680A7E6A087E7ADBE[autoE18F7A46_var][3] = DialogControlLastCreated();
-            libNtve_gf_CreateDialogItemLabel(lib6D9D7845_gv_e68A97E680A7E99DA2E69DBF, 200, 40, c_anchorTopLeft, 1000, lv_e9AB98E5BAA6, StringExternal("Param/Value/lib_6D9D7845_B6DE3250"), Color(100,100,100), false, 2.0);
+            lib6D9D7845_gv_e38090UIE38091.lv_e68A97E680A7E6A087E7ADBE[autoE18F7A46_var][3] = DialogControlLastCreated();
+            libNtve_gf_CreateDialogItemLabel(lib6D9D7845_gv_e38090UIE38091.lv_e68A97E680A7E99DA2E69DBF, 200, 40, c_anchorTopLeft, 1000, lv_e9AB98E5BAA6, StringExternal("Param/Value/lib_6D9D7845_B6DE3250"), Color(100,100,100), false, 2.0);
             libNtve_gf_SetDialogItemStyle(DialogControlLastCreated(), "ObjectiveDisplay", PlayerGroupAll());
-            lib6D9D7845_gv_e68A97E680A7E6A087E7ADBE[autoE18F7A46_var][4] = DialogControlLastCreated();
+            lib6D9D7845_gv_e38090UIE38091.lv_e68A97E680A7E6A087E7ADBE[autoE18F7A46_var][0] = DialogControlLastCreated();
         }
 
     }
-    DialogSetVisible(lib6D9D7845_gv_e68A97E680A7E99DA2E69DBF, PlayerGroupAll(), false);
+    DialogSetVisible(lib6D9D7845_gv_e38090UIE38091.lv_e68A97E680A7E99DA2E69DBF, PlayerGroupAll(), false);
     return true;
 }
 
@@ -7635,7 +7644,7 @@ bool lib6D9D7845_gt_E68A97E680A7E99DA2E69DBFE698BEE7A4BA_Func (bool testConds, b
         return true;
     }
 
-    DialogSetVisible(lib6D9D7845_gv_e68A97E680A7E99DA2E69DBF, PlayerGroupSingle(EventPlayer()), true);
+    DialogSetVisible(lib6D9D7845_gv_e38090UIE38091.lv_e68A97E680A7E99DA2E69DBF, PlayerGroupSingle(EventPlayer()), true);
     return true;
 }
 
@@ -7655,7 +7664,7 @@ bool lib6D9D7845_gt_E68A97E680A7E99DA2E69DBFE99A90E8978F_Func (bool testConds, b
         return true;
     }
 
-    DialogSetVisible(lib6D9D7845_gv_e68A97E680A7E99DA2E69DBF, PlayerGroupSingle(EventPlayer()), false);
+    DialogSetVisible(lib6D9D7845_gv_e38090UIE38091.lv_e68A97E680A7E99DA2E69DBF, PlayerGroupSingle(EventPlayer()), false);
     return true;
 }
 
@@ -7691,7 +7700,7 @@ bool lib6D9D7845_gt_E68A97E680A7E99DA2E69DBFE69BB4E696B0E99BB7E4BCA4_Func (bool 
     }
 
     lv_e5878FE4BCA4E7B3BBE695B0 *= (lv_e5878FE4BCA4E58D87E7BAA7 * 6.0);
-    libNtve_gf_SetDialogItemText(lib6D9D7845_gv_e68A97E680A7E6A087E7ADBE[EventPlayer()][1], (FixedToText(lv_e5878FE4BCA4E7B3BBE695B0, 1) + StringExternal("Param/Value/lib_6D9D7845_5E8897C5")), PlayerGroupAll());
+    libNtve_gf_SetDialogItemText(lib6D9D7845_gv_e38090UIE38091.lv_e68A97E680A7E6A087E7ADBE[EventPlayer()][1], (FixedToText(lv_e5878FE4BCA4E7B3BBE695B0, 1) + StringExternal("Param/Value/lib_6D9D7845_645B5927")), PlayerGroupAll());
     return true;
 }
 
@@ -7699,42 +7708,6 @@ bool lib6D9D7845_gt_E68A97E680A7E99DA2E69DBFE69BB4E696B0E99BB7E4BCA4_Func (bool 
 void lib6D9D7845_gt_E68A97E680A7E99DA2E69DBFE69BB4E696B0E99BB7E4BCA4_Init () {
     lib6D9D7845_gt_E68A97E680A7E99DA2E69DBFE69BB4E696B0E99BB7E4BCA4 = TriggerCreate("lib6D9D7845_gt_E68A97E680A7E99DA2E69DBFE69BB4E696B0E99BB7E4BCA4_Func");
     TriggerAddEventUnitResearchProgress(lib6D9D7845_gt_E68A97E680A7E99DA2E69DBFE69BB4E696B0E99BB7E4BCA4, null, c_unitProgressStageComplete);
-}
-
-//--------------------------------------------------------------------------------------------------
-// Trigger: ???????????? ?????? ??????
-//--------------------------------------------------------------------------------------------------
-bool lib6D9D7845_gt_E68A97E680A7E99DA2E69DBFE69BB4E696B0E586B0E4BCA4_Func (bool testConds, bool runActions) {
-    // Variable Declarations
-    fixed lv_e5878FE4BCA4E7B3BBE695B0;
-    int lv_e5878FE4BCA4E58D87E7BAA7;
-
-    // Automatic Variable Declarations
-    // Variable Initialization
-    lv_e5878FE4BCA4E7B3BBE695B0 = 1.0;
-    lv_e5878FE4BCA4E58D87E7BAA7 = TechTreeUpgradeCount(EventPlayer(), "ReduceIce", c_techCountCompleteOnly);
-
-    // Conditions
-    if (testConds) {
-        if (!((libNtve_gf_TriggeringProgressUpgrade() == "ReduceIce"))) {
-            return false;
-        }
-    }
-
-    // Actions
-    if (!runActions) {
-        return true;
-    }
-
-    lv_e5878FE4BCA4E7B3BBE695B0 *= (lv_e5878FE4BCA4E58D87E7BAA7 * 6.0);
-    libNtve_gf_SetDialogItemText(lib6D9D7845_gv_e68A97E680A7E6A087E7ADBE[EventPlayer()][3], (FixedToText(lv_e5878FE4BCA4E7B3BBE695B0, 1) + StringExternal("Param/Value/lib_6D9D7845_C449B6AF")), PlayerGroupAll());
-    return true;
-}
-
-//--------------------------------------------------------------------------------------------------
-void lib6D9D7845_gt_E68A97E680A7E99DA2E69DBFE69BB4E696B0E586B0E4BCA4_Init () {
-    lib6D9D7845_gt_E68A97E680A7E99DA2E69DBFE69BB4E696B0E586B0E4BCA4 = TriggerCreate("lib6D9D7845_gt_E68A97E680A7E99DA2E69DBFE69BB4E696B0E586B0E4BCA4_Func");
-    TriggerAddEventUnitResearchProgress(lib6D9D7845_gt_E68A97E680A7E99DA2E69DBFE69BB4E696B0E586B0E4BCA4, null, c_unitProgressStageComplete);
 }
 
 //--------------------------------------------------------------------------------------------------
@@ -7763,7 +7736,7 @@ bool lib6D9D7845_gt_E68A97E680A7E99DA2E69DBFE69BB4E696B0E781ABE4BCA4_Func (bool 
     }
 
     lv_e5878FE4BCA4E7B3BBE695B0 *= (lv_e5878FE4BCA4E58D87E7BAA7 * 6.0);
-    libNtve_gf_SetDialogItemText(lib6D9D7845_gv_e68A97E680A7E6A087E7ADBE[EventPlayer()][2], (FixedToText(lv_e5878FE4BCA4E7B3BBE695B0, 1) + StringExternal("Param/Value/lib_6D9D7845_C60BE856")), PlayerGroupAll());
+    libNtve_gf_SetDialogItemText(lib6D9D7845_gv_e38090UIE38091.lv_e68A97E680A7E6A087E7ADBE[EventPlayer()][2], (FixedToText(lv_e5878FE4BCA4E7B3BBE695B0, 1) + StringExternal("Param/Value/lib_6D9D7845_C60BE856")), PlayerGroupAll());
     return true;
 }
 
@@ -7771,6 +7744,42 @@ bool lib6D9D7845_gt_E68A97E680A7E99DA2E69DBFE69BB4E696B0E781ABE4BCA4_Func (bool 
 void lib6D9D7845_gt_E68A97E680A7E99DA2E69DBFE69BB4E696B0E781ABE4BCA4_Init () {
     lib6D9D7845_gt_E68A97E680A7E99DA2E69DBFE69BB4E696B0E781ABE4BCA4 = TriggerCreate("lib6D9D7845_gt_E68A97E680A7E99DA2E69DBFE69BB4E696B0E781ABE4BCA4_Func");
     TriggerAddEventUnitResearchProgress(lib6D9D7845_gt_E68A97E680A7E99DA2E69DBFE69BB4E696B0E781ABE4BCA4, null, c_unitProgressStageComplete);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: ???????????? ?????? ??????
+//--------------------------------------------------------------------------------------------------
+bool lib6D9D7845_gt_E68A97E680A7E99DA2E69DBFE69BB4E696B0E586B0E4BCA4_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    fixed lv_e5878FE4BCA4E7B3BBE695B0;
+    int lv_e5878FE4BCA4E58D87E7BAA7;
+
+    // Automatic Variable Declarations
+    // Variable Initialization
+    lv_e5878FE4BCA4E7B3BBE695B0 = 1.0;
+    lv_e5878FE4BCA4E58D87E7BAA7 = TechTreeUpgradeCount(EventPlayer(), "ReduceIce", c_techCountCompleteOnly);
+
+    // Conditions
+    if (testConds) {
+        if (!((libNtve_gf_TriggeringProgressUpgrade() == "ReduceIce"))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    lv_e5878FE4BCA4E7B3BBE695B0 *= (lv_e5878FE4BCA4E58D87E7BAA7 * 6.0);
+    libNtve_gf_SetDialogItemText(lib6D9D7845_gv_e38090UIE38091.lv_e68A97E680A7E6A087E7ADBE[EventPlayer()][3], (FixedToText(lv_e5878FE4BCA4E7B3BBE695B0, 1) + StringExternal("Param/Value/lib_6D9D7845_C449B6AF")), PlayerGroupAll());
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib6D9D7845_gt_E68A97E680A7E99DA2E69DBFE69BB4E696B0E586B0E4BCA4_Init () {
+    lib6D9D7845_gt_E68A97E680A7E99DA2E69DBFE69BB4E696B0E586B0E4BCA4 = TriggerCreate("lib6D9D7845_gt_E68A97E680A7E99DA2E69DBFE69BB4E696B0E586B0E4BCA4_Func");
+    TriggerAddEventUnitResearchProgress(lib6D9D7845_gt_E68A97E680A7E99DA2E69DBFE69BB4E696B0E586B0E4BCA4, null, c_unitProgressStageComplete);
 }
 
 //--------------------------------------------------------------------------------------------------
@@ -7800,8 +7809,8 @@ bool lib6D9D7845_gt_E9858DE7BDAEE4BCA4E5AEB3E695B0E5AD97_Func (bool testConds, b
 
     lv_e58F82E695B01 = StringWord(EventChatMessage(false), 2);
     if ((lv_e58F82E695B01 == null)) {
-        lib6D9D7845_gv_e5B7B2E5BC80E590AFE4BCA4E5AEB3E695B0E5AD97E698BEE7A4BA[EventPlayer()] = !(lib6D9D7845_gv_e5B7B2E5BC80E590AFE4BCA4E5AEB3E695B0E5AD97E698BEE7A4BA[EventPlayer()]);
-        if ((lib6D9D7845_gv_e5B7B2E5BC80E590AFE4BCA4E5AEB3E695B0E5AD97E698BEE7A4BA[EventPlayer()] == true)) {
+        lib6D9D7845_gv_e38090UIE38091.lv_e5B7B2E5BC80E590AFE4BCA4E5AEB3E695B0E5AD97E698BEE7A4BA[EventPlayer()] = !(lib6D9D7845_gv_e38090UIE38091.lv_e5B7B2E5BC80E590AFE4BCA4E5AEB3E695B0E5AD97E698BEE7A4BA[EventPlayer()]);
+        if ((lib6D9D7845_gv_e38090UIE38091.lv_e5B7B2E5BC80E590AFE4BCA4E5AEB3E695B0E5AD97E698BEE7A4BA[EventPlayer()] == true)) {
             UIDisplayMessage(PlayerGroupSingle(EventPlayer()), c_messageAreaChat, StringExternal("Param/Value/lib_6D9D7845_669BAB4C"));
         }
         else {
@@ -7811,8 +7820,8 @@ bool lib6D9D7845_gt_E9858DE7BDAEE4BCA4E5AEB3E695B0E5AD97_Func (bool testConds, b
     }
 
     if ((lv_e58F82E695B01 == "S")) {
-        lib6D9D7845_gv_e5B7B2E5BC80E590AFE5B08FE59E8BE4BCA4E5AEB3E695B0E5AD97[EventPlayer()] = !(lib6D9D7845_gv_e5B7B2E5BC80E590AFE5B08FE59E8BE4BCA4E5AEB3E695B0E5AD97[EventPlayer()]);
-        if ((lib6D9D7845_gv_e5B7B2E5BC80E590AFE5B08FE59E8BE4BCA4E5AEB3E695B0E5AD97[EventPlayer()] == true)) {
+        lib6D9D7845_gv_e38090UIE38091.lv_e5B7B2E5BC80E590AFE5B08FE59E8BE4BCA4E5AEB3E695B0E5AD97[EventPlayer()] = !(lib6D9D7845_gv_e38090UIE38091.lv_e5B7B2E5BC80E590AFE5B08FE59E8BE4BCA4E5AEB3E695B0E5AD97[EventPlayer()]);
+        if ((lib6D9D7845_gv_e38090UIE38091.lv_e5B7B2E5BC80E590AFE5B08FE59E8BE4BCA4E5AEB3E695B0E5AD97[EventPlayer()] == true)) {
             UIDisplayMessage(PlayerGroupSingle(EventPlayer()), c_messageAreaChat, StringExternal("Param/Value/lib_6D9D7845_BE0A592A"));
         }
         else {
@@ -7823,7 +7832,7 @@ bool lib6D9D7845_gt_E9858DE7BDAEE4BCA4E5AEB3E695B0E5AD97_Func (bool testConds, b
 
     lv_e9808FE6988EE5BAA6 = StringToFixed(lv_e58F82E695B01);
     if ((lv_e9808FE6988EE5BAA6 >= 0.0) && (lv_e9808FE6988EE5BAA6 <= 100.0)) {
-        lib6D9D7845_gv_e4BCA4E5AEB3E695B0E5AD97E9808FE6988EE5BAA6[EventPlayer()] = lv_e9808FE6988EE5BAA6;
+        lib6D9D7845_gv_e38090UIE38091.lv_e4BCA4E5AEB3E695B0E5AD97E9808FE6988EE5BAA6[EventPlayer()] = lv_e9808FE6988EE5BAA6;
         UIDisplayMessage(PlayerGroupSingle(EventPlayer()), c_messageAreaChat, (StringExternal("Param/Value/lib_6D9D7845_C27F6894") + FixedToText(lv_e9808FE6988EE5BAA6, 1)));
         return true;
     }
@@ -7878,14 +7887,14 @@ bool lib6D9D7845_gt_E4BCA4E5AEB3E695B0E5AD97E698BEE7A4BAE789A9E79086_Func (bool 
     autoA29A27DB_ai = 1;
     lv_e698BEE7A4BAE78EA9E5AEB6 = 1;
     for ( ; ( (autoA29A27DB_ai >= 0 && lv_e698BEE7A4BAE78EA9E5AEB6 <= autoA29A27DB_ae) || (autoA29A27DB_ai <= 0 && lv_e698BEE7A4BAE78EA9E5AEB6 >= autoA29A27DB_ae) ) ; lv_e698BEE7A4BAE78EA9E5AEB6 += autoA29A27DB_ai ) {
-        if ((lib6D9D7845_gv_e5B7B2E5BC80E590AFE4BCA4E5AEB3E695B0E5AD97E698BEE7A4BA[lv_e698BEE7A4BAE78EA9E5AEB6] == true)) {
+        if ((lib6D9D7845_gv_e38090UIE38091.lv_e5B7B2E5BC80E590AFE4BCA4E5AEB3E695B0E5AD97E698BEE7A4BA[lv_e698BEE7A4BAE78EA9E5AEB6] == true)) {
             lv_e5AD97E4BD93E5A4A7E5B08F = 24;
-            if ((lib6D9D7845_gv_e5B7B2E5BC80E590AFE5B08FE59E8BE4BCA4E5AEB3E695B0E5AD97[lv_e698BEE7A4BAE78EA9E5AEB6] == true)) {
+            if ((lib6D9D7845_gv_e38090UIE38091.lv_e5B7B2E5BC80E590AFE5B08FE59E8BE4BCA4E5AEB3E695B0E5AD97[lv_e698BEE7A4BAE78EA9E5AEB6] == true)) {
                 lv_e5AD97E4BD93E5A4A7E5B08F = 16;
             }
 
             lv_e58685E5AEB9 = lib6D9D7845_gf_E7949FE68890E4BCA4E5AEB3E69687E69CAC(EventUnitDamageAttempted());
-            lv_e4BCA4E5AEB3E69687E69CAC[lv_e698BEE7A4BAE78EA9E5AEB6] = lib6D9D7845_gf_E7949FE68890E4BCA4E5AEB3E695B0E5AD97(lv_e698BEE7A4BAE78EA9E5AEB6, UnitGetPosition(EventUnit()), lv_e5AD97E4BD93E5A4A7E5B08F, lv_e698BEE7A4BAE88C83E59BB4, ColorWithAlpha(73.0, 68.0, 100.0, lib6D9D7845_gv_e4BCA4E5AEB3E695B0E5AD97E9808FE6988EE5BAA6[lv_e698BEE7A4BAE78EA9E5AEB6]), lv_e58685E5AEB9);
+            lv_e4BCA4E5AEB3E69687E69CAC[lv_e698BEE7A4BAE78EA9E5AEB6] = lib6D9D7845_gf_E7949FE68890E4BCA4E5AEB3E695B0E5AD97(lv_e698BEE7A4BAE78EA9E5AEB6, UnitGetPosition(EventUnit()), lv_e5AD97E4BD93E5A4A7E5B08F, lv_e698BEE7A4BAE88C83E59BB4, ColorWithAlpha(73.0, 68.0, 100.0, lib6D9D7845_gv_e38090UIE38091.lv_e4BCA4E5AEB3E695B0E5AD97E9808FE6988EE5BAA6[lv_e698BEE7A4BAE78EA9E5AEB6]), lv_e58685E5AEB9);
         }
 
     }
@@ -7939,14 +7948,14 @@ bool lib6D9D7845_gt_E4BCA4E5AEB3E695B0E5AD97E698BEE7A4BAE6B581E8A180_Func (bool 
     auto31CF475B_ai = 1;
     lv_e698BEE7A4BAE78EA9E5AEB6 = 1;
     for ( ; ( (auto31CF475B_ai >= 0 && lv_e698BEE7A4BAE78EA9E5AEB6 <= auto31CF475B_ae) || (auto31CF475B_ai <= 0 && lv_e698BEE7A4BAE78EA9E5AEB6 >= auto31CF475B_ae) ) ; lv_e698BEE7A4BAE78EA9E5AEB6 += auto31CF475B_ai ) {
-        if ((lib6D9D7845_gv_e5B7B2E5BC80E590AFE4BCA4E5AEB3E695B0E5AD97E698BEE7A4BA[lv_e698BEE7A4BAE78EA9E5AEB6] == true)) {
+        if ((lib6D9D7845_gv_e38090UIE38091.lv_e5B7B2E5BC80E590AFE4BCA4E5AEB3E695B0E5AD97E698BEE7A4BA[lv_e698BEE7A4BAE78EA9E5AEB6] == true)) {
             lv_e5AD97E4BD93E5A4A7E5B08F = 16;
-            if ((lib6D9D7845_gv_e5B7B2E5BC80E590AFE5B08FE59E8BE4BCA4E5AEB3E695B0E5AD97[lv_e698BEE7A4BAE78EA9E5AEB6] == true)) {
+            if ((lib6D9D7845_gv_e38090UIE38091.lv_e5B7B2E5BC80E590AFE5B08FE59E8BE4BCA4E5AEB3E695B0E5AD97[lv_e698BEE7A4BAE78EA9E5AEB6] == true)) {
                 lv_e5AD97E4BD93E5A4A7E5B08F = 12;
             }
 
             lv_e58685E5AEB9 = lib6D9D7845_gf_E7949FE68890E4BCA4E5AEB3E69687E69CAC(EventUnitDamageAttempted());
-            lv_e4BCA4E5AEB3E69687E69CAC[lv_e698BEE7A4BAE78EA9E5AEB6] = lib6D9D7845_gf_E7949FE68890E4BCA4E5AEB3E695B0E5AD97(lv_e698BEE7A4BAE78EA9E5AEB6, UnitGetPosition(EventUnit()), lv_e5AD97E4BD93E5A4A7E5B08F, lv_e698BEE7A4BAE88C83E59BB4, ColorWithAlpha(68.0, 0.0, 0.0, lib6D9D7845_gv_e4BCA4E5AEB3E695B0E5AD97E9808FE6988EE5BAA6[lv_e698BEE7A4BAE78EA9E5AEB6]), lv_e58685E5AEB9);
+            lv_e4BCA4E5AEB3E69687E69CAC[lv_e698BEE7A4BAE78EA9E5AEB6] = lib6D9D7845_gf_E7949FE68890E4BCA4E5AEB3E695B0E5AD97(lv_e698BEE7A4BAE78EA9E5AEB6, UnitGetPosition(EventUnit()), lv_e5AD97E4BD93E5A4A7E5B08F, lv_e698BEE7A4BAE88C83E59BB4, ColorWithAlpha(68.0, 0.0, 0.0, lib6D9D7845_gv_e38090UIE38091.lv_e4BCA4E5AEB3E695B0E5AD97E9808FE6988EE5BAA6[lv_e698BEE7A4BAE78EA9E5AEB6]), lv_e58685E5AEB9);
         }
 
     }
@@ -8002,14 +8011,14 @@ bool lib6D9D7845_gt_E4BCA4E5AEB3E695B0E5AD97E698BEE7A4BAE789A9E79086E69AB4E587BB
     auto935D941F_ai = 1;
     lv_e698BEE7A4BAE78EA9E5AEB6 = 1;
     for ( ; ( (auto935D941F_ai >= 0 && lv_e698BEE7A4BAE78EA9E5AEB6 <= auto935D941F_ae) || (auto935D941F_ai <= 0 && lv_e698BEE7A4BAE78EA9E5AEB6 >= auto935D941F_ae) ) ; lv_e698BEE7A4BAE78EA9E5AEB6 += auto935D941F_ai ) {
-        if ((lib6D9D7845_gv_e5B7B2E5BC80E590AFE4BCA4E5AEB3E695B0E5AD97E698BEE7A4BA[lv_e698BEE7A4BAE78EA9E5AEB6] == true)) {
+        if ((lib6D9D7845_gv_e38090UIE38091.lv_e5B7B2E5BC80E590AFE4BCA4E5AEB3E695B0E5AD97E698BEE7A4BA[lv_e698BEE7A4BAE78EA9E5AEB6] == true)) {
             lv_e5AD97E4BD93E5A4A7E5B08F = 28;
-            if ((lib6D9D7845_gv_e5B7B2E5BC80E590AFE5B08FE59E8BE4BCA4E5AEB3E695B0E5AD97[lv_e698BEE7A4BAE78EA9E5AEB6] == true)) {
+            if ((lib6D9D7845_gv_e38090UIE38091.lv_e5B7B2E5BC80E590AFE5B08FE59E8BE4BCA4E5AEB3E695B0E5AD97[lv_e698BEE7A4BAE78EA9E5AEB6] == true)) {
                 lv_e5AD97E4BD93E5A4A7E5B08F = 19;
             }
 
             lv_e58685E5AEB9 = lib6D9D7845_gf_E7949FE68890E4BCA4E5AEB3E69687E69CAC(EventUnitDamageAttempted());
-            lv_e4BCA4E5AEB3E69687E69CAC[lv_e698BEE7A4BAE78EA9E5AEB6] = lib6D9D7845_gf_E7949FE68890E4BCA4E5AEB3E695B0E5AD97(lv_e698BEE7A4BAE78EA9E5AEB6, UnitGetPosition(EventUnit()), lv_e5AD97E4BD93E5A4A7E5B08F, lv_e698BEE7A4BAE88C83E59BB4, ColorWithAlpha(100.0, 80.0, 25.0, lib6D9D7845_gv_e4BCA4E5AEB3E695B0E5AD97E9808FE6988EE5BAA6[lv_e698BEE7A4BAE78EA9E5AEB6]), lv_e58685E5AEB9);
+            lv_e4BCA4E5AEB3E69687E69CAC[lv_e698BEE7A4BAE78EA9E5AEB6] = lib6D9D7845_gf_E7949FE68890E4BCA4E5AEB3E695B0E5AD97(lv_e698BEE7A4BAE78EA9E5AEB6, UnitGetPosition(EventUnit()), lv_e5AD97E4BD93E5A4A7E5B08F, lv_e698BEE7A4BAE88C83E59BB4, ColorWithAlpha(100.0, 80.0, 25.0, lib6D9D7845_gv_e38090UIE38091.lv_e4BCA4E5AEB3E695B0E5AD97E9808FE6988EE5BAA6[lv_e698BEE7A4BAE78EA9E5AEB6]), lv_e58685E5AEB9);
         }
 
     }
@@ -8064,14 +8073,14 @@ bool lib6D9D7845_gt_E4BCA4E5AEB3E695B0E5AD97E698BEE7A4BAE789A9E79086E98086E5858B
     autoEA9463E2_ai = 1;
     lv_e698BEE7A4BAE78EA9E5AEB6 = 1;
     for ( ; ( (autoEA9463E2_ai >= 0 && lv_e698BEE7A4BAE78EA9E5AEB6 <= autoEA9463E2_ae) || (autoEA9463E2_ai <= 0 && lv_e698BEE7A4BAE78EA9E5AEB6 >= autoEA9463E2_ae) ) ; lv_e698BEE7A4BAE78EA9E5AEB6 += autoEA9463E2_ai ) {
-        if ((lib6D9D7845_gv_e5B7B2E5BC80E590AFE4BCA4E5AEB3E695B0E5AD97E698BEE7A4BA[lv_e698BEE7A4BAE78EA9E5AEB6] == true)) {
+        if ((lib6D9D7845_gv_e38090UIE38091.lv_e5B7B2E5BC80E590AFE4BCA4E5AEB3E695B0E5AD97E698BEE7A4BA[lv_e698BEE7A4BAE78EA9E5AEB6] == true)) {
             lv_e5AD97E4BD93E5A4A7E5B08F = 21;
-            if ((lib6D9D7845_gv_e5B7B2E5BC80E590AFE5B08FE59E8BE4BCA4E5AEB3E695B0E5AD97[lv_e698BEE7A4BAE78EA9E5AEB6] == true)) {
+            if ((lib6D9D7845_gv_e38090UIE38091.lv_e5B7B2E5BC80E590AFE5B08FE59E8BE4BCA4E5AEB3E695B0E5AD97[lv_e698BEE7A4BAE78EA9E5AEB6] == true)) {
                 lv_e5AD97E4BD93E5A4A7E5B08F = 14;
             }
 
             lv_e58685E5AEB9 = lib6D9D7845_gf_E7949FE68890E4BCA4E5AEB3E69687E69CAC(EventUnitDamageAttempted());
-            lv_e4BCA4E5AEB3E69687E69CAC[lv_e698BEE7A4BAE78EA9E5AEB6] = lib6D9D7845_gf_E7949FE68890E4BCA4E5AEB3E695B0E5AD97(lv_e698BEE7A4BAE78EA9E5AEB6, UnitGetPosition(EventUnit()), lv_e5AD97E4BD93E5A4A7E5B08F, lv_e698BEE7A4BAE88C83E59BB4, ColorWithAlpha(78.0, 78.0, 78.0, lib6D9D7845_gv_e4BCA4E5AEB3E695B0E5AD97E9808FE6988EE5BAA6[lv_e698BEE7A4BAE78EA9E5AEB6]), lv_e58685E5AEB9);
+            lv_e4BCA4E5AEB3E69687E69CAC[lv_e698BEE7A4BAE78EA9E5AEB6] = lib6D9D7845_gf_E7949FE68890E4BCA4E5AEB3E695B0E5AD97(lv_e698BEE7A4BAE78EA9E5AEB6, UnitGetPosition(EventUnit()), lv_e5AD97E4BD93E5A4A7E5B08F, lv_e698BEE7A4BAE88C83E59BB4, ColorWithAlpha(78.0, 78.0, 78.0, lib6D9D7845_gv_e38090UIE38091.lv_e4BCA4E5AEB3E695B0E5AD97E9808FE6988EE5BAA6[lv_e698BEE7A4BAE78EA9E5AEB6]), lv_e58685E5AEB9);
         }
 
     }
@@ -8126,14 +8135,14 @@ bool lib6D9D7845_gt_E4BCA4E5AEB3E695B0E5AD97E698BEE7A4BAE99BB7_Func (bool testCo
     autoE2090A6B_ai = 1;
     lv_e698BEE7A4BAE78EA9E5AEB6 = 1;
     for ( ; ( (autoE2090A6B_ai >= 0 && lv_e698BEE7A4BAE78EA9E5AEB6 <= autoE2090A6B_ae) || (autoE2090A6B_ai <= 0 && lv_e698BEE7A4BAE78EA9E5AEB6 >= autoE2090A6B_ae) ) ; lv_e698BEE7A4BAE78EA9E5AEB6 += autoE2090A6B_ai ) {
-        if ((lib6D9D7845_gv_e5B7B2E5BC80E590AFE4BCA4E5AEB3E695B0E5AD97E698BEE7A4BA[lv_e698BEE7A4BAE78EA9E5AEB6] == true)) {
+        if ((lib6D9D7845_gv_e38090UIE38091.lv_e5B7B2E5BC80E590AFE4BCA4E5AEB3E695B0E5AD97E698BEE7A4BA[lv_e698BEE7A4BAE78EA9E5AEB6] == true)) {
             lv_e5AD97E4BD93E5A4A7E5B08F = 24;
-            if ((lib6D9D7845_gv_e5B7B2E5BC80E590AFE5B08FE59E8BE4BCA4E5AEB3E695B0E5AD97[lv_e698BEE7A4BAE78EA9E5AEB6] == true)) {
+            if ((lib6D9D7845_gv_e38090UIE38091.lv_e5B7B2E5BC80E590AFE5B08FE59E8BE4BCA4E5AEB3E695B0E5AD97[lv_e698BEE7A4BAE78EA9E5AEB6] == true)) {
                 lv_e5AD97E4BD93E5A4A7E5B08F = 16;
             }
 
             lv_e58685E5AEB9 = lib6D9D7845_gf_E7949FE68890E4BCA4E5AEB3E69687E69CAC(EventUnitDamageAttempted());
-            lv_e4BCA4E5AEB3E69687E69CAC[lv_e698BEE7A4BAE78EA9E5AEB6] = lib6D9D7845_gf_E7949FE68890E4BCA4E5AEB3E695B0E5AD97(lv_e698BEE7A4BAE78EA9E5AEB6, UnitGetPosition(EventUnit()), lv_e5AD97E4BD93E5A4A7E5B08F, lv_e698BEE7A4BAE88C83E59BB4, ColorWithAlpha(100.0, 100.0, 50.0, lib6D9D7845_gv_e4BCA4E5AEB3E695B0E5AD97E9808FE6988EE5BAA6[lv_e698BEE7A4BAE78EA9E5AEB6]), lv_e58685E5AEB9);
+            lv_e4BCA4E5AEB3E69687E69CAC[lv_e698BEE7A4BAE78EA9E5AEB6] = lib6D9D7845_gf_E7949FE68890E4BCA4E5AEB3E695B0E5AD97(lv_e698BEE7A4BAE78EA9E5AEB6, UnitGetPosition(EventUnit()), lv_e5AD97E4BD93E5A4A7E5B08F, lv_e698BEE7A4BAE88C83E59BB4, ColorWithAlpha(100.0, 100.0, 50.0, lib6D9D7845_gv_e38090UIE38091.lv_e4BCA4E5AEB3E695B0E5AD97E9808FE6988EE5BAA6[lv_e698BEE7A4BAE78EA9E5AEB6]), lv_e58685E5AEB9);
         }
 
     }
@@ -8188,14 +8197,14 @@ bool lib6D9D7845_gt_E4BCA4E5AEB3E695B0E5AD97E698BEE7A4BAE781AB_Func (bool testCo
     autoC4CF0FAC_ai = 1;
     lv_e698BEE7A4BAE78EA9E5AEB6 = 1;
     for ( ; ( (autoC4CF0FAC_ai >= 0 && lv_e698BEE7A4BAE78EA9E5AEB6 <= autoC4CF0FAC_ae) || (autoC4CF0FAC_ai <= 0 && lv_e698BEE7A4BAE78EA9E5AEB6 >= autoC4CF0FAC_ae) ) ; lv_e698BEE7A4BAE78EA9E5AEB6 += autoC4CF0FAC_ai ) {
-        if ((lib6D9D7845_gv_e5B7B2E5BC80E590AFE4BCA4E5AEB3E695B0E5AD97E698BEE7A4BA[lv_e698BEE7A4BAE78EA9E5AEB6] == true)) {
+        if ((lib6D9D7845_gv_e38090UIE38091.lv_e5B7B2E5BC80E590AFE4BCA4E5AEB3E695B0E5AD97E698BEE7A4BA[lv_e698BEE7A4BAE78EA9E5AEB6] == true)) {
             lv_e5AD97E4BD93E5A4A7E5B08F = 24;
-            if ((lib6D9D7845_gv_e5B7B2E5BC80E590AFE5B08FE59E8BE4BCA4E5AEB3E695B0E5AD97[lv_e698BEE7A4BAE78EA9E5AEB6] == true)) {
+            if ((lib6D9D7845_gv_e38090UIE38091.lv_e5B7B2E5BC80E590AFE5B08FE59E8BE4BCA4E5AEB3E695B0E5AD97[lv_e698BEE7A4BAE78EA9E5AEB6] == true)) {
                 lv_e5AD97E4BD93E5A4A7E5B08F = 16;
             }
 
             lv_e58685E5AEB9 = lib6D9D7845_gf_E7949FE68890E4BCA4E5AEB3E69687E69CAC(EventUnitDamageAttempted());
-            lv_e4BCA4E5AEB3E69687E69CAC[lv_e698BEE7A4BAE78EA9E5AEB6] = lib6D9D7845_gf_E7949FE68890E4BCA4E5AEB3E695B0E5AD97(lv_e698BEE7A4BAE78EA9E5AEB6, UnitGetPosition(EventUnit()), lv_e5AD97E4BD93E5A4A7E5B08F, lv_e698BEE7A4BAE88C83E59BB4, ColorWithAlpha(100.0, 8.0, 8.0, lib6D9D7845_gv_e4BCA4E5AEB3E695B0E5AD97E9808FE6988EE5BAA6[lv_e698BEE7A4BAE78EA9E5AEB6]), lv_e58685E5AEB9);
+            lv_e4BCA4E5AEB3E69687E69CAC[lv_e698BEE7A4BAE78EA9E5AEB6] = lib6D9D7845_gf_E7949FE68890E4BCA4E5AEB3E695B0E5AD97(lv_e698BEE7A4BAE78EA9E5AEB6, UnitGetPosition(EventUnit()), lv_e5AD97E4BD93E5A4A7E5B08F, lv_e698BEE7A4BAE88C83E59BB4, ColorWithAlpha(100.0, 8.0, 8.0, lib6D9D7845_gv_e38090UIE38091.lv_e4BCA4E5AEB3E695B0E5AD97E9808FE6988EE5BAA6[lv_e698BEE7A4BAE78EA9E5AEB6]), lv_e58685E5AEB9);
         }
 
     }
@@ -8249,14 +8258,14 @@ bool lib6D9D7845_gt_E4BCA4E5AEB3E695B0E5AD97E698BEE7A4BAE586B0_Func (bool testCo
     autoF366C3CC_ai = 1;
     lv_e698BEE7A4BAE78EA9E5AEB6 = 1;
     for ( ; ( (autoF366C3CC_ai >= 0 && lv_e698BEE7A4BAE78EA9E5AEB6 <= autoF366C3CC_ae) || (autoF366C3CC_ai <= 0 && lv_e698BEE7A4BAE78EA9E5AEB6 >= autoF366C3CC_ae) ) ; lv_e698BEE7A4BAE78EA9E5AEB6 += autoF366C3CC_ai ) {
-        if ((lib6D9D7845_gv_e5B7B2E5BC80E590AFE4BCA4E5AEB3E695B0E5AD97E698BEE7A4BA[lv_e698BEE7A4BAE78EA9E5AEB6] == true)) {
+        if ((lib6D9D7845_gv_e38090UIE38091.lv_e5B7B2E5BC80E590AFE4BCA4E5AEB3E695B0E5AD97E698BEE7A4BA[lv_e698BEE7A4BAE78EA9E5AEB6] == true)) {
             lv_e5AD97E4BD93E5A4A7E5B08F = 24;
-            if ((lib6D9D7845_gv_e5B7B2E5BC80E590AFE5B08FE59E8BE4BCA4E5AEB3E695B0E5AD97[lv_e698BEE7A4BAE78EA9E5AEB6] == true)) {
+            if ((lib6D9D7845_gv_e38090UIE38091.lv_e5B7B2E5BC80E590AFE5B08FE59E8BE4BCA4E5AEB3E695B0E5AD97[lv_e698BEE7A4BAE78EA9E5AEB6] == true)) {
                 lv_e5AD97E4BD93E5A4A7E5B08F = 16;
             }
 
             lv_e58685E5AEB9 = lib6D9D7845_gf_E7949FE68890E4BCA4E5AEB3E69687E69CAC(EventUnitDamageAttempted());
-            lv_e4BCA4E5AEB3E69687E69CAC[lv_e698BEE7A4BAE78EA9E5AEB6] = lib6D9D7845_gf_E7949FE68890E4BCA4E5AEB3E695B0E5AD97(lv_e698BEE7A4BAE78EA9E5AEB6, UnitGetPosition(EventUnit()), lv_e5AD97E4BD93E5A4A7E5B08F, lv_e698BEE7A4BAE88C83E59BB4, ColorWithAlpha(0.0, 50.0, 100.0, lib6D9D7845_gv_e4BCA4E5AEB3E695B0E5AD97E9808FE6988EE5BAA6[lv_e698BEE7A4BAE78EA9E5AEB6]), lv_e58685E5AEB9);
+            lv_e4BCA4E5AEB3E69687E69CAC[lv_e698BEE7A4BAE78EA9E5AEB6] = lib6D9D7845_gf_E7949FE68890E4BCA4E5AEB3E695B0E5AD97(lv_e698BEE7A4BAE78EA9E5AEB6, UnitGetPosition(EventUnit()), lv_e5AD97E4BD93E5A4A7E5B08F, lv_e698BEE7A4BAE88C83E59BB4, ColorWithAlpha(0.0, 50.0, 100.0, lib6D9D7845_gv_e38090UIE38091.lv_e4BCA4E5AEB3E695B0E5AD97E9808FE6988EE5BAA6[lv_e698BEE7A4BAE78EA9E5AEB6]), lv_e58685E5AEB9);
         }
 
     }
@@ -8276,7 +8285,7 @@ bool lib6D9D7845_gt_E6B7BBE58AA0E4BCA4E5AEB3E7BB93E7AE97E599A8_Func (bool testCo
     // Automatic Variable Declarations
     // Conditions
     if (testConds) {
-        if (!((lib6D9D7845_gv_globalE590AFE794A8E4BCA4E5AEB3E7BB93E7AE97E7B3BBE7BB9F == true))) {
+        if (!((lib6D9D7845_gv_e38090E585A8E5B180E6A087E69797E38091.lv_flagE590AFE794A8E4BCA4E5AEB3E7BB93E7AE97E7B3BBE7BB9F == true))) {
             return false;
         }
 
@@ -8318,7 +8327,7 @@ bool lib6D9D7845_gt_E6B7BBE58AA0E4BCA4E5AEB3E7BB93E7AE97E599A82_Func (bool testC
 
     // Conditions
     if (testConds) {
-        if (!((lib6D9D7845_gv_globalE590AFE794A8E4BCA4E5AEB3E7BB93E7AE97E7B3BBE7BB9F == true))) {
+        if (!((lib6D9D7845_gv_e38090E585A8E5B180E6A087E69797E38091.lv_flagE590AFE794A8E4BCA4E5AEB3E7BB93E7AE97E7B3BBE7BB9F == true))) {
             return false;
         }
     }
@@ -8760,7 +8769,7 @@ bool lib6D9D7845_gt_E8999AE697A0E79BAEE6A087E7949FE68890_Func (bool testConds, b
     }
 
     libNtve_gf_CreateUnitsWithDefaultFacing(1, "Target", 0, 15, PlayerStartLocation(1));
-    lib6D9D7845_gv_e8999AE697A0E79BAEE6A087 = UnitLastCreated();
+    lib6D9D7845_gv_e38090E585A8E5B180E6A087E69797E38091.lv_e8999AE697A0E79BAEE6A087 = UnitLastCreated();
     return true;
 }
 
@@ -8768,103 +8777,6 @@ bool lib6D9D7845_gt_E8999AE697A0E79BAEE6A087E7949FE68890_Func (bool testConds, b
 void lib6D9D7845_gt_E8999AE697A0E79BAEE6A087E7949FE68890_Init () {
     lib6D9D7845_gt_E8999AE697A0E79BAEE6A087E7949FE68890 = TriggerCreate("lib6D9D7845_gt_E8999AE697A0E79BAEE6A087E7949FE68890_Func");
     TriggerAddEventMapInit(lib6D9D7845_gt_E8999AE697A0E79BAEE6A087E7949FE68890);
-}
-
-//--------------------------------------------------------------------------------------------------
-// Trigger: ????????????
-//--------------------------------------------------------------------------------------------------
-bool lib6D9D7845_gt_E99ABEE5BAA6E8AEBEE7BDAE_Func (bool testConds, bool runActions) {
-    // Automatic Variable Declarations
-    playergroup auto908707F4_g;
-    int auto908707F4_var;
-
-    // Actions
-    if (!runActions) {
-        return true;
-    }
-
-    auto908707F4_g = PlayerGroupAll();
-    auto908707F4_var = -1;
-    while (true) {
-        auto908707F4_var = PlayerGroupNextPlayer(auto908707F4_g, auto908707F4_var);
-        if (auto908707F4_var < 0) { break; }
-        PlayerOptionOverride(auto908707F4_var, "simplecommandcard", "0");
-    }
-    if (0 == 0) {
-        lib6D9D7845_gv_e793A6E696AFE58D95E6ACA1E98787E99B86E695B0 = 1;
-    }
-    else if (0 == 1) {
-        lib6D9D7845_gv_e793A6E696AFE58D95E6ACA1E98787E99B86E695B0 = 2;
-    }
-    else if (0 == 2) {
-        lib6D9D7845_gv_e793A6E696AFE58D95E6ACA1E98787E99B86E695B0 = 4;
-    }
-    else if (0 == 3) {
-        lib6D9D7845_gv_e793A6E696AFE58D95E6ACA1E98787E99B86E695B0 = 6;
-    }
-    else if (0 == 4) {
-        lib6D9D7845_gv_e793A6E696AFE58D95E6ACA1E98787E99B86E695B0 = 8;
-    }
-    else if (0 == 5) {
-        lib6D9D7845_gv_e793A6E696AFE58D95E6ACA1E98787E99B86E695B0 = 10;
-    }
-    return true;
-}
-
-//--------------------------------------------------------------------------------------------------
-void lib6D9D7845_gt_E99ABEE5BAA6E8AEBEE7BDAE_Init () {
-    lib6D9D7845_gt_E99ABEE5BAA6E8AEBEE7BDAE = TriggerCreate("lib6D9D7845_gt_E99ABEE5BAA6E8AEBEE7BDAE_Func");
-    TriggerAddEventMapInit(lib6D9D7845_gt_E99ABEE5BAA6E8AEBEE7BDAE);
-}
-
-//--------------------------------------------------------------------------------------------------
-// Trigger: ????????????
-//--------------------------------------------------------------------------------------------------
-bool lib6D9D7845_gt_E8B584E6BA90E585B1E4BAAB_Func (bool testConds, bool runActions) {
-    // Variable Declarations
-    int lv_mount;
-    int lv_p;
-
-    // Automatic Variable Declarations
-    int auto0FC8E4E9_ae;
-    int auto0FC8E4E9_ai;
-
-    // Variable Initialization
-
-    // Actions
-    if (!runActions) {
-        return true;
-    }
-
-    if ((UnitGetType(EventUnit()) == "SCV")) {
-        if ((UnitGetType(EventUnitTargetUnit()) == "RefineryRich")) {
-            lv_mount = (lib6D9D7845_gv_e793A6E696AFE58D95E6ACA1E98787E99B86E695B0 * 2);
-        }
-        else {
-            if ((UnitGetType(EventUnitTargetUnit()) == "Refinery")) {
-                lv_mount = lib6D9D7845_gv_e793A6E696AFE58D95E6ACA1E98787E99B86E695B0;
-            }
-
-        }
-        auto0FC8E4E9_ae = 15;
-        auto0FC8E4E9_ai = 1;
-        lv_p = 1;
-        for ( ; ( (auto0FC8E4E9_ai >= 0 && lv_p <= auto0FC8E4E9_ae) || (auto0FC8E4E9_ai <= 0 && lv_p >= auto0FC8E4E9_ae) ) ; lv_p += auto0FC8E4E9_ai ) {
-            if ((PlayerRace(lv_p) == "Zerg")) {
-                PlayerModifyPropertyInt(lv_p, c_playerPropVespene, c_playerPropOperAdd, lv_mount);
-                PlayerModifyPropertyInt(lv_p, c_playerPropTerrazine, c_playerPropOperAdd, lv_mount);
-            }
-
-        }
-    }
-
-    return true;
-}
-
-//--------------------------------------------------------------------------------------------------
-void lib6D9D7845_gt_E8B584E6BA90E585B1E4BAAB_Init () {
-    lib6D9D7845_gt_E8B584E6BA90E585B1E4BAAB = TriggerCreate("lib6D9D7845_gt_E8B584E6BA90E585B1E4BAAB_Func");
-    TriggerAddEventUnitAbility(lib6D9D7845_gt_E8B584E6BA90E585B1E4BAAB, null, AbilityCommand("SCVHarvest", 0), c_abilHarvestStageHarvest, true);
 }
 
 //--------------------------------------------------------------------------------------------------
@@ -8902,7 +8814,7 @@ void lib6D9D7845_gt_ExtraDivineKeys_Init () {
 
 void lib6D9D7845_InitTriggers () {
     lib6D9D7845_gt_E69BB4E696B0E4BABAE58FA3_Init();
-    lib6D9D7845_gt_SetLight_Init();
+    lib6D9D7845_gt_SetDefaultLight_Init();
     lib6D9D7845_gt_CreateDPSUnit_Init();
     lib6D9D7845_gt_DPSStats_Init();
     lib6D9D7845_gt_Debug_Init();
@@ -9037,8 +8949,8 @@ void lib6D9D7845_InitTriggers () {
     lib6D9D7845_gt_E68A97E680A7E99DA2E69DBFE698BEE7A4BA_Init();
     lib6D9D7845_gt_E68A97E680A7E99DA2E69DBFE99A90E8978F_Init();
     lib6D9D7845_gt_E68A97E680A7E99DA2E69DBFE69BB4E696B0E99BB7E4BCA4_Init();
-    lib6D9D7845_gt_E68A97E680A7E99DA2E69DBFE69BB4E696B0E586B0E4BCA4_Init();
     lib6D9D7845_gt_E68A97E680A7E99DA2E69DBFE69BB4E696B0E781ABE4BCA4_Init();
+    lib6D9D7845_gt_E68A97E680A7E99DA2E69DBFE69BB4E696B0E586B0E4BCA4_Init();
     lib6D9D7845_gt_E9858DE7BDAEE4BCA4E5AEB3E695B0E5AD97_Init();
     lib6D9D7845_gt_E4BCA4E5AEB3E695B0E5AD97E698BEE7A4BAE789A9E79086_Init();
     lib6D9D7845_gt_E4BCA4E5AEB3E695B0E5AD97E698BEE7A4BAE6B581E8A180_Init();
@@ -9056,8 +8968,6 @@ void lib6D9D7845_InitTriggers () {
     lib6D9D7845_gt_E4BCA4E5AEB3E7BB93E7AE97E599A8E99BB7_Init();
     lib6D9D7845_gt_E8BDACE58F98E4B8BAE6ADBBE5A3AB_Init();
     lib6D9D7845_gt_E8999AE697A0E79BAEE6A087E7949FE68890_Init();
-    lib6D9D7845_gt_E99ABEE5BAA6E8AEBEE7BDAE_Init();
-    lib6D9D7845_gt_E8B584E6BA90E585B1E4BAAB_Init();
     lib6D9D7845_gt_ExtraDivineKeys_Init();
 }
 

@@ -153,6 +153,71 @@
         <SquibTypeDefault value="Flesh"/>
         <UnitGlossaryCamera value="Star2CameraMid04"/>
     </CModel>
+    <CModel id="MikoyanSplat" parent="Splat">
+        <Model value="Assets\Splats\Splat_Armory\Splat_Armory.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="MikoyanPlacement" parent="BunkerPlacementBase" low="Armory">
+        <Model value="Assets\Buildings\Terran\MercCompoundPlacement\MercCompoundPlacement.m3"/>
+    </CModel>
+    <CModel id="MikoyanDeathLow" parent="BuildingDeath" Race="Terran">
+        <Model value="Assets\Effects\Terran\TerranLargeBuildingDeath\TerranLargeBuildingDeath_Low.m3"/>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="TerranExplosionMedium"/>
+            <Type value="Sound"/>
+            <Time value="0.010000"/>
+        </Events>
+        <Lighting value="TerranLargeBuildingDeathLow"/>
+        <SelectionRadius value="0.250000"/>
+        <ShadowRadius value="0.250000"/>
+    </CModel>
+    <CModel id="MikoyanDeath" parent="BuildingDeathEx" Race="Terran" low="ArmoryDeathLow">
+        <Model value="Assets\Buildings\Terran\MercCompoundDeath\MercCompoundDeath.m3"/>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="TerranPreExplosionSmall"/>
+            <Type value="Sound"/>
+            <Time value="0.010000"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="TerranExplosionLarge"/>
+            <Type value="Sound"/>
+            <Time value="0.966000"/>
+        </Events>
+        <Events>
+            <Anim value="Death,01"/>
+            <Name value="TerranPreExplosionSmall"/>
+            <Type value="Sound"/>
+            <Time value="0.010000"/>
+        </Events>
+        <Events>
+            <Anim value="Death,01"/>
+            <Name value="TerranExplosionLarge"/>
+            <Type value="Sound"/>
+            <Time value="0.966000"/>
+        </Events>
+        <Events>
+            <Anim value="Death,02"/>
+            <Name value="TerranPreExplosionSmall"/>
+            <Type value="Sound"/>
+            <Time value="0.010000"/>
+        </Events>
+        <Events>
+            <Anim value="Death,02"/>
+            <Name value="TerranExplosionLarge"/>
+            <Type value="Sound"/>
+            <Time value="0.633000"/>
+        </Events>
+    </CModel>
+    <CModel id="Mikoyan" parent="BuildingEx" Race="Terran">
+        <Model value="Assets\Buildings\Terran\MercCompound\MercCompound.m3"/>
+        <Radius value="1.500000"/>
+        <SelectionRadius value="2.300000"/>
+        <ShadowRadius value="2.300000"/>
+        <SquibTypeDefault value="Metal"/>
+    </CModel>
     <CModel id="BlktekPlacement" parent="Placement" Race="Terran">
         <Model value="Assets\Models\Buildings\Blktek\Blktek_Placement.m3"/>
         <LowQualityModel value="Blktek"/>
@@ -181,6 +246,9 @@
         <TextureDeclares Prefix="Reactor_Diffuse">
             <Adaptions Slot="main.diffuse"/>
         </TextureDeclares>
+    </CModel>
+    <CModel id="RefineryTerrazine">
+        <Model value="Assets\Buildings\Terran\RefineryEx1\RefineryEx1.m3"/>
     </CModel>
     <CModel id="TechLab">
         <TextureDeclares Prefix="techlab_diffuse">
@@ -261,7 +329,7 @@
         <ShadowRadius value="0.000000"/>
     </CModel>
     <CModel id="SwarmMissilePlacement" parent="Placement" Race="Terran">
-        <Model value="Assets\Models\Buildings\GunTower\GunTower3_Placement.m3"/>
+        <Model value="Assets\Models\Buildings\GunTower\GunTower1_Placement.m3"/>
         <LowQualityModel value="Railgun"/>
         <SelectionRadius value="0.000000"/>
         <ShadowRadius value="0.000000"/>
@@ -471,7 +539,7 @@
         <ShadowRadius value="0.416500"/>
     </CModel>
     <CModel id="ImaginaryUI" parent="Portrait">
-        <Model value="Assets\Models\Herrscher8th\ImaginaryScreen.m3"/>
+        <Model value="Assets\Models\Herrscher\ImaginaryScreen.m3"/>
         <EditorCategories value=""/>
     </CModel>
     <CModel id="KianaC1" parent="Unit" Race="Terran">
@@ -1275,7 +1343,7 @@
         </TextureDeclares>
     </CModel>
     <CModel id="RO_032MissileIce" parent="MissileFX" Prefix="Units\" Race="Protoss">
-        <Model value="Assets\Models\Robot\RO_030\RO_030_Missile.m3"/>
+        <Model value="Assets\Models\Robot\RO_030\RO_030_Missile_Ice.m3"/>
         <Radius value="0.250000"/>
         <SelectionRadius value="0.250000"/>
         <UnitGlossaryCamera value="Star2CameraMid05"/>
@@ -2160,7 +2228,7 @@
         <SquibTypeDefault value="Metal"/>
     </CModel>
     <CModel id="RO_060_DefenseDeath" parent="UnitDeath" Race="Terran">
-        <Model value="Assets\Models\Robot\Robot\RO_060\RO_060_Defense_death.m3"/>
+        <Model value="Assets\Models\Robot\RO_060\RO_060_Defense_death.m3"/>
         <LowQualityModel value="TerranLargeUnitDeathLow"/>
     </CModel>
     <CModel id="LurkerAttackSpikeEx2">
@@ -2428,7 +2496,7 @@
         <Model value="Assets\Models\Ulyss\UL_012\UL_012.m3"/>
     </CModel>
     <CModel id="SiegeTankDeathMod" parent="SiegeTankDeathBase">
-        <Model value="Assets\Models\Robot\Robot\RO_036\RO_036_death.m3"/>
+        <Model value="Assets\Models\Robot\RO_036\RO_036_death.m3"/>
         <PhysicsDeathMotionFactor value="1.000000,0.500000"/>
     </CModel>
     <CModel id="RO_036" parent="SiegeTankBase">

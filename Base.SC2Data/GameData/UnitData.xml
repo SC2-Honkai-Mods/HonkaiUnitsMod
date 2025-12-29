@@ -976,50 +976,21 @@
         <MinimapRadius value="0.375"/>
         <EditorCategories value="ObjectType:Item,ObjectFamily:Melee"/>
     </CUnit>
-    <CUnit id="ImperialInstitute">
-        <DeathTime value="30"/>
-        <DeathRevealRadius value="3"/>
-        <Race value="Terr"/>
-        <Mob value="Multiplayer"/>
-        <FlagArray index="Turnable" value="0"/>
-        <FlagArray index="PreventDefeat" value="1"/>
-        <FlagArray index="PreventDestroy" value="1"/>
-        <FlagArray index="PenaltyRevealed" value="1"/>
-        <FlagArray index="UseLineOfSight" value="1"/>
-        <FlagArray index="TownAlert" value="1"/>
-        <FlagArray index="NoPortraitTalk" value="1"/>
-        <FlagArray index="ArmorDisabledWhileConstructing" value="1"/>
-        <FogVisibility value="Snapshot"/>
-        <PlaneArray index="Ground" value="1"/>
-        <Collide index="Burrow" value="1"/>
-        <Collide index="Ground" value="1"/>
-        <Collide index="Structure" value="1"/>
-        <Collide index="RoachBurrow" value="1"/>
-        <Collide index="ForceField" value="1"/>
-        <Collide index="Small" value="1"/>
-        <Attributes index="Armored" value="1"/>
-        <Attributes index="Mechanical" value="1"/>
-        <Attributes index="Structure" value="1"/>
+    <CUnit id="ImperialInstitute" parent="CUnitBuildingTerr">
+        <Name value="Unit/Name/ImperialInstitute"/>
+        <Facing value="0"/>
+        <Collide index="Locust" value="0"/>
+        <Collide index="Phased" value="0"/>
         <LifeStart value="750"/>
         <LifeMax value="750"/>
-        <LifeArmor value="1"/>
-        <LifeArmorName value="Unit/LifeArmorName/TerranBuildingPlating"/>
-        <StationaryTurningRate value="719.4726"/>
-        <TurningRate value="719.4726"/>
-        <Sight value="9"/>
-        <CostCategory value="Technology"/>
         <CostResource index="Minerals" value="150"/>
         <CostResource index="Vespene" value="100"/>
         <RepairTime value="65"/>
-        <AttackTargetPriority value="11"/>
         <AbilArray Link="BuildInProgress"/>
         <AbilArray Link="que5"/>
         <AbilArray Link="AttackArmorResearch"/>
         <AbilArray Link="CannonResearch"/>
         <AbilArray Link="HumanTech"/>
-        <BehaviorArray Link="TerranBuildingBurnDown"/>
-        <BehaviorArray Link="FireSuppressionSystem"/>
-        <BehaviorArray Link="TurretBuff"/>
         <CardLayouts>
             <LayoutButtons Face="Cancel" Type="AbilCmd" AbilCmd="que5,CancelLast" Row="2" Column="4"/>
             <LayoutButtons Face="CancelBuilding" Type="AbilCmd" AbilCmd="BuildInProgress,Cancel" Row="2" Column="4"/>
@@ -1042,14 +1013,10 @@
         <PlacementFootprint value="Footprint3x3"/>
         <ScoreMake value="250"/>
         <ScoreKill value="250"/>
-        <ScoreResult value="BuildOrder"/>
         <SubgroupPriority value="3"/>
         <MinimapRadius value="1.75"/>
-        <EditorCategories value="ObjectType:Structure,ObjectFamily:Melee"/>
         <GlossaryPriority value="326"/>
-        <HotkeyCategory value="Unit/Category/TerranUnits"/>
-        <TechTreeUnlockedUnitArray value="Thor"/>
-        <TechTreeUnlockedUnitArray value="WidowMine"/>
+        <AIEvaluateAlias value="ImperialInstitute"/>
     </CUnit>
     <CUnit id="StFreya">
         <DeathRevealRadius value="3"/>
@@ -1171,8 +1138,8 @@
         </CardLayouts>
         <Radius value="2.5"/>
         <SeparationRadius value="2.5"/>
-        <Footprint value="Footprint5x5Contour"/>
-        <PlacementFootprint value="Footprint5x5DropOff"/>
+        <Footprint value="Footprint5x5Contour2"/>
+        <PlacementFootprint value="Footprint5x5DropOff2"/>
         <ScoreMake value="200"/>
         <ScoreKill value="200"/>
         <ScoreResult value="BuildOrder"/>
@@ -1321,61 +1288,39 @@
             <LayoutButtons index="10" removed="1"/>
         </CardLayouts>
     </CUnit>
-    <CUnit id="MercCompound">
-        <DeathTime value="30"/>
-        <BehaviorArray Link="TurretBuff"/>
-        <CostResource index="Minerals" value="300"/>
-        <CostResource index="Vespene" value="200"/>
-        <AbilArray index="1" Link="que5"/>
-        <AbilArray index="2" Link="CannonResearch"/>
-        <AbilArray index="3" removed="1"/>
-        <AbilArray index="4" removed="1"/>
-        <CardLayouts index="0">
-            <LayoutButtons index="0" Face="SelectBuilder" Type="SelectBuilder" AbilCmd="255,255" Row="1" Column="3"/>
-            <LayoutButtons index="1">
-                <Face value="Rally"/>
-                <Type value="AbilCmd"/>
-                <AbilCmd value="Rally,Rally1"/>
-                <Behavior value=""/>
-                <Requirements value=""/>
-                <Row value="1"/>
-                <Column value="4"/>
-            </LayoutButtons>
-            <LayoutButtons index="2" Face="Halt" AbilCmd="BuildInProgress,Halt" Row="2" Column="3"/>
-            <LayoutButtons index="3">
-                <Face value="CancelBuilding"/>
-                <Type value="AbilCmd"/>
-                <AbilCmd value="BuildInProgress,Cancel"/>
-                <Behavior value=""/>
-                <Requirements value=""/>
-                <Row value="2"/>
-                <Column value="4"/>
-            </LayoutButtons>
-            <LayoutButtons index="4" Face="WeaponB5" AbilCmd="CannonResearch,Research1" Column="0"/>
-            <LayoutButtons index="5">
-                <Face value="WeaponB7"/>
-                <Type value="AbilCmd"/>
-                <AbilCmd value="CannonResearch,Research2"/>
-                <Behavior value=""/>
-                <Requirements value=""/>
-                <Column value="1"/>
-            </LayoutButtons>
-            <LayoutButtons index="6" Face="WeaponB18" AbilCmd="CannonResearch,Research4" Column="2"/>
-            <LayoutButtons index="7" Face="WeaponB6" Type="AbilCmd" AbilCmd="CannonResearch,Research9" Behavior="" Requirements=""/>
-            <LayoutButtons index="8" removed="1"/>
-            <LayoutButtons index="9" removed="1"/>
-            <LayoutButtons index="10" removed="1"/>
-            <LayoutButtons index="11" removed="1"/>
-            <LayoutButtons index="12" removed="1"/>
-            <LayoutButtons index="13" removed="1"/>
-            <LayoutButtons index="14" removed="1"/>
-            <LayoutButtons index="15" removed="1"/>
-            <LayoutButtons index="16" removed="1"/>
-            <LayoutButtons index="17" removed="1"/>
-            <LayoutButtons index="18" removed="1"/>
-            <LayoutButtons index="19" removed="1"/>
-            <LayoutButtons index="20" removed="1"/>
+    <CUnit id="Mikoyan" parent="CUnitBuildingTerr">
+        <Name value="Unit/Name/Mikoyan"/>
+        <Collide index="Locust" value="0"/>
+        <Collide index="Phased" value="0"/>
+        <LifeStart value="1000"/>
+        <LifeMax value="1000"/>
+        <CostResource index="Minerals" value="200"/>
+        <CostResource index="Vespene" value="100"/>
+        <RepairTime value="70"/>
+        <AbilArray Link="BuildInProgress"/>
+        <AbilArray Link="que5"/>
+        <AbilArray Link="CannonResearch"/>
+        <CardLayouts>
+            <LayoutButtons Face="CancelBuilding" Type="AbilCmd" AbilCmd="BuildInProgress,Cancel" Row="2" Column="4"/>
+            <LayoutButtons Face="Cancel" Type="AbilCmd" AbilCmd="que5,CancelLast" Row="2" Column="4"/>
+            <LayoutButtons Face="SelectBuilder" Type="SelectBuilder" AbilCmd="255,255" Row="1" Column="3"/>
+            <LayoutButtons Face="Halt" AbilCmd="BuildInProgress,Halt" Row="2" Column="3"/>
+            <LayoutButtons Face="WeaponB5" Type="AbilCmd" AbilCmd="CannonResearch,Research1" Row="0" Column="0"/>
+            <LayoutButtons Face="WeaponB7" Type="AbilCmd" AbilCmd="CannonResearch,Research2" Row="0" Column="1"/>
+            <LayoutButtons Face="WeaponB6" Type="AbilCmd" AbilCmd="CannonResearch,Research9" Row="1" Column="0"/>
+            <LayoutButtons Face="WeaponB18" Type="AbilCmd" AbilCmd="CannonResearch,Research4" Row="1" Column="1"/>
         </CardLayouts>
+        <Radius value="1.5"/>
+        <SeparationRadius value="1.5"/>
+        <Footprint value="Footprint4x4Contour"/>
+        <PlacementFootprint value="Footprint4x4"/>
+        <ScoreMake value="300"/>
+        <ScoreKill value="300"/>
+        <MinimapRadius value="2"/>
+        <HotkeyCategory value=""/>
+        <AIEvaluateAlias value="Mikoyan"/>
+        <SubgroupPriority value="3"/>
+        <GlossaryPriority value="326"/>
     </CUnit>
     <CUnit id="SaTarget">
         <DeathRevealRadius value="0"/>
@@ -2023,7 +1968,6 @@
         <PlaneArray index="Air" value="1"/>
         <Collide index="Flying" value="1"/>
         <Attributes index="Massive" value="1"/>
-        <Attributes index="Structure" value="1"/>
         <LifeStart value="200"/>
         <LifeMax value="200"/>
         <LifeArmor value="9999"/>
@@ -2435,7 +2379,6 @@
             <LayoutButtons index="2" Face="ValkyrjaShield" AbilCmd="HumanTech,Research6"/>
             <LayoutButtons index="3" Face="ValkyrjaSnipe" AbilCmd="HumanTech,Research15"/>
             <LayoutButtons index="4" removed="1"/>
-            <LayoutButtons index="5" removed="1"/>
         </CardLayouts>
         <DeathTime value="30"/>
         <AbilArray index="5" Link="HumanTech"/>
@@ -2583,6 +2526,7 @@
         <MinimapRadius value="0.375"/>
         <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
         <KillDisplay value="Never"/>
+        <BehaviorArray Link="NoDeath"/>
     </CUnit>
     <CUnit id="NukeMHT">
         <DeathTime value="4"/>
@@ -6280,6 +6224,7 @@
         <TechTreeProducedUnitArray index="2" value="RPC6626"/>
         <TechTreeProducedUnitArray index="3" value="HonkaiHyperion"/>
         <TechTreeProducedUnitArray index="4" removed="1"/>
+        <TechTreeProducedUnitArray index="5" removed="1"/>
     </CUnit>
     <CUnit id="StarportFlying">
         <BehaviorArray Link="FireSuppressionSystem"/>
@@ -6301,6 +6246,7 @@
             <LayoutButtons index="4" removed="1"/>
             <LayoutButtons index="5" removed="1"/>
             <LayoutButtons index="6" removed="1"/>
+            <LayoutButtons index="7" removed="1"/>
         </CardLayouts>
         <AbilArray Link="HumanTech"/>
         <DeathTime value="30"/>
@@ -6619,7 +6565,7 @@
             <LayoutButtons index="2" Face="Starport" AbilCmd="TerranBuild,Build12" Row="2" Column="0"/>
             <LayoutButtons index="3" Face="FusionCore" AbilCmd="TerranBuild,Build16" Column="1"/>
             <LayoutButtons index="4" Face="Cancel" Type="CancelSubmenu" AbilCmd="" Column="4"/>
-            <LayoutButtons index="5" Face="MercCompound" Type="AbilCmd" AbilCmd="TerranBuild,Build15" Column="2"/>
+            <LayoutButtons index="5" Face="Mikoyan" Type="AbilCmd" AbilCmd="TerranBuild,Build15" Column="2"/>
             <LayoutButtons Face="GhostAcademy" Type="AbilCmd" AbilCmd="TerranBuild,Build10" Row="2" Column="3"/>
         </CardLayouts>
         <LifeRegenRateCreep value="-4"/>

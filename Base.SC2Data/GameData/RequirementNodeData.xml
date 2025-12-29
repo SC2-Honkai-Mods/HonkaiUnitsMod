@@ -14,6 +14,9 @@
     <CRequirementCountUnit id="CountUnitImperialInstituteCompleteOnlyTechTreeCheat">
         <Count Link="ImperialInstitute" State="CompleteOnly"/>
     </CRequirementCountUnit>
+    <CRequirementCountUnit id="CountUnitMercCompoundCompleteOnly">
+        <Count Link="Mikoyan"/>
+    </CRequirementCountUnit>
     <CRequirementCountUnit id="CountUnitWeaponK23CompleteOnly">
         <Flags index="TechTreeCheat" value="0"/>
         <Count Link="WeaponK23" State="CompleteOnly"/>

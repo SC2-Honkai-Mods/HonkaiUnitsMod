@@ -860,6 +860,9 @@
     <CActorModel id="ImperialInstituteBuild" parent="TerranBuildingBuild">
         <Model value="ArmoryBuild"/>
     </CActorModel>
+    <CActorModel id="MikoyanBuild" parent="TerranBuildingBuild">
+        <Model value="ArmoryBuild"/>
+    </CActorModel>
     <CActorUnit id="ImperialInstitute" parent="TerranBuildingEx" unitName="ImperialInstitute">
         <Aliases value="_UnitHuge"/>
         <On Terms="Abil.que5.Start" Send="AnimSetTimeScale ::Baseline 5.000000"/>
@@ -883,6 +886,28 @@
         <UnitIcon value="Assets\Textures\btn-building-terran-Armory.dds"/>
         <Wireframe>
             <Image value="Assets\Textures\Wireframe-Terran-Armory.dds"/>
+        </Wireframe>
+    </CActorUnit>
+    <CActorUnit id="Mikoyan" parent="TerranBuildingEx" unitName="Mikoyan">
+        <Aliases value="_UnitHuge"/>
+        <On Terms="Abil.que5.Start" Send="AnimSetTimeScale ::Baseline 5.000000"/>
+        <On Terms="Abil.que5.Stop" Send="AnimSetTimeScale ::Baseline 1.000000"/>
+        <CreepHeightClass value="Small"/>
+        <DeathArray index="Normal" ModelLink="ArmoryDeath"/>
+        <DeathArray index="UnderConstruction" ModelLink="TerranLargeBuildingDeath" SoundLink="Armory_Explode"/>
+        <PortraitModel value="ArmoryPortrait"/>
+        <BarOffset value="115"/>
+        <BarWidth value="135"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\wireframe-terran-merccompound.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\btn-building-terran-merccompound.dds"/>
+        <NameOffset value="100"/>
+        <SoundArray index="Ready" value="Armory_Ready"/>
+        <SoundArray index="What" value="Armory_What"/>
+        <UnitIcon value="Assets\Textures\btn-building-terran-merccompound.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\wireframe-terran-merccompound.dds"/>
         </Wireframe>
     </CActorUnit>
     <CActorSound id="RO_060MorphSound" parent="SoundOneShot">
@@ -7366,7 +7391,6 @@
         <On Terms="Behavior.ColonyInfestation.On" Send="Create InfestationCommandCenter"/>
         <On Terms="UnitBirth.PlanetaryFortress2; PlayerHasClanDecal" Send="Create TerranClanFlag"/>
         <On Terms="UnitBirth.PlanetaryFortress2; PlayerHasTrophy" Send="Create TerranPlayerTrophy"/>
-        <On Terms="ActorCreation" Send="SetTintColor {255,249,166 2.500000}"/>
         <Model value="CommandCenter"/>
         <DeathArray index="Normal" ModelLink="PlanetaryFortressDeath"/>
         <DeathArray index="UnderConstruction" ModelLink="TerranLargeBuildingDeath" SoundLink="PlanetaryFortress_Explode"/>
@@ -7560,6 +7584,7 @@
         <On Terms="UnitDeath" Target="TerranFlameSetLightSmokeTransition" Send="Destroy"/>
     </CActorStateMonitor>
     <CActorStateMonitor id="TerranFlamesMediumBuilding">
+        <On index="21" Terms="UnitCreation.Mikoyan"/>
         <On Terms="UnitCreation.HighTower" Send="Create"/>
         <On Terms="UnitCreation.KianaBuilding" Send="Create"/>
         <On Terms="UnitCreation.SeeleBuilding" Send="Create"/>
@@ -7761,7 +7786,6 @@
         <On index="84" removed="1"/>
         <On index="85" removed="1"/>
         <On index="86" removed="1"/>
-        <On index="87" removed="1"/>
     </CActorUnit>
     <CActorModel id="Herrscher2ndProjector" parent="ModelAddition" unitName="">
         <On index="1" Terms="UnitDeath" Send="$Spell PlayForever,DontResetOnUnhide -1.000000 -1.000000 1.000000 AsTimeScaleAbsolute"/>
@@ -7956,7 +7980,6 @@
         <On index="87" removed="1"/>
         <On index="88" removed="1"/>
         <On index="89" removed="1"/>
-        <On index="90" removed="1"/>
     </CActorUnit>
     <CActorMissile id="Herrscher2ndWeaponMissile" parent="GenericAttackMissile" unitName="Herrscher2Weapon">
         <Model value="Herrscher2ndWeapon"/>
@@ -8383,12 +8406,6 @@
     <!-- Missile Turret ........................................................................ -->
     <!--                                                                                         -->
     <CActorUnit id="MissileTurret">
-        <On index="80" removed="1"/>
-        <On index="81" removed="1"/>
-        <On index="82" removed="1"/>
-        <On index="83" removed="1"/>
-        <On index="84" removed="1"/>
-        <DeathCustoms index="5" removed="1"/>
         <GroupIcon>
             <Image index="0" value="Assets\Textures\btn-unit-GunTower2.tga"/>
         </GroupIcon>
@@ -8973,7 +8990,6 @@
         <DeathCustoms index="12" removed="1"/>
         <DeathCustoms index="13" removed="1"/>
         <DeathCustoms index="14" removed="1"/>
-        <DeathCustoms index="15" removed="1"/>
         <SoundArray index="Ready" value="UL_010_Ready"/>
         <SoundArray index="Help" value="UL_010_Help"/>
         <SoundArray index="What" value="UL_010_What"/>
@@ -9275,6 +9291,14 @@
         <On index="83" Terms="ActorCreation" Send="TextureSelectById UL_012"/>
         <On index="84" removed="1"/>
         <On index="85" removed="1"/>
+        <On index="86" removed="1"/>
+        <On index="87" removed="1"/>
+        <On index="88" removed="1"/>
+        <On index="89" removed="1"/>
+        <On index="90" removed="1"/>
+        <On index="91" removed="1"/>
+        <On index="92" removed="1"/>
+        <On index="93" removed="1"/>
         <DeathActorModel value="UL_012Death"/>
         <PortraitActor value="PortraitUL_012"/>
     </CActorUnit>

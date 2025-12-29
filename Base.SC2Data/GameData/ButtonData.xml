@@ -327,8 +327,8 @@
         <AlertIcon value="Assets\Textures\Buff_slow.tga"/>
     </CButton>
     <CButton id="RO_040ChargeUpgrade">
-        <Icon value="Assets\Textures\btn-ability-terran-spidermine.dds"/>
-        <AlertIcon value="Assets\Textures\btn-ability-terran-spidermine.dds"/>
+        <Icon value="Assets\Textures\btn-upgrade-siegetank-spidermines.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-siegetank-spidermines.dds"/>
     </CButton>
     <CButton id="DG_021Skill">
         <Icon value="Assets\Textures\btn-ability-protoss-firebeam.dds"/>
@@ -382,8 +382,8 @@
         <AlertIcon value="Assets\Textures\Wireframe-RO_041.tga"/>
     </CButton>
     <CButton id="RO_040Charge">
-        <Icon value="Assets\Textures\btn-ability-terran-spidermine.dds"/>
-        <AlertIcon value="Assets\Textures\btn-ability-terran-spidermine.dds"/>
+        <Icon value="Assets\Textures\btn-upgrade-siegetank-spidermines.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-siegetank-spidermines.dds"/>
     </CButton>
     <CButton id="RO_042">
         <Icon value="Assets\Textures\Wireframe-RO_042.tga"/>
@@ -848,7 +848,9 @@
         <Icon value="Assets\Textures\btn-upgrade-stetmann-banelingmanashieldefficiency.dds"/>
         <AlertIcon value="Assets\Textures\btn-upgrade-stetmann-banelingmanashieldefficiency.dds"/>
     </CButton>
-    <CButton id="MercCompound"/>
+    <CButton id="Mikoyan">
+        <Icon value="Assets\Textures\btn-building-terran-merccompound.dds"/>
+    </CButton>
     <CButton id="MicroFiltering2">
         <Icon value="Assets\Textures\btn-ability-terran-microfiltering.dds"/>
         <AlertIcon value="Assets\Textures\btn-ability-terran-microfiltering.dds"/>

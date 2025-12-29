@@ -273,7 +273,7 @@
     <CRequirement id="HaveFusionCore">
         <EditorCategories value="TechType:Unit"/>
         <CanBeSuppressed index="Use" value="0"/>
-        <NodeArray index="Use" Link="CountUnitFusionCoreCompleteOnly"/>
+        <NodeArray index="Use" Link="CountUnitFusionCoreCompleteOnlyTechTreeCheat"/>
     </CRequirement>
     <CRequirement id="HaveNukeInUnit">
         <EditorCategories value="TechType:Unit"/>

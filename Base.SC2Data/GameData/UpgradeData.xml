@@ -250,7 +250,7 @@
         <EffectArray Reference="Unit,HighTower,LifeArmorLevel" Value="1"/>
         <EffectArray Reference="Unit,SwarmMissile,LifeArmorLevel" Value="1"/>
         <EffectArray Reference="Unit,Railgun,LifeArmorLevel" Value="1"/>
-        <EffectArray Reference="Unit,MercCompound,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,Mikoyan,LifeArmorLevel" Value="1"/>
         <EffectArray Reference="Unit,DivineKeys,LifeArmorLevel" Value="1"/>
         <EffectArray Reference="Unit,KianaBuilding,LifeArmorLevel" Value="1"/>
         <EffectArray Reference="Unit,MeiBuilding,LifeArmorLevel" Value="1"/>
@@ -303,7 +303,7 @@
         <AffectedUnitArray value="HighTower"/>
         <AffectedUnitArray value="SwarmMissile"/>
         <AffectedUnitArray value="Railgun"/>
-        <AffectedUnitArray value="MercCompound"/>
+        <AffectedUnitArray value="Mikoyan"/>
         <AffectedUnitArray value="DivineKeys"/>
         <AffectedUnitArray value="KianaBuilding"/>
         <AffectedUnitArray value="MeiBuilding"/>
@@ -486,12 +486,11 @@
         <MaxLevel value="10"/>
     </CUpgrade>
     <CUpgrade id="MicroFiltering">
-        <EffectArray index="0" Operation="Add" Value="2"/>
-        <EffectArray index="1" Operation="Add" Reference="Abil,DroneHarvest,ResourceAmountBonus[Vespene]" Value="2"/>
+        <EffectArray Value="2"/>
+        <EffectArray Reference="Abil,DroneHarvest,ResourceAmountBonus[Vespene]" Value="2"/>
         <AffectedUnitArray value="SCV"/>
         <MaxLevel value="4"/>
         <Flags index="TechTreeCheat" value="1"/>
-        <Flags index="UpgradeCheat" value="1"/>
     </CUpgrade>
     <CUpgrade id="OrbitalStrike2">
         <Flags index="UpgradeCheat" value="0"/>
@@ -668,6 +667,7 @@
         <EffectArray index="1" Value="2"/>
         <EffectArray index="2" Reference="Weapon,SwarmMissile,Range"/>
         <EffectArray index="3" removed="1"/>
+        <EffectArray index="4" removed="1"/>
         <MaxLevel value="2"/>
     </CUpgrade>
     <CUpgrade id="VArmorUpgrade">
@@ -864,7 +864,6 @@
         <AffectedUnitArray value="OrbitalCommandFlying"/>
         <AffectedUnitArray value="PlanetaryFortress2"/>
         <Flags index="TechTreeCheat" value="1"/>
-        <Flags index="UpgradeCheat" value="1"/>
     </CUpgrade>
     <CUpgrade id="VShieldUpgrade">
         <EffectArray Reference="Unit,Valkyrja2,ShieldArmorLevel" Value="1"/>

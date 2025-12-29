@@ -272,7 +272,7 @@
             <Cooldown TimeUse="100"/>
         </Cost>
         <Range value="500"/>
-        <AutoCastFilters value="Visible;Player,Ally,Neutral,Missile,Dead,Hidden"/>
+        <AutoCastFilters value="Visible;Player,Ally,Neutral,Missile,Dead,Hidden,Invulnerable"/>
         <AutoCastRange value="20"/>
         <AutoCastValidatorArray value="TargetIsEnemyUnit"/>
         <FinishTime value="6"/>
@@ -326,7 +326,7 @@
         </Cost>
         <TargetFilters value="-;Missile"/>
         <Range value="500"/>
-        <AutoCastFilters value="Visible;Player,Ally,Neutral,Missile,Dead,Hidden"/>
+        <AutoCastFilters value="Visible;Player,Ally,Neutral,Missile,Dead,Hidden,Invulnerable"/>
         <AutoCastRange value="2"/>
         <AutoCastValidatorArray value="TargetIsEnemyUnit"/>
         <PrepTime value="0.8"/>
@@ -347,7 +347,7 @@
             <Cooldown TimeUse="40"/>
         </Cost>
         <Range value="500"/>
-        <AutoCastFilters value="Visible;Player,Ally,Neutral,Missile,Dead,Hidden"/>
+        <AutoCastFilters value="Visible;Player,Ally,Neutral,Missile,Dead,Hidden,Invulnerable"/>
         <AutoCastRange value="6"/>
         <AutoCastValidatorArray value="TargetIsEnemyUnit"/>
         <UninterruptibleArray index="Prep" value="1"/>
@@ -979,7 +979,7 @@
             <Cooldown TimeUse="25"/>
         </Cost>
         <Range value="500"/>
-        <AutoCastFilters value="Visible;Player,Ally,Neutral,Missile,Dead,Hidden"/>
+        <AutoCastFilters value="Visible;Player,Ally,Neutral,Missile,Dead,Hidden,Invulnerable"/>
         <AutoCastRange value="4"/>
         <AutoCastValidatorArray value="TargetIsEnemyUnit"/>
         <UninterruptibleArray index="Prep" value="1"/>
@@ -1519,7 +1519,7 @@
         <UninterruptibleArray index="Prep" value="1"/>
         <UninterruptibleArray index="Cast" value="1"/>
         <UninterruptibleArray index="Finish" value="1"/>
-        <AutoCastFilters value="Visible;Player,Ally,Neutral,Missile,Dead,Hidden"/>
+        <AutoCastFilters value="Visible;Player,Ally,Neutral,Missile,Dead,Hidden,Invulnerable"/>
     </CAbilEffectTarget>
     <CAbilEffectTarget id="Herrscher6thDeathCloud">
         <EditorCategories value="AbilityorEffectType:Units"/>
@@ -1827,9 +1827,7 @@
             </SectionArray>
         </InfoArray>
     </CAbilMorph>
-    <CAbilEffectTarget id="MedivacDoubleBeamHeal">
-        <CmdButtonArray index="Execute" Requirements=""/>
-    </CAbilEffectTarget>
+    <CAbilEffectTarget id="MedivacDoubleBeamHeal"/>
     <CAbilBuild id="BuildHerrscherCore">
         <EditorCategories value="AbilityorEffectType:Units"/>
         <FlagArray index="PeonDisableCollision" value="1"/>
@@ -3045,14 +3043,13 @@
     <CAbilEffectInstant id="DefensiveMatrix">
         <Flags index="AutoCast" value="1"/>
         <Flags index="AutoCastOn" value="1"/>
-        <Cost index="0">
+        <Cost>
             <Cooldown TimeUse="25"/>
         </Cost>
         <AutoCastAcquireLevel value="Defensive"/>
         <AutoCastFilters value="Visible;Player,Ally,Neutral"/>
         <AutoCastRange value="10"/>
         <AutoCastValidatorArray value="HerrscherUseShield"/>
-        <CmdButtonArray index="Execute" Requirements=""/>
     </CAbilEffectInstant>
     <CAbilResearch id="KianaC2Upgrade">
         <EditorCategories value="AbilityorEffectType:Units"/>
@@ -3327,9 +3324,7 @@
         <CmdButtonArray index="Rally2" DefaultButtonFace="RallyEgg"/>
         <CmdButtonArray index="Rally3" DefaultButtonFace="RallyDeadgals"/>
     </CAbilRally>
-    <CAbilMorph id="SiegeMode">
-        <CmdButtonArray index="Execute" Requirements=""/>
-    </CAbilMorph>
+    <CAbilMorph id="SiegeMode"/>
     <CAbilEffectTarget id="SkillK23">
         <EditorCategories value="AbilityorEffectType:Units"/>
         <Effect index="0" value="K23InitialSet"/>
@@ -3419,8 +3414,8 @@
             <Button DefaultButtonFace="HighTower" Requirements="HaveSupplyDepot"/>
         </InfoArray>
         <InfoArray index="Build14" Unit="ImperialInstitute"/>
-        <InfoArray index="Build15" Unit="MercCompound" Time="65">
-            <Button DefaultButtonFace="MercCompound" Requirements="HaveStarport"/>
+        <InfoArray index="Build15" Unit="Mikoyan" Time="65">
+            <Button DefaultButtonFace="Mikoyan" Requirements="HaveStarport"/>
         </InfoArray>
         <InfoArray index="Build18" Unit="SwarmMissile" Time="40">
             <Button DefaultButtonFace="SwarmMissile" Requirements="HaveHighTower"/>
