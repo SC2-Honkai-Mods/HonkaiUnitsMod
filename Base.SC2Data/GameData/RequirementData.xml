@@ -320,8 +320,8 @@
         <NodeArray index="Show" Link="LTCountUpgradeSeeleATTACKQueuedOrBetter16"/>
     </CRequirement>
     <CRequirement id="SeeleC1CanTrain">
-        <NodeArray index="Use" Link="CountUpgradeSeeleC1UnlockCompleteOnly"/>
-        <NodeArray index="Show" Link="Not2541659352SumCountUnitSeeleC1QueuedOrBetterCountUnitSeeleC1Revivable"/>
+        <NodeArray index="Use" Link="CountUpgradeSeeleC1UnlockCompleteOnlyTechTreeCheat"/>
+        <NodeArray index="Show" Link="Not2541659352SumCountUnitAlias_SeeleQueuedOrBetterCountUnitAlias_SeeleRevivable"/>
     </CRequirement>
     <CRequirement id="SeeleC1CanUnlock">
         <NodeArray index="Show" Link="NotCountUpgradeSeeleC1UnlockQueuedOrBetter"/>
@@ -668,8 +668,8 @@
         <NodeArray index="Use" Link="AndCountUpgradeKianaC2UnlockCompleteOnly2420890365"/>
     </CRequirement>
     <CRequirement id="KianaC4CanTrain">
-        <NodeArray index="Use" Link="CountUpgradeKianaC4UnlockCompleteOnly"/>
-        <NodeArray index="Show" Link="Not1982903751SumCountUnitKianaC4QueuedOrBetterCountUnitKianaC4RevivableCountUnitKianaC2QueuedOrBetterCountUnitKianaC2RevivableCountUnitKianaC1QueuedOrBetterCountUnitKianaC1Revivable"/>
+        <NodeArray index="Use" Link="CountUpgradeKianaC4UnlockCompleteOnlyTechTreeCheat"/>
+        <NodeArray index="Show" Link="Not1982903751SumCountUnitAlias_KianaQueuedOrBetterCountUnitAlias_KianaRevivable"/>
     </CRequirement>
     <CRequirement id="KianaC4CanMorph">
         <NodeArray index="Use" Link="AndCountUpgradeKianaC4UnlockCompleteOnly2420890365"/>
@@ -678,8 +678,8 @@
         <NodeArray index="Show" Link="NotCountUpgradeKianaC4UnlockQueuedOrBetter"/>
     </CRequirement>
     <CRequirement id="KianaC2CanTrain">
-        <NodeArray index="Use" Link="CountUpgradeKianaC2UnlockCompleteOnly"/>
-        <NodeArray index="Show" Link="Not1982903751SumCountUnitKianaC4QueuedOrBetterCountUnitKianaC4RevivableCountUnitKianaC2QueuedOrBetterCountUnitKianaC2RevivableCountUnitKianaC1QueuedOrBetterCountUnitKianaC1Revivable"/>
+        <NodeArray index="Use" Link="CountUpgradeKianaC2UnlockCompleteOnlyTechTreeCheat"/>
+        <NodeArray index="Show" Link="Not1982903751SumCountUnitAlias_KianaQueuedOrBetterCountUnitAlias_KianaRevivable"/>
     </CRequirement>
     <CRequirement id="KianaC2CanUnlock">
         <NodeArray index="Show" Link="NotCountUpgradeKianaC2UnlockQueuedOrBetter"/>
@@ -766,10 +766,6 @@
     <CRequirement id="UnitMoving">
         <NodeArray index="Use" Link="NotCountBehaviorEvadeCoolDownCompleteOnlyAtUnit"/>
         <NodeArray index="Show" Link="CountBehaviorUnitMovingCompleteOnlyAtUnit"/>
-    </CRequirement>
-    <CRequirement id="KianaC2Requirements">
-        <EditorCategories value="TechType:Unit"/>
-        <NodeArray index="Use" Link="Eq1641998733CountUnitKianaC2QueuedOrBetter0"/>
     </CRequirement>
     <CRequirement id="KianaC2Upgrade1Requirement">
         <NodeArray index="Show" Link="NotCountUpgradeKianaC2UpgradeQueuedOrBetter"/>
@@ -922,8 +918,8 @@
         <NodeArray index="Show" Link="LTCountUpgradeBronyaATTACKQueuedOrBetter16"/>
     </CRequirement>
     <CRequirement id="MeiC2CanTrain">
-        <NodeArray index="Use" Link="CountUpgradeMeiC2UnlockCompleteOnly"/>
-        <NodeArray index="Show" Link="Not3381661893SumCountUnitMeiC2QueuedOrBetterCountUnitMeiC2Revivable"/>
+        <NodeArray index="Use" Link="CountUpgradeMeiC2UnlockCompleteOnlyTechTreeCheat"/>
+        <NodeArray index="Show" Link="Not3381661893SumCountUnitAlias_MeiQueuedOrBetterCountUnitAlias_MeiRevivable"/>
     </CRequirement>
     <CRequirement id="MeiC2CanUnlock">
         <NodeArray index="Show" Link="NotCountUpgradeMeiC2UnlockQueuedOrBetter"/>
@@ -947,16 +943,16 @@
         <NodeArray index="Show" Link="NotCountUpgradeMeiC2Upgrade4CompleteOnly"/>
     </CRequirement>
     <CRequirement id="BronyaC2CanTrain">
-        <NodeArray index="Use" Link="CountUpgradeBronyaC2UnlockCompleteOnly"/>
-        <NodeArray index="Show" Link="Not157438788SumCountUnitBronyaC2QueuedOrBetterCountUnitBronyaC2RevivableCountUnitBronyaC7QueuedOrBetterCountUnitBronyaC7RevivableCountUnitBronyaC7MotorQueuedOrBetterCountUnitBronyaC7MotorRevivable"/>
+        <NodeArray index="Use" Link="CountUpgradeBronyaC2UnlockCompleteOnlyTechTreeCheat"/>
+        <NodeArray index="Show" Link="Not157438788SumCountUnitAlias_BronyaQueuedOrBetterCountUnitAlias_BronyaRevivable"/>
     </CRequirement>
     <CRequirement id="BronyaC7CanTrain">
-        <NodeArray index="Use" Link="CountUpgradeBronyaC7UnlockCompleteOnly"/>
-        <NodeArray index="Show" Link="Not157438788SumCountUnitBronyaC2QueuedOrBetterCountUnitBronyaC2RevivableCountUnitBronyaC7QueuedOrBetterCountUnitBronyaC7RevivableCountUnitBronyaC7MotorQueuedOrBetterCountUnitBronyaC7MotorRevivable"/>
+        <NodeArray index="Use" Link="CountUpgradeBronyaC7UnlockCompleteOnlyTechTreeCheat"/>
+        <NodeArray index="Show" Link="Not157438788SumCountUnitAlias_BronyaQueuedOrBetterCountUnitAlias_BronyaRevivable"/>
     </CRequirement>
     <CRequirement id="KianaC1CanTrain">
-        <NodeArray index="Use" Link="CountUpgradeKianaC1UnlockCompleteOnly"/>
-        <NodeArray index="Show" Link="Not1982903751SumCountUnitKianaC4QueuedOrBetterCountUnitKianaC4RevivableCountUnitKianaC2QueuedOrBetterCountUnitKianaC2RevivableCountUnitKianaC1QueuedOrBetterCountUnitKianaC1Revivable"/>
+        <NodeArray index="Use" Link="CountUpgradeKianaC1UnlockCompleteOnlyTechTreeCheat"/>
+        <NodeArray index="Show" Link="Not1982903751SumCountUnitAlias_KianaQueuedOrBetterCountUnitAlias_KianaRevivable"/>
     </CRequirement>
     <CRequirement id="BronyaC2CanUnlock">
         <NodeArray index="Show" Link="NotCountUpgradeBronyaC2UnlockQueuedOrBetter"/>

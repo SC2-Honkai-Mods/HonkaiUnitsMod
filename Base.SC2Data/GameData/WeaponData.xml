@@ -574,7 +574,7 @@
         <AllowedMovement value="Moving"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="SeeleATTACK" parent="AvatarATTACK">
-        <Icon value="Assets\Textures\Pistol_K1.tga"/>
+        <Icon value="Assets\Textures\Weapon_Scythe_R1_233_1.tga"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="NeedleSpines2">
         <Icon value="Assets\Textures\btn-upgrade-zerg-missileattacks-level0.dds"/>
@@ -635,7 +635,7 @@
         <DisplayEffect value="MHT3WeaponDamage"/>
         <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
         <MinScanRange value="9"/>
-        <Range value="8"/>
+        <Range value="10"/>
         <MinimumRange value="1"/>
         <Period value="0.125"/>
         <Effect value="MHT3WeaponSet"/>

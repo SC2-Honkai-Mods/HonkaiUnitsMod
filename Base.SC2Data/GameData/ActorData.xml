@@ -283,6 +283,38 @@
         <BuildModel value="TechLab"/>
         <DeathActorModel value="TechLabDeathFactory"/>
     </CActorUnit>
+    <CActorBeamSimple id="HeliosHealBeamRev1" parent="BeamSimpleAnimationStyleContinuous">
+        <Inherits index="Visibility" value="1"/>
+        <Supporter Subject="_Unit" Scope="Caster" Actor="Find"/>
+        <On Terms="Effect.HeliosHeal.TargetStart" Send="Create"/>
+        <On Terms="Effect.HeliosHeal.TargetStop" Send="Destroy"/>
+        <HostForProps Subject="_Unit" Scope="Caster" Actor="Find"/>
+        <Host Subject="_Unit" Scope="Caster" Actor="Find"/>
+        <Model value="MedivacHealBeam"/>
+        <HostLaunch Subject="_Unit" Scope="Caster" Actor="Find"/>
+        <HostLaunchSiteOps Ops="SOpAttachCenter"/>
+        <HostImpact Subject="_Unit" Scope="Target" Actor="Find"/>
+        <HostImpactSiteOps Ops="SOpAttachCenter"/>
+    </CActorBeamSimple>
+    <CActorModel id="HeliosHealModelRev1" parent="ModelAnimationStyleContinuous">
+        <On Terms="ActorCreation" Send="$Birth PlayForever"/>
+        <On Terms="Effect.HeliosHeal.TargetStart; At Target" Send="Create"/>
+        <On Terms="Effect.HeliosHeal.TargetStop; At Target" Send="Destroy"/>
+        <On Terms="ActorOrphan" Send="Destroy"/>
+        <Host Subject="_Selectable"/>
+        <HostSiteOps Ops="SOpAttachOverhead"/>
+        <Model value="MedicHealModel"/>
+    </CActorModel>
+    <CActorSound id="HeliosHealSoundRev1" parent="SoundContinuous">
+        <On Terms="Effect.HeliosHeal.TargetStart; At Target" Send="Create"/>
+        <On Terms="Effect.HeliosHeal.TargetStop; At Target" Send="Destroy"/>
+        <On Terms="ActorOrphan" Send="Destroy"/>
+        <On Terms="ActorCreation" Send="Create MedivacHealSoundStart"/>
+        <On Terms="ActorDestruction" Send="Create MedivacHealSoundStop"/>
+        <Host Subject="_Selectable"/>
+        <HostSiteOps Ops="SOpAttachOverhead"/>
+        <Sound value="Medivac_HealLoop"/>
+    </CActorSound>
     <CActorUnit id="Reactor">
         <On Terms="ActorCreation" Send="TextureSelectById ReactorDiffuseCover"/>
         <DeathActorModel value="ReactorDeath"/>
@@ -294,6 +326,12 @@
         <On Terms="AbilMorph.*.Finish; MorphTo FactoryReactor" Send="TextureSelectById ReactorDiffuseCoverFactory"/>
         <On Terms="AbilMorph.*.Finish; MorphTo StarportReactor" Send="TextureSelectById ReactorDiffuseCoverStarport"/>
     </CActorEventMacro>
+    <CActorSiteOpAttach id="SOpAttachHandLeft">
+        <AttachQuery Methods="FilterHandLeft"/>
+    </CActorSiteOpAttach>
+    <CActorSiteOpAttach id="SOpAttachHandRight">
+        <AttachQuery Methods="FilterHandRight"/>
+    </CActorSiteOpAttach>
     <!--                                                                                         -->
     <!-- Handle Morph To Tech Reactor .......................................................... -->
     <!--                                                                                         -->
@@ -2925,7 +2963,7 @@
         <HostSiteOps Ops="SOpShadow"/>
         <Model value="RO_042GroundEffectModel"/>
     </CActorModel>
-    <CActorMissile id="MHTNuke" parent="GenericAttackMissile" unitName="Nuke4">
+    <CActorMissile id="MHTNuke" parent="GenericAttackMissile" unitName="NukeMHTMissile">
         <CopySource value="_Unit"/>
         <Aliases index="1" value="_Selectable"/>
         <Macros value="DeadAnimationMacro"/>
@@ -2933,12 +2971,12 @@
         <AcceptedTransfers index="Textures" value="1"/>
         <AcceptedTransfers index="Status" value="1"/>
         <AcceptedHostedPropTransfers index="BaseModelScale" value="0"/>
-        <On index="0" Terms="UnitBirth.Nuke4" Send="Create SoundEmitter Nuke4_Ambience"/>
-        <On index="1" Terms="UnitBirth.Nuke4" Send="Create"/>
-        <On index="2" Terms="UnitRevive.Nuke4" Send="Create"/>
-        <On index="3" Terms="UnitRevive.Nuke4" Send="RefSet ::HostTurretBody _Selectable"/>
-        <On Terms="UnitConstruction.Nuke4.Start" Send="Create"/>
-        <On Terms="UnitConstruction.Nuke4.Finish" Send="AnimPlay ConstructionDeath Stand,Birth,Death FullMatch"/>
+        <On index="0" Terms="UnitBirth.NukeMHTMissile" Send="Create SoundEmitter Nuke4_Ambience"/>
+        <On index="1" Terms="UnitBirth.NukeMHTMissile" Send="Create"/>
+        <On index="2" Terms="UnitRevive.NukeMHTMissile" Send="Create"/>
+        <On index="3" Terms="UnitRevive.NukeMHTMissile" Send="RefSet ::HostTurretBody _Selectable"/>
+        <On Terms="UnitConstruction.NukeMHTMissile.Start" Send="Create"/>
+        <On Terms="UnitConstruction.NukeMHTMissile.Finish" Send="AnimPlay ConstructionDeath Stand,Birth,Death FullMatch"/>
         <On Terms="AnimDone.*.Missing; AnimName ConstructionDeath" Send="Destroy"/>
         <On Terms="ActorCreation; ValidateUnit IsFlying; Option Shadow Low; $AllowBlobShadow" Send="Create FlyerShadow"/>
         <On Terms="ActorCreation; ValidateUnit IsNotFlying; Option Shadow Low; $AllowBlobShadow" Send="Create GroundShadow"/>
@@ -5041,8 +5079,8 @@
     </CActorUnit>
     <CActorBeamSimple id="VoidArchivesNanoRepairBeamRev1" parent="BeamSimpleAnimationStyleContinuous">
         <Inherits index="Visibility" value="1"/>
-        <On Terms="Effect.NanoRepair2.TargetStart" Send="Create"/>
-        <On Terms="Effect.NanoRepair2.TargetStop" Send="Destroy"/>
+        <On Terms="Effect.VoidRepair.TargetStart" Send="Create"/>
+        <On Terms="Effect.VoidRepair.TargetStop" Send="Destroy"/>
         <HostForProps Subject="_Unit" Scope="Caster" Actor="Find"/>
         <Model value="NanoRepairBeam"/>
         <HostLaunch Subject="_Unit" Scope="Caster" Actor="Find"/>
@@ -5052,16 +5090,16 @@
     </CActorBeamSimple>
     <CActorModel id="VoidArchivesNanoRepairModelRev1" parent="ModelAnimationStyleContinuous">
         <On Terms="ActorCreation" Send="$Birth PlayForever"/>
-        <On Terms="Effect.NanoRepair2.TargetStart; At Target" Send="Create"/>
-        <On Terms="Effect.NanoRepair2.TargetStop; At Target" Send="Destroy"/>
+        <On Terms="Effect.VoidRepair.TargetStart; At Target" Send="Create"/>
+        <On Terms="Effect.VoidRepair.TargetStop; At Target" Send="Destroy"/>
         <On Terms="ActorOrphan" Send="Destroy"/>
         <Host Subject="_Selectable"/>
         <HostSiteOps Ops="SOpAttachOverhead"/>
         <Model value="NanoRepairBeamImpact"/>
     </CActorModel>
     <CActorSound id="VoidArchivesNanoRepairSoundRev1" parent="SoundContinuous">
-        <On Terms="Effect.NanoRepair2.TargetStart; At Target" Send="Create"/>
-        <On Terms="Effect.NanoRepair2.TargetStop; At Target" Send="Destroy"/>
+        <On Terms="Effect.VoidRepair.TargetStart; At Target" Send="Create"/>
+        <On Terms="Effect.VoidRepair.TargetStop; At Target" Send="Destroy"/>
         <On Terms="ActorOrphan" Send="Destroy"/>
         <On Terms="ActorCreation" Send="Create NanoRepairSoundStart"/>
         <On Terms="ActorDestruction" Send="Create NanoRepairSoundStop"/>
@@ -7786,6 +7824,7 @@
         <On index="84" removed="1"/>
         <On index="85" removed="1"/>
         <On index="86" removed="1"/>
+        <On index="87" removed="1"/>
     </CActorUnit>
     <CActorModel id="Herrscher2ndProjector" parent="ModelAddition" unitName="">
         <On index="1" Terms="UnitDeath" Send="$Spell PlayForever,DontResetOnUnhide -1.000000 -1.000000 1.000000 AsTimeScaleAbsolute"/>
@@ -7980,6 +8019,7 @@
         <On index="87" removed="1"/>
         <On index="88" removed="1"/>
         <On index="89" removed="1"/>
+        <On index="90" removed="1"/>
     </CActorUnit>
     <CActorMissile id="Herrscher2ndWeaponMissile" parent="GenericAttackMissile" unitName="Herrscher2Weapon">
         <Model value="Herrscher2ndWeapon"/>
@@ -8990,6 +9030,7 @@
         <DeathCustoms index="12" removed="1"/>
         <DeathCustoms index="13" removed="1"/>
         <DeathCustoms index="14" removed="1"/>
+        <DeathCustoms index="15" removed="1"/>
         <SoundArray index="Ready" value="UL_010_Ready"/>
         <SoundArray index="Help" value="UL_010_Help"/>
         <SoundArray index="What" value="UL_010_What"/>
@@ -9686,7 +9727,7 @@
     <CActorModel id="WeaponPistolAttachKianaRight" parent="ModelAddition" unitName="">
         <On Terms="Behavior.K23Move.On" Send="ModelSwap WeaponK23Sword"/>
         <On Terms="Behavior.K23Move.Off" Send="ModelSwap WeaponK23"/>
-        <HostSiteOps Ops="SOpAttachTarget2"/>
+        <HostSiteOps Ops="SOpAttachHandRight"/>
         <Model value="WeaponK2"/>
         <ModelFlags index="AllowHitTest" value="0"/>
         <Macros value="WeaponPistolAttach"/>
@@ -9710,7 +9751,7 @@
     <CActorModel id="WeaponPistolAttachKianaLeft" parent="ModelAddition" unitName="">
         <On Terms="Behavior.K23Move.On" Send="ModelSwap Invisible"/>
         <On Terms="Behavior.K23End.Off" Send="ModelSwap WeaponK23"/>
-        <HostSiteOps Ops="SOpAttachTarget3"/>
+        <HostSiteOps Ops="SOpAttachHandLeft"/>
         <Model value="WeaponK2"/>
         <ModelFlags index="AllowHitTest" value="0"/>
         <Macros value="WeaponPistolAttach"/>

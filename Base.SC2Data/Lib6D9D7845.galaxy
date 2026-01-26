@@ -2298,12 +2298,22 @@ void lib6D9D7845_gt_E69BB4E696B0E4BABAE58FA3_Init () {
 //--------------------------------------------------------------------------------------------------
 bool lib6D9D7845_gt_SetDefaultLight_Func (bool testConds, bool runActions) {
     // Automatic Variable Declarations
+    playergroup auto0CF63FC2_g;
+    int auto0CF63FC2_var;
+
     // Actions
     if (!runActions) {
         return true;
     }
 
     GameSetLighting(lib6D9D7845_gv_e38090E585A8E5B180E6A087E69797E38091.lv_lightE9BB98E8AEA4E58589E785A7, 0.0);
+    auto0CF63FC2_g = PlayerGroupAll();
+    auto0CF63FC2_var = -1;
+    while (true) {
+        auto0CF63FC2_var = PlayerGroupNextPlayer(auto0CF63FC2_g, auto0CF63FC2_var);
+        if (auto0CF63FC2_var < 0) { break; }
+        PlayerOptionOverride(auto0CF63FC2_var, "simplecommandcard", "0");
+    }
     return true;
 }
 
@@ -2587,7 +2597,15 @@ void lib6D9D7845_gt_Debug5_Init () {
 // Trigger: Debug 6
 //--------------------------------------------------------------------------------------------------
 bool lib6D9D7845_gt_Debug6_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    unit lv_u;
+    fixed lv_health;
+
     // Automatic Variable Declarations
+    // Variable Initialization
+    lv_u = UnitGroupRandomUnit(UnitGroupSelected(1), c_unitCountAlive);
+    lv_health = UnitGetPropertyFixed(lv_u, c_unitPropLife, c_unitPropCurrent);
+
     // Conditions
     if (testConds) {
         if (!(lib6D9D7845_gf_E58581E8AEB8E8B083E8AF95())) {
@@ -2600,18 +2618,13 @@ bool lib6D9D7845_gt_Debug6_Func (bool testConds, bool runActions) {
         return true;
     }
 
-    libNtve_gf_CreateUnitsWithDefaultFacing(1, "CommandCenter", 0, 1, CameraGetTarget(1));
-    libNtve_gf_CreateUnitsWithDefaultFacing(1, "OrbitalCommand", 0, 1, CameraGetTarget(1));
-    libNtve_gf_CreateUnitsWithDefaultFacing(1, "PlanetaryFortress", 0, 1, CameraGetTarget(1));
-    libNtve_gf_CreateUnitsWithDefaultFacing(1, "SupplyDepot", 0, 1, CameraGetTarget(1));
-    libNtve_gf_CreateUnitsWithDefaultFacing(1, "Bunker", 0, 1, CameraGetTarget(1));
-    libNtve_gf_CreateUnitsWithDefaultFacing(1, "Barracks", 0, 1, CameraGetTarget(1));
-    libNtve_gf_CreateUnitsWithDefaultFacing(1, "AntiEntropyFactory", 0, 1, CameraGetTarget(1));
-    libNtve_gf_CreateUnitsWithDefaultFacing(1, "Starport", 0, 1, CameraGetTarget(1));
-    libNtve_gf_CreateUnitsWithDefaultFacing(1, "NukeSilo", 0, 1, CameraGetTarget(1));
-    libNtve_gf_CreateUnitsWithDefaultFacing(1, "ImperialInstitute", 0, 1, CameraGetTarget(1));
-    libNtve_gf_CreateUnitsWithDefaultFacing(1, "FusionCore", 0, 1, CameraGetTarget(1));
-    libNtve_gf_CreateUnitsWithDefaultFacing(1, "Mikoyan", 0, 1, CameraGetTarget(1));
+    libNtve_gf_SetUpgradeLevelForPlayer(1, "KianaHealth", 16);
+    UnitSetPropertyFixed(lv_u, c_unitPropLife, 5.0);
+    while (true) {
+        TriggerDebugOutput(1, FixedToText((UnitGetPropertyFixed(lv_u, c_unitPropLife, c_unitPropCurrent) - lv_health), c_fixedPrecisionAny), true);
+        lv_health = UnitGetPropertyFixed(lv_u, c_unitPropLife, c_unitPropCurrent);
+        Wait(0.0625, c_timeGame);
+    }
     return true;
 }
 
@@ -4337,13 +4350,19 @@ void lib6D9D7845_gt_E887AAE58AA8E9858DE8A385E696B0E8AEADE7BB83E8A7A6E58F91_Init 
 bool lib6D9D7845_gt_E88BB1E99B84E58D95E4BD8DE5A48DE6B4BB_Func (bool testConds, bool runActions) {
     // Variable Declarations
     unitgroup lv_e5A48DE6B4BBE4BD8DE7BDAE;
+    unitgroup lv_e88194E9809AE4BD8DE7BDAE;
+    unit lv_e69C80E8BF91E58D95E4BD8D;
     point lv_point;
     fixed lv_time;
-    point lv_e697A0E6A087E9A298E79A84E58F98E9878F001;
 
     // Automatic Variable Declarations
+    unitgroup autoFC85E9DB_g;
+    int autoFC85E9DB_u;
+
     // Variable Initialization
     lv_e5A48DE6B4BBE4BD8DE7BDAE = UnitGroupEmpty();
+    lv_e88194E9809AE4BD8DE7BDAE = UnitGroupEmpty();
+    lv_point = UnitGetPosition(EventUnit());
     lv_time = 28.0;
 
     // Conditions
@@ -4370,13 +4389,29 @@ bool lib6D9D7845_gt_E88BB1E99B84E58D95E4BD8DE5A48DE6B4BB_Func (bool testConds, b
     Wait(lv_time, c_timeGame);
     while (true) {
         lv_e5A48DE6B4BBE4BD8DE7BDAE = UnitGroup(null, EventPlayer(), RegionEntireMap(), UnitFilter((1 << c_targetFilterStructure) | (1 << c_targetFilterPreventReveal), 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterUnderConstruction - 32)) | (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0);
-        lv_point = UnitGetPosition(EventUnit());
         if ((libNtve_gf_UnitGroupIsDead(lv_e5A48DE6B4BBE4BD8DE7BDAE) == true)) {
             Wait(1.0, c_timeGame);
         }
         else {
-            lv_point = UnitGetPosition(UnitGroupClosestToPoint(lv_e5A48DE6B4BBE4BD8DE7BDAE, lv_point));
-            UnitSetPosition(EventUnit(), UnitTypePlacementFromPoint(UnitGetType(EventUnit()), EventPlayer(), lv_point, 10.0), false);
+            lv_e88194E9809AE4BD8DE7BDAE = UnitGroupEmpty();
+            autoFC85E9DB_g = lv_e5A48DE6B4BBE4BD8DE7BDAE;
+            autoFC85E9DB_u = UnitGroupCount(autoFC85E9DB_g, c_unitCountAll);
+            for (;; autoFC85E9DB_u -= 1) {
+                lv_e69C80E8BF91E58D95E4BD8D = UnitGroupUnitFromEnd(autoFC85E9DB_g, autoFC85E9DB_u);
+                if (lv_e69C80E8BF91E58D95E4BD8D == null) { break; }
+                if ((PointPathingIsConnected(UnitGetPosition(EventUnit()), UnitGetPosition(lv_e69C80E8BF91E58D95E4BD8D)) == true)) {
+                    UnitGroupAdd(lv_e88194E9809AE4BD8DE7BDAE, lv_e69C80E8BF91E58D95E4BD8D);
+                }
+
+            }
+            if ((libNtve_gf_UnitGroupIsDead(lv_e88194E9809AE4BD8DE7BDAE) == true)) {
+                lv_e69C80E8BF91E58D95E4BD8D = UnitGroupClosestToPoint(lv_e5A48DE6B4BBE4BD8DE7BDAE, lv_point);
+            }
+            else {
+                lv_e69C80E8BF91E58D95E4BD8D = UnitGroupClosestToPoint(lv_e88194E9809AE4BD8DE7BDAE, lv_point);
+            }
+            lv_point = UnitGetPosition(lv_e69C80E8BF91E58D95E4BD8D);
+            UnitSetPosition(EventUnit(), UnitTypePlacementFromPoint(UnitGetType(EventUnit()), EventPlayer(), lv_point, 25.0), false);
             UnitRevive(EventUnit());
             UnitSetPropertyFixed(EventUnit(), c_unitPropLifePercent, 100.0);
             UnitSetPropertyFixed(EventUnit(), c_unitPropShieldsPercent, 100.0);
@@ -7054,6 +7089,34 @@ void lib6D9D7845_gt_E69CBAE794B2E7A9BAE68A95E8B5B7E8BAABE697B6E997B4E4BFAEE6ADA3
 }
 
 //--------------------------------------------------------------------------------------------------
+// Trigger: Highlight
+//--------------------------------------------------------------------------------------------------
+bool lib6D9D7845_gt_Highlight_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    int lv_p;
+
+    // Automatic Variable Declarations
+    // Variable Initialization
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    UISetButtonHighlighted(PlayerGroupAll(), AbilityCommand("ChooseAvatar", 0), true);
+    UISetButtonHighlighted(PlayerGroupAll(), AbilityCommand("ChooseAvatar", 1), true);
+    UISetButtonHighlighted(PlayerGroupAll(), AbilityCommand("ChooseAvatar", 2), true);
+    UISetButtonHighlighted(PlayerGroupAll(), AbilityCommand("ChooseAvatar", 3), true);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib6D9D7845_gt_Highlight_Init () {
+    lib6D9D7845_gt_Highlight = TriggerCreate("lib6D9D7845_gt_Highlight_Func");
+    TriggerAddEventMapInit(lib6D9D7845_gt_Highlight);
+}
+
+//--------------------------------------------------------------------------------------------------
 // Trigger: Avatar Trigger-Kiana
 //--------------------------------------------------------------------------------------------------
 bool lib6D9D7845_gt_AvatarTriggerKiana_Func (bool testConds, bool runActions) {
@@ -8928,6 +8991,7 @@ void lib6D9D7845_InitTriggers () {
     lib6D9D7845_gt_E6B5AEE7A9BAE7BB93E69D9FE8B5B7E8BAABE697B6E997B4E4BFAEE6ADA3_Init();
     lib6D9D7845_gt_E587BBE9A39EE697B6E997B4E4BFAEE6ADA3_Init();
     lib6D9D7845_gt_E69CBAE794B2E7A9BAE68A95E8B5B7E8BAABE697B6E997B4E4BFAEE6ADA3_Init();
+    lib6D9D7845_gt_Highlight_Init();
     lib6D9D7845_gt_AvatarTriggerKiana_Init();
     lib6D9D7845_gt_AvatarTriggerMei_Init();
     lib6D9D7845_gt_AvatarTriggerBronya_Init();

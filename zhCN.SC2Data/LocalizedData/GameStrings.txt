@@ -7,7 +7,6 @@ Abil/Name/AutoEquipCancel=自动配装-取消
 Abil/Name/AutoEquipCopy=自动配装-复制
 Abil/Name/AutoEquipCover=自动配装-覆盖
 Abil/Name/AutoEquipOnlyNew=自动配装-新单位
-Abil/Name/AutoLoad=自动装载
 Abil/Name/AvatarBuild=建造角色建筑
 Abil/Name/BlinkUL_040=闪现
 Abil/Name/BronyaC2Abil2=重力弹
@@ -42,6 +41,8 @@ Abil/Name/FurnaceMorph22=烈火熔炉(已分离)
 Abil/Name/FurnaceUpgrade=建筑变型(烈火熔炉)
 Abil/Name/GeneralUpgrades=通用升级
 Abil/Name/HMT3ArmNuke=装填战术核弹
+Abil/Name/HeliosAutoLoad=自动装载
+Abil/Name/HeliosHeal=治疗
 Abil/Name/HeliosTransport=装载-卸载
 Abil/Name/Herrscher2ReboundMissile=反弹发射物
 Abil/Name/Herrscher2RemoveMissile=传送发射物到虚数空间
@@ -550,7 +551,9 @@ Button/Name/Furnace=建造熔炉
 Button/Name/Furnace2=升级为烈火熔炉
 Button/Name/FusionCore=建造圣1504研究所
 Button/Name/GhostAcademy=建造崩坏能裂变弹发射井
+Button/Name/HealHelios=治疗
 Button/Name/Helios=制造“赫利俄斯”运输舰
+Button/Name/HeliosAutoLoad=战场救援系统
 Button/Name/Hellion=制造重装小兔摩托
 Button/Name/HellionTank=制造重装小兔机甲
 Button/Name/Herrscher2Attack=亚空之矛
@@ -620,7 +623,6 @@ Button/Name/MHTUpgrade=研究电磁力场加速器
 Button/Name/MasteryTychusMedivacBuff=紧急动员
 Button/Name/Medivac=制造运输舰
 Button/Name/MedivacAutoLoad=战场救援系统
-Button/Name/MedivacAutoLoad2=战场救援系统
 Button/Name/MeiBuilding=建造剑道训练室
 Button/Name/MeiC2Attack=五魂斩
 Button/Name/MeiC2Branch=樱花散落
@@ -639,7 +641,6 @@ Button/Name/MorphToRO_060=炮台形态
 Button/Name/MorphToRO_060_Defense=堡垒形态
 Button/Name/MorphToSaBackward=变形为倒立
 Button/Name/MorphToSaForward=变形为正面
-Button/Name/NanoRepair2=纳米修复
 Button/Name/NukeArm=在发射井中部署崩坏能裂变弹
 Button/Name/NukeArmMHT=在发射仓部署战术核弹
 Button/Name/NukeCalldown2=崩坏能裂变弹打击
@@ -702,7 +703,6 @@ Button/Name/ResearchDivineKey9th=研发 吞噬之键·星海谐律
 Button/Name/ResearchFighters=研发战斗机库
 Button/Name/ResearchSuperC=研究超级电容
 Button/Name/ResearchVHerrscher1st=研发理之律者装甲
-Button/Name/ReviveKiana=重新部署琪亚娜·卡斯兰娜
 Button/Name/Roach=变异为绯樱战车兽
 Button/Name/SaAbil1=启动: 湮没
 Button/Name/SaUltimate=锚定:泯灭
@@ -799,6 +799,7 @@ Button/Name/Valkyrja3=训练女武神-压制者
 Button/Name/ValkyrjaDefence=崩坏能防护服
 Button/Name/ValkyrjaShield=防暴护盾
 Button/Name/ValkyrjaSnipe=狙杀
+Button/Name/VoidRepair=修复
 Button/Name/WeaponB1=SU-22榴弹炮
 Button/Name/WeaponB15=苍玄之书
 Button/Name/WeaponB18=地狱火III型
@@ -824,23 +825,23 @@ Button/Name/zerggroundarmor1=进化死士护甲等级
 Button/Name/zerggroundarmor12=进化崩坏兽护甲等级
 Button/Name/zergmeleeweapons1=进化死士攻击等级
 Button/Name/zergmeleeweapons12=进化崩坏兽攻击等级
-Button/Tooltip/ATTACK=为所有装甲提高4点攻击力，可升级16次<n/><c val="FF0000">女武神装甲占用补给+1</c>
+Button/Tooltip/ATTACK=为所有装甲提高4点攻击力，可升级16次
 Button/Tooltip/AdvancedMedic=提升“赫利俄斯”运输舰50%的治疗速度。减少治疗消耗能量的35%。
 Button/Tooltip/AntiEntropyFactory=逆熵机甲的生产设施。
 Button/Tooltip/AntiEntropyFactoryFlying=逆熵重工必须着陆才能开始生产单位。
-Button/Tooltip/ArmorLevel=为所有装甲提高120点护盾和0.5护盾恢复速率，可升级16次(物理防御仅取决于生命护甲，护盾护甲并不生效)<n/><c val="FF0000">女武神装甲占用补给+1</c>
-Button/Tooltip/ArmorLevel2=为所有装甲提高160点生命值、1点生命装甲和0.5生命恢复率，可升级16次<n/><c val="FF0000">女武神装甲占用补给+1</c>
+Button/Tooltip/ArmorLevel=为所有装甲提高120点护盾和0.5护盾恢复速率，可升级16次(物理防御仅取决于生命护甲，护盾护甲并不生效)
+Button/Tooltip/ArmorLevel2=为所有装甲提高160点生命值、1点生命装甲和0.5生命恢复率，可升级16次
 Button/Tooltip/AutoEquip=以当前单位的装备为模板，自动配置装备（仅以选中所有单位中的“最佳单位”为准）。该类功能<c val="FFFF00">仅影响同类型单位</c>
 Button/Tooltip/AutoEquipAdd=以当前单位的装备为模板，为当前所有单位配装，但是不会卸下已有装备
 Button/Tooltip/AutoEquipCancel=取消给新训练单位的装备规则
 Button/Tooltip/AutoEquipCopy=以当前单位的装备为模板，复制给目标单位
 Button/Tooltip/AutoEquipCover=以当前单位的装备为模板，覆盖当前所有单位，不影响之后训练的单位
 Button/Tooltip/AutoEquipNewUnit=以当前单位的装备为模板，自动配置给新训练的单位。如果资源不足会在资源足够之后自动补充
-Button/Tooltip/AvatarBronya=选择布洛妮娅·扎伊切克作为你本局游戏的英雄角色<n/>可以使用的女武神装甲：<c val="FFFF00">驱动装·山吹、理之律者(进入律者阶段自动解锁)</c>
+Button/Tooltip/AvatarBronya=选择布洛妮娅·扎伊切克作为你本局游戏的英雄角色<n/>可以使用的女武神装甲：<c val="FFFF00">驱动装·山吹、理之律者</c>
 Button/Tooltip/AvatarChoose=选择一名女武神作为你本局游戏的英雄角色，一经选择无法更改
-Button/Tooltip/AvatarKiana=选择琪亚娜·卡斯兰娜作为你本局游戏的英雄角色<n/>可以使用的女武神装甲：领域装·白练、白骑士·月光<n/>
-Button/Tooltip/AvatarMei=选择雷电芽衣作为你本局游戏的英雄角色<n/>可以使用的女武神装甲：<n/>脉冲装·绯红<n/>
-Button/Tooltip/AvatarSeele=选择希儿·芙乐艾作为你本局游戏的英雄角色<n/>可以使用的女武神装甲：幻海梦蝶<n/>
+Button/Tooltip/AvatarKiana=选择琪亚娜·卡斯兰娜作为你本局游戏的英雄角色<n/>可以使用的女武神装甲：<c val="FFFF00">领域装·白练、白骑士·月光、空之律者</c>
+Button/Tooltip/AvatarMei=选择雷电芽衣作为你本局游戏的英雄角色<n/>可以使用的女武神装甲：<c val="FFFF00">脉冲装·绯红</c><n/><c val="FF0000">律者装甲尚未实装，请谨慎选择</c>
+Button/Tooltip/AvatarSeele=选择希儿·芙乐艾作为你本局游戏的英雄角色<n/>可以使用的女武神装甲：<c val="FFFF00">幻海梦蝶</c><n/><c val="FF0000">律者装甲尚未实装，请谨慎选择</c>
 Button/Tooltip/AvatarUpgrades=为女武神装甲提供升级
 Button/Tooltip/AvatarUpgradesBronyaC2=为<c val="FFFF00">驱动装·山吹</c>提供升级
 Button/Tooltip/AvatarUpgradesKianaC2=为<c val="FFFF00">领域装·白练</c>提供升级
@@ -924,7 +925,9 @@ Button/Tooltip/Furnace=解锁泰坦机甲、御雷机甲的烈焰分支单位，
 Button/Tooltip/Furnace2=使熔炉升级为烈火熔炉，可以解锁终极烈焰分支机甲、升级点燃伤害。
 Button/Tooltip/FusionCore=天命组织的科学研究所。<n/>可以研发部分武器，并为运输机、多维机甲、休伯利安号提供升级方案。<n/><n/><c val="ffff8a">开启：</c><n/>- 可在星港中建造休伯利安号
 Button/Tooltip/Heal=治疗一个友方生物单位。<n/><n/><c val="f078ff">每1点能量恢复<d ref="-Effect,MedivacHealModifyTargetLife,VitalArray[0].Change/Effect,MedivacHealModifyCasterEnergy,VitalArray[2].Change"/>点生命值。</c><n/>
+Button/Tooltip/HealHelios=治疗一个友方生物单位。<n/><n/><c val="f078ff">每秒恢复<d ref="Effect,HeliosHeal,RechargeVitalRate" precision="1"/>点固定生命值和<d ref="Effect,HeliosHeal,RechargeVitalFraction*100" precision="1"/>%最大生命值。
 Button/Tooltip/Helios=空中运输单位。可治疗附近的生物单位。
+Button/Tooltip/HeliosAutoLoad=右键打开自动释放后，可自动装载生命值低于15%的单位。如果是生物单位，还可在<d ref="Behavior,HeliosHPBoost,Duration"/>秒内恢复该单位30%的生命值
 Button/Tooltip/Herrscher10th=第十律者，可以将自己所捕获的猎物的力量为自己所用。
 Button/Tooltip/Herrscher11th=第十一律者，可以形成一道结界，结界以内除去自己以外的生物都会被约束瞬间杀死，利用崩坏能作战的女武神与大部分融合战士也会相继在约束领域中慢慢失去战斗力。
 Button/Tooltip/Herrscher12th=第十二律者，形成电子病毒与生物病毒，任何生物都会在侵蚀中慢慢死去，任何电子工具都会被轻松破解。
@@ -1009,9 +1012,8 @@ Button/Tooltip/LaunchDivineKey4th=将第四神之键发射升空
 Button/Tooltip/LightningRod=解锁泰坦机甲、御雷机甲的雷电分支单位，并可研究雷电减伤。
 Button/Tooltip/LightningRod2=使蓄电塔升级为高压蓄电塔，可以解锁终极雷电分支机甲、升级麻痹时间。
 Button/Tooltip/MHT3=机动突击型载具。可以使用锁定技能在移动状态下快速开火。<n/><n/><c val="#ColorAttackInfo">可以对地和对空。</c>
-Button/Tooltip/MHTUpgrade=使<c val="ffff8a">和平使者</c>额外造成50%的火焰元素伤害。
+Button/Tooltip/MHTUpgrade=使<c val="ffff8a">和平使者</c>额外造成75%的火焰元素伤害。
 Button/Tooltip/MedivacAutoLoad=使“赫利俄斯”装载距离+3，并能自动装载生命值低于15%的单位(需要打开自动释放)。如果是生物单位，还可在<d ref="Behavior,MedivacHPBoost,Duration"/>秒内恢复该单位<d ref="Behavior,MedivacHPBoost,Modification.VitalMaxArray[0]*10"/>点生命值
-Button/Tooltip/MedivacAutoLoad2=右键打开自动释放后，可自动装载生命值低于15%的单位。如果是生物单位，还可在<d ref="Behavior,MedivacHPBoost,Duration"/>秒内恢复该单位<d ref="Behavior,MedivacHPBoost,Modification.VitalMaxArray[0]*10"/>点生命值
 Button/Tooltip/MeiBuilding=为<c val="FFFF00">雷电芽衣</c>提供升级
 Button/Tooltip/MeiC2=第三代女武神装甲，设计理念为「白刃战特化突击装甲」。<n/><n/><c val="#ColorAttackInfo">能力:物理伤害、浮空。</c>
 Button/Tooltip/MeiC2Attack=快速五连斩<n/>第一击：100%攻击力物理伤害<n/>第二击：120%攻击力物理伤害<n/>第三击：75%攻击力物理伤害<n/>第四击：80%攻击力物理伤害<n/>第五击：250%攻击力物理伤害
@@ -1033,7 +1035,6 @@ Button/Tooltip/MobilizeSkill1=立即在目标位置部署100人口的女武神�
 Button/Tooltip/MobilizeSkill2=立即在目标位置空投100人口机甲部队。<n/><n/><c val="FF0000">扣除40%的当前分数，分数倍率永久降低20%</c>
 Button/Tooltip/MorphToRO_060=变回炮台形态。在这个模式下多维机甲可以自由移动，但只能造成单体伤害。
 Button/Tooltip/MorphToRO_060_Defense=部署为堡垒形态。在此模式下多维机甲可以释放大量弹幕，造成大范围伤害。在此模式下多维机甲无法移动。
-Button/Tooltip/NanoRepair2=治疗一个友方机械单位。<n/><n/><c val="f078ff">每消耗1点能量恢复32点生命值。</c>
 Button/Tooltip/NukeArm=在发射井中部署崩坏能裂变弹。<n/>崩坏能裂变弹由发射井直接发生，可对大范围内的目标造成<d ref="Effect,NukeDamage2,Amount * Effect,NukeDamage2,AreaArray[4].Fraction"/>~ <d ref="Effect,NukeDamage2,Amount"/>点<c val="FF0000">火焰元素伤害</c>。<n/><c val="FFFF00">伤害不分敌我，且主要集中在中心区域</c>
 Button/Tooltip/NukeArmMHT=在发射仓中部署一枚战术核弹。<n/>发射命中后可对大范围内的目标造成<d ref="Effect,NukeDamageMHT,Amount * Effect,NukeDamageMHT,AreaArray[3].Fraction"/>~ <d ref="Effect,NukeDamageMHT,Amount"/>点<c val="FF0000">火焰元素伤害</c>。<n/><c val="FFFF00">伤害不分敌我，且主要集中在中心区域</c>
 Button/Tooltip/NukeCalldown2=向目标发射一颗威力巨大的崩坏能裂变弹，可对大范围内的目标造成<d ref="Effect,NukeDamage2,Amount * Effect,NukeDamage2,AreaArray[4].Fraction"/>~ <d ref="Effect,NukeDamage2,Amount"/>点<c val="FF0000">火焰元素伤害</c>。<n/><c val="FFFF00">伤害不分敌我，且主要集中在中心区域</c>
@@ -1105,14 +1106,13 @@ Button/Tooltip/ResearchDivineKey8th=可以操纵大脑信号、主掌意识的�
 Button/Tooltip/ResearchDivineKey9th=复现第九律者的"地之力量"的神之键，拥有控制重力，扭曲时空、制造黑洞的能力。<n/><n/>可以以重炮形态装备给<c val="FFFF00">女武神·压制者</c>。<n/>如果由<c val="FFFF00">布洛妮娅·扎伊切克</c>装备，则可进一步释放释放其中的力量。在解锁<c val="FFFF00">理之律者</c>装甲后，将会被改装，与理之律者的能力更好结合。
 Button/Tooltip/ResearchDrillClaws=使<c val="ffff8a">毒蛛机甲</c>潜地和激活的速度加快三倍。
 Button/Tooltip/ResearchFighters=为<c val="ffff8a">休伯利安号</c>搭载战斗机库，可以训练并释放轻型战斗机。
-Button/Tooltip/ResearchHiSecAutoTracking=<c val="ffff8a">蜂巢炮台</c>射程+1,<c val="ffff8a">导弹塔</c>射程+1.5,<c val="ffff8a">行星要塞</c>射程+2。可升级2次。
+Button/Tooltip/ResearchHiSecAutoTracking=<c val="ffff8a">蜂巢炮台</c>射程+1，<c val="ffff8a">导弹塔</c>射程+1.5，<c val="ffff8a">电磁炮台</c>射程+1，<c val="ffff8a">行星要塞</c>射程+2。可升级2次。
 Button/Tooltip/ResearchNeosteelFrame=使<c val="ffff8a">地堡</c>的舱位增加2，可升级2次。
 Button/Tooltip/ResearchPunisherGrenades=升级<c val="ffff8a">女武神-压制者</c>的武器，使其可以降低敌人的移动速度。
 Button/Tooltip/ResearchShieldWall=<c val="ffff8a">女武神-看守者</c>生命值+20。
 Button/Tooltip/ResearchSuperC=<c val="ffff8a">轨道控制基地</c>的初始能量和能量恢复率提高100%。
 Button/Tooltip/ResearchVHerrscher1st=适用于布洛妮娅的女武神装甲，使用浮游炮远距离攻击，并可在普通模式和骑乘模式之间切换。同时解锁重炮武器<c val="FFFF00">真理之钥</c>。<n/><n/><c val="FFFF00">律者核心改装只能研究一个分支</c>。
 Button/Tooltip/ResearchVHerrscher1st2=适用于布洛妮娅的女武神装甲，使用浮游炮远距离攻击，并可在普通模式和骑乘模式之间切换。同时解锁重炮武器<c val="FFFF00">真理之钥</c>。<n/><n/><c val="FFFF00">律者核心改装只能研究一个分支</c>。
-Button/Tooltip/ReviveKiana=琪亚娜·卡斯兰娜音生命值过低从战场上撤离后，可在此重新部署。
 Button/Tooltip/Roach=突击单位。潜地后能快速恢复生命值。可以变异为熔岩帝王。<n/><n/><c val="ffff8a">可以对地。</c>
 Button/Tooltip/SCV2=基础工作单位。用于采集资源、建造人类建筑和修理。<n/><n/><c val="#ColorAttackInfo">可以对地。</c>
 Button/Tooltip/SaAbil1=短暂延迟后，在单位周围不断随机召唤火焰柱、雷击和冰封，分别造成<d ref="Effect,SaAbil1FireDamage,Amount"/>点对应的元素伤害伤害，并附加点燃、麻痹和冻结。
@@ -1218,6 +1218,7 @@ Button/Tooltip/ValkyrjaDefence=使所有女武神在菌毯上时的生命流失�
 Button/Tooltip/ValkyrjaShield=使制式女武神的生命值提高20点。
 Button/Tooltip/ValkyrjaSnipe=精准的一击，造成<d ref="Effect,ValkyrjaSnipeDamage,Amount"/>点物理伤害。<n/><n/><c val="#ColorAttackInfo">只能对生物单位使用。</c>
 Button/Tooltip/VoidArchives=第一神之键，可以快速维修机械单位，以及短时间内构造复现别的单位。
+Button/Tooltip/VoidRepair=修复一个友方机械单位（包括自身）。<n/><n/><c val="f078ff">每秒恢复<d ref="Effect,VoidRepair,RechargeVitalRate" precision="1"/>点固定生命值和<d ref="Effect,VoidRepair,RechargeVitalFraction*100" precision="1"/>%最大生命值。
 Button/Tooltip/WeaponB1=回收当前武器，重新使用SU-22榴弹炮(可再次更换其他武器)，退还部分武器费用<n/><n/><c val="FFFF00">可以对地</c>
 Button/Tooltip/WeaponB15=在神州发现的球状量子计算机，与浮现出“苍玄”之名的魂钢连接而得的火炮。<n/><n/>可在火、雷、冰三元素间变形切换<n/>火：蓄力发射火球，造成火焰伤害。击中时点燃敌人6秒<n/>雷：蓄力发射雷珠，造成雷电伤害。击中时有15%概率使敌人脆弱3秒<n/>冰：发射持续的冰雾，造成冰冻伤害。击中时降低敌人50%的移速，有5%的概率冻结3秒<n/><n/><c val="FFFF00">可以对地和对空</c>
 Button/Tooltip/WeaponB18=米高扬中央设计制造局设计的崩坏能重兵器，可以造成直线火焰伤害，对轻甲单位造成额外伤害。<n/><n/><c val="FFFF00">可以对地</c>
@@ -1633,6 +1634,24 @@ DocInfo/PatchNote382=·修复了部分重叠的快捷键
 DocInfo/PatchNote383=·修复了依赖项问题
 DocInfo/PatchNote384=·移除了娑 -「一心三惑」的建筑标签
 DocInfo/PatchNote385=·修复了娑无法释放必杀技的bug
+DocInfo/PatchNote386=·强制关闭了简易命令面板
+DocInfo/PatchNote387=·取消了所有英雄女武神的人口占用
+DocInfo/PatchNote388=·白练和月光闪避时抑制碰撞
+DocInfo/PatchNote389=·英雄女武神复活时优先选择地面路径联通的基地
+DocInfo/PatchNote390=·下调了毒蛛机甲及其衍生单位的造价和训练时间
+DocInfo/PatchNote391=·MHT-3和平使者的射程提高到10，附加火伤提高到75%
+DocInfo/PatchNote392=·瞬时自动追踪升级使电磁炮台射程+1
+DocInfo/PatchNote393=·修复了电磁炮台的名称显示
+DocInfo/PatchNote394=·降低了崩坏能裂变弹和战术裂变弹的造价和部署时间
+DocInfo/PatchNote395=·提高了光翼展开的伤害
+DocInfo/PatchNote396=·赫利俄斯的治疗效果改为每1游戏秒恢复12+3%的生命，不再消耗能量，可对载物使用
+DocInfo/PatchNote397=·虚空万藏的治疗效果改为每1游戏秒恢复80+10%的生命，不再消耗能量，可对载物和载具使用
+DocInfo/PatchNote398=·战场救援系统恢复的生命值改为30%
+DocInfo/PatchNote399=·移除了高级医疗系统升级
+DocInfo/PatchNote400=·将狙杀和防暴护盾升级移动到了圣芙蕾雅学园中
+DocInfo/PatchNote401=·将战场救援系统升级移动到了圣1504研究所中
+DocInfo/PatchNote402=·更新了选择角色菜单的文本，并予以高亮提示
+DocInfo/PatchNote403=·修复了月光双枪位置错误和阳光海滩皮肤的权重错误
 Effect/Name/AcidSalivaU=UL_030 Damage
 Effect/Name/AddCasterLife1500=Add Caster Life 1500
 Effect/Name/AddDizzyCD=Add Dizzy CD
@@ -1847,6 +1866,11 @@ Effect/Name/FlyingEnd=结束浮空
 Effect/Name/ForceDizzy10s=Force Dizzy 10s
 Effect/Name/Fragile50=Fragile50
 Effect/Name/Frozen=Frozen
+Effect/Name/HeliosHPBoost=Helios HP Boost
+Effect/Name/HeliosHPModify=Helios HP Modify
+Effect/Name/HeliosHeal=Heal
+Effect/Name/HeliosLoadCommand=Helios Load Command
+Effect/Name/HeliosLoadCommandCP=Helios Load Command CP
 Effect/Name/Herrscher1stAddBehavior=附加真理构造搜索
 Effect/Name/Herrscher1stBehavior=附加真理构造行为
 Effect/Name/Herrscher2ReboundTrigger=Herrscher 2 Rebound Trigger
@@ -2218,10 +2242,7 @@ Effect/Name/MHT3WeaponFireDamage=MHT-3 Weapon Fire Damage
 Effect/Name/MHT3WeaponSet=MHT-3 Weapon Set
 Effect/Name/MHTDefence=防御状态
 Effect/Name/MHTDefenceRemove=防御状态 移除
-Effect/Name/MedivacHPBoost=Medivac HP Boost
 Effect/Name/MedivacHeal2=Heal
-Effect/Name/MedivacLoadCommand=Medivac Load Command
-Effect/Name/MedivacLoadCommandCP=Medivac Load Command CP
 Effect/Name/MeiC2Blade=MeiC2 Blade
 Effect/Name/MeiC2BladeDamage=MeiC2 Blade Damage
 Effect/Name/MeiC2Buff=MeiC2Buff
@@ -2250,7 +2271,6 @@ Effect/Name/MissileRebound2=Missile Rebound
 Effect/Name/MobilizeSkill1Trigger=Mobilize Skill 1 Trigger
 Effect/Name/MobilizeSkill2Trigger=Mobilize Skill 2 Trigger
 Effect/Name/MoveFowardForce=向前移动(力)
-Effect/Name/NanoRepair2=Nano-Repair
 Effect/Name/NoCommandCaster=No Command Caster
 Effect/Name/NoCommandRemoveCaster=No Command Remove Caster
 Effect/Name/NoDeathSa=No Death Sa
@@ -2611,6 +2631,7 @@ Effect/Name/ValkyrjaSnipeCase=Valkyrja Snipe Case
 Effect/Name/ValkyrjaSnipeDamage=Valkyrja Snipe Damage
 Effect/Name/ValkyrjaSnipeHigherCP=Valkyrja Snipe Higher CP
 Effect/Name/VoidEffect=空效果
+Effect/Name/VoidRepair=Void Repair
 Effect/Name/VortexWarpable=Vortex Warpable
 Effect/Name/WeaponB15ChargePersistent=Weapon B15 Charge Persistent
 Effect/Name/WeaponB15FireBurn=Weapon B15 Fire Burn
@@ -2932,7 +2953,6 @@ RequirementNode/Tooltip/CountUpgradeStigmataTG3CompleteOnly=在兵营附属科�
 RequirementNode/Tooltip/CountUpgradeStigmataTG4CompleteOnly3072367877=在兵营附属科技实验室中研究
 RequirementNode/Tooltip/CountUpgradeVHerrscher1stCompleteOnly2613565233=需要解锁理之律者装甲
 RequirementNode/Tooltip/CountUpgradeValkyrjaSnipeCompleteOnly3072367877=在兵营附属科技实验室中研究
-RequirementNode/Tooltip/Eq1641998733CountUnitKianaC2QueuedOrBetter0=场上无琪亚娜·卡斯兰娜
 RequirementNode/Tooltip/GTE1425793793CountUpgradeReduceFireCompleteOnly3=火焰减伤等级达到3
 RequirementNode/Tooltip/GTE1530294542CountBehaviorSeeleC1UICompleteOnlyAtUnit250=暗影值不少于250点(一格)
 RequirementNode/Tooltip/GTE2706314631CountUpgradeReduceThunderCompleteOnly3=雷电减伤等级达到3
@@ -2951,16 +2971,18 @@ RequirementNode/Tooltip/LTE57336687CountUpgradeSupplyCompleteOnly100=人口少�
 RequirementNode/Tooltip/LTE960270413TechTreeCheatSumCountUpgradeDivineKey1stQueuedOrBetterCountUpgradeDivineKey2ndQueuedOrBetterCountUpgradeDivineKey3rdQueuedOrBetterCountUpgradeDivineKey4thQueuedOrBetterCountUpgradeDivineKe1236579968=有剩余的考古次数
 RequirementNode/Tooltip/NoStigmataG1=与其它修改伤害类型的圣痕不可共存
 RequirementNode/Tooltip/Not1513537511CountUnitNukeMHTQueuedOrBetterAtUnit=发射仓中无战术核弹
+RequirementNode/Tooltip/Not157438788SumCountUnitAlias_BronyaQueuedOrBetterCountUnitAlias_BronyaRevivable=没有部署过布洛妮娅·扎伊切克
 RequirementNode/Tooltip/Not157438788SumCountUnitBronyaC2QueuedOrBetterCountUnitBronyaC2RevivableCountUnitBronyaC7QueuedOrBetterCountUnitBronyaC7RevivableCountUnitBronyaC7MotorQueuedOrBetterCountUnitBronyaC7MotorRevivable=没有部署过布洛妮娅·扎伊切克
+RequirementNode/Tooltip/Not1982903751SumCountUnitAlias_KianaQueuedOrBetterCountUnitAlias_KianaRevivable=没有部署过琪亚娜·卡斯兰娜
 RequirementNode/Tooltip/Not1982903751SumCountUnitKianaC4QueuedOrBetterCountUnitKianaC4RevivableCountUnitKianaC2QueuedOrBetterCountUnitKianaC2RevivableCountUnitKianaC1QueuedOrBetterCountUnitKianaC1Revivable=没有部署过琪亚娜·卡斯兰娜
 RequirementNode/Tooltip/Not2525757573CountUpgradeAvatarNoBronyaCompleteOnly=已有其他玩家选择该角色
 RequirementNode/Tooltip/Not2525757573CountUpgradeAvatarNoKianaCompleteOnly=已有其他玩家选择该角色
 RequirementNode/Tooltip/Not2525757573CountUpgradeAvatarNoMeiCompleteOnly=已有其他玩家选择该角色
 RequirementNode/Tooltip/Not2525757573CountUpgradeAvatarNoSeeleCompleteOnly=已有其他玩家选择该角色
-RequirementNode/Tooltip/Not2541659352SumCountUnitSeeleC1QueuedOrBetterCountUnitSeeleC1Revivable=没有部署过希儿·芙乐艾
+RequirementNode/Tooltip/Not2541659352SumCountUnitAlias_SeeleQueuedOrBetterCountUnitAlias_SeeleRevivable=没有部署过希儿·芙乐艾
 RequirementNode/Tooltip/Not2595134477CountUnitDivineKeysQueuedOrBetter=尚未建造神之键阁
 RequirementNode/Tooltip/Not3138259586SumCountBehaviorWeaponUseB28CompleteOnlyCountBehaviorStarOfEdenWorldCompleteOnly=StarOfEdenWorld
-RequirementNode/Tooltip/Not3381661893SumCountUnitMeiC2QueuedOrBetterCountUnitMeiC2Revivable=没有部署过雷电芽衣
+RequirementNode/Tooltip/Not3381661893SumCountUnitAlias_MeiQueuedOrBetterCountUnitAlias_MeiRevivable=没有部署过雷电芽衣
 RequirementNode/Tooltip/Not3457755508CountUnitNukeQueuedOrBetterAtUnit=该发射井中无崩坏能裂变弹
 RequirementNode/Tooltip/Not3631109650CountBehaviorStigmataCG5CompleteOnlyAtUnit3072367877=只能叠加一层
 RequirementNode/Tooltip/Not3631109650CountBehaviorStigmataPG4CompleteOnlyAtUnit=只能叠加一层
@@ -2974,8 +2996,6 @@ RequirementNode/Tooltip/Or152037771CountUnitFusionCoreCompleteOnlyTechTreeCheat=
 RequirementNode/Tooltip/Or1565659668CountBehaviorKianaC2BranchReadyCompleteOnlyAtUnit3957291497CountBehaviorKianaC2BranchReadyEvadeCompleteOnlyAtUnit880504611=正在打出普通攻击第二段或触发闪避技能
 RequirementNode/Tooltip/StigmataValidCount=圣痕数量未达到上限
 RequirementNode/Tooltip/Sum2900348999CountBehaviorLightningRodFactoryCompleteOnlyAtUnit1653467348CountBehaviorLightningRodFactory2CompleteOnlyAtUnit1236727148CountBehaviorIceTabletFactoryCompleteOnlyAtUnitCountBehaviorIceTab4120943232=需要附属蓄电塔、石碑或科技实验室
-SimpleDisplay/Attack=<s val="@@@SimpleCommandRow">按%hotkey键</c>然后</s> <IMG path="Assets\Textures\tutorialmouseleftbuttondown.dds" alignment="absolutemiddle"/> <s val="@@@SimpleCommandRow">地面自动攻击</s>
-SimpleDisplay/SeeleC1Upgrade2=
 Text/Rank/Herrscher=<c val="FFFF00">崩坏使徒</c>
 Text/Rank/KianaC1=空之律者
 Text/Rank/KianaC2=领域装·白练
@@ -3089,9 +3109,10 @@ Unit/Name/MeiC2=雷电芽衣
 Unit/Name/MeiC2Wave=冲击波 - MeiC2
 Unit/Name/MeiC5=雷电芽衣
 Unit/Name/Mikoyan=米高扬设计制造局
+Unit/Name/Nuke=崩坏能裂变弹
 Unit/Name/Nuke2=崩坏能裂变弹
-Unit/Name/Nuke4=战术核弹 头
-Unit/Name/NukeMHT=战术核弹 头
+Unit/Name/NukeMHT=战术裂变弹
+Unit/Name/NukeMHTMissile=战术裂变弹
 Unit/Name/NukeSilo=崩坏能裂变弹发射井
 Unit/Name/PlanetaryFortress2=总部要塞
 Unit/Name/PunisherGrenadesLMWeapon=马尔科夫C型
@@ -3121,7 +3142,7 @@ Unit/Name/RO_060Barrage=RO_060 Barrage
 Unit/Name/RO_060Missile=RO_060 Missile
 Unit/Name/RO_060_Defense=多维机甲
 Unit/Name/RPC6626=RPC-6626
-Unit/Name/Railgun=导弹塔
+Unit/Name/Railgun=电磁炮台
 Unit/Name/RailgunMissile=电磁炮弹
 Unit/Name/Ravager=熔岩帝王
 Unit/Name/RavagerBurrowed=熔岩帝王
@@ -3162,7 +3183,6 @@ Unit/Name/WeaponK23=天火圣裁
 Unit/Name/WeaponK5=索尔之锤
 Unit/Name/WeaponM13=虚无之刃
 Unit/Name/Zergling=咬咬怪
-Upgrade/Name/AdvancedMedic=高级医疗系统
 Upgrade/Name/B15=苍玄之书
 Upgrade/Name/B18=地狱火III型
 Upgrade/Name/B22=M134火神机枪

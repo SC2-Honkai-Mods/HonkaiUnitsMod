@@ -19,6 +19,37 @@
             <Unit value="WeaponK23"/>
         </InfoArray>
     </CAbilTrain>
+    <CAbilEffectTarget id="HeliosHeal">
+        <Alignment value="Positive"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Flags index="AllowMovement" value="1"/>
+        <Flags index="AutoCast" value="1"/>
+        <Flags index="AutoCastOn" value="1"/>
+        <Flags index="NoDeceleration" value="1"/>
+        <Flags index="ReExecutable" value="1"/>
+        <Flags index="Smart" value="1"/>
+        <Flags index="ExternalAcquirePassenger" value="1"/>
+        <TargetFilters value="Biological,Visible;Self,Enemy,Structure,Missile,Uncommandable,Dead,Hidden,Invulnerable"/>
+        <TargetSorts RequestCount="1">
+            <SortArray value="TSAlliancePassive"/>
+            <SortArray value="TSLifeFraction"/>
+            <SortArray value="TSDistance"/>
+        </TargetSorts>
+        <Range value="4"/>
+        <Arc value="14.9963"/>
+        <SmartValidatorArray value="healSmartTargetFilters2"/>
+        <SmartValidatorArray value="NotWarpingIn2"/>
+        <AutoCastAcquireLevel value="Defensive"/>
+        <AutoCastFilters value="Visible;Neutral,Enemy,Missile,Stasis,Dead,Invulnerable"/>
+        <AutoCastRange value="6"/>
+        <AutoCastValidatorArray value="NotWarpingIn2"/>
+        <UseMarkerArray index="Approach" value="0"/>
+        <UseMarkerArray index="Prep" value="0"/>
+        <AINotifyEffect value="MedivacHeal2"/>
+        <DefaultError value="RequiresHealTarget"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="HealHelios"/>
+        <AcquireAttackers value="1"/>
+    </CAbilEffectTarget>
     <CAbilMorph id="MorphToMeiC2">
         <EditorCategories value="AbilityorEffectType:Units"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="TrainMeiC2" Requirements="KianaC2CanMorph"/>
@@ -199,7 +230,7 @@
         <CmdButtonArray index="Execute" DefaultButtonFace="SaUltimate"/>
     </CAbilEffectTarget>
     <CAbilArmMagazine id="ArmSiloWithNuke">
-        <InfoArray index="Ammo1" Time="250">
+        <InfoArray index="Ammo1" Time="180">
             <Charge Link="Abil/##id##"/>
             <Cooldown Link="Abil/##id##"/>
         </InfoArray>
@@ -680,7 +711,7 @@
         <EditorCategories value="AbilityorEffectType:Structures"/>
         <Launch value="ReleaseAtSource"/>
         <Flags index="BestUnit" value="1"/>
-        <InfoArray index="Ammo1" Time="30" Unit="NukeMHT">
+        <InfoArray index="Ammo1" Time="25" Unit="NukeMHT">
             <Charge Link="Abil/##id##"/>
             <Cooldown Link="Abil/##id##"/>
             <Button DefaultButtonFace="NukeArmMHT" Requirements="TrainNukeMHT"/>
@@ -794,19 +825,19 @@
             <Button DefaultButtonFace="RO_033" Requirements="RequireFurnace"/>
             <Unit value="RO_033"/>
         </InfoArray>
-        <InfoArray index="Train15" Time="14">
+        <InfoArray index="Train15" Time="5">
             <Button DefaultButtonFace="RO_040"/>
             <Unit value="RO_040"/>
         </InfoArray>
-        <InfoArray index="Train16" Time="18">
+        <InfoArray index="Train16" Time="6">
             <Button DefaultButtonFace="RO_041" Requirements="RequireLightningRod"/>
             <Unit value="RO_041"/>
         </InfoArray>
-        <InfoArray index="Train17" Time="18">
+        <InfoArray index="Train17" Time="6">
             <Button DefaultButtonFace="RO_042" Requirements="RequireIceTablet"/>
             <Unit value="RO_042"/>
         </InfoArray>
-        <InfoArray index="Train18" Time="18">
+        <InfoArray index="Train18" Time="6">
             <Button DefaultButtonFace="RO_047" Requirements="RequireFurnace"/>
             <Unit value="RO_047"/>
         </InfoArray>
@@ -1349,9 +1380,9 @@
             <Button DefaultButtonFace="ResearchDivineKey12th" Requirements="DivineKey12thCanResearch"/>
         </InfoArray>
     </CAbilResearch>
-    <CAbilEffectTarget id="AutoLoad">
+    <CAbilEffectTarget id="HeliosAutoLoad">
         <EditorCategories value="AbilityorEffectType:Units"/>
-        <Effect index="0" value="MedivacLoadCommandCP"/>
+        <Effect index="0" value="HeliosLoadCommandCP"/>
         <Flags index="AutoCast" value="1"/>
         <TargetFilters value="Ground,Visible;Ally,Neutral,Enemy,Air,Structure,Missile,Stasis,Dead,Hidden"/>
         <Range value="4"/>
@@ -1361,7 +1392,7 @@
         <AutoCastFilters value="Ground,Visible;Ally,Neutral,Enemy,Structure,Invulnerable"/>
         <AutoCastRange value="6"/>
         <AutoCastValidatorArray value="TargetHP25p"/>
-        <CmdButtonArray index="Execute" DefaultButtonFace="MedivacAutoLoad2" Requirements="MedivacAutoLoadResearched"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="HeliosAutoLoad" Requirements="MedivacAutoLoadResearched"/>
     </CAbilEffectTarget>
     <CAbilResearch id="HumanTech">
         <EditorCategories value="AbilityorEffectType:Structures"/>
@@ -1405,11 +1436,6 @@
             <Resource index="Minerals" value="250"/>
             <Resource index="Vespene" value="125"/>
             <Button DefaultButtonFace="MicroFiltering" State="Restricted" Requirements="SCVGatherCanUpgrade"/>
-        </InfoArray>
-        <InfoArray index="Research10" Time="120" Upgrade="AdvancedMedic">
-            <Resource index="Minerals" value="200"/>
-            <Resource index="Vespene" value="150"/>
-            <Button DefaultButtonFace="AdvancedMedic" Requirements="AdvancedMedicCanUpgrade"/>
         </InfoArray>
         <InfoArray index="Research11" Time="170" Upgrade="OrbitalStrike2">
             <Resource index="Minerals" value="75"/>
@@ -1847,7 +1873,11 @@
         <Flags index="NoDeceleration" value="1"/>
         <Flags index="ReExecutable" value="1"/>
         <Flags index="Smart" value="1"/>
+        <Flags index="PassengerAcquireExternal" value="1"/>
+        <Flags index="PassengerAcquirePassengers" value="1"/>
+        <Flags index="PassengerAcquireTransport" value="1"/>
         <Flags index="TransportAcquirePassengers" value="1"/>
+        <Flags index="ExternalAcquirePassenger" value="1"/>
         <TargetFilters value="Mechanical,Visible;Enemy,Missile,UnderConstruction,Dead,Hidden"/>
         <TargetSorts RequestCount="1">
             <SortArray value="TSAlliancePassive"/>
@@ -1868,6 +1898,8 @@
         <DefaultError value="RequiresHealTarget"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="Heal"/>
         <AcquireAttackers value="1"/>
+        <Effect index="0" value="VoidRepair"/>
+        <AINotifyEffect value="VoidRepair"/>
     </CAbilEffectTarget>
     <CAbilTransport id="CosmicJuggernautTransport">
         <OrderArray index="0">
@@ -2208,6 +2240,7 @@
     </CAbilEffectTarget>
     <CAbilEffectTarget id="MULERepair">
         <Flags index="AutoCastOn" value="1"/>
+        <Flags index="PassengerAcquireTransport" value="1"/>
     </CAbilEffectTarget>
     <CAbilEffectTarget id="RO_033Abli1">
         <EditorCategories value="AbilityorEffectType:Units"/>
@@ -2259,6 +2292,7 @@
     </CAbilEffectTarget>
     <CAbilEffectTarget id="Repair">
         <Flags index="AutoCastOn" value="1"/>
+        <Flags index="PassengerAcquireTransport" value="1"/>
     </CAbilEffectTarget>
     <CAbilMorph id="LightningRodMorph">
         <EditorCategories value="AbilityorEffectType:Structures"/>
@@ -3044,7 +3078,8 @@
         <Flags index="AutoCast" value="1"/>
         <Flags index="AutoCastOn" value="1"/>
         <Cost>
-            <Cooldown TimeUse="25"/>
+            <Charge Link="Abil/DefensiveMatrix"/>
+            <Cooldown Link="Abil/DefensiveMatrix" TimeUse="25"/>
         </Cost>
         <AutoCastAcquireLevel value="Defensive"/>
         <AutoCastFilters value="Visible;Player,Ally,Neutral"/>
@@ -3395,9 +3430,6 @@
         <InfoArray index="Train4" Time="140"/>
     </CAbilTrain>
     <CAbilBuild id="TerranBuild">
-        <InfoArray index="Build5" Unit="StFreya">
-            <Button Requirements="HaveSupplyDepot"/>
-        </InfoArray>
         <InfoArray index="Build6">
             <Button State="Available" Requirements="HaveHighTower"/>
         </InfoArray>
@@ -3410,18 +3442,21 @@
         <InfoArray index="Build11" Unit="AntiEntropyFactory">
             <Button DefaultButtonFace="AntiEntropyFactory"/>
         </InfoArray>
-        <InfoArray index="Build13" Unit="HighTower" Time="75">
-            <Button DefaultButtonFace="HighTower" Requirements="HaveSupplyDepot"/>
-        </InfoArray>
         <InfoArray index="Build14" Unit="ImperialInstitute"/>
-        <InfoArray index="Build15" Unit="Mikoyan" Time="65">
+        <InfoArray index="Build26" Unit="StFreya">
+            <Button Requirements="HaveSupplyDepot"/>
+        </InfoArray>
+        <InfoArray index="Build27" Unit="Mikoyan" Time="65">
             <Button DefaultButtonFace="Mikoyan" Requirements="HaveStarport"/>
         </InfoArray>
-        <InfoArray index="Build18" Unit="SwarmMissile" Time="40">
+        <InfoArray index="Build28" Unit="SwarmMissile" Time="40">
             <Button DefaultButtonFace="SwarmMissile" Requirements="HaveHighTower"/>
         </InfoArray>
-        <InfoArray index="Build21" Unit="Railgun" Time="45">
+        <InfoArray index="Build29" Unit="Railgun" Time="45">
             <Button DefaultButtonFace="Railgun" Requirements="HaveHighTower"/>
+        </InfoArray>
+        <InfoArray index="Build30" Unit="HighTower" Time="75">
+            <Button DefaultButtonFace="HighTower" Requirements="HaveSupplyDepot"/>
         </InfoArray>
     </CAbilBuild>
     <CAbilTrain id="TrainAvatar">

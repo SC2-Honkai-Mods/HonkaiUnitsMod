@@ -36,6 +36,28 @@
         <PeriodicPeriodArray value="0.0625"/>
     </CEffectCreatePersistent>
     <CEffectSet id="DropWeaponDummy"/>
+    <CEffectModifyUnit id="HeliosHPModify">
+        <EditorCategories value=""/>
+        <VitalArray index="Life">
+            <ChangeFraction value="0.015"/>
+        </VitalArray>
+    </CEffectModifyUnit>
+    <CEffectCreateHealer id="HeliosHeal">
+        <ValidatorArray value="noMarkers"/>
+        <ValidatorArray value="NotWarpingIn"/>
+        <ValidatorArray value="HiddenCompareAB"/>
+        <ValidatorArray value="HiddenCompareBA"/>
+        <ValidatorArray value="NotSpineCrawlerUprooted"/>
+        <ValidatorArray value="NotSporeCrawlerUprooted"/>
+        <ValidatorArray value="NotVortexd"/>
+        <ValidatorArray value="NotUncommandable"/>
+        <ValidatorArray value="SourceNotHidden"/>
+        <ValidatorArray value="IsBiological"/>
+        <ValidatorArray value="TargetNot6thB"/>
+        <EditorCategories value="Race:Terran"/>
+        <RechargeVitalRate value="12"/>
+        <RechargeVitalFraction value="0.0312"/>
+    </CEffectCreateHealer>
     <CEffectSet id="MeiC5Attack1DamageSet">
         <DebugTrace value="1"/>
         <EffectArray value="MeiC5Attack1Damage"/>
@@ -1816,7 +1838,7 @@
         <ValidatorArray value="MHTUpgrade"/>
         <Flags index="Impact" value="0"/>
         <Kind value="Splash"/>
-        <Amount value="4"/>
+        <Amount value="6"/>
     </CEffectDamage>
     <CEffectApplyBehavior id="MHTDefence">
         <WhichUnit Value="Caster"/>
@@ -1944,7 +1966,7 @@
     <CEffectLaunchMissile id="NukeLaunchLMMHT">
         <ImpactLocation Value="TargetPoint"/>
         <ImpactEffect value="NukeImpactPercistentMHT"/>
-        <AmmoUnit value="Nuke4"/>
+        <AmmoUnit value="NukeMHTMissile"/>
         <Movers Link="Nuke"/>
     </CEffectLaunchMissile>
     <CEffectEnumArea id="RO_047Search1">
@@ -3315,16 +3337,15 @@
     <CEffectDamage id="KillTarget">
         <Flags index="Kill" value="1"/>
     </CEffectDamage>
-    <CEffectCreateHealer id="NanoRepair2">
+    <CEffectCreateHealer id="VoidRepair">
         <ValidatorArray value="noMarkers"/>
         <ValidatorArray value="NotHidden"/>
         <ValidatorArray value="NotWarpingIn"/>
         <ValidatorArray value="NotThorWreckage"/>
         <ValidatorArray value="NotOdinWreckage"/>
         <ValidatorArray value="NotVortexd"/>
-        <DrainVital value="Energy"/>
-        <DrainVitalCostFactor value="0.0312"/>
-        <RechargeVitalRate value="128"/>
+        <RechargeVitalFraction value="0.1015"/>
+        <RechargeVitalRate value="80"/>
     </CEffectCreateHealer>
     <CEffectSet id="RO_033AbilExplodeSet">
         <EffectArray value="TargetBurn"/>
@@ -3393,7 +3414,7 @@
     <CEffectDamage id="RO_050AbilDamage" parent="DU_WEAP_MISSILE">
         <Amount value="30"/>
     </CEffectDamage>
-    <CEffectApplyBehavior id="MedivacHPBoost">
+    <CEffectApplyBehavior id="HeliosHPBoost">
         <ValidatorArray index="0" value="UnitIsBiological"/>
     </CEffectApplyBehavior>
     <CEffectSwitch id="MedivacHealInitialSwitch">
@@ -3407,18 +3428,18 @@
     <CEffectCreatePersistent id="MedivacHealTargetPersistent">
         <ValidatorArray value="TargetNot6thB"/>
     </CEffectCreatePersistent>
-    <CEffectIssueOrder id="MedivacLoadCommand">
+    <CEffectIssueOrder id="HeliosLoadCommand">
         <WhichUnit Value="Caster"/>
         <Abil value="MedivacTransport"/>
         <Target Value="TargetUnit"/>
     </CEffectIssueOrder>
-    <CEffectCreatePersistent id="MedivacLoadCommandCP">
+    <CEffectCreatePersistent id="HeliosLoadCommandCP">
+        <ValidatorArray value="CanLoad"/>
         <WhichLocation Value="TargetUnit"/>
         <PeriodCount value="2"/>
-        <PeriodicEffectArray value="MedivacLoadCommand"/>
-        <PeriodicEffectArray value="MedivacHPBoost"/>
+        <PeriodicEffectArray value="HeliosLoadCommand"/>
+        <PeriodicEffectArray value="HeliosHPBoost"/>
         <PeriodicPeriodArray value="0"/>
-        <ValidatorArray value="CanLoad"/>
     </CEffectCreatePersistent>
     <CEffectApplyBehavior id="AddPalsyCD">
         <Behavior value="HonkaiPalsyCD"/>
@@ -6383,7 +6404,7 @@
     </CEffectCreatePersistent>
     <CEffectDamage id="KianaC4QTERanged2" parent="DU_WEAP">
         <Kind value="Ranged"/>
-        <Amount value="12"/>
+        <Amount value="20"/>
         <KindSplash value="Ranged"/>
     </CEffectDamage>
     <CEffectLaunchMissile id="KianaC4QTE">
@@ -6614,10 +6635,12 @@
         <Flags index="NoZeroDamageInherit" value="1"/>
     </CEffectDamage>
     <CEffectApplyBehavior id="Flying">
-        <ValidatorArray index="0" value="TargetCanBeThrown"/>
+        <ValidatorArray index="0" value="IsGroundUnit"/>
+        <ValidatorArray value="TargetCanBeThrown"/>
         <ValidatorArray value="TargrtNotBaTi"/>
         <ValidatorArray value="TargetNormalThrow"/>
         <ValidatorArray value="NotThrow"/>
+        <ValidatorArray value="TargetHasNoBronyaC2Shield"/>
         <Duration value="0.6"/>
         <Flags index="UseDuration" value="1"/>
     </CEffectApplyBehavior>

@@ -6,11 +6,20 @@
         <AlertIcon value="Assets\Textures\btn-building-terran-factory.dds"/>
         <EditorCategories value="Race:Terran"/>
     </CButton>
+    <CButton id="HealHelios">
+        <Icon value="Assets\Textures\btn-ability-terran-heal-color.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-terran-heal-color.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
     <CButton id="MeiC5Attack">
         <Icon value="Assets\Textures\Skill_Mei_AC_001.tga"/>
         <AlertIcon value="Assets\Textures\Skill_Mei_AC_001.tga"/>
         <Hotkey value="Button/Hotkey/Attack"/>
-        <SimpleDisplayText value="SimpleDisplay/Attack"/>
+    </CButton>
+    <CButton id="VoidRepair">
+        <Icon value="Assets\Textures\btn-ability-terran-heal-color.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-terran-heal-color.dds"/>
+        <EditorCategories value="Race:Terran"/>
     </CButton>
     <CButton id="TrainMeiC5">
         <Icon value="Assets\Textures\AvatarMeiC2.tga"/>
@@ -350,13 +359,11 @@
         <Icon value="Assets\Textures\Skill_Mei_CK_002.tga"/>
         <AlertIcon value="Assets\Textures\Skill_Mei_CK_002.tga"/>
         <Hotkey value="Button/Hotkey/Branch"/>
-        <SimpleDisplayText value="SimpleDisplay/MeiC2Branch"/>
     </CButton>
     <CButton id="MeiC2Evade">
         <Icon value="Assets\Textures\Skill_Mei_CK_003.tga"/>
         <AlertIcon value="Assets\Textures\Skill_Mei_CK_003.tga"/>
         <Hotkey value="Button/Hotkey/Evade"/>
-        <SimpleDisplayText value="SimpleDisplay/MeiC2Evade"/>
     </CButton>
     <CButton id="R11Skill">
         <Icon value="Assets\Textures\Skill_Rita_Weapon_08.tga"/>
@@ -412,45 +419,38 @@
         <Icon value="Assets\Textures\Skill_Mei_CK_001.tga"/>
         <AlertIcon value="Assets\Textures\Skill_Mei_CK_001.tga"/>
         <Hotkey value="Button/Hotkey/Attack"/>
-        <SimpleDisplayText value="SimpleDisplay/Attack"/>
     </CButton>
     <CButton id="SeeleC1Evade">
         <Icon value="Assets\Textures\Skill_Seele_QT_003.tga"/>
         <AlertIcon value="Assets\Textures\Skill_Seele_QT_003.tga"/>
         <Hotkey value="Button/Hotkey/Evade"/>
-        <SimpleDisplayText value="SimpleDisplay/SeeleC1Evade"/>
     </CButton>
     <CButton id="SeeleC1Ultimate">
         <Icon value="Assets\Textures\Skill_Seele_QT_004.tga"/>
         <AlertIcon value="Assets\Textures\Skill_Seele_QT_004.tga"/>
         <Hotkey value="Button/Hotkey/Ultimate"/>
-        <SimpleDisplayText value="SimpleDisplay/SeeleC1Ultimate"/>
     </CButton>
     <CButton id="SeeleC1Attack">
         <Icon value="Assets\Textures\Skill_Seele_QT_001.tga"/>
         <AlertIcon value="Assets\Textures\Skill_Seele_QT_001.tga"/>
         <Hotkey value="Button/Hotkey/Attack"/>
         <Universal value="1"/>
-        <SimpleDisplayText value="SimpleDisplay/SeeleC1Attack"/>
     </CButton>
     <CButton id="RemoveStigmatas">
         <Icon value="Assets\Textures\btn-command-cancel.dds"/>
         <AlertIcon value="Assets\Textures\btn-command-cancel.dds"/>
         <Universal value="1"/>
-        <SimpleDisplayText value="SimpleDisplay/RemoveStigmatas"/>
     </CButton>
     <CButton id="SeeleC1Charge">
         <Icon value="Assets\Textures\Skill_Seele_QT_002.tga"/>
         <AlertIcon value="Assets\Textures\Skill_Seele_QT_002.tga"/>
         <Hotkey value="Button/Hotkey/Branch"/>
         <Universal value="1"/>
-        <SimpleDisplayText value="SimpleDisplay/SeeleC1Charge"/>
     </CButton>
     <CButton id="SeeleC1UltCharge">
         <Icon value="Assets\Textures\Skill_Seele_QT_002.tga"/>
         <AlertIcon value="Assets\Textures\Skill_Seele_QT_002.tga"/>
         <Hotkey value="Button/Hotkey/Branch"/>
-        <SimpleDisplayText value="SimpleDisplay/SeeleC1UltCharge"/>
     </CButton>
     <CButton id="SiegeTankUpgrade">
         <Icon value="Assets\Textures\Wireframe-RO_036_Cannon.tga"/>
@@ -591,7 +591,7 @@
         <Icon value="Assets\Textures\btn-upgrade-terran-nova-liferegen.dds"/>
         <AlertIcon value="Assets\Textures\btn-upgrade-terran-nova-liferegen.dds"/>
     </CButton>
-    <CButton id="MedivacAutoLoad2">
+    <CButton id="HeliosAutoLoad">
         <Icon value="Assets\Textures\btn-upgrade-terran-nova-liferegen.dds"/>
         <AlertIcon value="Assets\Textures\btn-upgrade-terran-nova-liferegen.dds"/>
     </CButton>
@@ -603,10 +603,6 @@
         <Icon value="Assets\Textures\HonkaiStatusFrozen.tga"/>
         <AlertIcon value="Assets\Textures\HonkaiStatusFrozen.tga"/>
         <HotkeyAlias value="PalsyDuration"/>
-    </CButton>
-    <CButton id="NanoRepair2">
-        <Icon value="Assets\Textures\btn-ability-terran-heal-color.dds"/>
-        <AlertIcon value="Assets\Textures\btn-ability-terran-heal-color.dds"/>
     </CButton>
     <CButton id="RO_032Abil">
         <Icon value="Assets\Textures\Wireframe-RO_032_Missile.tga"/>
@@ -980,7 +976,6 @@
         <AlertIcon value="Assets\Textures\KianaC4Ultimate.tga"/>
         <Hotkey value="Button/Hotkey/Ultimate"/>
         <Universal value="1"/>
-        <SimpleDisplayText value="SimpleDisplay/KianaC4Ult"/>
     </CButton>
     <CButton id="Herrscher2RemoveMissile">
         <Icon value="Assets\Textures\btn-ability-protoss-wormholetransit-color.dds"/>
@@ -1091,7 +1086,6 @@
         <AlertIcon value="Assets\Textures\KianaC2_Attack.tga"/>
         <Hotkey value="Button/Hotkey/Attack"/>
         <Universal value="1"/>
-        <SimpleDisplayText value="SimpleDisplay/KianaC2Attack"/>
     </CButton>
     <CButton id="Baneling">
         <Icon value="Assets\Textures\Wireframe-UL_050.tga"/>
@@ -1132,53 +1126,45 @@
         <Icon value="Assets\Textures\KianaC4Attack.tga"/>
         <AlertIcon value="Assets\Textures\KianaC4Attack.tga"/>
         <Universal value="1"/>
-        <SimpleDisplayText value="SimpleDisplay/KianaC4SwtichOff"/>
     </CButton>
     <CButton id="KianaC4Upgrade1">
         <Icon value="Assets\Textures\KianaC4Branch.tga"/>
         <AlertIcon value="Assets\Textures\KianaC4Branch.tga"/>
         <Universal value="1"/>
-        <SimpleDisplayText value="SimpleDisplay/KianaC4Upgrade1"/>
     </CButton>
     <CButton id="KianaC4Branch">
         <Icon value="Assets\Textures\KianaC4Branch.tga"/>
         <AlertIcon value="Assets\Textures\KianaC4Branch.tga"/>
         <Hotkey value="Button/Hotkey/Branch"/>
         <Universal value="1"/>
-        <SimpleDisplayText value="SimpleDisplay/KianaC4Branch"/>
     </CButton>
     <CButton id="KianaC4Attack">
         <Icon value="Assets\Textures\KianaC4Attack.tga"/>
         <AlertIcon value="Assets\Textures\KianaC4Attack.tga"/>
         <Hotkey value="Button/Hotkey/Attack"/>
         <Universal value="1"/>
-        <SimpleDisplayText value="SimpleDisplay/KianaC4Attack"/>
     </CButton>
     <CButton id="KianaC4QTE">
         <Icon value="Assets\Textures\KianaC4qte.tga"/>
         <AlertIcon value="Assets\Textures\KianaC4qte.tga"/>
         <Hotkey value="Button/Hotkey/QTE"/>
         <Universal value="1"/>
-        <SimpleDisplayText value="SimpleDisplay/KianaC4QTE"/>
     </CButton>
     <CButton id="KianaC4Evade">
         <Icon value="Assets\Textures\KianaC2_Evade.tga"/>
         <AlertIcon value="Assets\Textures\KianaC2_Evade.tga"/>
         <Hotkey value="Button/Hotkey/Evade"/>
         <Universal value="1"/>
-        <SimpleDisplayText value="SimpleDisplay/KianaC4Evade"/>
     </CButton>
     <CButton id="KianaC2Upgrade1">
         <Icon value="Assets\Textures\KianaC2_Ultimate.tga"/>
         <AlertIcon value="Assets\Textures\KianaC2_Ultimate.tga"/>
         <Universal value="1"/>
-        <SimpleDisplayText value="SimpleDisplay/KianaC2Upgrade1"/>
     </CButton>
     <CButton id="KianaC2Evade">
         <Icon value="Assets\Textures\KianaC2_Evade.tga"/>
         <AlertIcon value="Assets\Textures\KianaC2_Evade.tga"/>
         <Hotkey value="Button/Hotkey/Evade"/>
-        <SimpleDisplayText value="SimpleDisplay/KianaC2Evade"/>
     </CButton>
     <CButton id="AvatarUpgrades">
         <Icon value="Assets\Textures\AvatarCardPic.tga"/>
@@ -1188,23 +1174,19 @@
         <Icon value="Assets\Textures\KianaC2_Ultimate.tga"/>
         <AlertIcon value="Assets\Textures\KianaC2_Ultimate.tga"/>
         <Hotkey value="Button/Hotkey/Ultimate"/>
-        <SimpleDisplayText value="SimpleDisplay/KianaC2Ultimate"/>
     </CButton>
     <CButton id="KianaC2Branch">
         <Icon value="Assets\Textures\KianaC2_Branch.tga"/>
         <AlertIcon value="Assets\Textures\KianaC2_Branch.tga"/>
         <Hotkey value="Button/Hotkey/Branch"/>
-        <SimpleDisplayText value="SimpleDisplay/KianaC2Branch"/>
     </CButton>
     <CButton id="KianaC2Upgrade2">
         <Icon value="Assets\Textures\KianaC2_Ultimate.tga"/>
         <AlertIcon value="Assets\Textures\KianaC2_Ultimate.tga"/>
-        <SimpleDisplayText value="SimpleDisplay/KianaC2Upgrade2"/>
     </CButton>
     <CButton id="KianaC2Upgrade3">
         <Icon value="Assets\Textures\KianaC2_Evade.tga"/>
         <AlertIcon value="Assets\Textures\KianaC2_Evade.tga"/>
-        <SimpleDisplayText value="SimpleDisplay/KianaC2Upgrade3"/>
     </CButton>
     <CButton id="KianaC2Upgrade4">
         <Icon value="Assets\Textures\KianaC2_Attack.tga"/>
@@ -1214,25 +1196,21 @@
         <Icon value="Assets\Textures\KianaC4Attack.tga"/>
         <AlertIcon value="Assets\Textures\KianaC4Attack.tga"/>
         <Universal value="1"/>
-        <SimpleDisplayText value="SimpleDisplay/KianaC4Upgrade2"/>
     </CButton>
     <CButton id="KianaC4SwtichOn">
         <Icon value="Assets\Textures\KianaC4Attack.tga"/>
         <AlertIcon value="Assets\Textures\KianaC4Attack.tga"/>
         <Universal value="1"/>
-        <SimpleDisplayText value="SimpleDisplay/KianaC4SwtichOn"/>
     </CButton>
     <CButton id="KianaC4Upgrade3">
         <Icon value="Assets\Textures\KianaC2_Evade.tga"/>
         <AlertIcon value="Assets\Textures\KianaC2_Evade.tga"/>
         <Universal value="1"/>
-        <SimpleDisplayText value="SimpleDisplay/KianaC4Upgrade3"/>
     </CButton>
     <CButton id="KianaC4Upgrade4">
         <Icon value="Assets\Textures\KianaC4Behavior.tga"/>
         <AlertIcon value="Assets\Textures\KianaC4Behavior.tga"/>
         <Universal value="1"/>
-        <SimpleDisplayText value="SimpleDisplay/KianaC4Upgrade4"/>
     </CButton>
     <CButton id="MissileTurret">
         <Icon value="Assets\Textures\btn-unit-GunTower2.tga"/>
@@ -1301,10 +1279,6 @@
         <AlertIcon value="Assets\Textures\Wireframe-UL_030.tga"/>
     </CButton>
     <CButton id="UnlockKianaC2">
-        <Icon value="Assets\Textures\AvatarKianaC2.tga"/>
-        <AlertIcon value="Assets\Textures\AvatarKianaC2.tga"/>
-    </CButton>
-    <CButton id="ReviveKiana">
         <Icon value="Assets\Textures\AvatarKianaC2.tga"/>
         <AlertIcon value="Assets\Textures\AvatarKianaC2.tga"/>
     </CButton>

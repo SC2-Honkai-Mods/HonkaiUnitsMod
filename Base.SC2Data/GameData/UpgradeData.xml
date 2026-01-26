@@ -205,9 +205,6 @@
         <Race value="Terr"/>
         <EffectArray Reference="Effect,KianaATTACK,Amount" Value="3"/>
         <EffectArray Reference="Weapon,KianaATTACK,Level" Value="1"/>
-        <EffectArray Reference="Unit,KianaC1,Food" Value="-1"/>
-        <EffectArray Reference="Unit,KianaC2,Food" Value="-1"/>
-        <EffectArray Reference="Unit,KianaC4,Food" Value="-1"/>
         <EditorCategories value="UpgradeType:Talents"/>
         <MaxLevel value="16"/>
         <AffectedUnitArray value="KianaC2"/>
@@ -362,25 +359,21 @@
         <Race value="Terr"/>
         <EffectArray Reference="Effect,SeeleATTACK,Amount" Value="3"/>
         <EffectArray Reference="Weapon,SeeleATTACK,Level" Value="1"/>
-        <EffectArray Reference="Unit,SeeleC1,Food" Value="-1"/>
         <EditorCategories value="UpgradeType:Talents"/>
         <MaxLevel value="16"/>
     </CUpgrade>
     <CUpgrade id="KianaHealth">
         <Race value="Terr"/>
-        <EffectArray Reference="Unit,KianaC1,Food" Value="-1"/>
         <EffectArray Reference="Unit,KianaC1,LifeArmor" Value="1"/>
         <EffectArray Reference="Unit,KianaC1,LifeArmorLevel" Value="1"/>
         <EffectArray Reference="Unit,KianaC1,LifeMax" Value="160"/>
         <EffectArray Reference="Unit,KianaC1,LifeRegenRate" Value="0.500000"/>
         <EffectArray Reference="Unit,KianaC1,LifeStart" Value="160"/>
-        <EffectArray Reference="Unit,KianaC2,Food" Value="-1"/>
         <EffectArray Reference="Unit,KianaC2,LifeArmor" Value="1"/>
         <EffectArray Reference="Unit,KianaC2,LifeArmorLevel" Value="1"/>
         <EffectArray Reference="Unit,KianaC2,LifeMax" Value="160"/>
         <EffectArray Reference="Unit,KianaC2,LifeRegenRate" Value="0.500000"/>
         <EffectArray Reference="Unit,KianaC2,LifeStart" Value="160"/>
-        <EffectArray Reference="Unit,KianaC4,Food" Value="-1"/>
         <EffectArray Reference="Unit,KianaC4,LifeArmor" Value="1"/>
         <EffectArray Reference="Unit,KianaC4,LifeArmorLevel" Value="1"/>
         <EffectArray Reference="Unit,KianaC4,LifeMax" Value="160"/>
@@ -394,7 +387,6 @@
     </CUpgrade>
     <CUpgrade id="SeeleHealth">
         <Race value="Terr"/>
-        <EffectArray Reference="Unit,SeeleC1,Food" Value="-1"/>
         <EffectArray Reference="Unit,SeeleC1,LifeArmor" Value="1"/>
         <EffectArray Reference="Unit,SeeleC1,LifeArmorLevel" Value="1"/>
         <EffectArray Reference="Unit,SeeleC1,LifeMax" Value="160"/>
@@ -407,19 +399,16 @@
     <CUpgrade id="KianaShield">
         <Race value="Terr"/>
         <EffectArray Reference="Unit,KianaC1,ShieldsMax" Value="120"/>
-        <EffectArray Reference="Unit,KianaC1,Food" Value="-1"/>
         <EffectArray Reference="Unit,KianaC1,ShieldArmor" Value="1"/>
         <EffectArray Reference="Unit,KianaC1,ShieldRegenRate" Value="0.500000"/>
         <EffectArray Reference="Unit,KianaC1,ShieldArmorLevel" Value="1"/>
         <EffectArray Reference="Unit,KianaC1,ShieldsStart" Value="120"/>
         <EffectArray Reference="Unit,KianaC2,ShieldsMax" Value="120"/>
-        <EffectArray Reference="Unit,KianaC2,Food" Value="-1"/>
         <EffectArray Reference="Unit,KianaC2,ShieldArmor" Value="1"/>
         <EffectArray Reference="Unit,KianaC2,ShieldRegenRate" Value="0.500000"/>
         <EffectArray Reference="Unit,KianaC2,ShieldArmorLevel" Value="1"/>
         <EffectArray Reference="Unit,KianaC2,ShieldsStart" Value="120"/>
         <EffectArray Reference="Unit,KianaC4,ShieldsMax" Value="120"/>
-        <EffectArray Reference="Unit,KianaC4,Food" Value="-1"/>
         <EffectArray Reference="Unit,KianaC4,ShieldArmor" Value="1"/>
         <EffectArray Reference="Unit,KianaC4,ShieldRegenRate" Value="0.500000"/>
         <EffectArray Reference="Unit,KianaC4,ShieldArmorLevel" Value="1"/>
@@ -434,7 +423,6 @@
         <Race value="Terr"/>
         <EffectArray Reference="Unit,SeeleC1,ShieldsMax" Value="120"/>
         <EffectArray Reference="Unit,SeeleC1,ShieldsStart" Value="120"/>
-        <EffectArray Reference="Unit,SeeleC1,Food" Value="-1"/>
         <EffectArray Reference="Unit,SeeleC1,ShieldArmor" Value="1"/>
         <EffectArray Reference="Unit,SeeleC1,ShieldRegenRate" Value="0.500000"/>
         <EffectArray Reference="Unit,SeeleC1,ShieldArmorLevel" Value="1"/>
@@ -474,6 +462,7 @@
     <CUpgrade id="MedicAutoLoad">
         <EffectArray Operation="Set" Reference="Abil,MedivacTransport,Range" Value="4"/>
         <EditorCategories value="UpgradeType:Talents"/>
+        <Flags index="TechTreeCheat" value="1"/>
     </CUpgrade>
     <CUpgrade id="ReduceIce">
         <MaxLevel value="10"/>
@@ -509,13 +498,6 @@
         <EffectArray Operation="Set" Reference="Abil,FactoryTrain,InfoArray[Train9].Effect" Value="RODrop"/>
         <EffectArray Operation="Set" Reference="Abil,FactoryTrain,InfoArray[Train9].Location" Value="Rally"/>
         <EffectArray Operation="Multiply" Reference="Abil,FactoryTrain,InfoArray[Train9].Time" Value="0.7"/>
-        <EditorCategories value="UpgradeType:Talents"/>
-    </CUpgrade>
-    <CUpgrade id="AdvancedMedic">
-        <Flags index="UpgradeCheat" value="0"/>
-        <Alert value="ResearchComplete"/>
-        <EffectArray Operation="Multiply" Reference="Effect,MedivacHealModifyTargetLife,VitalArray[Life].Change" Value="1.5"/>
-        <EffectArray Operation="Multiply" Reference="Effect,MedivacHealModifyCasterEnergy,VitalArray[Energy].Change" Value="0.975"/>
         <EditorCategories value="UpgradeType:Talents"/>
     </CUpgrade>
     <CUpgrade id="ReduceFire">
@@ -666,7 +648,7 @@
         <EffectArray index="0" Value="1.5"/>
         <EffectArray index="1" Value="2"/>
         <EffectArray index="2" Reference="Weapon,SwarmMissile,Range"/>
-        <EffectArray index="3" removed="1"/>
+        <EffectArray index="3" Reference="Weapon,Railgun,Range"/>
         <EffectArray index="4" removed="1"/>
         <MaxLevel value="2"/>
     </CUpgrade>
@@ -890,7 +872,6 @@
     </CUpgrade>
     <CUpgrade id="MeiHealth">
         <Race value="Terr"/>
-        <EffectArray Reference="Unit,MeiC2,Food" Value="-1"/>
         <EffectArray Reference="Unit,MeiC2,LifeArmor" Value="1"/>
         <EffectArray Reference="Unit,MeiC2,LifeArmorLevel" Value="1"/>
         <EffectArray Reference="Unit,MeiC2,LifeMax" Value="160"/>
@@ -904,7 +885,6 @@
         <Race value="Terr"/>
         <EffectArray Reference="Unit,MeiC2,ShieldsMax" Value="120"/>
         <EffectArray Reference="Unit,MeiC2,ShieldsStart" Value="120"/>
-        <EffectArray Reference="Unit,MeiC2,Food" Value="-1"/>
         <EffectArray Reference="Unit,MeiC2,ShieldArmor" Value="1"/>
         <EffectArray Reference="Unit,MeiC2,ShieldRegenRate" Value="0.500000"/>
         <EffectArray Reference="Unit,MeiC2,ShieldArmorLevel" Value="1"/>
@@ -916,7 +896,6 @@
         <Race value="Terr"/>
         <EffectArray Reference="Effect,MeiATTACK,Amount" Value="3"/>
         <EffectArray Reference="Weapon,MeiATTACK,Level" Value="1"/>
-        <EffectArray Reference="Unit,MeiC2,Food" Value="-1"/>
         <EditorCategories value="UpgradeType:Talents"/>
         <MaxLevel value="16"/>
     </CUpgrade>
@@ -941,19 +920,16 @@
     </CUpgrade>
     <CUpgrade id="BronyaHealth">
         <Race value="Terr"/>
-        <EffectArray Reference="Unit,BronyaC2,Food" Value="-1"/>
         <EffectArray Reference="Unit,BronyaC2,LifeArmor" Value="1"/>
         <EffectArray Reference="Unit,BronyaC2,LifeArmorLevel" Value="1"/>
         <EffectArray Reference="Unit,BronyaC2,LifeMax" Value="160"/>
         <EffectArray Reference="Unit,BronyaC2,LifeRegenRate" Value="0.500000"/>
         <EffectArray Reference="Unit,BronyaC2,LifeStart" Value="160"/>
-        <EffectArray Reference="Unit,BronyaC7,Food" Value="-1"/>
         <EffectArray Reference="Unit,BronyaC7,LifeArmor" Value="1"/>
         <EffectArray Reference="Unit,BronyaC7,LifeArmorLevel" Value="1"/>
         <EffectArray Reference="Unit,BronyaC7,LifeMax" Value="160"/>
         <EffectArray Reference="Unit,BronyaC7,LifeRegenRate" Value="0.500000"/>
         <EffectArray Reference="Unit,BronyaC7,LifeStart" Value="160"/>
-        <EffectArray Reference="Unit,BronyaC7Motor,Food" Value="-1"/>
         <EffectArray Reference="Unit,BronyaC7Motor,LifeArmor" Value="1"/>
         <EffectArray Reference="Unit,BronyaC7Motor,LifeArmorLevel" Value="1"/>
         <EffectArray Reference="Unit,BronyaC7Motor,LifeMax" Value="160"/>
@@ -967,19 +943,16 @@
         <Race value="Terr"/>
         <EffectArray Reference="Unit,BronyaC2,ShieldsMax" Value="120"/>
         <EffectArray Reference="Unit,BronyaC2,ShieldsStart" Value="120"/>
-        <EffectArray Reference="Unit,BronyaC2,Food" Value="-1"/>
         <EffectArray Reference="Unit,BronyaC2,ShieldArmor" Value="1"/>
         <EffectArray Reference="Unit,BronyaC2,ShieldRegenRate" Value="0.500000"/>
         <EffectArray Reference="Unit,BronyaC2,ShieldArmorLevel" Value="1"/>
         <EffectArray Reference="Unit,BronyaC7,ShieldsMax" Value="120"/>
         <EffectArray Reference="Unit,BronyaC7,ShieldsStart" Value="120"/>
-        <EffectArray Reference="Unit,BronyaC7,Food" Value="-1"/>
         <EffectArray Reference="Unit,BronyaC7,ShieldArmor" Value="1"/>
         <EffectArray Reference="Unit,BronyaC7,ShieldRegenRate" Value="0.500000"/>
         <EffectArray Reference="Unit,BronyaC7,ShieldArmorLevel" Value="1"/>
         <EffectArray Reference="Unit,BronyaC7Motor,ShieldsMax" Value="120"/>
         <EffectArray Reference="Unit,BronyaC7Motor,ShieldsStart" Value="120"/>
-        <EffectArray Reference="Unit,BronyaC7Motor,Food" Value="-1"/>
         <EffectArray Reference="Unit,BronyaC7Motor,ShieldArmor" Value="1"/>
         <EffectArray Reference="Unit,BronyaC7Motor,ShieldRegenRate" Value="0.500000"/>
         <EffectArray Reference="Unit,BronyaC7Motor,ShieldArmorLevel" Value="1"/>
@@ -991,9 +964,6 @@
         <Race value="Terr"/>
         <EffectArray Reference="Effect,BronyaATTACK,Amount" Value="3"/>
         <EffectArray Reference="Weapon,BronyaATTACK,Level" Value="1"/>
-        <EffectArray Reference="Unit,BronyaC2,Food" Value="-1"/>
-        <EffectArray Reference="Unit,BronyaC7,Food" Value="-1"/>
-        <EffectArray Reference="Unit,BronyaC7Motor,Food" Value="-1"/>
         <EditorCategories value="UpgradeType:Talents"/>
         <MaxLevel value="16"/>
     </CUpgrade>

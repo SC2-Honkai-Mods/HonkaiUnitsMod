@@ -225,6 +225,10 @@
         <Compare value="GT"/>
         <Behavior value="KianaC1Buff"/>
     </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="NotWarpingIn2">
+        <ResultFailed value="CantTargetThatUnit,Error/CantTargetWarpingInUnits"/>
+        <Behavior value="PowerUserWarpable"/>
+    </CValidatorUnitCompareBehaviorCount>
     <CValidatorUnitCompareBehaviorCount id="SaIsForward">
         <Value value="1"/>
         <Behavior value="SaForward"/>
@@ -1208,4 +1212,13 @@
         <SearchFilters value="Heroic,Visible;Neutral,Enemy,Missile,Stasis,Dead"/>
     </CValidatorLocationEnumArea>
     <CValidatorUnitInWeaponRange id="MissileInRange"/>
+    <CValidatorUnitCompareVital id="healCasterMinEnergy2">
+        <WhichUnit Value="Caster"/>
+        <Compare value="GE"/>
+        <Value value="5"/>
+        <Vital value="Energy"/>
+    </CValidatorUnitCompareVital>
+    <CValidatorUnitFilters id="healSmartTargetFilters2">
+        <Filters value="-;Enemy"/>
+    </CValidatorUnitFilters>
 </Catalog>

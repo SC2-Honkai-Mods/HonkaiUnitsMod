@@ -11,6 +11,40 @@
         <Flags index="TechTreeCheat" value="0"/>
         <Count Link="Alias_AntiEntropyFactory" State="CompleteOnlyAtUnit"/>
     </CRequirementCountUnit>
+    <CRequirementCountUnit id="CountUnitAlias_BronyaQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="Alias_Bronya" State="QueuedOrBetter"/>
+    </CRequirementCountUnit>
+    <CRequirementCountUnit id="CountUnitAlias_BronyaRevivable">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="Alias_Bronya" State="Revivable"/>
+    </CRequirementCountUnit>
+    <CRequirementCountUnit id="CountUnitAlias_KianaQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="Alias_Kiana" State="QueuedOrBetter"/>
+    </CRequirementCountUnit>
+    <CRequirementCountUnit id="CountUnitAlias_KianaRevivable">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="Alias_Kiana" State="Revivable"/>
+    </CRequirementCountUnit>
+    <CRequirementCountUnit id="CountUnitAlias_MeiQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="Alias_Mei" State="QueuedOrBetter"/>
+    </CRequirementCountUnit>
+    <CRequirementCountUnit id="CountUnitAlias_MeiRevivable">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="Alias_Mei" State="Revivable"/>
+    </CRequirementCountUnit>
+    <CRequirementCountUnit id="CountUnitAlias_SeeleQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <Count Link="Alias_Seele" State="QueuedOrBetter"/>
+    </CRequirementCountUnit>
+    <CRequirementCountUnit id="CountUnitAlias_SeeleRevivable">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <Count Link="Alias_Seele" State="Revivable"/>
+    </CRequirementCountUnit>
     <CRequirementCountUnit id="CountUnitImperialInstituteCompleteOnlyTechTreeCheat">
         <Count Link="ImperialInstitute" State="CompleteOnly"/>
     </CRequirementCountUnit>
@@ -21,11 +55,32 @@
         <Flags index="TechTreeCheat" value="0"/>
         <Count Link="WeaponK23" State="CompleteOnly"/>
     </CRequirementCountUnit>
+    <CRequirementCountUpgrade id="CountUpgradeBronyaC2UnlockCompleteOnlyTechTreeCheat">
+        <Count Link="BronyaC2Unlock" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeBronyaC7UnlockCompleteOnlyTechTreeCheat">
+        <Count Link="BronyaC7Unlock" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeKianaC1UnlockCompleteOnlyTechTreeCheat">
+        <Count Link="KianaC1Unlock" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeKianaC2UnlockCompleteOnlyTechTreeCheat">
+        <Count Link="KianaC2Unlock" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeKianaC4UnlockCompleteOnlyTechTreeCheat">
+        <Count Link="KianaC4Unlock" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeKianaC4Upgrade3CompleteOnlyTechTreeCheat">
         <Count Link="KianaC4Upgrade3" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeKianaC4Upgrade4CompleteOnlyTechTreeCheat">
         <Count Link="KianaC4Upgrade4" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeMeiC2UnlockCompleteOnlyTechTreeCheat">
+        <Count Link="MeiC2Unlock" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeSeeleC1UnlockCompleteOnlyTechTreeCheat">
+        <Count Link="SeeleC1Unlock" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeVArmorUpgradeQueuedOrBetter">
         <Flags index="TechTreeCheat" value="0"/>
@@ -131,14 +186,6 @@
         <Flags index="TechTreeCheat" value="0"/>
         <Count Link="KianaC1" State="Revivable"/>
     </CRequirementCountUnit>
-    <CRequirementCountUnit id="CountUnitMeiC2QueuedOrBetter">
-        <Flags index="TechTreeCheat" value="0"/>
-        <Count Link="MeiC2" State="QueuedOrBetter"/>
-    </CRequirementCountUnit>
-    <CRequirementCountUnit id="CountUnitMeiC2Revivable">
-        <Flags index="TechTreeCheat" value="0"/>
-        <Count Link="MeiC2" State="Revivable"/>
-    </CRequirementCountUnit>
     <CRequirementCountUpgrade id="CountUpgradeB6CompleteOnly3077553746">
         <Flags index="TechTreeCheat" value="0"/>
         <Count Link="B6" State="CompleteOnly"/>
@@ -150,10 +197,6 @@
     <CRequirementCountUpgrade id="CountUpgradeBronyaATTACKQueuedOrBetter">
         <Flags index="TechTreeCheat" value="0"/>
         <Count Link="BronyaATTACK" State="QueuedOrBetter"/>
-    </CRequirementCountUpgrade>
-    <CRequirementCountUpgrade id="CountUpgradeBronyaC2UnlockCompleteOnly">
-        <Flags index="TechTreeCheat" value="0"/>
-        <Count Link="BronyaC2Unlock" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeBronyaC2UnlockCompleteOnly2420890365">
         <Flags index="TechTreeCheat" value="0"/>
@@ -316,17 +359,26 @@
         <OperandArray index="0" value="SumCountUpgradeDivineKey1stQueuedOrBetterCountUpgradeDivineKey2ndQueuedOrBetterCountUpgradeDivineKey3rdQueuedOrBetterCountUpgradeDivineKey4thQueuedOrBetterCountUpgradeDivineKey5thQueuedOrBetterCountUp2851595226"/>
         <OperandArray index="1" value="CountUpgradeExtraDivineKeysArchaeologyCompleteOnly"/>
     </CRequirementLTE>
+    <CRequirementNot id="Not157438788SumCountUnitAlias_BronyaQueuedOrBetterCountUnitAlias_BronyaRevivable">
+        <OperandArray index="0" value="SumCountUnitAlias_BronyaQueuedOrBetterCountUnitAlias_BronyaRevivable"/>
+    </CRequirementNot>
     <CRequirementNot id="Not157438788SumCountUnitBronyaC2QueuedOrBetterCountUnitBronyaC2RevivableCountUnitBronyaC7QueuedOrBetterCountUnitBronyaC7RevivableCountUnitBronyaC7MotorQueuedOrBetterCountUnitBronyaC7MotorRevivable">
         <OperandArray index="0" value="SumCountUnitBronyaC2QueuedOrBetterCountUnitBronyaC2RevivableCountUnitBronyaC7QueuedOrBetterCountUnitBronyaC7RevivableCountUnitBronyaC7MotorQueuedOrBetterCountUnitBronyaC7MotorRevivable"/>
+    </CRequirementNot>
+    <CRequirementNot id="Not1982903751SumCountUnitAlias_KianaQueuedOrBetterCountUnitAlias_KianaRevivable">
+        <OperandArray index="0" value="SumCountUnitAlias_KianaQueuedOrBetterCountUnitAlias_KianaRevivable"/>
     </CRequirementNot>
     <CRequirementNot id="Not1982903751SumCountUnitKianaC4QueuedOrBetterCountUnitKianaC4RevivableCountUnitKianaC2QueuedOrBetterCountUnitKianaC2RevivableCountUnitKianaC1QueuedOrBetterCountUnitKianaC1Revivable">
         <OperandArray index="0" value="SumCountUnitKianaC4QueuedOrBetterCountUnitKianaC4RevivableCountUnitKianaC2QueuedOrBetterCountUnitKianaC2RevivableCountUnitKianaC1QueuedOrBetterCountUnitKianaC1Revivable"/>
     </CRequirementNot>
+    <CRequirementNot id="Not2541659352SumCountUnitAlias_SeeleQueuedOrBetterCountUnitAlias_SeeleRevivable">
+        <OperandArray index="0" value="SumCountUnitAlias_SeeleQueuedOrBetterCountUnitAlias_SeeleRevivable"/>
+    </CRequirementNot>
     <CRequirementNot id="Not3138259586SumCountBehaviorWeaponUseB28CompleteOnlyCountBehaviorStarOfEdenWorldCompleteOnly">
         <OperandArray index="0" value="SumCountBehaviorWeaponUseB28CompleteOnlyCountBehaviorStarOfEdenWorldCompleteOnly"/>
     </CRequirementNot>
-    <CRequirementNot id="Not3381661893SumCountUnitMeiC2QueuedOrBetterCountUnitMeiC2Revivable">
-        <OperandArray index="0" value="SumCountUnitMeiC2QueuedOrBetterCountUnitMeiC2Revivable"/>
+    <CRequirementNot id="Not3381661893SumCountUnitAlias_MeiQueuedOrBetterCountUnitAlias_MeiRevivable">
+        <OperandArray index="0" value="SumCountUnitAlias_MeiQueuedOrBetterCountUnitAlias_MeiRevivable"/>
     </CRequirementNot>
     <CRequirementNot id="Not4263432363CountBehaviorWeaponUseB28CompleteOnly">
         <OperandArray index="0" value="CountBehaviorWeaponUseB28CompleteOnly"/>
@@ -648,14 +700,6 @@
         <Flags index="TechTreeCheat" value="0"/>
         <Count Link="NukeMHT" State="QueuedOrBetterAtUnit"/>
     </CRequirementCountUnit>
-    <CRequirementCountUnit id="CountUnitSeeleC1QueuedOrBetter">
-        <Flags index="TechTreeCheat" value="0"/>
-        <Count Link="SeeleC1" State="QueuedOrBetter"/>
-    </CRequirementCountUnit>
-    <CRequirementCountUnit id="CountUnitSeeleC1Revivable">
-        <Flags index="TechTreeCheat" value="0"/>
-        <Count Link="SeeleC1" State="Revivable"/>
-    </CRequirementCountUnit>
     <CRequirementCountUnit id="CountUnitStigmata2CompleteOnlyAtUnit3115234647">
         <Flags index="TechTreeCheat" value="0"/>
         <Count Link="Stigmata2" State="CompleteOnlyAtUnit"/>
@@ -835,10 +879,6 @@
         <Flags index="TechTreeCheat" value="0"/>
         <Count Link="KianaATTACK" State="QueuedOrBetter"/>
     </CRequirementCountUpgrade>
-    <CRequirementCountUpgrade id="CountUpgradeKianaC2UnlockCompleteOnly">
-        <Flags index="TechTreeCheat" value="0"/>
-        <Count Link="KianaC2Unlock" State="CompleteOnly"/>
-    </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeKianaC2Upgrade4InProgressOnly">
         <Flags index="TechTreeCheat" value="0"/>
         <Count Link="KianaC2Upgrade4" State="InProgressOnly"/>
@@ -846,10 +886,6 @@
     <CRequirementCountUpgrade id="CountUpgradeKianaC2Upgrade4QueuedOrBetter">
         <Flags index="TechTreeCheat" value="0"/>
         <Count Link="KianaC2Upgrade4" State="QueuedOrBetter"/>
-    </CRequirementCountUpgrade>
-    <CRequirementCountUpgrade id="CountUpgradeKianaC4UnlockCompleteOnly">
-        <Flags index="TechTreeCheat" value="0"/>
-        <Count Link="KianaC4Unlock" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeKianaHealthQueuedOrBetter">
         <Flags index="TechTreeCheat" value="0"/>
@@ -866,10 +902,6 @@
     <CRequirementCountUpgrade id="CountUpgradeMedicAutoLoadQueuedOrBetter">
         <Flags index="TechTreeCheat" value="0"/>
         <Count Link="MedicAutoLoad" State="QueuedOrBetter"/>
-    </CRequirementCountUpgrade>
-    <CRequirementCountUpgrade id="CountUpgradeMeiC2UnlockCompleteOnly">
-        <Flags index="TechTreeCheat" value="0"/>
-        <Count Link="MeiC2Unlock" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeMeiC2UnlockQueuedOrBetter">
         <Flags index="TechTreeCheat" value="0"/>
@@ -962,10 +994,6 @@
     <CRequirementCountUpgrade id="CountUpgradeSeeleATTACKQueuedOrBetter">
         <Flags index="TechTreeCheat" value="0"/>
         <Count Link="SeeleATTACK" State="QueuedOrBetter"/>
-    </CRequirementCountUpgrade>
-    <CRequirementCountUpgrade id="CountUpgradeSeeleC1UnlockCompleteOnly">
-        <Flags index="TechTreeCheat" value="0"/>
-        <Count Link="SeeleC1Unlock" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeSeeleC1UnlockQueuedOrBetter">
         <Flags index="TechTreeCheat" value="0"/>
@@ -1381,9 +1409,6 @@
     </CRequirementNot>
     <CRequirementNot id="Not2525757573CountUpgradeAvatarNoSeeleCompleteOnly">
         <OperandArray index="0" value="CountUpgradeAvatarNoSeeleCompleteOnly"/>
-    </CRequirementNot>
-    <CRequirementNot id="Not2541659352SumCountUnitSeeleC1QueuedOrBetterCountUnitSeeleC1Revivable">
-        <OperandArray index="0" value="SumCountUnitSeeleC1QueuedOrBetterCountUnitSeeleC1Revivable"/>
     </CRequirementNot>
     <CRequirementNot id="Not2595134477CountUnitDivineKeysQueuedOrBetter">
         <OperandArray index="0" value="CountUnitDivineKeysQueuedOrBetter"/>
@@ -2131,10 +2156,6 @@
         <Flags index="TechTreeCheat" value="0"/>
         <Count Link="ValkyrjaShield" State="QueuedOrBetter"/>
     </CRequirementCountUpgrade>
-    <CRequirementEq id="Eq1641998733CountUnitKianaC2QueuedOrBetter0">
-        <OperandArray index="0" value="CountUnitKianaC2QueuedOrBetter"/>
-        <OperandArray index="1" value="0"/>
-    </CRequirementEq>
     <CRequirementGT id="GTCountBehaviorDG_011Skill2EnableCompleteOnlyAtUnit0">
         <OperandArray index="0" value="CountBehaviorDG_011Skill2EnableCompleteOnlyAtUnit"/>
         <OperandArray index="1" value="0"/>
@@ -2468,6 +2489,23 @@
         <OperandArray value="CountBehaviorWeaponUseB28CompleteOnly"/>
         <OperandArray value="CountBehaviorStarOfEdenWorldCompleteOnly"/>
     </CRequirementSum>
+    <CRequirementSum id="SumCountUnitAlias_BronyaQueuedOrBetterCountUnitAlias_BronyaRevivable">
+        <OperandArray value="CountUnitAlias_BronyaQueuedOrBetter"/>
+        <OperandArray value="CountUnitAlias_BronyaRevivable"/>
+    </CRequirementSum>
+    <CRequirementSum id="SumCountUnitAlias_KianaQueuedOrBetterCountUnitAlias_KianaRevivable">
+        <OperandArray value="CountUnitAlias_KianaQueuedOrBetter"/>
+        <OperandArray value="CountUnitAlias_KianaRevivable"/>
+    </CRequirementSum>
+    <CRequirementSum id="SumCountUnitAlias_MeiQueuedOrBetterCountUnitAlias_MeiRevivable">
+        <OperandArray value="CountUnitAlias_MeiQueuedOrBetter"/>
+        <OperandArray value="CountUnitAlias_MeiRevivable"/>
+    </CRequirementSum>
+    <CRequirementSum id="SumCountUnitAlias_SeeleQueuedOrBetterCountUnitAlias_SeeleRevivable">
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <OperandArray value="CountUnitAlias_SeeleQueuedOrBetter"/>
+        <OperandArray value="CountUnitAlias_SeeleRevivable"/>
+    </CRequirementSum>
     <CRequirementSum id="SumCountUnitBronyaC2QueuedOrBetterCountUnitBronyaC2RevivableCountUnitBronyaC7QueuedOrBetterCountUnitBronyaC7RevivableCountUnitBronyaC7MotorQueuedOrBetterCountUnitBronyaC7MotorRevivable">
         <OperandArray value="CountUnitBronyaC2QueuedOrBetter"/>
         <OperandArray value="CountUnitBronyaC2Revivable"/>
@@ -2499,14 +2537,6 @@
         <OperandArray value="CountUnitKianaC2Revivable"/>
         <OperandArray value="CountUnitKianaC1QueuedOrBetter"/>
         <OperandArray value="CountUnitKianaC1Revivable"/>
-    </CRequirementSum>
-    <CRequirementSum id="SumCountUnitMeiC2QueuedOrBetterCountUnitMeiC2Revivable">
-        <OperandArray value="CountUnitMeiC2QueuedOrBetter"/>
-        <OperandArray value="CountUnitMeiC2Revivable"/>
-    </CRequirementSum>
-    <CRequirementSum id="SumCountUnitSeeleC1QueuedOrBetterCountUnitSeeleC1Revivable">
-        <OperandArray value="CountUnitSeeleC1QueuedOrBetter"/>
-        <OperandArray value="CountUnitSeeleC1Revivable"/>
     </CRequirementSum>
     <CRequirementSum id="SumCountUpgradeBurnDamageQueuedOnlyCountUpgradeBurnDamageInProgressOnly">
         <OperandArray value="CountUpgradeBurnDamageQueuedOnly"/>

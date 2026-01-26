@@ -18,6 +18,10 @@
         <Logic value="OR"/>
         <AttachType value="Point"/>
     </CAttachMethodFilter>
+    <CAttachMethodFilter id="FilterHandLeft">
+        <Keys Keyword="Hand"/>
+        <Keys Keyword="Left"/>
+    </CAttachMethodFilter>
     <CAttachMethodPattern id="AMPatternBC7">
         <Keyword value="Weapon"/>
         <Driver value="Weapon_Cannon_B34Launch2"/>
@@ -35,6 +39,10 @@
         <Base value="::RollingIndex"/>
         <Driver value="SaCoreLM"/>
     </CAttachMethodPattern>
+    <CAttachMethodFilter id="FilterHandRight">
+        <Keys Keyword="Hand"/>
+        <Keys Keyword="Right"/>
+    </CAttachMethodFilter>
     <CAttachMethodFilter id="FilterTarget01">
         <Keys Keyword="Target" Index="1"/>
     </CAttachMethodFilter>
