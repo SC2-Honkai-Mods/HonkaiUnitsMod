@@ -50,6 +50,30 @@
         <CmdButtonArray index="Execute" DefaultButtonFace="HealHelios"/>
         <AcquireAttackers value="1"/>
     </CAbilEffectTarget>
+    <CAbilTransport id="MeiC5DragonTransport">
+        <AbilSetId value="ULdM"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <CmdButtonArray index="Load" DefaultButtonFace="MedivacLoad"/>
+        <CmdButtonArray index="UnloadAll">
+            <Flags index="Hidden" value="1"/>
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+        <CmdButtonArray index="UnloadAt" DefaultButtonFace="MedivacUnloadAll"/>
+        <CmdButtonArray index="UnloadUnit">
+            <Flags index="Hidden" value="1"/>
+        </CmdButtonArray>
+        <CmdButtonArray index="LoadAll">
+            <Flags index="Hidden" value="1"/>
+        </CmdButtonArray>
+        <Flags index="ShowCargoSize" value="0"/>
+        <Flags index="ShowStatus" value="0"/>
+        <MaxCargoCount value="1"/>
+        <MaxCargoSize value="2"/>
+        <TotalCargoSpace value="2"/>
+        <TargetFilters value="Visible;Self,Ally,Neutral,Enemy,Buried,UnderConstruction,Dead,Hidden"/>
+        <LoadValidatorArray value="MeiC5DragonTrackerIsSelf"/>
+        <LoadTransportBehavior value="MeiC5OnDragon"/>
+    </CAbilTransport>
     <CAbilMorph id="MorphToMeiC2">
         <EditorCategories value="AbilityorEffectType:Units"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="TrainMeiC2" Requirements="KianaC2CanMorph"/>
@@ -74,7 +98,7 @@
         <Flags index="CanUseItem" value="0"/>
         <TargetFilters value="Item;-"/>
         <MaxDropRange value="5"/>
-        <InfoArray Alignment="Left" Container="WeaponKatanaSlot" EmptyFace="WeaponPistolSlot">
+        <InfoArray Alignment="Left" EmptyFace="WeaponKatanaSlot">
             <Classes value="Dagger"/>
         </InfoArray>
     </CAbilInventory>
@@ -177,7 +201,7 @@
         <Flags index="CanUseItem" value="0"/>
         <TargetFilters value="Item;-"/>
         <MaxDropRange value="5"/>
-        <InfoArray Alignment="Left" Container="WeaponPistolSlot" EmptyFace="WeaponPistolSlot">
+        <InfoArray Alignment="Left" EmptyFace="WeaponPistolSlot">
             <Classes value="Gun"/>
         </InfoArray>
     </CAbilInventory>
@@ -805,7 +829,7 @@
         <EditorCategories value="AbilityorEffectType:Structures"/>
         <Activity value="UI/Building"/>
         <Range value="6"/>
-        <InfoArray index="Train1" Time="36">
+        <InfoArray index="Train1" Time="22">
             <Button DefaultButtonFace="RO_010"/>
             <Unit value="RO_010"/>
         </InfoArray>
@@ -1432,6 +1456,16 @@
             <Resource index="Vespene" value="100"/>
             <Button DefaultButtonFace="ValkyrjaShield" Requirements="ValkyrjaShieldCR"/>
         </InfoArray>
+        <InfoArray index="Research7" Time="120" Upgrade="Valkyrja1AttackUpgrade">
+            <Resource index="Minerals" value="175"/>
+            <Resource index="Vespene" value="175"/>
+            <Button DefaultButtonFace="Valkyrja1Upgrade" Requirements="Valkyrja1UpgradeCanResearch"/>
+        </InfoArray>
+        <InfoArray index="Research8" Time="120" Upgrade="ValkyrjaGrenade">
+            <Resource index="Minerals" value="125"/>
+            <Resource index="Vespene" value="125"/>
+            <Button DefaultButtonFace="ValkyrjaGrenade" Requirements="GrenadeCanResearch"/>
+        </InfoArray>
         <InfoArray index="Research9" Time="220" Upgrade="MicroFiltering">
             <Resource index="Minerals" value="250"/>
             <Resource index="Vespene" value="125"/>
@@ -1490,11 +1524,15 @@
     </CAbilResearch>
     <CAbilTrain id="HonkaiBarracksTrain">
         <EditorCategories value="AbilityorEffectType:Structures"/>
+        <InfoArray index="Train1" Time="14">
+            <Button DefaultButtonFace="Valkyrja1" State="Restricted"/>
+            <Unit value="Valkyrja1"/>
+        </InfoArray>
         <InfoArray index="Train2" Time="25">
             <Button DefaultButtonFace="Valkyrja2" State="Restricted"/>
             <Unit value="Valkyrja2"/>
         </InfoArray>
-        <InfoArray index="Train4" Time="30">
+        <InfoArray index="Train3" Time="30">
             <Button DefaultButtonFace="Valkyrja3" State="Restricted" Requirements="HaveAttachedTechLab"/>
             <Unit value="Valkyrja3"/>
         </InfoArray>
@@ -2660,7 +2698,7 @@
             <Vital index="Energy" value="50"/>
             <Cooldown TimeUse="15"/>
         </Cost>
-        <TargetFilters value="Biological,Visible;Self,Structure,Destructible,Stasis,Dead,Hidden,Invulnerable"/>
+        <TargetFilters value="Biological,Visible;Self,Structure,Missile,Stasis,Dead,Hidden,Invulnerable"/>
         <TargetSorts RequestCount="1">
             <SortArray value="TSLifeLargestFirst"/>
         </TargetSorts>
@@ -2751,6 +2789,29 @@
         <UninterruptibleArray index="Cast" value="1"/>
         <UninterruptibleArray index="Channel" value="1"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="SevenThundersOfRetribution" Requirements="SevenThundersOfRetributionEquipped"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="Valkyrja1Abil">
+        <Alignment value="Negative"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Flags index="AutoCast" value="1"/>
+        <Flags index="AutoCastOn" value="1"/>
+        <Flags index="PassengerAcquireExternal" value="1"/>
+        <Cost>
+            <Cooldown TimeUse="12"/>
+        </Cost>
+        <TargetFilters value="Ground,Visible;Self,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="2"/>
+        <AutoCastFilters value="Visible;Player,Ally,Neutral"/>
+        <AutoCastRange value="6"/>
+        <AutoCastValidatorArray value="CasterNotHiddenOrInBunker"/>
+        <AutoCastValidatorArray value="noMarkers"/>
+        <CastIntroTime value="0"/>
+        <CastOutroTime value="1"/>
+        <Marker Duration="0.75"/>
+        <UninterruptibleArray index="Prep" value="1"/>
+        <UninterruptibleArray index="Cast" value="1"/>
+        <UninterruptibleArray index="Channel" value="1"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="Valkyrja1Abil"/>
     </CAbilEffectTarget>
     <CAbilEffectInstant id="WeaponSwitchB1">
         <Alignment value="Positive"/>
@@ -3430,6 +3491,9 @@
         <InfoArray index="Train4" Time="140"/>
     </CAbilTrain>
     <CAbilBuild id="TerranBuild">
+        <InfoArray index="Build5" Unit="StFreya">
+            <Button Requirements="HaveSupplyDepot"/>
+        </InfoArray>
         <InfoArray index="Build6">
             <Button State="Available" Requirements="HaveHighTower"/>
         </InfoArray>

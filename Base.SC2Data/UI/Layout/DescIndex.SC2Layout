@@ -3,4 +3,6 @@
     <Include path="UI/Layout/GodKeysUI.SC2Layout"/>
     <Include path="UI/Layout/Honkai_UnitStatus.SC2Layout"/>
     <Include path="UI/Layout/LotV_GameUI.SC2Layout"/>
+    <Include path="UI/Layout/BehaviorBarMod.SC2Layout"/>
+    <Include path="UI/Layout/InventoryMod.SC2Layout"/>
 </Desc>

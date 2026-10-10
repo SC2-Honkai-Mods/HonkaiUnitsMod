@@ -153,6 +153,11 @@
         <SquibTypeDefault value="Flesh"/>
         <UnitGlossaryCamera value="Star2CameraMid04"/>
     </CModel>
+    <CModel id="MeiC5DragonPortrait" parent="BansheePortraitBase">
+        <Model value="Assets\Portraits\Terran\BansheePortrait\BansheePortrait.m3"/>
+        <Image value="Assets\Textures\BansheePortrait_Static.dds"/>
+        <Lighting value="BansheePortrait"/>
+    </CModel>
     <CModel id="MikoyanSplat" parent="Splat">
         <Model value="Assets\Splats\Splat_Armory\Splat_Armory.m3"/>
         <EditorCategories value="Race:Terran"/>
@@ -231,6 +236,21 @@
     </CModel>
     <CModel id="BunkerUpgradeDeathEmpty">
         <Model value="Assets\Buildings\Terran\BunkerUpgradeDeathEx1\BunkerUpgradeDeathEx1.m3"/>
+    </CModel>
+    <CModel id="MeiC5Dragon" parent="Unit" Race="Terran">
+        <Model value="Assets\Models\Avatar\Mei_C5\Mei_C5_Dragon.m3"/>
+        <Occlusion value="Show"/>
+        <Radius value="1.250000"/>
+        <SelectionOffset value="0.000000,0.000000,-0.500000"/>
+        <SelectionRadius value="1.400000"/>
+        <ShadowRadius value="1.400000"/>
+        <SquibTypeDefault value="Flesh"/>
+        <Tipability value="0.650000"/>
+    </CModel>
+    <CModel id="MeiC5DragonDeath" parent="UnitDeath" Race="Terran">
+        <Model value="Assets\Models\Avatar\Mei_C5\Mei_C5_Dragon.m3"/>
+        <LowQualityModel value="TerranLargeUnitDeathLow"/>
+        <Occlusion value="Show"/>
     </CModel>
     <CModel id="Reactor">
         <TextureDeclares Prefix="Reactor_Diffuse">
@@ -419,7 +439,6 @@
             <Time value="0.100000"/>
         </Events>
         <Occlusion value="Show"/>
-        <PlanetPanelCamera value="Star2CameraMid04"/>
         <Radius value="0.375000"/>
         <SelectionOffset value="0.000000,0.000000,-0.500000"/>
         <SelectionRadius value="0.468700"/>
@@ -946,6 +965,30 @@
     <CModel id="StarOfEdenWorldAbil1WeaponModel" parent="OneShotSpellFX">
         <Model value="Assets\Models\DevineKey\StarOfEdenWorld_Attack.m3"/>
         <AnimSpeed value="0.800000"/>
+    </CModel>
+    <CModel id="Valkyrja1" parent="Unit" Race="Terran">
+        <Model value="Assets\Models\Valkyrja\Valkyrja1\Valkyrja1.m3"/>
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraMid03"/>
+        <Radius value="0.300000"/>
+        <ScaleMax value="1.400000,1.400000,1.400000"/>
+        <ScaleMin value="1.400000,1.400000,1.400000"/>
+        <SelectionRadius value="0.300000"/>
+        <ShadowRadius value="0.300000"/>
+        <SquibTypeDefault value="Flesh"/>
+        <TechPurchaseCamera value="TechPurchaseInfantry"/>
+        <UnitGlossaryCamera value="Star2CameraMid03"/>
+    </CModel>
+    <CModel id="Valkyrja2Death" parent="UnitDeath" Race="Terran">
+        <Model value="Assets\Models\Valkyrja\Valkyrja2\Valkyrja2_death.m3"/>
+        <LowQualityModel value="TerranBloodDeathLow"/>
+        <Occlusion value="Show"/>
+    </CModel>
+    <CModel id="Valkyrja1Portrait" parent="Portrait" Race="Terran">
+        <Model value="Assets\Models\Valkyrja\Valkyrja1\Valkyrja1Portrait.m3"/>
+        <Flags index="Facial" value="1"/>
+        <Image value="Assets\Textures\MarinePortrait_Static.dds"/>
+        <PausedParticleSystemBehavior value="Automatic"/>
     </CModel>
     <CModel id="WarningSplatFire" parent="UI">
         <Model value="Assets\Models\Effects\Attack_Hint_Round\WarningSplatFire.m3"/>
@@ -2304,8 +2347,8 @@
         <TechPurchaseCamera value="TechPurchaseInfantry"/>
         <UnitGlossaryCamera value="Star2CameraMid03"/>
     </CModel>
-    <CModel id="Valkyrja2Death" parent="UnitDeath" Race="Terran">
-        <Model value="Assets\Models\Valkyrja\Valkyrja2\Valkyrja2_death.m3"/>
+    <CModel id="Valkyrja1Death" parent="UnitDeath" Race="Terran">
+        <Model value="Assets\Models\Valkyrja\Valkyrja1\Valkyrja1Death.m3"/>
         <LowQualityModel value="TerranBloodDeathLow"/>
         <Occlusion value="Show"/>
     </CModel>

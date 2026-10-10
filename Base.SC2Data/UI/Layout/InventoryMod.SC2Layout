@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Desc>
+    <Frame type="CommandButton" name="ContainerButtonTemplate" template="CommandButton/CommandButtonTemplate">
+        <TooltipAnchorPosition val="BottomToTop | HCenterToCenter"/>
+        <TooltipFrame val="InventoryTooltip"/>
+        <Width val="55"/>
+        <Height val="55"/>
+        <Frame type="Label" name="ChargeLabel">
+            <Anchor side="Bottom" relative="$parent" pos="Max" offset="-1"/>
+            <Anchor side="Right" relative="$parent" pos="Max" offset="-1"/>
+            <Style val="RightJustified"/>
+        </Frame>
+    </Frame>
+    <Frame type="InventoryContainer" name="ContainerPanel">
+        <Frame type="Image" name="BackgroundImage">
+            <Anchor side="Top" relative="$parent" pos="Min" offset="40"/>
+            <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
+            <Anchor side="Bottom" relative="$parent" pos="Max" offset="0"/>
+            <Anchor side="Right" relative="$parent" pos="Max" offset="0"/>
+            <Texture val="@@UI/HotkeyBorder"/>
+            <TextureType val="Border"/>
+            <LayerColor val="##StandardBorderHotkey"/>
+            <RenderPriority val="500"/>
+        </Frame>
+        <Frame type="Image" name="HeaderImage">
+            <Anchor side="Top" relative="$parent" pos="Min" offset="15"/>
+            <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
+            <Width val="300"/>
+            <Height val="64"/>
+            <Texture val="@@UI/HotkeyBorderHeader"/>
+            <TextureType val="EndCap"/>
+            <LayerColor val="##StandardBorderHotkey"/>
+            <RenderPriority val="500"/>
+        </Frame>
+        <Frame type="Label" name="Name" template="HotkeyDialog/HotkeyLabelLeftTemplate">
+            <Anchor side="Top" relative="$parent/HeaderImage" pos="Min" offset="0"/>
+            <Anchor side="Left" relative="$parent/HeaderImage" pos="Min" offset="8"/>
+            <Anchor side="Right" relative="$parent/HeaderImage" pos="Max" offset="-18"/>
+            <Style val="@@HotkeyDialogSectionHeader"/>
+            <Options val="TooltipIfTruncated"/>
+            <Height val="32"/>
+        </Frame>
+        <Frame type="CommandButton" name="Button">
+            <Visible val="false"/>
+        </Frame>
+        <Frame type="Button" name="Close">
+            <Visible val="false"/>
+        </Frame>
+        <Frame type="CommandButton" name="Slot00" template="InventoryMod/ContainerButtonTemplate">
+            <Anchor side="Top" relative="$parent" pos="Min" offset="48"/>
+            <Anchor side="Left" relative="$parent" pos="Min" offset="7"/>
+        </Frame>
+        <Frame type="CommandButton" name="Slot01" template="InventoryMod/ContainerButtonTemplate"/>
+        <Frame type="CommandButton" name="Slot02" template="InventoryMod/ContainerButtonTemplate"/>
+        <Frame type="CommandButton" name="Slot03" template="InventoryMod/ContainerButtonTemplate"/>
+        <Frame type="CommandButton" name="Slot04" template="InventoryMod/ContainerButtonTemplate"/>
+        <Frame type="CommandButton" name="Slot05" template="InventoryMod/ContainerButtonTemplate"/>
+        <Frame type="CommandButton" name="Slot06" template="InventoryMod/ContainerButtonTemplate"/>
+        <Frame type="CommandButton" name="Slot07" template="InventoryMod/ContainerButtonTemplate"/>
+        <Frame type="CommandButton" name="Slot08" template="InventoryMod/ContainerButtonTemplate"/>
+        <Frame type="CommandButton" name="Slot09" template="InventoryMod/ContainerButtonTemplate"/>
+        <Frame type="CommandButton" name="Slot10" template="InventoryMod/ContainerButtonTemplate"/>
+        <Frame type="CommandButton" name="Slot11" template="InventoryMod/ContainerButtonTemplate"/>
+        <Frame type="CommandButton" name="Slot12" template="InventoryMod/ContainerButtonTemplate"/>
+        <Frame type="CommandButton" name="Slot13" template="InventoryMod/ContainerButtonTemplate"/>
+        <Frame type="CommandButton" name="Slot14" template="InventoryMod/ContainerButtonTemplate"/>
+        <Frame type="CommandButton" name="Slot15" template="InventoryMod/ContainerButtonTemplate"/>
+        <Frame type="CommandButton" name="Slot16" template="InventoryMod/ContainerButtonTemplate"/>
+        <Frame type="CommandButton" name="Slot17" template="InventoryMod/ContainerButtonTemplate"/>
+        <Frame type="CommandButton" name="Slot18" template="InventoryMod/ContainerButtonTemplate"/>
+        <Frame type="CommandButton" name="Slot19" template="InventoryMod/ContainerButtonTemplate"/>
+        <Frame type="CommandButton" name="Slot20" template="InventoryMod/ContainerButtonTemplate"/>
+        <Frame type="CommandButton" name="Slot21" template="InventoryMod/ContainerButtonTemplate"/>
+        <Frame type="CommandButton" name="Slot22" template="InventoryMod/ContainerButtonTemplate"/>
+        <Frame type="CommandButton" name="Slot23" template="InventoryMod/ContainerButtonTemplate"/>
+        <Frame type="CommandButton" name="Slot24" template="InventoryMod/ContainerButtonTemplate"/>
+        <Frame type="CommandButton" name="Slot25" template="InventoryMod/ContainerButtonTemplate"/>
+        <Frame type="CommandButton" name="Slot26" template="InventoryMod/ContainerButtonTemplate"/>
+        <Frame type="CommandButton" name="Slot27" template="InventoryMod/ContainerButtonTemplate"/>
+        <Frame type="CommandButton" name="Slot28" template="InventoryMod/ContainerButtonTemplate"/>
+        <Frame type="CommandButton" name="Slot29" template="InventoryMod/ContainerButtonTemplate"/>
+        <Frame type="CommandButton" name="Slot30" template="InventoryMod/ContainerButtonTemplate"/>
+        <Frame type="CommandButton" name="Slot31" template="InventoryMod/ContainerButtonTemplate"/>
+        <Frame type="CommandButton" name="Slot32" template="InventoryMod/ContainerButtonTemplate"/>
+        <Frame type="CommandButton" name="Slot33" template="InventoryMod/ContainerButtonTemplate"/>
+        <Frame type="CommandButton" name="Slot34" template="InventoryMod/ContainerButtonTemplate"/>
+        <Frame type="CommandButton" name="Slot35" template="InventoryMod/ContainerButtonTemplate"/>
+        <Frame type="CommandButton" name="Slot36" template="InventoryMod/ContainerButtonTemplate"/>
+        <Frame type="CommandButton" name="Slot37" template="InventoryMod/ContainerButtonTemplate"/>
+        <Frame type="CommandButton" name="Slot38" template="InventoryMod/ContainerButtonTemplate"/>
+        <Frame type="CommandButton" name="Slot39" template="InventoryMod/ContainerButtonTemplate"/>
+        <Frame type="CommandButton" name="Slot40" template="InventoryMod/ContainerButtonTemplate"/>
+        <Frame type="CommandButton" name="Slot41" template="InventoryMod/ContainerButtonTemplate"/>
+        <Frame type="CommandButton" name="Slot42" template="InventoryMod/ContainerButtonTemplate"/>
+        <Frame type="CommandButton" name="Slot43" template="InventoryMod/ContainerButtonTemplate"/>
+        <Frame type="CommandButton" name="Slot44" template="InventoryMod/ContainerButtonTemplate"/>
+        <Frame type="CommandButton" name="Slot45" template="InventoryMod/ContainerButtonTemplate"/>
+        <Frame type="CommandButton" name="Slot46" template="InventoryMod/ContainerButtonTemplate"/>
+        <Frame type="CommandButton" name="Slot47" template="InventoryMod/ContainerButtonTemplate"/>
+        <Frame type="CommandButton" name="Slot48" template="InventoryMod/ContainerButtonTemplate"/>
+        <Frame type="CommandButton" name="Slot49" template="InventoryMod/ContainerButtonTemplate"/>
+        <Frame type="CommandButton" name="Slot50" template="InventoryMod/ContainerButtonTemplate"/>
+        <Frame type="CommandButton" name="Slot51" template="InventoryMod/ContainerButtonTemplate"/>
+        <Frame type="CommandButton" name="Slot52" template="InventoryMod/ContainerButtonTemplate"/>
+        <Frame type="CommandButton" name="Slot53" template="InventoryMod/ContainerButtonTemplate"/>
+        <Frame type="CommandButton" name="Slot54" template="InventoryMod/ContainerButtonTemplate"/>
+        <Frame type="CommandButton" name="Slot55" template="InventoryMod/ContainerButtonTemplate"/>
+        <Frame type="CommandButton" name="Slot56" template="InventoryMod/ContainerButtonTemplate"/>
+        <Frame type="CommandButton" name="Slot57" template="InventoryMod/ContainerButtonTemplate"/>
+        <Frame type="CommandButton" name="Slot58" template="InventoryMod/ContainerButtonTemplate"/>
+        <Frame type="CommandButton" name="Slot59" template="InventoryMod/ContainerButtonTemplate"/>
+        <Frame type="CommandButton" name="Slot60" template="InventoryMod/ContainerButtonTemplate"/>
+        <Frame type="CommandButton" name="Slot61" template="InventoryMod/ContainerButtonTemplate"/>
+        <Frame type="CommandButton" name="Slot62" template="InventoryMod/ContainerButtonTemplate"/>
+        <Frame type="CommandButton" name="Slot63" template="InventoryMod/ContainerButtonTemplate"/>
+    </Frame>
+    <Frame type="Frame" name="GameUI/UIContainer" file="GameUI">
+        <Frame type="Frame" name="ConsoleUIContainer">
+            <Frame type="InventoryPanel" name="InventoryPanel">
+                 <Frame type="CommandTooltip" name="InventoryTooltip">
+                     <Anchor side="Left" relative="$parent/InventoryTooltip" pos="Mid" offset="0"/>
+                     <Anchor side="Right" relative="$parent/InventoryTooltip" pos="Mid" offset="0"/>
+                 </Frame>
+                 <Frame type="Image" name="Cursor">
+                     <Width val="55"/>
+                     <Height val="55"/>
+                 </Frame>
+                 <Frame type="InventoryContainer" name="InventoryButtons">
+                     <Anchor side="Bottom" relative="$parent" pos="Max" offset="-265"/>
+                     <Anchor side="Right" relative="$parent" pos="Max" offset="-245"/>
+                     <Frame type="Frame" name="ContainerSizeFrame">
+                         <Anchor side="Top" relative="$parent/Button00" pos="Min" offset="0"/>
+                         <Anchor side="Bottom" relative="$parent/Button05" pos="Max" offset="0"/>
+                         <Anchor side="Left" relative="$parent/Button00" pos="Min" offset="0"/>
+                         <Anchor side="Right" relative="$parent/Button05" pos="Max" offset="0"/>
+                     </Frame>
+                     <Frame type="Image" name="BackgroundImage" template="StandardTemplates/StandardBorderTooltipGame">
+                         <Anchor side="Top" relative="$parent" pos="Min" offset="-10"/>
+                         <Anchor side="Bottom" relative="$parent" pos="Max" offset="10"/>
+                         <Anchor side="Left" relative="$parent" pos="Min" offset="-10"/>
+                         <Anchor side="Right" relative="$parent" pos="Max" offset="10"/>
+                         <RenderPriority val="500"/>
+                     </Frame>
+                     <Frame type="CommandButton" name="Button00" template="InventoryMod/ContainerButtonTemplate"/>
+                     <Frame type="CommandButton" name="Button01" template="InventoryMod/ContainerButtonTemplate"/>
+                     <Frame type="CommandButton" name="Button02" template="InventoryMod/ContainerButtonTemplate"/>
+                     <Frame type="CommandButton" name="Button03" template="InventoryMod/ContainerButtonTemplate"/>
+                     <Frame type="CommandButton" name="Button04" template="InventoryMod/ContainerButtonTemplate"/>
+                     <Frame type="CommandButton" name="Button05" template="InventoryMod/ContainerButtonTemplate"/>
+                </Frame>
+                <Frame type="InventoryContainer" name="ContainerPanel00" template="InventoryMod/ContainerPanel"/>
+                <Frame type="InventoryContainer" name="ContainerPanel01" template="InventoryMod/ContainerPanel"/>
+                <Frame type="InventoryContainer" name="ContainerPanel02" template="InventoryMod/ContainerPanel"/>
+                <Frame type="InventoryContainer" name="ContainerPanel03" template="InventoryMod/ContainerPanel"/>
+                <Frame type="InventoryContainer" name="ContainerPanel04" template="InventoryMod/ContainerPanel"/>
+                <Frame type="InventoryContainer" name="ContainerPanel05" template="InventoryMod/ContainerPanel"/>
+            </Frame>
+        </Frame>
+    </Frame>
+</Desc>

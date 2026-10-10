@@ -37,12 +37,10 @@
     </CRequirementCountUnit>
     <CRequirementCountUnit id="CountUnitAlias_SeeleQueuedOrBetter">
         <Flags index="TechTreeCheat" value="0"/>
-        <Tooltip value="RequirementNode/Tooltip/##id##"/>
         <Count Link="Alias_Seele" State="QueuedOrBetter"/>
     </CRequirementCountUnit>
     <CRequirementCountUnit id="CountUnitAlias_SeeleRevivable">
         <Flags index="TechTreeCheat" value="0"/>
-        <Tooltip value="RequirementNode/Tooltip/##id##"/>
         <Count Link="Alias_Seele" State="Revivable"/>
     </CRequirementCountUnit>
     <CRequirementCountUnit id="CountUnitImperialInstituteCompleteOnlyTechTreeCheat">
@@ -85,6 +83,16 @@
     <CRequirementCountUpgrade id="CountUpgradeVArmorUpgradeQueuedOrBetter">
         <Flags index="TechTreeCheat" value="0"/>
         <Count Link="VArmorUpgrade" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeValkyrja1AttackUpgradeQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <Count Link="Valkyrja1AttackUpgrade" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeValkyrjaGrenadeQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <Count Link="ValkyrjaGrenade" State="QueuedOrBetter"/>
     </CRequirementCountUpgrade>
     <CRequirementLT id="LTCountUpgradeHiSecAutoTrackingQueuedOrBetter2">
         <OperandArray index="0" value="CountUpgradeHiSecAutoTrackingQueuedOrBetter"/>
@@ -427,6 +435,14 @@
     </CRequirementNot>
     <CRequirementNot id="NotCountUpgradeMHTUpgradeQueuedOrBetter">
         <OperandArray index="0" value="CountUpgradeMHTUpgradeQueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeValkyrja1AttackUpgradeQueuedOrBetter">
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <OperandArray index="0" value="CountUpgradeValkyrja1AttackUpgradeQueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeValkyrjaGrenadeQueuedOrBetter">
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <OperandArray index="0" value="CountUpgradeValkyrjaGrenadeQueuedOrBetter"/>
     </CRequirementNot>
     <CRequirementConst id="NotFinished">
         <Flags index="TechTreeCheat" value="1"/>
@@ -2502,7 +2518,6 @@
         <OperandArray value="CountUnitAlias_MeiRevivable"/>
     </CRequirementSum>
     <CRequirementSum id="SumCountUnitAlias_SeeleQueuedOrBetterCountUnitAlias_SeeleRevivable">
-        <Tooltip value="RequirementNode/Tooltip/##id##"/>
         <OperandArray value="CountUnitAlias_SeeleQueuedOrBetter"/>
         <OperandArray value="CountUnitAlias_SeeleRevivable"/>
     </CRequirementSum>

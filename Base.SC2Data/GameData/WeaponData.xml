@@ -65,6 +65,14 @@
         <Backswing value="0.625"/>
         <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
     </CWeaponLegacy>
+    <CWeaponLegacy id="Valkyrja1Attack1" parent="CWeaponAvatarMeleeAttack">
+        <DisplayEffect value="Valkyrja1AttackDamage"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="1"/>
+        <Period value="1.375"/>
+        <Options index="Hidden" value="0"/>
+        <Icon value="Assets\Textures\btn-upgrade-protoss-groundweaponslevel0.dds"/>
+    </CWeaponLegacy>
     <CWeaponLegacy id="KianaC2Attack4" parent="CWeaponAvatarMeleeAttack">
         <AcquireTargetSorts>
             <SortArray value="TSThreatenKianaC2"/>
@@ -641,6 +649,14 @@
         <Effect value="MHT3WeaponSet"/>
         <AllowedMovement value="Moving"/>
     </CWeaponLegacy>
+    <CWeaponLegacy id="Valkyrja1Attack2" parent="CWeaponAvatarMeleeAttack">
+        <Options index="Hidden" value="0"/>
+        <Icon value="Assets\Textures\btn-upgrade-protoss-groundweaponslevel0.dds"/>
+        <DisplayEffect value="Valkyrja1AttackDamage"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="2"/>
+        <Period value="1.375"/>
+    </CWeaponLegacy>
     <CWeaponLegacy id="ValkyrjaRifle">
         <Icon value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel0.dds"/>
         <DisplayEffect value="ValkyrjaRifleDamage"/>
@@ -968,7 +984,7 @@
         <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
         <MinScanRange value="9"/>
         <Range value="8"/>
-        <Period value="1.4"/>
+        <Period value="1.375"/>
         <DamagePoint value="1"/>
         <Backswing value="1"/>
         <Effect value="SevenThundersOfRetributionDamage"/>

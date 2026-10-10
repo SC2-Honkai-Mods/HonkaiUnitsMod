@@ -6,6 +6,7 @@
 <Abil id="SkillK5"/>
 <Abil id="SkillK17"/>
 <Actor id="SYSTEM_ActorConfig"/>
+<Actor id="halostart"/>
 <Behavior id="Precursor"/>
 <Behavior id="RO_060Barrage"/>
 <Behavior id="2SecondsTimedLife"/>

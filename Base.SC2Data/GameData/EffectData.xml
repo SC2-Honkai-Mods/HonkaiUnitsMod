@@ -58,11 +58,109 @@
         <RechargeVitalRate value="12"/>
         <RechargeVitalFraction value="0.0312"/>
     </CEffectCreateHealer>
+    <CEffectCreatePersistent id="Valkyrja1Attack1">
+        <WhichLocation Value="TargetUnit"/>
+        <TimeScaleSource Value="Caster"/>
+        <Flags index="Channeled" value="1"/>
+        <InitialEffect value="Valkyrja1Attack1Move"/>
+        <PeriodCount value="2"/>
+        <PeriodicEffectArray value="Valkyrja1Attack1Search"/>
+        <PeriodicEffectArray value="VoidEffect"/>
+        <PeriodicPeriodArray value="0.3125"/>
+        <PeriodicPeriodArray value="0.125"/>
+    </CEffectCreatePersistent>
+    <CEffectCreatePersistent id="Valkyrja1Attack2">
+        <WhichLocation Value="TargetUnit"/>
+        <TimeScaleSource Value="Caster"/>
+        <Flags index="Channeled" value="1"/>
+        <InitialEffect value="Valkyrja1Attack1Move"/>
+        <PeriodCount value="3"/>
+        <PeriodicEffectArray value="Valkyrja1Attack1Move2"/>
+        <PeriodicEffectArray value="Valkyrja1Attack2Search"/>
+        <PeriodicEffectArray value="VoidEffect"/>
+        <PeriodicPeriodArray value="0.375"/>
+        <PeriodicPeriodArray value="0.1875"/>
+        <PeriodicPeriodArray value="0.25"/>
+    </CEffectCreatePersistent>
+    <CEffectCreatePersistent id="Valkyrja1Attack1Move" parent="AvatarAttackMove">
+        <InitialEffect value="Valkyrja1Attack1Speed"/>
+        <PeriodCount value="2"/>
+    </CEffectCreatePersistent>
+    <CEffectCreatePersistent id="Valkyrja1Attack1Move2" parent="AvatarAttackMove">
+        <InitialEffect value="Valkyrja1Attack2Speed"/>
+        <PeriodCount value="3"/>
+    </CEffectCreatePersistent>
+    <CEffectCreatePersistent id="Valkyrja1Abil">
+        <WhichLocation Value="TargetUnit"/>
+        <TimeScaleSource Value="Caster"/>
+        <Flags index="Channeled" value="1"/>
+        <InitialEffect value="Valkyrja1Attack1Move"/>
+        <PeriodCount value="3"/>
+        <PeriodicEffectArray value="Valkyrja1Attack1Move2"/>
+        <PeriodicEffectArray value="Valkyrja1AbilSearch"/>
+        <PeriodicEffectArray value="VoidEffect"/>
+        <PeriodicPeriodArray value="0.375"/>
+        <PeriodicPeriodArray value="0.3125"/>
+        <PeriodicPeriodArray value="1.25"/>
+    </CEffectCreatePersistent>
+    <CEffectEnumArea id="Valkyrja1Attack2Search">
+        <EditorCategories value=""/>
+        <ImpactLocation Value="SourcePoint"/>
+        <SearchFilters value="Ground;Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <AreaArray Arc="180" Radius="1.25" Effect="Valkyrja1AttackSet"/>
+        <SearchFlags index="SameCliff" value="1"/>
+    </CEffectEnumArea>
+    <CEffectApplyBehavior id="Valkyrja1Attack1Speed">
+        <WhichUnit Value="Caster"/>
+    </CEffectApplyBehavior>
+    <CEffectEnumArea id="Valkyrja1Attack1Search">
+        <EditorCategories value=""/>
+        <ImpactLocation Value="SourcePoint"/>
+        <SearchFilters value="Ground;Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <AreaArray Arc="59.9963" Radius="1.25" Effect="Valkyrja1AttackSet"/>
+        <SearchFlags index="SameCliff" value="1"/>
+    </CEffectEnumArea>
+    <CEffectEnumArea id="Valkyrja1AbilSearch">
+        <EditorCategories value=""/>
+        <ImpactLocation Value="SourcePoint"/>
+        <SearchFilters value="Ground;Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <AreaArray Arc="180" Radius="1.5" Effect="Valkyrja1AbilSet"/>
+        <SearchFlags index="SameCliff" value="1"/>
+    </CEffectEnumArea>
+    <CEffectApplyBehavior id="Valkyrja1Attack2Speed">
+        <WhichUnit Value="Caster"/>
+    </CEffectApplyBehavior>
+    <CEffectDamage id="Valkyrja1AttackDamagePhysics" parent="DU_WEAP">
+        <Amount value="12"/>
+    </CEffectDamage>
+    <CEffectDamage id="Valkyrja1AttackDamageFire" parent="DU_WEAP">
+        <Amount value="14.4"/>
+        <Kind value="Splash"/>
+    </CEffectDamage>
+    <CEffectDamage id="Valkyrja1AttackDamageThunder" parent="DU_WEAP">
+        <Amount value="14.4"/>
+        <Kind value="Spell"/>
+    </CEffectDamage>
+    <CEffectDamage id="Valkyrja1AttackDamageIce" parent="DU_WEAP">
+        <Amount value="14.4"/>
+        <Kind value="NoProc"/>
+    </CEffectDamage>
     <CEffectSet id="MeiC5Attack1DamageSet">
         <DebugTrace value="1"/>
         <EffectArray value="MeiC5Attack1Damage"/>
         <EffectArray value="MeiC5Attack1DamageT"/>
     </CEffectSet>
+    <CEffectAddTrackedUnit id="MeiC5DragonTracker">
+        <EditorCategories value=""/>
+        <BehaviorLink value="MeiC5DragonTracker"/>
+        <TrackedUnit Value="Target"/>
+    </CEffectAddTrackedUnit>
+    <CEffectCreateUnit id="MeiC5SummonDragon">
+        <ValidatorArray value="MeiC5DragonTracker"/>
+        <EditorCategories value=""/>
+        <SpawnEffect value="MeiC5DragonTracker"/>
+        <SpawnUnit value="MeiC5Dragon"/>
+    </CEffectCreateUnit>
     <CEffectApplyBehavior id="NoCommandCaster">
         <Behavior value="NoCommand"/>
     </CEffectApplyBehavior>
@@ -3337,6 +3435,47 @@
     <CEffectDamage id="KillTarget">
         <Flags index="Kill" value="1"/>
     </CEffectDamage>
+    <CEffectDamage id="Valkyrja1AbilDamagePhysics" parent="DU_WEAP">
+        <Amount value="30"/>
+    </CEffectDamage>
+    <CEffectDamage id="Valkyrja1AbilDamageFire" parent="DU_WEAP">
+        <Amount value="36"/>
+        <Kind value="Splash"/>
+    </CEffectDamage>
+    <CEffectDamage id="Valkyrja1AbilDamageThunder" parent="DU_WEAP">
+        <Amount value="36"/>
+        <Kind value="Spell"/>
+    </CEffectDamage>
+    <CEffectDamage id="Valkyrja1AbilDamageIce" parent="DU_WEAP">
+        <Amount value="36"/>
+        <Kind value="NoProc"/>
+    </CEffectDamage>
+    <CEffectSet id="Valkyrja1AttackSet">
+        <EditorCategories value=""/>
+        <EffectArray value="Valkyrja1AttackDamage"/>
+        <EffectArray value="VoidEffect"/>
+    </CEffectSet>
+    <CEffectSet id="Valkyrja1AttackBleed">
+        <EditorCategories value=""/>
+        <EffectArray value="TargetBleed6secondLv1"/>
+    </CEffectSet>
+    <CEffectSet id="Valkyrja1AbilSet">
+        <EditorCategories value=""/>
+        <EffectArray value="Valkyrja1AbilDamage"/>
+        <EffectArray value="ThrowSet"/>
+    </CEffectSet>
+    <CEffectSwitch id="Valkyrja1AttackDamage">
+        <CaseArray Validator="StigmataFG1" Effect="Valkyrja1AttackDamageFire"/>
+        <CaseArray Validator="StigmataTG1" Effect="Valkyrja1AttackDamageThunder"/>
+        <CaseArray Validator="StigmataIG1" Effect="Valkyrja1AttackDamageIce"/>
+        <CaseDefault value="Valkyrja1AttackDamagePhysics"/>
+    </CEffectSwitch>
+    <CEffectSwitch id="Valkyrja1AbilDamage">
+        <CaseArray Validator="StigmataFG1" Effect="Valkyrja1AbilDamageFire"/>
+        <CaseArray Validator="StigmataTG1" Effect="Valkyrja1AbilDamageThunder"/>
+        <CaseArray Validator="StigmataIG1" Effect="Valkyrja1AbilDamageIce"/>
+        <CaseDefault value="Valkyrja1AbilDamagePhysics"/>
+    </CEffectSwitch>
     <CEffectCreateHealer id="VoidRepair">
         <ValidatorArray value="noMarkers"/>
         <ValidatorArray value="NotHidden"/>

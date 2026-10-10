@@ -2448,7 +2448,8 @@ bool lib6D9D7845_gt_Debug_Func (bool testConds, bool runActions) {
         return true;
     }
 
-    UnitSetAttributePoint(lv_u, "HerrscherBuff", false, (UnitGetAttributePoint(lv_u, "HerrscherBuff", false) + 1));
+    TriggerDebugOutput(1, StringExternal("Param/Value/lib_6D9D7845_E48F22D3"), true);
+    ActorCreate(ActorScopeFromUnit(lv_u), "halostart", null, null, null);
     return true;
 }
 
@@ -3148,6 +3149,9 @@ bool lib6D9D7845_gt_E58D95E4BD8DE6B58BE8AF95E7949FE68890_Func (bool testConds, b
     }
     else if (auto773EE29B_val == "UL_100") {
         lv_e58D95E4BD8D = "UL_100";
+    }
+    else if (auto773EE29B_val == "V1") {
+        lv_e58D95E4BD8D = "Valkyrja1";
     }
     else if (auto773EE29B_val == "V2") {
         lv_e58D95E4BD8D = "Valkyrja2";
@@ -4230,7 +4234,7 @@ bool lib6D9D7845_gt_E887AAE58AA8E9858DE8A385E696B0E58D95E4BD8D_Func (bool testCo
         return true;
     }
 
-    if ((UnitGetType(EventUnit()) == "Valkyrja2")) {
+    if (((UnitGetType(EventUnit()) == "Valkyrja2") || (UnitGetType(EventUnit()) == "Valkyrja1"))) {
         lib6D9D7845_gf_E88EB7E58F96E79BAEE6A087E8A385E5A487(EventUnit());
         lv_i = 0;
         for ( ; ( (auto7810D0CA_ai >= 0 && lv_i <= auto7810D0CA_ae) || (auto7810D0CA_ai < 0 && lv_i >= auto7810D0CA_ae) ) ; lv_i += auto7810D0CA_ai ) {
@@ -4278,7 +4282,7 @@ bool lib6D9D7845_gt_E887AAE58AA8E9858DE8A385E58F96E6B688_Func (bool testConds, b
         return true;
     }
 
-    if ((UnitGetType(EventUnit()) == "Valkyrja2")) {
+    if (((UnitGetType(EventUnit()) == "Valkyrja2") || (UnitGetType(EventUnit()) == "Valkyrja1"))) {
         lv_i = 0;
         for ( ; ( (autoD4D8ADE6_ai >= 0 && lv_i <= autoD4D8ADE6_ae) || (autoD4D8ADE6_ai < 0 && lv_i >= autoD4D8ADE6_ae) ) ; lv_i += autoD4D8ADE6_ai ) {
             lib6D9D7845_gv_e38090UnitE38091.lv_e794A8E688B7E887AAE58AA8E9858DE8A385[UnitGetOwner(EventUnit())][lv_i] = -1;
@@ -4319,7 +4323,7 @@ bool lib6D9D7845_gt_E887AAE58AA8E9858DE8A385E696B0E8AEADE7BB83E8A7A6E58F91_Func 
         return true;
     }
 
-    if ((UnitGetType(EventUnitCreatedUnit()) == "Valkyrja2")) {
+    if (((UnitGetType(EventUnitCreatedUnit()) == "Valkyrja2") || (UnitGetType(EventUnitCreatedUnit()) == "Valkyrja1"))) {
         lib6D9D7845_gf_E9858DE8A385E588B0E79BAEE6A087E8A686E79B96(EventUnitCreatedUnit(), lib6D9D7845_gv_e38090UnitE38091.lv_e794A8E688B7E887AAE58AA8E9858DE8A385[lv_p][0], lib6D9D7845_gv_e38090UnitE38091.lv_e794A8E688B7E887AAE58AA8E9858DE8A385[lv_p][1], lib6D9D7845_gv_e38090UnitE38091.lv_e794A8E688B7E887AAE58AA8E9858DE8A385[lv_p][2], -1);
         while (lib6D9D7845_gf_E79BAEE6A087E58D95E4BD8DE99C80E8A681E9858DE8A385(EventUnitCreatedUnit(), lib6D9D7845_gv_e38090UnitE38091.lv_e794A8E688B7E887AAE58AA8E9858DE8A385[lv_p][0], lib6D9D7845_gv_e38090UnitE38091.lv_e794A8E688B7E887AAE58AA8E9858DE8A385[lv_p][1], lib6D9D7845_gv_e38090UnitE38091.lv_e794A8E688B7E887AAE58AA8E9858DE8A385[lv_p][2], -1)) {
             Wait(1.0, c_timeGame);

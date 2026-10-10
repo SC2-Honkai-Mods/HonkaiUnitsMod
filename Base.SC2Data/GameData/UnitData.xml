@@ -425,7 +425,7 @@
         <LeaderAlias value="MeiC2"/>
         <EquipmentArray>
             <Effect value="MeiATTACK"/>
-            <Icon value="Assets\Textures\Pistol_K1.tga"/>
+            <Icon value="Assets\Textures\Weapon_Katana_M1_13_1.tga"/>
             <Name value="Text/Weapon/ATTACK"/>
             <Weapon value="MeiATTACK"/>
         </EquipmentArray>
@@ -730,24 +730,21 @@
         <UserTag value="HonkaiText/MeiC5"/>
         <EnergyStart value="50"/>
         <EnergyMax value="100"/>
-        <AbilArray Link="MeiC2EvadeIdle"/>
-        <AbilArray Link="MeiC2EvadeMoving"/>
-        <AbilArray Link="MeiC2Branch"/>
-        <AbilArray Link="MeiC2Ult"/>
         <BehaviorArray Link="HonkaiAttributeUl"/>
         <BehaviorArray Link="MeiC5Attack1"/>
+        <BehaviorArray Link="MeiC5DragonTracker"/>
+        <BehaviorArray Link="MeiC5SummonDragon"/>
         <WeaponArray Link="MeiC5Attack1"/>
         <WeaponArray Link="MeiC5Attack2"/>
         <WeaponArray Link="MeiC5Attack3"/>
         <WeaponArray Link="MeiC5Attack4"/>
         <WeaponArray Link="MeiC5Attack5"/>
         <CardLayouts index="0">
-            <LayoutButtons Face="MeiC2Branch" Type="AbilCmd" AbilCmd="MeiC2Branch,Execute" Row="1" Column="1"/>
-            <LayoutButtons Face="MeiC2Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="1" Column="0"/>
-            <LayoutButtons Face="MeiC2Evade" Type="AbilCmd" AbilCmd="MeiC2EvadeMoving,Execute" Row="1" Column="2"/>
-            <LayoutButtons Face="MeiC2Evade" Type="AbilCmd" AbilCmd="MeiC2EvadeIdle,Execute" Row="1" Column="2"/>
-            <LayoutButtons Face="SeeleC1Ultimate" Type="AbilCmd" AbilCmd="SeeleC1Ultimate,Execute" Row="1" Column="3"/>
-            <LayoutButtons Face="MeiC2Ult" Type="AbilCmd" AbilCmd="MeiC2Ult,Execute" Row="1" Column="4"/>
+            <LayoutButtons Face="MeiC5Branch" Type="AbilCmd" AbilCmd="MeiC2Branch,Execute" Row="1" Column="1"/>
+            <LayoutButtons Face="MeiC5Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="1" Column="0"/>
+            <LayoutButtons Face="MeiC5Evade" Type="AbilCmd" AbilCmd="MeiC2EvadeMoving,Execute" Row="1" Column="2"/>
+            <LayoutButtons Face="MeiC5Evade" Type="AbilCmd" AbilCmd="MeiC2EvadeIdle,Execute" Row="1" Column="2"/>
+            <LayoutButtons Face="MeiC5Ult" Type="AbilCmd" AbilCmd="MeiC2Ult,Execute" Row="1" Column="4"/>
         </CardLayouts>
         <CardLayouts index="4" CardId="Equi">
             <LayoutButtons>
@@ -773,6 +770,71 @@
             <LayoutButtons index="1" Face="TrainMeiC5" Type="AbilCmd" AbilCmd="MorphToMeiC5,Execute" Row="0" Column="0"/>
             <LayoutButtons index="2" removed="1"/>
         </CardLayouts>
+    </CUnit>
+    <CUnit id="MeiC5Dragon">
+        <DeathTime value="30"/>
+        <DeathRevealRadius value="3"/>
+        <Race value="Terr"/>
+        <Mob value="Multiplayer"/>
+        <FlagArray index="PreventDestroy" value="1"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <FlagArray index="ArmySelect" value="1"/>
+        <PlaneArray index="Air" value="1"/>
+        <Collide index="Flying" value="1"/>
+        <Attributes index="Armored" value="1"/>
+        <Attributes index="Biological" value="1"/>
+        <Attributes index="Massive" value="1"/>
+        <Attributes index="Heroic" value="1"/>
+        <LifeStart value="1000"/>
+        <LifeMax value="1000"/>
+        <LifeArmorName value="Unit/LifeArmorName/UlyssArmor"/>
+        <Mover value="Fly"/>
+        <Speed value="5.5"/>
+        <Acceleration value="3.25"/>
+        <StationaryTurningRate value="360"/>
+        <TurningRate value="360"/>
+        <Sight value="10"/>
+        <Height value="5"/>
+        <VisionHeight value="15"/>
+        <CostCategory value="Army"/>
+        <RepairTime value="60"/>
+        <AttackTargetPriority value="20"/>
+        <DamageDealtXP value="1"/>
+        <DamageTakenXP value="1"/>
+        <KillXP value="50"/>
+        <AbilArray Link="stop"/>
+        <AbilArray Link="attack"/>
+        <AbilArray Link="move"/>
+        <AbilArray Link="MeiC5DragonTransport"/>
+        <BehaviorArray Link="HonkaiAttributeUl"/>
+        <WeaponArray Link="BacklashRockets2"/>
+        <CardLayouts>
+            <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
+            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
+            <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="2"/>
+            <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
+        </CardLayouts>
+        <Radius value="1.25"/>
+        <SeparationRadius value="1.25"/>
+        <ScoreMake value="250"/>
+        <ScoreKill value="250"/>
+        <ScoreResult value="BuildOrder"/>
+        <SubgroupPriority value="64"/>
+        <MinimapRadius value="0.75"/>
+        <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
+        <GlossaryCategory value="Unit/Category/TerranUnits"/>
+        <GlossaryPriority value="210"/>
+        <HotkeyCategory value="Unit/Category/TerranUnits"/>
+        <LifeArmor value="2"/>
+        <LifeRegenRate value="2"/>
+    </CUnit>
+    <CUnit id="SiegeTankSieged">
+        <DeathTime value="30"/>
+        <BehaviorArray Link="HonkaiAttributeMech"/>
+        <BehaviorArray Link="RobotUnit"/>
+        <BehaviorArray Link="CannotLoad"/>
+        <CargoSize value="8"/>
     </CUnit>
     <CUnit id="UL_020" parent="CUnitArmy">
         <Race value="Zerg"/>
@@ -958,6 +1020,177 @@
         <BehaviorArray Link="UnitMoveForward"/>
         <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
     </CUnit>
+    <CUnit id="Valkyrja1" parent="CUnitHaveStigmata">
+        <Race value="Terr"/>
+        <PlaneArray index="Ground" value="1"/>
+        <Collide index="Ground" value="1"/>
+        <Collide index="ForceField" value="1"/>
+        <Collide index="Locust" value="1"/>
+        <Collide index="Small" value="1"/>
+        <Attributes index="Light" value="1"/>
+        <Attributes index="Biological" value="1"/>
+        <LifeStart value="240"/>
+        <LifeMax value="240"/>
+        <LifeArmorName value="Unit/LifeArmorName/TerranInfantryArmor"/>
+        <ShieldRegenRate value="2"/>
+        <ShieldArmorName value="Unit/LifeArmorName/TerranInfantryShield"/>
+        <Speed value="3.375"/>
+        <Food value="-1"/>
+        <CostResource index="Minerals" value="75"/>
+        <CostResource index="Vespene" value="15"/>
+        <RepairTime value="20"/>
+        <KillXP value="10"/>
+        <AbilArray Link="Valkyrja1Abil"/>
+        <AbilArray Link="AutoEquipCopy"/>
+        <AbilArray Link="AutoEquipAdd"/>
+        <AbilArray Link="AutoEquipCover"/>
+        <AbilArray Link="AutoEquipOnlyNew"/>
+        <AbilArray Link="AutoEquipCancel"/>
+        <BehaviorArray Link="HonkaiAttributeBio"/>
+        <BehaviorArray Link="VBuff"/>
+        <BehaviorArray Link="LoseHPOnCreep"/>
+        <WeaponArray Link="Valkyrja1Attack1"/>
+        <WeaponArray Link="Valkyrja1Attack2"/>
+        <CardLayouts index="0">
+            <LayoutButtons>
+                <Face value="Move"/>
+                <Type value="AbilCmd"/>
+                <AbilCmd value="move,Move"/>
+                <Behavior value=""/>
+                <Requirements value=""/>
+                <SubmenuAbilState value=""/>
+                <SubmenuCardId value=""/>
+                <SubmenuFullSubCmdValidation value="0"/>
+                <SubmenuIsSticky value="0"/>
+                <ShowInGlossary value="1"/>
+                <Row value="0"/>
+                <Column value="0"/>
+            </LayoutButtons>
+            <LayoutButtons>
+                <Face value="Stop"/>
+                <Type value="AbilCmd"/>
+                <AbilCmd value="stop,Stop"/>
+                <Behavior value=""/>
+                <Requirements value=""/>
+                <SubmenuAbilState value=""/>
+                <SubmenuCardId value=""/>
+                <SubmenuFullSubCmdValidation value="0"/>
+                <SubmenuIsSticky value="0"/>
+                <ShowInGlossary value="1"/>
+                <Row value="0"/>
+                <Column value="1"/>
+            </LayoutButtons>
+            <LayoutButtons>
+                <Face value="MoveHoldPosition"/>
+                <Type value="AbilCmd"/>
+                <AbilCmd value="move,HoldPos"/>
+                <Behavior value=""/>
+                <Requirements value=""/>
+                <SubmenuAbilState value=""/>
+                <SubmenuCardId value=""/>
+                <SubmenuFullSubCmdValidation value="0"/>
+                <SubmenuIsSticky value="0"/>
+                <ShowInGlossary value="1"/>
+                <Row value="0"/>
+                <Column value="2"/>
+            </LayoutButtons>
+            <LayoutButtons>
+                <Face value="Attack"/>
+                <Type value="AbilCmd"/>
+                <AbilCmd value="attack,Execute"/>
+                <Behavior value=""/>
+                <Requirements value=""/>
+                <SubmenuAbilState value=""/>
+                <SubmenuCardId value=""/>
+                <SubmenuFullSubCmdValidation value="0"/>
+                <SubmenuIsSticky value="0"/>
+                <ShowInGlossary value="1"/>
+                <Row value="0"/>
+                <Column value="4"/>
+            </LayoutButtons>
+            <LayoutButtons>
+                <Face value="MovePatrol"/>
+                <Type value="AbilCmd"/>
+                <AbilCmd value="move,Patrol"/>
+                <Behavior value=""/>
+                <Requirements value=""/>
+                <SubmenuAbilState value=""/>
+                <SubmenuCardId value=""/>
+                <SubmenuFullSubCmdValidation value="0"/>
+                <SubmenuIsSticky value="0"/>
+                <ShowInGlossary value="1"/>
+                <Row value="0"/>
+                <Column value="3"/>
+            </LayoutButtons>
+            <LayoutButtons>
+                <Face value="Valkyrja1Abil"/>
+                <Type value="AbilCmd"/>
+                <AbilCmd value="Valkyrja1Abil,Execute"/>
+                <Behavior value=""/>
+                <Requirements value=""/>
+                <SubmenuAbilState value=""/>
+                <SubmenuCardId value=""/>
+                <SubmenuFullSubCmdValidation value="0"/>
+                <SubmenuIsSticky value="0"/>
+                <ShowInGlossary value="1"/>
+                <Row value="2"/>
+                <Column value="0"/>
+            </LayoutButtons>
+            <LayoutButtons>
+                <Face value="StigmataEquip2"/>
+                <Type value="Submenu"/>
+                <SubmenuCardId value="G1"/>
+                <SubmenuIsSticky value="1"/>
+                <Row value="2"/>
+                <Column value="2"/>
+            </LayoutButtons>
+            <LayoutButtons>
+                <Face value="StigmataEquip1"/>
+                <Type value="Submenu"/>
+                <SubmenuCardId value="G2"/>
+                <SubmenuIsSticky value="1"/>
+                <Row value="2"/>
+                <Column value="3"/>
+            </LayoutButtons>
+            <LayoutButtons>
+                <Face value="StigmataEquip3"/>
+                <Type value="Submenu"/>
+                <SubmenuCardId value="G3"/>
+                <SubmenuIsSticky value="1"/>
+                <Row value="2"/>
+                <Column value="4"/>
+            </LayoutButtons>
+            <LayoutButtons Face="RemoveStigmatas" Type="AbilCmd" AbilCmd="RemoveStigmatas,Execute" Row="1" Column="2"/>
+            <LayoutButtons Face="AutoEquip" Type="Submenu" SubmenuCardId="0005" Row="1" Column="4"/>
+        </CardLayouts>
+        <CardLayouts CardId="0005">
+            <LayoutButtons Face="AutoEquipCopy" Type="AbilCmd" AbilCmd="AutoEquipCopy,Execute" Row="0" Column="0"/>
+            <LayoutButtons Face="AutoEquipAdd" Type="AbilCmd" AbilCmd="AutoEquipAdd,Execute" Row="0" Column="1"/>
+            <LayoutButtons Face="AutoEquipCover" Type="AbilCmd" AbilCmd="AutoEquipCover,Execute" Row="0" Column="2"/>
+            <LayoutButtons Face="AutoEquipNewUnit" Type="AbilCmd" AbilCmd="AutoEquipOnlyNew,Execute" Row="0" Column="3"/>
+            <LayoutButtons Face="AutoEquipCancel" Type="AbilCmd" AbilCmd="AutoEquipCancel,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="Cancel" Type="CancelSubmenu" Row="2" Column="4"/>
+        </CardLayouts>
+        <InnerRadius value="0.5"/>
+        <CargoSize value="1"/>
+        <ScoreMake value="90"/>
+        <ScoreKill value="90"/>
+        <SubgroupPriority value="78"/>
+        <MinimapRadius value="0.375"/>
+        <GlossaryCategory value="Unit/Category/TerranUnits"/>
+        <GlossaryPriority value="21"/>
+        <HotkeyCategory value="Unit/Category/TerranUnits"/>
+        <Fidget TurnAngle="90" TurningRate="90">
+            <ChanceArray index="Anim" value="33"/>
+            <ChanceArray index="Idle" value="33"/>
+            <ChanceArray index="Turn" value="33"/>
+        </Fidget>
+        <ReviveInfoBase>
+            <Charge Link="Valkyrja1/Revive"/>
+            <Cooldown Link="Valkyrja1/Revive"/>
+        </ReviveInfoBase>
+        <LifeArmor value="2"/>
+    </CUnit>
     <CUnit id="WeaponK5" parent="ITEM">
         <FlagArray index="Untooltipable" value="0"/>
         <FogVisibility value="Snapshot"/>
@@ -1076,6 +1309,7 @@
         <CardLayouts>
             <LayoutButtons Face="Cancel" Type="AbilCmd" AbilCmd="que82,CancelLast" Row="2" Column="4"/>
             <LayoutButtons Face="CancelBuilding" Type="AbilCmd" AbilCmd="BuildInProgress,Cancel" Row="2" Column="4"/>
+            <LayoutButtons Face="ValkyrjaDefence" Type="AbilCmd" AbilCmd="HumanTech,Research12" Row="2" Column="3"/>
             <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="BuildInProgress,Halt" Row="2" Column="3"/>
             <LayoutButtons Face="VArmorUpgrade" Type="AbilCmd" AbilCmd="AttackArmorResearch,Research4" Row="0" Column="2"/>
             <LayoutButtons>
@@ -1089,7 +1323,6 @@
             <LayoutButtons Face="SelectBuilder" Type="SelectBuilder" Row="1" Column="3"/>
             <LayoutButtons Face="SelectBuilder" Type="SelectBuilder" Row="1" Column="3"/>
             <LayoutButtons Face="SelectBuilder" Type="SelectBuilder" Row="1" Column="3"/>
-            <LayoutButtons Face="Rally" Type="AbilCmd" AbilCmd="Rally,Rally1" Row="0" Column="4"/>
             <LayoutButtons Face="VWeaponUpgrade" Type="AbilCmd" AbilCmd="AttackArmorResearch,Research5" Row="0" Column="0"/>
             <LayoutButtons Face="VShieldUpgrade" Type="AbilCmd" AbilCmd="AttackArmorResearch,Research3" Row="0" Column="1"/>
             <LayoutButtons>
@@ -1112,7 +1345,7 @@
             </LayoutButtons>
             <LayoutButtons Face="ValkyrjaShield" Type="AbilCmd" AbilCmd="HumanTech,Research6" Row="2" Column="0"/>
             <LayoutButtons Face="ValkyrjaSnipe" Type="AbilCmd" AbilCmd="HumanTech,Research15" Row="2" Column="1"/>
-            <LayoutButtons Face="ValkyrjaDefence" Type="AbilCmd" AbilCmd="HumanTech,Research12" Row="2" Column="2"/>
+            <LayoutButtons Face="Valkyrja1Upgrade" Type="AbilCmd" AbilCmd="HumanTech,Research7" Row="2" Column="2"/>
         </CardLayouts>
         <CardLayouts CardId="G1">
             <LayoutButtons Face="StigmataPG1" Type="AbilCmd" AbilCmd="StigmataResearch,Research13" Row="0" Column="0"/>
@@ -2356,8 +2589,8 @@
     </CUnit>
     <CUnit id="Barracks">
         <CardLayouts index="0">
-            <LayoutButtons index="0" Face="Valkyrja2" AbilCmd="HonkaiBarracksTrain,Train2"/>
-            <LayoutButtons index="1" Face="Valkyrja3" AbilCmd="HonkaiBarracksTrain,Train4"/>
+            <LayoutButtons index="0" Face="Valkyrja2" AbilCmd="HonkaiBarracksTrain,Train2" Column="1"/>
+            <LayoutButtons index="1" Face="Valkyrja3" AbilCmd="HonkaiBarracksTrain,Train3" Column="2"/>
             <LayoutButtons index="2" Face="Rally" AbilCmd="Rally,Rally1" Row="1" Column="4"/>
             <LayoutButtons index="3" Face="Lift" AbilCmd="BarracksLiftOff,Execute" Row="2"/>
             <LayoutButtons index="4" Face="Halt" AbilCmd="BuildInProgress,Halt" Row="2" Column="3"/>
@@ -2366,7 +2599,7 @@
             <LayoutButtons index="7" Face="Cancel" AbilCmd="que5,CancelLast" Column="4"/>
             <LayoutButtons index="8" Face="Cancel" AbilCmd="BarracksAddOns,Halt" Column="4"/>
             <LayoutButtons index="9" Face="CancelBuilding" AbilCmd="BuildInProgress,Cancel"/>
-            <LayoutButtons index="10" Face="Valkyrja3" AbilCmd="HonkaiBarracksTrain,Train4" Row="0" Column="1"/>
+            <LayoutButtons index="10" Face="Valkyrja1" AbilCmd="HonkaiBarracksTrain,Train1" Row="0" Column="0"/>
             <LayoutButtons index="11" removed="1"/>
             <LayoutButtons index="12" removed="1"/>
         </CardLayouts>
@@ -3225,7 +3458,6 @@
             <LayoutButtons Face="MeiC2Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="1" Column="0"/>
             <LayoutButtons Face="MeiC2Evade" Type="AbilCmd" AbilCmd="MeiC2EvadeMoving,Execute" Row="1" Column="2"/>
             <LayoutButtons Face="MeiC2Evade" Type="AbilCmd" AbilCmd="MeiC2EvadeIdle,Execute" Row="1" Column="2"/>
-            <LayoutButtons Face="SeeleC1Ultimate" Type="AbilCmd" AbilCmd="SeeleC1Ultimate,Execute" Row="1" Column="3"/>
             <LayoutButtons Face="MeiC2Ult" Type="AbilCmd" AbilCmd="MeiC2Ult,Execute" Row="1" Column="4"/>
         </CardLayouts>
         <CardLayouts index="4" CardId="Equi">
@@ -5293,8 +5525,8 @@
         </CardLayouts>
         <InnerRadius value="0.5"/>
         <CargoSize value="1"/>
-        <ScoreMake value="50"/>
-        <ScoreKill value="50"/>
+        <ScoreMake value="90"/>
+        <ScoreKill value="90"/>
         <SubgroupPriority value="78"/>
         <MinimapRadius value="0.375"/>
         <TacticalAI value="Marine"/>
@@ -6198,13 +6430,6 @@
         <BehaviorArray Link="TurretBuff"/>
         <DeathTime value="30"/>
     </CUnit>
-    <CUnit id="SiegeTankSieged">
-        <BehaviorArray Link="HonkaiAttributeMech"/>
-        <BehaviorArray Link="RobotUnit"/>
-        <BehaviorArray Link="CannotLoad"/>
-        <DeathTime value="30"/>
-        <CargoSize value="8"/>
-    </CUnit>
     <CUnit id="Starport">
         <BehaviorArray Link="FireSuppressionSystem"/>
         <BehaviorArray Link="TurretBuff"/>
@@ -6665,7 +6890,6 @@
         <BehaviorArray Link="HonkaiAttributeMech"/>
         <BehaviorArray Link="Couple"/>
         <BehaviorArray Link="CoupleBronya"/>
-        <BehaviorArray Link="VBuff"/>
         <BehaviorArray Link="LoseHPOnCreep"/>
         <BehaviorArray Link="StarOfEdenWorld"/>
         <WeaponArray Link="WeaponBronyaC7"/>
@@ -6808,7 +7032,6 @@
         <BehaviorArray Link="HonkaiAttributeMech"/>
         <BehaviorArray Link="Couple"/>
         <BehaviorArray Link="CoupleBronya"/>
-        <BehaviorArray Link="VBuff"/>
         <BehaviorArray Link="LoseHPOnCreep"/>
         <BehaviorArray Link="BronyaC7Tracker"/>
         <BehaviorArray Link="BronyaC7Jump"/>
@@ -7135,7 +7358,7 @@
         </ReviveInfoBase>
     </CUnit>
     <CUnit id="RO_010" parent="CUnitRO01x03x">
-        <Food value="-4"/>
+        <Food value="-3"/>
         <AbilArray Link="RO_010Abli1"/>
         <AbilArray Link="RO_010Abli1End"/>
         <BehaviorArray Link="BaTiRO010"/>
@@ -7143,11 +7366,13 @@
         <TacticalAIRange value="20"/>
         <TacticalAIThink value="lib6D9D7845_gf_AIThinkRO_010"/>
         <TacticalAIFilters value="Ground,Visible;Player,Ally,Neutral,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <LifeArmor value="5"/>
+        <CostResource index="Minerals" value="200"/>
+        <CostResource index="Vespene" value="75"/>
     </CUnit>
     <CUnit id="RO_030" parent="CUnitRO01x03x">
         <LifeStart value="400"/>
         <LifeMax value="400"/>
-        <LifeArmor value="1"/>
         <Speed value="1.086"/>
         <Sight value="11"/>
         <Food value="-4"/>
@@ -7165,7 +7390,7 @@
     <CUnit id="RO_031" parent="CUnitRO01x03x">
         <LifeStart value="700"/>
         <LifeMax value="700"/>
-        <LifeArmor value="3"/>
+        <LifeArmor value="4"/>
         <Speed value="1.086"/>
         <Sight value="11"/>
         <Food value="-6"/>

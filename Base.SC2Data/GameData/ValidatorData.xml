@@ -108,6 +108,14 @@
     <CValidatorUnitType id="IsMercCompound">
         <Value value="Mikoyan"/>
     </CValidatorUnitType>
+    <CValidatorCompareTrackedUnitsCount id="MeiC5DragonTracker">
+        <BehaviorLink value="MeiC5DragonTracker"/>
+    </CValidatorCompareTrackedUnitsCount>
+    <CValidatorIsUnitTracked id="MeiC5DragonTrackerIsSelf">
+        <Find value="1"/>
+        <BehaviorLink value="MeiC5DragonTracker"/>
+        <TrackerUnit Value="Target"/>
+    </CValidatorIsUnitTracked>
     <CValidatorLocationEnumArea id="NoEnermyFlyingWithin10">
         <WhichLocation Value="CasterUnit"/>
         <AreaArray Radius="10"/>

@@ -11,10 +11,48 @@
         <AlertIcon value="Assets\Textures\btn-ability-terran-heal-color.dds"/>
         <EditorCategories value="Race:Terran"/>
     </CButton>
+    <CButton id="MeiC5Ult">
+        <Icon value="Assets\Textures\Skill_Mei_AC_004.tga"/>
+        <AlertIcon value="Assets\Textures\Skill_Mei_AC_004.tga"/>
+        <Hotkey value="Button/Hotkey/Ultimate"/>
+    </CButton>
+    <CButton id="MeiC5Evade">
+        <Icon value="Assets\Textures\Skill_Mei_AC_006.tga"/>
+        <AlertIcon value="Assets\Textures\Skill_Mei_AC_006.tga"/>
+        <Hotkey value="Button/Hotkey/Evade"/>
+    </CButton>
     <CButton id="MeiC5Attack">
         <Icon value="Assets\Textures\Skill_Mei_AC_001.tga"/>
         <AlertIcon value="Assets\Textures\Skill_Mei_AC_001.tga"/>
         <Hotkey value="Button/Hotkey/Attack"/>
+    </CButton>
+    <CButton id="MeiC5Branch">
+        <Icon value="Assets\Textures\Skill_Mei_AC_002.tga"/>
+        <AlertIcon value="Assets\Textures\Skill_Mei_AC_002.tga"/>
+        <Hotkey value="Button/Hotkey/Branch"/>
+    </CButton>
+    <CButton id="SiegeTank">
+        <Icon value="Assets\Textures\btn-unit-RO_036.tga"/>
+        <AlertIcon value="Assets\Textures\btn-unit-RO_036.tga"/>
+    </CButton>
+    <CButton id="Valkyrja1Abil">
+        <Icon value="Assets\Textures\btn-ability-zeratul-hero-shadowcleave.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-zeratul-hero-shadowcleave.dds"/>
+        <HidesForSimpleText value="0"/>
+    </CButton>
+    <CButton id="Valkyrja1">
+        <Icon value="Assets\Textures\Wireframe-Valkyrja2.tga"/>
+        <AlertIcon value="Assets\Textures\Wireframe-Valkyrja2.tga"/>
+    </CButton>
+    <CButton id="ValkyrjaGrenade">
+        <Icon value="Assets\Textures\btn-upgrade-terran-kd8chargeex3.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-terran-kd8chargeex3.dds"/>
+        <HidesForSimpleText value="0"/>
+    </CButton>
+    <CButton id="Valkyrja1Upgrade">
+        <Icon value="Assets\Textures\btn-upgrade-protoss-groundweaponslevel0.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-protoss-groundweaponslevel0.dds"/>
+        <HidesForSimpleText value="0"/>
     </CButton>
     <CButton id="VoidRepair">
         <Icon value="Assets\Textures\btn-ability-terran-heal-color.dds"/>
@@ -1247,7 +1285,9 @@
         <AlertIcon value="Assets\Textures\Wireframe-RO_030.tga"/>
     </CButton>
     <CButton id="Construct5RO_036">
+        <Tooltip value="Button/Tooltip/SiegeTank"/>
         <Icon value="Assets\Textures\btn-unit-RO_036.tga"/>
+        <AlertTooltip value="Button/Tooltip/SiegeTank"/>
         <AlertIcon value="Assets\Textures\btn-unit-RO_036.tga"/>
     </CButton>
     <CButton id="SkinKianaC2">
@@ -1402,10 +1442,6 @@
     <CButton id="SiegeMode">
         <Icon value="Assets\Textures\btn-unit-RO_036_Cannon.tga"/>
         <AlertIcon value="Assets\Textures\btn-unit-RO_036_Cannon.tga"/>
-    </CButton>
-    <CButton id="SiegeTank">
-        <Icon value="Assets\Textures\btn-unit-RO_036.tga"/>
-        <AlertIcon value="Assets\Textures\btn-unit-RO_036.tga"/>
     </CButton>
     <CButton id="Ultralisk">
         <Icon value="Assets\Textures\Wireframe-BOSS_010.tga"/>

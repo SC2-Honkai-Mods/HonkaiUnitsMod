@@ -120,6 +120,9 @@
             <Value>2.57</Value>
             <Value>2.58</Value>
             <Value>2.59</Value>
+            <Value>2.60</Value>
+            <Value>2.61</Value>
+            <Value>2.62</Value>
         </Version>
         <Date>
             <Value>2/3/2022</Value>
@@ -227,6 +230,9 @@
             <Value>1/5/2026</Value>
             <Value>1/5/2026</Value>
             <Value>1/27/2026</Value>
+            <Value>1/29/2026</Value>
+            <Value>1/29/2026</Value>
+            <Value>10/1/2026</Value>
         </Date>
         <Notes>
             <Value>1,2,3,4,5,6</Value>
@@ -334,6 +340,9 @@
             <Value>386</Value>
             <Value>387,388,389,390,391,392,393,394,395,396,397,398,399,400,401</Value>
             <Value>402,403</Value>
+            <Value>404,405</Value>
+            <Value>406,407</Value>
+            <Value>408,409,410,411,412,413</Value>
         </Notes>
     </PatchNote>
     <Preload>

@@ -133,6 +133,27 @@
         </Modification>
         <Alignment value="Positive"/>
     </CBehaviorBuff>
+    <CBehaviorBuff id="Valkyrja1Attack1Speed">
+        <InfoFlags index="Hidden" value="1"/>
+        <Duration value="0.1875"/>
+        <Modification UnifiedMoveSpeedFactor="2.5"/>
+    </CBehaviorBuff>
+    <CBehaviorUnitTracker id="MeiC5DragonTracker">
+        <BehaviorFlags index="EnabledWhileDead" value="1"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <MaxTrackedUnits value="1"/>
+    </CBehaviorUnitTracker>
+    <CBehaviorBuff id="MeiC5OnDragon">
+        <InfoIcon value="Assets\Textures\Avatar_Mei.tga"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="MeiC5SummonDragon">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Period value="1"/>
+        <PeriodicEffect value="MeiC5SummonDragon"/>
+    </CBehaviorBuff>
     <CBehaviorBuff id="NoCommand">
         <InfoFlags index="Hidden" value="1"/>
         <Modification>
@@ -2508,6 +2529,11 @@
     <CBehaviorBuff id="VBuff">
         <BehaviorFlags index="Permanent" value="1"/>
         <InfoFlags index="Hidden" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="Valkyrja1Attack2Speed">
+        <InfoFlags index="Hidden" value="1"/>
+        <Duration value="0.125"/>
+        <Modification UnifiedMoveSpeedFactor="2"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="VortexWarpable">
         <Duration value="1"/>

@@ -270,6 +270,52 @@
         <BuildModel value="TechLab"/>
         <DeathActorModel value="TechLabDeath"/>
     </CActorUnit>
+    <CActorAction id="Valkyrja1Attack" parent="GenericAttack" effectAttack="Valkyrja1AttackDamage">
+        <ImpactMap index="None" Model="None" Sound="Valkyrja1_AttackImpact"/>
+        <ImpactPhysics>
+            <Name value="AttackPolearm00"/>
+            <MatchKeys value="Basic"/>
+            <AttackModelVariation value="0"/>
+            <AttackAnimProps value="00"/>
+            <Physics value="DarkTemplarAttackDeathForceLateral"/>
+        </ImpactPhysics>
+        <ImpactPhysics>
+            <Name value="AttackPolearm01"/>
+            <MatchKeys value="Basic"/>
+            <AttackModelVariation value="0"/>
+            <AttackAnimProps value="01"/>
+            <Physics value="DarkTemplarAttackDeathForceLateral"/>
+        </ImpactPhysics>
+        <ImpactPhysics>
+            <Name value="AttackPolearm03"/>
+            <MatchKeys value="Basic"/>
+            <AttackModelVariation value="0"/>
+            <AttackAnimProps value="03"/>
+            <Physics value="DarkTemplarAttackDeathForceOverhead"/>
+        </ImpactPhysics>
+        <ImpactPhysics>
+            <Name value="AttackBlade00"/>
+            <MatchKeys value="Basic"/>
+            <AttackModelVariation value="1"/>
+            <AttackAnimProps value="00"/>
+            <Physics value="DarkTemplarAttackDeathForceThrust"/>
+        </ImpactPhysics>
+        <ImpactPhysics>
+            <Name value="AttackBlade01"/>
+            <MatchKeys value="Basic"/>
+            <AttackModelVariation value="1"/>
+            <AttackAnimProps value="02"/>
+            <Physics value="DarkTemplarAttackDeathForceLateral"/>
+        </ImpactPhysics>
+        <ImpactPhysics>
+            <Name value="AttackBlade03"/>
+            <MatchKeys value="Basic"/>
+            <AttackModelVariation value="1"/>
+            <AttackAnimProps value="03"/>
+            <Physics value="DarkTemplarAttackDeathForceOverhead"/>
+        </ImpactPhysics>
+        <ShieldFlashType value="Header"/>
+    </CActorAction>
     <CActorUnit id="FactoryReactor">
         <On Terms="ActorCreation" Send="TextureSelectById ReactorDiffuseCoverFactory"/>
         <Macros value="ReactorTexture"/>
@@ -315,6 +361,43 @@
         <HostSiteOps Ops="SOpAttachOverhead"/>
         <Sound value="Medivac_HealLoop"/>
     </CActorSound>
+    <CActorUnit id="MeiC5Dragon" parent="GenericUnitStandard" unitName="MeiC5Dragon">
+        <Aliases value="_UnitLarge"/>
+        <Macros value="TerrainSquibAnimations"/>
+        <Macros value="PhysicsDeathsSwarmAir"/>
+        <Macros value="PhysicsDeathsVoidAir"/>
+        <Macros value="HerrscherCostructBasicMaterialRemoval"/>
+        <On Terms="UnitHeightUpdate.*.Land" Send="Create Banshee_Land"/>
+        <On Terms="Behavior.MeiC5OnDragon.On" Send="Create MeiC5OnDragon"/>
+        <On Terms="Behavior.MeiC5OnDragon.Off" Target="MeiC5OnDragon" Send="Destroy Immediate"/>
+        <HostSiteOps Ops="SOpBankerRPC"/>
+        <ModelFlags index="OutlineEmitter" value="1"/>
+        <Baselines index="Walk" BlendIn="0.750000" BlendOut="1.000000"/>
+        <DeathArray index="Normal" ModelLink="MeiC5DragonDeath" SoundLink="Banshee_Explode"/>
+        <DeathActorModel value="UnitDeathModelWithDeathMotionFlier"/>
+        <PhysicsMatchKeysOrdered value="BasicAir,Basic"/>
+        <PortraitModel value="MeiC5DragonPortrait"/>
+        <TerrainSquibs>
+            <MovementDistance value="0.150000,0.150000"/>
+            <IdlePeriod value="0.250000,0.500000"/>
+            <RangeDown value="5.000000"/>
+            <RangeDownFade value="1.000000"/>
+            <AttachQuery Methods="AMFilterCenter"/>
+            <Visuals TerrainPhysicsMaterial="Water" ActorModel="TerrainSquibHarnessContinuous" ModelLink="WaterRippleMassive15"/>
+        </TerrainSquibs>
+        <BarOffset value="60"/>
+        <BarWidth value="90"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-BOSS_050.tga"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\Wireframe-BOSS_050.tga"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-shipplatinglevel0.dds"/>
+        <NameOffset value="60"/>
+        <UnitIcon value="Assets\Textures\Wireframe-BOSS_050.tga"/>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-BOSS_050.tga"/>
+        </Wireframe>
+    </CActorUnit>
     <CActorUnit id="Reactor">
         <On Terms="ActorCreation" Send="TextureSelectById ReactorDiffuseCover"/>
         <DeathActorModel value="ReactorDeath"/>
@@ -332,6 +415,12 @@
     <CActorSiteOpAttach id="SOpAttachHandRight">
         <AttachQuery Methods="FilterHandRight"/>
     </CActorSiteOpAttach>
+    <CActorModel id="MeiC5OnDragon" parent="ModelAddition">
+        <EditorCategories value=""/>
+        <On index="0" Terms="ActorCreation" Send="AnimBracketStart BSD {} Cover"/>
+        <HostSiteOps Ops="SOpAttachTarget1"/>
+        <Model value="MeiC5"/>
+    </CActorModel>
     <!--                                                                                         -->
     <!-- Handle Morph To Tech Reactor .......................................................... -->
     <!--                                                                                         -->
@@ -1201,6 +1290,115 @@
     <CActorSound id="TerranBuildingLiftOff">
         <On Terms="AbilMorph.*.Start; MorphTo AntiEntropyFactoryFlying" Send="Create"/>
     </CActorSound>
+    <CActorUnit id="Valkyrja1" parent="CActorUnitWithIcon" unitName="Valkyrja1">
+        <Aliases value="_UnitSmall"/>
+        <Macros value="UnloadDropAnim"/>
+        <Macros value="PhysicsDeathsSwarmGround"/>
+        <Macros value="TerrainSquibAnimations"/>
+        <Macros value="PhysicsDeathsVoidGround"/>
+        <Macros value="ThrowAnimation"/>
+        <Macros value="DizzyAnim"/>
+        <On index="65" Terms="WeaponStart.Valkyrja1Attack1" Send="AnimBracketStart Attack Attack,01 {} {} FullMatch"/>
+        <On Terms="ModelEvent; ModelEventName SquibStart" Send="Create MarineCheerSquib"/>
+        <On Terms="ModelEvent; ModelEventName SquibStop" Target="MarineCheerSquib" Send="Destroy"/>
+        <On Terms="ModelEvent; ModelEventName SquibStop" Target="MarineCheerSquibSound" Send="Destroy"/>
+        <On Terms="AnimDone; AnimName Cheer" Target="MarineCheerSquib" Send="Destroy"/>
+        <On Terms="AnimDone; AnimName Cheer" Target="MarineCheerSquibSound" Send="Destroy"/>
+        <On Terms="UnitHeightUpdate.*.Land" Send="Create Marine_Land"/>
+        <On Terms="Effect.ValkyrjaSnipeCP.Start" Send="$Spell"/>
+        <On Terms="Effect.ValkyrjaSnipeHigherCP.Start" Send="$Spell,Superior"/>
+        <On Terms="Effect.ValkyrjaSnipeCP.Stop" Send="AnimClear Spell"/>
+        <On Terms="Effect.ValkyrjaSnipeHigherCP.Stop" Send="AnimClear Spell"/>
+        <On Terms="AbilTrain.StigmataUse.Finish" Send="Create StigmataUpgrade"/>
+        <On Terms="WeaponStart.Valkyrja1Attack2" Send="AnimBracketStart Attack1 Attack,02 {} {} FullMatch"/>
+        <On Terms="WeaponStop.*.AttackStop" Send="AnimBracketStop Attack"/>
+        <On Terms="Abil.Valkyrja1Abil.SourcePrepStart" Send="$Spell,01 FullMatch"/>
+        <On Terms="Abil.Valkyrja1Abil.SourceFinishStop; AnimPlaying Spell" Send="AnimClear Spell"/>
+        <On Terms="WeaponStop.*.AttackStop" Send="AnimBracketStop Attack1"/>
+        <DeathArray index="Normal" ModelLink="Valkyrja1Death" SoundLink="Marine_DeathFXBloodSpray" VoiceLink="GhostAlternate_Death"/>
+        <DeathArray index="Disintegrate" SoundLink="Uni_DeathFXAcid"/>
+        <DeathArray index="Eat" AnimProps="" SoundLink="Marine_DeathFXEat"/>
+        <DeathArray index="Eviscerate" SoundLink="Marine_DeathFXEviscerate"/>
+        <DeathArray index="Fire" SoundLink="Marine_DeathFXFire"/>
+        <DeathArray index="Silentkill" SoundLink="Uni_DeathFXSilentKill"/>
+        <DeathArray index="Squish" SoundLink="Marine_DeathFXBloodSpray"/>
+        <DeathCustomData index="0" SyncPassChance="75"/>
+        <DeathActorModel value="UnitDeathModelWithDeathMotionGround"/>
+        <PortraitModel value="Valkyrja1Portrait"/>
+        <StandAnimTurnTime value="4"/>
+        <TerrainSquibs>
+            <MovementDistance value="0.150000,0.150000"/>
+            <IdlePeriod value="0.100000,0.250000"/>
+            <RangeUp value="0.600000"/>
+            <RangeDown value="0.600000"/>
+            <AttachQuery Methods="AMFilterCenter"/>
+            <Visuals TerrainPhysicsMaterial="Water" ActorModel="TerrainSquibHarnessContinuous" ModelLink="WaterRippleSmall"/>
+        </TerrainSquibs>
+        <WalkAnimMoveSpeed value="3.7617"/>
+        <BarOffset value="40"/>
+        <BarWidth value="36"/>
+        <GlossaryAnim value="Spell"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel0.dds"/>
+        <SoundArray index="Birth" value="GhostAlternate_Birth"/>
+        <SoundArray index="Ready" value="GhostAlternate_Ready"/>
+        <SoundArray index="Help" value="GhostAlternate_Help"/>
+        <SoundArray index="What" value="GhostAlternate_What"/>
+        <SoundArray index="Yes" value="GhostAlternate_Yes"/>
+        <SoundArray index="Attack" value="GhostAlternate_Attack"/>
+        <SoundArray index="Pissed" value="GhostAlternate_Pissed"/>
+        <SoundArray index="Movement" value="GhostAlternate_Movement"/>
+        <SoundArray index="Turning" value="GhostAlternate_Turning"/>
+        <SoundArray index="Board" value="GhostAlternate_Board"/>
+        <SoundArray index="Click" value="GhostAlternate_Click"/>
+        <SoundArray index="ClickError" value="GhostAlternate_ClickError"/>
+        <SoundArray index="Highlight" value="GhostAlternate_Highlight"/>
+    </CActorUnit>
+    <CActorAction id="Valkyrja1Abil" parent="GenericAttack" effectAttack="Valkyrja1AbilDamage">
+        <ImpactMap index="None" Model="None" Sound="Valkyrja1_AttackImpact"/>
+        <ImpactPhysics>
+            <Name value="AttackPolearm00"/>
+            <MatchKeys value="Basic"/>
+            <AttackModelVariation value="0"/>
+            <AttackAnimProps value="00"/>
+            <Physics value="DarkTemplarAttackDeathForceLateral"/>
+        </ImpactPhysics>
+        <ImpactPhysics>
+            <Name value="AttackPolearm01"/>
+            <MatchKeys value="Basic"/>
+            <AttackModelVariation value="0"/>
+            <AttackAnimProps value="01"/>
+            <Physics value="DarkTemplarAttackDeathForceLateral"/>
+        </ImpactPhysics>
+        <ImpactPhysics>
+            <Name value="AttackPolearm03"/>
+            <MatchKeys value="Basic"/>
+            <AttackModelVariation value="0"/>
+            <AttackAnimProps value="03"/>
+            <Physics value="DarkTemplarAttackDeathForceOverhead"/>
+        </ImpactPhysics>
+        <ImpactPhysics>
+            <Name value="AttackBlade00"/>
+            <MatchKeys value="Basic"/>
+            <AttackModelVariation value="1"/>
+            <AttackAnimProps value="00"/>
+            <Physics value="DarkTemplarAttackDeathForceThrust"/>
+        </ImpactPhysics>
+        <ImpactPhysics>
+            <Name value="AttackBlade01"/>
+            <MatchKeys value="Basic"/>
+            <AttackModelVariation value="1"/>
+            <AttackAnimProps value="02"/>
+            <Physics value="DarkTemplarAttackDeathForceLateral"/>
+        </ImpactPhysics>
+        <ImpactPhysics>
+            <Name value="AttackBlade03"/>
+            <MatchKeys value="Basic"/>
+            <AttackModelVariation value="1"/>
+            <AttackAnimProps value="03"/>
+            <Physics value="DarkTemplarAttackDeathForceOverhead"/>
+        </ImpactPhysics>
+        <ShieldFlashType value="Header"/>
+    </CActorAction>
     <CActorUnit id="WeaponK5" parent="GenericUnitStandardNoAutoSoundLinks" unitName="WeaponK5">
         <On Terms="ActorCreation" Send="Create WeaponPistolAttachK5"/>
         <Model value="PistolDisplayModel"/>
@@ -3410,6 +3608,7 @@
         <Macros value="PhysicsDeathsSwarmGround"/>
         <Macros value="PhysicsDeathsVoidGround"/>
         <Macros value="WeaponCannonAnimations"/>
+        <Macros value="ThrowAnimation"/>
         <On index="64" Terms="ActorCreation" Send="Create BronyaCannonAttach"/>
         <On index="65" Terms="WeaponStart.Valkyrja3Basic.AttackStart" Send="AnimPlay Attack Attack,01"/>
         <On index="66" Terms="WeaponStop.Valkyrja3Basic.AttackStop" Send="AnimClear Attack"/>
@@ -6009,7 +6208,7 @@
         <Macros value="PhysicsDeathsSwarmGround"/>
         <Macros value="TerrainSquibAnimations"/>
         <Macros value="PhysicsDeathsVoidGround"/>
-        <Macros value="PhysicsDeathsVoidGround"/>
+        <Macros value="ThrowAnimation"/>
         <On index="65" Terms="WeaponStart.ValkyrjaRifle.AttackStart; WeaponTargetElevation GE 20.000000" Send="AnimBracketStart Attack Attack,Superior"/>
         <On index="66" Terms="WeaponStart.ValkyrjaRifle.AttackStart; WeaponTargetElevation LE -20.000000" Send="AnimBracketStart Attack Attack,Inferior"/>
         <On index="67" Terms="WeaponStart.ValkyrjaRifle.AttackStart" Send="AnimBracketStart Attack Attack"/>
@@ -8048,6 +8247,13 @@
         <On index="4" Terms="Abil.RallyHatchery2.ButtonHoverOff; AbilCmd RallyHatchery2,Rally3" Send="Destroy"/>
         <Range value="20.000000"/>
     </CActorRange>
+    <CActorSimple id="halostart">
+        <On Terms="ActorCreation" Target="::Scene" Send="SceneHaloSetRastermode AlphaBlend"/>
+        <On Terms="ActorCreation" Target="::Scene" Send="SceneHaloSetWidth 4.000000"/>
+        <On Terms="ActorCreation" Target="::Scene" Send="SceneHaloSetMode Quadratic"/>
+        <On Terms="ActorCreation" Send="Destroy"/>
+        <On Terms="UnitCreation.SCV" Send="Create"/>
+    </CActorSimple>
     <CActorUnit id="RO_010" parent="GenericUnitBase" unitName="RO_010">
         <Aliases value="_UnitHuge"/>
         <Macros value="TerrainSquibAnimations"/>

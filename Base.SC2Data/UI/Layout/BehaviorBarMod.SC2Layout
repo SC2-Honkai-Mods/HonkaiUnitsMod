@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Desc>
+    <Frame type="BehaviorIcon" name="BehaviorIcoMod">
+        <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+        <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
+        <Width val="32"/>
+        <Height val="32"/>
+        <TooltipFrame val="StandardNameTooltip"/> 
+        <MinStackCountDisplayed val="2"/>
+    
+        <Frame type="Image" name="IconImage">
+            <Anchor relative="$parent"/>
+            <LayerCount val="2"/>
+            <TextureType val="Normal" layer="0"/>
+            <Texture val="@UI/ButtonBorderNormal" layer="0"/>
+            <TextureType val="Normal" layer="1"/>
+        </Frame> 
+    
+        <Frame  type= "MathFrame"  name= "CDJS1" > 
+            <A val="{$parent/@MaxCooldownValue}" /> 
+            <B val="{$parent/@CurrentCooldownValue}" /> 
+            <Operator val= "Subtract" /> 
+            <Handle val= "" /> 
+        </Frame>
+    
+        <Frame  type= "MathFrame"  name= "CDJS2" > 
+            <A val="{$parent/@CurrentCooldownValue}" /> 
+            <B val="0" /> 
+            <Operator val= "Subtract" /> 
+            <Handle val= "" /> 
+        </Frame>
+    
+        <Frame type="Label" name="CurrentCooldownLabel">
+            <!--Anchor side="Top" relative="$parent/IconImage" pos="Min" offset="3"/-->
+            <Anchor side="top" relative="$parent/IconImage" pos="Min" offset="0"/>
+            <!--Anchor side="Left" relative="$parent/IconImage" pos="Min" offset="0"/-->
+            <Anchor side="left" relative="$parent/IconImage" pos="Min" offset="-6"/>
+            <Height val="32"/>
+            <Width val="32"/>
+            <Text val="{$parent/CDJS2/@ResultInt}"/>
+            <Style val="InfoPaneUnitInfo"/>
+            <!--Style val="@Storm_BuffDebuffStackLabel"/-->
+            <RenderPriority val="600"/>
+        </Frame>
+    
+        <Frame type="Label" name="StackCount">
+            <!--Anchor side="Top" relative="$parent/IconImage" pos="Min" offset="3"/-->
+            <Anchor side="Bottom" relative="$parent/IconImage" pos="Max" offset="0"/>
+            <!--Anchor side="Left" relative="$parent/IconImage" pos="Min" offset="0"/-->
+            <Anchor side="left" relative="$parent/IconImage" pos="Min" offset="15"/>
+            <Height val="16"/>
+            <Width val="32"/>
+            <Visible val="True"/>
+            <Style val="InfoPaneUnitInfo"/>
+            <Text val="{$parent/@CurrentStackCount}"/>
+            <!--Style val="@Storm_BuffDebuffStackLabel"/-->
+            <RenderPriority val="600"/>
+        </Frame>
+    
+        <Animation name="StateChange">
+            <Event event="Cooldown" action="Stop" />
+            <Event event="Finished" action="Restart,Play" />
+            <Controller type="Visibility" end="Pause" frame="CooldownImage">
+                <Key type="Bool" time="0" value="false" />
+            </Controller>
+        </Animation>
+    
+        <Frame type="Image" name="CooldownImage">
+            <Anchor side="top" relative="$parent" pos="MIN" offset="0"/>
+            <Anchor side="left" relative="$parent" pos="MIN" offset="0"/>
+            <TextureType val="Normal"/>
+    
+            <TextureCoords top="0.0" left="0.0" bottom="0.125" right="0.0625"/>
+            <AnimColumns val="8"/>
+            <AnimCount val="64"/>
+            <Animating val="True"/>
+            <ManagedAnim val="true"/>
+            <Height val="32"/>
+            <Width val="32"/>
+            <Texture val="Assets\Textures\cooldown16x8_clear.dds"/>
+            <Visible val="false"/>
+            <RenderPriority val="550"/>
+        </Frame>
+    </Frame>
+    <Frame type="Frame" name="GameUI/UIContainer/ConsoleUIContainer/InfoPanel/UnitPanel" file="GameUI">
+        <Frame type="BehaviorBar" name="BehaviorBar">
+            <Anchor side="Top" relative="$parent" pos="Min" offset="6"/>
+            <Anchor side="Left" relative="$parent" pos="Min" offset="10"/>
+            <Height val="192"/>
+            <Width val="96"/>
+            <IconSortMethod val="None"/>
+            <RenderPriority val="520"/>
+    
+            <Frame type="BehaviorIcon" name="BehaviorIcon0" template="BehaviorBarMod/BehaviorIcoMod">
+                <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+                <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
+            </Frame>
+    
+            <Frame type="BehaviorIcon" name="BehaviorIcon1" template="BehaviorBarMod/BehaviorIcoMod">
+                <Anchor side="Top" relative="$parent/BehaviorIcon0" pos="Max" offset="0"/>
+                <Anchor side="Left" relative="$parent/BehaviorIcon0" pos="Min" offset="0"/>
+            </Frame>
+    
+            <Frame type="BehaviorIcon" name="BehaviorIcon2" template="BehaviorBarMod/BehaviorIcoMod">
+                <Anchor side="Top" relative="$parent/BehaviorIcon1" pos="Max" offset="0"/>
+                <Anchor side="Left" relative="$parent/BehaviorIcon1" pos="Min" offset="0"/>
+            </Frame>
+    
+            <Frame type="BehaviorIcon" name="BehaviorIcon3" template="BehaviorBarMod/BehaviorIcoMod">
+                <Anchor side="Top" relative="$parent/BehaviorIcon2" pos="Max" offset="0"/>
+                <Anchor side="Left" relative="$parent/BehaviorIcon2" pos="Min" offset="0"/>
+            </Frame>
+    
+            <Frame type="BehaviorIcon" name="BehaviorIcon4" template="BehaviorBarMod/BehaviorIcoMod">
+                <Anchor side="Top" relative="$parent/BehaviorIcon3" pos="Max" offset="0"/>
+                <Anchor side="Left" relative="$parent/BehaviorIcon3" pos="Min" offset="0"/>
+            </Frame>
+    
+            <Frame type="BehaviorIcon" name="BehaviorIcon5" template="BehaviorBarMod/BehaviorIcoMod">
+                <Anchor side="Top" relative="$parent/BehaviorIcon4" pos="Max" offset="0"/>
+                <Anchor side="Left" relative="$parent/BehaviorIcon4" pos="Min" offset="0"/>
+            </Frame>
+    
+            <Frame type="BehaviorIcon" name="BehaviorIcon6" template="BehaviorBarMod/BehaviorIcoMod">
+                <Anchor side="Top" relative="$parent/BehaviorIcon0" pos="Min" offset="0"/>
+                <Anchor side="Left" relative="$parent/BehaviorIcon0" pos="Max" offset="0"/>
+            </Frame>
+    
+            <Frame type="BehaviorIcon" name="BehaviorIcon7" template="BehaviorBarMod/BehaviorIcoMod">
+                <Anchor side="Top" relative="$parent/BehaviorIcon6" pos="Max" offset="0"/>
+                <Anchor side="Left" relative="$parent/BehaviorIcon6" pos="Min" offset="0"/>
+            </Frame>
+    
+            <Frame type="BehaviorIcon" name="BehaviorIcon8" template="BehaviorBarMod/BehaviorIcoMod">
+                <Anchor side="Top" relative="$parent/BehaviorIcon7" pos="Max" offset="0"/>
+                <Anchor side="Left" relative="$parent/BehaviorIcon7" pos="Min" offset="0"/>
+            </Frame>
+    
+            <Frame type="BehaviorIcon" name="BehaviorIcon9" template="BehaviorBarMod/BehaviorIcoMod">
+                <Anchor side="Top" relative="$parent/BehaviorIcon8" pos="Max" offset="0"/>
+                <Anchor side="Left" relative="$parent/BehaviorIcon8" pos="Min" offset="0"/>
+            </Frame>
+    
+            <Frame type="BehaviorIcon" name="BehaviorIcon10" template="BehaviorBarMod/BehaviorIcoMod">
+                <Anchor side="Top" relative="$parent/BehaviorIcon9" pos="Max" offset="0"/>
+                <Anchor side="Left" relative="$parent/BehaviorIcon9" pos="Min" offset="0"/>
+            </Frame>
+    
+            <Frame type="BehaviorIcon" name="BehaviorIcon11" template="BehaviorBarMod/BehaviorIcoMod">
+                <Anchor side="Top" relative="$parent/BehaviorIcon10" pos="Max" offset="0"/>
+                <Anchor side="Left" relative="$parent/BehaviorIcon10" pos="Min" offset="0"/>
+            </Frame>
+    
+            <Frame type="BehaviorIcon" name="BehaviorIcon12" template="BehaviorBarMod/BehaviorIcoMod">
+                <Anchor side="Top" relative="$parent/BehaviorIcon6" pos="Min" offset="0"/>
+                <Anchor side="Left" relative="$parent/BehaviorIcon6" pos="Max" offset="0"/>
+            </Frame>
+    
+            <Frame type="BehaviorIcon" name="BehaviorIcon13" template="BehaviorBarMod/BehaviorIcoMod">
+                <Anchor side="Top" relative="$parent/BehaviorIcon12" pos="Max" offset="0"/>
+                <Anchor side="Left" relative="$parent/BehaviorIcon12" pos="Min" offset="0"/>
+            </Frame>
+    
+            <Frame type="BehaviorIcon" name="BehaviorIcon14" template="BehaviorBarMod/BehaviorIcoMod">
+                <Anchor side="Top" relative="$parent/BehaviorIcon13" pos="Max" offset="0"/>
+                <Anchor side="Left" relative="$parent/BehaviorIcon13" pos="Min" offset="0"/>
+            </Frame>
+    
+            <Frame type="BehaviorIcon" name="BehaviorIcon15" template="BehaviorBarMod/BehaviorIcoMod">
+                <Anchor side="Top" relative="$parent/BehaviorIcon14" pos="Max" offset="0"/>
+                <Anchor side="Left" relative="$parent/BehaviorIcon14" pos="Min" offset="0"/>
+            </Frame>
+    
+            <Frame type="BehaviorIcon" name="BehaviorIcon16" template="BehaviorBarMod/BehaviorIcoMod">
+                <Anchor side="Top" relative="$parent/BehaviorIcon15" pos="Max" offset="0"/>
+                <Anchor side="Left" relative="$parent/BehaviorIcon15" pos="Min" offset="0"/>
+            </Frame>
+    
+            <Frame type="BehaviorIcon" name="BehaviorIcon17" template="BehaviorBarMod/BehaviorIcoMod">
+                <Anchor side="Top" relative="$parent/BehaviorIcon16" pos="Max" offset="0"/>
+                <Anchor side="Left" relative="$parent/BehaviorIcon16" pos="Min" offset="0"/>
+            </Frame>
+        </Frame>
+    </Frame>
+</Desc>

@@ -482,22 +482,22 @@
         <Flags index="TechTreeCheat" value="1"/>
     </CUpgrade>
     <CUpgrade id="OrbitalStrike2">
-        <Flags index="UpgradeCheat" value="0"/>
-        <EffectArray Operation="Set" Reference="Abil,FactoryTrain,InfoArray[Train1].Effect" Value="RODrop"/>
-        <EffectArray Operation="Set" Reference="Abil,FactoryTrain,InfoArray[Train1].Location" Value="Rally"/>
-        <EffectArray Operation="Multiply" Reference="Abil,FactoryTrain,InfoArray[Train1].Time" Value="0.7"/>
-        <EffectArray Operation="Set" Reference="Abil,FactoryTrain,InfoArray[Train3].Effect" Value="RODrop"/>
-        <EffectArray Operation="Set" Reference="Abil,FactoryTrain,InfoArray[Train3].Location" Value="Rally"/>
-        <EffectArray Operation="Multiply" Reference="Abil,FactoryTrain,InfoArray[Train3].Time" Value="0.7"/>
-        <EffectArray Operation="Set" Reference="Abil,FactoryTrain,InfoArray[Train4].Effect" Value="RODrop"/>
-        <EffectArray Operation="Set" Reference="Abil,FactoryTrain,InfoArray[Train4].Location" Value="Rally"/>
-        <EffectArray Operation="Multiply" Reference="Abil,FactoryTrain,InfoArray[Train4].Time" Value="0.7"/>
-        <EffectArray Operation="Set" Reference="Abil,FactoryTrain,InfoArray[Train5].Effect" Value="RODrop"/>
-        <EffectArray Operation="Set" Reference="Abil,FactoryTrain,InfoArray[Train5].Location" Value="Rally"/>
-        <EffectArray Operation="Multiply" Reference="Abil,FactoryTrain,InfoArray[Train5].Time" Value="0.7"/>
-        <EffectArray Operation="Set" Reference="Abil,FactoryTrain,InfoArray[Train9].Effect" Value="RODrop"/>
-        <EffectArray Operation="Set" Reference="Abil,FactoryTrain,InfoArray[Train9].Location" Value="Rally"/>
-        <EffectArray Operation="Multiply" Reference="Abil,FactoryTrain,InfoArray[Train9].Time" Value="0.7"/>
+        <Flags index="TechTreeCheat" value="1"/>
+        <EffectArray Operation="Set" Reference="Abil,AntiEntropyFactoryTrain,InfoArray[Train1].Effect" Value="RODrop"/>
+        <EffectArray Operation="Set" Reference="Abil,AntiEntropyFactoryTrain,InfoArray[Train1].Location" Value="Rally"/>
+        <EffectArray Operation="Multiply" Reference="Abil,AntiEntropyFactoryTrain,InfoArray[Train1].Time" Value="0.7"/>
+        <EffectArray Operation="Set" Reference="Abil,AntiEntropyFactoryTrain,InfoArray[Train8].Effect" Value="RODrop"/>
+        <EffectArray Operation="Set" Reference="Abil,AntiEntropyFactoryTrain,InfoArray[Train8].Location" Value="Rally"/>
+        <EffectArray Operation="Multiply" Reference="Abil,AntiEntropyFactoryTrain,InfoArray[Train8].Time" Value="0.7"/>
+        <EffectArray Operation="Set" Reference="Abil,AntiEntropyFactoryTrain,InfoArray[Train9].Effect" Value="RODrop"/>
+        <EffectArray Operation="Set" Reference="Abil,AntiEntropyFactoryTrain,InfoArray[Train9].Location" Value="Rally"/>
+        <EffectArray Operation="Multiply" Reference="Abil,AntiEntropyFactoryTrain,InfoArray[Train9].Time" Value="0.7"/>
+        <EffectArray Operation="Set" Reference="Abil,AntiEntropyFactoryTrain,InfoArray[Train10].Effect" Value="RODrop"/>
+        <EffectArray Operation="Set" Reference="Abil,AntiEntropyFactoryTrain,InfoArray[Train10].Location" Value="Rally"/>
+        <EffectArray Operation="Multiply" Reference="Abil,AntiEntropyFactoryTrain,InfoArray[Train10].Time" Value="0.7"/>
+        <EffectArray Operation="Set" Reference="Abil,AntiEntropyFactoryTrain,InfoArray[Train11].Effect" Value="RODrop"/>
+        <EffectArray Operation="Set" Reference="Abil,AntiEntropyFactoryTrain,InfoArray[Train11].Location" Value="Rally"/>
+        <EffectArray Operation="Multiply" Reference="Abil,AntiEntropyFactoryTrain,InfoArray[Train11].Time" Value="0.7"/>
         <EditorCategories value="UpgradeType:Talents"/>
     </CUpgrade>
     <CUpgrade id="ReduceFire">
@@ -629,18 +629,28 @@
         <Race value="Terr"/>
         <ScoreAmount value="200"/>
         <ScoreResult value="BuildOrder"/>
+        <EffectArray Reference="Unit,Valkyrja1,LifeMax" Value="120"/>
+        <EffectArray Reference="Unit,Valkyrja1,LifeStart" Value="120"/>
         <EffectArray Reference="Unit,Valkyrja2,LifeMax" Value="80"/>
         <EffectArray Reference="Unit,Valkyrja2,LifeStart" Value="80"/>
         <EffectArray Reference="Unit,Valkyrja3,LifeMax" Value="120"/>
         <EffectArray Reference="Unit,Valkyrja3,LifeStart" Value="120"/>
         <EditorCategories value="UpgradeType:Talents"/>
+        <AffectedUnitArray value="Valkyrja1"/>
         <AffectedUnitArray value="Valkyrja2"/>
-        <AffectedUnitArray value="Marauder"/>
+        <AffectedUnitArray value="Valkyrja3"/>
     </CUpgrade>
     <CUpgrade id="VAttackUpgrade">
-        <EffectArray Reference="Effect,ValkyrjaRifleDamage,Amount" Value="1"/>
+        <EffectArray Reference="Behavior,VBuff,Modification.DamageDealtFraction[Melee]" Value="0.1"/>
+        <EffectArray Reference="Behavior,VBuff,Modification.DamageDealtFraction[Ranged]" Value="0.1"/>
+        <EffectArray Reference="Behavior,VBuff,Modification.DamageDealtFraction[Spell]" Value="0.1"/>
+        <EffectArray Reference="Behavior,VBuff,Modification.DamageDealtFraction[Splash]" Value="0.1"/>
+        <EffectArray Reference="Behavior,VBuff,Modification.DamageDealtFraction[NoProc]" Value="0.1"/>
         <EffectArray Reference="Weapon,ValkyrjaRifle,Level" Value="1"/>
         <EffectArray Reference="Weapon,ValkyrjaRifle,Range" Value="0.4"/>
+        <EffectArray Reference="Weapon,Valkyrja1Attack1,Level" Value="1"/>
+        <EffectArray Reference="Weapon,Valkyrja1Attack2,Level" Value="1"/>
+        <AffectedUnitArray value="Valkyrja1"/>
         <AffectedUnitArray value="Valkyrja2"/>
         <MaxLevel value="10"/>
     </CUpgrade>
@@ -653,6 +663,7 @@
         <MaxLevel value="2"/>
     </CUpgrade>
     <CUpgrade id="VArmorUpgrade">
+        <EffectArray Reference="Unit,Valkyrja1,LifeArmorLevel" Value="1"/>
         <EffectArray Reference="Unit,Valkyrja2,LifeArmorLevel" Value="1"/>
         <EffectArray Reference="Unit,Valkyrja3,LifeArmorLevel" Value="1"/>
         <EffectArray Reference="Behavior,VBuff,Modification.LifeArmorBonus" Value="1"/>
@@ -848,10 +859,12 @@
         <Flags index="TechTreeCheat" value="1"/>
     </CUpgrade>
     <CUpgrade id="VShieldUpgrade">
+        <EffectArray Reference="Unit,Valkyrja1,ShieldArmorLevel" Value="1"/>
         <EffectArray Reference="Unit,Valkyrja2,ShieldArmorLevel" Value="1"/>
         <EffectArray Reference="Unit,Valkyrja3,ShieldArmorLevel" Value="1"/>
         <EffectArray Reference="Behavior,VBuff,Modification.ShieldArmorBonus" Value="1"/>
         <EffectArray Reference="Behavior,VBuff,Modification.VitalMaxArray[Shields]" Value="20"/>
+        <EffectArray Operation="Subtract" Reference="Unit,Valkyrja1,ShieldRegenDelay" Value="1.000000"/>
         <EffectArray Operation="Subtract" Reference="Unit,Valkyrja2,ShieldRegenDelay" Value="1.000000"/>
         <EffectArray Operation="Subtract" Reference="Unit,Valkyrja3,ShieldRegenDelay" Value="1.000000"/>
         <MaxLevel value="10"/>
@@ -987,5 +1000,16 @@
     </CUpgrade>
     <CUpgrade id="BronyaC2Upgrade4">
         <MaxLevel value="4"/>
+    </CUpgrade>
+    <CUpgrade id="Valkyrja1AttackUpgrade">
+        <EffectArray Reference="Effect,Valkyrja1AttackDamagePhysics,Amount" Value="4"/>
+        <EffectArray Reference="Effect,Valkyrja1AttackDamageFire,Amount" Value="4"/>
+        <EffectArray Reference="Effect,Valkyrja1AttackDamageThunder,Amount" Value="4"/>
+        <EffectArray Reference="Effect,Valkyrja1AttackDamageIce,Amount" Value="4"/>
+        <EffectArray Operation="Set" Reference="Effect,Valkyrja1AttackSet,EffectArray[1]" Value="Valkyrja1AttackBleed"/>
+        <EditorCategories value="UpgradeType:Talents"/>
+    </CUpgrade>
+    <CUpgrade id="ValkyrjaGrenade">
+        <EditorCategories value="UpgradeType:Talents"/>
     </CUpgrade>
 </Catalog>

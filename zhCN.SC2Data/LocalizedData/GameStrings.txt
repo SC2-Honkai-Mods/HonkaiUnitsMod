@@ -113,6 +113,7 @@ Abil/Name/MeiC2EvadeIdle=疾影刃 静止
 Abil/Name/MeiC2EvadeMoving=疾影刃 移动
 Abil/Name/MeiC2Ult=天照
 Abil/Name/MeiC2Upgrade=脉冲装·绯红研发
+Abil/Name/MeiC5DragonTransport=俱利伽罗 装载-卸载
 Abil/Name/MobilizeSkill1=紧急动员
 Abil/Name/MobilizeSkill2=空投支援
 Abil/Name/MorphToBronyaC2=MorphToBronyaC2
@@ -176,6 +177,7 @@ Abil/Name/UL_030AbliEnd=迅捷突进
 Abil/Name/UL_100Abil=巨型轰炸
 Abil/Name/UnlockAvatar=解锁女武神
 Abil/Name/Unsiege=取消火炮模式
+Abil/Name/Valkyrja1Abil=回身斩
 Abil/Name/ValkyrjaSnipe=狙击
 Abil/Name/WeaponSwitchB1=B1 SU-22
 Abil/Name/WeaponSwitchB15=B15 苍玄之书
@@ -286,6 +288,7 @@ Behavior/Name/MeiC2Buff=晚樱
 Behavior/Name/MeiC2Wave=MeiC2 Wave
 Behavior/Name/MeiC2WaveDamage=MeiC2 Wave Damage
 Behavior/Name/MeiC2WaveMark=MeiC2 Wave Mark
+Behavior/Name/MeiC5OnDragon=骑乘状态
 Behavior/Name/MissileRebound=发射物反弹
 Behavior/Name/NoDeathSa=No Death Sa 
 Behavior/Name/Protect50=减伤50%
@@ -415,6 +418,7 @@ Behavior/Tooltip/Lightninged=受到的雷电伤害提高100%
 Behavior/Tooltip/Lightninged2=受到的雷电伤害提高50%
 Behavior/Tooltip/Lightninged3=受到的雷电伤害提高25%
 Behavior/Tooltip/MeiC2Buff=物理伤害提高40%
+Behavior/Tooltip/MeiC5OnDragon=雷之律者骑乘中，俱利伽罗获得霸体，降低俱利伽罗的攻击冷却时间、提高AOE范围、提高攻击伤害并提高麻痹概率。
 Behavior/Tooltip/PsiStorm2=目标正受到灵能风暴效果的影响，在效果范围内将受到大量伤害。
 Behavior/Tooltip/RobotUnit=机甲单位，免疫眩晕和流血状态
 Behavior/Tooltip/SeeleC1Tunneling=可以穿过敌人，造成的物理伤害提高25%，受到的伤害减少40%
@@ -512,7 +516,7 @@ Button/Name/CommanderRaynorOrbitalDropPods2=轨道空投
 Button/Name/Construct2RPC=构造2个RPC-6626
 Button/Name/Construct4RO_010=构造4个泰坦机甲
 Button/Name/Construct4RO_0302=构造4个御雷机甲
-Button/Name/Construct5RO_036=构造5个赫菲斯托斯机甲
+Button/Name/Construct5RO_036=构造5个试做型机甲
 Button/Name/Corruptor=变异为浮游级崩坏兽
 Button/Name/CosmicJuggernautBlink=重新部署
 Button/Name/CosmicJuggernautCharge=充能
@@ -633,6 +637,9 @@ Button/Name/MeiC2Upgrade2=二重旋风刃
 Button/Name/MeiC2Upgrade3=樱之魄
 Button/Name/MeiC2Upgrade4=魄之刃
 Button/Name/MeiC5Attack=胧刀 建御雷
+Button/Name/MeiC5Branch=荒闪 素戋呜
+Button/Name/MeiC5Evade=祸隐 伽具土
+Button/Name/MeiC5Ult=剑现 天照神
 Button/Name/MicroFiltering2=高效切割
 Button/Name/Mikoyan=建造米高扬设计制造局
 Button/Name/MobilizeSkill1=紧急动员
@@ -719,7 +726,7 @@ Button/Name/SeeleC1Upgrade4=猩红波动
 Button/Name/SetRallyPointCosmicJuggernaut=设置集结点
 Button/Name/SevenThundersOfRetribution=电磁力消除
 Button/Name/SiegeMode=火炮模式
-Button/Name/SiegeTank=制造赫菲斯托斯机甲
+Button/Name/SiegeTank=制造试做型机甲
 Button/Name/SiegeTankUpgrade=机动底盘
 Button/Name/SkinKiana01=阳光海滩
 Button/Name/SkinKianaC2=领域装·白练
@@ -794,9 +801,13 @@ Button/Name/Unsiege=机甲模式
 Button/Name/VArmorUpgrade=升级女武神护甲等级
 Button/Name/VShieldUpgrade=升级女武神护盾等级
 Button/Name/VWeaponUpgrade=升级女武神制式武器等级
+Button/Name/Valkyrja1=训练女武神-破坏者
+Button/Name/Valkyrja1Abil=回身斩
+Button/Name/Valkyrja1Upgrade=高出力斩击
 Button/Name/Valkyrja2=训练女武神-看守者
 Button/Name/Valkyrja3=训练女武神-压制者
 Button/Name/ValkyrjaDefence=崩坏能防护服
+Button/Name/ValkyrjaGrenade=吸能手雷
 Button/Name/ValkyrjaShield=防暴护盾
 Button/Name/ValkyrjaSnipe=狙杀
 Button/Name/VoidRepair=修复
@@ -815,8 +826,8 @@ Button/Name/WeaponB7=重装小兔19C
 Button/Name/WeaponK17=能量跃迁者
 Button/Name/WeaponK23=天火圣裁
 Button/Name/WeaponK5=索尔之锤
-Button/Name/WeaponKatanaSlot=太刀武器槽位
-Button/Name/WeaponPistolSlot=双枪武器槽位
+Button/Name/WeaponKatanaSlot=势州村正
+Button/Name/WeaponPistolSlot=USP-45
 Button/Name/WeaponPistolTrade=购买双枪武器
 Button/Name/WeaponSevenThundersOfRetribution=涤罪七雷
 Button/Name/WidowMineUnburrow=解除地雷<n/>
@@ -882,7 +893,6 @@ Button/Tooltip/CommanderRaynorOrbitalDropPods2=该建筑生产的<c val="FFFF00"
 Button/Tooltip/Construct2RPC=重型攻击直升机。可升级隐形技能。<n/><n/><c val="#ColorAttackInfo">可以对地。</c>
 Button/Tooltip/Construct4RO_010=重型机甲。可以对近距离目标造成范围伤害。<n/><n/><c val="FFFF8A">可以对地。</c>
 Button/Tooltip/Construct4RO_0302=重型机甲。可以对远距离目标造成范围伤害。<n/><n/><c val="FFFF8A">可以对空和地。</c>
-Button/Tooltip/Construct5RO_036=重型机甲。可切换至火炮模式来提供远程火力。<n/><n/><c val="FFFF8A">可以对地。</c>
 Button/Tooltip/CosmicJuggernaut=第二神之键千界一乘的空间碎片，可以使用视界反演技能进行部队传送，以及创造通向虚数之树的大门，为附近的单位提供大量能量。
 Button/Tooltip/CosmicJuggernautBlink=将千界一乘的空间碎片重新部署至地图可见位置
 Button/Tooltip/CosmicJuggernautCharge=为附近的单位补充能量
@@ -1026,7 +1036,11 @@ Button/Tooltip/MeiC2Upgrade3=提高必杀技斩击次数，对单个敌人最高
 Button/Tooltip/MeiC2Upgrade4=能量上限提高<d ref="Upgrade,MeiC2Upgrade4,EffectArray[1].Value"/>，天照额外消耗<d ref="Upgrade,MeiC2Upgrade4,EffectArray[0].Value"/>点能量，释放后进入女武神状态，强化所有攻击，持续<d ref="Behavior,MeiC2Blade,Duration"/>秒。
 Button/Tooltip/MeiC2Wave=释放一道大范围冲击波，将遇到的一切单位击退。<n/><c val="FFFF00">半径越小的单位被击退距离越远</c>
 Button/Tooltip/MeiC5=在世界蛇的帮助下，芽衣掌控了雷之律者能力后的形态，可以召唤俱利伽罗发动多种方式的攻击。<n/><n/><c val="#ColorAttackInfo">特点:雷电元素伤害、麻痹、浮空。<n/>可对地，骑乘俱利伽罗后可对地、对空</c>
-Button/Tooltip/MeiC5Attack=快速五连斩<n/>第一击~第三击：100%攻击力物理伤害+100%攻击力雷电元素伤害<n/>第四击：共250%攻击力雷电元素伤害<n/>第五击：共300%攻击力雷电元素伤害
+Button/Tooltip/MeiC5Attack=使用雷电之力和太刀进行攻击<n/>第一击~第三击：100%攻击力物理伤害+100%攻击力雷电元素伤害<n/>第四击：共250%攻击力雷电元素伤害<n/>第五击：共300%攻击力雷电元素伤害<n/><n/>攻击期间受到的伤害减少60%
+Button/Tooltip/MeiC5Branch=律者能量未满时，造成大范围200%雷电伤害，并有50%概率麻痹敌人<n/><n/>律者能量满时，发动心斩，造成大范围1500%雷电伤害，并麻痹敌人。使敌人附加【鸣神】效果，受到的雷电伤害增加70%，且每次受击额外受到50%雷电伤害。
+Button/Tooltip/MeiC5Dragon=战术打击飞行器。可升级隐形技能。<n/><n/><c val="#ColorAttackInfo">可以对地。</c>
+Button/Tooltip/MeiC5Evade=快速瞬移躲避敌人攻击
+Button/Tooltip/MeiC5Ult=进入爆发状态，驾驭俱利伽罗进行攻击。<n/>期间俱利伽罗获得霸体，属性大幅提高。降低俱利伽罗的攻击冷却时间、提高AOE范围、提高攻击伤害并提高麻痹概率。<n/>骑乘期间每秒消耗2点能量。
 Button/Tooltip/MicroFiltering=后勤人员高能瓦斯采集量+1，可升级6次
 Button/Tooltip/MicroFiltering2=工蜂采集量+1，可升级5次
 Button/Tooltip/Mikoyan=可以研发多种重炮武器
@@ -1132,8 +1146,9 @@ Button/Tooltip/SeeleC1Upgrade3=幻海梦蝶造成的暴击伤害提高20%<n/><n/
 Button/Tooltip/SeeleC1Upgrade4=必杀技期间敌人受到幻海梦蝶攻击全伤提高40%
 Button/Tooltip/SetRallyPointCosmicJuggernaut=将卸载的单位派遣至指定地点。
 Button/Tooltip/SevenThundersOfRetribution=特制的子弹，消目标除微观粒子之间的电磁作用。造成<d ref="Effect,SevenThundersOfRetributionAbilityDamage,Amount"/>点雷电伤害，<d ref="Behavior,SevenThundersOfRetributionEffect,Duration"/>秒内目标失去所有护甲，护盾恢复速率降低<d ref="-Behavior,SevenThundersOfRetributionEffect,Modification.VitalRegenMultiplier[1]*100"/>%，并持续流失共计30%的生命值和护盾值。
-Button/Tooltip/SiegeMode=部署为火炮模式。在该模式下，赫菲斯托斯的射程极大提高，并可造成范围伤害，但无法移动和攻击近距离目标。
-Button/Tooltip/SiegeTank=重型机甲。可切换至火炮模式来提供远程火力。<n/><n/><c val="FFFF8A">可以对地。</c>
+Button/Tooltip/SiegeMode=部署为火炮模式。在该模式下，试做型机甲的射程极大提高，并可造成范围伤害，但无法移动和攻击近距离目标。
+Button/Tooltip/SiegeTank=一种试验型机甲，生存型较差。可切换至火炮模式来提供远程火力。<n/><n/><c val="FFFF8A">可以对地。</c>
+Button/Tooltip/SiegeTankSieged=一种试做型机甲，生存性较差。坦克模式下提供机动坦克火力支援。<n/><n/><c val="#ColorAttackInfo">可以对地。</c>
 Button/Tooltip/SiegeTankUpgrade=提高赫菲斯托斯100点生命值，并使之在火炮模式下可被装载(但不能攻击)
 Button/Tooltip/SkinKiana01=明亮的配色就犹如白色的浪花在日光之下粼粼烁动。尽显泳装主人大大咧咧的开朗个性。咦，腰间的？当然是真的向日葵啦！
 Button/Tooltip/SkinKianaC2=领域装·白练初始的装扮
@@ -1207,14 +1222,18 @@ Button/Tooltip/UnlockKianaC2=第三代女武神装甲，设计理念为「泛用
 Button/Tooltip/UnlockKianaC4=试做型第四代女武神弑神装甲。装甲内高速流动的伽马粒子不断从背部的连接处扩散出来——其形态，犹如一对神圣的双翼。<n/><n/><c val="#ColorAttackInfo">能力:物理伤害、眩晕、爆发、时空。多数技能可以对空。</c>
 Button/Tooltip/UnlockMeiC2=第三代女武神装甲，设计理念为「白刃战特化突击装甲」。<n/><n/><c val="#ColorAttackInfo">能力:物理伤害、击飞、AOE。技能可以对空。</c>
 Button/Tooltip/UnlockSeeleC1=<c val="#ColorAttackInfo">能力:物理伤害、爆发、AOE。不能对空。</c>
-Button/Tooltip/Unsiege=返回机甲模式。在该模式下，赫菲斯托斯可以移动，但火力有所下降。
+Button/Tooltip/Unsiege=返回机甲模式。在该模式下，试做型机甲可以移动，但火力有所下降。
 Button/Tooltip/UpgradeBuildingArmorLevel1=使<c val="ffff8a">建筑物</c>的护甲提高2。使<c val="ffff8a">地堡</c>的装载空间增加1。还会为<c val="ffff8a">指挥中心</c>和<c val="ffff8a">行星要塞</c>提供额外的装载空间，并使<c val="FFFF00">要塞总部</c>的生命值提高1000。可以升级4次.
 Button/Tooltip/VArmorUpgrade=提升女武神单位的护甲，并提高10%生命值，可升级10次。<n/><n/><c val="FF0000">不能加成英雄单位</c>
 Button/Tooltip/VShieldUpgrade=提升女武神单位的护盾护甲，并提高<d ref="Upgrade,VShieldUpgrade,EffectArray[3].Value"/>点护盾值，并减少<d ref="Upgrade,VShieldUpgrade,EffectArray[4].Value"/>秒的护盾恢复延迟（满级后消除护盾恢复延迟），可升级10次<n/><n/><c val="FF0000">不能加成英雄单位</c>
-Button/Tooltip/VWeaponUpgrade=提升普通<c val="FFFF00">女武神-看守者</c>单位的火力，并提高<d ref="Upgrade,VAttackUpgrade,EffectArray[2].Value" precision="2"/>射程，可升级10次。
+Button/Tooltip/VWeaponUpgrade=提升普通女武神造成的伤害10%，并提高<c val="FFFF00">天命制式步枪</c><d ref="Upgrade,VAttackUpgrade,EffectArray[6].Value" precision="2"/>射程，可升级10次。
+Button/Tooltip/Valkyrja1=通用型步兵。<n/><n/><c val="#ColorAttackInfo">可以对地。</c>
+Button/Tooltip/Valkyrja1Abil=强力斩击，对大范围敌人造成<d ref="Effect,Valkyrja1AbilDamagePhysics,Amount"/>点物理伤害并击飞
+Button/Tooltip/Valkyrja1Upgrade=提高<c val="FFFF00">女武神-破坏者</c><d ref="Upgrade,Valkyrja1AttackUpgrade,EffectArray[0].Value"/>点攻击伤害，并使攻击附带<c val="FF0000">流血</c>效果
 Button/Tooltip/Valkyrja2=通用型步兵。<n/><n/><c val="#ColorAttackInfo">可以对地和对空。</c>
 Button/Tooltip/Valkyrja3=重型突击步兵。<n/><n/><c val="#ColorAttackInfo">可以对地</c>
 Button/Tooltip/ValkyrjaDefence=使所有女武神在菌毯上时的生命流失速度降低75%。
+Button/Tooltip/ValkyrjaGrenade=扔出手雷，短时间后爆炸，使大范围敌人减少20点能量并降低50%移动速度，持续8秒
 Button/Tooltip/ValkyrjaShield=使制式女武神的生命值提高20点。
 Button/Tooltip/ValkyrjaSnipe=精准的一击，造成<d ref="Effect,ValkyrjaSnipeDamage,Amount"/>点物理伤害。<n/><n/><c val="#ColorAttackInfo">只能对生物单位使用。</c>
 Button/Tooltip/VoidArchives=第一神之键，可以快速维修机械单位，以及短时间内构造复现别的单位。
@@ -1234,7 +1253,9 @@ Button/Tooltip/WeaponB7=米高扬中央设计制造局设计的速射激光武�
 Button/Tooltip/WeaponK17=通过在希儿身上进行的实验所得到的数据，逆熵对量子技术的研究获得了长足的进步，并基于量子技术开发了这把武器。
 Button/Tooltip/WeaponK23=由旧文明第七律者核心制成的神之键，拥有最强大的破坏力。
 Button/Tooltip/WeaponK5=天命“诸神座”系列武器，内部储存了大量崩坏能粒子，在激发时可以具现出强力的能量块。
+Button/Tooltip/WeaponKatanaSlot=默认的太刀武器<n/><n/>可在<c val="FFFF00">装备选项-更换武器</c>中更换武器，已有武器的情况下需要先右键丢弃，再更换武器。
 Button/Tooltip/WeaponM13=米高扬设计局设计的太刀，刀的形状仿佛两条蛇互相咬住对方的尾巴，构成了代表无限的符号
+Button/Tooltip/WeaponPistolSlot=默认的双枪武器<n/><n/>可在<c val="FFFF00">装备选项-更换武器</c>中更换武器，已有武器的情况下需要先右键丢弃，再更换武器。
 Button/Tooltip/WeaponPistolTrade=购买高级双枪武器
 Button/Tooltip/WidowMineBurrow=埋下毒蛛机甲并使其进入准备状态。激活时无法移动。
 Button/Tooltip/WidowMineUnburrow=使毒蛛机甲出地并使其武器进入非激活状态，并可以移动。
@@ -1652,6 +1673,16 @@ DocInfo/PatchNote400=·将狙杀和防暴护盾升级移动到了圣芙蕾雅学
 DocInfo/PatchNote401=·将战场救援系统升级移动到了圣1504研究所中
 DocInfo/PatchNote402=·更新了选择角色菜单的文本，并予以高亮提示
 DocInfo/PatchNote403=·修复了月光双枪位置错误和阳光海滩皮肤的权重错误
+DocInfo/PatchNote404=·增加了显示行为剩余时间和叠加层数的功能
+DocInfo/PatchNote405=·优化了琪亚娜的双枪物品栏位
+DocInfo/PatchNote406=·修复了建造圣芙蕾雅学园错误的bug
+DocInfo/PatchNote407=·修复了轨道空降不生效的bug
+DocInfo/PatchNote408=·加入了女武神-破坏者
+DocInfo/PatchNote409=·降低了泰坦机甲的造价和时间，并提高了基础护甲值，补给由4降到3
+DocInfo/PatchNote410=·女武神制式武器升级改为提高三种普通女武神造成的伤害，每一级10%(对压制者也生效)
+DocInfo/PatchNote411=·修复了普通女武神增益会加成理之律者的bug
+DocInfo/PatchNote412=·修复了琪亚娜换泳装后血条不跟随的bug
+DocInfo/PatchNote413=·优化了英雄女武神的头像模型光照角度
 Effect/Name/AcidSalivaU=UL_030 Damage
 Effect/Name/AddCasterLife1500=Add Caster Life 1500
 Effect/Name/AddDizzyCD=Add Dizzy CD
@@ -1666,7 +1697,6 @@ Effect/Name/ArrowLaunchMissile2=Arrow
 Effect/Name/ArrowLaunchMissile22=Arrow
 Effect/Name/AttackingMoveForce=目标外层吸引力
 Effect/Name/AttractToCaster=向施法者的吸引力
-Effect/Name/AvatarAttackMove=Kiana C2 Attack 1 Move
 Effect/Name/B15Fire=B15 Fire
 Effect/Name/B15FireRemove=B15 Fire Remove
 Effect/Name/B15Ice=B15 Ice
@@ -2267,6 +2297,8 @@ Effect/Name/MeiC2WaveSearch=MeiC2 Wave Search
 Effect/Name/MeiC2WaveSearchMark=MeiC2 Wave Search Mark
 Effect/Name/MeiC2WaveSwitch=MeiC2 Wave Switch
 Effect/Name/MeiC2WaveUnmark=MeiC2 Wave Unmark
+Effect/Name/MeiC5DragonTracker=MeiC5DragonTracker
+Effect/Name/MeiC5SummonDragon=Mei C5 Summon Dragon
 Effect/Name/MissileRebound2=Missile Rebound
 Effect/Name/MobilizeSkill1Trigger=Mobilize Skill 1 Trigger
 Effect/Name/MobilizeSkill2Trigger=Mobilize Skill 2 Trigger
@@ -2619,6 +2651,20 @@ Effect/Name/Unfire=停火状态
 Effect/Name/UnfireCountDown=停火倒计时
 Effect/Name/UnitCreatedTargetAtOrigin=新单位对准源单位
 Effect/Name/UnknownEffect=显示位置
+Effect/Name/Valkyrja1Abil=Valkyrja 1 Abil
+Effect/Name/Valkyrja1AbilDamage=Valkyrja 1 Abil Damage
+Effect/Name/Valkyrja1AbilDamageCase=Valkyrja 1 Abil Damage Case
+Effect/Name/Valkyrja1AbilSearch=Valkyrja 1 Abil Search
+Effect/Name/Valkyrja1AbilSet=Valkyrja 1 Abil Set
+Effect/Name/Valkyrja1Attack1=Valkyrja 1 Attack 1
+Effect/Name/Valkyrja1Attack1Search=Valkyrja 1 Attack 1 Search
+Effect/Name/Valkyrja1Attack1Speed=Valkyrja 1 Attack 1 Speed
+Effect/Name/Valkyrja1Attack2=Valkyrja 1 Attack 2
+Effect/Name/Valkyrja1Attack2Search=Valkyrja 1 Attack 2 Search
+Effect/Name/Valkyrja1Attack2Speed=Valkyrja 1 Attack 2 Speed
+Effect/Name/Valkyrja1AttackBleed=Valkyrja 1 Attack Bleed
+Effect/Name/Valkyrja1AttackDamage=Valkyrja 1 Attack Damage
+Effect/Name/Valkyrja1AttackSet=Valkyrja 1 Attack Set
 Effect/Name/Valkyrja3AttackDamageNormal=Valkyrja 3 Attack Damage Normal
 Effect/Name/Valkyrja3AttackNormal=Valkyrja 3 Attack Normal
 Effect/Name/ValkyrjaRifleDamage=Valkyrja Rifle Damage
@@ -2801,7 +2847,7 @@ HonkaiText/KianaC1=领域装·白练
 HonkaiText/KianaC2=领域装·白练
 HonkaiText/KianaC4=领域装·白练
 HonkaiText/MeiC2=脉冲装·绯红
-HonkaiText/MeiC5=脉冲装·绯红
+HonkaiText/MeiC5=雷之律者
 HonkaiText/SeeleC1=幻海梦蝶
 Kinetic/Name/TransleLeft=平移向左
 LoadingScreen/HonkaiModHelp00=Mod中的许多单位都不同于星际原版单位，但也有一些单位仅仅是改变了外观。
@@ -2867,6 +2913,7 @@ Param/Value/lib_6D9D7845_DC304578=已复活
 Param/Value/lib_6D9D7845_DDFD93D2=已设置装备模板
 Param/Value/lib_6D9D7845_DFAA2A41=火元素抗性
 Param/Value/lib_6D9D7845_E446A277=
+Param/Value/lib_6D9D7845_E48F22D3=111
 Param/Value/lib_6D9D7845_E64DF4DC=波次开始
 Param/Value/lib_6D9D7845_E9C646BC=能量不足
 Param/Value/lib_6D9D7845_F0143A1C=单位类型指定成功：
@@ -3108,6 +3155,7 @@ Unit/Name/MeiBuilding=剑道训练室
 Unit/Name/MeiC2=雷电芽衣
 Unit/Name/MeiC2Wave=冲击波 - MeiC2
 Unit/Name/MeiC5=雷电芽衣
+Unit/Name/MeiC5Dragon=俱利伽罗
 Unit/Name/Mikoyan=米高扬设计制造局
 Unit/Name/Nuke=崩坏能裂变弹
 Unit/Name/Nuke2=崩坏能裂变弹
@@ -3157,7 +3205,7 @@ Unit/Name/SaWeapon0=娑 武器 0
 Unit/Name/SaWeapon1=娑 武器 1
 Unit/Name/SeeleBuilding=枢纽港
 Unit/Name/SeeleC1=希儿·芙乐艾
-Unit/Name/SiegeTank=赫菲斯托斯
+Unit/Name/SiegeTank=试做型机甲
 Unit/Name/SplitBomb=分裂炸弹
 Unit/Name/SplitBomb2=分裂炸弹2
 Unit/Name/StFreya=圣芙蕾雅学园
@@ -3175,6 +3223,7 @@ Unit/Name/UL_080Weapon=崩坏能晶柱
 Unit/Name/UL_100=旋翼级崩坏兽
 Unit/Name/UL_100Abil=巨型轰炸
 Unit/Name/Ultralisk=迦尼萨
+Unit/Name/Valkyrja1=女武神-破坏者
 Unit/Name/Valkyrja2=女武神-看守者
 Unit/Name/Valkyrja3=女武神-压制者
 Unit/Name/VoidArchives=虚空万藏
@@ -3279,7 +3328,9 @@ Upgrade/Name/VArmorUpgrade=女武神护甲升级
 Upgrade/Name/VAttackUpgrade=女武神制式武器升级
 Upgrade/Name/VHerrscher1st=理之律者装甲
 Upgrade/Name/VShieldUpgrade=女武神护盾升级
+Upgrade/Name/Valkyrja1AttackUpgrade=高出力斩击
 Upgrade/Name/ValkyrjaDefence=崩坏能防护服
+Upgrade/Name/ValkyrjaGrenade=吸能手雷
 Upgrade/Name/ValkyrjaShield=防暴护盾
 Upgrade/Name/ValkyrjaSnipe=狙杀
 Weapon/Name/ATTACK=攻击力
@@ -3353,6 +3404,8 @@ Weapon/Name/UL_030Weapon=刺击
 Weapon/Name/UL_040Weapon=突刺
 Weapon/Name/UL_080Weapon=崩坏长枪投射
 Weapon/Name/UnknownWeapon=提尔的断腕
+Weapon/Name/Valkyrja1Attack1=纵斩
+Weapon/Name/Valkyrja1Attack2=逆风斩
 Weapon/Name/Valkyrja3Basic=压制者默认武器
 Weapon/Name/ValkyrjaRifle=天命制式步枪
 Weapon/Name/ValkyrjaSevenThundersOfRetribution=涤罪七雷

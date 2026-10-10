@@ -4,6 +4,9 @@
         <EditorCategories value="TechType:Unit"/>
         <NodeArray index="Use" Link="AndCountUpgradeDivineKey7thCompleteOnly3249686718Not431030283CountUnitWeaponK23CompleteOnly"/>
     </CRequirement>
+    <CRequirement id="Valkyrja1UpgradeCanResearch">
+        <NodeArray index="Show" Link="NotCountUpgradeValkyrja1AttackUpgradeQueuedOrBetter"/>
+    </CRequirement>
     <CRequirement id="HaveArmory">
         <NodeArray index="Use" Link="CountUnitImperialInstituteCompleteOnlyTechTreeCheat"/>
     </CRequirement>
@@ -411,6 +414,9 @@
     </CRequirement>
     <CRequirement id="SiegeTankUpgeadeNotResearched">
         <NodeArray index="Show" Link="NotCountUpgradeSiegeTankUpgradeCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="GrenadeCanResearch">
+        <NodeArray index="Show" Link="NotCountUpgradeValkyrjaGrenadeQueuedOrBetter"/>
     </CRequirement>
     <CRequirement id="SnipeResearched">
         <NodeArray index="Use" Link="CountUpgradeValkyrjaSnipeCompleteOnly3072367877"/>
